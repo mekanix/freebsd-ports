@@ -1,0 +1,53 @@
+#!/bin/sh
+#
+# Copyright (c) 2021 Axcient. inc.
+# All rights reserved.
+
+# PROVIDE: zfs_crypto_salt
+# REQUIRE: NETWORKING
+# REQUIRE: hostname
+# BEFORE: cloudserver
+# BEFORE: ctld
+# BEFORE: ftpd
+# BEFORE: iocage
+# BEFORE: mountd
+# BEFORE: nfsd
+# BEFORE: rsyncd
+# BEFORE: salt_minion
+# BEFORE: szs
+# BEFORE: szs_exports
+# BEFORE: szs_jobs
+# BEFORE: vt2
+# BEFORE: zabbix_agentd
+
+# Load ZFS encryption keys that are stored in Salt and mount the encrypted file
+# systems.  The pools must already be imported!
+
+# Add the following lines to /etc/rc.conf.local or /etc/rc.conf
+# to enable this service:
+#
+# zfs_crypto_salt_enable (bool):            Set to NO by default.
+
+. /etc/rc.subr
+
+name="zfs_crypto_salt"
+desc="Mount Axcient encrypted ZFS file systems with keys in Salt"
+rcvar="zfs_crypto_salt_enable"
+start_cmd="zfs_crypto_salt_start"
+
+: ${zfs_crypto_salt_enable:=NO}
+
+zfs_crypto_salt_start()
+{
+	echo "Fetching crypto key from Salt"
+	SECRET=`%%LOCALBASE%%/bin/salt-call -l warning pillar.get zfs:secret | awk 'FNR==2 {print $1}'`
+	if [ -z "${SECRET}" ]; then
+		echo "ZFS crypto key not found"
+	else
+		echo "Trying to load the key into all pools"
+		yes "${SECRET}" | /sbin/zfs mount -al
+	fi
+}
+
+load_rc_config $name
+run_rc_command "$1"

@@ -1,0 +1,187 @@
+@(,,555) /repository/do-pprec
+@(,,755) sbin/account-util
+@(,,755) sbin/efs-acct-check
+@(,,755) sbin/efs-acct-fix-perms
+@(,,755) sbin/efs-acct-migrate
+@(,,755) sbin/efs-pprec
+@(,,755) sbin/efs-preload-process
+@(,,755) sbin/efs-preload-rsync
+@(,,755) sbin/efs-zfs-list-bdr
+@(,,755) sbin/efs-zfs-list-nonbdr
+@(,,755) sbin/efs-zfsr
+@(,,755) sbin/efs-zfss
+@owner efolder
+@group efolder
+/repository/efolder-cfg/2010.eFolder.Server.cert
+/repository/efolder-cfg/2010.eFolder.Server.key
+@(,,640) /repository/efolder-cfg/efolder-ca-list.pem
+@sample /repository/efolder-cfg/info.email.from.sample
+@sample /repository/efolder-cfg/info.email.logsummary.sample
+@sample /repository/efolder-cfg/info.email.maintenance.sample
+@sample /repository/efolder-cfg/info.email.notifications.sample
+@sample /repository/efolder-cfg/info.email.pprec.sample
+@sample /repository/efolder-cfg/info.email.reports.sample
+@sample /repository/efolder-cfg/info.email.support.sample
+@owner monagent
+@group monagent
+/repository/mon/.bash_history
+/repository/mon/.bash_profile
+/repository/mon/.bashrc
+@(,,640) /repository/mon/.ssh/authorized_keys
+@(,,555) /repository/mon/cat-sd2cxtxdx.py
+@(,,555) /repository/mon/cat-sol2lsi.py
+/repository/mon/cfg/cached-LSI2SOL
+/repository/mon/cfg/cached-SOL2LSI
+@(,,555) /repository/mon/cfg/generate-map-hba-to-enclosure-for-lsi.rb
+@sample /repository/mon/cfg/map-adapterid-to-controllerid.template /repository/mon/cfg/map-adapterid-to-controllerid
+@sample /repository/mon/cfg/map-enclosureid-to-name.template /repository/mon/cfg/map-enclosureid-to-name
+@sample /repository/mon/cfg/map-hba-to-enclosure.template /repository/mon/cfg/map-hba-to-enclosure
+@sample /repository/mon/cfg/map-wwn-to-enclosure.template /repository/mon/cfg/map-wwn-to-enclosure
+/repository/mon/cfg/server-model
+@(,,555) /repository/mon/check-env.rb
+@(,,555) /repository/mon/check-lsi-raid.sh
+@(,,555) /repository/mon/check-lsi-sas2-raid.sh
+@(,,555) /repository/mon/check-megasas-bbu.sh
+@(,,555) /repository/mon/check-megasas-encstatus.py
+@(,,555) /repository/mon/check-psql-sync.sh
+@(,,555) /repository/mon/check-zpool.py
+@(,,555) /repository/mon/check_ssh_tunnel.sh
+@(,,555) /repository/mon/check_ssh_tunnel_freq.sh
+@(,,555) /repository/mon/common-megasas-count.sh
+@(,,555) /repository/mon/commonbasedir.py
+@(,,555) /repository/mon/commonchk.py
+@(,,555) /repository/mon/commonlsidevices.py
+@(,,555) /repository/mon/get-server-model.py
+@(,,555) /repository/mon/map-lsi2sol.py
+@(,,555) /repository/mon/map-sol2lsi.py
+/repository/mon/mk-script-forker
+@(,,555) /repository/mon/perf-env-sensors.py
+@(,,555) /repository/mon/perf-megasas-encstatus.py
+@(,,555) /repository/mon/perf-zfs.py
+@(,,555) /repository/mon/script-forker
+/repository/mon/script-forker.cc
+@(,,555) /repository/mon/util-megasas-count.sh
+@(,,555) /repository/mon/util-megasas-device-map.py
+@(,,555) /repository/mon/util-megasas-encstatus-map.py
+@(,,555) /repository/mon/util-megasas-generate-adapter-mapping.sh
+@(,,555) /repository/mon/util-megasas-get-adp-devicefile.sh
+/repository/mon/util-megasas-trace-adp-devicefile.d
+/repository/mon/util-megasas-trace-mrsas-adp-devicefile.d
+@owner
+@group
+%%MASTER%%@sample /repository/pgsql/data/pg_hba.conf.template /repository/pgsql/data/pg_hba.conf
+%%MASTER%%@sample /repository/pgsql/data/postgresql.conf.template /repository/pgsql/data/postgresql.conf
+@group efolder
+@(,,555) /repository/server/aa-deprecated-vm-create-from-aa4-template
+@(,,555) /repository/server/aa-disk-usage-report.py
+@(,,555) /repository/server/aa-get-billable-disk-usage
+@(,,555) /repository/server/aa-run
+@(,,555) /repository/server/aa-run-worker
+@(,,555) /repository/server/aa-vm-create-hyperv-os-vol
+@(,,555) /repository/server/aa-vm-create-new-hyperv-vm
+@(,,555) /repository/server/aa-vm-create-new-kvm-vm
+@(,,555) /repository/server/aa-vm-create-new-kvm-vm-simple
+@(,,555) /repository/server/aa-vm-finish-oobe-setup
+@(,,555) /repository/server/aa-vm-is-running
+@(,,555) /repository/server/aa-vm-manage
+@(,,555) /repository/server/aa-vm-migrate-hyperv-kvm
+@(,,555) /repository/server/aa-vm-migrate-hyperv-kvm.ddrescue
+@(,,555) /repository/server/aa-vm-migrate-virtualbox-kvm
+@(,,555) /repository/server/aa-vm-migrate-virtualbox-kvm.partial
+@(,,555) /repository/server/aa-vm-send-ctrl-alt-del
+@(,,555) /repository/server/aa-vm-send-shutdown
+@(,,555) /repository/server/aa-vm-set-memory
+@(,,555) /repository/server/aa-vm-set-nfs-share
+@(,,555) /repository/server/aa-vm-start
+@(,,555) /repository/server/aa-vm-start-many
+@owner efolder
+@(,,555) /repository/server/account-build-usage-raw-data.py
+@(,,555) /repository/server/account-check-integrity
+@(,,555) /repository/server/account-list
+@(,,555) /repository/server/account-rebuild-metainfo
+@(,,555) /repository/server/account-rebuild-metainfo-worker.sh
+@(,,555) /repository/server/account-util
+@(,,555) /repository/server/backup-account-list
+@(,,555) /repository/server/bincopydifftodest.py
+@(,,555) /repository/server/change-perm
+@(,,555) /repository/server/check-cleanup-trans
+@(,,555) /repository/server/check-daily-stats
+@(,,555) /repository/server/check-data-integrity
+@(,,555) /repository/server/check-destroy-old-deldata
+@(,,555) /repository/server/check-expired-accounts
+@(,,555) /repository/server/check-new-ppreq
+@(,,555) /repository/server/check-notifications
+@(,,555) /repository/server/check-partner-center-reindex-files
+@(,,555) /repository/server/check-partner-notifications
+@(,,555) /repository/server/check-periodic-report
+@(,,555) /repository/server/check-process-extra-info
+@(,,555) /repository/server/check-services
+@(,,555) /repository/server/check-solaris-disk-issues
+@(,,555) /repository/server/check-solaris-network-issues
+@(,,555) /repository/server/check-update-device-maps
+@(,,555) /repository/server/check-web-stale-data
+@(,,555) /repository/server/common-script-utils
+@(,,555) /repository/server/copy-account-data-to-disk
+@(,,555) /repository/server/copy-account-data-to-net
+@(,,555) /repository/server/create-index-subdirs-sqdb3.py
+@(,,555) /repository/server/create-index-subdirs.py
+@(,,555) /repository/server/destroy-old-deldata.py
+@(root,wheel,555) /repository/server/do-pprec
+/repository/server/eFSServer
+@sample(,,600) /repository/server/eFSServer-dev.ini.template /repository/server/eFSServer-dev.ini
+@sample(,,600) /repository/server/eFSServer.ini.template /repository/server/eFSServer.ini
+/repository/server/flag-check-mysql.no
+/repository/server/flag-check-postgresql.no
+/repository/server/flag-file-force-down.no
+@(,,555) /repository/server/mail-log-summary
+/repository/server/metainfotool
+@(,,555) /repository/server/mv-meta-to-delmeta.py
+@(,,555) /repository/server/mysql-backup-db
+@(,,555) /repository/server/mysql-optimize-db
+@(,,555) /repository/server/parse-server-log
+@(,,555) /repository/server/postgres-analyze-db
+@(,,555) /repository/server/postgres-archive-auditlog
+@(,,555) /repository/server/postgres-backup-db
+@(,,555) /repository/server/postgres-hourly-backup-db
+@(,,555) /repository/server/postgres-vacuum-db
+@(,,644) /repository/server/pprec/efolder-passphrase-public.rsa
+@(root,efdev,555) /repository/server/pprec/pprecover
+@(,,555) /repository/server/print-all-metainfo
+@(,,555) /repository/server/purge-deleted-accounts
+@(,,555) /repository/server/readgptinfile
+@(,,555) /repository/server/report-server-disk-usage
+@(,,555) /repository/server/rsync-account
+@(,,555) /repository/server/rsync-account-keep-trying
+@(,,555) /repository/server/rsync-all-accounts
+@(,,555) /repository/server/run-on-each
+@(,,555) /repository/server/scan-for-transactions
+@(,,555) /repository/server/secure-del-file
+@(,,555) /repository/server/undel-all-files
+@(,,555) /repository/server/undel-file
+@(,,555) /repository/server/util-identify-upper-lower.py
+@(root,wheel,555) /repository/tools/misc/total-open-files
+@(root,wheel,) /repository/tools/perf/dsk-bw.tar.gz
+etc/cron.d/efsserver
+%%DATADIR%%/efs-common.sh
+@dir(efolder,efolder,770) /repository/cfg
+@dir(efolder,efolder,770) /repository/efolder-cfg
+@dir(root,wheel,750) /repository/efolder-del
+@dir(efolder,efolder,770) /repository/efolder-rpts
+@dir(root,wheel,750) /repository/efolder-sf
+@dir(monagent,monagent,770) /repository/mon/.ssh
+@dir(monagent,monagent,770) /repository/mon/cfg
+@dir(monagent,monagent,770) /repository/mon
+%%MASTER%%@dir(root,wheel,770) /repository/pgsql/data
+%%MASTER%%@dir(root,wheel,770) /repository/pgsql
+@dir(root,efdev,770) /repository/server/pprec
+@dir(efolder,efolder,770) /repository/server
+@dir(efolder,efolder,770) /repository/tmp
+@owner
+@group
+@dir %%DATADIR%%
+@dir /repository/tools/misc
+@dir /repository/tools/perf
+@dir /repository/tools
+@dir /repository/efolder
+@dir /repository
+@dir(efolder,efolder,755) /var/run/efsserver

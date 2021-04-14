@@ -1,0 +1,50 @@
+#!/bin/sh
+# $FreeBSD$
+
+# PROVIDE: drive_exporter
+# REQUIRE: LOGIN
+# KEYWORD: shutdown
+#
+# Add the following lines to /etc/rc.conf.local or /etc/rc.conf
+# to enable this service:
+#
+# drive_exporter_enable (bool):            Set to NO by default.
+#               Set it to YES to enable drive-exporter.
+# drive_exporter_args (string):            Set extra arguments to pass to drive-exporter
+#               Default is "".
+# drive_exporter_user (string):            Set user that drive_exporter will run under
+#               Default is "prometheus".
+# drive_exporter_group (string):           Set group that drive_exporter will run under
+#               Default is "prometheus".
+
+. /etc/rc.subr
+
+name=drive_exporter
+desc="Prometheus drive stats exporter based on iostat"
+rcvar=drive_exporter_enable
+
+load_rc_config $name
+
+: ${drive_exporter_enable:=NO}
+: ${drive_exporter_args:=""}
+: ${drive_exporter_user:=prometheus}
+: ${drive_exporter_group:=prometheus}
+
+pidfile=/var/run/drive_exporter.pid
+command=/usr/sbin/daemon
+command_interpreter=%%PYTHON_CMD%%
+procname=%%PREFIX%%/bin/drive-exporter
+command_args="-f -p ${pidfile} /usr/bin/env ${procname} ${drive_exporter_args}"
+
+start_precmd=drive_exporter_startprecmd
+
+drive_exporter_startprecmd()
+{
+    if [ -e ${pidfile} ]; then
+        chown ${drive_exporter_user}:${drive_exporter_group} ${pidfile};
+    else
+        install -o ${drive_exporter_user} -g ${drive_exporter_group} /dev/null ${pidfile};
+    fi
+}
+
+run_rc_command "$1"

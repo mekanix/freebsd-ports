@@ -1,6 +1,6 @@
---- src/Makefile.in.orig	2010-03-06 13:12:36.000000000 -0300
-+++ src/Makefile.in	2010-06-21 21:59:54.000000000 -0300
-@@ -667,7 +667,7 @@
+--- src/Makefile.in.orig	2017-03-23 09:43:00 UTC
++++ src/Makefile.in
+@@ -887,7 +887,7 @@ info: info-am
  
  info-am:
  

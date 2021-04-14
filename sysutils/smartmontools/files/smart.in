@@ -75,6 +75,13 @@ case "${daily_status_smart_enable}" in
 				elif [ `grep -c '^SMART support is: Unavailable' ${tmpfile}` -eq 1 ] ; then
 					rc=2
 					echo "N/A"
+				elif [ ${status} -eq 4 ] && diskinfo -v ${device} | grep -q "OCZ-OCTANE"; then
+					# XXX AXCIENT:
+					# This SSD supports some SMART commands
+					# but not the SMART error log.
+					# See also
+					# https://www.smartmontools.org/ticket/1360
+					echo "N/A"
 				else
 					rc=3
 					${smartctl} ${devflags} ${daily_status_smartctl_extra_status_flags} \

@@ -1,0 +1,70 @@
+#!/bin/sh
+#
+# Copyright (c) 2020 Axcient. inc.
+# All rights reserved.
+
+# PROVIDE: geli_salt
+# REQUIRE: NETWORKING
+# REQUIRE: hostname
+# BEFORE: cloudserver
+# BEFORE: ctld
+# BEFORE: ftpd
+# BEFORE: hastd
+# BEFORE: iocage
+# BEFORE: mountd
+# BEFORE: nfsd
+# BEFORE: rsyncd
+# BEFORE: salt_minion
+# BEFORE: szs
+# BEFORE: szs_exports
+# BEFORE: szs_jobs
+# BEFORE: vt2
+# BEFORE: zabbix_agentd
+# BEFORE: zfs_exporter
+
+# Start geli disks whose keys are stored in Salt, and import pools residing on
+# those disks.
+
+# Add the following lines to /etc/rc.conf.local or /etc/rc.conf
+# to enable this service:
+#
+# geli_salt_enable (bool):            Set to NO by default.
+
+. /etc/rc.subr
+
+name="geli_salt"
+desc="Axcient encrypted disks with keys in Salt"
+rcvar="geli_salt_enable"
+start_cmd="geli_salt_start"
+
+: ${geli_salt_enable:=NO}
+
+CACHEFILE=/var/cache/zpool.cache
+
+geli_salt_start()
+{
+	echo "Fetching GELI key from Salt"
+	SECRET=`%%LOCALBASE%%/bin/salt-call -l warning pillar.get geli:secret | awk 'FNR==2 {print $1}'`
+	# vtbd0, if it exists, is reserved for zroot.  Don't try to attach it.
+	if [ -z "${SECRET}" ]; then
+		echo "geli key is empty, will not attempt attaching devices"
+	else
+		DISKS=$(ls -1 /dev/multipath/mp_J* /dev/label/SLOG_* /dev/label/SPARE_* /dev/vtbd[1-9]* 2>/dev/null | grep -v '.eli$')
+		echo "Trying to attach all devices."
+		echo "${SECRET}" | /sbin/geli attach -j - ${DISKS}
+	fi
+	if [ -f "${CACHEFILE}" ]; then
+		echo ""
+		echo "Importing all data pools."
+		/sbin/zpool import -a -c $CACHEFILE -o cachefile=$CACHEFILE
+		# We can't run this script before mountd, because that would
+		# create a circular dependency:
+		# mountd < nfsd < lockd,statd < DAEMON < LOGIN < salt_minion <
+		# geli_salt < mountd
+		# Instead, we'll reload mountd after starting this script
+		pgrep mountd && service mountd reload
+	fi
+}
+
+load_rc_config $name
+run_rc_command "$1"

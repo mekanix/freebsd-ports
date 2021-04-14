@@ -446,7 +446,7 @@ datadog:*:480:480::0:0:DataDog Agent:/var/db/datadog:/usr/sbin/nologin
 # free: 498
 # free: 499
 # free: 500
-# free: 501
+monagent:*:501:501::0:0:eFolder monitor user:/nonexistent:/usr/sbin/nologin
 # free: 502
 # free: 503
 # free: 504
@@ -946,4 +946,9 @@ bareos:*:997:997::0:0:Bareos Daemon:/var/db/bareos:/usr/sbin/nologin
 _rmilter:*:998:998::0:0:Rmilter daemon:/nonexistent:/usr/sbin/nologin
 ebnetd:*:999:999::0:0:EBNETD:/nonexistent:/usr/sbin/nologin
 # DO NOT USE: 1000-65533
+iasouser:*:2001:2001::0:0:eFolder something or other:/nonexistent:/usr/sbin/nologin
+efolder:*:44700:44700::0:0:eFolder user:/nonexistent:/usr/sbin/nologin
+efwebdev:*:44702:44702::0:0:eFolder web dev:/nonexistent:/usr/sbin/nologin
+aa:*:44750:44700::0:0:eFolder something or other:/nonexistent:/usr/sbin/nologin
+vmcloud:*:44751:44751::0:0:eFolder something or other:/nonexistent:/usr/sbin/nologin
 nobody:*:65534:65534::0:0:Unprivileged user:/nonexistent:/usr/sbin/nologin

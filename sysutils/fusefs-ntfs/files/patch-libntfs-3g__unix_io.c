@@ -1,5 +1,5 @@
---- libntfs-3g/unix_io.c.orig	2010-03-06 13:12:25.000000000 -0300
-+++ libntfs-3g/unix_io.c	2010-10-04 15:17:18.000000000 -0300
+--- libntfs-3g/unix_io.c.orig	2017-03-23 09:42:44 UTC
++++ libntfs-3g/unix_io.c
 @@ -54,6 +54,22 @@
  #include <linux/fd.h>
  #endif
@@ -23,7 +23,7 @@
  #include "types.h"
  #include "mst.h"
  #include "debug.h"
-@@ -61,13 +77,90 @@
+@@ -61,14 +77,91 @@
  #include "logging.h"
  #include "misc.h"
  
@@ -37,7 +37,7 @@
 +#define UBLIO_DEFAULT_GRACE	32
 +#define UBLIO_DEFAULT_SYNC_IO	0
 +#endif
-+
+ 
 +#if USE_ALIGNED_IO
 +#define RAW_IO_ALIGNED(dev, offset, count)			\
 +	(DEV_HANDLE(dev)->block_size == 0 ||			\
@@ -62,14 +62,14 @@
 +
 +#define DEV_HANDLE(dev)	((struct unix_filehandle *)dev->d_private)
 +#define DEV_FD(dev)	(DEV_HANDLE(dev)->fd)
- 
++
  /* Define to nothing if not present on this system. */
  #ifndef O_EXCL
  #	define O_EXCL 0
  #endif
  
 +#if USE_ALIGNED_IO
-+/**
+ /**
 + * Get block_size and media_size
 + */
 +static int
@@ -112,10 +112,11 @@
 +}
 +#endif
 +
- /**
++/**
   * fsync replacement which makes every effort to try to get the data down to
   * disk, using different means for different operating systems. Specifically,
-@@ -113,9 +206,21 @@
+  * it issues the proper fcntl for Mac OS X or does fsync where it is available
+@@ -113,9 +206,21 @@ static int ntfs_fsync(int fildes)
   */
  static int ntfs_device_unix_io_open(struct ntfs_device *dev, int flags)
  {
@@ -138,7 +139,7 @@
  
  	if (NDevOpen(dev)) {
  		errno = EBUSY;
-@@ -125,20 +230,28 @@
+@@ -125,20 +230,28 @@ static int ntfs_device_unix_io_open(struct ntfs_device
  		ntfs_log_perror("Failed to access '%s'", dev->d_name);
  		return -1;
  	}
@@ -174,7 +175,7 @@
  		err = errno;
  		goto err_out;
  	}
-@@ -146,6 +259,37 @@
+@@ -146,6 +259,37 @@ static int ntfs_device_unix_io_open(struct ntfs_device
  	if ((flags & O_RDWR) != O_RDWR)
  		NDevSetReadOnly(dev);
  	
@@ -212,7 +213,7 @@
  	memset(&flk, 0, sizeof(flk));
  	if (NDevReadOnly(dev))
  		flk.l_type = F_RDLCK;
-@@ -153,7 +297,21 @@
+@@ -153,15 +297,38 @@ static int ntfs_device_unix_io_open(struct ntfs_device
  		flk.l_type = F_WRLCK;
  	flk.l_whence = SEEK_SET;
  	flk.l_start = flk.l_len = 0LL;
@@ -220,7 +221,7 @@
 +#endif
 +#if USE_ALIGNED_IO
 +	if (raw_io_get_size(dev) < 0) {
-+		err = errno;
+ 		err = errno;
 +		close(DEV_FD(dev));
 +		goto err_out;
 +	}
@@ -232,10 +233,10 @@
 +#endif /* USE_ALIGNED_IO */
 +#if USE_LOCK
 +	if (!NDevBlock(dev) && fcntl(DEV_FD(dev), F_SETLK, &flk)) {
- 		err = errno;
++		err = errno;
  		ntfs_log_perror("Failed to %s lock '%s'", NDevReadOnly(dev) ? 
  				"read" : "write", dev->d_name);
-@@ -161,7 +319,16 @@
+ 		if (close(DEV_FD(dev)))
  			ntfs_log_perror("Failed to close '%s'", dev->d_name);
  		goto err_out;
  	}
@@ -253,7 +254,7 @@
  	NDevSetOpen(dev);
  	return 0;
  err_out:
-@@ -181,7 +348,10 @@
+@@ -181,7 +348,10 @@ err_out:
   */
  static int ntfs_device_unix_io_close(struct ntfs_device *dev)
  {
@@ -264,7 +265,7 @@
  
  	if (!NDevOpen(dev)) {
  		errno = EBADF;
-@@ -194,12 +364,18 @@
+@@ -194,12 +364,18 @@ static int ntfs_device_unix_io_close(struct ntfs_devic
  			return -1;
  		}
  
@@ -284,7 +285,7 @@
  	if (close(DEV_FD(dev))) {
  		ntfs_log_perror("Failed to close device %s", dev->d_name);
  		return -1;
-@@ -223,9 +399,234 @@
+@@ -223,10 +399,235 @@ static int ntfs_device_unix_io_close(struct ntfs_devic
  static s64 ntfs_device_unix_io_seek(struct ntfs_device *dev, s64 offset,
  		int whence)
  {
@@ -341,7 +342,7 @@
 +	pwrite(DEV_FD(fd), buf, count, off)
 +#endif
 +
-+/**
+ /**
 + * aligned_pread - Perform an aligned positioned read from the device
 + */
 +static s64 aligned_pread(struct ntfs_device *dev, void *buf, s64 count, s64 offset)
@@ -516,10 +517,11 @@
 +
 +#endif
 +
- /**
++/**
   * ntfs_device_unix_io_read - Read from the device, from the current location
   * @dev:
-@@ -239,6 +640,29 @@
+  * @buf:
+@@ -239,6 +640,29 @@ static s64 ntfs_device_unix_io_seek(struct ntfs_device
  static s64 ntfs_device_unix_io_read(struct ntfs_device *dev, void *buf,
  		s64 count)
  {
@@ -549,7 +551,7 @@
  	return read(DEV_FD(dev), buf, count);
  }
  
-@@ -260,6 +684,28 @@
+@@ -260,6 +684,28 @@ static s64 ntfs_device_unix_io_write(struct ntfs_devic
  		return -1;
  	}
  	NDevSetDirty(dev);
@@ -578,7 +580,7 @@
  	return write(DEV_FD(dev), buf, count);
  }
  
-@@ -277,6 +723,13 @@
+@@ -277,6 +723,13 @@ static s64 ntfs_device_unix_io_write(struct ntfs_devic
  static s64 ntfs_device_unix_io_pread(struct ntfs_device *dev, void *buf,
  		s64 count, s64 offset)
  {
@@ -592,7 +594,7 @@
  	return pread(DEV_FD(dev), buf, count, offset);
  }
  
-@@ -299,6 +752,13 @@
+@@ -299,6 +752,13 @@ static s64 ntfs_device_unix_io_pwrite(struct ntfs_devi
  		return -1;
  	}
  	NDevSetDirty(dev);
@@ -606,7 +608,7 @@
  	return pwrite(DEV_FD(dev), buf, count, offset);
  }
  
-@@ -315,7 +775,14 @@
+@@ -315,7 +775,14 @@ static int ntfs_device_unix_io_sync(struct ntfs_device
  	int res = 0;
  	
  	if (!NDevReadOnly(dev)) {

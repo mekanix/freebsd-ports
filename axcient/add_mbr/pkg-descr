@@ -1,0 +1,4 @@
+Add MBR is in charge of translating the snapshots in ZFS pool into something
+useful. Grabs the data portion from the drives and re-builds the snapshot to
+use the EFI.bin dump modifies MBR for OEM partitions, and creates the GPT
+structure for GPT volumes.

@@ -1,0 +1,18 @@
+The Smart Recovery driver provides a custom Fuse layer implementation that uses
+metadata descriptors to combine raw volume files with sparse physical disk
+images, remapped to provide a virtual disk image matching the original
+protected system physical volume structure. This implementation is able to
+perform both basic volume mapping as well as dynamically recreate complex
+volume structures, like rebuilding a software RAID5 Windows Dynamic disk set
+from the single volume file stored by the Replibit backend.
+Smart Recovery is a new feature being implemented for Appliances, Legacy Vaults
+and Infinity Cloud to improve the recovery experience of our Partners. By
+implementing this feature, recovery operations will now be able to return
+virtual disks structured identically to the original Protected System disk
+layout, making it much easier to recover to physical systems and resolving many
+challenges we currently have with booting and recovering systems with
+non-standard or complex partition configurations. This driver provides the
+foundation layer necessary to support Smart Recovery for both Infinity Cloud
+and AxCloud Virtual Office.
+
+WWW: https://github.com/Axcient/smart-recovery

@@ -1,0 +1,15 @@
+# $FreeBSD$
+
+PORTVERSION=	1.1.4
+PORTREVISION=	0
+PKGNAMESUFFIX=	-stg
+
+GH_TAGNAME=     ${PORTVERSION}
+
+SZS_LIB_DEPENDS= libszs-op.so:axcient/szs-stg
+CONFLICTS_INSTALL=	vt2
+
+MASTERDIR=	${.CURDIR}/../vt2
+DISTINFO_FILE=	${.CURDIR}/distinfo
+
+.include "${MASTERDIR}/Makefile"

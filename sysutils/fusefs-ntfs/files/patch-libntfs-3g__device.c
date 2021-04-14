@@ -1,8 +1,8 @@
---- ./libntfs-3g/device.c.orig	Tue Jan  9 18:22:57 2007
-+++ ./libntfs-3g/device.c	Mon Apr 30 13:40:54 2007
-@@ -63,6 +63,9 @@
- #ifdef HAVE_LINUX_HDREG_H
- #include <linux/hdreg.h>
+--- libntfs-3g/device.c.orig	2017-03-23 09:42:44 UTC
++++ libntfs-3g/device.c
+@@ -71,6 +71,9 @@
+ #ifdef ENABLE_HD
+ #include <hd.h>
  #endif
 +#ifdef __FreeBSD__
 +#include <sys/disk.h>
@@ -10,7 +10,7 @@
  
  #include "types.h"
  #include "mst.h"
-@@ -533,6 +536,17 @@
+@@ -596,6 +599,17 @@ s64 ntfs_device_size_get(struct ntfs_device *dev, int 
  		}
  	}
  #endif
@@ -28,11 +28,13 @@
  	/*
  	 * We couldn't figure it out by using a specialized ioctl,
  	 * so do binary search to find the size of the device.
-@@ -681,7 +695,24 @@
- 			return sect_size;
- 		}
- 	}
--#else
+@@ -881,6 +895,23 @@ int ntfs_device_sector_size_get(struct ntfs_device *de
+ 		if (!dev->d_ops->ioctl(dev, DKIOCGETBLOCKSIZE, &sect_size)) {
+ 			ntfs_log_debug("DKIOCGETBLOCKSIZE sector size = %d bytes\n",
+ 					(int) sect_size);
++			return sect_size;
++		}
++	}
 +#elif defined(DIOCGSECTORSIZE)
 +	/*
 +	 * XXX On FreeBSD (where we have DIOCGSECTORSIZE) the low-level I/O
@@ -47,10 +49,6 @@
 +		if (!dev->d_ops->ioctl(dev, DIOCGSECTORSIZE, &sect_size)) {
 +			ntfs_log_debug("DIOCGSECTORSIZE sector size = %d bytes\n",
 +				(int)sect_size);
-+			return sect_size;
-+		}
-+	}
-+#else
- 	errno = EOPNOTSUPP;
- #endif
- 	return -1;
+ 			return sect_size;
+ 		}
+ 	}
