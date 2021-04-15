@@ -7,7 +7,7 @@ CATEGORIES=	axcient sysutils
 MASTER_SITES=	GH
 
 MAINTAINER=	kgermanov@axcient.com
-COMMENT=	Replibit smart recovery tool
+COMMENT?=	Replibit smart recovery tool
 
 USES=		axcient fuse cmake pkgconfig
 GH_PROJECT=	smart-recovery
@@ -17,7 +17,7 @@ BUILD_DEPENDS=	boost-libs>=1.72:devel/boost-libs
 
 PLIST_FILES=	bin/smart_recovery
 
-CONFLICTS_INSTALL=      smart-recovery-stg
+CONFLICTS_INSTALL?=      smart-recovery-stg
 
 CMAKE_ARGS+=	-DCMAKE_VERBOSE_MAKEFILE=ON -DUSE_CHECKS=OFF
 

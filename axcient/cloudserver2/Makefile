@@ -6,7 +6,7 @@ PORTVERSION?=	2.2.1
 CATEGORIES=	axcient
 
 MAINTAINER=	nsemchenkov@axcient.com
-COMMENT=	Cloudserver tool
+COMMENT?=	Cloudserver tool
 
 LIB_DEPENDS?=	libszs-op.so:axcient/szs
 USES=		axcient go:modules
