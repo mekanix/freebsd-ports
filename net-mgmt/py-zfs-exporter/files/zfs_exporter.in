@@ -1,0 +1,50 @@
+#!/bin/sh
+# $FreeBSD$
+
+# PROVIDE: zfs_exporter
+# REQUIRE: LOGIN
+# KEYWORD: shutdown
+#
+# Add the following lines to /etc/rc.conf.local or /etc/rc.conf
+# to enable this service:
+#
+# zfs_exporter_enable (bool):            Set to NO by default.
+#               Set it to YES to enable zfs-exporter.
+# zfs_exporter_args (string):            Set extra arguments to pass to zfs-exporter
+#               Default is "".
+# zfs_exporter_user (string):            Set user that zfs_exporter will run under
+#               Default is "prometheus".
+# zfs_exporter_group (string):           Set group that zfs_exporter will run under
+#               Default is "prometheus".
+
+. /etc/rc.subr
+
+name=zfs_exporter
+desc="ZFS prometheus exporter"
+rcvar=zfs_exporter_enable
+
+load_rc_config $name
+
+: ${zfs_exporter_enable:=NO}
+: ${zfs_exporter_args:=""}
+: ${zfs_exporter_user:=prometheus}
+: ${zfs_exporter_group:=prometheus}
+
+pidfile=/var/run/zfs_exporter.pid
+command=/usr/sbin/daemon
+command_interpreter=%%PYTHON_CMD%%
+procname=%%PREFIX%%/bin/zfs-exporter
+command_args="-f -p ${pidfile} /usr/bin/env ${procname} ${zfs_exporter_args}"
+
+start_precmd=zfs_exporter_startprecmd
+
+zfs_exporter_startprecmd()
+{
+    if [ -e ${pidfile} ]; then
+        chown ${zfs_exporter_user}:${zfs_exporter_group} ${pidfile};
+    else
+        install -o ${zfs_exporter_user} -g ${zfs_exporter_group} /dev/null ${pidfile};
+    fi
+}
+
+run_rc_command "$1"

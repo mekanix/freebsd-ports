@@ -1,0 +1,63 @@
+#!/bin/sh
+#
+# $FreeBSD$
+#
+
+if [ -r /etc/defaults/periodic.conf ]
+then
+    . /etc/defaults/periodic.conf
+    source_periodic_confs
+fi
+
+weekly_explorer_save=${weekly_explorer_save:-10}
+explorer_files="jbod-util_-dv"
+
+case "$weekly_explorer_enable" in
+[Yy][Ee][Ss])
+	echo ""
+	echo "Rotating explorer files and gathering new ones:"
+
+	cd /var/explorer
+	rc=0
+
+	for base in ${explorer_files}; do
+		# Expire old files
+		n=$(( $weekly_explorer_save - 1 ))
+		for f in ${base}.*; do
+			case "$f" in ${base}.\*) continue ;; esac
+			m=${f%.bz2} ; m=${m#${base}.}
+			[ $m -ge $n ] && { rm $f || rc=3; }
+		done
+
+		# Rotate the files
+		m=$n
+		n=$(($n - 1))
+		while [ $n -ge 0 ]
+		do
+			if [ -f ${base}.$n.bz2 ]; then
+				mv -f ${base}.$n.bz2 ${base}.$m.bz2 || rc=3;
+			fi
+			if [ -f ${base}.$n ]; then
+				mv -f ${base}.$n ${base}.$m || rc=3;
+			fi
+			m=$n
+			n=$(($n - 1))
+		done
+		if [ -f ${base} ]; then
+			mv ${base} ${base}.0 || rc=3
+		fi
+
+		# Compress the most recent file
+		if [ -f ${base}.0 ]; then
+			bzip2 -f ${base}.0 || rc=3
+		fi
+	done
+
+	# Generate new files
+	%%PREFIX%%/sbin/jbod-util -dv > jbod-util_-dv || rc=3
+	;;
+
+*)  rc=0;;
+esac
+
+exit $rc

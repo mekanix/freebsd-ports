@@ -1,0 +1,5 @@
+filestore_clone provides efficient replication of a local file
+store (directory that contains files that are immutable once created)
+to a cloud destination.
+
+WWW: https://github.com/Axcient/filestore-clone

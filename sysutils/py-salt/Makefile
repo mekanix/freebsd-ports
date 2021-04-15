@@ -7,6 +7,10 @@ CATEGORIES=	sysutils python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
+PATCH_SITES=   https://patch-diff.githubusercontent.com/raw/saltstack/salt/pull/
+# Add set_password to bsd_shadow
+PATCHFILES+=   59140.diff:-p1
+
 MAINTAINER=	christer.edwards@gmail.com
 COMMENT=	Distributed remote execution and configuration management system
 

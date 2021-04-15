@@ -1,0 +1,28 @@
+#!/bin/sh
+#
+# $FreeBSD$
+#
+
+# PROVIDE: efsserver
+# REQUIRE: DAEMON LOGIN FILESYSTEMS
+# KEYWORD: shutdown
+
+. /etc/rc.subr
+
+name="efsserver"
+desc="eFolder multi-user server"
+rcvar="efsserver_enable"
+command="/repository/server/eFSServer"
+pidfile="/var/run/${name}/eFSServer.pid"
+required_files="/repository/server/eFSServer.ini"
+efsserver_chdir="/repository/server"
+efsserver_env="UMEM_DEBUG=audit,contents,guards,verbose UMEM_LOGGING=transaction=50M,contents=5M,fail=15M"
+command_args="--daemon --cfg-file=${required_files} --pid-file=${pidfile}"
+
+efsserver_precmd()
+{
+	ulimit -c 600000000
+}
+
+load_rc_config $name
+run_rc_command "$1"

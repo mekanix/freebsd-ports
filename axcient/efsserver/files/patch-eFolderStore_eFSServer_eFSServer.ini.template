@@ -1,0 +1,33 @@
+--- eFolderStore/eFSServer/eFSServer.ini.template.orig	1970-01-01 00:00:00 UTC
++++ eFolderStore/eFSServer/eFSServer.ini.template
+@@ -1,5 +1,6 @@
+ [SERVER]
+ listenPort=5470
++sslListenPort=443
+ delayFlushMetaInfo=1
+ socketReceiveBufferSize=524288
+ 
+@@ -11,16 +12,18 @@ statusHeavyConnectionLoadWarningPercent=95
+ statusFile=eFSServer.stats.txt
+ 
+ [SSL]
+-keyFile=2010.eFolder.Server.key
+-certFile=2010.eFolder.Server.cert
++keyFile=/repository/efolder-cfg/2010.eFolder.Server.key
++certFile=/repository/efolder-cfg/2010.eFolder.Server.cert
+ ;keyPassword=something -- uncomment if you're using non-default password for private key
+ 
+ [DB]
+ ;Development on windows uses specific options
+-host=127.0.0.1
+-port=5432
++;leave host= undefined to use a UNIX domain socket
++;host=
++port=6123
+ socket=
+ 
+ username=efolder
+-password=my_password
++;No password necessary for UNIX domain sockets
++;password=
+ database=eFolder

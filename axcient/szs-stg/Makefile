@@ -1,0 +1,15 @@
+# $FreeBSD$
+
+PORTVERSION?=	1.6.0
+PORTREVISION?=	0
+PKGNAMESUFFIX=	-stg
+
+GH_TAGNAME?=	${PORTVERSION}
+
+ADD_MBR_DEPENDS=	add_mbr:axcient/add_mbr-stg
+CONFLICTS_INSTALL=	szs
+
+MASTERDIR=	${.CURDIR}/../szs
+DISTINFO_FILE=	${.CURDIR}/distinfo
+
+.include "${MASTERDIR}/Makefile"

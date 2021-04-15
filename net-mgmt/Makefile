@@ -319,6 +319,7 @@
     SUBDIR += py-pyzabbix
     SUBDIR += py-snmp_passpersist
     SUBDIR += py-snmpclitools
+    SUBDIR += py-zfs-exporter
     SUBDIR += rackmonkey
     SUBDIR += rancid3
     SUBDIR += rate

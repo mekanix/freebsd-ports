@@ -1,0 +1,1 @@
+5 0 * * * root %%PREFIX%%/libexec/filestore-clone/cron-clone-anchor-all.sh >/dev/null 2>&1

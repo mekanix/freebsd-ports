@@ -1,0 +1,8 @@
+SPXOps VM Agent
+
+These scripts run on the VM Storage servers.  They are invoked by the SPXOps
+master for tasks like creating new VMs.
+
+Formerly they were stored in Salt at
+https://github.com/Axcient/salt/blob/master/salt/solaris/files/bin/efs-vm-create
+.

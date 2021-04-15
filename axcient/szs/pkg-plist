@@ -1,0 +1,23 @@
+bin/szs-op
+bin/szs-op-exports
+bin/szs-op-jobs
+bin/szs-op-safety-archive-cleanup
+bin/szs-op-cleanup-clones
+bin/szs-op-statistics
+@sample %%EXAMPLESDIR%%/cron.d/safety_archive_cleanup etc/cron.d/safety_archive_cleanup
+@sample %%EXAMPLESDIR%%/cron.d/cleanup_clones etc/cron.d/cleanup_clones
+@sample %%EXAMPLESDIR%%/cron.d/statistics etc/cron.d/statistics
+@sample %%EXAMPLESDIR%%/newsyslog.conf.d/szs.conf etc/newsyslog.conf.d/szs.conf
+@sample %%EXAMPLESDIR%%/newsyslog.conf.d/szs_exports.conf etc/newsyslog.conf.d/szs_exports.conf
+@sample %%EXAMPLESDIR%%/newsyslog.conf.d/szs_jobs.conf etc/newsyslog.conf.d/szs_jobs.conf
+etc/rc.d/szs
+etc/rc.d/szs_exports
+etc/rc.d/szs_jobs
+@sample %%EXAMPLESDIR%%/rsyslog.d/szs.conf etc/rsyslog.d/szs.conf
+@sample %%EXAMPLESDIR%%/rsyslog.d/szs_jobs.conf etc/rsyslog.d/szs_jobs.conf
+@sample %%ETCDIR%%/config.yml.sample
+include/szs-op.h
+lib/libszs-op.so
+@dir etc/newsyslog.d
+@dir etc/rsyslog.d
+@dir etc/cron.d

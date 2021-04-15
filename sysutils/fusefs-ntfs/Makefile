@@ -3,6 +3,7 @@
 
 PORTNAME=	ntfs
 PORTVERSION=	2017.3.23
+PORTREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://tuxera.com/opensource/
 PKGNAMEPREFIX=	fusefs-

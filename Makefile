@@ -5,6 +5,7 @@ SUBDIR += accessibility
 SUBDIR += arabic
 SUBDIR += archivers
 SUBDIR += astro
+SUBDIR += axcient
 SUBDIR += audio
 SUBDIR += benchmarks
 SUBDIR += biology

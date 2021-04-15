@@ -1,38 +1,42 @@
-This is the FreeBSD Ports Collection.  For an easy to use
-WEB-based interface to it, please see:
+This is Axcient's fork of the FreeBSD Ports Collection.  Proprietary FreeBSD
+ports are stored here.
 
-	https://www.FreeBSD.org/ports
+Sync procedure
+==============
 
-For general information on the Ports Collection, please see the
-FreeBSD Handbook ports section which is available from:
+This repository should be kept in sync with upstream
+(https://github.com/freebsd/freebsd-ports).  The procedure to do that is:
 
-	https://www.FreeBSD.org/doc/en_US.ISO8859-1/books/handbook/ports.html
-		for the latest official version
-	or:
-	The ports(7) manual page (man ports).
+```sh
+git fetch upstream master
+git checkout master
+git merge upstream/master
+git push origin master
+```
 
-These will explain how to use ports and packages.
+Under no circumstances cherry-pick from upstream/master to master!  That will
+break merge history, because git is incapable of tracking the source of a
+cherry-pick.
 
-If you would like to search for a port, you can do so easily by
-saying (in /usr/ports):
+Local changes
+=============
 
-	make search name="<name>"
-	or:
-	make search key="<keyword>"
+Local changes may be made as usual.  Either push directly to the master branch,
+or make a pull request from another.
 
-which will generate a list of all ports matching <name> or <keyword>.
-make search also supports wildcards, such as:
+The Staging Branch
+==================
 
-	make search name="gtk*"
+The Staging branch is intended to test new versions of a small number of ports
+before merging them to master.  It is _not_ intended to test changes to every
+single port, like bash, rsync, ssmtp, etc.  As such, the merge flow looks like
+this:
 
-For information about contributing to FreeBSD ports, please see the Porter's
-Handbook, available at:
+```
+upstream => master => staging
+```
 
-	https://www.FreeBSD.org/doc/en_US.ISO8859-1/books/porters-handbook/
+When developing new ports or making local changes to existing ports, the changes
+may be committed either to `master` or to `staging`, as testing demands require.
+Use `git cherry-pick` to merge changes from `staging` back to `master`.
 
-NOTE:  This tree will GROW significantly in size during normal usage!
-The distribution tar files can and do accumulate in /usr/ports/distfiles,
-and the individual ports will also use up lots of space in their work
-subdirectories unless you remember to "make clean" after you're done
-building a given port.  /usr/ports/distfiles can also be periodically
-cleaned without ill-effect.

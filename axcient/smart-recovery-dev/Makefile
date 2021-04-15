@@ -1,0 +1,23 @@
+# $FreeBSD$
+
+PORTVERSION=	1.0.5.${DATECODE}
+# Set PORTREVISION explicitly so it won't be inherited from the MASTERDIR
+PORTREVISION=	0
+PKGNAMESUFFIX=	-dev
+
+DATECODE!=	date -u "+%Y%m%d%H"
+
+COMMENT=	Hourly build of smart-recovery's develop branch
+
+GH_TAGNAME=	develop
+
+CONFLICTS_INSTALL=	smart-recovery \
+			smart-recovery-stg
+
+MASTERDIR=	${.CURDIR}/../smart-recovery
+
+# Disable checksum verification because this port builds from the tip of a
+# branch.
+checksum:
+
+.include "${MASTERDIR}/Makefile"

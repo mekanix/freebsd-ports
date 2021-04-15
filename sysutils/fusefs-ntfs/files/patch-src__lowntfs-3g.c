@@ -1,6 +1,6 @@
---- src/lowntfs-3g.c.orig	2010-10-02 08:22:46.000000000 -0300
-+++ src/lowntfs-3g.c	2010-10-10 22:04:14.000000000 -0300
-@@ -2541,10 +2541,14 @@
+--- src/lowntfs-3g.c.orig	2017-03-23 09:42:44 UTC
++++ src/lowntfs-3g.c
+@@ -3010,10 +3010,14 @@ close_inode:
  	if (ntfs_inode_close(ni))
  		set_fuse_error(&ret);
  done :
