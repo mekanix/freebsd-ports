@@ -7,7 +7,7 @@ CATEGORIES=	axcient
 MASTER_SITES=	GH
 
 MAINTAINER=	dprokopchenkov@axcient.com
-COMMENT=	Vault Transfer 2
+COMMENT?=	Vault Transfer 2
 
 SZS_LIB_DEPENDS?= libszs-op.so:axcient/szs
 LIB_DEPENDS=	libmicrohttpd.so:www/libmicrohttpd \
@@ -29,7 +29,7 @@ USES=		axcient gmake
 GH_PROJECT=	vaulttransfer2
 GH_TAGNAME?=     1.1.5
 
-CONFLICTS_INSTALL=	vt2-stg
+CONFLICTS_INSTALL?=	vt2-stg
 
 MAKE_JOBS_UNSAFE=yes
 ALL_TARGET=	server

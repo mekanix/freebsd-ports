@@ -7,7 +7,7 @@ CATEGORIES=	axcient
 MASTER_SITES=	GH
 
 MAINTAINER=	dprokopchenkov@axcient.com
-COMMENT=	Szs-op components
+COMMENT?=	Szs-op components
 
 FETCH_DEPENDS+=	git:devel/git
 ADD_MBR_DEPENDS?=	add_mbr:axcient/add_mbr
@@ -100,7 +100,7 @@ post-extract:
 	@${RM} -r ${WRKSRC}/vendor/cloud.google.com/go/pubsub
 	@${RLN} ${WRKSRC_googleapis_google_cloud_go_pubsub}/pubsub ${WRKSRC}/vendor/cloud.google.com/go/pubsub
 
-CONFLICTS_INSTALL=	szs-stg
+CONFLICTS_INSTALL?=	szs-stg
 
 GO_PKGNAME=	github.com/${GH_ACCOUNT}/szs-op
 GO_TARGET=	./cmd/api ./cmd/jobs ./cmd/statistics ./cmd/exports ./cmd/safetyarchivecleanup ./cmd/cleanupclones

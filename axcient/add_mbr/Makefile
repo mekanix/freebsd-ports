@@ -13,7 +13,7 @@ USES=		axcient fuse gmake
 GH_PROJECT=	Disk-Manager
 GH_TAGNAME?=	2.0.1
 
-CONFLICTS_INSTALL=	add_mbr-stg
+CONFLICTS_INSTALL?=	add_mbr-stg
 
 PLIST_FILES=	bin/add_mbr
 
