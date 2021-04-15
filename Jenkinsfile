@@ -4,7 +4,7 @@ pipeline {
 
     environment {
         DISTDIR = "/usr/local-distfiles"
-        PNAME = "jenkins-master"
+        PNAME = "jenkins-main"
     }
     parameters {
         string(description: 'Dev package to build', name: 'devPackage')
