@@ -15,7 +15,7 @@ pipeline {
                 echo "PWD is ${PWD} and port name is ${PNAME}"
                 // Register this workspace in Poudriere, if it isn't there
                 // already
-                sh 'poudriere ports -lq | grep -q "${PWD}" || sudo poudriere ports -c -m null -M "${PWD}" -p "${PNAME}"'
+                sh 'poudriere ports -lq | grep -q " ${PWD}$" || sudo poudriere ports -c -m null -M "${PWD}" -p "${PNAME}"'
             }
         }
         stage('Build prod packages') {
