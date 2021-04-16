@@ -1,8 +1,7 @@
-# $FreeBSD$
-
 PORTNAME=	pulseaudio-module-xrdp
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.5
+PORTREVISION=	1
 CATEGORIES=	audio
 DIST_SUBDIR=	xrdp
 

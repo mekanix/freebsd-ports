@@ -1,5 +1,4 @@
 # Created by: Gautam Mani <execve@gmail.com>
-# $FreeBSD$
 
 PORTNAME=	stockfish
 DISTVERSIONPREFIX=	sf_
@@ -78,7 +77,7 @@ MYARCH=		x86-64
 .  endif
 .elif ${ARCH} == powerpc
 MYARCH=		ppc-32
-.elif ${ARCH} == powerpc64
+.elif ${ARCH:Mpowerpc64*}
 MYARCH=		ppc-64
 .endif
 

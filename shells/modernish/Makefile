@@ -1,5 +1,3 @@
-# $FreeBSD$
-
 PORTNAME=	modernish
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.16.5
@@ -20,7 +18,7 @@ OPTIONS_DEFINE=	DOCS EXAMPLES
 
 do-install:
 	cd ${WRKSRC} && \
-	${SETENV} ${MAKE_ENV} ./install.sh -d ${PREFIX} -D ${STAGEDIR} -n -s ${SH}
+	${SETENV} ${MAKE_ENV} ${SH} -x ./install.sh -d ${PREFIX} -D ${STAGEDIR} -n -s ${SH}
 
 	${RM} ${STAGEDIR}${DOCSDIR}/LICENSE
 	${MKDIR} ${STAGEDIR}${EXAMPLESDIR:H}

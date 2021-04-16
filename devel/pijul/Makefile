@@ -1,5 +1,4 @@
 # Created by: Carlo Strub
-# $FreeBSD$
 
 PORTNAME=	pijul
 PORTVERSION=	0.12.0
@@ -12,6 +11,8 @@ MAINTAINER=	cs@FreeBSD.org
 COMMENT=	Distributed version control system
 
 LICENSE=	GPLv2
+
+BROKEN=		unfechtable
 
 BUILD_DEPENDS=	llvm${LLVM_DEFAULT}>0:devel/llvm${LLVM_DEFAULT}
 LIB_DEPENDS=	libgmp.so:math/gmp \

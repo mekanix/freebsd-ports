@@ -1,8 +1,8 @@
 # Created by: stas
-# $FreeBSD$
 
 PORTNAME=	calibre
 PORTVERSION=	5.14.0
+PORTREVISION=	2
 CATEGORIES=	deskutils python
 MASTER_SITES=	http://download.calibre-ebook.com/${PORTVERSION}/
 

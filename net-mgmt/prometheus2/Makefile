@@ -1,8 +1,6 @@
-# $FreeBSD$
-
 PORTNAME=	prometheus
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.25.2
+DISTVERSION=	2.26.0
 CATEGORIES=	net-mgmt
 
 MAINTAINER=	dor.bsd@xm0.uk

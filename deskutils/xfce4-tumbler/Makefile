@@ -1,9 +1,8 @@
 # Created by: Olivier Duchateau
-# $FreeBSD$
 
 PORTNAME=	tumbler
 PORTVERSION=	4.16.0
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	deskutils xfce
 MASTER_SITES=	XFCE
 PKGNAMEPREFIX=	xfce4-

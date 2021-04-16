@@ -1,5 +1,4 @@
 # Created by: Simon Marlow <simonmar@microsoft.com>
-# $FreeBSD$
 
 PORTNAME=	ghc
 PORTVERSION=	${GHC_VERSION}
@@ -206,7 +205,7 @@ post-patch:
 		${WRKSRC}/configure ${WRKSRC}/aclocal.m4
 .endif
 
-pre-configure: apply-slist
+pre-configure:
 	# Copy the subbed build.mk to the proper position
 	${CP} ${WRKDIR}/build.mk ${WRKSRC}/mk/build.mk
 

@@ -1,5 +1,4 @@
 # Created by: alepulver
-# $FreeBSD$
 
 PORTNAME=	uhexen2
 PORTVERSION=	1.5.9
@@ -25,7 +24,6 @@ USE_SDL=	sdl
 MAKE_ARGS=	X11BASE="${LOCALBASE}"
 MAKE_JOBS_UNSAFE=	yes
 
-PORTSCOUT=	skipb:yes
 SUB_FILES=	pkg-message
 
 OPTIONS_DEFINE=		DOCS FLAC MIKMOD OGG OPUS

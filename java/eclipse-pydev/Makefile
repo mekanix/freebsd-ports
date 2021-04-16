@@ -1,5 +1,4 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	pydev
 PORTVERSION=	8.2.0
@@ -27,8 +26,6 @@ JAVA_VERSION=	1.8+
 
 NO_BUILD=	YES
 NO_WRKSUBDIR=	YES
-
-PLUGINDIR=	share/eclipse/dropins/${PORTNAME}/eclipse/plugins
 
 .include <bsd.port.options.mk>
 

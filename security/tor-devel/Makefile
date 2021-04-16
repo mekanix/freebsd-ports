@@ -1,8 +1,7 @@
 # Created by: peter.thoenen@yahoo.com
-# $FreeBSD$
 
 PORTNAME=	tor
-DISTVERSION=	0.4.6.1-alpha
+DISTVERSION=	0.4.6.2-alpha
 CATEGORIES=	security net
 MASTER_SITES=	TOR
 PKGNAMESUFFIX=	-devel

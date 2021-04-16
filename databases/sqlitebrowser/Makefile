@@ -1,5 +1,4 @@
 # Created by: loïc bartoletti <lbartoletti@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	sqlitebrowser
 PORTVERSION=	3.12.1
@@ -25,7 +24,7 @@ USE_GITHUB=	yes
 
 INSTALLS_ICONS=	yes
 
-PORTSCOUT=	ignore:continuous
+PORTSCOUT=	ignore:1
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%DATADIR%%|${DATADIR}|' \

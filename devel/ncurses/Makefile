@@ -1,9 +1,7 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD$
 
 PORTNAME=	ncurses
 DISTVERSION=	6.2-${SNAPSHOT}
-PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.invisible-island.net/${PORTNAME}/current/ \
 		https://invisible-mirror.net/archives/ncurses/current/
@@ -19,7 +17,7 @@ BROKEN_sparc64=	cannot build: coredump: illegal instruction
 
 USES=		cpe pkgconfig shebangfix tar:tgz
 
-SNAPSHOT=		20210313
+SNAPSHOT=		20210403
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS=		--datadir=${PREFIX}/share \
 			--with-terminfo-dirs="${PREFIX}/share/terminfo:${LOCALBASE}/share/site-terminfo" \

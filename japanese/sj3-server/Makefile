@@ -1,5 +1,4 @@
 # Created by: Hidekazu Kuroki <hidekazu@cs.titech.ac.jp>
-# $FreeBSD$
 
 PORTNAME=	sj3
 PORTVERSION=	2.0.1.20
@@ -55,7 +54,7 @@ post-patch:
 	cd ${WRKSRC} && ${CAT} ${POSTPATCHES.nodocports} | ${PATCH}
 .endif
 
-pre-configure: apply-slist
+pre-configure:
 	${INSTALL_DATA} ${WRKDIR}/sj3_freebsd.tmpl ${WRKSRC}/sj3_freebsd.tmpl
 
 post-install:

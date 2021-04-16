@@ -1,5 +1,4 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	e2fsprogs
 PORTVERSION=	1.46.2
@@ -46,7 +45,7 @@ CPPFLAGS+=	-I${WRKSRC}/lib -I${LOCALBASE}/include # -D_EXT2_USE_C_VERSIONS
 MAKE_ARGS+=	pkgconfigdir='${PREFIX}/libdata/pkgconfig'
 MAKE_ENV+=	CHECK_CMD=@true
 
-PORTSCOUT=	ignore	# cannot handle the version in the directory
+PORTSCOUT=	ignore:1	# cannot handle the version in the directory
 
 .if !defined(MASTERDIR)
 INSTALL_TARGET=		install install-libs

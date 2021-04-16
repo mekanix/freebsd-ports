@@ -1,9 +1,8 @@
 # Created by: Marc van Woerkom <3d@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	audacity
 PORTVERSION=	2.4.2
-PORTREVISION=	3
+PORTREVISION=	4
 DISTVERSIONPREFIX=	Audacity-
 CATEGORIES=	audio
 

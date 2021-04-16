@@ -1,5 +1,4 @@
 # Created by: Stijn Hoop <stijn@win.tue.nl>
-# $FreeBSD$
 #
 # For those wondering why this port is not under `x11-drivers' category,
 # have a look at https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=121930.
@@ -9,9 +8,13 @@
 # you need to use legacy driver version and install one of corresponding
 # slave ports instead (`x11/nvidia-driver-390', `x11/nvidia-driver-340',
 # or `x11/nvidia-driver-304').
+#
+# To simplify testing of new feature branches and beta driver versions,
+# the port aims to support building against arbitrary DISTVERSION, i.e.
+# ``make DISTVERSION=xxx.yy.zz -DNO_CHECKSUM'' should typically work.
 
 PORTNAME=	nvidia-driver
-DISTVERSION?=	460.67
+DISTVERSION?=	460.73.01
 # Always try to set PORTREVISION as it can be overridden by the slave ports
 PORTREVISION?=	0
 CATEGORIES=	x11
@@ -257,6 +260,8 @@ post-install: .SILENT
 .endif
 .if ${NVVERSION} < 440.036
 	${REINPLACE_CMD} -e '/lib32\//d' ${TMPPLIST}
+.elif ${NVVERSION} < 465.01901
+	${REINPLACE_CMD} -e '/lib32\/libnvidia-glvkspirv\.so/d' ${TMPPLIST}
 .endif
 # Rename some libraries and install a libmap file to resolve conflict with
 # Mesa libraries.

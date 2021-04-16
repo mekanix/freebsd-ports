@@ -1,8 +1,7 @@
 # Created by: David O'Brien <obrien@cs.ucdavis.edu>
-# $FreeBSD$
 
 PORTNAME=	vim
-PORTVERSION=	8.2.2569
+PORTVERSION=	8.2.2725
 DISTVERSIONPREFIX=	v
 CATEGORIES=	editors
 
@@ -173,7 +172,7 @@ post-patch:
 
 post-configure:
 # Needed when devel/libsysinfo is installed:
-	${REINPLACE_CMD} -e '/#define HAVE_SYSINFO 1/ d' ${WRKSRC}/src/auto/config.h
+	${REINPLACE_CMD} -e '/^#define HAVE_SYSINFO/ d' ${WRKSRC}/src/auto/config.h
 
 post-install-DEFAULT_VIMRC-on:
 	${MKDIR} ${STAGEDIR}${ETCDIR}

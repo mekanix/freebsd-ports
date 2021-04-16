@@ -1,5 +1,4 @@
 # Created by: Anton Shterenlikht
-# $FreeBSD$
 
 PORTNAME=	opencoarrays
 DISTVERSION=	2.9.0
@@ -31,7 +30,6 @@ OPTIONS_SINGLE=		MPI
 OPTIONS_SINGLE_MPI=	MPICH OPENMPI
 OPTIONS_DEFAULT=	MPICH
 
-MPICH_DESC=		Parallel processing support via MPICH
 MPICH_BUILD_DEPENDS=	mpif90:net/mpich
 MPICH_RUN_DEPENDS=	mpif90:net/mpich
 MPICH_CONFIGURE_ENV=	MPI_HOME=${LOCALBASE}

@@ -1,9 +1,8 @@
 # Created by: John McAree <john@mcaree.org>
-# $FreeBSD$
 
 PORTNAME=	comical
 PORTVERSION=	0.8
-PORTREVISION=	13
+PORTREVISION=	14
 CATEGORIES=	graphics
 MASTER_SITES=	SF
 

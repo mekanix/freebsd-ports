@@ -1,7 +1,5 @@
-# $FreeBSD$
-
 PORTNAME=	librepo
-DISTVERSION=	1.13.0
+DISTVERSION=	1.14.0
 CATEGORIES=	misc
 
 MAINTAINER=	yuri@FreeBSD.org

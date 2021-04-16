@@ -1,8 +1,8 @@
 # Created by: ijliao
-# $FreeBSD$
 
 PORTNAME=	nettle
 PORTVERSION=	3.7.2
+PORTREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	GNU \
 		https://www.lysator.liu.se/~nisse/archive/
@@ -30,6 +30,9 @@ INFO=		nettle
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
+EXAMPLES_CFLAGS=	-I${OPENSSLINC}
+EXAMPLES_USES=		ssl
+
 .include <bsd.port.options.mk>
 
 .if ${ARCH} == "sparc64"
@@ -37,11 +40,13 @@ CONFIGURE_ENV+=	CCPIC=-fPIC
 .endif
 
 post-patch:
-	@${REINPLACE_CMD} -e '/SUBDIRS = / s| examples||' ${WRKSRC}/Makefile.in
 	@${REINPLACE_CMD} -e '/libdir=/ s|lib32|lib|' ${WRKSRC}/configure
 .if ${ARCH} == "mips64"
 	@${REINPLACE_CMD} -e 's|__sgi|__unix__|' ${WRKSRC}/configure
 .endif
+
+post-patch-EXAMPLES-off:
+	@${REINPLACE_CMD} -e '/SUBDIRS = / s| examples||' ${WRKSRC}/Makefile.in
 
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/lib*.so
@@ -52,6 +57,7 @@ post-install-DOCS-on:
 
 post-install-EXAMPLES-on:
 	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	cd ${WRKSRC}/examples && ${INSTALL_PROGRAM} base16dec base16enc base64dec base64enc ecc-benchmark hogweed-benchmark nettle-benchmark random-prime rsa-decrypt rsa-encrypt rsa-keygen rsa-sign rsa-verify ${STAGEDIR}${EXAMPLESDIR}
 	${INSTALL_DATA} ${WRKSRC}/examples/*.[ch] ${STAGEDIR}${EXAMPLESDIR}
 
 .include <bsd.port.mk>

@@ -1,9 +1,8 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	xreader
 PORTVERSION=	2.8.3
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	print gnome
 
 MAINTAINER=	danfe@FreeBSD.org

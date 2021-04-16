@@ -1,8 +1,8 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	slade
 PORTVERSION=	3.1.12
+PORTREVISION=	1
 CATEGORIES=	games
 
 MAINTAINER=	danfe@FreeBSD.org

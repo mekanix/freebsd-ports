@@ -1,7 +1,6 @@
-# $FreeBSD$
-
 PORTNAME=	passwordsafe
 DISTVERSION=	1.12.0
+PORTREVISION=	1
 CATEGORIES=	sysutils
 
 MAINTAINER=	brnrd@FreeBSD.org

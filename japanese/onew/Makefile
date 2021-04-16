@@ -1,5 +1,4 @@
 # Created by: Satoshi TAOKA <taoka@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	onew
 PORTVERSION=	2.2.10
@@ -51,8 +50,6 @@ PLIST_FILES+=	lib/libonew-${I:S/_/+/g:tl}.a
 RK_DIR+=	${RK_DIR.${I}}
 .endif
 .endfor
-
-pre-build: apply-slist
 
 do-build:
 .for I in ${INPUT_METHOD}

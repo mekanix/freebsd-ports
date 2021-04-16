@@ -1,6 +1,3 @@
-# $FreeBSD$
-#
-
     COMMENT = System utilities
 
     SUBDIR += 3dm
@@ -46,6 +43,7 @@
     SUBDIR += ansible
     SUBDIR += ansible-iocage
     SUBDIR += ansible-kld
+    SUBDIR += ansible-sshjail
     SUBDIR += ansible-sysrc
     SUBDIR += ansible27
     SUBDIR += ansible28
@@ -214,7 +212,6 @@
     SUBDIR += coreos-ct
     SUBDIR += coreutils
     SUBDIR += cpdup
-    SUBDIR += cpu
     SUBDIR += cpu-x
     SUBDIR += cpuburn
     SUBDIR += cpuid
@@ -483,6 +480,7 @@
     SUBDIR += healthd
     SUBDIR += heirloom
     SUBDIR += helm
+    SUBDIR += helmfile
     SUBDIR += hexpeek
     SUBDIR += hextools
     SUBDIR += hexyl
@@ -621,7 +619,6 @@
     SUBDIR += logrotate
     SUBDIR += logstalgia
     SUBDIR += logstash-forwarder
-    SUBDIR += logstash5
     SUBDIR += logstash6
     SUBDIR += logstash7
     SUBDIR += logtool
@@ -1123,7 +1120,6 @@
     SUBDIR += rubygem-capistrano-ext
     SUBDIR += rubygem-capistrano-harrow
     SUBDIR += rubygem-chef
-    SUBDIR += rubygem-chef15
     SUBDIR += rubygem-chef-api
     SUBDIR += rubygem-chef-bin
     SUBDIR += rubygem-chef-config
@@ -1134,6 +1130,7 @@
     SUBDIR += rubygem-chef-utils15
     SUBDIR += rubygem-chef-vault
     SUBDIR += rubygem-chef-zero
+    SUBDIR += rubygem-chef15
     SUBDIR += rubygem-choria-mcorpc-support
     SUBDIR += rubygem-facter
     SUBDIR += rubygem-fluent-mixin-plaintextformatter
@@ -1241,7 +1238,6 @@
     SUBDIR += screenie
     SUBDIR += scterc
     SUBDIR += sd-agent
-    SUBDIR += sd-mux-ctrl
     SUBDIR += sdparm
     SUBDIR += seatd
     SUBDIR += seatools
@@ -1308,7 +1304,6 @@
     SUBDIR += sysinfo
     SUBDIR += syslinux
     SUBDIR += syslog-ng
-    SUBDIR += syslog-ng327
     SUBDIR += syslogger
     SUBDIR += sysrc
     SUBDIR += sysvbanner

@@ -1,8 +1,7 @@
 # Created by: Marcel Kaiser <mk@nic-nac-project.org>
-# $FreeBSD$
 
 PORTNAME=	dsbmd
-PORTVERSION=	1.11.3
+PORTVERSION=	1.11.4
 CATEGORIES=	sysutils
 
 MAINTAINER=	mk@nic-nac-project.org

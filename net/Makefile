@@ -1,6 +1,3 @@
-# $FreeBSD$
-#
-
     COMMENT = Networking tools
 
     SUBDIR += 3proxy
@@ -39,6 +36,7 @@
     SUBDIR += asterisk13
     SUBDIR += asterisk16
     SUBDIR += asterisk18
+    SUBDIR += astron
     SUBDIR += avahi
     SUBDIR += avahi-app
     SUBDIR += avahi-autoipd
@@ -92,7 +90,6 @@
     SUBDIR += corkscrew
     SUBDIR += corosync2
     SUBDIR += corosync3
-    SUBDIR += coturn
     SUBDIR += courier-authlib-ldap
     SUBDIR += courier-sox
     SUBDIR += cppzmq
@@ -161,7 +158,6 @@
     SUBDIR += fping
     SUBDIR += freebsd-uucp
     SUBDIR += freediameter
-    SUBDIR += freenet6
     SUBDIR += freeradius-client
     SUBDIR += freeradius3
     SUBDIR += freerdp
@@ -389,7 +385,6 @@
     SUBDIR += libproxy
     SUBDIR += libproxy-gnome3
     SUBDIR += libproxy-kde
-    SUBDIR += libproxy-mozjs
     SUBDIR += libproxy-pacrunner
     SUBDIR += libproxy-perl
     SUBDIR += libproxy-python
@@ -1477,7 +1472,6 @@
     SUBDIR += toonel
     SUBDIR += torsocks
     SUBDIR += traefik
-    SUBDIR += traefik2
     SUBDIR += traff
     SUBDIR += trafshow
     SUBDIR += trafshow3
