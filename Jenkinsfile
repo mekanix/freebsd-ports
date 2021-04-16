@@ -43,6 +43,7 @@ pipeline {
                     axcient/cloudserver \
                     axcient/cloudserver-stg \
                     axcient/cloudserver2 \
+                    axcient/cloudserver2-stg \
                     axcient/efsserver \
                     axcient/filestore-clone \
                     axcient/py-drive-exporter \
@@ -126,6 +127,7 @@ pipeline {
                 sh 'cd axcient/cloudserver; make fetch'
                 sh 'cd axcient/cloudserver-stg; make fetch'
                 sh 'cd axcient/cloudserver2; make fetch'
+                sh 'cd axcient/cloudserver2-stg; make fetch'
                 sh 'cd axcient/py-drive-exporter; make fetch'
                 sh 'cd axcient/filestore-clone; make fetch'
                 sh 'cd axcient/smart-recovery; make fetch'
