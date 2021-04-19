@@ -7,7 +7,7 @@ pipeline {
         PNAME = "jenkins-main"
     }
     parameters {
-        string(description: 'Dev package to build', name: 'devPackage')
+        string(description: 'Dev package to build', name: 'devPackage', defaultValue: '')
     }
     stages {
         stage('Prepare env') {
