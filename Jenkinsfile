@@ -100,11 +100,11 @@ pipeline {
                     sysutils/rsyslog8 \
                     sysutils/sas2flash \
                     sysutils/sas3flash \
+                    sysutils/sas3ircu \
                     sysutils/screen \
                     sysutils/sg3_utils \
                     sysutils/smartmontools \
                     sysutils/smp_utils \
-                    sysutils/storcli \
                     sysutils/tmux \
                     sysutils/zfs-stats-lite \
                     sysutils/zfsnap2 \
