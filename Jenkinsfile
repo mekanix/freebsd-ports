@@ -44,6 +44,8 @@ pipeline {
                     axcient/cloudserver-stg \
                     axcient/cloudserver2 \
                     axcient/cloudserver2-stg \
+                    axcient/dralserver \
+                    axcient/dralserver-stg \
                     axcient/efsserver \
                     axcient/filestore-clone \
                     axcient/py-drive-exporter \
@@ -129,6 +131,8 @@ pipeline {
                 sh 'cd axcient/cloudserver-stg; make fetch'
                 sh 'cd axcient/cloudserver2; make fetch'
                 sh 'cd axcient/cloudserver2-stg; make fetch'
+                sh 'cd axcient/dralserver; make fetch'
+                sh 'cd axcient/dralserver-stg; make fetch'
                 sh 'cd axcient/py-drive-exporter; make fetch'
                 sh 'cd axcient/filestore-clone; make fetch'
                 sh 'cd axcient/smart-recovery; make fetch'
@@ -157,6 +161,7 @@ pipeline {
                 // because it lacks Jenkins' ssh key.
                 sh 'cd axcient/add_mbr-dev; make fetch'
                 sh 'cd axcient/cloudserver2-dev; make fetch'
+                sh 'cd axcient/dralserver-dev; make fetch'
                 sh 'cd axcient/smart-recovery-dev; make fetch'
                 sh 'cd axcient/szs-dev; make fetch'
                 sh 'cd axcient/vt2-dev; make fetch'

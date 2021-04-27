@@ -1,0 +1,5 @@
+bin/dralserver
+@sample %%ETCDIR%%/dralserver.yml.sample
+@sample %%EXAMPLESDIR%%/newsyslog.conf.d/dralserver.conf etc/newsyslog.conf.d/dralserver.conf
+etc/rc.d/dralserver
+@sample %%EXAMPLESDIR%%/rsyslog.d/dralserver.conf etc/rsyslog.d/dralserver.conf

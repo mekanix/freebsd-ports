@@ -12,6 +12,9 @@
     SUBDIR += cloudserver2
     SUBDIR += cloudserver2-dev
     SUBDIR += cloudserver2-stg
+    SUBDIR += dralserver
+    SUBDIR += dralserver-dev
+    SUBDIR += dralserver-stg
     SUBDIR += efsserver
     SUBDIR += py-drive-exporter
     SUBDIR += smart-recovery
