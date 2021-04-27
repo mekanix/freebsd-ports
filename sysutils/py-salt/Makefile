@@ -2,7 +2,7 @@
 
 PORTNAME=	salt
 PORTVERSION=	3002.6
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	sysutils python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -12,10 +12,12 @@ PATCH_SITES=   https://patch-diff.githubusercontent.com/raw/saltstack/salt/pull/
 # 57832: Speed up the sysctl state
 # 59290: Add a modicum of error handling to sysrc.set
 # 59966: Fix SIGINT with salt-call
+# 60091: Ignore temporary properties during zfs.filesystem_present
 PATCHFILES+=   59140.diff:-p1 \
 		58732.diff:-p1 \
 		59290.diff:-p1 \
-		59966.diff:-p1
+		59966.diff:-p1 \
+		60091.diff:-p1
 
 MAINTAINER=	christer.edwards@gmail.com
 COMMENT=	Distributed remote execution and configuration management system
