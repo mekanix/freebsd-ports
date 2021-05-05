@@ -2,6 +2,7 @@
 
 PORTNAME=	zrepl
 PORTVERSION=	0.3.1
+PORTREVISION=	1
 DISTVERSIONPREFIX=	v
 PORTREVISION=	1
 CATEGORIES=	sysutils
@@ -14,7 +15,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USES=		gmake go:modules
 USE_RC_SUBR=	zrepl
-SUB_FILES=	pkg-message
+SUB_FILES=	pkg-message 500.zrepl
 USE_GITHUB=	yes
 GH_TUPLE=	\
 		alecthomas:kingpin:v2.2.6:alecthomas_kingpin/vendor/gopkg.in/alecthomas/kingpin.v2 \
@@ -107,6 +108,9 @@ post-install:
 	${INSTALL_DATA} ${FILESDIR}/newsyslog.conf ${STAGEDIR}${EXAMPLESDIR}/newsyslog.conf
 	${INSTALL_DATA} ${FILESDIR}/syslog.conf ${STAGEDIR}${EXAMPLESDIR}/syslog.conf
 	${INSTALL_DATA} ${FILESDIR}/zrepl.yml ${STAGEDIR}${ETCDIR}/zrepl.yml.sample
+	${MKDIR} ${STAGEDIR}${PREFIX}/etc/periodic/weekly
+	${INSTALL_SCRIPT} ${WRKDIR}/500.zrepl \
+		${STAGEDIR}${PREFIX}/etc/periodic/weekly/500.zrepl
 
 post-install-EXAMPLES-on:
 	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}/hooks
