@@ -37,6 +37,8 @@ start_cmd="zfs_crypto_salt_start"
 
 : ${zfs_crypto_salt_enable:=NO}
 
+CACHEFILE=/var/cache/zpool.cache
+
 zfs_crypto_salt_start()
 {
 	echo "Fetching crypto key from Salt"
@@ -46,6 +48,7 @@ zfs_crypto_salt_start()
 	else
 		echo "Trying to load the key into all pools"
 		yes "${SECRET}" | /sbin/zfs mount -al
+		yes "${SECRET}" | /sbin/zpool import -al -c $CACHEFILE -o cachefile=$CACHEFILE
 	fi
 }
 
