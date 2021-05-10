@@ -8,8 +8,9 @@ This repository should be kept in sync with upstream
 (https://github.com/freebsd/freebsd-ports).  The procedure to do that is:
 
 ```sh
-git fetch upstream main
 git checkout main
+git pull origin main
+git fetch upstream main
 git merge upstream/main
 git push origin main
 ```
