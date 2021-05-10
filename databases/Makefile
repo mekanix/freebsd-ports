@@ -158,6 +158,7 @@
     SUBDIR += libsdb
     SUBDIR += libzdb
     SUBDIR += linux-c7-sqlite3
+    SUBDIR += linux-c7-unixODBC
     SUBDIR += linux-oracle-instantclient-basic
     SUBDIR += linux-oracle-instantclient-sdk
     SUBDIR += liquibase
@@ -924,7 +925,6 @@
     SUBDIR += rubygem-flipper-active_record
     SUBDIR += rubygem-flipper-active_record017
     SUBDIR += rubygem-gdbm
-    SUBDIR += rubygem-gitlab-pg_query
     SUBDIR += rubygem-globalid
     SUBDIR += rubygem-globalid-rails5
     SUBDIR += rubygem-globalid-rails50

@@ -28,11 +28,10 @@ IGNORE_FreeBSD_11_powerpc64=	is missing a bootstrap for FreeBSD 11.x powerpc64
 ONLY_FOR_ARCHS?=	aarch64 amd64 armv6 armv7 i386 powerpc64 powerpc64le
 ONLY_FOR_ARCHS_REASON?=	requires prebuilt bootstrap compiler
 
-BUILD_DEPENDS=	cmake:devel/cmake \
-		ninja:devel/ninja
+BUILD_DEPENDS=	cmake:devel/cmake
 LIB_DEPENDS=	libcurl.so:ftp/curl
 
-USES=		pkgconfig python:3.6+,build ssl tar:xz
+USES=		ninja:build pkgconfig python:3.6+,build ssl tar:xz
 
 MAKE_ENV=	DESTDIR=${STAGEDIR} \
 		OPENSSL_DIR="${OPENSSLBASE}" \
@@ -225,14 +224,14 @@ do-test:
 
 .if !defined(_RUST_MAKESUM_GUARD)
 makesum:
-	${MAKE} -D_RUST_MAKESUM_GUARD makesum ARCH=${ONLY_FOR_ARCHS:O:[1]} DISTINFO_FILE=${DISTINFO_FILE}.tmp
+	${MAKE} -D_RUST_MAKESUM_GUARD -DTRYBROKEN makesum ARCH=${ONLY_FOR_ARCHS:O:[1]} DISTINFO_FILE=${DISTINFO_FILE}.tmp
 .for arch in ${ONLY_FOR_ARCHS:O:[2..-1]}
-	${MAKE} -D_RUST_MAKESUM_GUARD makesum PPC_ABI=ELFv1 ARCH=${arch} DISTINFO_FILE=${DISTINFO_FILE}.${arch}
+	${MAKE} -D_RUST_MAKESUM_GUARD -DTRYBROKEN makesum PPC_ABI=ELFv1 ARCH=${arch} DISTINFO_FILE=${DISTINFO_FILE}.${arch}
 	${SED} 1d ${DISTINFO_FILE}.${arch} >> ${DISTINFO_FILE}.tmp
 	${RM} ${DISTINFO_FILE}.${arch}
 .endfor
 .if ${ONLY_FOR_ARCHS:Mpowerpc64}
-	${MAKE} -D_RUST_MAKESUM_GUARD makesum PPC_ABI=ELFv2 ARCH=powerpc64 DISTINFO_FILE=${DISTINFO_FILE}.powerpc64-elfv2
+	${MAKE} -D_RUST_MAKESUM_GUARD -DTRYBROKEN makesum PPC_ABI=ELFv2 ARCH=powerpc64 DISTINFO_FILE=${DISTINFO_FILE}.powerpc64-elfv2
 	${SED} 1d ${DISTINFO_FILE}.powerpc64-elfv2 >> ${DISTINFO_FILE}.tmp
 	${RM} ${DISTINFO_FILE}.powerpc64-elfv2
 .endif

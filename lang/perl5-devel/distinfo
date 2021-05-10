@@ -1,3 +1,3 @@
-TIMESTAMP = 1618821055
-SHA256 (perl/Perl-perl5-v5.33.8-57-gebdbfbc13a_GH0.tar.gz) = cc7c217716c7706c2b3588049256cc00951264f9522f0dee500fe8bed0932012
-SIZE (perl/Perl-perl5-v5.33.8-57-gebdbfbc13a_GH0.tar.gz) = 19873711
+TIMESTAMP = 1620629850
+SHA256 (perl/Perl-perl5-v5.34.0-RC1-7-g1e43c13e1f_GH0.tar.gz) = 028ecbaac503f4f6cc3326055f380a96a9c93558f4025ae53b6ac7a3796427c9
+SIZE (perl/Perl-perl5-v5.34.0-RC1-7-g1e43c13e1f_GH0.tar.gz) = 19874495

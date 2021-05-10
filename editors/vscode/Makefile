@@ -1,5 +1,6 @@
 PORTNAME=	vscode
-DISTVERSION=	1.55.1
+DISTVERSION=	1.55.2
+PORTREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	https://registry.npmjs.org/esbuild-freebsd-64/-/:esbuild_binary \
 		https://nodejs.org/dist/v${NODE_VER}/:node_headers \
@@ -41,7 +42,7 @@ LIB_DEPENDS=	libatk-bridge-2.0.so:accessibility/at-spi2-atk \
 		libre2.so:devel/re2 \
 		liblcms2.so:graphics/lcms2 \
 		libdrm.so:graphics/libdrm \
-		libpng16.so:graphics/png \
+		libpng.so:graphics/png \
 		libwebp.so:graphics/webp \
 		libavcodec.so:multimedia/ffmpeg \
 		libvpx.so:multimedia/libvpx \
@@ -66,7 +67,7 @@ USES=		desktop-file-utils gl gmake gnome jpeg pkgconfig \
 USE_GITHUB=	yes
 GH_ACCOUNT=	microsoft
 
-SOURCE_COMMIT_HASH=	08a217c4d27a02a5bcde898fd7981bda5b49391b
+SOURCE_COMMIT_HASH=	3c4e3df9e89829dce27b7b5c24508306b151f30d
 
 BINARY_ALIAS=	python=${PYTHON_CMD}
 
@@ -215,7 +216,7 @@ do-install:
 	cd ${WRKDIR}/VSCode-linux-x64 && \
 		${TAR} -cf - . | ${TAR} -xf - -C ${STAGEDIR}${DATADIR}
 	cd ${STAGEDIR}${DATADIR}/resources/app/node_modules.asar.unpacked && \
-		${FIND} . -type f -exec ${STRIP_CMD} {} ';'
+		${FIND} . -type f -name '*.node' -exec ${STRIP_CMD} {} ';'
 .for f in chromedriver mksnapshot v8_context_snapshot_generator
 	${RM} ${STAGEDIR}${DATADIR}/${f}
 .endfor

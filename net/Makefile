@@ -170,6 +170,7 @@
     SUBDIR += fspd
     SUBDIR += fsplib
     SUBDIR += gdrive
+    SUBDIR += gemserv
     SUBDIR += geoclue
     SUBDIR += geocode-glib
     SUBDIR += geoipupdate
@@ -180,6 +181,7 @@
     SUBDIR += glflow
     SUBDIR += glib-networking
     SUBDIR += glusterfs
+    SUBDIR += gmid
     SUBDIR += gnet2
     SUBDIR += gnetcat
     SUBDIR += gnome-nettool
@@ -282,6 +284,7 @@
     SUBDIR += jgroups
     SUBDIR += jicmp
     SUBDIR += jicmp6
+    SUBDIR += jose
     SUBDIR += jrdesktop
     SUBDIR += jsch
     SUBDIR += jumpgate
@@ -356,7 +359,6 @@
     SUBDIR += libgweather
     SUBDIR += libilbc
     SUBDIR += libiscsi
-    SUBDIR += libjson-rpc-cpp
     SUBDIR += libkgapi
     SUBDIR += libksieve
     SUBDIR += libkvkontakte
@@ -382,6 +384,7 @@
     SUBDIR += libosip2
     SUBDIR += libpcap
     SUBDIR += libpcapnav
+    SUBDIR += libpfctl
     SUBDIR += libproxy
     SUBDIR += libproxy-gnome3
     SUBDIR += libproxy-kde
@@ -1087,6 +1090,7 @@
     SUBDIR += py-python-socks
     SUBDIR += py-python-twitter
     SUBDIR += py-pytradfri
+    SUBDIR += py-pyu2f
     SUBDIR += py-pyvmomi
     SUBDIR += py-pyzmq
     SUBDIR += py-qt5-network
@@ -1357,7 +1361,6 @@
     SUBDIR += rude
     SUBDIR += ryu
     SUBDIR += sacc
-    SUBDIR += samba411
     SUBDIR += samba412
     SUBDIR += samba413
     SUBDIR += samplicator
@@ -1455,6 +1458,7 @@
     SUBDIR += tcpwatch
     SUBDIR += tcpxd
     SUBDIR += tcpxtract
+    SUBDIR += td-system-tools
     SUBDIR += tdetect
     SUBDIR += termshark
     SUBDIR += tftpgrab

@@ -68,7 +68,6 @@
     SUBDIR += cargo-audit
     SUBDIR += ccrypt
     SUBDIR += ccsrch
-    SUBDIR += certificate-transparency
     SUBDIR += cfs
     SUBDIR += cfssl
     SUBDIR += chaosreader
@@ -132,6 +131,7 @@
     SUBDIR += dsniff
     SUBDIR += dsvpn
     SUBDIR += duo
+    SUBDIR += duo_openvpn
     SUBDIR += easy-rsa
     SUBDIR += elixir-comeonin
     SUBDIR += elixir-comeonin_i18n
@@ -147,7 +147,6 @@
     SUBDIR += fakeident
     SUBDIR += fakeroot
     SUBDIR += farmhash
-    SUBDIR += fbopenssl
     SUBDIR += fcheck
     SUBDIR += fcrackzip
     SUBDIR += ffuf
@@ -174,6 +173,7 @@
     SUBDIR += git-crypt
     SUBDIR += git-remote-gcrypt
     SUBDIR += git-secret
+    SUBDIR += gitjacker
     SUBDIR += gnome-keyring
     SUBDIR += gnome-keyring-sharp
     SUBDIR += gnome-ssh-askpass
@@ -273,6 +273,7 @@
     SUBDIR += kripp
     SUBDIR += kstart
     SUBDIR += ktls_isa-l_crypto-kmod
+    SUBDIR += kuku
     SUBDIR += kwalletmanager
     SUBDIR += l0pht-watch
     SUBDIR += l0phtcrack
@@ -518,6 +519,7 @@
     SUBDIR += p5-Crypt-HSXKPasswd
     SUBDIR += p5-Crypt-IDEA
     SUBDIR += p5-Crypt-Imail
+    SUBDIR += p5-Crypt-JWT
     SUBDIR += p5-Crypt-Juniper
     SUBDIR += p5-Crypt-Khazad
     SUBDIR += p5-Crypt-LE
@@ -1144,6 +1146,7 @@
     SUBDIR += rubygem-sshkey
     SUBDIR += rubygem-sshkit
     SUBDIR += rubygem-sslshake
+    SUBDIR += rubygem-ssrf_filter
     SUBDIR += rubygem-timfel-krb5
     SUBDIR += rubygem-tpm-key_attestation
     SUBDIR += rubygem-twitter_oauth
@@ -1198,6 +1201,7 @@
     SUBDIR += softether-devel
     SUBDIR += softether5
     SUBDIR += softhsm2
+    SUBDIR += solana
     SUBDIR += sops
     SUBDIR += spass
     SUBDIR += spass-qt5
@@ -1241,6 +1245,7 @@
     SUBDIR += swatchdog
     SUBDIR += symbion-sslproxy
     SUBDIR += tailscale
+    SUBDIR += tang
     SUBDIR += tclsasl
     SUBDIR += tcpcrypt
     SUBDIR += teleport

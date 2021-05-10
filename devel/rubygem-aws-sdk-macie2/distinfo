@@ -1,3 +1,3 @@
-TIMESTAMP = 1618320650
-SHA256 (rubygem/aws-sdk-macie2-1.24.0.gem) = cd2b7efe8d3cd7074ad7dd38fc3be15248b4bf8cb84a92a69eed95a460c367b4
-SIZE (rubygem/aws-sdk-macie2-1.24.0.gem) = 57856
+TIMESTAMP = 1619910363
+SHA256 (rubygem/aws-sdk-macie2-1.27.0.gem) = 71a93638af495f4de151a5b11b2787760da0cde5611de236bdc2d48d2abd9ddd
+SIZE (rubygem/aws-sdk-macie2-1.27.0.gem) = 65024

@@ -7,7 +7,6 @@
     SUBDIR += climm
     SUBDIR += coccinella
     SUBDIR += convey
-    SUBDIR += cordless
     SUBDIR += coyim
     SUBDIR += cutegram
     SUBDIR += dendrite
@@ -55,7 +54,6 @@
     SUBDIR += libnice
     SUBDIR += libnice-gst1
     SUBDIR += libpurple
-    SUBDIR += libqmatrixclient
     SUBDIR += libqtelegram-ae
     SUBDIR += libquotient
     SUBDIR += libsignal-client
@@ -150,6 +148,7 @@
     SUBDIR += ssh-chat
     SUBDIR += sshout
     SUBDIR += talkatu
+    SUBDIR += tdlib
     SUBDIR += teamwords
     SUBDIR += telegram-cli
     SUBDIR += telegram-desktop

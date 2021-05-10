@@ -1,7 +1,6 @@
 PORTNAME=	openethereum
 DISTVERSIONPREFIX=	v
-DISTVERSION=	3.2.1
-PORTREVISION=	1
+DISTVERSION=	3.2.5
 CATEGORIES=	net-p2p
 
 MAINTAINER=	ale@FreeBSD.org
@@ -22,6 +21,8 @@ CARGO_TEST=	yes
 RUSTFLAGS+=	-C link-arg=-fuse-ld=lld
 
 .include "${.CURDIR}/Makefile.crates"
+
+CARGO_GIT_SUBDIR=	rethutil:reth-util:crates/util
 
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}

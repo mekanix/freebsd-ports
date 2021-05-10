@@ -1464,6 +1464,9 @@ ${_f}_ARGS:=	${f:C/^[^\:]*(\:|\$)//:S/,/ /g}
 .for f in ${USES}
 .undef _usefound
 .for udir in ${OVERLAYS:C,$,/Mk/Uses,} ${USESDIR}
+# always include all overlay files found in each overlay 
+_overlayfile=	${udir}/${f:C/\:.*//}-overlay.mk
+.sinclude "${_overlayfile}
 _usefile=	${udir}/${f:C/\:.*//}.mk
 .if exists(${_usefile}) && !defined(_usefound)
 _usefound=
@@ -2232,11 +2235,11 @@ PKG_SUFX?=	.pkg
 .if defined(PKG_NOCOMPRESS)
 PKG_OLDSUFX?=	.tar
 .else
-.if ${OSVERSION} > 1400000
-PKG_OLDSUFX?=	.tzst
-.else
+#.if ${OSVERSION} > 1400000
+#PKG_OLDSUFX?=	.tzst
+#.else
 PKG_OLDSUFX?=	.txz
-.endif
+#.endif
 .endif
 .else
 .if defined(PKG_NOCOMPRESS)

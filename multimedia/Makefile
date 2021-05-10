@@ -73,7 +73,6 @@
     SUBDIR += gdialog
     SUBDIR += get_iplayer
     SUBDIR += gmerlin
-    SUBDIR += gmimms
     SUBDIR += gmmlib
     SUBDIR += gmp-api
     SUBDIR += gmtk
@@ -129,6 +128,7 @@
     SUBDIR += gtk-youtube-viewer
     SUBDIR += gxine
     SUBDIR += handbrake
+    SUBDIR += haruna
     SUBDIR += harvid
     SUBDIR += hypnotix
     SUBDIR += imagination
@@ -220,13 +220,13 @@
     SUBDIR += livego
     SUBDIR += lives
     SUBDIR += livestreamer
+    SUBDIR += lms
     SUBDIR += lsdvd
     SUBDIR += m2tstoavi
     SUBDIR += m2vrequantiser
     SUBDIR += makemkv
     SUBDIR += mediainfo
     SUBDIR += mencoder
-    SUBDIR += mimms
     SUBDIR += minisatip
     SUBDIR += minitube
     SUBDIR += mjpegtools
@@ -353,6 +353,7 @@
     SUBDIR += rubygem-streamio-ffmpeg
     SUBDIR += sabbu
     SUBDIR += schroedinger
+    SUBDIR += scte35dump
     SUBDIR += shotcut
     SUBDIR += simplescreenrecorder
     SUBDIR += smpeg
