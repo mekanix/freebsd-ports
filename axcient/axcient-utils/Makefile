@@ -18,7 +18,7 @@ RUN_DEPENDS=	bash:shells/bash \
 
 NO_ARCH=	yes
 NO_BUILD=	yes
-USES=		axcient python:3.7,run
+USES=		axcient python:3.8+,run
 GH_PROJECT=	freebsd-utils
 GH_TAGNAME=	d82b3cd5a07d01a1b6cb9e4de8635547a7f32ee5
 

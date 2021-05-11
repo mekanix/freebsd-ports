@@ -21,7 +21,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}future>0:devel/py-future@${PY_FLAVOR} \
 
 NO_ARCH=	yes
 NO_BUILD=	yes
-USES=		axcient python:3.7
+USES=		axcient python:3.8+
 USE_PYTHON=	autoplist distutils
 
 GH_TAGNAME=	v${PORTVERSION}
