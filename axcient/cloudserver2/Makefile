@@ -52,7 +52,6 @@ GH_TUPLE?=	\
 		uber-go:multierr:v1.6.0:uber_go_multierr/vendor/go.uber.org/multierr \
 		uber-go:zap:v1.16.0:uber_go_zap/vendor/go.uber.org/zap
 
-
 GO_PKGNAME=	github.com/${GH_ACCOUNT}/cloudserver
 GO_TARGET=	cloudserver
 
