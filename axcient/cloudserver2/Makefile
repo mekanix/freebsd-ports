@@ -2,7 +2,7 @@
 
 PORTNAME=	cloudserver
 PKGNAMESUFFIX?=  2
-PORTVERSION?=	2.2.1
+PORTVERSION?=	2.3.0
 CATEGORIES=	axcient
 
 MAINTAINER=	nsemchenkov@axcient.com
@@ -17,7 +17,8 @@ CONFLICTS_INSTALL?=	cloudserver \
 			cloudserver2-stg
 
 GH_TAGNAME?=	v${PORTVERSION}
-GH_TUPLE=	\
+
+GH_TUPLE?=	\
 		apache:thrift:327ebb6c2b6d:apache_thrift/vendor/git.apache.org/thrift.git \
 		beorn7:perks:v1.0.1:beorn7_perks/vendor/github.com/beorn7/perks \
 		cespare:xxhash:v2.1.1:cespare_xxhash_v2/vendor/github.com/cespare/xxhash/v2 \
@@ -50,6 +51,7 @@ GH_TUPLE=	\
 		uber-go:atomic:v1.7.0:uber_go_atomic/vendor/go.uber.org/atomic \
 		uber-go:multierr:v1.6.0:uber_go_multierr/vendor/go.uber.org/multierr \
 		uber-go:zap:v1.16.0:uber_go_zap/vendor/go.uber.org/zap
+
 
 GO_PKGNAME=	github.com/${GH_ACCOUNT}/cloudserver
 GO_TARGET=	cloudserver

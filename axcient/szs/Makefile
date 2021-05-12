@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	szs
-PORTVERSION?=	1.6.0
+PORTVERSION?=	1.7.0
 PORTREVISION?=	0
 CATEGORIES=	axcient
 MASTER_SITES=	GH
@@ -22,6 +22,7 @@ USES=		axcient go:modules ssl:run
 USE_LDCONFIG=	yes
 GH_PROJECT=	szs-op
 GH_TAGNAME?=	${PORTVERSION}
+
 GH_TUPLE?=	\
 		BurntSushi:toml:v0.3.1:burntsushi_toml/vendor/github.com/BurntSushi/toml \
 		RichardKnop:logging:1a693bdd4fae:richardknop_logging/vendor/github.com/RichardKnop/logging \
@@ -34,6 +35,7 @@ GH_TUPLE?=	\
 		cespare:xxhash:v2.1.1:cespare_xxhash_v2/vendor/github.com/cespare/xxhash/v2 \
 		davecgh:go-spew:v1.1.1:davecgh_go_spew/vendor/github.com/davecgh/go-spew \
 		dominikh:go-tools:v0.0.1-2020.1.3:dominikh_go_tools/vendor/honnef.co/go/tools \
+		getsentry:sentry-go:v0.10.0:getsentry_sentry_go/vendor/github.com/getsentry/sentry-go \
 		gin-contrib:pprof:v1.3.0:gin_contrib_pprof/vendor/github.com/gin-contrib/pprof \
 		gin-contrib:sse:v0.1.0:gin_contrib_sse/vendor/github.com/gin-contrib/sse \
 		gin-gonic:gin:v1.6.2:gin_gonic_gin/vendor/github.com/gin-gonic/gin \
