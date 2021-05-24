@@ -1,7 +1,7 @@
 PORTNAME=	xen
 PKGNAMESUFFIX=	-tools
 PORTVERSION=	4.15.0
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	sysutils emulators
 MASTER_SITES=	http://downloads.xenproject.org/release/xen/${PORTVERSION}/
 
@@ -17,9 +17,9 @@ LIB_DEPENDS=	libyajl.so:devel/yajl \
 		libargp.so:devel/argp-standalone \
 		libxml2.so:textproc/libxml2
 BUILD_DEPENDS=	seabios>0:misc/seabios \
-		${LOCALBASE}/share/edk2-xen/XEN_EFI.fd:sysutils/edk2@xen
+		${LOCALBASE}/share/edk2-xen/XEN_X64_EFI.fd:sysutils/edk2@xen_x64
 RUN_DEPENDS=	seabios>0:misc/seabios \
-		${LOCALBASE}/share/edk2-xen/XEN_EFI.fd:sysutils/edk2@xen
+		${LOCALBASE}/share/edk2-xen/XEN_X64_EFI.fd:sysutils/edk2@xen_x64
 
 OPTIONS_DEFINE=		DOCS SPICE
 OPTIONS_DEFAULT=	DOCS
@@ -45,7 +45,7 @@ MAKE_ARGS=	clang=y ARCH=x86_64
 BINARY_ALIAS=	python3=${PYTHON_CMD}
 
 CONFIGURE_ARGS+=	--with-system-seabios=${LOCALBASE}/share/seabios/bios.bin \
-			--with-system-ovmf=${LOCALBASE}/share/edk2-xen/XEN_EFI.fd \
+			--with-system-ovmf=${LOCALBASE}/share/edk2-xen/XEN_X64_EFI.fd \
 			--mandir=${MANPREFIX}/man
 
 SHEBANG_FILES=	tools/misc/xencov_split \
@@ -70,6 +70,13 @@ IGNORE=		only supported on FreeBSD 12.0 or newer
 
 .if ${PORT_OPTIONS:MSPICE} && ${OSVERSION} < 1300008
 BROKEN=	SPICE support requires FreeBSD version 13.0 or higher
+.endif
+
+# ivshmem requires eventfd
+.if ${OSVERSION} >= 1300000
+PLIST_SUB+=	IVSHMEM=""
+.else
+PLIST_SUB+=	IVSHMEM="@comment "
 .endif
 
 post-patch:
