@@ -60,6 +60,7 @@ pipeline {
                     benchmarks/iperf3 \
                     converters/unix2dos \
                     databases/pgbouncer \
+                    databases/redis \
                     devel/gdb \
                     devel/git \
                     devel/py-virtualenv \
