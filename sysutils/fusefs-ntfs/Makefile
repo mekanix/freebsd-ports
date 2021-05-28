@@ -2,7 +2,7 @@
 
 PORTNAME=	ntfs
 PORTVERSION=	2017.3.23
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://tuxera.com/opensource/
 PKGNAMEPREFIX=	fusefs-
@@ -26,14 +26,19 @@ CONFIGURE_ARGS=	--exec-prefix=${PREFIX} --disable-mount-helper \
 		--disable-mtab --with-fuse=external --disable-ldconfig
 CPPFLAGS+=	-I${WRKSRC}/include/ntfs-3g/
 
-OPTIONS_DEFINE=	LOCK UBLIO DOCS
-OPTIONS_DEFAULT=LOCK UBLIO
+OPTIONS_DEFINE=	LOCK UBLIO DOCS DEVOFFSET
+OPTIONS_DEFAULT=LOCK UBLIO DEVOFFSET
 LOCK_DESC=	Lock the device when mounting (avoids access)
 LOCK_CFLAGS=	-DUSE_LOCK
 UBLIO_DESC=	Enable user space cache for improved speed
 UBLIO_EXTRA_PATCHES=	${FILESDIR}/extra-patch-ublio
 UBLIO_LIB_DEPENDS=	libublio.so:devel/libublio
 UBLIO_CFLAGS=	-DUSE_UBLIO
+
+DEVOFFSET_DESC=	Enable mount option dev_offset
+EXTRA_PATCHES += ${FILESDIR}/extra-patch-libntfs-3g__unix_io.c \
+		${FILESDIR}/extra-patch-libntfs-3g__device.c
+DEVOFFSET_EXTRA_PATCHES= ${FILESDIR}/extra-patch-dev_offset
 
 SUB_FILES=	pkg-message
 DOCSDIR=	${PREFIX}/share/doc/ntfs-3g
