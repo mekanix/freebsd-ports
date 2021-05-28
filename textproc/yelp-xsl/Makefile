@@ -1,9 +1,10 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
 
 PORTNAME=	yelp-xsl
-DISTVERSION=	3.38.3
+DISTVERSION=	40.0
 CATEGORIES=	textproc gnome
 MASTER_SITES=	GNOME
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:R}
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org

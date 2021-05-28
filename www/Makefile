@@ -1791,6 +1791,7 @@
     SUBDIR += radicale
     SUBDIR += rearx
     SUBDIR += redmine4
+    SUBDIR += redmine42
     SUBDIR += rejik
     SUBDIR += reportmagic
     SUBDIR += repos-style
@@ -1868,6 +1869,8 @@
     SUBDIR += rubygem-ethon
     SUBDIR += rubygem-eventmachine_httpserver
     SUBDIR += rubygem-faraday
+    SUBDIR += rubygem-faraday-em_http
+    SUBDIR += rubygem-faraday-em_synchrony
     SUBDIR += rubygem-faraday-net_http
     SUBDIR += rubygem-faraday-net_http_persistent
     SUBDIR += rubygem-faraday0
@@ -2307,6 +2310,7 @@
     SUBDIR += xapian-omega
     SUBDIR += xapian-omega12
     SUBDIR += xfce4-smartbookmark-plugin
+    SUBDIR += xh
     SUBDIR += xist
     SUBDIR += xoops
     SUBDIR += xsp
