@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	axcient-utils
-PORTVERSION=	1.0.0.20210504
+PORTVERSION=	1.0.0.20210601
 CATEGORIES=	axcient sysutils
 MASTER_SITES=	GH
 
@@ -18,12 +18,14 @@ RUN_DEPENDS=	bash:shells/bash \
 
 NO_ARCH=	yes
 NO_BUILD=	yes
-USES=		axcient python:3.8+,run
+USES=		axcient python:3.8+,run shebangfix
 GH_PROJECT=	freebsd-utils
-GH_TAGNAME=	d82b3cd5a07d01a1b6cb9e4de8635547a7f32ee5
+GH_TAGNAME=	1285d805fb56357d71e151969a0a158dae473429
 
 SUB_FILES=	399.explorer
 USE_RC_SUBR=	geli_salt zfs_crypto_salt
+
+SHEBANG_FILES=	jbod-support/jbod-util
 
 PLIST_FILES=	sbin/geli-util
 PLIST_FILES+=	sbin/jbod-util
