@@ -116,6 +116,7 @@ pipeline {
                 PORTS13 = ' \
                     java/openjdk8 \
                     misc/compat12x \
+                    net/samba413 \
                     ports-mgmt/poudriere \
                     www/nginx \
                     '
