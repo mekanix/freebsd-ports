@@ -1,0 +1,5 @@
+libexec/axcient/axl
+libexec/axcient/check_offsite_allowability
+libexec/axcient/rsync
+libexec/axcient/rsync.stage2
+@sample etc/axcient/ax.conf.sample etc/axcient/ax.conf

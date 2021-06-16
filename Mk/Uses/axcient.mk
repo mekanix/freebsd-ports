@@ -34,7 +34,7 @@ git-fetch:
 	 cd ${DISTDIR}/${DIST_SUBDIR} && \
 	  GITDIR=$$(env TMPDIR=. mktemp -dt ${GH_PROJECT} | sed 's:./::') && \
 	  chmod 755 "$${GITDIR}" && \
-	  git clone -q --depth=1 git@github.com:${GH_ACCOUNT}/${GH_PROJECT} "$${GITDIR}" && \
+	  git clone -q --depth=1 --recurse-submodules git@github.com:${GH_ACCOUNT}/${GH_PROJECT} "$${GITDIR}" && \
 	  cd "$${GITDIR}" && \
 	  git fetch --tags 2>/dev/null && \
 	  git fetch origin ${GH_TAGNAME} && \

@@ -12,6 +12,8 @@
     SUBDIR += cloudserver2
     SUBDIR += cloudserver2-dev
     SUBDIR += cloudserver2-stg
+    SUBDIR += dcpkg
+    SUBDIR += dcpkg-stg
     SUBDIR += dralserver
     SUBDIR += dralserver-dev
     SUBDIR += dralserver-stg

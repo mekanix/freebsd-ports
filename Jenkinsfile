@@ -44,6 +44,8 @@ pipeline {
                     axcient/cloudserver-stg \
                     axcient/cloudserver2 \
                     axcient/cloudserver2-stg \
+                    axcient/dcpkg \
+                    axcient/dcpkg-stg \
                     axcient/dralserver \
                     axcient/dralserver-stg \
                     axcient/efsserver \
@@ -134,6 +136,8 @@ pipeline {
                 sh 'cd axcient/cloudserver-stg; make fetch'
                 sh 'cd axcient/cloudserver2; make fetch'
                 sh 'cd axcient/cloudserver2-stg; make fetch'
+                sh 'cd axcient/dcpkg; make fetch'
+                sh 'cd axcient/dcpkg-stg; make fetch'
                 sh 'cd axcient/dralserver; make fetch'
                 sh 'cd axcient/dralserver-stg; make fetch'
                 sh 'cd axcient/py-drive-exporter; make fetch'
