@@ -60,6 +60,7 @@ pipeline {
                     axcient/vt2-stg \
                     benchmarks/fio \
                     benchmarks/flamegraph \
+                    benchmarks/iozone \
                     benchmarks/iperf3 \
                     converters/unix2dos \
                     databases/pgbouncer \
