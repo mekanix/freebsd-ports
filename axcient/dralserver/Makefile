@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	dralserver
-PORTVERSION?=	1.0.1
+PORTVERSION?=	1.1.0
 PORTREVISION?=	0
 CATEGORIES=	axcient
 

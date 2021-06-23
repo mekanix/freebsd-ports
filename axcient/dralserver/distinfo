@@ -1,6 +1,6 @@
-TIMESTAMP = 1619469199
-SHA256 (Axcient-dralserver-1.0.1_GH0.tar.gz) = ec54ef174f7f97bee0bae190dc73b9ba29d48baf4ecf5808edc78d5d3ceba1ca
-SIZE (Axcient-dralserver-1.0.1_GH0.tar.gz) = 72830
+TIMESTAMP = 1624457728
+SHA256 (Axcient-dralserver-1.1.0_GH0.tar.gz) = 69f3de3bcda727bbf49d771eb9f58117c22fe437dc4fc23ee394064f0ac75d63
+SIZE (Axcient-dralserver-1.1.0_GH0.tar.gz) = 78380
 SHA256 (BurntSushi-toml-v0.3.1_GH0.tar.gz) = 6593da894578ba510a470735ffbdc88ce88033094dc5a8f4d3957ab87e18803f
 SIZE (BurntSushi-toml-v0.3.1_GH0.tar.gz) = 42077
 SHA256 (beorn7-perks-v1.0.1_GH0.tar.gz) = 98db84bb0224a26094e6adba91b7ee7a1a7ace28cb648d818f8e779e6a19f825
