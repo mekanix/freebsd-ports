@@ -98,6 +98,7 @@
     SUBDIR += croc
     SUBDIR += cryptcat
     SUBDIR += csocks
+    SUBDIR += csync2
     SUBDIR += ctrace
     SUBDIR += cvsup-static
     SUBDIR += cvsync
@@ -236,6 +237,7 @@
     SUBDIR += haproxy19
     SUBDIR += haproxy20
     SUBDIR += haproxy21
+    SUBDIR += haproxy22
     SUBDIR += haproxy23
     SUBDIR += hblock
     SUBDIR += hexinject
@@ -1071,6 +1073,14 @@
     SUBDIR += py-pynsq
     SUBDIR += py-pypcap
     SUBDIR += py-pyroute2
+    SUBDIR += py-pyroute2.core
+    SUBDIR += py-pyroute2.ethtool
+    SUBDIR += py-pyroute2.ipset
+    SUBDIR += py-pyroute2.minimal
+    SUBDIR += py-pyroute2.ndb
+    SUBDIR += py-pyroute2.nftables
+    SUBDIR += py-pyroute2.nslink
+    SUBDIR += py-pyroute2.protocols
     SUBDIR += py-pysendfile
     SUBDIR += py-pyshark
     SUBDIR += py-pysmb
@@ -1080,16 +1090,12 @@
     SUBDIR += py-python-bitcoinrpc
     SUBDIR += py-python-ceilometerclient
     SUBDIR += py-python-cinderclient
-    SUBDIR += py-python-cinderclient5
     SUBDIR += py-python-designateclient
     SUBDIR += py-python-glanceclient
-    SUBDIR += py-python-glanceclient2
     SUBDIR += py-python-heatclient
     SUBDIR += py-python-keystoneclient
-    SUBDIR += py-python-keystoneclient3
     SUBDIR += py-python-neutronclient
     SUBDIR += py-python-novaclient
-    SUBDIR += py-python-novaclient16
     SUBDIR += py-python-openstackclient
     SUBDIR += py-python-socks
     SUBDIR += py-python-twitter

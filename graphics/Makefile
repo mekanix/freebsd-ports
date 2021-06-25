@@ -30,6 +30,7 @@
     SUBDIR += R-cran-qcc
     SUBDIR += R-cran-rgdal
     SUBDIR += R-cran-rtiff
+    SUBDIR += R-cran-s2
     SUBDIR += R-cran-scales
     SUBDIR += R-cran-shape
     SUBDIR += R-cran-viridis
@@ -374,7 +375,6 @@
     SUBDIR += jp2a
     SUBDIR += jpatch
     SUBDIR += jpeg-turbo
-    SUBDIR += jpeg-xl
     SUBDIR += jpeginfo
     SUBDIR += jpegoptim
     SUBDIR += jpgtn
@@ -421,6 +421,7 @@
     SUBDIR += lensfun
     SUBDIR += lepton
     SUBDIR += leptonica
+    SUBDIR += lerc
     SUBDIR += lfview
     SUBDIR += lib3ds
     SUBDIR += libGLU
@@ -458,6 +459,7 @@
     SUBDIR += libimg
     SUBDIR += libiptcdata
     SUBDIR += libjpeg-turbo
+    SUBDIR += libjxl
     SUBDIR += libjxr
     SUBDIR += libkdcraw
     SUBDIR += libkexiv2
@@ -639,6 +641,7 @@
     SUBDIR += p5-GD-Thumbnail
     SUBDIR += p5-Geo-EOP
     SUBDIR += p5-Geo-GDAL
+    SUBDIR += p5-Geo-GDAL-FFI
     SUBDIR += p5-Geo-GML
     SUBDIR += p5-Geo-Gpx
     SUBDIR += p5-Geometry-Primitive

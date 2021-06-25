@@ -975,6 +975,10 @@ include/wine/windows/windows.media.devices.h
 include/wine/windows/windows.media.devices.idl
 include/wine/windows/windows.media.speechsynthesis.h
 include/wine/windows/windows.media.speechsynthesis.idl
+%%STAGING%%include/wine/windows/windows.networking.connectivity.h
+%%STAGING%%include/wine/windows/windows.networking.connectivity.idl
+%%STAGING%%include/wine/windows/windows.networking.h
+%%STAGING%%include/wine/windows/windows.networking.idl
 include/wine/windows/windows.system.h
 include/wine/windows/windows.system.idl
 include/wine/windows/windows.system.userprofile.h
@@ -1402,7 +1406,6 @@ lib/wine/%%WINEARCH%%-unix/connect.dll.so
 lib/wine/%%WINEARCH%%-unix/control.exe.so
 lib/wine/%%WINEARCH%%-unix/credui.dll.so
 lib/wine/%%WINEARCH%%-unix/crtdll.dll.so
-lib/wine/%%WINEARCH%%-unix/crtdll.so
 lib/wine/%%WINEARCH%%-unix/crypt32.dll.so
 lib/wine/%%WINEARCH%%-unix/crypt32.so
 lib/wine/%%WINEARCH%%-unix/cryptdlg.dll.so
@@ -1511,6 +1514,7 @@ lib/wine/%%WINEARCH%%-unix/dplayx.dll.so
 lib/wine/%%WINEARCH%%-unix/dpnaddr.dll.so
 lib/wine/%%WINEARCH%%-unix/dpnet.dll.so
 lib/wine/%%WINEARCH%%-unix/dpnhpast.dll.so
+lib/wine/%%WINEARCH%%-unix/dpnhupnp.dll.so
 lib/wine/%%WINEARCH%%-unix/dpnlobby.dll.so
 lib/wine/%%WINEARCH%%-unix/dpnsvr.exe.so
 lib/wine/%%WINEARCH%%-unix/dpvoice.dll.so
@@ -1969,26 +1973,17 @@ lib/wine/%%WINEARCH%%-unix/msvcp71.dll.so
 lib/wine/%%WINEARCH%%-unix/msvcp80.dll.so
 lib/wine/%%WINEARCH%%-unix/msvcp90.dll.so
 lib/wine/%%WINEARCH%%-unix/msvcr100.dll.so
-lib/wine/%%WINEARCH%%-unix/msvcr100.so
 lib/wine/%%WINEARCH%%-unix/msvcr110.dll.so
-lib/wine/%%WINEARCH%%-unix/msvcr110.so
 lib/wine/%%WINEARCH%%-unix/msvcr120.dll.so
-lib/wine/%%WINEARCH%%-unix/msvcr120.so
 lib/wine/%%WINEARCH%%-unix/msvcr120_app.dll.so
 lib/wine/%%WINEARCH%%-unix/msvcr70.dll.so
-lib/wine/%%WINEARCH%%-unix/msvcr70.so
 lib/wine/%%WINEARCH%%-unix/msvcr71.dll.so
-lib/wine/%%WINEARCH%%-unix/msvcr71.so
 lib/wine/%%WINEARCH%%-unix/msvcr80.dll.so
-lib/wine/%%WINEARCH%%-unix/msvcr80.so
 lib/wine/%%WINEARCH%%-unix/msvcr90.dll.so
-lib/wine/%%WINEARCH%%-unix/msvcr90.so
 lib/wine/%%WINEARCH%%-unix/msvcrt.dll.so
-lib/wine/%%WINEARCH%%-unix/msvcrt.so
 lib/wine/%%WINEARCH%%-unix/msvcrt20.dll.so
 lib/wine/%%WINEARCH%%-unix/msvcrt40.dll.so
 lib/wine/%%WINEARCH%%-unix/msvcrtd.dll.so
-lib/wine/%%WINEARCH%%-unix/msvcrtd.so
 lib/wine/%%WINEARCH%%-unix/msvfw32.dll.so
 lib/wine/%%WINEARCH%%-unix/msvidc32.dll.so
 %%WINE32%%lib/wine/%%WINEARCH%%-unix/msvideo.dll16.so
@@ -2146,6 +2141,7 @@ lib/wine/%%WINEARCH%%-unix/softpub.dll.so
 %%WINE32%%lib/wine/%%WINEARCH%%-unix/sound.drv16.so
 lib/wine/%%WINEARCH%%-unix/spoolss.dll.so
 lib/wine/%%WINEARCH%%-unix/spoolsv.exe.so
+lib/wine/%%WINEARCH%%-unix/sppc.dll.so
 lib/wine/%%WINEARCH%%-unix/srclient.dll.so
 lib/wine/%%WINEARCH%%-unix/srvcli.dll.so
 lib/wine/%%WINEARCH%%-unix/sspicli.dll.so
@@ -2178,7 +2174,6 @@ lib/wine/%%WINEARCH%%-unix/twain_32.dll.so
 %%WINE32%%lib/wine/%%WINEARCH%%-unix/typelib.dll16.so
 lib/wine/%%WINEARCH%%-unix/tzres.dll.so
 lib/wine/%%WINEARCH%%-unix/ucrtbase.dll.so
-lib/wine/%%WINEARCH%%-unix/ucrtbase.so
 lib/wine/%%WINEARCH%%-unix/uianimation.dll.so
 lib/wine/%%WINEARCH%%-unix/uiautomationcore.dll.so
 lib/wine/%%WINEARCH%%-unix/uiribbon.dll.so
@@ -2236,6 +2231,7 @@ lib/wine/%%WINEARCH%%-unix/wiaservc.dll.so
 lib/wine/%%WINEARCH%%-unix/wimgapi.dll.so
 %%STAGING%%%%WINE32%%lib/wine/%%WINEARCH%%-unix/win32k.sys.so
 %%WINE32%%lib/wine/%%WINEARCH%%-unix/win32s16.dll16.so
+%%WINE32%%lib/wine/%%WINEARCH%%-unix/win32u.dll.so
 %%WINE32%%lib/wine/%%WINEARCH%%-unix/win87em.dll16.so
 %%WINE32%%lib/wine/%%WINEARCH%%-unix/winaspi.dll16.so
 %%WINE32%%lib/wine/%%WINEARCH%%-unix/windebug.dll16.so
@@ -2243,6 +2239,7 @@ lib/wine/%%WINEARCH%%-unix/windows.gaming.input.dll.so
 lib/wine/%%WINEARCH%%-unix/windows.globalization.dll.so
 lib/wine/%%WINEARCH%%-unix/windows.media.devices.dll.so
 lib/wine/%%WINEARCH%%-unix/windows.media.speech.dll.so
+%%STAGING%%lib/wine/%%WINEARCH%%-unix/windows.networking.connectivity.so
 lib/wine/%%WINEARCH%%-unix/windowscodecs.dll.so
 lib/wine/%%WINEARCH%%-unix/windowscodecs.so
 lib/wine/%%WINEARCH%%-unix/windowscodecsext.dll.so
@@ -2759,6 +2756,7 @@ lib/wine/%%WINEARCH%%-windows/dplayx.dll
 lib/wine/%%WINEARCH%%-windows/dpnaddr.dll
 lib/wine/%%WINEARCH%%-windows/dpnet.dll
 lib/wine/%%WINEARCH%%-windows/dpnhpast.dll
+lib/wine/%%WINEARCH%%-windows/dpnhupnp.dll
 lib/wine/%%WINEARCH%%-windows/dpnlobby.dll
 lib/wine/%%WINEARCH%%-windows/dpnsvr.exe
 lib/wine/%%WINEARCH%%-windows/dpvoice.dll
@@ -3163,6 +3161,7 @@ lib/wine/%%WINEARCH%%-windows/softpub.dll
 %%WINE32%%lib/wine/%%WINEARCH%%-windows/sound.drv16
 lib/wine/%%WINEARCH%%-windows/spoolss.dll
 lib/wine/%%WINEARCH%%-windows/spoolsv.exe
+lib/wine/%%WINEARCH%%-windows/sppc.dll
 lib/wine/%%WINEARCH%%-windows/srclient.dll
 lib/wine/%%WINEARCH%%-windows/srvcli.dll
 lib/wine/%%WINEARCH%%-windows/sspicli.dll
@@ -3251,6 +3250,7 @@ lib/wine/%%WINEARCH%%-windows/wiaservc.dll
 lib/wine/%%WINEARCH%%-windows/wimgapi.dll
 %%STAGING%%%%WINE32%%lib/wine/%%WINEARCH%%-windows/win32k.sys
 %%WINE32%%lib/wine/%%WINEARCH%%-windows/win32s16.dll16
+%%WINE32%%lib/wine/%%WINEARCH%%-windows/win32u.dll
 %%WINE32%%lib/wine/%%WINEARCH%%-windows/win87em.dll16
 %%WINE32%%lib/wine/%%WINEARCH%%-windows/winaspi.dll16
 %%WINE32%%lib/wine/%%WINEARCH%%-windows/windebug.dll16
@@ -3258,6 +3258,7 @@ lib/wine/%%WINEARCH%%-windows/windows.gaming.input.dll
 lib/wine/%%WINEARCH%%-windows/windows.globalization.dll
 lib/wine/%%WINEARCH%%-windows/windows.media.devices.dll
 lib/wine/%%WINEARCH%%-windows/windows.media.speech.dll
+%%STAGING%%lib/wine/%%WINEARCH%%-windows/windows.networking.connectivity
 lib/wine/%%WINEARCH%%-windows/windowscodecs.dll
 lib/wine/%%WINEARCH%%-windows/windowscodecsext.dll
 lib/wine/%%WINEARCH%%-windows/wineboot.exe
@@ -3452,6 +3453,7 @@ share/applications/wine.desktop
 %%DATADIR%%/nls/c_437.nls
 %%DATADIR%%/nls/c_500.nls
 %%DATADIR%%/nls/c_708.nls
+%%DATADIR%%/nls/c_720.nls
 %%DATADIR%%/nls/c_737.nls
 %%DATADIR%%/nls/c_775.nls
 %%DATADIR%%/nls/c_850.nls

@@ -1,7 +1,7 @@
 PORTNAME=	xwayland
 DISTVERSIONPREFIX=	xorg-server-
-DISTVERSION=	1.20.0-963
-DISTVERSIONSUFFIX=	-g34a58d771
+DISTVERSION=	1.20.0-980
+DISTVERSIONSUFFIX=	-gef89b6648
 CATEGORIES=	x11-servers
 PKGNAMESUFFIX=	-devel
 
@@ -9,7 +9,6 @@ PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
 PATCHFILES+=	231720f8b212.patch:-p1 # https://gitlab.freedesktop.org/xorg/xserver/-/merge_requests/432
 PATCHFILES+=	48a7bfeb4687.patch:-p1 # https://gitlab.freedesktop.org/xorg/xserver/-/merge_requests/432
 PATCHFILES+=	9fef4b809165.patch:-p1 # https://gitlab.freedesktop.org/xorg/xserver/-/merge_requests/432
-PATCHFILES+=	f29d0a945a56.patch:-p1 # https://gitlab.freedesktop.org/xorg/xserver/-/merge_requests/678
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	X11 server as Wayland client (development snapshot)
@@ -32,8 +31,8 @@ USES=		compiler:c11 gl meson pkgconfig xorg
 USE_GITHUB=	yes
 USE_GL=		gbm gl
 USE_XORG=	pixman xau xdmcp xfont2 xkbfile xshmfence xtrans
-GH_ACCOUNT=	mirror
-GH_PROJECT=	xserver
+GH_ACCOUNT=	freedesktop
+GH_PROJECT=	xorg-xserver
 GH_TUPLE=	freedesktop:xorg-xorgproto:xorgproto-2021.4.99.2:xorgproto/subprojects/xorgproto
 MESON_ARGS=	-D${PORTNAME}=true \
 		-Dxorg=false \

@@ -185,8 +185,10 @@
     SUBDIR += libreoffice-xh
     SUBDIR += libreoffice-zu
     SUBDIR += libreoffice6
+    SUBDIR += linux-bcompare
     SUBDIR += linux-sublime
     SUBDIR += linux-sublime3
+    SUBDIR += linux-wps-office
     SUBDIR += madedit
     SUBDIR += marker
     SUBDIR += mg
@@ -222,6 +224,7 @@
     SUBDIR += py-editorconfig
     SUBDIR += py-pynvim
     SUBDIR += quilter
+    SUBDIR += rehex
     SUBDIR += rubygem-neovim
     SUBDIR += scite
     SUBDIR += se
@@ -235,6 +238,7 @@
     SUBDIR += sly-quicklisp
     SUBDIR += ssed
     SUBDIR += sted
+    SUBDIR += sublime-text4
     SUBDIR += tamago
     SUBDIR += tea
     SUBDIR += teco
