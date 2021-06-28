@@ -300,7 +300,7 @@
  } opts;
  
  static const char *EXEC_NAME = "ntfs-3g.probe";
-@@ -55,13 +56,13 @@ static const char *usage_msg = 
+@@ -55,13 +56,13 @@ static const char *usage_msg =
  "\n"
  "Copyright (C) 2007 Szabolcs Szakacsits\n"
  "\n"
@@ -343,7 +343,7 @@
  			opts.probetype = PROBE_READWRITE;
  			break;
 +		case 'o':
-+			opts.dev_offset = optarg ? atoi(optarg) : 0;
++			opts.dev_offset = optarg ? atoll(optarg) : 0;
 +			break;
  		default:
  			ntfs_log_error("%s: Unknown option '%s'.\n", EXEC_NAME,
@@ -373,7 +373,7 @@
  				default_permissions = 1;
 +				break;
 +			case OPT_DEV_OFFSET :
-+				ctx->dev_offset = intarg;
++				ctx->dev_offset = strtoll(val, NULL, 0);
  				break;
  			case OPT_PERMISSIONS :
  				permissions = 1;
