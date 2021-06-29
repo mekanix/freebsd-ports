@@ -1,3 +1,5 @@
+@dir(,,750) etc/sudoers.d
+etc/sudoers.d/dcpkg
 libexec/axcient/axl
 libexec/axcient/check_offsite_allowability
 libexec/axcient/rsync

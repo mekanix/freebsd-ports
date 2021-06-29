@@ -2,7 +2,7 @@
 
 PORTNAME=	dcpkg
 PORTVERSION?=	1.0.2
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	axcient
 MASTER_SITES=	GH
 
@@ -17,6 +17,8 @@ GH_TAGNAME?=	${PORTVERSION}
 
 CONFLICTS_INSTALL?=	dcpkg-stg
 
+AXUSER=		axsvcid
+
 do-install:
 	echo "Installing"
 	${MKDIR} ${STAGEDIR}${PREFIX}/libexec/axcient
@@ -27,5 +29,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ax-mount-tools/axl/axl ${STAGEDIR}${PREFIX}/libexec/axcient/axl
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/axcient
 	${CP} ${WRKSRC}/ax.conf ${STAGEDIR}${PREFIX}/etc/axcient/ax.conf.sample
+	${MKDIR} ${STAGEDIR}/${PREFIX}/etc/sudoers.d
+	${ECHO_CMD} "${AXUSER} ALL=NOPASSWD: ${STAGEDIR}${PREFIX}/libexec/axcient/service_tool.sh" > ${STAGEDIR}/${PREFIX}/etc/sudoers.d/dcpkg
 
 .include <bsd.port.mk>
