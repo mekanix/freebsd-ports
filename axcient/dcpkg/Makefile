@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	dcpkg
-PORTVERSION?=	1.0.1
+PORTVERSION?=	1.0.2
 PORTREVISION?=	0
 CATEGORIES=	axcient
 MASTER_SITES=	GH
@@ -22,6 +22,7 @@ do-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/libexec/axcient
 	${INSTALL_SCRIPT} ${WRKSRC}/rsync.stage2 ${STAGEDIR}${PREFIX}/libexec/axcient/rsync.stage2
 	${INSTALL_SCRIPT} ${WRKSRC}/rsync ${STAGEDIR}${PREFIX}/libexec/axcient/rsync
+	${INSTALL_SCRIPT} ${WRKSRC}/service_tool.sh ${STAGEDIR}${PREFIX}/libexec/axcient/service_tool.sh
 	${INSTALL_SCRIPT} ${WRKSRC}/check_offsite_allowability ${STAGEDIR}${PREFIX}/libexec/axcient/check_offsite_allowability
 	${INSTALL_PROGRAM} ${WRKSRC}/ax-mount-tools/axl/axl ${STAGEDIR}${PREFIX}/libexec/axcient/axl
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/axcient

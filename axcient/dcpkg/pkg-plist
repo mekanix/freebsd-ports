@@ -2,4 +2,5 @@ libexec/axcient/axl
 libexec/axcient/check_offsite_allowability
 libexec/axcient/rsync
 libexec/axcient/rsync.stage2
+libexec/axcient/service_tool.sh
 @sample etc/axcient/ax.conf.sample etc/axcient/ax.conf
