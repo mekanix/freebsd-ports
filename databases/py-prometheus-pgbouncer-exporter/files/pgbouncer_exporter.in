@@ -1,0 +1,54 @@
+#!/bin/sh
+
+# PROVIDE: pgbouncer_exporter
+# REQUIRE: LOGIN
+# KEYWORD: shutdown
+#
+# Add the following lines to /etc/rc.conf.local or /etc/rc.conf
+# to enable this service:
+#
+# pgbouncer_exporter_enable (bool):            Set to NO by default.
+#               Set it to YES to enable pgbouncer-exporter.
+# pgbouncer_exporter_args (string):            Set extra arguments to pass to pgbouncer-exporter
+#               Default is "".
+# pgbouncer_exporter_configfile (string):      Set location of the config file
+#		Default is %%ETCDIR%%/config.yml
+# pgbouncer_exporter_user (string):            Set user that pgbouncer_exporter will run under
+#               Default is "%%PGBOUNCER_EXPORTER_USER%%".
+# pgbouncer_exporter_group (string):           Set group that pgbouncer_exporter will run under
+#               Default is "%%PGBOUNCER_EXPORTER_GROUP%%".
+
+. /etc/rc.subr
+
+name=pgbouncer_exporter
+desc="pgbouncer prometheus exporter"
+rcvar=pgbouncer_exporter_enable
+
+load_rc_config $name
+
+: ${pgbouncer_exporter_enable:=NO}
+: ${pgbouncer_exporter_args:=""}
+: ${pgbouncer_exporter_configfile:="%%ETCDIR%%/config.yml"}
+: ${pgbouncer_exporter_user:=%%PGBOUNCER_EXPORTER_USER%%}
+: ${pgbouncer_exporter_group:=%%PGBOUNCER_EXPORTER_GROUP%%}
+
+pidfile=/var/run/pgbouncer_exporter.pid
+command=/usr/sbin/daemon
+command_interpreter=%%PYTHON_CMD%%
+procname=%%PREFIX%%/bin/pgbouncer-exporter
+# pgbouncer-exporter will write its own logfile if --log-file is specified.
+# But better to have daemon redirect the output to syslog instead, with -T.
+command_args="-f -p ${pidfile} -T pgbouncer-exporter /usr/bin/env ${procname} --config ${pgbouncer_exporter_configfile} ${pgbouncer_exporter_args}"
+
+start_precmd=pgbouncer_exporter_startprecmd
+
+pgbouncer_exporter_startprecmd()
+{
+    if [ -e ${pidfile} ]; then
+        chown ${pgbouncer_exporter_user}:${pgbouncer_exporter_group} ${pidfile};
+    else
+        install -o ${pgbouncer_exporter_user} -g ${pgbouncer_exporter_group} /dev/null ${pidfile};
+    fi
+}
+
+run_rc_command "$1"
