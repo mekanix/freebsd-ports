@@ -788,6 +788,7 @@
     SUBDIR += py-pickleshare
     SUBDIR += py-pony
     SUBDIR += py-postgresql
+    SUBDIR += py-prometheus-pgbouncer-exporter
     SUBDIR += py-psycogreen
     SUBDIR += py-psycopg2
     SUBDIR += py-psycopg2cffi

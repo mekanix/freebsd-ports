@@ -1,0 +1,31 @@
+# $FreeBSD$
+
+PORTNAME=	prometheus-pgbouncer-exporter
+PORTVERSION=	2.1.1
+CATEGORIES=	databases python
+MASTER_SITES=	CHEESESHOP
+PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+
+MAINTAINER=	asomers@FreeBSD.org
+COMMENT=	Prometheus exporter for pgbouncer
+
+LICENSE=	MIT
+
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}prometheus-client>=0.8:net-mgmt/py-prometheus-client@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}python-json-logger>=0.111:devel/py-python-json-logger@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}psycopg2>=2.8.5:databases/py-psycopg2@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}yaml>=5.3.1:devel/py-yaml@${PY_FLAVOR}
+
+TEST_DEPENDS=	pip:devel/py-pip@${PY_FLAVOR} \
+		pycodestyle:devel/py-pycodestyle@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}wheel>=0:devel/py-wheel@${PY_FLAVOR}
+
+NO_ARCH=	yes
+USES=		python:3.6+
+USE_PYTHON=	autoplist distutils
+
+test:
+	cd ${WRKSRC} && \
+	    python${PYTHON_VER} setup.py test
+
+.include <bsd.port.mk>
