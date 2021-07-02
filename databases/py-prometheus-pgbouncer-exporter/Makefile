@@ -2,9 +2,13 @@
 
 PORTNAME=	prometheus-pgbouncer-exporter
 PORTVERSION=	2.1.1
+PORTREVISION=	1
 CATEGORIES=	databases python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+
+PATCH_SITES=   https://patch-diff.githubusercontent.com/raw/spreaker/prometheus-pgbouncer-exporter/pull/
+PATCHFILES+=	33.diff:-p1
 
 MAINTAINER=	asomers@FreeBSD.org
 COMMENT=	Prometheus exporter for pgbouncer
