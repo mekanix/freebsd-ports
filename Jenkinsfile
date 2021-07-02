@@ -64,6 +64,7 @@ pipeline {
                     benchmarks/iperf3 \
                     converters/unix2dos \
                     databases/pgbouncer \
+                    databases/py-prometheus-pgbouncer-exporter \
                     databases/redis \
                     devel/gdb \
                     devel/git \
