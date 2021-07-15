@@ -163,7 +163,6 @@
     SUBDIR += py-tktreectrl
     SUBDIR += py-wxPython40
     SUBDIR += py-xlib
-    SUBDIR += pypy-tkinter
     SUBDIR += qml-box2d
     SUBDIR += qt5-charts
     SUBDIR += qt5-datavis3d
@@ -184,10 +183,13 @@
     SUBDIR += redkite
     SUBDIR += rep-gtk2
     SUBDIR += rubygem-gdk3
+    SUBDIR += rubygem-gdk4
     SUBDIR += rubygem-gtk2
     SUBDIR += rubygem-gtk3
+    SUBDIR += rubygem-gtk4
     SUBDIR += rubygem-gtksourceview2
     SUBDIR += rubygem-gtksourceview3
+    SUBDIR += rubygem-gtksourceview4
     SUBDIR += rubygem-pango
     SUBDIR += rubygem-poppler
     SUBDIR += rubygem-tk
@@ -214,7 +216,6 @@
     SUBDIR += tktray
     SUBDIR += tktreectrl
     SUBDIR += unique
-    SUBDIR += v
     SUBDIR += vdk
     SUBDIR += viewklass
     SUBDIR += vte

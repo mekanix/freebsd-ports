@@ -159,6 +159,7 @@
     SUBDIR += fpc-libenet
     SUBDIR += fpc-pcap
     SUBDIR += fping
+    SUBDIR += freebsd-telnetd
     SUBDIR += freebsd-uucp
     SUBDIR += freediameter
     SUBDIR += freeradius-client
@@ -225,6 +226,7 @@
     SUBDIR += gupnp-av
     SUBDIR += gupnp-dlna
     SUBDIR += gupnp-igd
+    SUBDIR += gupnp-tools
     SUBDIR += gupnp-ui
     SUBDIR += gutenfetch
     SUBDIR += gwhois
@@ -540,7 +542,6 @@
     SUBDIR += open-isns
     SUBDIR += openbgpd
     SUBDIR += openbgpd6
-    SUBDIR += openggsn
     SUBDIR += openldap24-client
     SUBDIR += openldap24-sasl-client
     SUBDIR += openldap24-server
@@ -904,7 +905,6 @@
     SUBDIR += pacemaker2
     SUBDIR += packetdrill
     SUBDIR += packter-agent
-    SUBDIR += panoptis
     SUBDIR += parpd
     SUBDIR += pathneck
     SUBDIR += pbnc
@@ -1180,6 +1180,7 @@
     SUBDIR += recvnet
     SUBDIR += redir
     SUBDIR += relayd
+    SUBDIR += remarkable-devd
     SUBDIR += remmina
     SUBDIR += remotebox
     SUBDIR += remotedesk
@@ -1190,6 +1191,7 @@
     SUBDIR += routinator
     SUBDIR += rp-pppoe
     SUBDIR += rpki-client
+    SUBDIR += rscsi
     SUBDIR += rsocket-cpp
     SUBDIR += rsplib
     SUBDIR += rsync
@@ -1288,6 +1290,7 @@
     SUBDIR += rubygem-httpauth
     SUBDIR += rubygem-ipaddress
     SUBDIR += rubygem-iproto
+    SUBDIR += rubygem-kas-grpc
     SUBDIR += rubygem-lita-gems
     SUBDIR += rubygem-macaddr
     SUBDIR += rubygem-maxmind-db
