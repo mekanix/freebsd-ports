@@ -1,0 +1,6 @@
+Replacement for gstat(8)
+
+This is a gstat replacement, written in Rust.  It is more featureful than the
+original, and especially works better on systems with large numbers of disks.
+
+WWW: https://github.com/asomers/gstat-rs
