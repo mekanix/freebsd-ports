@@ -97,6 +97,7 @@ pipeline {
                     sysutils/dtrace-toolkit \
                     sysutils/fusefs-encfs \
                     sysutils/fusefs-ntfs \
+                    sysutils/gstat-rs \
                     sysutils/iocage \
                     sysutils/ipmitool \
                     sysutils/mcelog \
