@@ -1,6 +1,6 @@
 PORTNAME=	gstat-rs
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.1.0
+DISTVERSION=	0.1.1
 CATEGORIES=	sysutils
 
 MAINTAINER=	asomers@FreeBSD.org
@@ -89,11 +89,20 @@ CARGO_INSTALL_PATH=	gstat
 CARGO_CARGOTOML=	${WRKSRC}/gstat/Cargo.toml
 CARGO_TEST_ARGS=		--all
 
-PLIST_FILES=	bin/gstat \
-		man/man8/gstat.8.gz
+PLIST_FILES=	sbin/gstat-rs \
+		man/man8/gstat-rs.8.gz
+
+MSG_FILE=       ${.CURDIR}/pkg-message
+PKGMESSAGE=     ${WRKDIR}/pkg-message
+PKGMESSAGE_SUB= PREFIX="${PREFIX}"
+
+post-patch:
+	@${SED} ${PKGMESSAGE_SUB:S/$/!g/:S/^/ -e s!%%/:S/=/%%!/} \
+                ${MSG_FILE} > ${PKGMESSAGE}
 
 post-install:
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/gstat
-	${INSTALL_MAN} ${WRKSRC}/gstat/doc/gstat.8 ${STAGEDIR}${MAN8PREFIX}/man/man8
+	${MV} ${STAGEDIR}${PREFIX}/bin/gstat ${STAGEDIR}${PREFIX}/sbin/gstat-rs
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/sbin/gstat-rs
+	${INSTALL_MAN} ${WRKSRC}/gstat/doc/gstat.8 ${STAGEDIR}${MAN8PREFIX}/man/man8/gstat-rs.8
 
 .include <bsd.port.mk>
