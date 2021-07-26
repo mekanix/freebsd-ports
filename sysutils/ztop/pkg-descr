@@ -1,0 +1,5 @@
+Like top, but for ZFS datasets
+
+ztop displays ZFS datasets' I/O activity in real-time.
+
+WWW: https://github.com/asomers/ztop
