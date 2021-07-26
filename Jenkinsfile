@@ -116,6 +116,7 @@ pipeline {
                     sysutils/zfs-stats-lite \
                     sysutils/zfsnap2 \
                     sysutils/zrepl \
+                    sysutils/ztop \
                     textproc/ripgrep \
                     '
                 PORTS13 = ' \
