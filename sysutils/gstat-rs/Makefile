@@ -1,6 +1,6 @@
 PORTNAME=	gstat-rs
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.1.1
+DISTVERSION=	0.1.2
 CATEGORIES=	sysutils
 
 MAINTAINER=	asomers@FreeBSD.org
@@ -15,6 +15,7 @@ USES=		cargo
 USE_GITHUB=	yes
 GH_ACCOUNT=	asomers
 GH_PROJECT=	gstat-rs
+GH_TAGNAME=	gstat-${DISTVERSIONFULL}
 
 CARGO_CRATES=	aho-corasick-0.7.18 \
 		ansi_term-0.11.0 \
@@ -37,8 +38,7 @@ CARGO_CRATES=	aho-corasick-0.7.18 \
 		env_logger-0.7.1 \
 		getrandom-0.2.3 \
 		glob-0.3.0 \
-		gumdrop-0.8.0 \
-		gumdrop_derive-0.8.0 \
+		heck-0.3.3 \
 		hermit-abi-0.1.19 \
 		humanize-rs-0.1.5 \
 		humantime-1.3.0 \
@@ -55,6 +55,8 @@ CARGO_CRATES=	aho-corasick-0.7.18 \
 		num-traits-0.2.14 \
 		numtoa-0.1.0 \
 		peeking_take_while-0.1.2 \
+		proc-macro-error-1.0.4 \
+		proc-macro-error-attr-1.0.4 \
 		proc-macro2-1.0.27 \
 		quick-error-1.2.3 \
 		quote-1.0.9 \
@@ -68,7 +70,10 @@ CARGO_CRATES=	aho-corasick-0.7.18 \
 		serde_derive-1.0.126 \
 		shlex-0.1.1 \
 		strsim-0.8.0 \
+		structopt-0.3.22 \
+		structopt-derive-0.4.15 \
 		syn-1.0.73 \
+		term_size-0.3.2 \
 		termcolor-1.1.2 \
 		termion-1.5.6 \
 		textwrap-0.11.0 \
@@ -87,7 +92,7 @@ CARGO_CRATES=	aho-corasick-0.7.18 \
 		winapi-x86_64-pc-windows-gnu-0.4.0
 CARGO_INSTALL_PATH=	gstat
 CARGO_CARGOTOML=	${WRKSRC}/gstat/Cargo.toml
-CARGO_TEST_ARGS=		--all
+CARGO_TEST_ARGS=	--all
 
 PLIST_FILES=	sbin/gstat-rs \
 		man/man8/gstat-rs.8.gz
