@@ -1,7 +1,7 @@
 # Created by: William Grzybowski <wg@FreeBSD.org>
 
 PORTNAME=	libzfs
-PORTVERSION=	1.0.2021080100
+PORTVERSION=	1.0.2021012000
 CATEGORIES=	devel python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -13,7 +13,7 @@ LICENSE=	BSD2CLAUSE
 USE_GITHUB=     yes
 GH_ACCOUNT=	freenas
 GH_PROJECT=	py-libzfs
-GH_TAGNAME=	83b52494b35
+GH_TAGNAME=	a4adc61
 
 HAS_CONFIGURE=	yes
 USES=		compiler:c11 python:3.6+
