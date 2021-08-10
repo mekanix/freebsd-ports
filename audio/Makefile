@@ -17,6 +17,7 @@
     SUBDIR += alo-lv2
     SUBDIR += alsa-lib
     SUBDIR += alsa-plugins
+    SUBDIR += alsa-seq-server
     SUBDIR += alsa-sndio
     SUBDIR += alsa-utils
     SUBDIR += alure
@@ -669,6 +670,8 @@
     SUBDIR += py-tagpy
     SUBDIR += py-wavio
     SUBDIR += py-webrtcvad
+    SUBDIR += py-zita-audiotools
+    SUBDIR += py-zita-jacktools
     SUBDIR += qaudiosonar
     SUBDIR += qjackctl
     SUBDIR += qmidiarp
@@ -879,10 +882,12 @@
     SUBDIR += zita-bls1
     SUBDIR += zita-convolver
     SUBDIR += zita-dpl1
+    SUBDIR += zita-jclient
     SUBDIR += zita-mu1
     SUBDIR += zita-njbridge
     SUBDIR += zita-resampler
     SUBDIR += zita-rev1
+    SUBDIR += zplugins-lv2
     SUBDIR += zrythm
     SUBDIR += zynaddsubfx
 

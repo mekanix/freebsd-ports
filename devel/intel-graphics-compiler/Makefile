@@ -1,7 +1,12 @@
 PORTNAME=	intel-graphics-compiler
 DISTVERSIONPREFIX=	igc-
-DISTVERSION=	1.0.7041
+DISTVERSION=	1.0.8279
 CATEGORIES=	devel
+
+PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
+PATCHFILES+=	b7f29ee948b9.patch:-p1 # https://github.com/intel/intel-graphics-compiler/pull/189
+PATCHFILES+=	a69ee09275fe.patch:-p1 # https://github.com/intel/intel-graphics-compiler/pull/189
+PATCHFILES+=	12c4fbc2b511.patch:-p1 # https://github.com/intel/intel-graphics-compiler/pull/189
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Intel Graphics Compiler for OpenCL
@@ -12,14 +17,16 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.md
 ONLY_FOR_ARCHS=	amd64 i386
 ONLY_FOR_ARCHS_REASON=	Only Intel GPUs on x86 are supported
 
-LIB_DEPENDS=	libopencl-clang.so:devel/opencl-clang
+BUILD_DEPENDS=	vc-intrinsics-llvm11>=s20210730:devel/vc-intrinsics@llvm11
+LIB_DEPENDS=	libopencl-clang.so.11:devel/opencl-clang@llvm11
 
 USES=		bison cmake compiler:c++17-lang python:build
 USE_GITHUB=	yes
 USE_LDCONFIG=	yes
 GH_ACCOUNT=	intel
-GH_TUPLE=	intel:vc-intrinsics:069ced1:vcintrin/../vc-intrinsics
 CMAKE_OFF=	INSTALL_SPIRVDLL
+CMAKE_ARGS=	-DCMAKE_PREFIX_PATH:PATH="${LOCALBASE}/${LIB_DEPENDS:M*@llvm*:C/.*@//}" \
+		-DIGC_OPTION__LLVM_PREFERRED_VERSION:STRING="${LIB_DEPENDS:M*@llvm*:C/.*so\.//:C/:.*//}"
 CFLAGS+=	-Wno-macro-redefined # __fastcall
 PLIST_SUB=	ARCH_SUFX=${ARCH:S/i386/32/:S/amd//:S/x86_//}
 
@@ -32,16 +39,11 @@ post-patch:
 		${WRKSRC}/IGC/BiFModule/linux/CMakeLists.txt
 # devel/llvm* have different naming from upstream under PATH
 	@${REINPLACE_CMD} -e '/clang-\$$/s//clang$$/' \
+		-e '/llvm-\$$/s//llvm$$/' \
+		${WRKSRC}/IGC/cmake/igc_find_liblldELF.cmake \
 		${WRKSRC}/IGC/cmake/igc_find_opencl_clang.cmake
 # No need to abort on every benign warning enabled by default
 	@${REINPLACE_CMD} -e 's/"-Werror"//; /-Werror/d' \
 		${WRKSRC}/IGC/CMakeLists.txt
-
-pre-configure:
-# Only one libLLVM can be loaded, so use the same version as devel/opencl-clang
-	@for f in ${LOCALBASE}/lib/libopencl-clang.so.*; do \
-		${REINPLACE_CMD} "/set.*LLVM.*VERSION/s/\".*\"/\"$${f##*so.}\"/" \
-			${WRKSRC}/external/llvm/llvm_preferred_version.cmake; \
-	done
 
 .include <bsd.port.mk>

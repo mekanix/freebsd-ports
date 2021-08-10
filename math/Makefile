@@ -430,6 +430,7 @@
     SUBDIR += maxima
     SUBDIR += mbasecalc
     SUBDIR += mcsim
+    SUBDIR += mdal
     SUBDIR += metis
     SUBDIR += mfem
     SUBDIR += mingw32-libgmp
@@ -732,6 +733,7 @@
     SUBDIR += pari_galpol
     SUBDIR += pari_nftables
     SUBDIR += pari_seadata
+    SUBDIR += paritwine
     SUBDIR += parmetis
     SUBDIR += parmgridgen
     SUBDIR += pdal
@@ -912,6 +914,7 @@
     SUBDIR += py-theano
     SUBDIR += py-triangle
     SUBDIR += py-uncertainties
+    SUBDIR += py-unyt
     SUBDIR += py-vincenty
     SUBDIR += py-yt
     SUBDIR += py-z3-solver

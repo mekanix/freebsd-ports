@@ -4,7 +4,7 @@ DISTVERSION=	0.1.0
 CATEGORIES=	sysutils
 
 MAINTAINER=	asomers@FreeBSD.org
-COMMENT=	Display ZFS datasets' I/O in real time
+COMMENT=	Display ZFS dataset I/O in real time
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -12,8 +12,6 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 USES=		cargo
 USE_GITHUB=	yes
 GH_ACCOUNT=	asomers
-GH_PROJECT=	ztop
-
 CARGO_CRATES=	aho-corasick-0.7.18 \
 		ansi_term-0.11.0 \
 		atty-0.2.14 \
@@ -64,11 +62,11 @@ CARGO_CRATES=	aho-corasick-0.7.18 \
 		winapi-util-0.1.5 \
 		winapi-x86_64-pc-windows-gnu-0.4.0
 
-PLIST_FILES=	bin/ztop \
-		man/man1/ztop.1.gz
+PLIST_FILES=	bin/${PORTNAME} \
+		man/man1/${PORTNAME}.1.gz
 
 post-install:
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/ztop
-	${INSTALL_MAN} ${WRKSRC}/doc/ztop.1 ${STAGEDIR}${MAN8PREFIX}/man/man1/ztop.1
+		${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
+		${INSTALL_MAN} ${WRKSRC}/doc/${PORTNAME}.1 ${STAGEDIR}${MAN1PREFIX}/man/man1
 
 .include <bsd.port.mk>
