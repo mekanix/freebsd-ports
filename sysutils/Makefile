@@ -61,6 +61,7 @@
     SUBDIR += asmem
     SUBDIR += asmon
     SUBDIR += asusoled
+    SUBDIR += atf-fvp
     SUBDIR += atf-master
     SUBDIR += atf-rk3328
     SUBDIR += atf-rk3399
@@ -238,6 +239,7 @@
     SUBDIR += daemontools
     SUBDIR += daemontools-encore
     SUBDIR += daggy
+    SUBDIR += damager
     SUBDIR += dar
     SUBDIR += datadog-agent
     SUBDIR += datadog-integrations
@@ -312,6 +314,7 @@
     SUBDIR += dwatch-json
     SUBDIR += dwatch-pwsnoop
     SUBDIR += e2fsprogs
+    SUBDIR += e2tools
     SUBDIR += ebsnvme-id
     SUBDIR += ec2-scripts
     SUBDIR += eclat
@@ -577,6 +580,7 @@
     SUBDIR += kdf
     SUBDIR += kdialog
     SUBDIR += keyboard-daemon
+    SUBDIR += keyd
     SUBDIR += kf5-baloo
     SUBDIR += kf5-kwallet
     SUBDIR += kfloppy
@@ -1159,7 +1163,6 @@
     SUBDIR += rubygem-fluent-mixin-plaintextformatter
     SUBDIR += rubygem-fluent-plugin-config-expander
     SUBDIR += rubygem-fluent-plugin-file-alternative
-    SUBDIR += rubygem-fluent-plugin-graylog
     SUBDIR += rubygem-fluent-plugin-tail-asis
     SUBDIR += rubygem-fluentd
     SUBDIR += rubygem-fssm
@@ -1371,6 +1374,7 @@
     SUBDIR += toybox
     SUBDIR += tracker
     SUBDIR += tracker-miners
+    SUBDIR += tracker3
     SUBDIR += tree
     SUBDIR += triton
     SUBDIR += trueos-libqt5
@@ -1588,6 +1592,7 @@
     SUBDIR += zrepl
     SUBDIR += zsd
     SUBDIR += zsm
+    SUBDIR += ztop
     SUBDIR += zxfer
 
 .include <bsd.port.subdir.mk>

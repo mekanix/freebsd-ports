@@ -292,6 +292,7 @@
     SUBDIR += jicmp
     SUBDIR += jicmp6
     SUBDIR += jose
+    SUBDIR += jotta-cli
     SUBDIR += jrdesktop
     SUBDIR += jsch
     SUBDIR += jumpgate
@@ -330,6 +331,7 @@
     SUBDIR += kpimtextedit
     SUBDIR += krdc
     SUBDIR += krfb
+    SUBDIR += krill
     SUBDIR += ksmtp
     SUBDIR += ktnef
     SUBDIR += kube-controller-manager
@@ -543,7 +545,6 @@
     SUBDIR += openbgpd
     SUBDIR += openbgpd6
     SUBDIR += openldap24-client
-    SUBDIR += openldap24-sasl-client
     SUBDIR += openldap24-server
     SUBDIR += openmdns
     SUBDIR += openmpi
@@ -1188,6 +1189,7 @@
     SUBDIR += rfbproxy
     SUBDIR += rinetd
     SUBDIR += ripe-whois
+    SUBDIR += rospo
     SUBDIR += routinator
     SUBDIR += rp-pppoe
     SUBDIR += rpki-client
@@ -1262,7 +1264,6 @@
     SUBDIR += rubygem-gitaly
     SUBDIR += rubygem-gitaly-proto
     SUBDIR += rubygem-gitlab-fog-azure-rm
-    SUBDIR += rubygem-gitlab-fog-google
     SUBDIR += rubygem-gitlab-omniauth-openid-connect
     SUBDIR += rubygem-gitlab_omniauth-ldap
     SUBDIR += rubygem-google-cloud-bigquery
