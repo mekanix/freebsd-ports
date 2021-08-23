@@ -109,6 +109,7 @@ pipeline {
                     sysutils/sas3flash \
                     sysutils/sas3ircu \
                     sysutils/screen \
+                    sysutils/sdparm \
                     sysutils/sg3_utils \
                     sysutils/smartmontools \
                     sysutils/smp_utils \
