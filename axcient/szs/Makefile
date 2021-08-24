@@ -105,41 +105,13 @@ post-extract:
 CONFLICTS_INSTALL?=	szs-stg
 
 GO_PKGNAME=	github.com/${GH_ACCOUNT}/szs-op
-GO_TARGET=	./cmd/api ./cmd/jobs ./cmd/statistics ./cmd/exports ./cmd/safetyarchivecleanup ./cmd/cleanupclones
+GO_TARGET?=	./cmd/api ./cmd/jobs ./cmd/statistics ./cmd/exports ./cmd/safetyarchivecleanup ./cmd/cleanupclones
 
 # go.mk doesn't have any code for building shared libraries
 post-build:
 	${MKDIR} ${WRKDIR}/lib
 	cd ${GO_WRKSRC} && ${SETENV} ${MAKE_ENV} ${GO_ENV} ${GO_CMD} build `echo ${GO_BUILDFLAGS} | ${SED} 's/buildmode=exe/buildmode=c-shared/'` -o ${WRKDIR}/lib/libszs-op.so cmd/shared/binding.go
 
-post-install:
-	${MKDIR} ${STAGEDIR}${PREFIX}/etc/cron.d
-	${MKDIR} ${STAGEDIR}${PREFIX}/etc/newsyslog.d
-	${MKDIR} ${STAGEDIR}${PREFIX}/etc/rsyslog.d
-	${MKDIR} ${STAGEDIR}${PREFIX}/etc/szs
-	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
-	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}/cron.d
-	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}/newsyslog.conf.d
-	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}/rsyslog.d
-	${MV} ${STAGEDIR}${PREFIX}/bin/api ${STAGEDIR}${PREFIX}/bin/szs-op
-	${MV} ${STAGEDIR}${PREFIX}/bin/exports ${STAGEDIR}${PREFIX}/bin/szs-op-exports
-	${MV} ${STAGEDIR}${PREFIX}/bin/jobs ${STAGEDIR}${PREFIX}/bin/szs-op-jobs
-	${MV} ${STAGEDIR}${PREFIX}/bin/safetyarchivecleanup ${STAGEDIR}${PREFIX}/bin/szs-op-safety-archive-cleanup
-	${MV} ${STAGEDIR}${PREFIX}/bin/cleanupclones ${STAGEDIR}${PREFIX}/bin/szs-op-cleanup-clones
-	${MV} ${STAGEDIR}${PREFIX}/bin/statistics ${STAGEDIR}${PREFIX}/bin/szs-op-statistics
-	${INSTALL_LIB} ${WRKDIR}/lib/libszs-op.so ${STAGEDIR}${PREFIX}/lib
-	${INSTALL_DATA} ${WRKDIR}/lib/libszs-op.h ${STAGEDIR}${PREFIX}/include/szs-op.h
-	${INSTALL_DATA} ${WRKSRC}/freebsd-pkg/usr/local/etc/cron.d/safety_archive_cleanup ${STAGEDIR}${EXAMPLESDIR}/cron.d/
-	${INSTALL_DATA} ${WRKSRC}/freebsd-pkg/usr/local/etc/cron.d/cleanup_clones ${STAGEDIR}${EXAMPLESDIR}/cron.d/
-	${INSTALL_DATA} ${WRKSRC}/freebsd-pkg/usr/local/etc/cron.d/statistics ${STAGEDIR}${EXAMPLESDIR}/cron.d/
-	${INSTALL_DATA} ${WRKSRC}/freebsd-pkg/usr/local/etc/newsyslog.conf.d/szs.conf ${STAGEDIR}${EXAMPLESDIR}/newsyslog.conf.d/
-	${INSTALL_DATA} ${WRKSRC}/freebsd-pkg/usr/local/etc/newsyslog.conf.d/szs_exports.conf ${STAGEDIR}${EXAMPLESDIR}/newsyslog.conf.d/
-	${INSTALL_DATA} ${WRKSRC}/freebsd-pkg/usr/local/etc/newsyslog.conf.d/szs_jobs.conf ${STAGEDIR}${EXAMPLESDIR}/newsyslog.conf.d/
-	${INSTALL_SCRIPT} ${WRKSRC}/freebsd-pkg/usr/local/etc/rc.d/szs ${STAGEDIR}${PREFIX}/etc/rc.d
-	${INSTALL_SCRIPT} ${WRKSRC}/freebsd-pkg/usr/local/etc/rc.d/szs_exports ${STAGEDIR}${PREFIX}/etc/rc.d
-	${INSTALL_SCRIPT} ${WRKSRC}/freebsd-pkg/usr/local/etc/rc.d/szs_jobs ${STAGEDIR}${PREFIX}/etc/rc.d
-	${INSTALL_DATA} ${WRKSRC}/freebsd-pkg/usr/local/etc/rsyslog.d/szs.conf ${STAGEDIR}${EXAMPLESDIR}/rsyslog.d/
-	${INSTALL_DATA} ${WRKSRC}/freebsd-pkg/usr/local/etc/rsyslog.d/szs_jobs.conf ${STAGEDIR}${EXAMPLESDIR}/rsyslog.d/
-	${INSTALL_DATA} ${WRKSRC}/freebsd-pkg/usr/local/etc/szs/config.yml.example ${STAGEDIR}${PREFIX}/etc/szs/config.yml.sample
+.include "${.CURDIR}/post-install.mk"
 
 .include <bsd.port.mk>
