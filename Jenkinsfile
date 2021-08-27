@@ -121,6 +121,7 @@ pipeline {
                     textproc/ripgrep \
                     '
                 PORTS13 = ' \
+                    devel/valgrind \
                     java/openjdk8 \
                     misc/compat12x \
                     net/samba413 \
