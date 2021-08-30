@@ -126,6 +126,7 @@ pipeline {
                     misc/compat12x \
                     net/samba413 \
                     ports-mgmt/poudriere \
+                    sysutils/fusefs-ntfs \
                     www/nginx \
                     '
             }
