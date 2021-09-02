@@ -2,7 +2,7 @@
 
 PORTNAME=	cloudserver
 PKGNAMESUFFIX?=  2
-PORTVERSION?=	2.4.0
+PORTVERSION?=	2.5.0
 CATEGORIES=	axcient
 
 MAINTAINER=	nsemchenkov@axcient.com
@@ -39,6 +39,7 @@ GH_TUPLE?=	\
 		gomodule:redigo:v1.8.4:gomodule_redigo/vendor/github.com/gomodule/redigo \
 		google:go-cmp:v0.5.5:google_go_cmp/vendor/github.com/google/go-cmp \
 		gopherjs:gopherjs:bed99a852dfe:gopherjs_gopherjs/vendor/github.com/gopherjs/gopherjs \
+		hashicorp:go-multierror:v1.0.0:hashicorp_go_multierror/vendor/github.com/hashicorp/go-multierror \
 		kr:text:v0.2.0:kr_text/vendor/github.com/kr/text \
 		matttproud:golang_protobuf_extensions:v1.0.1:matttproud_golang_protobuf_extensions/vendor/github.com/matttproud/golang_protobuf_extensions \
 		pmezard:go-difflib:v1.0.0:pmezard_go_difflib/vendor/github.com/pmezard/go-difflib \

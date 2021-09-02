@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	szs
-PORTVERSION?=	1.10.0
+PORTVERSION?=	1.11.0
 PORTREVISION?=	0
 CATEGORIES=	axcient
 MASTER_SITES=	GH
@@ -105,7 +105,7 @@ post-extract:
 CONFLICTS_INSTALL?=	szs-stg
 
 GO_PKGNAME=	github.com/${GH_ACCOUNT}/szs-op
-GO_TARGET?=	./cmd/api ./cmd/jobs ./cmd/statistics ./cmd/exports ./cmd/safetyarchivecleanup ./cmd/cleanupclones
+GO_TARGET?=	./cmd/api ./cmd/jobs ./cmd/statistics ./cmd/exports ./cmd/safetyarchivecleanup ./cmd/cleanupclones ./cmd/snapshotscleanup
 
 # go.mk doesn't have any code for building shared libraries
 post-build:
