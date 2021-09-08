@@ -68,6 +68,7 @@ pipeline {
                     databases/redis \
                     devel/gdb \
                     devel/git \
+                    devel/py-simplejson \
                     devel/py-virtualenv \
                     devel/uclcmd \
                     editors/vim-console \
