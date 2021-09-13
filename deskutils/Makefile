@@ -37,6 +37,7 @@
     SUBDIR += conkyforecast
     SUBDIR += coolreader
     SUBDIR += copyq
+    SUBDIR += coregarage
     SUBDIR += countdown
     SUBDIR += dailystrips
     SUBDIR += deforaos-todo
@@ -144,6 +145,7 @@
     SUBDIR += ktimetracker
     SUBDIR += kuserfeedback
     SUBDIR += latte-dock
+    SUBDIR += libcprime
     SUBDIR += libkdepim
     SUBDIR += libportal
     SUBDIR += ljclive
@@ -226,6 +228,7 @@
     SUBDIR += showdown
     SUBDIR += simpleagenda
     SUBDIR += sliderule
+    SUBDIR += solanum
     SUBDIR += sowon
     SUBDIR += spice-gtk
     SUBDIR += synapse

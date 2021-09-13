@@ -22,8 +22,8 @@ bin/winegcc
 bin/winemaker
 bin/winemine
 bin/winepath
-%%WINE32%%bin/wineserver32
 %%WINE64%%bin/wineserver
+%%WINE32%%bin/wineserver32
 bin/wmc
 bin/wrc
 include/wine/debug.h
@@ -286,8 +286,8 @@ include/wine/windows/d3dvec.inl
 include/wine/windows/d3dx10.h
 include/wine/windows/d3dx10async.h
 include/wine/windows/d3dx10core.h
-include/wine/windows/d3dx10core.idl
 include/wine/windows/d3dx10math.h
+include/wine/windows/d3dx10mesh.h
 include/wine/windows/d3dx10tex.h
 include/wine/windows/d3dx11.h
 include/wine/windows/d3dx11async.h
@@ -972,6 +972,7 @@ include/wine/windows/wincred.h
 include/wine/windows/wincrypt.h
 include/wine/windows/windef.h
 include/wine/windows/windns.h
+include/wine/windows/windot11.h
 include/wine/windows/windows.foundation.collections.h
 include/wine/windows/windows.foundation.collections.idl
 include/wine/windows/windows.foundation.h
@@ -1107,6 +1108,7 @@ include/wine/windows/ddk/csq.h
 include/wine/windows/ddk/d3dkmthk.h
 include/wine/windows/ddk/fltkernel.h
 include/wine/windows/ddk/hidclass.h
+include/wine/windows/ddk/hidpddi.h
 include/wine/windows/ddk/hidpi.h
 include/wine/windows/ddk/hidport.h
 include/wine/windows/ddk/hidsdi.h
@@ -1237,6 +1239,7 @@ lib/wine/%%WINEARCH%%-unix/api-ms-win-core-profile-l1-1-0.dll.so
 lib/wine/%%WINEARCH%%-unix/api-ms-win-core-psapi-ansi-l1-1-0.dll.so
 lib/wine/%%WINEARCH%%-unix/api-ms-win-core-psapi-l1-1-0.dll.so
 lib/wine/%%WINEARCH%%-unix/api-ms-win-core-psapi-obsolete-l1-1-0.dll.so
+lib/wine/%%WINEARCH%%-unix/api-ms-win-core-psm-appnotify-l1-1-0.dll.so
 lib/wine/%%WINEARCH%%-unix/api-ms-win-core-quirks-l1-1-0.dll.so
 lib/wine/%%WINEARCH%%-unix/api-ms-win-core-realtime-l1-1-0.dll.so
 lib/wine/%%WINEARCH%%-unix/api-ms-win-core-registry-l1-1-0.dll.so
@@ -1551,6 +1554,7 @@ lib/wine/%%WINEARCH%%-unix/dxdiagn.dll.so
 lib/wine/%%WINEARCH%%-unix/dxgi.dll.so
 %%STAGING%%lib/wine/%%WINEARCH%%-unix/dxgkrnl.sys.so
 %%STAGING%%lib/wine/%%WINEARCH%%-unix/dxgmms1.sys.so
+lib/wine/%%WINEARCH%%-unix/dxtrans.dll.so
 lib/wine/%%WINEARCH%%-unix/dxva2.dll.so
 lib/wine/%%WINEARCH%%-unix/eject.exe.so
 lib/wine/%%WINEARCH%%-unix/esent.dll.so
@@ -1639,6 +1643,7 @@ lib/wine/%%WINEARCH%%-unix/hh.exe.so
 lib/wine/%%WINEARCH%%-unix/hhctrl.ocx.so
 lib/wine/%%WINEARCH%%-unix/hid.dll.so
 lib/wine/%%WINEARCH%%-unix/hidclass.sys.so
+lib/wine/%%WINEARCH%%-unix/hidparse.sys.so
 lib/wine/%%WINEARCH%%-unix/hlink.dll.so
 lib/wine/%%WINEARCH%%-unix/hnetcfg.dll.so
 lib/wine/%%WINEARCH%%-unix/hostname.exe.so
@@ -1721,7 +1726,11 @@ lib/wine/%%WINEARCH%%-unix/libd3d9.def
 lib/wine/%%WINEARCH%%-unix/libd3dcompiler.def
 lib/wine/%%WINEARCH%%-unix/libd3drm.def
 lib/wine/%%WINEARCH%%-unix/libd3dx10.def
+lib/wine/%%WINEARCH%%-unix/libd3dx10_40.def
+lib/wine/%%WINEARCH%%-unix/libd3dx10_41.def
+lib/wine/%%WINEARCH%%-unix/libd3dx10_42.def
 lib/wine/%%WINEARCH%%-unix/libd3dx11.def
+lib/wine/%%WINEARCH%%-unix/libd3dx11_42.def
 lib/wine/%%WINEARCH%%-unix/libd3dx9.def
 lib/wine/%%WINEARCH%%-unix/libd3dxof.def
 lib/wine/%%WINEARCH%%-unix/libdbgeng.def
@@ -1751,6 +1760,7 @@ lib/wine/%%WINEARCH%%-unix/libglu32.def
 lib/wine/%%WINEARCH%%-unix/libhal.def
 lib/wine/%%WINEARCH%%-unix/libhid.def
 lib/wine/%%WINEARCH%%-unix/libhidclass.def
+lib/wine/%%WINEARCH%%-unix/libhidparse.def
 lib/wine/%%WINEARCH%%-unix/libhlink.def
 lib/wine/%%WINEARCH%%-unix/libhtmlhelp.def
 lib/wine/%%WINEARCH%%-unix/libhttpapi.def
@@ -1888,6 +1898,7 @@ lib/wine/%%WINEARCH%%-unix/libwmcodecdspuuid.a
 lib/wine/%%WINEARCH%%-unix/libwmvcore.def
 lib/wine/%%WINEARCH%%-unix/libwnaspi32.def
 %%WINE32%%lib/wine/%%WINEARCH%%-unix/libwow32.def
+%%WINE64%%lib/wine/%%WINEARCH%%-unix/libwow64.def
 lib/wine/%%WINEARCH%%-unix/libws2_32.def
 lib/wine/%%WINEARCH%%-unix/libwsdapi.def
 lib/wine/%%WINEARCH%%-unix/libwsnmp32.def
@@ -2321,12 +2332,15 @@ lib/wine/%%WINEARCH%%-unix/wmvcore.dll.so
 lib/wine/%%WINEARCH%%-unix/wnaspi32.dll.so
 lib/wine/%%WINEARCH%%-unix/wordpad.exe.so
 %%WINE32%%lib/wine/%%WINEARCH%%-unix/wow32.dll.so
+%%WINE64%%lib/wine/%%WINEARCH%%-unix/wow64.dll.so
 %%WINE64%%lib/wine/%%WINEARCH%%-unix/wow64cpu.dll.so
+%%WINE64%%lib/wine/%%WINEARCH%%-unix/wow64win.dll.so
 lib/wine/%%WINEARCH%%-unix/wpc.dll.so
 lib/wine/%%WINEARCH%%-unix/wpcap.dll.so
 lib/wine/%%WINEARCH%%-unix/wpcap.so
 lib/wine/%%WINEARCH%%-unix/write.exe.so
 lib/wine/%%WINEARCH%%-unix/ws2_32.dll.so
+lib/wine/%%WINEARCH%%-unix/ws2_32.so
 lib/wine/%%WINEARCH%%-unix/wscript.exe.so
 lib/wine/%%WINEARCH%%-unix/wsdapi.dll.so
 lib/wine/%%WINEARCH%%-unix/wshom.ocx.so
@@ -2490,6 +2504,7 @@ lib/wine/%%WINEARCH%%-windows/api-ms-win-core-profile-l1-1-0.dll
 lib/wine/%%WINEARCH%%-windows/api-ms-win-core-psapi-ansi-l1-1-0.dll
 lib/wine/%%WINEARCH%%-windows/api-ms-win-core-psapi-l1-1-0.dll
 lib/wine/%%WINEARCH%%-windows/api-ms-win-core-psapi-obsolete-l1-1-0.dll
+lib/wine/%%WINEARCH%%-windows/api-ms-win-core-psm-appnotify-l1-1-0.dll
 lib/wine/%%WINEARCH%%-windows/api-ms-win-core-quirks-l1-1-0.dll
 lib/wine/%%WINEARCH%%-windows/api-ms-win-core-realtime-l1-1-0.dll
 lib/wine/%%WINEARCH%%-windows/api-ms-win-core-registry-l1-1-0.dll
@@ -2800,6 +2815,7 @@ lib/wine/%%WINEARCH%%-windows/dxdiagn.dll
 lib/wine/%%WINEARCH%%-windows/dxgi.dll
 %%STAGING%%lib/wine/%%WINEARCH%%-windows/dxgkrnl.sys
 %%STAGING%%lib/wine/%%WINEARCH%%-windows/dxgmms1.sys
+lib/wine/%%WINEARCH%%-windows/dxtrans.dll
 lib/wine/%%WINEARCH%%-windows/dxva2.dll
 lib/wine/%%WINEARCH%%-windows/eject.exe
 lib/wine/%%WINEARCH%%-windows/esent.dll
@@ -2887,6 +2903,7 @@ lib/wine/%%WINEARCH%%-windows/hh.exe
 lib/wine/%%WINEARCH%%-windows/hhctrl.ocx
 lib/wine/%%WINEARCH%%-windows/hid.dll
 lib/wine/%%WINEARCH%%-windows/hidclass.sys
+lib/wine/%%WINEARCH%%-windows/hidparse.sys
 lib/wine/%%WINEARCH%%-windows/hlink.dll
 lib/wine/%%WINEARCH%%-windows/hnetcfg.dll
 lib/wine/%%WINEARCH%%-windows/hostname.exe
@@ -3343,7 +3360,9 @@ lib/wine/%%WINEARCH%%-windows/wmvcore.dll
 lib/wine/%%WINEARCH%%-windows/wnaspi32.dll
 lib/wine/%%WINEARCH%%-windows/wordpad.exe
 %%WINE32%%lib/wine/%%WINEARCH%%-windows/wow32.dll
+%%WINE64%%lib/wine/%%WINEARCH%%-windows/wow64.dll
 %%WINE64%%lib/wine/%%WINEARCH%%-windows/wow64cpu.dll
+%%WINE64%%lib/wine/%%WINEARCH%%-windows/wow64win.dll
 lib/wine/%%WINEARCH%%-windows/wpc.dll
 lib/wine/%%WINEARCH%%-windows/wpcap.dll
 lib/wine/%%WINEARCH%%-windows/write.exe

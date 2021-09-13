@@ -2,7 +2,7 @@
 
 PORTNAME=	qgis
 DISTVERSIONPREFIX=	final-
-DISTVERSION=	3_20_1
+DISTVERSION=	3_20_3
 CATEGORIES=	graphics geography
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
@@ -44,8 +44,8 @@ LIB_DEPENDS=	libexiv2.so:graphics/exiv2 \
 		libgsl.so:math/gsl \
 		libhdf5.so:science/hdf5 \
 		liblazperf.so:archivers/lazperf \
-		libnetcdf.so:science/netcdf \
 		libmdal.so:math/mdal \
+		libnetcdf.so:science/netcdf \
 		libOpenCL.so:devel/ocl-icd \
 		libpdal_base.so:math/pdal \
 		libproj.so:graphics/proj \
@@ -103,7 +103,7 @@ RUN_DEPENDS=	astyle:devel/astyle \
 		${PYTHON_PKGNAMEPREFIX}yaml>=5.3.1:devel/py-yaml@${PY_FLAVOR}
 
 ### Fortran is needed by numpy, GRASS, etc.
-USES=		bison cmake compiler:features cpe desktop-file-utils \
+USES=		bison cmake compiler:features desktop-file-utils \
 		fortran gl gmake gnome pgsql pyqt:5 python:3.7+ qca qt:5 \
 		shebangfix sqlite:3
 USE_GITHUB=	yes
@@ -124,6 +124,7 @@ SHEBANG_FILES=	src/plugins/grass/scripts/*.py
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE:STRING=Release \
 		-DCMAKE_POLICY_DEFAULT_CMP0056:STRING=NEW \
+		-DLazPerf_INCLUDE_DIR:PATH=${LOCALBASE}/include/lazperf \
 		-DWITH_INTERNAL_MDAL:BOOL=false \
 		-DPYRCC_PROGRAM:FILEPATH=${LOCALBASE}/bin/pyrcc5-${PYTHON_VER} \
 		-DPYUIC_PROGRAM:FILEPATH=${LOCALBASE}/bin/pyuic5-${PYTHON_VER} \

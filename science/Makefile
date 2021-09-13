@@ -34,6 +34,7 @@
     SUBDIR += berkeleygw
     SUBDIR += bodr
     SUBDIR += buddy
+    SUBDIR += cantera
     SUBDIR += cdcl
     SUBDIR += cdf
     SUBDIR += cdk
@@ -65,6 +66,7 @@
     SUBDIR += dlib-cpp
     SUBDIR += drawxtl
     SUBDIR += dvc
+    SUBDIR += dynare
     SUBDIR += eccodes
     SUBDIR += elk
     SUBDIR += elmerfem
@@ -102,6 +104,7 @@
     SUBDIR += hdf5
     SUBDIR += hdf5-18
     SUBDIR += healpix
+    SUBDIR += helfem
     SUBDIR += hepmc3
     SUBDIR += highfive
     SUBDIR += hypre
@@ -171,8 +174,10 @@
     SUBDIR += nwchem-data
     SUBDIR += octopus
     SUBDIR += openbabel
+    SUBDIR += openems
     SUBDIR += openkim
     SUBDIR += openkim-models
+    SUBDIR += openmx
     SUBDIR += opensim-core
     SUBDIR += opensph
     SUBDIR += opsin
@@ -286,6 +291,7 @@
     SUBDIR += py-pygeodesy
     SUBDIR += py-pygeometa
     SUBDIR += py-pygmo2
+    SUBDIR += py-pyked
     SUBDIR += py-pymatgen
     SUBDIR += py-pymol
     SUBDIR += py-pyosf
@@ -336,6 +342,7 @@
     SUBDIR += scidavis
     SUBDIR += segyio
     SUBDIR += shelxle
+    SUBDIR += siconos
     SUBDIR += siesta
     SUBDIR += sigrok-cli
     SUBDIR += sigrok-firmware

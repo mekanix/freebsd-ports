@@ -75,6 +75,7 @@
     SUBDIR += chpasswd
     SUBDIR += chrome-gnome-shell
     SUBDIR += chromium
+    SUBDIR += cinny
     SUBDIR += civetweb
     SUBDIR += ckeditor
     SUBDIR += cl-lml
@@ -221,6 +222,7 @@
     SUBDIR += guile-www
     SUBDIR += gurl
     SUBDIR += gwsocket
+    SUBDIR += h2c
     SUBDIR += h2o
     SUBDIR += h2o-devel
     SUBDIR += habari
@@ -466,6 +468,7 @@
     SUBDIR += oneshot
     SUBDIR += onionbalance
     SUBDIR += onionshare
+    SUBDIR += openarc
     SUBDIR += opencart
     SUBDIR += orangehrm
     SUBDIR += osrm-backend
@@ -1507,6 +1510,7 @@
     SUBDIR += py-django-filter
     SUBDIR += py-django-formset-js-improved
     SUBDIR += py-django-formtools
+    SUBDIR += py-django-graphiql-debug-toolbar
     SUBDIR += py-django-gravatar2
     SUBDIR += py-django-guardian
     SUBDIR += py-django-happenings-update
@@ -1651,6 +1655,7 @@
     SUBDIR += py-grip
     SUBDIR += py-gunicorn
     SUBDIR += py-h2
+    SUBDIR += py-habanero
     SUBDIR += py-horizon
     SUBDIR += py-hpack
     SUBDIR += py-hstspreload
@@ -2333,6 +2338,7 @@
     SUBDIR += wordpress
     SUBDIR += wpebackend-fdo
     SUBDIR += writeas-cli
+    SUBDIR += writefreely
     SUBDIR += wsdlpull
     SUBDIR += wslay
     SUBDIR += wsmake

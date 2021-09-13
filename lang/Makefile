@@ -98,7 +98,6 @@
     SUBDIR += gcc12-devel
     SUBDIR += gcc48
     SUBDIR += gcc6-aux
-    SUBDIR += gcc7
     SUBDIR += gcc8
     SUBDIR += gcc9
     SUBDIR += gcc9-devel
@@ -366,5 +365,6 @@
     SUBDIR += yorick
     SUBDIR += ypsilon
     SUBDIR += zig
+    SUBDIR += zig-devel
 
 .include <bsd.port.subdir.mk>

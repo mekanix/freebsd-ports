@@ -439,6 +439,7 @@
     SUBDIR += mathml-xsd
     SUBDIR += md4c
     SUBDIR += mdbook
+    SUBDIR += mdbook-linkcheck
     SUBDIR += mdocml
     SUBDIR += meld
     SUBDIR += metauml
@@ -1454,6 +1455,7 @@
     SUBDIR += py-sphinxcontrib-fulltoc
     SUBDIR += py-sphinxcontrib-htmlhelp
     SUBDIR += py-sphinxcontrib-httpdomain
+    SUBDIR += py-sphinxcontrib-issuetracker
     SUBDIR += py-sphinxcontrib-jsmath
     SUBDIR += py-sphinxcontrib-log-cabinet
     SUBDIR += py-sphinxcontrib-napoleon
@@ -1462,6 +1464,7 @@
     SUBDIR += py-sphinxcontrib-qthelp
     SUBDIR += py-sphinxcontrib-serializinghtml
     SUBDIR += py-sphinxcontrib-websupport
+    SUBDIR += py-sphinxext-opengraph
     SUBDIR += py-spylls
     SUBDIR += py-stemming
     SUBDIR += py-tabletext
@@ -1536,6 +1539,7 @@
     SUBDIR += retext
     SUBDIR += rfcdiff
     SUBDIR += ripgrep
+    SUBDIR += ripgrep-all
     SUBDIR += ripole
     SUBDIR += rl
     SUBDIR += rman
@@ -1562,6 +1566,7 @@
     SUBDIR += rubygem-amatch
     SUBDIR += rubygem-asciidoctor
     SUBDIR += rubygem-asciidoctor-diagram
+    SUBDIR += rubygem-asciidoctor-epub3
     SUBDIR += rubygem-asciidoctor-include-ext
     SUBDIR += rubygem-asciidoctor-kroki
     SUBDIR += rubygem-asciidoctor-pdf
@@ -1622,6 +1627,7 @@
     SUBDIR += rubygem-ferret
     SUBDIR += rubygem-fog-xml
     SUBDIR += rubygem-gemoji
+    SUBDIR += rubygem-gepub
     SUBDIR += rubygem-github-linguist
     SUBDIR += rubygem-github-markup
     SUBDIR += rubygem-github-markup17
@@ -1707,7 +1713,6 @@
     SUBDIR += rubygem-reverse_markdown
     SUBDIR += rubygem-rexml
     SUBDIR += rubygem-ri_cal
-    SUBDIR += rubygem-rich
     SUBDIR += rubygem-rly
     SUBDIR += rubygem-rmmseg-cpp
     SUBDIR += rubygem-ronn

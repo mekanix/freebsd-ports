@@ -19,8 +19,9 @@ LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libuv.so:devel/libuv \
 		librhash.so:security/rhash
 
-USES=		compiler:c++11-lang ncurses
+USES=		compiler:c++11-lang cpe ncurses
 
+CPE_VENDOR=	cmake_project
 HAS_CONFIGURE=	yes
 CONFIGURE_ENV=	MAKE=make
 CONFIGURE_ARGS=	--prefix=${PREFIX} \
@@ -34,8 +35,9 @@ OPTIONS_DEFINE=	DOCS MANPAGES CPACK
 OPTIONS_DEFAULT=MANPAGES
 OPTIONS_SUB=	yes
 
-MANPAGES_USES=		python:env
-MANPAGES_BUILD_DEPENDS=	sphinx-build:textproc/py-sphinx
+MANPAGES_USES=		python:3.6-3.9,env
+MANPAGES_BUILD_DEPENDS=	sphinx-build-${PYTHON_VER}:textproc/py-sphinx@${PY_FLAVOR}
+MANPAGES_VARS=		BINARY_ALIAS=sphinx-build=sphinx-build-${PYTHON_VER}
 MANPAGES_CONFIGURE_ON=	--sphinx-man
 
 CPACK_DESC=		Enable FreeBSD generator in CPack (experimental)

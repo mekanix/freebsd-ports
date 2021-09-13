@@ -1,6 +1,7 @@
 PORTNAME=	ztop
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.1.1
+PORTREVISION=	1
 CATEGORIES=	sysutils
 
 MAINTAINER=	asomers@FreeBSD.org
@@ -8,6 +9,8 @@ COMMENT=	Display ZFS dataset I/O in real time
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+IGNORE_FreeBSD_11=	lacks required kernel functionality
 
 USES=		cargo
 USE_GITHUB=	yes

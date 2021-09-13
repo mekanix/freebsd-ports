@@ -41,6 +41,7 @@
     SUBDIR += conlecterm
     SUBDIR += controllermap
     SUBDIR += cool-retro-term
+    SUBDIR += coreterminal
     SUBDIR += deforaos-desktop
     SUBDIR += deforaos-keyboard
     SUBDIR += deforaos-libdesktop
@@ -318,6 +319,7 @@
     SUBDIR += screenkey
     SUBDIR += scripts
     SUBDIR += sddm
+    SUBDIR += sdwmbar
     SUBDIR += sessreg
     SUBDIR += setlayout
     SUBDIR += setxkbmap
@@ -457,6 +459,7 @@
     SUBDIR += xfce4-clipman-plugin
     SUBDIR += xfce4-conf
     SUBDIR += xfce4-dashboard
+    SUBDIR += xfce4-docklike-plugin
     SUBDIR += xfce4-goodies
     SUBDIR += xfce4-screensaver
     SUBDIR += xfce4-screenshooter-plugin

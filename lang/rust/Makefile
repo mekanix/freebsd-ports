@@ -1,8 +1,8 @@
 # Created by: Jyun-Yan You <jyyou@cs.nctu.edu.tw>
 
 PORTNAME=	rust
-PORTVERSION?=	1.53.0
-PORTREVISION?=	0
+PORTVERSION?=	1.54.0
+PORTREVISION?=	2
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/:src \
 		https://dev-static.rust-lang.org/dist/:src \
@@ -44,6 +44,12 @@ TEST_ENV=	${MAKE_ENV} \
 
 CONFLICTS_INSTALL?=	rust-nightly
 
+# rustc stashes intermediary files in TMPDIR (default /tmp) which
+# might cause issues for users that for some reason space limit
+# their /tmp.  WRKDIR should have plenty of space.
+# ?= to allow users to still overwrite it in make.conf.
+TMPDIR?=	${WRKDIR}
+
 OPTIONS_DEFINE=		DOCS GDB SOURCES WASM
 OPTIONS_DEFAULT=	SOURCES WASM
 OPTIONS_EXCLUDE_armv6=	DOCS
@@ -62,8 +68,8 @@ WASM_VARS=		_RUST_BUILD_WASM=true \
 WASM_VARS_OFF=		_RUST_BUILD_WASM=false
 
 # See WRKSRC/src/stage0.txt for the date and version values.
-BOOTSTRAPS_DATE?=		2021-05-10
-RUST_BOOTSTRAP_VERSION?=	1.52.1
+BOOTSTRAPS_DATE?=		2021-06-17
+RUST_BOOTSTRAP_VERSION?=	1.53.0
 
 BOOTSTRAPS_SUFFIX?=		${BOOTSTRAPS_SUFFIX_${ARCH}}
 BOOTSTRAPS_SUFFIX_powerpc64?=	-${PPC_ABI:tl}

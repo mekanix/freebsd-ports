@@ -1,8 +1,8 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
 
 PORTNAME=	Jinja2
-PORTVERSION=	2.11.2
-PORTREVISION=	1
+PORTVERSION=	3.0.0
+PORTREVISION=	0
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -19,7 +19,7 @@ TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}markupsafe>=0.23:textproc/py-markupsafe@${P
 
 NO_ARCH=	yes
 .if empty(PKGNAMESUFFIX)
-USES=		python:2.7+
+USES=		python
 USE_PYTHON=	autoplist distutils
 .endif
 .if ${PKGNAMESUFFIX} == -doc

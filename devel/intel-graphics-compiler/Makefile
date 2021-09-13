@@ -1,12 +1,12 @@
 PORTNAME=	intel-graphics-compiler
 DISTVERSIONPREFIX=	igc-
-DISTVERSION=	1.0.8279
+DISTVERSION=	1.0.8517
 CATEGORIES=	devel
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
-PATCHFILES+=	b7f29ee948b9.patch:-p1 # https://github.com/intel/intel-graphics-compiler/pull/189
-PATCHFILES+=	a69ee09275fe.patch:-p1 # https://github.com/intel/intel-graphics-compiler/pull/189
-PATCHFILES+=	12c4fbc2b511.patch:-p1 # https://github.com/intel/intel-graphics-compiler/pull/189
+PATCHFILES+=	ef9a69ee4723.patch:-p1 # https://github.com/intel/intel-graphics-compiler/pull/189
+PATCHFILES+=	8888a28132ac.patch:-p1 # https://github.com/intel/intel-graphics-compiler/pull/189
+PATCHFILES+=	b926d2c2f490.patch:-p1 # https://github.com/intel/intel-graphics-compiler/pull/189
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Intel Graphics Compiler for OpenCL
@@ -17,6 +17,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.md
 ONLY_FOR_ARCHS=	amd64 i386
 ONLY_FOR_ARCHS_REASON=	Only Intel GPUs on x86 are supported
 
+# llvm10 is unstable, see https://github.com/intel/intel-graphics-compiler/issues/202
 BUILD_DEPENDS=	vc-intrinsics-llvm11>=s20210730:devel/vc-intrinsics@llvm11
 LIB_DEPENDS=	libopencl-clang.so.11:devel/opencl-clang@llvm11
 
@@ -37,13 +38,10 @@ post-patch:
 		-e '/IGC_PYTHON/s/"python"/"${PYTHON_CMD:T}"/' \
 		${WRKSRC}/IGC/CMakeLists.txt \
 		${WRKSRC}/IGC/BiFModule/linux/CMakeLists.txt
-# devel/llvm* have different naming from upstream under PATH
-	@${REINPLACE_CMD} -e '/clang-\$$/s//clang$$/' \
-		-e '/llvm-\$$/s//llvm$$/' \
-		${WRKSRC}/IGC/cmake/igc_find_liblldELF.cmake \
-		${WRKSRC}/IGC/cmake/igc_find_opencl_clang.cmake
 # No need to abort on every benign warning enabled by default
+# Disable debug symbols unless WITH_DEBUG passed via CXXFLAGS
 	@${REINPLACE_CMD} -e 's/"-Werror"//; /-Werror/d' \
+		-e 's/"-g"//' \
 		${WRKSRC}/IGC/CMakeLists.txt
 
 .include <bsd.port.mk>

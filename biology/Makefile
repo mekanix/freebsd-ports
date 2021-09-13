@@ -9,10 +9,13 @@
     SUBDIR += bbmap
     SUBDIR += bcftools
     SUBDIR += bedtools
+    SUBDIR += bfc
     SUBDIR += bioawk
     SUBDIR += biococoa
     SUBDIR += biolibc
+    SUBDIR += biolibc-tools
     SUBDIR += bioparser
+    SUBDIR += biosig
     SUBDIR += biosoup
     SUBDIR += biostar-tools
     SUBDIR += bolt-lmm
@@ -44,6 +47,7 @@
     SUBDIR += fasttree
     SUBDIR += fastx-toolkit
     SUBDIR += figtree
+    SUBDIR += flash
     SUBDIR += fluctuate
     SUBDIR += freebayes
     SUBDIR += garlic
@@ -129,6 +133,7 @@
     SUBDIR += protomol
     SUBDIR += psi88
     SUBDIR += py-Genesis-PyAPI
+    SUBDIR += py-PySCeS
     SUBDIR += py-bigwig
     SUBDIR += py-biom-format
     SUBDIR += py-biopython
@@ -144,11 +149,14 @@
     SUBDIR += py-loompy
     SUBDIR += py-macs2
     SUBDIR += py-multiqc
+    SUBDIR += py-ont-fast5-api
     SUBDIR += py-orange3-bioinformatics
     SUBDIR += py-orange3-single-cell
     SUBDIR += py-pandas-charm
     SUBDIR += py-pyfaidx
     SUBDIR += py-pysam
+    SUBDIR += py-python-libsbml
+    SUBDIR += py-pywgsim
     SUBDIR += py-resdk
     SUBDIR += py-scikit-bio
     SUBDIR += py-xenaPython
@@ -163,6 +171,7 @@
     SUBDIR += rubygem-bio-executables
     SUBDIR += rubygem-bio-old-biofetch-emulator
     SUBDIR += rubygem-bio-shell
+    SUBDIR += sam2pairwise
     SUBDIR += samtools
     SUBDIR += scrm
     SUBDIR += seaview
@@ -173,6 +182,7 @@
     SUBDIR += seqio
     SUBDIR += seqkit
     SUBDIR += seqtk
+    SUBDIR += sigviewer
     SUBDIR += sim4
     SUBDIR += slclust
     SUBDIR += smithwaterman

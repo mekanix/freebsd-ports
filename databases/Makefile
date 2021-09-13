@@ -99,6 +99,7 @@
     SUBDIR += gdbm
     SUBDIR += geoserver-mysql-plugin
     SUBDIR += gigabase
+    SUBDIR += gmdb2
     SUBDIR += gnats4
     SUBDIR += gnatsweb4
     SUBDIR += go-carbon
@@ -201,7 +202,6 @@
     SUBDIR += mongodb42
     SUBDIR += mongodb42-tools
     SUBDIR += mongodb44
-    SUBDIR += mongodb49
     SUBDIR += mongodb50
     SUBDIR += mroonga
     SUBDIR += mtop
@@ -854,8 +854,10 @@
     SUBDIR += redis
     SUBDIR += redis-devel
     SUBDIR += redis5
+    SUBDIR += redis6
     SUBDIR += redis_exporter
     SUBDIR += redisdesktopmanager
+    SUBDIR += redisjson
     SUBDIR += retcl
     SUBDIR += rocksdb
     SUBDIR += rocksdb-lite

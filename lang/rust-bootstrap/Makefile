@@ -2,7 +2,7 @@
 # to upload them to ~/public_distfiles on freefall in preparation
 # for the next lang/rust update.
 PORTNAME=	rust
-PORTVERSION=	1.53.0
+PORTVERSION=	1.54.0
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/:rust \
 		LOCAL/tobik/rust:${FLAVOR} \
@@ -57,6 +57,11 @@ CC=		clang90
 CXX=		clang++90
 .endif
 PATCHDIR=	${.CURDIR}/../rust/files
+# rustc stashes intermediary files in TMPDIR (default /tmp) which
+# might cause issues for users that for some reason space limit
+# their /tmp.  WRKDIR should have plenty of space.
+# ?= to allow users to still overwrite it in make.conf.
+TMPDIR?=	${WRKDIR}
 # Resulting packages are not specific to amd64
 NO_ARCH=	yes
 

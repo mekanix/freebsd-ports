@@ -1,8 +1,8 @@
 # Created by: Mahdi Mokhtari <mokhi64@gmail.com>
 
 PORTNAME?=		mysql
-PORTVERSION=		8.0.25
-PORTREVISION?=		2
+PORTVERSION=		8.0.26
+PORTREVISION?=		0
 CATEGORIES=		databases
 MASTER_SITES=		MYSQL/MySQL-8.0
 PKGNAMESUFFIX?=		80-server
@@ -18,6 +18,8 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}${DISTVERSIONSUFFIX}
 SLAVEDIRS=	databases/mysql80-client
 USES=		bison:build cmake:noninja compiler:c++17-lang cpe \
 		groff:run libedit localbase ncurses perl5 pkgconfig shebangfix ssl
+
+CPE_VENDOR=	oracle
 
 USE_CXXSTD=	c++14
 USE_PERL5=	run

@@ -276,6 +276,7 @@
     SUBDIR += ip6_int
     SUBDIR += ipdecap
     SUBDIR += ipgrab
+    SUBDIR += ipinfo-cli
     SUBDIR += ipsumdump
     SUBDIR += ipsvd
     SUBDIR += ipxe
@@ -546,6 +547,8 @@
     SUBDIR += openbgpd6
     SUBDIR += openldap24-client
     SUBDIR += openldap24-server
+    SUBDIR += openldap25-client
+    SUBDIR += openldap25-server
     SUBDIR += openmdns
     SUBDIR += openmpi
     SUBDIR += openmpi3
@@ -554,6 +557,7 @@
     SUBDIR += openpgm
     SUBDIR += openradius
     SUBDIR += openrsync
+    SUBDIR += opensips31
     SUBDIR += openslp
     SUBDIR += opentracker
     SUBDIR += openvswitch
@@ -1196,6 +1200,7 @@
     SUBDIR += rscsi
     SUBDIR += rsocket-cpp
     SUBDIR += rsplib
+    SUBDIR += rssguard
     SUBDIR += rsync
     SUBDIR += rsync-bpc
     SUBDIR += rtg
@@ -1546,6 +1551,7 @@
     SUBDIR += webalizer-geodb
     SUBDIR += whois
     SUBDIR += widentd
+    SUBDIR += wifibox
     SUBDIR += wireguard
     SUBDIR += wireguard-go
     SUBDIR += wireguard-kmod

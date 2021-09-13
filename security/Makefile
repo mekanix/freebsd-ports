@@ -34,6 +34,7 @@
     SUBDIR += arti
     SUBDIR += asignify
     SUBDIR += assh
+    SUBDIR += authenticator
     SUBDIR += autossh
     SUBDIR += aws-c-cal
     SUBDIR += aws-iam-authenticator
@@ -188,6 +189,7 @@
     SUBDIR += gnupg1
     SUBDIR += gnutls
     SUBDIR += go-cve-dictionary
+    SUBDIR += gokart
     SUBDIR += gonepass
     SUBDIR += gopass
     SUBDIR += gorilla
