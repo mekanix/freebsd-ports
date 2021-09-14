@@ -15,6 +15,7 @@ CONFLICTS_INSTALL=	szs \
 			szs-stg
 
 MASTERDIR=	${.CURDIR}/../szs
+PLIST=		${.CURDIR}/pkg-plist
 
 # Disable checksum verification because this port builds from the tip of a
 # branch.
