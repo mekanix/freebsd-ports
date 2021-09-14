@@ -15,7 +15,7 @@ CONFLICTS_INSTALL?=	dralserver-stg \
 			dralserver-dev
 
 GH_TAGNAME?=	${PORTVERSION}
-GH_TUPLE=	\
+GH_TUPLE?=	\
 		BurntSushi:toml:v0.3.1:burntsushi_toml/vendor/github.com/BurntSushi/toml \
 		beorn7:perks:v1.0.1:beorn7_perks/vendor/github.com/beorn7/perks \
 		cespare:xxhash:v2.1.1:cespare_xxhash_v2/vendor/github.com/cespare/xxhash/v2 \
