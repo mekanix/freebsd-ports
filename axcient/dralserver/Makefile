@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	dralserver
-PORTVERSION?=	1.2.0
+PORTVERSION?=	1.2.1
 PORTREVISION?=	0
 CATEGORIES=	axcient
 
@@ -40,12 +40,13 @@ GH_TUPLE?=	\
 		jinzhu:configor:v1.2.1:jinzhu_configor/vendor/github.com/jinzhu/configor \
 		kr:text:v0.2.0:kr_text/vendor/github.com/kr/text \
 		matttproud:golang_protobuf_extensions:v1.0.1:matttproud_golang_protobuf_extensions/vendor/github.com/matttproud/golang_protobuf_extensions \
+		otiai10:copy:v1.6.0:otiai10_copy/vendor/github.com/otiai10/copy \
 		pmezard:go-difflib:v1.0.0:pmezard_go_difflib/vendor/github.com/pmezard/go-difflib \
 		prometheus:client_golang:v1.10.0:prometheus_client_golang/vendor/github.com/prometheus/client_golang \
 		prometheus:client_model:v0.2.0:prometheus_client_model/vendor/github.com/prometheus/client_model \
 		prometheus:common:v0.20.0:prometheus_common/vendor/github.com/prometheus/common \
 		prometheus:procfs:v0.6.0:prometheus_procfs/vendor/github.com/prometheus/procfs \
-		protocolbuffers:protobuf-go:v1.26.0:protocolbuffers_protobuf_go/vendor/google.golang.org/protobuf \
+		protocolbuffers:protobuf-go:v1.27.1:protocolbuffers_protobuf_go/vendor/google.golang.org/protobuf \
 		satori:go.uuid:v1.2.0:satori_go_uuid/vendor/github.com/satori/go.uuid \
 		stretchr:testify:v1.7.0:stretchr_testify/vendor/github.com/stretchr/testify
 
