@@ -1,6 +1,7 @@
 PORTNAME=	veloren
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.11.0
+PORTREVISION=	1
 CATEGORIES=	games
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -686,11 +687,6 @@ CARGO_GIT_SUBDIR=	authcommon:authc:authc \
 CARGO_ENV+=		RUSTC_BOOTSTRAP=1
 # XXX https://github.com/rust-lang/cargo/issues/4101
 CARGO_INSTALL_PATH=	server-cli voxygen
-
-post-extract:
-# XXX GitLab failed to export some LFS objects
-	@${CP} ${FILESDIR}/open.png ${WRKSRC}/assets/voxygen/element/ui/generic/buttons/bag/
-	@${CP} ${FILESDIR}/press.png ${WRKSRC}/assets/voxygen/element/ui/generic/buttons/checkbox/
 
 post-patch:
 # .git/ directory is missing, so don't abort if git binary is also missing

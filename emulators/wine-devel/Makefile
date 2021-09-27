@@ -1,7 +1,7 @@
 # Created by: Gerald Pfeifer <gerald@FreeBSD.org>
 
 PORTNAME=	wine
-DISTVERSION=	6.16
+DISTVERSION=	6.17
 PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	emulators
@@ -34,9 +34,13 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--verbose \
 		--disable-kerberos \
 		--disable-tests \
-		--without-alsa --without-capi --without-dbus \
+		--without-alsa \
+		--without-capi \
+		--without-dbus \
 		--without-gettext --without-gettextpo \
-		--without-gphoto --without-gsm --without-gstreamer \
+		--without-gphoto \
+		--without-gsm \
+		--without-gstreamer \
 		--without-inotify \
 		--without-jxrlib \
 		--without-krb5 \
@@ -62,16 +66,14 @@ SUB_FILES=	pkg-message
 
 PORTDATA=	wine.inf
 
-OPTIONS_DEFINE=	CUPS DOCS DOSBOX GNUTLS LDAP LIBXSLT MPG123 OPENAL SDL STAGING V4L VKD3D VULKAN WINEMAKER X11 GECKO MONO
-OPTIONS_DEFAULT=GNUTLS X11
+OPTIONS_DEFINE=	CUPS DOCS DOSBOX GNUTLS LDAP LIBXSLT MPG123 OPENAL SDL STAGING V4L WINEMAKER X11 GECKO MONO
+OPTIONS_DEFAULT=GNUTLS OPENAL X11
 OPTIONS_SUB=	yes
 
 DOSBOX_DESC=	Use DOSBox to run MS-DOS programs
 LIBXSLT_DESC=	Use libxslt (only used by msxml3.dll)
 SDL_DESC=	Use SDL for gamepad support (XInput only)
 STAGING_DESC=	Include Wine Staging patchset (experimental&unsupported)
-VKD3D_DESC=	Direct3D 12 support via Vulkan
-VULKAN_DESC=	Vulkan API support
 WINEMAKER_DESC=	Fully support winemaker (requires Perl)
 GECKO_DESC=	Bundle Gecko MSI package for Wine
 MONO_DESC=	Bundle Mono MSI package for Wine
@@ -81,7 +83,7 @@ CUPS_LIB_DEPENDS=	libcups.so:print/cups
 
 DOSBOX_RUN_DEPENDS=	dosbox:emulators/dosbox
 
-GECKO_RUN_DEPENDS=	${DATADIR}/gecko/wine-gecko-2.47.2-x86.msi:emulators/wine-gecko-devel
+GECKO_RUN_DEPENDS=	wine-gecko-devel>0:emulators/wine-gecko-devel
 
 GNUTLS_CONFIGURE_WITH=	gnutls
 GNUTLS_LIB_DEPENDS=	libgnutls.so:security/gnutls
@@ -116,21 +118,17 @@ V4L_CONFIGURE_WITH=	v4l2
 V4L_BUILD_DEPENDS=	${LOCALBASE}/include/linux/videodev2.h:multimedia/v4l_compat
 V4L_LIB_DEPENDS=	libv4l2.so:multimedia/libv4l
 
-VKD3D_CONFIGURE_WITH=	vkd3d
-VKD3D_LIB_DEPENDS=	libvkd3d.so:graphics/vkd3d
-
-VULKAN_CONFIGURE_WITH=	vulkan
-VULKAN_LIB_DEPENDS=	libvulkan.so:graphics/vulkan-loader
-
 WINEMAKER_RUN_DEPENDS=	p5-XML-LibXML>0:textproc/p5-XML-LibXML
 
-X11_CONFIGURE_WITH=	x cms fontconfig freetype jpeg opengl png xinerama xinput2 xrandr xrender
+X11_CONFIGURE_WITH=	x cms fontconfig freetype jpeg opengl png vkd3d xinerama xinput2 xrandr xrender
 X11_USES=		gl jpeg xorg
 X11_USE=		GL=glu XORG=x11,xext,xcomposite,xcursor,xi,xinerama,xrandr,xrender
 X11_LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 			libfreetype.so:print/freetype2 \
 			liblcms2.so:graphics/lcms2 \
-			libpng.so:graphics/png
+			libpng.so:graphics/png \
+			libvulkan.so:graphics/vulkan-loader \
+			libvkd3d.so:graphics/vkd3d
 
 # Include this only if it has not been already included by the
 # i386-wine-devel slave port.
@@ -151,7 +149,7 @@ X11_LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 
 # --libdir is required since Wine defaults to "${PREFIX}/lib64" on amd64.
 CONFIGURE_ARGS+=	--enable-win64 --libdir=${PREFIX}/lib
-PLIST_SUB+=		WINE32="@comment " WINE64="" WINEARCH="amd64"
+PLIST_SUB+=		WINE32="@comment " WINE64="" WINEARCH="x86_64"
 
 # Wine assumes a WoW64 package is available, which is not the case on
 # FreeBSD yet.

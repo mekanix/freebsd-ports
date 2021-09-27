@@ -53,6 +53,7 @@
     SUBDIR += gobby
     SUBDIR += gomate
     SUBDIR += gummi
+    SUBDIR += helix
     SUBDIR += heme
     SUBDIR += hexcurse
     SUBDIR += hexedit
@@ -218,6 +219,7 @@
     SUBDIR += pico-alpine
     SUBDIR += picpas
     SUBDIR += pluma
+    SUBDIR += pluma-plugins   
     SUBDIR += poedit
     SUBDIR += poke
     SUBDIR += psgml

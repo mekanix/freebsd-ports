@@ -1,7 +1,7 @@
 # Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
 
 PORTNAME=	tinycbor
-PORTVERSION=	0.5.3
+PORTVERSION=	0.5.4
 DISTVERSIONPREFIX=	v
 CATEGORIES=	devel
 
@@ -14,13 +14,14 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 LIB_DEPENDS=	libcjson.so:devel/libcjson
 
 USES=		gmake localbase pathfix
-USE_GITHUB=	yes
-GH_ACCOUNT=	intel
 
 INSTALL_TARGET=	install-strip
 MAKE_ARGS=	SOVERSION=${PORTVERSION:R:R}
 
 PLIST_SUB=	PORTVERSION=${PORTVERSION}
+
+GH_ACCOUNT=	intel
+USE_GITHUB=	yes
 
 do-configure:
 	@cd ${WRKSRC}/ && ${SETENV} ${MAKE_ENV} ${MAKE_CMD} configure

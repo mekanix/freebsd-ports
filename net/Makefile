@@ -1381,6 +1381,7 @@
     SUBDIR += rubygem-xmlrpc
     SUBDIR += rude
     SUBDIR += ryu
+    SUBDIR += s5cmd
     SUBDIR += sacc
     SUBDIR += samba412
     SUBDIR += samba413
@@ -1493,6 +1494,7 @@
     SUBDIR += tintin++
     SUBDIR += tiny-network-utilities
     SUBDIR += tinyfugue
+    SUBDIR += tinyfugue-devel
     SUBDIR += tinyldap
     SUBDIR += tn5250
     SUBDIR += toonel

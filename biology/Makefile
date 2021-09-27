@@ -76,7 +76,9 @@
     SUBDIR += lamarc
     SUBDIR += libbigwig
     SUBDIR += libgtextutils
+    SUBDIR += libnuml
     SUBDIR += libsbml
+    SUBDIR += libsedml
     SUBDIR += linux-foldingathome
     SUBDIR += mafft
     SUBDIR += mapm3
@@ -146,6 +148,8 @@
     SUBDIR += py-goatools
     SUBDIR += py-gtfparse
     SUBDIR += py-hits
+    SUBDIR += py-libnuml
+    SUBDIR += py-libsedml
     SUBDIR += py-loompy
     SUBDIR += py-macs2
     SUBDIR += py-multiqc

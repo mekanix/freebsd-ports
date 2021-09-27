@@ -957,6 +957,7 @@
     SUBDIR += rigsofrods-caelum
     SUBDIR += rigsofrods-pagedgeometry
     SUBDIR += ristretto
+    SUBDIR += rlottie
     SUBDIR += ruby-gd
     SUBDIR += rubygem-cairo
     SUBDIR += rubygem-captcha
@@ -1002,6 +1003,7 @@
     SUBDIR += sage
     SUBDIR += sam2p
     SUBDIR += sampleicc
+    SUBDIR += sane-airscan
     SUBDIR += sane-backends
     SUBDIR += sane-epkowa
     SUBDIR += scale2x

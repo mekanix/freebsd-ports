@@ -1,13 +1,8 @@
 PORTNAME=	seatd
-DISTVERSION=	0.6.0
-PORTREVISION=	2
+DISTVERSION=	0.6.2
+PORTREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	https://git.sr.ht/~kennylevinsen/${PORTNAME}/archive/${DISTVERSIONFULL}${EXTRACT_SUFX}?dummy=/
-
-PATCH_SITES=	https://git.sr.ht/~kennylevinsen/${PORTNAME}/commit/
-PATCHFILES+=	d5c1a7811bf7.patch:-p1 # seatd-launch: respect PATH when looking for command
-PATCHFILES+=	483dbf76faf9.patch:-p1 # seatd-launch: Use optind to find the command
-PATCHFILES+=	8c85c46d2db9.patch:-p1 # man/seatd-launch: Make mssage about root clearer
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Minimal seat management daemon and universal library
@@ -18,6 +13,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 USES=		compiler:c11 meson pkgconfig
 USE_LDCONFIG=	yes
 USE_RC_SUBR=	${PORTNAME}
+SUB_FILES=	pkg-message
 PLIST_FILES=	bin/${PORTNAME} \
 		"@(,video,4750) bin/${PORTNAME}-launch" \
 		include/libseat.h \
@@ -27,6 +23,7 @@ PLIST_FILES=	bin/${PORTNAME} \
 
 OPTIONS_DEFINE=	BASU MANPAGES
 OPTIONS_DEFAULT=BASU MANPAGES
+OPTIONS_SUB=	yes
 
 # https://lists.sr.ht/~kennylevinsen/seatd-devel/%3CQHZRRQ.73ZI29COPK131%40unrelenting.technology%3E
 BASU_DESC=		ConsoleKit2 support via basu (experimental)

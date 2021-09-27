@@ -310,6 +310,7 @@
     SUBDIR += libmcrypt
     SUBDIR += libnitrokey
     SUBDIR += libntlm
+    SUBDIR += liboqs
     SUBDIR += libotr
     SUBDIR += libotr3
     SUBDIR += libp11
@@ -922,6 +923,7 @@
     SUBDIR += py-kerberos
     SUBDIR += py-keyring
     SUBDIR += py-keyrings.alt
+    SUBDIR += py-krb5
     SUBDIR += py-libnacl
     SUBDIR += py-m2crypto
     SUBDIR += py-maec
@@ -1087,6 +1089,7 @@
     SUBDIR += rubygem-hkdf
     SUBDIR += rubygem-hkdf0
     SUBDIR += rubygem-hrr_rb_ssh
+    SUBDIR += rubygem-hrr_rb_ssh-ed25519
     SUBDIR += rubygem-lockbox
     SUBDIR += rubygem-metasploit-aggregator
     SUBDIR += rubygem-metasploit-concern
@@ -1172,6 +1175,7 @@
     SUBDIR += rubygem-timfel-krb5
     SUBDIR += rubygem-tpm-key_attestation
     SUBDIR += rubygem-twitter_oauth
+    SUBDIR += rubygem-unix-crypt
     SUBDIR += rubygem-webauthn
     SUBDIR += rubygem-webpush
     SUBDIR += rustscan
