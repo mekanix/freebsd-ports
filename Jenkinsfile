@@ -71,7 +71,7 @@ pipeline {
                     devel/py-simplejson \
                     devel/py-virtualenv \
                     devel/uclcmd \
-                    editors/vim-console \
+                    editors/vim \
                     emulators/qemu-utils \
                     mail/ssmtp \
                     misc/mbuffer \
