@@ -1,10 +1,10 @@
 # $FreeBSD$
 
-PORTVERSION=	1.2.1.rc1
+PORTVERSION=	1.2.2.rc1
 PORTREVISION=	0
 PKGNAMESUFFIX=	-stg
 
-GH_TAGNAME=     1.2.1-rc1
+GH_TAGNAME=     1.2.2-rc1
 
 LIB_DEPENDS=    libszs-op.so:axcient/szs-stg
 USES=		axcient go:modules
