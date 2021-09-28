@@ -1,10 +1,10 @@
 # $FreeBSD$
 
-PORTVERSION=	2.6.0.rc1
+PORTVERSION=	2.6.0.rc2
 PORTREVISION=	0
 PKGNAMESUFFIX=	2-stg
 
-GH_TAGNAME=     v2.6.0-rc1
+GH_TAGNAME=     v2.6.0-rc2
 GH_TUPLE=	\
 		apache:thrift:327ebb6c2b6d:apache_thrift/vendor/git.apache.org/thrift.git \
 		beorn7:perks:v1.0.1:beorn7_perks/vendor/github.com/beorn7/perks \

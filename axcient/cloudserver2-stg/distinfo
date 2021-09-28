@@ -1,6 +1,6 @@
-TIMESTAMP = 1632823776
-SHA256 (Axcient-cloudserver-2.6.0.rc1-v2.6.0-rc1_GH0.tar.gz) = 9a540d9c861518c93f6666439c40bce896fd837aec2abaa25f3901990e6623ea
-SIZE (Axcient-cloudserver-2.6.0.rc1-v2.6.0-rc1_GH0.tar.gz) = 18212856
+TIMESTAMP = 1632863823
+SHA256 (Axcient-cloudserver-2.6.0.rc2-v2.6.0-rc2_GH0.tar.gz) = e396e16fd1496f4910815bcd9a0ee804c53bdc6acde468ea20ccbf38bbc18228
+SIZE (Axcient-cloudserver-2.6.0.rc2-v2.6.0-rc2_GH0.tar.gz) = 18212922
 SHA256 (apache-thrift-327ebb6c2b6d_GH0.tar.gz) = 575fba1a089c1d2d319181da5f76374191a9cf9066434657b4f9943bee9df5b7
 SIZE (apache-thrift-327ebb6c2b6d_GH0.tar.gz) = 2640304
 SHA256 (beorn7-perks-v1.0.1_GH0.tar.gz) = 98db84bb0224a26094e6adba91b7ee7a1a7ace28cb648d818f8e779e6a19f825

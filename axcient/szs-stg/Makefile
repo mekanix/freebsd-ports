@@ -1,11 +1,10 @@
 # $FreeBSD$
 
-PORTVERSION?=	1.12.0.rc1
+PORTVERSION?=	1.12.0.rc2
 PORTREVISION?=	0
 PKGNAMESUFFIX=	-stg
 
-GH_TAGNAME=     1.12.0-rc1
-
+GH_TAGNAME=     1.12.0-rc2
 GH_TUPLE=	\
 		BurntSushi:toml:v0.3.1:burntsushi_toml/vendor/github.com/BurntSushi/toml \
 		RichardKnop:logging:1a693bdd4fae:richardknop_logging/vendor/github.com/RichardKnop/logging \
@@ -87,7 +86,5 @@ CONFLICTS_INSTALL=	szs
 MASTERDIR=	${.CURDIR}/../szs
 DISTINFO_FILE=	${.CURDIR}/distinfo
 PLIST=		${.CURDIR}/pkg-plist
-
-GO_TARGET=	./cmd/api ./cmd/jobs ./cmd/statistics ./cmd/exports ./cmd/safetyarchivecleanup ./cmd/cleanupclones ./cmd/snapshotscleanup
 
 .include "${MASTERDIR}/Makefile"
