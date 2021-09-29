@@ -125,6 +125,7 @@ pipeline {
                     devel/valgrind \
                     java/openjdk8 \
                     misc/compat12x \
+                    net/cloud-init \
                     net/samba413 \
                     ports-mgmt/poudriere \
                     sysutils/fusefs-ntfs \
