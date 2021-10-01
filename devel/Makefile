@@ -614,7 +614,6 @@
     SUBDIR += erlang-cuttlefish
     SUBDIR += erlang-erlware_commons
     SUBDIR += erlang-esdl
-    SUBDIR += erlang-exmpp
     SUBDIR += erlang-folsom
     SUBDIR += erlang-gen_leader
     SUBDIR += erlang-gen_smtp
@@ -631,6 +630,7 @@
     SUBDIR += erlang-lager_syslog
     SUBDIR += erlang-meck
     SUBDIR += erlang-metrics
+    SUBDIR += erlang-native-compiler
     SUBDIR += erlang-neotoma
     SUBDIR += erlang-parse_trans
     SUBDIR += erlang-poolboy
@@ -4587,6 +4587,7 @@
     SUBDIR += py-iniconfig
     SUBDIR += py-inifile
     SUBDIR += py-iniparse
+    SUBDIR += py-installer
     SUBDIR += py-intbitset
     SUBDIR += py-intervals
     SUBDIR += py-intervaltree
@@ -4841,6 +4842,8 @@
     SUBDIR += py-pathtools
     SUBDIR += py-paver
     SUBDIR += py-pbr
+    SUBDIR += py-pdm
+    SUBDIR += py-pdm-pep517
     SUBDIR += py-pebble
     SUBDIR += py-pefile
     SUBDIR += py-pendulum
@@ -5068,6 +5071,7 @@
     SUBDIR += py-python-subunit
     SUBDIR += py-pythonbrew
     SUBDIR += py-pythondialog
+    SUBDIR += py-pythonfinder
     SUBDIR += py-pytimeparse
     SUBDIR += py-pytools
     SUBDIR += py-pytrie
@@ -5080,8 +5084,8 @@
     SUBDIR += py-pyvisa
     SUBDIR += py-pyvisa-py
     SUBDIR += py-pyxb
-    SUBDIR += py-pyyaml-env-tag
     SUBDIR += py-pyyaml-include
+    SUBDIR += py-pyyaml_env_tag
     SUBDIR += py-pyzipper
     SUBDIR += py-q
     SUBDIR += py-qasync
@@ -5456,7 +5460,6 @@
     SUBDIR += pytype
     SUBDIR += qbs
     SUBDIR += qca
-    SUBDIR += qca-legacy
     SUBDIR += qconf
     SUBDIR += qgit
     SUBDIR += qjson
