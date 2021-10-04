@@ -2,7 +2,7 @@
 
 PORTNAME=	cloudserver
 PKGNAMESUFFIX?=  2
-PORTVERSION?=	2.5.0
+PORTVERSION?=	2.6.0
 CATEGORIES=	axcient
 
 MAINTAINER=	nsemchenkov@axcient.com
@@ -24,6 +24,7 @@ GH_TUPLE?=	\
 		cespare:xxhash:v2.1.1:cespare_xxhash_v2/vendor/github.com/cespare/xxhash/v2 \
 		davecgh:go-spew:v1.1.1:davecgh_go_spew/vendor/github.com/davecgh/go-spew \
 		dominikh:go-tools:v0.1.3:dominikh_go_tools/vendor/honnef.co/go/tools \
+		getsentry:sentry-go:v0.11.0:getsentry_sentry_go/vendor/github.com/getsentry/sentry-go \
 		go-check:check:10cb98267c6c:go_check_check/vendor/gopkg.in/check.v1 \
 		go-ini:ini:v1.62.0:go_ini_ini/vendor/gopkg.in/ini.v1 \
 		go-resty:resty:v2.5.0:go_resty_resty_v2/vendor/github.com/go-resty/resty/v2 \
@@ -37,15 +38,13 @@ GH_TUPLE?=	\
 		golang:sync:09787c993a3a:golang_sync/vendor/golang.org/x/sync \
 		golang:sys:68d13333faf2:golang_sys/vendor/golang.org/x/sys \
 		gomodule:redigo:v1.8.4:gomodule_redigo/vendor/github.com/gomodule/redigo \
-		google:go-cmp:v0.5.5:google_go_cmp/vendor/github.com/google/go-cmp \
 		gopherjs:gopherjs:bed99a852dfe:gopherjs_gopherjs/vendor/github.com/gopherjs/gopherjs \
-		hashicorp:go-multierror:v1.0.0:hashicorp_go_multierror/vendor/github.com/hashicorp/go-multierror \
 		kr:text:v0.2.0:kr_text/vendor/github.com/kr/text \
 		matttproud:golang_protobuf_extensions:v1.0.1:matttproud_golang_protobuf_extensions/vendor/github.com/matttproud/golang_protobuf_extensions \
 		pmezard:go-difflib:v1.0.0:pmezard_go_difflib/vendor/github.com/pmezard/go-difflib \
 		prometheus:client_golang:v1.9.0:prometheus_client_golang/vendor/github.com/prometheus/client_golang \
 		prometheus:client_model:v0.2.0:prometheus_client_model/vendor/github.com/prometheus/client_model \
-		prometheus:common:v0.18.0:prometheus_common/vendor/github.com/prometheus/common \
+		prometheus:common:v0.15.0:prometheus_common/vendor/github.com/prometheus/common \
 		prometheus:procfs:v0.6.0:prometheus_procfs/vendor/github.com/prometheus/procfs \
 		protocolbuffers:protobuf-go:v1.25.0:protocolbuffers_protobuf_go/vendor/google.golang.org/protobuf \
 		rs:xid:v1.2.1:rs_xid/vendor/github.com/rs/xid \
