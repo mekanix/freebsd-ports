@@ -66,6 +66,7 @@ pipeline {
                     databases/pgbouncer \
                     databases/py-prometheus-pgbouncer-exporter \
                     databases/redis \
+                    devel/delve \
                     devel/gdb \
                     devel/git \
                     devel/py-simplejson \
