@@ -1,5 +1,5 @@
 PORTNAME=	gstat-rs
-DISTVERSIONPREFIX=	v
+DISTVERSIONPREFIX=	gstat-v
 DISTVERSION=	0.1.2
 CATEGORIES=	sysutils
 
@@ -9,13 +9,12 @@ COMMENT=	Replacement for gstat(8)
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	llvm-config:devel/llvm
+BUILD_DEPENDS=	llvm-config${LLVM_DEFAULT}:devel/llvm${LLVM_DEFAULT}
 
 USES=		cargo
 USE_GITHUB=	yes
 GH_ACCOUNT=	asomers
-GH_PROJECT=	gstat-rs
-GH_TAGNAME=	gstat-${DISTVERSIONFULL}
+SUB_FILES=	pkg-message
 
 CARGO_CRATES=	aho-corasick-0.7.18 \
 		ansi_term-0.11.0 \
@@ -93,21 +92,14 @@ CARGO_CRATES=	aho-corasick-0.7.18 \
 CARGO_INSTALL_PATH=	gstat
 CARGO_CARGOTOML=	${WRKSRC}/gstat/Cargo.toml
 CARGO_TEST_ARGS=	--all
+CARGO_ENV+=	LLVM_CONFIG_PATH=${LOCALBASE}/bin/llvm-config${LLVM_DEFAULT}
 
 PLIST_FILES=	sbin/gstat-rs \
-		man/man8/gstat-rs.8.gz
-
-MSG_FILE=       ${.CURDIR}/pkg-message
-PKGMESSAGE=     ${WRKDIR}/pkg-message
-PKGMESSAGE_SUB= PREFIX="${PREFIX}"
-
-post-patch:
-	@${SED} ${PKGMESSAGE_SUB:S/$/!g/:S/^/ -e s!%%/:S/=/%%!/} \
-                ${MSG_FILE} > ${PKGMESSAGE}
+		share/man/man8/gstat-rs.8.gz
 
 post-install:
-	${MV} ${STAGEDIR}${PREFIX}/bin/gstat ${STAGEDIR}${PREFIX}/sbin/gstat-rs
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/sbin/gstat-rs
-	${INSTALL_MAN} ${WRKSRC}/gstat/doc/gstat.8 ${STAGEDIR}${MAN8PREFIX}/man/man8/gstat-rs.8
+	${INSTALL_PROGRAM} ${STAGEDIR}${PREFIX}/bin/gstat ${STAGEDIR}${PREFIX}/sbin/gstat-rs
+	${RM} ${STAGEDIR}${PREFIX}/bin/gstat
+	${INSTALL_MAN} ${WRKSRC}/gstat/doc/gstat.8 ${STAGEDIR}${MAN8PREFIX}/share/man/man8/gstat-rs.8
 
 .include <bsd.port.mk>
