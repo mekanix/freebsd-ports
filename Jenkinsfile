@@ -56,6 +56,7 @@ pipeline {
                     axcient/spxops-vmagent \
                     axcient/szs \
                     axcient/szs-stg \
+                    axcient/szs-migrator \
                     axcient/vt2 \
                     axcient/vt2-stg \
                     benchmarks/fio \
@@ -69,7 +70,6 @@ pipeline {
                     devel/delve \
                     devel/gdb \
                     devel/git \
-                    devel/py-simplejson \
                     devel/py-virtualenv \
                     devel/uclcmd \
                     editors/vim \
@@ -89,7 +89,6 @@ pipeline {
                     security/gnupg \
                     security/nmap \
                     security/pam_mkhomedir \
-                    security/py-paramiko \
                     security/sudo \
                     shells/bash \
                     shells/ksh93 \
@@ -157,6 +156,7 @@ pipeline {
                 sh 'cd axcient/spxops-vmagent; make fetch'
                 sh 'cd axcient/szs; make fetch'
                 sh 'cd axcient/szs-stg; make fetch'
+                sh 'cd axcient/szs-migrator; make fetch'
                 sh 'cd axcient/vt2; make fetch'
                 sh 'cd axcient/vt2-stg; make fetch'
                 sh 'cd net-mgmt/py-zfs-exporter; make fetch'
