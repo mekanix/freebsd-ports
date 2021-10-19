@@ -17,6 +17,11 @@ etc/rc.d/szs_exports
 etc/rc.d/szs_jobs
 @sample %%EXAMPLESDIR%%/rsyslog.d/szs.conf etc/rsyslog.d/szs.conf
 @sample %%EXAMPLESDIR%%/rsyslog.d/szs_jobs.conf etc/rsyslog.d/szs_jobs.conf
+@sample %%EXAMPLESDIR%%/rsyslog.d/cleanup_clones.conf etc/rsyslog.d/cleanup_clones.conf
+@sample %%EXAMPLESDIR%%/rsyslog.d/safety_archive_cleanup.conf etc/rsyslog.d/safety_archive_cleanup.conf
+@sample %%EXAMPLESDIR%%/rsyslog.d/snapshots_cleanup.conf etc/rsyslog.d/snapshots_cleanup.conf
+@sample %%EXAMPLESDIR%%/rsyslog.d/statistics.conf etc/rsyslog.d/statistics.conf
+@sample %%EXAMPLESDIR%%/rsyslog.d/szs_exports.conf etc/rsyslog.d/szs_exports.conf
 @sample %%ETCDIR%%/config.yml.sample
 include/szs-op.h
 lib/libszs-op.so
