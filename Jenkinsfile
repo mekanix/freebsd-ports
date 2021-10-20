@@ -72,8 +72,10 @@ pipeline {
                     devel/git \
                     devel/py-virtualenv \
                     devel/uclcmd \
+                    editors/nano \
                     editors/vim \
                     emulators/qemu-utils \
+                    lang/expect \
                     mail/ssmtp \
                     misc/mbuffer \
                     net-mgmt/grok_exporter \
