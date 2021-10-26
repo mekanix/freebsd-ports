@@ -1,0 +1,59 @@
+#! /bin/sh
+
+# Audit SZS file systems for orphaned datasets
+#
+# Add the following lines to /etc/periodic.conf:
+#
+# weekly_szs_audit_enable (bool):	Set to "NO" by default
+
+# If there is a global system configuration file, suck it in.
+#
+if [ -r /etc/defaults/periodic.conf ]
+then
+    . /etc/defaults/periodic.conf
+    source_periodic_confs
+fi
+
+rc=0
+orphaned_data=0
+
+case "$weekly_szs_audit_enable" in
+    [Yy][Ee][Ss])
+	echo
+	echo "Check for orphaned SZS datasets"
+
+	for pool in `/sbin/zpool list -Hpo name`; do
+		for ds in `/sbin/zfs list -Hpo name -d1 ${pool}/SZS`; do
+			if [ "$ds" = "$pool/SZS" ]; then
+				continue
+			fi
+			if [ "$ds" = "$pool/SZS/safetyarchive" ]; then
+				continue
+			fi
+			if echo $ds | egrep -q '_clone'; then
+				# Skip clones.  They cannot possibly be orphans unless
+				# their parents also are.
+				continue
+			fi
+			orm=`echo $ds | awk -F "/" '{print $NF}'`
+			owner=`%%LOCALBASE%%/bin/szs-dataset-info -c -r -o $orm 2>/dev/null | sed -E -e 's/.*: //'`
+			if [ $? -ne 0 -o -z "$owner" ]; then
+				echo "Unknown dataset $ds"
+				orphaned_data=$(( $orphaned_data + `/sbin/zfs list -Hpo used $ds`))
+				rc=3
+			elif [ "$pool" != "$owner" ]; then
+				orphaned_data=$(( $orphaned_data + `/sbin/zfs list -Hpo used $ds`))
+				echo "Misplaced dataset $ds.  Should be on $owner"
+				rc=3
+			fi
+		done
+	done
+
+	if [ $orphaned_data -gt 0 ]; then
+		echo "Total orphaned data: $orphaned_data bytes"
+	fi
+	;;
+    *) rc=0;;
+esac
+
+exit $rc

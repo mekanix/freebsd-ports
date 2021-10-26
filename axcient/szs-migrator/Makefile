@@ -1,5 +1,5 @@
 PORTNAME=	szs-migrator
-PORTVERSION=	0.1.0
+PORTVERSION=	0.1.0.20211025
 CATEGORIES=	axcient
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -17,13 +17,20 @@ TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest>=0:devel/py-pytest@${PY_FLAVOR}
 USES=		axcient python
 USE_PYTHON=	autoplist distutils
 WRKSRC_SUBDIR=	szs/maintenance-tool
+SUB_FILES=	900.szs-audit
 
 NO_ARCH=	yes
 
 GH_PROJECT=	replibit-tools
-GH_TAGNAME=	szs-migrator-0.1.0
+GH_TAGNAME=	b20cd122f783ab6fb1607ce72b399a0e4b49ffd3
+
+PLIST_FILES+=	etc/periodic/weekly/900.szs-audit
 
 do-test:
 	cd ${WRKSRC} && pytest
+
+post-install:
+	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/periodic/weekly
+	${INSTALL_SCRIPT} ${WRKDIR}/900.szs-audit ${STAGEDIR}${PREFIX}/etc/periodic/weekly
 
 .include <bsd.port.mk>
