@@ -1,10 +1,10 @@
 # $FreeBSD$
 
-PORTVERSION?=	1.12.0.rc2
+PORTVERSION?=	1.13.0.rc1
 PORTREVISION?=	0
 PKGNAMESUFFIX=	-stg
 
-GH_TAGNAME=     1.12.0-rc2
+GH_TAGNAME=     1.13.0-rc1
 GH_TUPLE=	\
 		BurntSushi:toml:v0.3.1:burntsushi_toml/vendor/github.com/BurntSushi/toml \
 		RichardKnop:logging:1a693bdd4fae:richardknop_logging/vendor/github.com/RichardKnop/logging \
@@ -53,6 +53,7 @@ GH_TUPLE=	\
 		googleapis:google-api-go-client:v0.19.0:googleapis_google_api_go_client/vendor/google.golang.org/api \
 		googleapis:google-cloud-go:pubsub/v1.2.0:googleapis_google_cloud_go_pubsub \
 		googleapis:google-cloud-go:v0.53.0:googleapis_google_cloud_go/vendor/cloud.google.com/go \
+		gotestyourself:gotestsum:v1.7.0:gotestyourself_gotestsum/vendor/gotest.tools/gotestsum \
 		grpc:grpc-go:v1.27.1:grpc_grpc_go/vendor/google.golang.org/grpc \
 		jmespath:go-jmespath:c2b33e8439af:jmespath_go_jmespath/vendor/github.com/jmespath/go-jmespath \
 		json-iterator:go:v1.1.10:json_iterator_go/vendor/github.com/json-iterator/go \
