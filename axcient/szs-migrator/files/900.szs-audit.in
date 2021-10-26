@@ -19,6 +19,8 @@ orphaned_data=0
 
 case "$weekly_szs_audit_enable" in
     [Yy][Ee][Ss])
+	anticongestion
+
 	echo
 	echo "Check for orphaned SZS datasets"
 
@@ -30,9 +32,9 @@ case "$weekly_szs_audit_enable" in
 			if [ "$ds" = "$pool/SZS/safetyarchive" ]; then
 				continue
 			fi
-			if echo $ds | egrep -q '_clone'; then
-				# Skip clones.  They cannot possibly be orphans unless
-				# their parents also are.
+			if echo $ds | egrep -q 'clone'; then
+				# Skip clones.  They cannot possibly be orphans
+				# unless their parents also are.
 				continue
 			fi
 			orm=`echo $ds | awk -F "/" '{print $NF}'`
