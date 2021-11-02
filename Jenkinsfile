@@ -171,7 +171,7 @@ pipeline {
                 sh 'sudo poudriere bulk -j 13_0-AXCIENT1_amd64 -p "${PNAME}" \
                     ${PORTSALL} ${PORTS13} '
                 sh 'sudo poudriere bulk -j 13_0-AXCIENT3_amd64 -p "${PNAME}" \
-                    ${PORTSALL} ${PORTSMINOR} '
+                    ${PORTSMINOR} '
             }
         }
         stage('Build dev package') {
