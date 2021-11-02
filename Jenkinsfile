@@ -133,6 +133,9 @@ pipeline {
                     sysutils/fusefs-ntfs \
                     www/nginx \
                     '
+                // Ports that need to be rebuilt for every minor version of the
+                // OS, not just major versions.
+                PORTSMINOR = 'devel/py-libzfs'
             }
             steps {
                 echo "Building prod packages"
@@ -167,6 +170,8 @@ pipeline {
                     ${PORTSALL} '
                 sh 'sudo poudriere bulk -j 13_0-AXCIENT1_amd64 -p "${PNAME}" \
                     ${PORTSALL} ${PORTS13} '
+                sh 'sudo poudriere bulk -j 13_0-AXCIENT3_amd64 -p "${PNAME}" \
+                    ${PORTSALL} ${PORTSMINOR} '
             }
         }
         stage('Build dev package') {
