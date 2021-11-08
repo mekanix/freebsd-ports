@@ -18,14 +18,13 @@ USES=		cmake desktop-file-utils gettext-runtime gl gnome pkgconfig sdl
 USE_GL=		gl
 USE_SDL=	image2 mixer2 sdl2 ttf2
 
-LICENSE_FILE_GPLv2+=	${WRKSRC}/COPYING
+LICENSE_FILE_GPLv2+ =	${WRKSRC}/COPYING
 LICENSE_FILE_ETHYMONICS=	${WRKSRC}/share/music/README
 LICENSE_NAME_ETHYMONICS=	Ethymonics Free Music License
 LICENSE_PERMS_ETHYMONICS=	dist-mirror dist-sell pkg-mirror pkg-sell \
 							auto-accept
 
 USE_GITHUB=	yes
-
 
 CMAKE_ARGS+=	-DTRACKBALLS_DOC_DIR=${DOCSDIR} \
 		-DTRACKBALLS_MAN_DIR=${PREFIX}/man

@@ -1,4 +1,5 @@
-PORTREVISION=	0
+
+PORTREVISION=	2
 
 .include "${.CURDIR}/Makefile.common"
 
@@ -121,7 +122,6 @@ OPTIONS_DEFINE=	COINMP CUPS DOCS GNOME GTK3 GTK4 JAVA KF5 LTO MMEDIA PGSQL MARIA
 OPTIONS_DEFAULT=	CUPS JAVA MMEDIA QT5
 
 COINMP_DESC=	Enable CoinMP (deprecated) math solver
-GTK3_DESC=	GTK+ 3 GUI toolkit support
 GTK4_DESC=	GTK+ 4 GUI toolkit support
 JAVA_DESC=	Add Java support (XML filters, macros, DB connections)
 KF5_DESC=	KF5/Qt5 GUI toolkit support (implies QT5)
@@ -173,7 +173,7 @@ JAVA_CONFIGURE_ON=	--with-ant-home=${LOCALBASE}/share/java/apache-ant \
 			--without-system-jfreereport
 JAVA_CONFIGURE_WITH=	java
 # XXX jni.h from GNU classpath causes ABI conflicts.
-JAVA_CONFLICTS_BUILD=	classpath-[0-9]*
+JAVA_CONFLICTS_BUILD=	classpath
 JAVA_DISTFILES=	17410483b5b5f267aa18b7e00b65e6e0-hsqldb_1_8_0.zip:src \
 		3404ab6b1792ae5f16bbd603bd1e1d03-libformula-1.1.7.zip:src \
 		35c94d2df8893241173de1d16b6034c0-swingExSrc.zip:src \
@@ -322,7 +322,6 @@ post-patch:
 
 pre-configure:
 	@${TOUCH} ${WRKSRC}/autogen.lastrun
-	${CP} ${FILESDIR}/skia-freetype2.11.patch ${WRKSRC}/external/skia
 
 post-configure:
 	@${TOUCH} ${WRKSRC}/src.downloaded

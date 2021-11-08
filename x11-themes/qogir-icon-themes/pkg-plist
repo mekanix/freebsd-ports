@@ -8208,7 +8208,6 @@ share/icons/Qogir-dark/cursors/x-cursor
 share/icons/Qogir-dark/cursors/xterm
 share/icons/Qogir-dark/cursors/zoom-in
 share/icons/Qogir-dark/cursors/zoom-out
-share/icons/Qogir-dark/icon-theme.cache
 share/icons/Qogir-dark/index.theme
 share/icons/Qogir-dark/scalable
 share/icons/Qogir-dark/scalable@2x
@@ -16423,7 +16422,6 @@ share/icons/Qogir-manjaro-dark/cursors/x-cursor
 share/icons/Qogir-manjaro-dark/cursors/xterm
 share/icons/Qogir-manjaro-dark/cursors/zoom-in
 share/icons/Qogir-manjaro-dark/cursors/zoom-out
-share/icons/Qogir-manjaro-dark/icon-theme.cache
 share/icons/Qogir-manjaro-dark/index.theme
 share/icons/Qogir-manjaro-dark/scalable
 share/icons/Qogir-manjaro-dark/scalable@2x
@@ -32758,7 +32756,6 @@ share/icons/Qogir-manjaro/cursors/x-cursor
 share/icons/Qogir-manjaro/cursors/xterm
 share/icons/Qogir-manjaro/cursors/zoom-in
 share/icons/Qogir-manjaro/cursors/zoom-out
-share/icons/Qogir-manjaro/icon-theme.cache
 share/icons/Qogir-manjaro/index.theme
 share/icons/Qogir-manjaro/scalable/apps/10B4_steam.0.svg
 share/icons/Qogir-manjaro/scalable/apps/1CD8_rundll32.0.svg
@@ -32801,7 +32798,7 @@ share/icons/Qogir-manjaro/scalable/apps/Anydesk.svg
 share/icons/Qogir-manjaro/scalable/apps/AppImage.svg
 share/icons/Qogir-manjaro/scalable/apps/AppImageLauncher.svg
 share/icons/Qogir-manjaro/scalable/apps/Appstore.svg
-share/icons/Qogir-manjaro/scalable/apps/Ardour-Ardour_%%GTK4_VERSION%%.svg
+share/icons/Qogir-manjaro/scalable/apps/Ardour-Ardour_4.0.0.svg
 share/icons/Qogir-manjaro/scalable/apps/Ardour-Ardour_5.12.0.svg
 share/icons/Qogir-manjaro/scalable/apps/Ardour-Ardour_6.0.0.svg
 share/icons/Qogir-manjaro/scalable/apps/Ardour-icon_256px.svg
@@ -48257,7 +48254,6 @@ share/icons/Qogir-ubuntu-dark/cursors/x-cursor
 share/icons/Qogir-ubuntu-dark/cursors/xterm
 share/icons/Qogir-ubuntu-dark/cursors/zoom-in
 share/icons/Qogir-ubuntu-dark/cursors/zoom-out
-share/icons/Qogir-ubuntu-dark/icon-theme.cache
 share/icons/Qogir-ubuntu-dark/index.theme
 share/icons/Qogir-ubuntu-dark/scalable
 share/icons/Qogir-ubuntu-dark/scalable@2x
@@ -64592,7 +64588,6 @@ share/icons/Qogir-ubuntu/cursors/x-cursor
 share/icons/Qogir-ubuntu/cursors/xterm
 share/icons/Qogir-ubuntu/cursors/zoom-in
 share/icons/Qogir-ubuntu/cursors/zoom-out
-share/icons/Qogir-ubuntu/icon-theme.cache
 share/icons/Qogir-ubuntu/index.theme
 share/icons/Qogir-ubuntu/scalable/apps/10B4_steam.0.svg
 share/icons/Qogir-ubuntu/scalable/apps/1CD8_rundll32.0.svg
@@ -64635,7 +64630,7 @@ share/icons/Qogir-ubuntu/scalable/apps/Anydesk.svg
 share/icons/Qogir-ubuntu/scalable/apps/AppImage.svg
 share/icons/Qogir-ubuntu/scalable/apps/AppImageLauncher.svg
 share/icons/Qogir-ubuntu/scalable/apps/Appstore.svg
-share/icons/Qogir-ubuntu/scalable/apps/Ardour-Ardour_%%GTK4_VERSION%%.svg
+share/icons/Qogir-ubuntu/scalable/apps/Ardour-Ardour_4.0.0.svg
 share/icons/Qogir-ubuntu/scalable/apps/Ardour-Ardour_5.12.0.svg
 share/icons/Qogir-ubuntu/scalable/apps/Ardour-Ardour_6.0.0.svg
 share/icons/Qogir-ubuntu/scalable/apps/Ardour-icon_256px.svg
@@ -88211,7 +88206,6 @@ share/icons/Qogir/cursors/x-cursor
 share/icons/Qogir/cursors/xterm
 share/icons/Qogir/cursors/zoom-in
 share/icons/Qogir/cursors/zoom-out
-share/icons/Qogir/icon-theme.cache
 share/icons/Qogir/index.theme
 share/icons/Qogir/scalable/apps/10B4_steam.0.svg
 share/icons/Qogir/scalable/apps/1CD8_rundll32.0.svg
@@ -88254,7 +88248,7 @@ share/icons/Qogir/scalable/apps/Anydesk.svg
 share/icons/Qogir/scalable/apps/AppImage.svg
 share/icons/Qogir/scalable/apps/AppImageLauncher.svg
 share/icons/Qogir/scalable/apps/Appstore.svg
-share/icons/Qogir/scalable/apps/Ardour-Ardour_%%GTK4_VERSION%%.svg
+share/icons/Qogir/scalable/apps/Ardour-Ardour_4.0.0.svg
 share/icons/Qogir/scalable/apps/Ardour-Ardour_5.12.0.svg
 share/icons/Qogir/scalable/apps/Ardour-Ardour_6.0.0.svg
 share/icons/Qogir/scalable/apps/Ardour-icon_256px.svg

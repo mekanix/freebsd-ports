@@ -1,5 +1,6 @@
 PORTNAME=	tracker
 PORTVERSION=	3.1.2
+PORTREVISION=	1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 PKGNAMESUFFIX=	3
@@ -27,7 +28,6 @@ MESON_ARGS=	-Dbash_completion=true \
 		-Dbash_completion_dir=${PREFIX}/etc/bash_completion.d \
 		-Ddocs=false \
 		-Dman=true \
-		-Dnetwork_manager=disabled \
 		-Dstemmer=disabled \
 		-Dsystemd_user_services=false
 
