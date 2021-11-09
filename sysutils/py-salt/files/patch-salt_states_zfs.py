@@ -1,6 +1,6 @@
---- salt/states/zfs.py.orig	2021-04-29 17:20:39 UTC
+--- salt/states/zfs.py.orig	2021-10-12 15:43:35 UTC
 +++ salt/states/zfs.py
-@@ -346,10 +346,10 @@ def hold_present(name, snapshot, recursive=False):
+@@ -361,10 +361,10 @@ def hold_present(name, snapshot, recursive=False):
  def _dataset_present(
      dataset_type,
      name,
@@ -12,7 +12,7 @@
      cloned_from=None,
  ):
      """
-@@ -393,12 +393,14 @@ def _dataset_present(
+@@ -408,12 +408,14 @@ def _dataset_present(
          dataset_type = "filesystem"
  
      ## ensure properties are zfs values
@@ -31,7 +31,7 @@
  
      ## log configuration
      log.debug(
-@@ -431,10 +433,14 @@ def _dataset_present(
+@@ -446,20 +448,21 @@ def _dataset_present(
  
      ## ensure dataset is in correct state
      ## NOTE: update the dataset
@@ -47,8 +47,8 @@
              type=dataset_type,
              fields="value",
              depth=0,
-@@ -442,10 +448,6 @@ def _dataset_present(
-             source="default,inherited,local,none,received",
+             parsable=True,
++            source="default,inherited,local,none,received",
          ).get(name, OrderedDict())
  
 -        ## NOTE: add volsize to properties
@@ -58,7 +58,7 @@
          ## NOTE: build list of properties to update
          properties_update = []
          for prop in properties:
-@@ -489,7 +491,7 @@ def _dataset_present(
+@@ -503,7 +506,7 @@ def _dataset_present(
              ret["comment"] = "{} {} failed to be updated".format(dataset_type, name)
  
      ## NOTE: create or clone the dataset
@@ -67,7 +67,7 @@
          mod_res_action = "cloned" if cloned_from else "created"
          if __opts__["test"]:
              ## NOTE: pretend to create/clone
-@@ -559,8 +561,8 @@ def filesystem_present(name, create_parent=False, prop
+@@ -579,8 +582,8 @@ def filesystem_present(name, create_parent=False, prop
      return _dataset_present(
          "filesystem",
          name,
@@ -77,7 +77,7 @@
          cloned_from=cloned_from,
      )
  
-@@ -608,10 +610,10 @@ def volume_present(
+@@ -628,10 +631,10 @@ def volume_present(
      return _dataset_present(
          "volume",
          name,
