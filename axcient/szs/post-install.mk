@@ -28,4 +28,9 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/freebsd-pkg/usr/local/etc/rc.d/szs_jobs ${STAGEDIR}${PREFIX}/etc/rc.d
 	${INSTALL_DATA} ${WRKSRC}/freebsd-pkg/usr/local/etc/rsyslog.d/szs.conf ${STAGEDIR}${EXAMPLESDIR}/rsyslog.d/
 	${INSTALL_DATA} ${WRKSRC}/freebsd-pkg/usr/local/etc/rsyslog.d/szs_jobs.conf ${STAGEDIR}${EXAMPLESDIR}/rsyslog.d/
+	${INSTALL_DATA} ${WRKSRC}/freebsd-pkg/usr/local/etc/rsyslog.d/cleanup_clones.conf ${STAGEDIR}${EXAMPLESDIR}/rsyslog.d/
+	${INSTALL_DATA} ${WRKSRC}/freebsd-pkg/usr/local/etc/rsyslog.d/safety_archive_cleanup.conf ${STAGEDIR}${EXAMPLESDIR}/rsyslog.d/
+	${INSTALL_DATA} ${WRKSRC}/freebsd-pkg/usr/local/etc/rsyslog.d/snapshots_cleanup.conf ${STAGEDIR}${EXAMPLESDIR}/rsyslog.d/
+	${INSTALL_DATA} ${WRKSRC}/freebsd-pkg/usr/local/etc/rsyslog.d/statistics.conf ${STAGEDIR}${EXAMPLESDIR}/rsyslog.d/
+	${INSTALL_DATA} ${WRKSRC}/freebsd-pkg/usr/local/etc/rsyslog.d/szs_exports.conf ${STAGEDIR}${EXAMPLESDIR}/rsyslog.d/
 	${INSTALL_DATA} ${WRKSRC}/freebsd-pkg/usr/local/etc/szs/config.yml.example ${STAGEDIR}${PREFIX}/etc/szs/config.yml.sample
