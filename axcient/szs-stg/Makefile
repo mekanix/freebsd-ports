@@ -1,10 +1,10 @@
 # $FreeBSD$
 
-PORTVERSION?=	1.13.1.rc1
+PORTVERSION?=	1.13.2
 PORTREVISION?=	0
 PKGNAMESUFFIX=	-stg
 
-GH_TAGNAME=     1.13.1-rc1
+GH_TAGNAME=     1.13.2
 GH_TUPLE=	\
 		BurntSushi:toml:v0.3.1:burntsushi_toml/vendor/github.com/BurntSushi/toml \
 		RichardKnop:logging:1a693bdd4fae:richardknop_logging/vendor/github.com/RichardKnop/logging \
