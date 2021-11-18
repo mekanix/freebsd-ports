@@ -18,6 +18,7 @@
     SUBDIR += dralserver-dev
     SUBDIR += dralserver-stg
     SUBDIR += efsserver
+    SUBDIR += efs-vm-utils
     SUBDIR += py-drive-exporter
     SUBDIR += smart-recovery
     SUBDIR += smart-recovery-dev

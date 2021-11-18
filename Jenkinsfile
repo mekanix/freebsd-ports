@@ -49,6 +49,7 @@ pipeline {
                     axcient/dralserver \
                     axcient/dralserver-stg \
                     axcient/efsserver \
+                    axcient/efs-vm-utils \
                     axcient/filestore-clone \
                     axcient/py-drive-exporter \
                     axcient/smart-recovery \
@@ -144,6 +145,7 @@ pipeline {
                 // because it lacks Jenkins' ssh key.
                 sh 'cd axcient/axcient-utils; make fetch'
                 sh 'cd axcient/efsserver; make fetch'
+                sh 'cd axcient/efs-vm-utils; make fetch'
                 sh 'cd axcient/add_mbr; make fetch'
                 sh 'cd axcient/add_mbr-stg; make fetch'
                 sh 'cd axcient/cloudserver; make fetch'
