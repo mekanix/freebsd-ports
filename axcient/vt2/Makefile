@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	vt2
-PORTVERSION?=	1.1.5
+PORTVERSION?=	1.1.6
 PORTREVISION?=	0
 CATEGORIES=	axcient
 MASTER_SITES=	GH
@@ -27,7 +27,7 @@ RUN_DEPENDS+=	ca_root_nss>0:security/ca_root_nss
 
 USES=		axcient gmake
 GH_PROJECT=	vaulttransfer2
-GH_TAGNAME?=     1.1.5
+GH_TAGNAME?=     1.1.6
 
 CONFLICTS_INSTALL?=	vt2-stg
 
