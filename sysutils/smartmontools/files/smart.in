@@ -66,6 +66,12 @@ case "${daily_status_smart_enable}" in
 					echo "OK"
 				elif [ ${status} -eq 32 ]; then
 					echo "OK (but has failed in the past)"
+				elif [ ${status} -eq 1 ] && grep -q "Unknown USB bridge" ${tmpfile}; then
+					# XXX AXCIENT:
+					# This must be a thumb drive.  We use
+					# USB storage for nothing else.
+					# Suppress the warning
+					echo "N/A"
 				elif [ $((status & 3)) -ne 0 ]; then
 					rc=2
 					${trim_junk} "${tmpfile}"
