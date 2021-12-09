@@ -1,10 +1,10 @@
 # $FreeBSD$
 
-PORTVERSION?=	1.13.2
+PORTVERSION?=	1.14.0.rc1
 PORTREVISION?=	0
 PKGNAMESUFFIX=	-stg
 
-GH_TAGNAME=     1.13.2
+GH_TAGNAME=     1.14.0-rc1
 GH_TUPLE=	\
 		BurntSushi:toml:v0.3.1:burntsushi_toml/vendor/github.com/BurntSushi/toml \
 		RichardKnop:logging:1a693bdd4fae:richardknop_logging/vendor/github.com/RichardKnop/logging \
@@ -34,7 +34,7 @@ GH_TUPLE=	\
 		golang:exp:fcea875c7e85:golang_exp/vendor/golang.org/x/exp \
 		golang:groupcache:8c9f03a8e57e:golang_groupcache/vendor/github.com/golang/groupcache \
 		golang:lint:738671d3881b:golang_lint/vendor/golang.org/x/lint \
-		golang:mock:v1.4.3:golang_mock/vendor/github.com/golang/mock \
+		golang:mock:v1.5.0:golang_mock/vendor/github.com/golang/mock \
 		golang:mod:v0.3.0:golang_mod/vendor/golang.org/x/mod \
 		golang:net:f5854403a974:golang_net/vendor/golang.org/x/net \
 		golang:oauth2:bf48bf16ab8d:golang_oauth2/vendor/golang.org/x/oauth2 \
@@ -63,6 +63,7 @@ GH_TUPLE=	\
 		leodido:go-urn:v1.2.0:leodido_go_urn/vendor/github.com/leodido/go-urn \
 		mattn:go-isatty:v0.0.12:mattn_go_isatty/vendor/github.com/mattn/go-isatty \
 		matttproud:golang_protobuf_extensions:v1.0.1:matttproud_golang_protobuf_extensions/vendor/github.com/matttproud/golang_protobuf_extensions \
+		mitchellh:mapstructure:v1.4.2:mitchellh_mapstructure/vendor/github.com/mitchellh/mapstructure \
 		modern-go:concurrent:bacd9c7ef1dd:modern_go_concurrent/vendor/github.com/modern-go/concurrent \
 		modern-go:reflect2:v1.0.1:modern_go_reflect2/vendor/github.com/modern-go/reflect2 \
 		mongodb:mongo-go-driver:v1.3.0:mongodb_mongo_go_driver/vendor/go.mongodb.org/mongo-driver \
