@@ -11,6 +11,7 @@
     SUBDIR += bcftools
     SUBDIR += bedtools
     SUBDIR += bfc
+    SUBDIR += bio-mocha
     SUBDIR += bioawk
     SUBDIR += biococoa
     SUBDIR += biolibc
@@ -57,6 +58,7 @@
     SUBDIR += gemma
     SUBDIR += generand
     SUBDIR += gff2ps
+    SUBDIR += gffread
     SUBDIR += gmap
     SUBDIR += gperiodic
     SUBDIR += graphlan
@@ -76,6 +78,7 @@
     SUBDIR += kallisto
     SUBDIR += lamarc
     SUBDIR += libbigwig
+    SUBDIR += libgff
     SUBDIR += libgtextutils
     SUBDIR += libneurosim
     SUBDIR += libnuml

@@ -1,3 +1,1138 @@
+  <vuln vid="93a1c9a7-5bef-11ec-a47a-001517a2e1a4">
+    <topic>openhab -- log4j remote code injection</topic>
+    <affects>
+      <package>
+        <name>openhab2</name>
+	<name>openhab</name>
+        <range><le>2.5.12</le></range>
+	<range><lt>3.1.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Openhab reports:</p>
+	<blockquote cite="https://github.com/openhab/openhab-distro/security/advisories/GHSA-j99j-qp89-pcfq">
+	  <p>Any openHAB instance that is publicly available or which consumes untrusted content from remote servers is potentially a target of this attack.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-44228</cvename>
+      <url>https://github.com/openhab/openhab-distro/security/advisories/GHSA-j99j-qp89-pcfq</url>
+      <url>https://github.com/ops4j/org.ops4j.pax.logging/security/advisories/GHSA-xxfh-x98p-j8fr</url>
+      <url>https://github.com/advisories/GHSA-jfh8-c2jp-5v3q</url>
+    </references>
+    <dates>
+      <discovery>2021-12-10</discovery>
+      <entry>2021-12-13</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="66cf7c43-5be3-11ec-a587-001b217b3468">
+    <topic>Solr -- Apache Log4J</topic>
+    <affects>
+      <package>
+	<name>apache-solr</name>
+	<range><lt>8.11.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Solr reports:</p>
+	<blockquote cite="https://solr.apache.org/security.html">
+	  <p>Apache Solr affected by Apache Log4J</p>
+        </blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://solr.apache.org/security.html</url>
+    </references>
+    <dates>
+      <discovery>2021-12-10</discovery>
+      <entry>2021-12-13</entry>
+      <modified>2021-12-13</modified>
+    </dates>
+  </vuln>
+
+  <vuln vid="4b1ac5a3-5bd4-11ec-8602-589cfc007716">
+    <topic>OpenSearch -- Log4Shell</topic>
+    <affects>
+      <package>
+	<name>opensearch</name>
+	<range><lt>1.2.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>OpenSearch reports:</p>
+	<blockquote cite="https://opensearch.org/blog/releases/2021/12/update-to-1-2-1/">
+	  <p>A <a href="https://www.lunasec.io/docs/blog/log4j-zero-day/">recently published</a> security issue (<a href="https://nvd.nist.gov/vuln/detail/CVE-2021-44228">CVE-2021-44228</a>) affects several versions of the broadly-used <a href="https://logging.apache.org/log4j/2.x/">Apache Log4j</a> library. Some software in the OpenSearch project includes versions of Log4j referenced in this CVE. While, at time of writing, the team has not found a reproduceable example in OpenSearch of remote code execution (RCE) described in this issue, its severity is such that all users should take mitigation measures. As recommended by the advisory, the team has released OpenSearch 1.2.1, which updates Log4j to version 2.15.0. For those who cannot upgrade to 1.2.1, the <a href="https://logging.apache.org/log4j/2.x/">Log4j website outlines additional measures to mitigate the issue</a>. This patch release also addresses <a href="https://alas.aws.amazon.com/AL2/ALAS-2021-1722.html">CVE-2021-4352</a> in the OpenSearch Docker distributions..</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-44228</cvename>
+      <url>https://opensearch.org/blog/releases/2021/12/update-to-1-2-1/</url>
+    </references>
+    <dates>
+      <discovery>2021-12-11</discovery>
+      <entry>2021-12-13</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="e33880ed-5802-11ec-8398-6c3be5272acd">
+    <topic>Grafana -- Path Traversal</topic>
+    <affects>
+      <package>
+	<name>grafana8</name>
+	<name>grafana</name>
+	<range><ge>8.0.0</ge><lt>8.0.7</lt></range>
+	<range><ge>8.1.0</ge><lt>8.1.8</lt></range>
+	<range><ge>8.2.0</ge><lt>8.2.7</lt></range>
+	<range><ge>8.3.0</ge><lt>8.3.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Grafana Labs reports:</p>
+	<blockquote cite="https://grafana.com/blog/2021/12/07/grafana-8.3.1-8.2.7-8.1.8-and-8.0.7-released-with-high-severity-security-fix/">
+	  <p>Grafana is vulnerable to directory traversal, allowing access to local files. We have confirmed this for versions v8.0.0-beta1 to v8.3.0. Thanks to our defense-in-depth approach, at no time has <a href="https://grafana.com/cloud/?pg=blog">Grafana Cloud</a> been vulnerable.</p>
+	  <p><strong>The vulnerable URL path is:</strong> &lt;grafana_host_url&gt;<em>/public/plugins/&lt;“plugin-id”&gt;</em> where <em>&lt;“plugin-id”&gt;</em> is the plugin ID for any installed plugin.</p>
+	  <p>Every Grafana instance comes with pre-installed plugins like the Prometheus plugin or MySQL plugin so the following URLs are vulnerable for every instance:</p>
+	  <ul>
+	    <li>&lt;grafana_host_url&gt;/public/plugins/alertlist/</li>
+	    <li>&lt;grafana_host_url&gt;/public/plugins/annolist/</li>
+	    <li>&lt;grafana_host_url&gt;/public/plugins/barchart/</li>
+	    <li>&lt;grafana_host_url&gt;/public/plugins/bargauge/</li>
+	    <li>&lt;grafana_host_url&gt;/public/plugins/candlestick/</li>
+	    <li>&lt;grafana_host_url&gt;/public/plugins/cloudwatch/</li>
+	    <li>&lt;grafana_host_url&gt;/public/plugins/dashlist/</li>
+	    <li>&lt;grafana_host_url&gt;/public/plugins/elasticsearch/</li>
+	    <li>&lt;grafana_host_url&gt;/public/plugins/gauge/</li>
+	    <li>&lt;grafana_host_url&gt;/public/plugins/geomap/</li>
+	    <li>&lt;grafana_host_url&gt;/public/plugins/gettingstarted/</li>
+	    <li>&lt;grafana_host_url&gt;/public/plugins/grafana-azure-monitor-datasource/</li>
+	    <li>&lt;grafana_host_url&gt;/public/plugins/graph/</li>
+	    <li>&lt;grafana_host_url&gt;/public/plugins/heatmap/</li>
+	    <li>&lt;grafana_host_url&gt;/public/plugins/histogram/</li>
+	    <li>&lt;grafana_host_url&gt;/public/plugins/influxdb/</li>
+	    <li>&lt;grafana_host_url&gt;/public/plugins/jaeger/</li>
+	    <li>&lt;grafana_host_url&gt;/public/plugins/logs/</li>
+	    <li>&lt;grafana_host_url&gt;/public/plugins/loki/</li>
+	    <li>&lt;grafana_host_url&gt;/public/plugins/mssql/</li>
+	    <li>&lt;grafana_host_url&gt;/public/plugins/mysql/</li>
+	    <li>&lt;grafana_host_url&gt;/public/plugins/news/</li>
+	    <li>&lt;grafana_host_url&gt;/public/plugins/nodeGraph/</li>
+	    <li>&lt;grafana_host_url&gt;/public/plugins/opentsdb</li>
+	    <li>&lt;grafana_host_url&gt;/public/plugins/piechart/</li>
+	    <li>&lt;grafana_host_url&gt;/public/plugins/pluginlist/</li>
+	    <li>&lt;grafana_host_url&gt;/public/plugins/postgres/</li>
+	    <li>&lt;grafana_host_url&gt;/public/plugins/prometheus/</li>
+	    <li>&lt;grafana_host_url&gt;/public/plugins/stackdriver/</li>
+	    <li>&lt;grafana_host_url&gt;/public/plugins/stat/</li>
+	    <li>&lt;grafana_host_url&gt;/public/plugins/state-timeline/</li>
+	    <li>&lt;grafana_host_url&gt;/public/plugins/status-history/</li>
+	    <li>&lt;grafana_host_url&gt;/public/plugins/table/</li>
+	    <li>&lt;grafana_host_url&gt;/public/plugins/table-old/</li>
+	    <li>&lt;grafana_host_url&gt;/public/plugins/tempo/</li>
+	    <li>&lt;grafana_host_url&gt;/public/plugins/testdata/</li>
+	    <li>&lt;grafana_host_url&gt;/public/plugins/text/</li>
+	    <li>&lt;grafana_host_url&gt;/public/plugins/timeseries/</li>
+	    <li>&lt;grafana_host_url&gt;/public/plugins/welcome/</li>
+	    <li>&lt;grafana_host_url&gt;/public/plugins/zipkin/</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-43798</cvename>
+      <url>https://grafana.com/blog/2021/12/07/grafana-8.3.1-8.2.7-8.1.8-and-8.0.7-released-with-high-severity-security-fix/</url>
+    </references>
+    <dates>
+      <discovery>2021-12-03</discovery>
+      <entry>2021-12-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="99bff2bd-4852-11ec-a828-6c3be5272acd">
+    <topic>Grafana -- Incorrect Access Control</topic>
+    <affects>
+      <package>
+	<name>grafana8</name>
+	<name>grafana</name>
+	<range><ge>8.0.0</ge><lt>8.2.4</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Grafana Labs reports:</p>
+	<blockquote cite="https://grafana.com/blog/2021/11/15/grafana-8.2.4-released-with-security-fixes/">
+	  <p>When the fine-grained access control beta feature is enabled and there is more than one organization in the Grafana instance, Grafana 8.0 introduced a mechanism which allowed users with the Organization Admin role to list, add, remove, and update users’ roles in other organizations in which they are not an admin.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-41244</cvename>
+      <url>https://grafana.com/blog/2021/11/15/grafana-8.2.4-released-with-security-fixes/</url>
+    </references>
+    <dates>
+      <discovery>2021-11-02</discovery>
+      <entry>2021-12-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="4b478274-47a0-11ec-bd24-6c3be5272acd">
+    <topic>Grafana -- XSS</topic>
+    <affects>
+      <package>
+	<name>grafana8</name>
+	<name>grafana</name>
+	<range><ge>8.0.0</ge><lt>8.2.3</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Grafana Labs reports:</p>
+	<blockquote cite="https://grafana.com/blog/2021/11/03/grafana-8.2.3-released-with-medium-severity-security-fix-cve-2021-41174-grafana-xss/">
+	  <p>If an attacker is able to convince a victim to visit a URL referencing a vulnerable page, arbitrary JavaScript content may be executed within the context of the victim’s browser.</p>
+	  <p>The user visiting the malicious link must be unauthenticated, and the link must be for a page that contains the login button in the menu bar.</p>
+	  <p>There are two ways an unauthenticated user can open a page in Grafana that contains the login button:</p>
+	  <ul>
+	    <li>Anonymous authentication is enabled. This means all pages in Grafana would be open for the attack.</li>
+	    <li>The link is to an unauthenticated page. The following pages are vulnerable:
+	      <ul>
+		<li><code>/dashboard-solo/snapshot/*</code></li>
+		<li><code>/dashboard/snapshot/*</code></li>
+		<li><code>/invite/:code</code></li>
+	      </ul>
+	    </li>
+	  </ul>
+	  <p>The url has to be crafted to exploit AngularJS rendering and contain the interpolation binding for AngularJS expressions. AngularJS uses double curly braces for interpolation binding: <code>{{ }}</code></p>
+	  <p>An example of an expression would be: <code>{{constructor.constructor(‘alert(1)’)()}}</code>. This can be included in the link URL like this:</p>
+	  <p><a href="https://play.grafana.org/dashboard/snapshot/%7B%7Bconstructor.constructor('alert(1)')()%7D%7D?orgId=1">https://play.grafana.org/dashboard/snapshot/%7B%7Bconstructor.constructor('alert(1)')()%7D%7D?orgId=1</a></p>
+	  <p>When the user follows the link and the page renders, the login button will contain the original link with a query parameter to force a redirect to the login page. The URL is not validated, and the AngularJS rendering engine will execute the JavaScript expression contained in the URL.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-41174</cvename>
+      <url>https://grafana.com/blog/2021/11/03/grafana-8.2.3-released-with-medium-severity-security-fix-cve-2021-41174-grafana-xss/</url>
+    </references>
+    <dates>
+      <discovery>2021-10-21</discovery>
+      <entry>2021-12-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="942fff11-5ac4-11ec-89ea-c85b76ce9b5a">
+    <topic>p7zip -- usage of uninitialized memory</topic>
+    <affects>
+      <package>
+	<name>p7zip</name>
+	<range><lt>18.05</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>NVD reports:</p>
+	<blockquote cite="https://nvd.nist.gov/vuln/detail/CVE-2018-10115">
+      <p>
+       Incorrect initialization logic of RAR decoder objects in
+       7-Zip 18.03 and before can lead to usage of
+       uninitialized memory, allowing remote attackers to cause
+       a denial of service (segmentation fault) or execute
+       arbitrary code via a crafted RAR archive.
+      </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2018-10115</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2018-10115</url>
+    </references>
+    <dates>
+      <discovery>2018-05-02</discovery>
+      <entry>2021-12-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="3fadd7e4-f8fb-45a0-a218-8fd6423c338f">
+      <topic>graylog -- include log4j patches</topic>
+    <affects>
+      <package>
+	<name>graylog</name>
+	<range><lt>4.2.3</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Apache Software Foundation repos:</p>
+	<blockquote cite="https://logging.apache.org/log4j/2.x/security.html">
+      <p>Apache Log4j2 JNDI features do not protect against attacker
+       controlled LDAP and other JNDI related endpoints. An attacker
+       who can control log messages or paramters can execute arbitrary
+       code from attacker-controller LDAP servers when message lookup
+       substitution is enabled.
+      </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-44228</cvename>
+      <url>https://github.com/Graylog2/graylog2-server/commit/d3e441f1126f0dc292e986879039a87c59375b2a</url>
+      <url>https://logging.apache.org/log4j/2.x/security.html</url>
+    </references>
+    <dates>
+      <discovery>2021-12-10</discovery>
+      <entry>2021-12-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="720505fe-593f-11ec-9ba8-002324b2fba8">
+    <topic>go -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>go</name>
+	<range><lt>1.17.5,1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Go project reports:</p>
+  <blockquote cite="https://github.com/golang/go/issues/50058">
+	  <p>net/http: limit growth of header canonicalization cache. An
+	    attacker can cause unbounded memory growth in a Go server accepting
+	    HTTP/2 requests.</p>
+	</blockquote>
+	<blockquote cite="https://github.com/golang/go/issues/50057">
+	  <p>syscall: don’t close fd 0 on ForkExec error. When a Go program
+	    running on a Unix system is out of file descriptors and calls
+	    syscall.ForkExec (including indirectly by using the os/exec
+	    package), syscall.ForkExec can close file descriptor 0 as it fails.
+	    If this happens (or can be provoked) repeatedly, it can result in
+	    misdirected I/O such as writing network traffic intended for one
+	    connection to a different connection, or content intended for one
+	    file to a different one.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-44716</cvename>
+      <url>https://github.com/golang/go/issues/50058</url>
+      <cvename>CVE-2021-44717</cvename>
+      <url>https://github.com/golang/go/issues/50057</url>
+    </references>
+    <dates>
+      <discovery>2021-12-08</discovery>
+      <entry>2021-12-09</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="18ac074c-579f-11ec-aac7-3065ec8fd3ec">
+    <topic>chromium -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>chromium</name>
+	<range><lt>96.0.4664.93</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Chrome Releases reports:</p>
+	<blockquote cite="https://chromereleases.googleblog.com/2021/12/stable-channel-update-for-desktop.html">
+	  <p>This release contains 22 security fixes, including:</p>
+	  <ul>
+	    <li>[1267661] High CVE-2021-4052: Use after free in web apps.
+	      Reported by Wei Yuan of MoyunSec VLab on 2021-11-07</li>
+	    <li>[1267791] High CVE-2021-4053: Use after free in UI. Reported by
+	      Rox on 2021-11-08</li>
+	    <li>[1265806] High CVE-2021-4079: Out of bounds write in WebRTC.
+	      Reported by Brendon Tiszka on 2021-11-01</li>
+	    <li>[1239760] High CVE-2021-4054: Incorrect security UI in autofill.
+	      Reported by Alesandro Ortiz on 2021-08-13</li>
+	    <li>[1268738] High CVE-2021-4078: Type confusion in V8. Reported by
+	      Nan Wang (@eternalsakura13) and Guang Gong of 360 Alpha Lab on
+	      2021-11-09</li>
+	    <li>[1266510] High CVE-2021-4055: Heap buffer overflow in
+	      extensions. Reported by Chen Rong on 2021-11-03</li>
+	    <li>[1260939] High CVE-2021-4056: Type Confusion in loader. Reported
+	      by @__R0ng of 360 Alpha Lab on 2021-10-18</li>
+	    <li>[1262183] High CVE-2021-4057: Use after free in file API.
+	      Reported by Sergei Glazunov of Google Project Zero on
+	      2021-10-21</li>
+	    <li>[1267496] High CVE-2021-4058: Heap buffer overflow in ANGLE.
+	      Reported by Abraruddin Khan and Omair on 2021-11-06</li>
+	    <li>[1270990] High CVE-2021-4059: Insufficient data validation in
+	      loader. Reported by Luan Herrera (@lbherrera_) on 2021-11-17</li>
+	    <li>[1271456] High CVE-2021-4061: Type Confusion in V8. Reported by
+	      Paolo Severini on 2021-11-18</li>
+	    <li>[1272403] High CVE-2021-4062: Heap buffer overflow in BFCache.
+	      Reported by Leecraso and Guang Gong of 360 Alpha Lab on
+	      2021-11-22</li>
+	    <li>[1273176] High CVE-2021-4063: Use after free in developer tools.
+	      Reported by Abdulrahman Alqabandi, Microsoft Browser Vulnerability
+	      Research on 2021-11-23</li>
+	    <li>[1273197] High CVE-2021-4064: Use after free in screen capture.
+	      Reported by @ginggilBesel on 2021-11-23</li>
+	    <li>[1273674] High CVE-2021-4065: Use after free in autofill.
+	      Reported by 5n1p3r0010 on 2021-11-25</li>
+	    <li>[1274499] High CVE-2021-4066: Integer underflow in ANGLE.
+	      Reported by Jaehun Jeong(@n3sk) of Theori on 2021-11-29</li>
+	    <li>[1274641] High CVE-2021-4067: Use after free in window manager.
+	      Reported by @ginggilBesel on 2021-11-29</li>
+	    <li>[1265197] Low CVE-2021-4068: Insufficient validation of
+	      untrusted input in new tab page. Reported by NDevTK on
+	      2021-10-31</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-4052</cvename>
+      <cvename>CVE-2021-4053</cvename>
+      <cvename>CVE-2021-4054</cvename>
+      <cvename>CVE-2021-4055</cvename>
+      <cvename>CVE-2021-4056</cvename>
+      <cvename>CVE-2021-4057</cvename>
+      <cvename>CVE-2021-4058</cvename>
+      <cvename>CVE-2021-4059</cvename>
+      <cvename>CVE-2021-4061</cvename>
+      <cvename>CVE-2021-4062</cvename>
+      <cvename>CVE-2021-4063</cvename>
+      <cvename>CVE-2021-4064</cvename>
+      <cvename>CVE-2021-4065</cvename>
+      <cvename>CVE-2021-4066</cvename>
+      <cvename>CVE-2021-4067</cvename>
+      <cvename>CVE-2021-4068</cvename>
+      <cvename>CVE-2021-4078</cvename>
+      <cvename>CVE-2021-4079</cvename>
+      <url>https://chromereleases.googleblog.com/2021/12/stable-channel-update-for-desktop.html</url>
+    </references>
+    <dates>
+      <discovery>2021-12-06</discovery>
+      <entry>2021-12-07</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="b299417a-5725-11ec-a587-001b217b3468">
+    <topic>Gitlab -- Multiple Vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>gitlab-ce</name>
+	<range><ge>14.5.0</ge><lt>14.5.2</lt></range>
+	<range><ge>14.4.0</ge><lt>14.4.4</lt></range>
+	<range><ge>0</ge><lt>14.3.6</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Gitlab reports:</p>
+	<blockquote cite="https://about.gitlab.com/releases/2021/12/06/security-release-gitlab-14-5-2-released/">
+	  <p>Group members with developer role can escalate their privilege to maintainer on projects that they import</p>
+	  <p>When user registration is limited, external users that aren't developers shouldn't have access to the CI Lint API</p>
+	  <p>Collision in access memoization leads to potential elevated privileges on groups and projects</p>
+	  <p>Project access token names are returned for unauthenticated requesters</p>
+	  <p>Sensitive info disclosure in logs</p>
+	  <p>Disclosure of a user's custom project and group templates</p>
+	  <p>ReDoS in Maven package version</p>
+	  <p>Potential denial of service via the Diff feature</p>
+	  <p>Regular Expression Denial of Service via user comments</p>
+	  <p>Service desk email accessible by any project member</p>
+	  <p>Regular Expression Denial of Service via quick actions</p>
+	  <p>IDOR in "external status check" API leaks data about any status check on the instance</p>
+	  <p>Default branch name visible in public projects restricting access to the source code repository</p>
+	  <p>Deploy token allows access to disabled project Wiki</p>
+	  <p>Regular Expression Denial of Service via deploy Slash commands</p>
+	  <p>Users can reply to Vulnerability Report discussions despite Only Project Members settings</p>
+	  <p>Unauthorised deletion of protected branches</p>
+	  <p>Author can approve Merge Request after having access revoked</p>
+	  <p>HTML Injection via Swagger UI</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-39944</cvename>
+      <cvename>CVE-2021-39935</cvename>
+      <cvename>CVE-2021-39937</cvename>
+      <cvename>CVE-2021-39915</cvename>
+      <cvename>CVE-2021-39919</cvename>
+      <cvename>CVE-2021-39930</cvename>
+      <cvename>CVE-2021-39940</cvename>
+      <cvename>CVE-2021-39932</cvename>
+      <cvename>CVE-2021-39933</cvename>
+      <cvename>CVE-2021-39934</cvename>
+      <cvename>CVE-2021-39917</cvename>
+      <cvename>CVE-2021-39916</cvename>
+      <cvename>CVE-2021-39941</cvename>
+      <cvename>CVE-2021-39936</cvename>
+      <cvename>CVE-2021-39938</cvename>
+      <cvename>CVE-2021-39918</cvename>
+      <cvename>CVE-2021-39931</cvename>
+      <cvename>CVE-2021-39945</cvename>
+      <cvename>CVE-2021-39910</cvename>
+      <url>https://about.gitlab.com/releases/2021/12/06/security-release-gitlab-14-5-2-released/</url>
+    </references>
+    <dates>
+      <discovery>2021-12-06</discovery>
+      <entry>2021-12-07</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="47695a9c-5377-11ec-8be6-d4c9ef517024">
+    <topic>NSS -- Memory corruption</topic>
+    <affects>
+      <package>
+	<name>nss</name>
+	<range><lt>3.73</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Mozilla project reports:</p>
+	<blockquote cite="https://www.mozilla.org/en-US/security/advisories/mfsa2021-51/">
+	  <p>Memory corruption in NSS via DER-encoded DSA and RSA-PSS signatures (Critical)</p>
+	  <p>NSS (Network Security Services) versions prior to 3.73 or 3.68.1 ESR
+	    are vulnerable to a heap overflow when handling DER-encoded DSA or
+	    RSA-PSS signatures. Applications using NSS for handling signatures
+	    encoded within CMS, S/MIME, PKCS #7, or PKCS #12 are likely to be
+	    impacted. Applications using NSS for certificate validation or other
+	    TLS, X.509, OCSP or CRL functionality may be impacted, depending on
+	    how they configure NSS.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-43527</cvename>
+      <url>https://www.mozilla.org/en-US/security/advisories/mfsa2021-51/</url>
+    </references>
+    <dates>
+      <discovery>2021-12-01</discovery>
+      <entry>2021-12-02</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="0d6efbe3-52d9-11ec-9472-e3667ed6088e">
+	  <topic>mailman &lt; 2.1.38 -- CSRF vulnerability of list mod or member against list admin page</topic>
+    <affects>
+      <package>
+	<name>mailman</name>
+	<range><lt>2.1.38</lt></range>
+      </package>
+      <package>
+	<name>mailman-exim4</name>
+	<range><lt>2.1.38</lt></range>
+      </package>
+      <package>
+	<name>mailman-exim4-with-htdig</name>
+	<range><lt>2.1.38</lt></range>
+      </package>
+      <package>
+	<name>mailman-postfix</name>
+	<range><lt>2.1.38</lt></range>
+      </package>
+      <package>
+	<name>mailman-postfix-with-htdig</name>
+	<range><lt>2.1.38</lt></range>
+      </package>
+      <package>
+	<name>mailman-with-htdig</name>
+	<range><lt>2.1.38</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Mark Sapiro reports:</p>
+	<blockquote cite="https://bugs.launchpad.net/mailman/+bug/1952384">
+	  <p>A list moderator or list member can potentially carry out a CSRF attack
+	    by getting a list admin to visit a crafted web page.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-44227</cvename>
+      <url>https://bugs.launchpad.net/mailman/+bug/1952384</url>
+      <url>https://www.mail-archive.com/mailman-users@python.org/msg73979.html</url>
+    </references>
+    <dates>
+      <discovery>2021-11-25</discovery>
+      <entry>2021-12-01</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="4548ec97-4d38-11ec-a539-0800270512f4">
+    <topic>rubygem-cgi -- cookie prefix spoofing in CGI::Cookie.parse</topic>
+    <affects>
+      <package>
+	<name>ruby</name>
+	<range><ge>2.6.0,1</ge><lt>2.6.9,1</lt></range>
+	<range><ge>2.7.0,1</ge><lt>2.7.5,1</lt></range>
+	<range><ge>3.0.0,1</ge><lt>3.0.3,1</lt></range>
+      </package>
+      <package>
+	<name>ruby26</name>
+	<range><ge>2.6.0,1</ge><lt>2.6.9,1</lt></range>
+      </package>
+      <package>
+	<name>ruby27</name>
+	<range><ge>2.7.0,1</ge><lt>2.7.5,1</lt></range>
+      </package>
+      <package>
+	<name>ruby30</name>
+	<range><ge>3.0.0,1</ge><lt>3.0.3,1</lt></range>
+      </package>
+      <package>
+	<name>rubygem-cgi</name>
+	<range><lt>0.3.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>ooooooo_q reports:</p>
+	<blockquote cite="https://www.ruby-lang.org/en/news/2021/11/24/cookie-prefix-spoofing-in-cgi-cookie-parse-cve-2021-41819/">
+	  <p>
+	    The old versions of <code>CGI::Cookie.parse</code> applied
+	    URL decoding to cookie names. An attacker could exploit
+	    this vulnerability to spoof security prefixes in cookie
+	    names, which may be able to trick a vulnerable
+	    application.
+	  </p>
+	  <p>
+	    By this fix, <code>CGI::Cookie.parse</code> no longer
+	    decodes cookie names. Note that this is an incompatibility
+	    if cookie names that you are using include
+	    non-alphanumeric characters that are URL-encoded.
+	  </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-41819</cvename>
+      <url>https://www.ruby-lang.org/en/news/2021/11/24/cookie-prefix-spoofing-in-cgi-cookie-parse-cve-2021-41819/</url>
+    </references>
+    <dates>
+      <discovery>2021-11-24</discovery>
+      <entry>2021-11-24</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="2c6af5c3-4d36-11ec-a539-0800270512f4">
+    <topic>rubygem-cgi -- buffer overrun in CGI.escape_html</topic>
+    <affects>
+      <package>
+	<name>ruby</name>
+	<range><ge>2.7.0,1</ge><lt>2.7.5,1</lt></range>
+	<range><ge>3.0.0,1</ge><lt>3.0.3,1</lt></range>
+      </package>
+      <package>
+	<name>ruby27</name>
+	<range><ge>2.7.0,1</ge><lt>2.7.5,1</lt></range>
+      </package>
+      <package>
+	<name>ruby30</name>
+	<range><ge>3.0.0,1</ge><lt>3.0.3,1</lt></range>
+      </package>
+      <package>
+	<name>rubygem-cgi</name>
+	<range><lt>0.3.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>chamal reports:</p>
+	<blockquote cite="https://www.ruby-lang.org/en/news/2021/11/24/buffer-overrun-in-cgi-escape_html-cve-2021-41816/">
+	  <p>
+	    A security vulnerability that causes buffer overflow when
+	    you pass a very large string (&gt; 700 MB) to
+	    <code>CGI.escape_html</code> on a platform where
+	    <code>long</code> type takes 4 bytes, typically, Windows.
+	  </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-41816</cvename>
+      <url>https://www.ruby-lang.org/en/news/2021/11/24/buffer-overrun-in-cgi-escape_html-cve-2021-41816/</url>
+    </references>
+    <dates>
+      <discovery>2021-11-24</discovery>
+      <entry>2021-11-24</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="27aa2253-4c72-11ec-b6b9-e86a64caca56">
+    <topic>py-matrix-synapse -- several vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>py36-matrix-synapse</name>
+	<name>py37-matrix-synapse</name>
+	<name>py38-matrix-synapse</name>
+	<name>py39-matrix-synapse</name>
+	<name>py310-matrix-synapse</name>
+	<range><lt>1.47.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Matrix developers report:</p>
+	<blockquote cite="https://matrix.org/blog/2021/11/23/synapse-1-47-1-released">
+	    <p>This release patches one high severity issue affecting
+    Synapse installations 1.47.0 and earlier using the media repository.
+    An attacker could cause these Synapses to download a remote file
+    and store it in a directory outside the media repository.</p>
+      <p>Note that:</p>
+    <ul>
+      <li>This only affects homeservers using Synapse's built-in media
+      repository, as opposed to synapse-s3-storage-provider or
+      matrix-media-repo.</li>
+      <li>Attackers cannot control the exact name or destination of the
+      stored file.</li>
+    </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <freebsdpr>ports/259994</freebsdpr>
+      <cvename>CVE-2021-41281</cvename>
+      <url>https://matrix.org/blog/2021/11/23/synapse-1-47-1-released</url>
+    </references>
+    <dates>
+      <discovery>2021-11-18</discovery>
+      <entry>2021-11-23</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="0bf816f6-3cfe-11ec-86cd-dca632b19f10">
+    <topic>advancecomp -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>advancecomp</name>
+	<range><lt>2.1.6</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Joonun Jang reports:</p>
+	<blockquote cite="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=889270">
+	  <p>heap buffer overflow running advzip with "-l poc" option</p>
+	  <p>Running 'advzip -l poc' with the attached file raises heap buffer overflow
+	  which may allow a remote attacker to cause unspecified impact including denial-of-service attack.
+	  I expected the program to terminate without segfault, but the program crashes as follow. [...]
+	  </p>
+	</blockquote>
+	<p>and other vulnerabilities.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2018-1056</cvename>
+      <cvename>CVE-2019-8379</cvename>
+      <cvename>CVE-2019-8383</cvename>
+      <cvename>CVE-2019-9210</cvename>
+    </references>
+    <dates>
+      <discovery>2018-07-29</discovery>
+      <entry>2021-11-19</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="b8c0cbca-472d-11ec-83dc-3065ec8fd3ec">
+    <topic>chromium -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>chromium</name>
+	<range><lt>96.0.4664.45</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Chrome Releases reports:</p>
+	<blockquote cite="https://chromereleases.googleblog.com/2021/11/stable-channel-update-for-desktop.html">
+	  <p>This release contains 25 security fixes, including:</p>
+	  <ul>
+	    <li>[1263620] High CVE-2021-38008: Use after free in media. Reported
+	      by Marcin Towalski of Cisco Talos on 2021-10-26</li>
+	    <li>[1260649] High CVE-2021-38009: Inappropriate implementation in
+	      cache. Reported by Luan Herrera (@lbherrera_) on 2021-10-16</li>
+	    <li>[1240593] High CVE-2021-38006: Use after free in storage
+	      foundation. Reported by Sergei Glazunov of Google Project Zero on
+	      2021-08-17</li>
+	    <li>[1254189] High CVE-2021-38007: Type Confusion in V8. Reported by
+	      Polaris Feng and SGFvamll at Singular Security Lab on
+	      2021-09-29</li>
+	    <li>[1241091] High CVE-2021-38005: Use after free in loader.
+	      Reported by Sergei Glazunov of Google Project Zero on
+	      2021-08-18</li>
+	    <li>[1264477] High CVE-2021-38010: Inappropriate implementation in
+	      service workers. Reported by Sergei Glazunov of Google Project
+	      Zero on 2021-10-28</li>
+	    <li>[1268274] High CVE-2021-38011: Use after free in storage
+	      foundation. Reported by Sergei Glazunov of Google Project Zero on
+	      2021-11-09</li>
+	    <li>[1262791] Medium CVE-2021-38012: Type Confusion in V8. Reported
+	      by Yonghwi Jin (@jinmo123) on 2021-10-24</li>
+	    <li>[1242392] Medium CVE-2021-38013: Heap buffer overflow in
+	      fingerprint recognition. Reported by raven (@raid_akame) on
+	      2021-08-23</li>
+	    <li>[1248567] Medium CVE-2021-38014: Out of bounds write in
+	      Swiftshader. Reported by Atte Kettunen of OUSPG on 2021-09-10</li>
+	    <li>[957553] Medium CVE-2021-38015: Inappropriate implementation in
+	      input. Reported by David Erceg on 2019-04-29</li>
+	    <li>[1244289] Medium CVE-2021-38016: Insufficient policy
+	      enforcement in background fetch. Reported by Maurice Dauer on
+	      2021-08-28</li>
+	    <li>[1256822] Medium CVE-2021-38017: Insufficient policy enforcement
+	      in iframe sandbox. Reported by NDevTK on 2021-10-05</li>
+	    <li>[1197889] Medium CVE-2021-38018: Inappropriate implementation in
+	      navigation. Reported by Alesandro Ortiz on 2021-04-11</li>
+	    <li>[1251179] Medium CVE-2021-38019: Insufficient policy enforcement
+	      in CORS. Reported by Maurice Dauer on 2021-09-20</li>
+	    <li>[1259694] Medium CVE-2021-38020: Insufficient policy enforcement
+	      in contacts picker. Reported by Luan Herrera (@lbherrera_) on
+	      2021-10-13</li>
+	    <li>[1233375] Medium CVE-2021-38021: Inappropriate implementation in
+	      referrer. Reported by Prakash (@1lastBr3ath) and Jun Kokatsu on
+	      2021-07-27</li>
+	    <li>[1248862] Low CVE-2021-38022: Inappropriate implementation in
+	      WebAuthentication. Reported by Michal Kepkowski on 2021-09-13</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-38005</cvename>
+      <cvename>CVE-2021-38006</cvename>
+      <cvename>CVE-2021-38007</cvename>
+      <cvename>CVE-2021-38008</cvename>
+      <cvename>CVE-2021-38009</cvename>
+      <cvename>CVE-2021-38010</cvename>
+      <cvename>CVE-2021-38011</cvename>
+      <cvename>CVE-2021-38012</cvename>
+      <cvename>CVE-2021-38013</cvename>
+      <cvename>CVE-2021-38014</cvename>
+      <cvename>CVE-2021-38015</cvename>
+      <cvename>CVE-2021-38016</cvename>
+      <cvename>CVE-2021-38017</cvename>
+      <cvename>CVE-2021-38018</cvename>
+      <cvename>CVE-2021-38019</cvename>
+      <cvename>CVE-2021-38020</cvename>
+      <cvename>CVE-2021-38021</cvename>
+      <cvename>CVE-2021-38022</cvename>
+      <url>https://chromereleases.googleblog.com/2021/11/stable-channel-update-for-desktop.html</url>
+    </references>
+    <dates>
+      <discovery>2021-11-15</discovery>
+      <entry>2021-11-16</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="6916ea94-4628-11ec-bbe2-0800270512f4">
+    <topic>rubygem-date -- Regular Expression Denial of Service Vunlerability of Date Parsing Methods</topic>
+    <affects>
+      <package>
+	<name>ruby</name>
+	<range><ge>2.6.0,1</ge><lt>2.6.9,1</lt></range>
+	<range><ge>2.7.0,1</ge><lt>2.7.5,1</lt></range>
+	<range><ge>3.0.0,1</ge><lt>3.0.3,1</lt></range>
+      </package>
+      <package>
+	<name>ruby26</name>
+	<range><ge>2.6.0,1</ge><lt>2.6.9,1</lt></range>
+      </package>
+      <package>
+	<name>ruby27</name>
+	<range><ge>2.7.0,1</ge><lt>2.7.5,1</lt></range>
+      </package>
+      <package>
+	<name>ruby30</name>
+	<range><ge>3.0.0,1</ge><lt>3.0.3,1</lt></range>
+      </package>
+      <package>
+	<name>rubygem-date</name>
+	<range><lt>3.2.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Stanislav Valkanov reports:</p>
+	<blockquote cite="https://www.ruby-lang.org/en/news/2021/11/15/date-parsing-method-regexp-dos-cve-2021-41817/">
+	  <p>
+	    Date's parsing methods including <code>Date.parse</code>
+	    are using Regexps internally, some of which are vulnerable
+	    against regular expression denial of service. Applications
+	    and libraries that apply such methods to untrusted input
+	    may be affected.
+	  </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-41817</cvename>
+      <url>https://www.ruby-lang.org/en/news/2021/11/15/date-parsing-method-regexp-dos-cve-2021-41817/</url>
+    </references>
+    <dates>
+      <discovery>2021-11-15</discovery>
+      <entry>2021-11-15</entry>
+      <modified>2021-11-24</modified>
+    </dates>
+  </vuln>
+
+  <vuln vid="42a4d82d-4603-11ec-8be6-d4c9ef517024">
+    <topic>Roundcube -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>roundcube</name>
+	<range><lt>1.4.12,1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Roundcube project reports:</p>
+	<blockquote cite="https://roundcube.net/news/2021/11/12/security-updates-1.4.12-and-1.3.17-released">
+	  <p>XSS issue in handling attachment filename extension in mimetype mismatch warning</p>
+	  <p>possible SQL injection via some session variables</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://roundcube.net/news/2021/11/12/security-updates-1.4.12-and-1.3.17-released</url>
+    </references>
+    <dates>
+      <discovery>2021-11-12</discovery>
+      <entry>2021-11-15</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="9d7a2b54-4468-11ec-8532-0d24c37c72c8">
+    <topic>mailman -- 2.1.37 fixes XSS via user options, and moderator offline brute-force vuln against list admin password</topic>
+    <affects>
+      <package>
+	<name>mailman</name>
+	<range><lt>2.1.37</lt></range>
+      </package>
+      <package>
+	<name>mailman-exim4</name>
+	<range><lt>2.1.37</lt></range>
+      </package>
+      <package>
+	<name>mailman-exim4-with-htdig</name>
+	<range><lt>2.1.37</lt></range>
+      </package>
+      <package>
+	<name>mailman-postfix</name>
+	<range><lt>2.1.37</lt></range>
+      </package>
+      <package>
+	<name>mailman-postfix-with-htdig</name>
+	<range><lt>2.1.37</lt></range>
+      </package>
+      <package>
+	<name>mailman-with-htdig</name>
+	<range><lt>2.1.37</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Mark Sapiro reports:</p>
+	<blockquote cite="https://bazaar.launchpad.net/~mailman-coders/mailman/2.1/view/1879/NEWS#L8">
+	  <p>A potential XSS attack via the user options page has been reported by
+	    Harsh Jaiswal.  This is fixed.  CVE-2021-43331 (LP: #1949401).</p>
+	  <p>A potential for for a list moderator to carry out an off-line brute force
+	    attack to obtain the list admin password has been reported by Andre
+	    Protas, Richard Cloke and Andy Nuttall of Apple.  This is fixed.
+	    CVE-2021-43332 (LP: #1949403)</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-43331</cvename>
+      <cvename>CVE-2021-43332</cvename>
+      <url>https://bazaar.launchpad.net/~mailman-coders/mailman/2.1/view/1879/NEWS#L8</url>
+      <url>https://bugs.launchpad.net/mailman/+bug/1949401</url>
+      <url>https://bugs.launchpad.net/mailman/+bug/1949403</url>
+    </references>
+    <dates>
+      <discovery>2021-11-01</discovery>
+      <entry>2021-11-13</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="2ccd71bd-426b-11ec-87db-6cc21735f730">
+    <topic>PostgreSQL -- Possible man-in-the-middle attacks</topic>
+    <affects>
+      <package>
+	<name>postgresql14-server</name>
+	<range><lt>14.1</lt></range>
+      </package>
+      <package>
+	<name>postgresql13-server</name>
+	<range><lt>13.5</lt></range>
+      </package>
+      <package>
+	<name>postgresql12-server</name>
+	<range><lt>12.9</lt></range>
+      </package>
+      <package>
+	<name>postgresql11-server</name>
+	<range><lt>11.14</lt></range>
+      </package>
+       <package>
+	<name>postgresql10-server</name>
+	<range><lt>10.19</lt></range>
+      </package>
+      <package>
+	<name>postgresql96-server</name>
+	<range><lt>9.6.24</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The PostgreSQL Project reports:</p>
+	<blockquote cite="https://www.postgresql.org/about/news/postgresql-141-135-129-1114-1019-and-9624-released-2349/">
+	  <p> CVE-2021-23214: A man-in-the-middle with the ability to inject data into the TCP connection could stuff some cleartext data into the start of a supposedly encryption-protected database session. This could be abused to send faked SQL commands to the server, although that would only work if the server did not demand any authentication data. (However, a server relying on SSL certificate authentication might well not do so.) </p>
+	  <p> CVE-2021-23222: A man-in-the-middle with the ability to inject data into the TCP connection could stuff some cleartext data into the start of a supposedly encryption-protected database session.  This could probably be abused to inject faked responses to the client's first few queries, although other details of libpq's behavior make that harder than it sounds.  A different line of attack is to exfiltrate the client's password, or other sensitive data that might be sent early in the session.  That has been shown to be possible with a server vulnerable to CVE-2021-23214. </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-23214</cvename>
+      <cvename>CVE-2021-23222</cvename>
+    </references>
+    <dates>
+      <discovery>2021-11-08</discovery>
+      <entry>2021-11-10</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="bfea59e0-41ee-11ec-9bac-589cfc007716">
+    <topic>puppet -- Silent Configuration Failure</topic>
+    <affects>
+      <package>
+	<name>puppet6</name>
+	<range><lt>6.25.1</lt></range>
+      </package>
+      <package>
+	<name>puppet7</name>
+	<range><lt>7.12.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Puppet reports:</p>
+	<blockquote cite="https://puppet.com/security/cve/cve-2021-27025">
+	  <p>A flaw was discovered in Puppet Agent where the agent may silently ignore Augeas settings or may be vulnerable to a Denial of Service condition prior to the first pluginsync.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-27025</cvename>
+      <url>https://puppet.com/security/cve/cve-2021-27025</url>
+    </references>
+    <dates>
+      <discovery>2021-11-09</discovery>
+      <entry>2021-11-10</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="3bd3c9f8-41ee-11ec-9bac-589cfc007716">
+    <topic>puppet -- Unsafe HTTP Redirect</topic>
+    <affects>
+      <package>
+	<name>puppet6</name>
+	<range><lt>6.25.1</lt></range>
+      </package>
+      <package>
+	<name>puppet7</name>
+	<range><lt>7.12.1</lt></range>
+      </package>
+      <package>
+	<name>puppetserver6</name>
+	<range><lt>6.17.1</lt></range>
+      </package>
+      <package>
+	<name>puppetserver7</name>
+	<range><lt>7.4.2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Puppet reports:</p>
+	<blockquote cite="https://puppet.com/security/cve/cve-2021-27023">
+	  <p>A flaw was discovered in Puppet Agent and Puppet Server that may result in a leak of HTTP credentials when following HTTP redirects to a different host. This is similar to CVE-2018-1000007.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-27023</cvename>
+      <url>https://puppet.com/security/cve/cve-2021-27023</url>
+    </references>
+    <dates>
+      <discovery>2021-11-09</discovery>
+      <entry>2021-11-10</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="646923b0-41c7-11ec-a3b2-005056a311d1">
+    <topic>samba -- Multiple Vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>samba413</name>
+	<range><lt>4.13.14</lt></range>
+      </package>
+      <package>
+	<name>samba414</name>
+	<range><lt>4.14.10</lt></range>
+      </package>
+      <package>
+	<name>samba415</name>
+	<range><lt>4.15.2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Samba Team reports:</p>
+	<blockquote cite="https://www.samba.org/samba/history/security.html">
+	  <ul>
+	  <li>CVE-2020-25717: A user in an AD Domain could become root on domain
+	      members.</li>
+	  <li>CVE-2020-25718: Samba AD DC did not correctly sandbox Kerberos
+	      tickets issued by an RODC.</li>
+	  <li>CVE-2020-25719: Samba AD DC did not always rely on the SID and PAC
+	      in Kerberos tickets.</li>
+	  <li>CVE-2020-25721: Kerberos acceptors need easy access to stable
+	      AD identifiers (eg objectSid).</li>
+	  <li>CVE-2020-25722: Samba AD DC did not do sufficient access and
+	      conformance checking of data stored.</li>
+	  <li>CVE-2016-2124: SMB1 client connections can be downgraded to plaintext
+	      authentication.</li>
+	  <li>CVE-2021-3738: Use after free in Samba AD DC RPC server.</li>
+	  <li>CVE-2021-23192: Subsequent DCE/RPC fragment injection vulnerability.</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2020-25717</cvename>
+      <cvename>CVE-2020-25718</cvename>
+      <cvename>CVE-2020-25719</cvename>
+      <cvename>CVE-2020-25721</cvename>
+      <cvename>CVE-2020-25722</cvename>
+      <cvename>CVE-2016-2124</cvename>
+      <cvename>CVE-2021-3738</cvename>
+      <cvename>CVE-2021-23192</cvename>
+      <url>https://www.samba.org/samba/security/CVE-2020-25717.html</url>
+      <url>https://www.samba.org/samba/security/CVE-2020-25718.html</url>
+      <url>https://www.samba.org/samba/security/CVE-2020-25719.html</url>
+      <url>https://www.samba.org/samba/security/CVE-2020-25721.html</url>
+      <url>https://www.samba.org/samba/security/CVE-2020-25722.html</url>
+      <url>https://www.samba.org/samba/security/CVE-2016-2124.html</url>
+      <url>https://www.samba.org/samba/security/CVE-2021-3738.html</url>
+      <url>https://www.samba.org/samba/security/CVE-2021-23192.html</url>
+    </references>
+    <dates>
+      <discovery>2021-11-10</discovery>
+      <entry>2021-11-10</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="17702e54-3da0-11ec-b7e0-3085a9a95629">
     <topic>pyrad -- multiple vulnerabilities</topic>
     <affects>
@@ -502,8 +1637,24 @@
 	<range><lt>8.0.27</lt></range>
       </package>
       <package>
+	<name>mysql-connector-java</name>
+	<range><lt>8.0.27</lt></range>
+      </package>
+      <package>
 	<name>mysql80-server</name>
 	<range><lt>8.0.27</lt></range>
+      </package>
+      <package>
+	<name>mariadb103-server</name>
+	<range><lt>10.3.32</lt></range>
+      </package>
+      <package>
+	<name>mariadb104-server</name>
+	<range><lt>10.4.22</lt></range>
+      </package>
+      <package>
+	<name>mariadb105-server</name>
+	<range><lt>10.5.13</lt></range>
       </package>
     </affects>
     <description>
@@ -516,15 +1667,75 @@
 	    requiring user credentials.<br/>
 	    The highest CVSS v3.1 Base Score of vulnerabilities affecting Oracle
 	    MySQL is 9.8.</p>
+	  <p>Note: MariaDB only vulnerable against CVE-2021-35604</p>
 	</blockquote>
       </body>
     </description>
     <references>
       <url>https://www.oracle.com/security-alerts/cpuoct2021.html</url>
+      <cvename>CVE-2021-22931</cvename>
+      <cvename>CVE-2021-3711</cvename>
+      <cvename>CVE-2021-22926</cvename>
+      <cvename>CVE-2021-36222</cvename>
+      <cvename>CVE-2021-35583</cvename>
+      <cvename>CVE-2021-35610</cvename>
+      <cvename>CVE-2021-35597</cvename>
+      <cvename>CVE-2021-35607</cvename>
+      <cvename>CVE-2021-2481</cvename>
+      <cvename>CVE-2021-35590</cvename>
+      <cvename>CVE-2021-35592</cvename>
+      <cvename>CVE-2021-35593</cvename>
+      <cvename>CVE-2021-35594</cvename>
+      <cvename>CVE-2021-35598</cvename>
+      <cvename>CVE-2021-35621</cvename>
+      <cvename>CVE-2021-2471</cvename>
+      <cvename>CVE-2021-35604</cvename>
+      <cvename>CVE-2021-35612</cvename>
+      <cvename>CVE-2021-35608</cvename>
+      <cvename>CVE-2021-35602</cvename>
+      <cvename>CVE-2021-35577</cvename>
+      <cvename>CVE-2021-2478</cvename>
+      <cvename>CVE-2021-2479</cvename>
+      <cvename>CVE-2021-35537</cvename>
+      <cvename>CVE-2021-35591</cvename>
+      <cvename>CVE-2021-35596</cvename>
+      <cvename>CVE-2021-35648</cvename>
+      <cvename>CVE-2021-35631</cvename>
+      <cvename>CVE-2021-35626</cvename>
+      <cvename>CVE-2021-35627</cvename>
+      <cvename>CVE-2021-35628</cvename>
+      <cvename>CVE-2021-35629</cvename>
+      <cvename>CVE-2021-35575</cvename>
+      <cvename>CVE-2021-35634</cvename>
+      <cvename>CVE-2021-35635</cvename>
+      <cvename>CVE-2021-35636</cvename>
+      <cvename>CVE-2021-35638</cvename>
+      <cvename>CVE-2021-35641</cvename>
+      <cvename>CVE-2021-35642</cvename>
+      <cvename>CVE-2021-35643</cvename>
+      <cvename>CVE-2021-35644</cvename>
+      <cvename>CVE-2021-35645</cvename>
+      <cvename>CVE-2021-35646</cvename>
+      <cvename>CVE-2021-35647</cvename>
+      <cvename>CVE-2021-35630</cvename>
+      <cvename>CVE-2021-35637</cvename>
+      <cvename>CVE-2021-35546</cvename>
+      <cvename>CVE-2021-35622</cvename>
+      <cvename>CVE-2021-35624</cvename>
+      <cvename>CVE-2021-35639</cvename>
+      <cvename>CVE-2021-35632</cvename>
+      <cvename>CVE-2021-35584</cvename>
+      <cvename>CVE-2021-35613</cvename>
+      <cvename>CVE-2021-35640</cvename>
+      <cvename>CVE-2021-35633</cvename>
+      <cvename>CVE-2021-35625</cvename>
+      <cvename>CVE-2021-35623</cvename>
+      <cvename>CVE-2021-35618</cvename>
     </references>
     <dates>
       <discovery>2021-10-16</discovery>
       <entry>2021-10-17</entry>
+      <modified>2021-11-09</modified>
     </dates>
   </vuln>
 
@@ -2566,7 +3777,7 @@ The string hashing algorithm has been replaced with a better one, and now also u
     <affects>
       <package>
 	<name>bouncycastle15</name>
-	<range><lt>1.67</lt></range>
+	<range><ge>1.65</ge><lt>1.67</lt></range>
       </package>
     </affects>
     <description>
@@ -2593,10 +3804,14 @@ The string hashing algorithm has been replaced with a better one, and now also u
   </vuln>
 
   <vuln vid="89d5bca6-0150-11ec-bf0c-080027eedc6a">
-    <topic>bouncycastle15 -- EC math vulnerability</topic>
+    <topic>The Bouncy Castle Crypto APIs -- EC math vulnerability</topic>
     <affects>
       <package>
 	<name>bouncycastle15</name>
+	<range><lt>1.66</lt></range>
+      </package>
+      <package>
+	<name>bouncycastle</name>
 	<range><lt>1.66</lt></range>
       </package>
     </affects>

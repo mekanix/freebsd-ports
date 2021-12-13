@@ -221,6 +221,8 @@ share/applications/emacsclient-mail.desktop
 %%DATADIR%%/%%EMACS_VER%%/etc/images/checked.xpm
 %%DATADIR%%/%%EMACS_VER%%/etc/images/close.pbm
 %%DATADIR%%/%%EMACS_VER%%/etc/images/close.xpm
+%%DATADIR%%/%%EMACS_VER%%/etc/images/connect-to-url.pbm
+%%DATADIR%%/%%EMACS_VER%%/etc/images/connect-to-url.xpm
 %%DATADIR%%/%%EMACS_VER%%/etc/images/connect.pbm
 %%DATADIR%%/%%EMACS_VER%%/etc/images/connect.xpm
 %%DATADIR%%/%%EMACS_VER%%/etc/images/contact.pbm
@@ -2234,8 +2236,11 @@ share/applications/emacsclient-mail.desktop
 %%DATADIR%%/%%EMACS_VER%%/lisp/international/charscript.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/international/cp51932.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/international/cp51932.elc
+%%DATADIR%%/%%EMACS_VER%%/lisp/international/emoji-labels.el
 %%DATADIR%%/%%EMACS_VER%%/lisp/international/emoji-zwj.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/international/emoji-zwj.elc
+%%DATADIR%%/%%EMACS_VER%%/lisp/international/emoji.el.gz
+%%DATADIR%%/%%EMACS_VER%%/lisp/international/emoji.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/international/eucjp-ms.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/international/eucjp-ms.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/international/fontset.el.gz
@@ -2320,6 +2325,8 @@ share/applications/emacsclient-mail.desktop
 %%DATADIR%%/%%EMACS_VER%%/lisp/jsonrpc.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/kermit.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/kermit.elc
+%%DATADIR%%/%%EMACS_VER%%/lisp/keymap.el.gz
+%%DATADIR%%/%%EMACS_VER%%/lisp/keymap.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/kmacro.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/kmacro.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/language/burmese.el.gz
@@ -3636,6 +3643,8 @@ share/applications/emacsclient-mail.desktop
 %%DATADIR%%/%%EMACS_VER%%/lisp/term/cygwin.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/term/internal.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/term/internal.elc
+%%DATADIR%%/%%EMACS_VER%%/lisp/term/haiku-win.el.gz
+%%DATADIR%%/%%EMACS_VER%%/lisp/term/haiku-win.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/term/iris-ansi.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/term/iris-ansi.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/term/konsole.el.gz
@@ -3700,6 +3709,8 @@ share/applications/emacsclient-mail.desktop
 %%DATADIR%%/%%EMACS_VER%%/lisp/textmodes/fill.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/textmodes/flyspell.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/textmodes/flyspell.elc
+%%DATADIR%%/%%EMACS_VER%%/lisp/textmodes/glyphless-mode.el.gz
+%%DATADIR%%/%%EMACS_VER%%/lisp/textmodes/glyphless-mode.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/textmodes/ispell.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/textmodes/ispell.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/textmodes/less-css-mode.el.gz
@@ -3718,6 +3729,8 @@ share/applications/emacsclient-mail.desktop
 %%DATADIR%%/%%EMACS_VER%%/lisp/textmodes/paragraphs.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/textmodes/picture.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/textmodes/picture.elc
+%%DATADIR%%/%%EMACS_VER%%/lisp/textmodes/pixel-fill.el.gz
+%%DATADIR%%/%%EMACS_VER%%/lisp/textmodes/pixel-fill.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/textmodes/po.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/textmodes/po.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/textmodes/refbib.el.gz
@@ -3992,6 +4005,8 @@ share/applications/emacsclient-mail.desktop
 %%DATADIR%%/%%EMACS_VER%%/lisp/xt-mouse.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/xwidget.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/xwidget.elc
+%%DATADIR%%/%%EMACS_VER%%/lisp/yank-media.el.gz
+%%DATADIR%%/%%EMACS_VER%%/lisp/yank-media.elc
 %%DATADIR%%/%%EMACS_VER%%/site-lisp/subdirs.el
 %%DATADIR%%/site-lisp/subdirs.el
 %%SOURCES%%%%DATADIR%%/%%EMACS_VER%%/site-lisp/site-start.el
@@ -4078,6 +4093,18 @@ share/applications/emacsclient-mail.desktop
 %%SOURCES%%%%DATADIR%%/%%EMACS_VER%%/src/gnutls.h
 %%SOURCES%%%%DATADIR%%/%%EMACS_VER%%/src/gtkutil.c
 %%SOURCES%%%%DATADIR%%/%%EMACS_VER%%/src/gtkutil.h
+%%SOURCES%%%%DATADIR%%/%%EMACS_VER%%/src/haiku.c
+%%SOURCES%%%%DATADIR%%/%%EMACS_VER%%/src/haiku_io.c
+%%SOURCES%%%%DATADIR%%/%%EMACS_VER%%/src/haiku_support.h
+%%SOURCES%%%%DATADIR%%/%%EMACS_VER%%/src/haikufns.c
+%%SOURCES%%%%DATADIR%%/%%EMACS_VER%%/src/haikufont.c
+%%SOURCES%%%%DATADIR%%/%%EMACS_VER%%/src/haikugui.h
+%%SOURCES%%%%DATADIR%%/%%EMACS_VER%%/src/haikuimage.c
+%%SOURCES%%%%DATADIR%%/%%EMACS_VER%%/src/haikumenu.c
+%%SOURCES%%%%DATADIR%%/%%EMACS_VER%%/src/haikuselect.c
+%%SOURCES%%%%DATADIR%%/%%EMACS_VER%%/src/haikuselect.h
+%%SOURCES%%%%DATADIR%%/%%EMACS_VER%%/src/haikuterm.c
+%%SOURCES%%%%DATADIR%%/%%EMACS_VER%%/src/haikuterm.h
 %%SOURCES%%%%DATADIR%%/%%EMACS_VER%%/src/hbfont.c
 %%SOURCES%%%%DATADIR%%/%%EMACS_VER%%/src/image.c
 %%SOURCES%%%%DATADIR%%/%%EMACS_VER%%/src/indent.c

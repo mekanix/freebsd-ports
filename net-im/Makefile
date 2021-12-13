@@ -3,6 +3,7 @@
     SUBDIR += 6cord
     SUBDIR += beebeep
     SUBDIR += biboumi
+    SUBDIR += cawbird
     SUBDIR += centerim
     SUBDIR += chatterino2
     SUBDIR += climm
@@ -114,6 +115,7 @@
     SUBDIR += psi
     SUBDIR += purple-discord
     SUBDIR += purple-facebook
+    SUBDIR += purple-googlechat
     SUBDIR += purple-hangouts
     SUBDIR += purple-mattermost
     SUBDIR += purple-plugin-pack
@@ -180,7 +182,6 @@
     SUBDIR += toxins
     SUBDIR += tut
     SUBDIR += twirssi
-    SUBDIR += twitmail
     SUBDIR += uTox
     SUBDIR += vqcc-gtk
     SUBDIR += xmpp-client

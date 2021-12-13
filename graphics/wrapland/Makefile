@@ -1,6 +1,6 @@
 PORTNAME=	wrapland
 DISTVERSIONPREFIX=	${PORTNAME}@
-DISTVERSION=	0.523.0
+DISTVERSION=	0.523.1
 CATEGORIES=	graphics
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -9,7 +9,8 @@ COMMENT=	Qt/C++ library wrapping libwayland
 LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/COPYING.LIB
 
-BUILD_DEPENDS=	wayland-protocols>=1.22:graphics/wayland-protocols
+BUILD_DEPENDS=	evdev-proto>0:devel/evdev-proto \
+		wayland-protocols>=1.22:graphics/wayland-protocols
 LIB_DEPENDS=	libwayland-client.so:graphics/wayland
 TEST_DEPENDS=	${qt-testlib_PORT:T}>0:${qt-testlib_PORT}
 
@@ -20,7 +21,7 @@ USE_KDE=	ecm_build
 USE_LDCONFIG=	yes
 USE_QT=		qmake_build buildtools_build concurrent core gui
 GL_ACCOUNT=	kwinft
-GL_COMMIT=	d075e49bf723419f7cce0f2fdd4379990bbea26b
+GL_COMMIT=	6a083c7bc9b37c5f756155e258b1fff4d24cea2a
 PLIST_SUB=	VERSION=${PORTVERSION}
 
 OPTIONS_DEFINE=	DOXYGEN

@@ -2,10 +2,11 @@
 
 PORTNAME=	dhcpcd
 DISTVERSION=	9.4.1
+PORTREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	https://roy.marples.name/downloads/dhcpcd/
 
-MAINTAINER=	driesm.michiels@gmail.com
+MAINTAINER=	driesm@FreeBSD.org
 COMMENT=	DHCP/IPv4LL/IPv6RS/DHCPv6 client
 
 LICENSE=	BSD2CLAUSE
@@ -15,17 +16,14 @@ USES=		compiler:c11 cpe tar:xz
 CPE_VENDOR=	dhcpcd_project
 USE_RC_SUBR=	dhcpcd
 
-GNU_CONFIGURE=	yes
+HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--datadir=${PREFIX}/share/examples \
+		--prefix=${PREFIX} \
 		--privsepuser="_dhcp" \
 		--without-udev
 
-CONFLICTS_INSTALL=	dhcpcd-devel
-
 post-install:
-	${MV} ${STAGEDIR}${PREFIX}/etc/dhcpcd.conf \
-		${STAGEDIR}${PREFIX}/share/examples/dhcpcd
+	${MV} ${STAGEDIR}${PREFIX}/etc/dhcpcd.conf ${STAGEDIR}${PREFIX}/etc/dhcpcd.conf.sample
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/sbin/dhcpcd
-	${MKDIR} ${STAGEDIR}/var/db/dhcpcd
 
 .include <bsd.port.mk>

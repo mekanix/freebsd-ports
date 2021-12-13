@@ -1,6 +1,5 @@
 PORTNAME=	ImageMagick
-DISTVERSION=	7.0.11-12
-PORTREVISION=	3
+DISTVERSION=	7.1.0-17
 CATEGORIES=	graphics perl5
 MASTER_SITES=	https://www.imagemagick.org/download/ \
 		https://www.imagemagick.org/download/releases/ \
@@ -174,7 +173,7 @@ X11_CONFIGURE_WITH=	x
 X11_USES=		xorg
 X11_USE=		xorg=ice,sm,x11,xext,xt
 X11_VARS=		CONFLICTS_INSTALL+="ImageMagick7-nox11-* \
-			CONFLICTS+=display-[0-9]*
+			CONFLICTS+=display
 X11_VARS_OFF=		CONFLICTS_INSTALL+="ImageMagick7-*" \
 			PKGNAMESUFFIX=7-nox11
 
