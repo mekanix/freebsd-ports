@@ -1,10 +1,10 @@
 # $FreeBSD$
 
-PORTVERSION=	1.3.0.rc1
+PORTVERSION=	1.3.0.rc2
 PORTREVISION=	0
 PKGNAMESUFFIX=	-stg
 
-GH_TAGNAME=     1.3.0-rc1
+GH_TAGNAME=     1.3.0-rc2
 GH_TUPLE=	\
 		BurntSushi:toml:v0.4.1:burntsushi_toml/vendor/github.com/BurntSushi/toml \
 		beorn7:perks:v1.0.1:beorn7_perks/vendor/github.com/beorn7/perks \
