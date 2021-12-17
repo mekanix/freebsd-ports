@@ -82,6 +82,7 @@ pipeline {
                     net-mgmt/grok_exporter \
                     net-mgmt/iftop \
                     net-mgmt/nfs-exporter \
+                    net-mgmt/pktstat \
                     net-mgmt/py-zfs-exporter \
                     net-mgmt/zabbix5-agent \
                     net/nss-pam-ldapd \
