@@ -1,5 +1,6 @@
 PORTNAME=	openzfs
 PORTVERSION=	2021121500
+PORTREVISION=	1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	sysutils
 
@@ -14,6 +15,9 @@ BROKEN_riscv64=	fails to compile: btree_test.c:462:49: result of comparison of c
 RUN_DEPENDS=	openzfs-kmod>=0:sysutils/openzfs-kmod
 
 USES+=		autoreconf:build cpe libtool gmake gettext-runtime python:3.3+,build shebangfix
+
+# openzfs also installs py-libzfs_core bindings
+CONFLICTS=	${PYTHON_PKGNAMEPREFIX}libzfs_core
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix=${PREFIX} --with-config="user"
