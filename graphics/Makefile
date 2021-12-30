@@ -115,6 +115,7 @@
     SUBDIR += curator
     SUBDIR += cuttlefish
     SUBDIR += darktable
+    SUBDIR += darktable38
     SUBDIR += dataplot
     SUBDIR += dbow2
     SUBDIR += dc20pack
@@ -188,6 +189,7 @@
     SUBDIR += feh
     SUBDIR += fig2sxd
     SUBDIR += figurine
+    SUBDIR += filmulator
     SUBDIR += flam3
     SUBDIR += flasm
     SUBDIR += flif
@@ -195,6 +197,7 @@
     SUBDIR += fly
     SUBDIR += fortytwo
     SUBDIR += fotofix
+    SUBDIR += fotoxx
     SUBDIR += founts
     SUBDIR += fpc-cairo
     SUBDIR += fpc-graph
@@ -493,6 +496,7 @@
     SUBDIR += libreatlas
     SUBDIR += librsvg2
     SUBDIR += librsvg2-rust
+    SUBDIR += librtprocess
     SUBDIR += libsixel
     SUBDIR += libspiro
     SUBDIR += libspng
@@ -763,7 +767,9 @@
     SUBDIR += php74-exif
     SUBDIR += php74-gd
     SUBDIR += php80-exif
+    SUBDIR += php81-exif
     SUBDIR += php80-gd
+    SUBDIR += php81-gd
     SUBDIR += phplot
     SUBDIR += picpuz
     SUBDIR += piddle
@@ -959,6 +965,7 @@
     SUBDIR += reactphysics3d
     SUBDIR += reallyslick
     SUBDIR += realsr-ncnn-vulkan
+    SUBDIR += recastnavigation
     SUBDIR += recoverjpeg
     SUBDIR += renrot
     SUBDIR += repng2jpeg
