@@ -1,5 +1,5 @@
 PORTNAME=	szs-migrator
-PORTVERSION=	0.1.0.20211117
+PORTVERSION=	0.1.0.20220105
 CATEGORIES=	axcient
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -12,7 +12,8 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}yaml>=5.0.0:devel/py-yaml@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}urllib3>=0:net/py-urllib3@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}requests>=0:www/py-requests@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}simplejson>=0:devel/py-simplejson@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}atomicwrites>=0:devel/py-atomicwrites@${PY_FLAVOR}
+		${PYTHON_PKGNAMEPREFIX}atomicwrites>=0:devel/py-atomicwrites@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}libzfs_core>=0:devel/py-libzfs_core@${PY_FLAVOR}
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest>=0:devel/py-pytest@${PY_FLAVOR}
 
 USES=		axcient python
@@ -23,7 +24,7 @@ SUB_FILES=	900.szs-audit
 NO_ARCH=	yes
 
 GH_PROJECT=	replibit-tools
-GH_TAGNAME=	fbbd3842bade007a6f329991a1f835523a227e65
+GH_TAGNAME=	c0e0d18d341ef93f34cfeea0cbd67fb51703633a
 
 PLIST_FILES+=	etc/periodic/weekly/900.szs-audit
 
