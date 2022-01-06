@@ -193,8 +193,8 @@ pipeline {
                 sh 'cd axcient/szs-dev; make fetch'
                 sh 'cd axcient/vt2-dev; make fetch'
 
-                sh "sudo poudriere bulk -j 12_2-AXCIENT1_amd64 -p ${PNAME} axcient/${env.devPackage}"
                 sh "sudo poudriere bulk -j 13_0-AXCIENT1_amd64 -p ${PNAME} axcient/${env.devPackage}"
+                sh "sudo poudriere bulk -j 12_2-AXCIENT1_amd64 -p ${PNAME} axcient/${env.devPackage}"
             }
         }
     }
