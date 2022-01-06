@@ -12,7 +12,8 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}yaml>=5.0.0:devel/py-yaml@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}urllib3>=0:net/py-urllib3@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}requests>=0:www/py-requests@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}simplejson>=0:devel/py-simplejson@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}atomicwrites>=0:devel/py-atomicwrites@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}atomicwrites>=0:devel/py-atomicwrites@${PY_FLAVOR}
+PROMETHEUS_RUN_DEPENDS=	\
 		${PYTHON_PKGNAMEPREFIX}libzfs_core>=0:devel/py-libzfs_core@${PY_FLAVOR}
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest>=0:devel/py-pytest@${PY_FLAVOR}
 
@@ -20,6 +21,12 @@ USES=		axcient python
 USE_PYTHON=	autoplist distutils
 WRKSRC_SUBDIR=	szs/maintenance-tool
 SUB_FILES=	900.szs-audit
+
+OPTIONS_DEFINE=		PROMETHEUS
+OPTIONS_DEFAULT=	PROMETHEUS
+PROMETHEUS_DESC=	Export migration status with Prometheus
+
+.include <bsd.port.options.mk>
 
 NO_ARCH=	yes
 
