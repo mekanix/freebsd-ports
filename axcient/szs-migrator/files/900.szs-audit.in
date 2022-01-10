@@ -38,7 +38,7 @@ case "$weekly_szs_audit_enable" in
 				continue
 			fi
 			orm=`echo $ds | awk -F "/" '{print $NF}'`
-			owner=`%%LOCALBASE%%/bin/szs-dataset-info -c -o $orm resource 2>/dev/null | sed -E -e 's/.*: //'`
+			owner=`%%LOCALBASE%%/bin/szs-dataset-info -c -o $orm resource 2>/dev/null | awk '/Associated resource/ {print $NF}'
 			if [ $? -ne 0 -o -z "$owner" ]; then
 				echo "Unknown dataset $ds"
 				orphaned_data=$(( $orphaned_data + `/sbin/zfs list -Hpo used $ds`))
