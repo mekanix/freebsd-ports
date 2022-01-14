@@ -98,6 +98,7 @@ pipeline {
                     shells/ksh93 \
                     sysutils/beats6 \
                     sysutils/bpytop \
+                    sysutils/dd_rescue \
                     sysutils/dmidecode \
                     sysutils/dtrace-toolkit \
                     sysutils/fusefs-encfs \
