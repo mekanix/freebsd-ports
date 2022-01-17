@@ -75,7 +75,7 @@ pipeline {
                     devel/uclcmd \
                     editors/nano \
                     editors/vim \
-                    emulators/qemu-utils \
+                    emulators/qemu@tools \
                     lang/expect \
                     mail/ssmtp \
                     misc/mbuffer \
