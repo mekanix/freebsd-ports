@@ -19,8 +19,8 @@ CMAKE_ARGS+=	-DCMAKE_VERBOSE_MAKEFILE=ON -DUSE_FAST_SPARSE=OFF
 
 do-install:
 	echo "Installing"
-	${INSTALL} ${WRKDIR}/vdisk-fuse/vdisk-fuse ${STAGEDIR}${PREFIX}/bin/vdisk-fuse
-	${INSTALL} ${WRKDIR}/src/libvdisk.so ${STAGEDIR}${PREFIX}/lib/libvdisk.so
+	${INSTALL} ${WRKDIR}/vdisk-fuse/vdisk-fuse ${STAGEDIR}${PREFIX}/usr/bin/vdisk-fuse
+	${INSTALL} ${WRKDIR}/src/libvdisk.so ${STAGEDIR}${PREFIX}/usr/lib/libvdisk.so
 
 .include <bsd.port.mk>
 
