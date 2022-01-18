@@ -58,6 +58,7 @@ pipeline {
                     axcient/szs \
                     axcient/szs-stg \
                     axcient/szs-migrator \
+                    axcient/vdisk-fuse \
                     axcient/vt2 \
                     axcient/vt2-stg \
                     benchmarks/fio \
@@ -166,6 +167,7 @@ pipeline {
                 sh 'cd axcient/szs; make fetch'
                 sh 'cd axcient/szs-stg; make fetch'
                 sh 'cd axcient/szs-migrator; make fetch'
+                sh 'cd axcient/vdisk-fuse; make fetch'
                 sh 'cd axcient/vt2; make fetch'
                 sh 'cd axcient/vt2-stg; make fetch'
                 sh 'cd net-mgmt/py-zfs-exporter; make fetch'
