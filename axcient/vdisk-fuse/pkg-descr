@@ -1,1 +1,2 @@
-Vdisk-fuse is utility to wrap blockdevice to disk images format. This package provides binary and related library for this utility, compiled for FreeBSD.
+Vdisk-fuse is utility to wrap blockdevice to disk images format. This package 
+provides binary and related library for this utility, compiled for FreeBSD.

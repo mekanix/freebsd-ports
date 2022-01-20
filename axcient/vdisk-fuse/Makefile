@@ -1,17 +1,16 @@
 # $FreeBSD$
 
 PORTNAME=	vdisk-fuse
-DISTVERSION?=	1.0.4.5
-PORTREVISION?=	0
+DISTVERSION=	1.0.4.5
 CATEGORIES=	axcient sysutils
 MASTER_SITES=	GH
 
 MAINTAINER=	abuluy@axcient.com
-COMMENT?=	Vdisk-fuse is utility to wrap blockdevice to disk images format.
+COMMENT=	Vdisk-fuse is utility to wrap blockdevice to disk images format.
 
 USES=		axcient fuse cmake pkgconfig
 GH_PROJECT=	vdisk-fuse
-GH_TAGNAME?=	${PORTVERSION}
+GH_TAGNAME=	${PORTVERSION}
 
 CMAKE_ARGS+=	-DCMAKE_VERBOSE_MAKEFILE=ON -DUSE_FAST_SPARSE=OFF
 PLIST_FILES=    bin/vdisk-fuse \
@@ -23,4 +22,3 @@ do-install:
 	${INSTALL} ${WRKDIR}/.build/src/libvdisk.so ${STAGEDIR}${PREFIX}/lib/libvdisk.so
 
 .include <bsd.port.mk>
-
