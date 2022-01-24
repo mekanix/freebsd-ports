@@ -28,6 +28,7 @@
     SUBDIR += szs-dev    
     SUBDIR += szs-stg
     SUBDIR += szs-migrator
+    SUBDIR += vdisk-fuse
     SUBDIR += vt2
     SUBDIR += vt2-dev    
     SUBDIR += vt2-stg
