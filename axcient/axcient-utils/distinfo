@@ -1,3 +1,3 @@
-TIMESTAMP = 1638208185
-SHA256 (Axcient-freebsd-utils-1.0.0.20211129-be2f01b44441180ddb7c6aae0f7c2da363afb8d6_GH0.tar.gz) = 991a29d955f7327c52324c9e8847f76789ad05c8a9d9e6b096745db906392351
-SIZE (Axcient-freebsd-utils-1.0.0.20211129-be2f01b44441180ddb7c6aae0f7c2da363afb8d6_GH0.tar.gz) = 10257
+TIMESTAMP = 1643212010
+SHA256 (Axcient-freebsd-utils-1.0.0.20220125-55e9c84f5a7aaf2f33f878ce82b9e48d7f96f4d8_GH0.tar.gz) = 6b223f9b136bb704816f53c65c0d4f0bb0aa44ff2bfe2e02ebeaa98800cfedc3
+SIZE (Axcient-freebsd-utils-1.0.0.20220125-55e9c84f5a7aaf2f33f878ce82b9e48d7f96f4d8_GH0.tar.gz) = 10533
