@@ -277,7 +277,6 @@
     SUBDIR += kpkpass
     SUBDIR += kpmenu
     SUBDIR += krb5
-    SUBDIR += krb5-117
     SUBDIR += krb5-118
     SUBDIR += krb5-119
     SUBDIR += krb5-appl
@@ -365,6 +364,7 @@
     SUBDIR += maltrail
     SUBDIR += manipulate_data
     SUBDIR += masscan
+    SUBDIR += mate-pam-helper
     SUBDIR += matrixssl
     SUBDIR += mbedtls
     SUBDIR += mcrypt
@@ -383,7 +383,6 @@
     SUBDIR += munge
     SUBDIR += mussh
     SUBDIR += n2n
-    SUBDIR += nacl
     SUBDIR += ncrack
     SUBDIR += ncrypt
     SUBDIR += nebula
@@ -406,7 +405,6 @@
     SUBDIR += nyx
     SUBDIR += oath-toolkit
     SUBDIR += obfs4proxy-tor
-    SUBDIR += obfsclient
     SUBDIR += ocaml-cryptgps
     SUBDIR += ocaml-cryptokit
     SUBDIR += ocaml-ssl
@@ -506,6 +504,7 @@
     SUBDIR += p5-Crypt-Anubis
     SUBDIR += p5-Crypt-AppleTwoFish
     SUBDIR += p5-Crypt-Argon2
+    SUBDIR += p5-Crypt-Bcrypt
     SUBDIR += p5-Crypt-Blowfish
     SUBDIR += p5-Crypt-Blowfish_PP
     SUBDIR += p5-Crypt-CAST5
@@ -799,18 +798,14 @@
     SUBDIR += pgpdump
     SUBDIR += pgpgpg
     SUBDIR += pgpin
-    SUBDIR += php73-filter
-    SUBDIR += php73-hash
-    SUBDIR += php73-openssl
-    SUBDIR += php73-sodium
     SUBDIR += php74-filter
     SUBDIR += php74-openssl
     SUBDIR += php74-sodium
     SUBDIR += php80-filter
-    SUBDIR += php81-filter
     SUBDIR += php80-openssl
-    SUBDIR += php81-openssl
     SUBDIR += php80-sodium
+    SUBDIR += php81-filter
+    SUBDIR += php81-openssl
     SUBDIR += php81-sodium
     SUBDIR += phpsecinfo
     SUBDIR += picosha2
@@ -1075,7 +1070,6 @@
     SUBDIR += rubygem-bcrypt
     SUBDIR += rubygem-bcrypt-ruby
     SUBDIR += rubygem-bcrypt_pbkdf
-    SUBDIR += rubygem-bcrypt_pbkdf10
     SUBDIR += rubygem-cose
     SUBDIR += rubygem-declarative_policy
     SUBDIR += rubygem-devise-two-factor
@@ -1083,12 +1077,14 @@
     SUBDIR += rubygem-devise-two-factor-rails60
     SUBDIR += rubygem-devise-two-factor-rails61
     SUBDIR += rubygem-devise_pam_authenticatable2
+    SUBDIR += rubygem-digest
     SUBDIR += rubygem-digest-crc
     SUBDIR += rubygem-doorkeeper
     SUBDIR += rubygem-doorkeeper-openid_connect
     SUBDIR += rubygem-doorkeeper-rails5
     SUBDIR += rubygem-doorkeeper-rails50
     SUBDIR += rubygem-ed25519
+    SUBDIR += rubygem-ed2551912
     SUBDIR += rubygem-encryptor
     SUBDIR += rubygem-ezcrypto
     SUBDIR += rubygem-googleauth
@@ -1184,6 +1180,7 @@
     SUBDIR += rubygem-tpm-key_attestation
     SUBDIR += rubygem-twitter_oauth
     SUBDIR += rubygem-unix-crypt
+    SUBDIR += rubygem-vault
     SUBDIR += rubygem-webauthn
     SUBDIR += rubygem-webpush
     SUBDIR += rustscan
@@ -1304,7 +1301,6 @@
     SUBDIR += tripwire
     SUBDIR += tripwire-131
     SUBDIR += trousers
-    SUBDIR += truecrypt
     SUBDIR += tthsum
     SUBDIR += u2f-devd
     SUBDIR += uacme

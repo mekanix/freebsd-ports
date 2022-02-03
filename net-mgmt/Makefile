@@ -45,6 +45,7 @@
     SUBDIR += check_ups_health
     SUBDIR += chillispot
     SUBDIR += choparp
+    SUBDIR += chronograf
     SUBDIR += cidr
     SUBDIR += ciscoconf
     SUBDIR += clog
@@ -214,7 +215,6 @@
     SUBDIR += openlldp
     SUBDIR += openvmps
     SUBDIR += p0f
-    SUBDIR += p0f2
     SUBDIR += p5-AnyEvent-SNMP
     SUBDIR += p5-BigIP-iControl
     SUBDIR += p5-Cflow
@@ -279,7 +279,6 @@
     SUBDIR += percona-monitoring-plugins
     SUBDIR += pftabled
     SUBDIR += php-fpm_exporter
-    SUBDIR += php73-snmp
     SUBDIR += php74-snmp
     SUBDIR += php80-snmp
     SUBDIR += php81-snmp
@@ -382,7 +381,6 @@
     SUBDIR += torrus
     SUBDIR += triton-guesttools
     SUBDIR += unbound_exporter
-    SUBDIR += unifi-poller
     SUBDIR += unifi6
     SUBDIR += victoria-metrics
     SUBDIR += virt-viewer

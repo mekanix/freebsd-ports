@@ -39,6 +39,7 @@ include/folly/FileUtil.h
 include/folly/Fingerprint.h
 include/folly/FixedString.h
 include/folly/FollyMemcpy.h
+include/folly/FollyMemset.h
 include/folly/Format-inl.h
 include/folly/Format.h
 include/folly/FormatArg.h
@@ -307,8 +308,6 @@ include/folly/experimental/coro/Concat-inl.h
 include/folly/experimental/coro/Concat.h
 include/folly/experimental/coro/Coroutine.h
 include/folly/experimental/coro/CurrentExecutor.h
-include/folly/experimental/coro/Dematerialize-inl.h
-include/folly/experimental/coro/Dematerialize.h
 include/folly/experimental/coro/DetachOnCancel.h
 include/folly/experimental/coro/Filter-inl.h
 include/folly/experimental/coro/Filter.h
@@ -317,12 +316,8 @@ include/folly/experimental/coro/Generator.h
 include/folly/experimental/coro/GmockHelpers.h
 include/folly/experimental/coro/GtestHelpers.h
 include/folly/experimental/coro/Invoke.h
-include/folly/experimental/coro/Materialize-inl.h
-include/folly/experimental/coro/Materialize.h
 include/folly/experimental/coro/Merge-inl.h
 include/folly/experimental/coro/Merge.h
-include/folly/experimental/coro/Multiplex-inl.h
-include/folly/experimental/coro/Multiplex.h
 include/folly/experimental/coro/Mutex.h
 include/folly/experimental/coro/Promise.h
 include/folly/experimental/coro/Result.h
@@ -569,7 +564,6 @@ include/folly/json_patch.h
 include/folly/json_pointer.h
 include/folly/lang/Align.h
 include/folly/lang/Aligned.h
-include/folly/lang/Assume-inl.h
 include/folly/lang/Assume.h
 include/folly/lang/Badge.h
 include/folly/lang/Bits.h
@@ -581,6 +575,8 @@ include/folly/lang/CheckedMath.h
 include/folly/lang/CustomizationPoint.h
 include/folly/lang/Exception.h
 include/folly/lang/Extern.h
+include/folly/lang/Hint-inl.h
+include/folly/lang/Hint.h
 include/folly/lang/Keep.h
 include/folly/lang/Launder.h
 include/folly/lang/New.h

@@ -46,6 +46,7 @@
     SUBDIR += ansible-sshjail
     SUBDIR += ansible-sysrc
     SUBDIR += ansible2
+    SUBDIR += ansible4
     SUBDIR += anvil
     SUBDIR += apache-mesos
     SUBDIR += apachetop
@@ -100,6 +101,9 @@
     SUBDIR += bareos19-client
     SUBDIR += bareos19-server
     SUBDIR += bareos19-traymonitor
+    SUBDIR += bareos20-client
+    SUBDIR += bareos20-server
+    SUBDIR += bareos20-traymonitor
     SUBDIR += barrier
     SUBDIR += bashtop
     SUBDIR += bastille
@@ -951,13 +955,11 @@
     SUBDIR += pfstat
     SUBDIR += pftables
     SUBDIR += pftop
-    SUBDIR += php73-fileinfo
-    SUBDIR += php73-posix
     SUBDIR += php74-fileinfo
     SUBDIR += php74-posix
     SUBDIR += php80-fileinfo
-    SUBDIR += php81-fileinfo
     SUBDIR += php80-posix
+    SUBDIR += php81-fileinfo
     SUBDIR += php81-posix
     SUBDIR += phybs
     SUBDIR += pick
@@ -1015,6 +1017,7 @@
     SUBDIR += pxp-agent
     SUBDIR += py-ansible-base
     SUBDIR += py-ansible-core
+    SUBDIR += py-ansible-core211
     SUBDIR += py-ansible-lint
     SUBDIR += py-ansible-runner
     SUBDIR += py-azure-cli
@@ -1045,6 +1048,7 @@
     SUBDIR += py-honcho
     SUBDIR += py-hpilo
     SUBDIR += py-iowait
+    SUBDIR += py-ioztat
     SUBDIR += py-jailconf
     SUBDIR += py-leviathan
     SUBDIR += py-liquidctl
@@ -1061,6 +1065,7 @@
     SUBDIR += py-psutil
     SUBDIR += py-psutil121
     SUBDIR += py-ptyprocess
+    SUBDIR += py-puremagic
     SUBDIR += py-py-cpuinfo
     SUBDIR += py-python-consul
     SUBDIR += py-python-consul2
@@ -1248,7 +1253,6 @@
     SUBDIR += samdruckerclientshell
     SUBDIR += samefile
     SUBDIR += samesame
-    SUBDIR += sample
     SUBDIR += sanoid
     SUBDIR += sanoid-devel
     SUBDIR += sas2flash

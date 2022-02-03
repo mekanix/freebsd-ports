@@ -11,6 +11,9 @@ COMMENT=	PHP Scripting Language
 
 LICENSE=	PHP301
 
+DEPRECATED=Upstream Security Support ends on 2022-11-28
+EXPIRATION_DATE=2022-11-29
+
 USES+=		compiler:c11 tar:xz cpe gnome pkgconfig
 CPE_PRODUCT=	php
 NO_OPTIONS_SORT=yes
@@ -32,6 +35,8 @@ USE_GNOME=	libxml2
 
 # PR230207 Allow relocations against read-only segments (override lld default)
 LDFLAGS_i386=	-Wl,-z,notext
+
+CONFLICTS_INSTALL=	php[0-9][0-9]${PKGNAMESUFFIX}
 
 OPTIONS_DEFINE+=CLI CGI FPM EMBED PHPDBG DEBUG DTRACE IPV6 MYSQLND LINKTHR ZTS
 OPTIONS_DEFAULT=CLI CGI FPM EMBED MYSQLND LINKTHR DTRACE
@@ -79,8 +84,6 @@ PHPDBG_CONFIGURE_ON=--enable-phpdbg
 PHPDBG_VARS=	PHP_SAPI+=phpdbg
 ZTS_CONFIGURE_ENV=	pthreads_working="yes"
 ZTS_CONFIGURE_ON=--enable-maintainer-zts
-
-CONFLICTS=	php73 php80
 
 DESTDIRNAME=	INSTALL_ROOT
 

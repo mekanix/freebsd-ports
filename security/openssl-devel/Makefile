@@ -2,7 +2,7 @@
 
 PORTNAME=	openssl
 DISTVERSION=	3.0.1
-PORTREVISIO=	1
+PORTREVISION=	1
 CATEGORIES=	security devel
 MASTER_SITES=	https://www.openssl.org/source/ \
 		ftp://ftp.cert.dfn.de/pub/tools/net/openssl/source/
@@ -18,7 +18,7 @@ COMMENT=	TLSv1.3 capable SSL and crypto library
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-CONFLICTS_INSTALL=	libressl libressl-devel openssl
+CONFLICTS_INSTALL=	boringssl libressl libressl-devel openssl openssl-quictls
 
 HAS_CONFIGURE=	yes
 CONFIGURE_SCRIPT=	config

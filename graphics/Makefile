@@ -78,10 +78,12 @@
     SUBDIR += blender
     SUBDIR += blender-doc
     SUBDIR += blender-lts28
+    SUBDIR += blender-lts29
     SUBDIR += bmeps
     SUBDIR += bmp2html
     SUBDIR += bonzomatic
     SUBDIR += box
+    SUBDIR += brunsli
     SUBDIR += bsd-plotutils
     SUBDIR += c-a-i-r
     SUBDIR += cadubi
@@ -264,6 +266,7 @@
     SUBDIR += gimp-resynthesizer
     SUBDIR += gkrellkam2
     SUBDIR += glad
+    SUBDIR += glaxnimate
     SUBDIR += gle
     SUBDIR += glee
     SUBDIR += glew
@@ -490,10 +493,8 @@
     SUBDIR += libprojectm
     SUBDIR += libpuzzle
     SUBDIR += libqrencode
-    SUBDIR += librasterlite
     SUBDIR += librasterlite2
     SUBDIR += libraw
-    SUBDIR += libreatlas
     SUBDIR += librsvg2
     SUBDIR += librsvg2-rust
     SUBDIR += librtprocess
@@ -543,6 +544,7 @@
     SUBDIR += mapcache
     SUBDIR += mapserver
     SUBDIR += mapyrus
+    SUBDIR += matplotplusplus
     SUBDIR += megapov
     SUBDIR += meh
     SUBDIR += mesa-demos
@@ -589,6 +591,7 @@
     SUBDIR += opencollada
     SUBDIR += opencolorio
     SUBDIR += opencolorio-tools
+    SUBDIR += opencoloriov1
     SUBDIR += opencsg
     SUBDIR += opencv
     SUBDIR += opendx
@@ -599,6 +602,7 @@
     SUBDIR += opengv
     SUBDIR += openicc-config
     SUBDIR += openimageio
+    SUBDIR += openimageio-ociov1
     SUBDIR += openjpeg
     SUBDIR += openjpeg15
     SUBDIR += openjph
@@ -762,13 +766,11 @@
     SUBDIR += phototonic
     SUBDIR += php-facedetect
     SUBDIR += php-geos
-    SUBDIR += php73-exif
-    SUBDIR += php73-gd
     SUBDIR += php74-exif
     SUBDIR += php74-gd
     SUBDIR += php80-exif
-    SUBDIR += php81-exif
     SUBDIR += php80-gd
+    SUBDIR += php81-exif
     SUBDIR += php81-gd
     SUBDIR += phplot
     SUBDIR += picpuz
@@ -906,7 +908,6 @@
     SUBDIR += py-pyvips
     SUBDIR += py-pyx
     SUBDIR += py-qrencode
-    SUBDIR += py-qt5-svg
     SUBDIR += py-railroad-diagrams
     SUBDIR += py-rasterio
     SUBDIR += py-rasterstats
@@ -955,7 +956,6 @@
     SUBDIR += quesoglc
     SUBDIR += quickqanava
     SUBDIR += qvge
-    SUBDIR += radiance
     SUBDIR += radius-engine
     SUBDIR += rapid-photo-downloader
     SUBDIR += raster3d
@@ -1000,6 +1000,7 @@
     SUBDIR += rubygem-imagesize
     SUBDIR += rubygem-invisible_captcha
     SUBDIR += rubygem-mini_magick
+    SUBDIR += rubygem-mini_magick410
     SUBDIR += rubygem-objectdetect
     SUBDIR += rubygem-opengl
     SUBDIR += rubygem-pdfkit

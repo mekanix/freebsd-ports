@@ -1,5 +1,5 @@
 PORTNAME=	php81
-DISTVERSION=	8.1.1
+DISTVERSION=	8.1.2
 PORTREVISION?=	0
 CATEGORIES?=	lang devel www
 MASTER_SITES=	PHP/distributions
@@ -35,7 +35,7 @@ CPPFLAGS=	-I${LOCALBASE}/include
 # PR230207 Allow relocations against read-only segments (override lld default)
 LDFLAGS_i386=	-Wl,-z,notext
 
-CONFLICTS=	php73 php74 php80
+CONFLICTS_INSTALL=	php[0-9][0-9]${PKGNAMESUFFIX}
 
 OPTIONS_DEFINE+=		CGI CLI DEBUG DTRACE EMBED FPM IPV6 LINKTHR \
 				MYSQL80 MYSQLND PHPDBG ZTS
@@ -176,7 +176,7 @@ COMMENT=	The ${PHP_MODNAME} shared extension for php
 USES+=		php:ext,noflavors
 PHP_MODNAME=	${PKGNAMESUFFIX:S/-//}
 PHP_VER=	81
-IGNORE_WITH_PHP=	72 73 74 80
+IGNORE_WITH_PHP=	74 80
 
 EXTSUBDIR=	${DISTNAME}/ext/${PHP_MODNAME}
 WRKSRC=		${WRKDIR}/${EXTSUBDIR}
@@ -264,19 +264,17 @@ CONFIGURE_ARGS+=	--enable-exif
 
 .if ${PHP_MODNAME} == "ffi"
 LIB_DEPENDS=		libffi.so:devel/libffi
-CONFIGURE_ARGS+=	--enable-ffi
+CONFIGURE_ARGS+=	--with-ffi
 .endif
 
 .if ${PHP_MODNAME} == "fileinfo"
-CONFIGURE_ARGS+=	--enable-fileinfo \
-			--with-pcre-dir=${LOCALBASE}
+CONFIGURE_ARGS+=	--enable-fileinfo
 
 PHP_HEADER_DIRS=	libmagic
 .endif
 
 .if ${PHP_MODNAME} == "filter"
-CONFIGURE_ARGS+=	--enable-filter \
-			--with-pcre-dir=${LOCALBASE}
+CONFIGURE_ARGS+=	--enable-filter
 .endif
 
 .if ${PHP_MODNAME} == "ftp"
@@ -344,8 +342,7 @@ PANDA_LIB_DEPENDS=	libc-client4.so.10:mail/panda-cclient
 PANDA_LIB_DEPENDS_OFF=	libc-client4.so.9:mail/cclient
 
 CONFIGURE_ARGS+=	--with-imap-ssl=${OPENSSLBASE} \
-			--with-imap=${LOCALBASE} \
-			--with-pcre-dir=${LOCALBASE}
+			--with-imap=${LOCALBASE}
 
 CONFIGURE_ENV+=	OPENSSL_CFLAGS="-I${OPENSSLINC}" \
 		OPENSSL_LIBS="-L${OPENSSLLIB} -lssl -lcrypto" \
@@ -375,15 +372,13 @@ USE_OPENLDAP=	yes
 
 .if ${PHP_MODNAME} == "mbstring"
 
-CONFIGURE_ARGS+=	--enable-mbstring \
-			--with-pcre-dir=${LOCALBASE}
+CONFIGURE_ARGS+=	--enable-mbstring
 
 OPTIONS_DEFINE=		REGEX
 OPTIONS_DEFAULT=	REGEX
 
 REGEX_DESC=		Enable multibyte regex support
 REGEX_LIB_DEPENDS=	libonig.so:devel/oniguruma
-REGEX_CONFIGURE_ON=	--with-onig=${LOCALBASE}
 REGEX_CONFIGURE_OFF=	--disable-mbregex
 
 PHP_HEADER_DIRS=	libmbfl libmbfl/filters libmbfl/mbfl libmbfl/nls
@@ -417,7 +412,6 @@ CONFIGURE_ENV+=		OPENSSL_CFLAGS="-I${OPENSSLINC}" \
 # This is needed by Zend extensions, keep before everything.
 PHP_MOD_PRIO=		10
 CONFIGURE_ARGS+=	--enable-opcache
-USES+=			localbase php:zend
 .endif
 
 .if ${PHP_MODNAME} == "pcntl"
@@ -489,8 +483,7 @@ CONFIGURE_ARGS+=	--with-pgsql=${LOCALBASE}
 .endif
 
 .if ${PHP_MODNAME} == "phar"
-CONFIGURE_ARGS+=	--enable-phar \
-			--with-pcre-dir=${LOCALBASE}
+CONFIGURE_ARGS+=	--enable-phar
 .endif
 
 .if ${PHP_MODNAME} == "posix"
@@ -518,16 +511,14 @@ CONFIGURE_ARGS+=	--enable-shmop
 .endif
 
 .if ${PHP_MODNAME} == "simplexml"
-CONFIGURE_ARGS+=	--enable-simplexml \
-			--with-pcre-dir=${LOCALBASE}
+CONFIGURE_ARGS+=	--enable-simplexml
 
 USES+=		pkgconfig
 USE_GNOME=	libxml2
 .endif
 
 .if ${PHP_MODNAME} == "snmp"
-CONFIGURE_ARGS+=	--with-openssl-dir=${OPENSSLBASE} \
-			--with-snmp=${LOCALBASE}
+CONFIGURE_ARGS+=	--with-snmp=${LOCALBASE}
 
 CONFIGURE_ENV+=	ac_cv_buggy_snprint_value="no"
 
@@ -623,9 +614,7 @@ USE_PHP=	dom:build xml:build
 .if ${PHP_MODNAME} == "zip"
 LIB_DEPENDS+=	libzip.so:archivers/libzip
 
-CONFIGURE_ARGS+=	--enable-zip \
-			--with-libzip=${LOCALBASE} \
-			--with-pcre-dir=${LOCALBASE} \
+CONFIGURE_ARGS+=	--with-zip \
 			--with-zlib-dir=/usr
 USES+=			pkgconfig
 .endif
