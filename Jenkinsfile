@@ -134,7 +134,6 @@ pipeline {
                     net/samba413 \
                     net/wireshark \
                     ports-mgmt/poudriere \
-                    sysutils/fusefs-ntfs \
                     www/nginx \
                     '
                 // Ports that need to be rebuilt for every minor version of the
