@@ -132,6 +132,7 @@ pipeline {
                     misc/compat12x \
                     net/cloud-init \
                     net/samba413 \
+                    net/wireshark \
                     ports-mgmt/poudriere \
                     sysutils/fusefs-ntfs \
                     www/nginx \
