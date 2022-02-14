@@ -100,6 +100,7 @@
     SUBDIR += chafa
     SUBDIR += charls
     SUBDIR += cimg
+    SUBDIR += cloudcompare
     SUBDIR += clutter
     SUBDIR += clutter-gtk3
     SUBDIR += cluttermm
@@ -115,6 +116,7 @@
     SUBDIR += cptutils
     SUBDIR += crw
     SUBDIR += curator
+    SUBDIR += curtail
     SUBDIR += cuttlefish
     SUBDIR += darktable
     SUBDIR += darktable38
@@ -267,6 +269,7 @@
     SUBDIR += gkrellkam2
     SUBDIR += glad
     SUBDIR += glaxnimate
+    SUBDIR += glbinding
     SUBDIR += gle
     SUBDIR += glee
     SUBDIR += glew
@@ -409,6 +412,7 @@
     SUBDIR += klatexformula
     SUBDIR += kludge3d
     SUBDIR += kmscube
+    SUBDIR += knotter
     SUBDIR += kolourpaint
     SUBDIR += kontrast
     SUBDIR += kooka

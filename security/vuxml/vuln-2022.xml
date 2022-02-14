@@ -1,3 +1,240 @@
+  <vuln vid="24049967-88ec-11ec-88f5-901b0e934d69">
+    <topic>py-twisted -- cookie and authorization headers are leaked when following cross-origin redirects</topic>
+      <affects>
+	<package>
+	  <name>py37-twisted</name>
+	  <name>py38-twisted</name>
+	  <name>py39-twisted</name>
+	  <name>py310-twisted</name>
+	  <range><lt>22.1.0</lt></range>
+	</package>
+      </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Twisted developers report:</p>
+	<blockquote cite="https://github.com/twisted/twisted/security/advisories/GHSA-92x2-jw7w-xvvx">
+	  <p> Cookie and Authorization headers are leaked when following cross-origin redirects in <code>twited.web.client.RedirectAgent</code> and <code>twisted.web.client.BrowserLikeRedirectAgent</code>.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://github.com/twisted/twisted/security/advisories/GHSA-92x2-jw7w-xvvx</url>
+    </references>
+    <dates>
+      <discovery>2022-02-07</discovery>
+      <entry>2022-02-13</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="d923fb0c-8c2f-11ec-aa85-0800270512f4">
+    <topic>zsh -- Arbitrary command execution vulnerability</topic>
+    <affects>
+      <package>
+	<name>zsh</name>
+	<range><lt>5.8.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p> Marc Cornellà reports:</p>
+	<blockquote cite="https://zsh.sourceforge.io/releases.html">
+	  <p>
+	    Some prompt expansion sequences, such as %F, support 'arguments'
+	    which are themselves expanded in case they contain colour values,
+	    etc. This additional expansion would trigger PROMPT_SUBST evaluation,
+	    if enabled. This could be abused to execute code the user didn't
+	    expect. e.g., given a certain prompt configuration, an attacker
+	    could trick a user into executing arbitrary code by having them
+	    check out a Git branch with a specially crafted name.
+	  </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-45444</cvename>
+      <url>https://zsh.sourceforge.io/releases.html</url>
+    </references>
+    <dates>
+      <discovery>2022-02-12</discovery>
+      <entry>2022-02-12</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="0b0ad196-1ee8-4a98-89b1-4d5d82af49a9">
+    <topic>jenkins -- DoS vulnerability in bundled XStream library</topic>
+    <affects>
+      <package>
+	<name>jenkins</name>
+	<range><lt>2.334</lt></range>
+      </package>
+      <package>
+	<name>jenkins-lts</name>
+	<range><lt>2.319.3</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Jenkins Security Advisory:</p>
+	<blockquote cite="https://www.jenkins.io/security/advisory/2022-02-09/">
+	  <h1>Description</h1>
+	  <h5>(Medium) SECURITY-2602 / CVE-2021-43859 (upstream issue), CVE-2022-0538 (Jenkins-specific converters)</h5>
+	  <p>DoS vulnerability in bundled XStream library</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-43859</cvename>
+      <cvename>CVE-2022-0538</cvename>
+      <url>https://www.jenkins.io/security/advisory/2022-02-09/</url>
+    </references>
+    <dates>
+      <discovery>2022-02-09</discovery>
+      <entry>2022-02-10</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="ff5606f7-8a45-11ec-8be6-d4c9ef517024">
+    <topic>MariaDB -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>mariadb103-client</name>
+	<range><lt>10.3.33</lt></range>
+      </package>
+      <package>
+	<name>mariadb103-server</name>
+	<range><lt>10.3.33</lt></range>
+      </package>
+      <package>
+	<name>mariadb104-client</name>
+	<range><lt>10.4.23</lt></range>
+      </package>
+      <package>
+	<name>mariadb104-server</name>
+	<range><lt>10.4.23</lt></range>
+      </package>
+      <package>
+	<name>mariadb105-client</name>
+	<range><lt>10.5.14</lt></range>
+      </package>
+      <package>
+	<name>mariadb105-server</name>
+	<range><lt>10.5.14</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>MariaDB reports:</p>
+	<blockquote cite="https://mariadb.com/kb/en/cve/">
+	  <p>MariaDB reports 5 vulnerabilities in supported versions
+	    without further detailed information.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-24052</cvename>
+      <cvename>CVE-2022-24051</cvename>
+      <cvename>CVE-2022-24050</cvename>
+      <cvename>CVE-2022-24048</cvename>
+      <cvename>CVE-2021-46659</cvename>
+      <url>https://mariadb.com/kb/en/cve/</url>
+      <url>https://mariadb.com/kb/en/mdb-10333-rn/</url>
+      <url>https://mariadb.com/kb/en/mdb-10423-rn/</url>
+      <url>https://mariadb.com/kb/en/mdb-10514-rn/</url>
+    </references>
+    <dates>
+      <discovery>2022-02-10</discovery>
+      <entry>2022-02-10</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="fc2a9541-8893-11ec-9d01-80ee73419af3">
+    <topic>xrdp -- privilege escalation</topic>
+    <affects>
+      <package>
+	<name>xrdp</name>
+	<range><lt>0.9.18.1,1</lt><ge>0.9.17,1</ge></range>
+      </package>
+      <package>
+	<name>xrdp-devel</name>
+	<range><lt>0.9.18.1,1</lt><ge>0.9.17,1</ge></range>
+      </package>
+
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>xrdp project reports:</p>
+	<blockquote cite="https://github.com/neutrinolabs/xrdp/security/advisories/GHSA-8h98-h426-xf32">
+	  <p>An integer underflow leading to a heap overflow in the sesman server allows any unauthenticated attacker which is accessible to a sesman server (listens by default on localhost when installing xrdp, but can be remote if configured otherwise) to execute code as root.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-23613</cvename>
+      <url>https://github.com/neutrinolabs/xrdp/security/advisories/GHSA-8h98-h426-xf32</url>
+    </references>
+    <dates>
+      <discovery>2022-01-23</discovery>
+      <entry>2022-02-08</entry>
+      <modified>2022-02-14</modified>
+    </dates>
+  </vuln>
+
+  <vuln vid="3507bfb3-85d5-11ec-8c9c-001b217b3468">
+    <topic>Gitlab -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>gitlab-ce</name>
+	<range><ge>14.7.0</ge><lt>14.7.1</lt></range>
+	<range><ge>14.6.0</ge><lt>14.6.4</lt></range>
+	<range><ge>0</ge><lt>14.5.4</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Gitlab reports:</p>
+	<blockquote cite="https://about.gitlab.com/releases/2022/02/03/security-release-gitlab-14-7-1-released/">
+	  <p>Arbitrary POST requests via special HTML attributes in Jupyter Notebooks</p>
+	  <p>DNS Rebinding vulnerability in Irker IRC Gateway integration</p>
+	  <p>Missing certificate validation for external CI services</p>
+	  <p>Blind SSRF Through Project Import</p>
+	  <p>Open redirect vulnerability in Jira Integration</p>
+	  <p>Issue link was disclosing the linked issue</p>
+	  <p>Service desk email accessible by project non-members</p>
+	  <p>Authenticated users can search other users by their private email</p>
+	  <p>"External status checks" can be accepted by users below developer access if the user is either author or assignee of the target merge request</p>
+	  <p>Deleting packages in bulk from package registries may cause table locks</p>
+	  <p>Autocomplete enabled on specific pages</p>
+	  <p>Possible SSRF due to not blocking shared address space</p>
+	  <p>System notes reveals private project path when Issue is moved to a public project</p>
+	  <p>Timeout for pages using Markdown</p>
+	  <p>Certain branch names could not be protected</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-0427</cvename>
+      <cvename>CVE-2022-0425</cvename>
+      <cvename>CVE-2022-0123</cvename>
+      <cvename>CVE-2022-0136</cvename>
+      <cvename>CVE-2022-0283</cvename>
+      <cvename>CVE-2022-0390</cvename>
+      <cvename>CVE-2022-0373</cvename>
+      <cvename>CVE-2022-0371</cvename>
+      <cvename>CVE-2021-39943</cvename>
+      <cvename>CVE-2022-0477</cvename>
+      <cvename>CVE-2022-0167</cvename>
+      <cvename>CVE-2022-0249</cvename>
+      <cvename>CVE-2022-0344</cvename>
+      <cvename>CVE-2022-0488</cvename>
+      <cvename>CVE-2021-39931</cvename>
+      <url>https://about.gitlab.com/releases/2022/02/03/security-release-gitlab-14-7-1-released/</url>
+    </references>
+    <dates>
+      <discovery>2022-02-03</discovery>
+      <entry>2022-02-04</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="e852f43c-846e-11ec-b043-3065ec8fd3ec">
     <topic>chromium -- multiple vulnerabilities</topic>
     <affects>

@@ -24,7 +24,6 @@
     SUBDIR += amfora
     SUBDIR += amphetadesk
     SUBDIR += analog
-    SUBDIR += annie
     SUBDIR += anyremote2html
     SUBDIR += anyterm
     SUBDIR += apache-mode.el
@@ -180,6 +179,7 @@
     SUBDIR += g-gcl
     SUBDIR += gallery-dl
     SUBDIR += gallery2
+    SUBDIR += garage
     SUBDIR += gatling
     SUBDIR += gauche-makiki
     SUBDIR += gecko-mediaplayer
@@ -323,6 +323,7 @@
     SUBDIR += lua-resty-lrucache
     SUBDIR += luakit
     SUBDIR += luakit-devel
+    SUBDIR += lux
     SUBDIR += lychee
     SUBDIR += lynx
     SUBDIR += lynx-current
@@ -374,6 +375,7 @@
     SUBDIR += mod_cfg_ldap
     SUBDIR += mod_cloudflare
     SUBDIR += mod_dav_svn
+    SUBDIR += mod_defensible
     SUBDIR += mod_dnssd
     SUBDIR += mod_evasive
     SUBDIR += mod_fastcgi
@@ -2320,6 +2322,7 @@
     SUBDIR += vimb
     SUBDIR += visitors
     SUBDIR += volta
+    SUBDIR += vultr-cli
     SUBDIR += w3m
     SUBDIR += w3m-img
     SUBDIR += w3mir
