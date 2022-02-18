@@ -102,6 +102,9 @@ pipeline {
                     sysutils/dmidecode \
                     sysutils/dtrace-toolkit \
                     sysutils/fusefs-encfs \
+                    sysutils/fusefs-exfat \
+                    sysutils/fusefs-ext2 \
+                    sysutils/fusefs-lkl \
                     sysutils/fusefs-ntfs \
                     sysutils/gstat-rs \
                     sysutils/iocage \
