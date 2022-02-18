@@ -2,7 +2,7 @@
 
 PORTNAME=	szs
 PORTVERSION?=	1.15.0
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	axcient
 MASTER_SITES=	GH
 
@@ -15,6 +15,9 @@ RUN_DEPENDS+=	buffer:misc/buffer \
 		lzop:archivers/lzop \
 		pv:sysutils/pv \
 		wget:ftp/wget \
+		mount.exfat: sysutils/fusefs-exfat \
+		fuse-ext2: sysutils/fusefs-ext2 \
+		lklfuse: sysutils/fusefs-lkl \
 		ntfs-3g:sysutils/fusefs-ntfs \
 		${ADD_MBR_DEPENDS}
 
