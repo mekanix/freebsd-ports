@@ -1,9 +1,13 @@
 PORTNAME=	dxx-rebirth
 PORTVERSION=	20220121
+PORTREVISION=	1
 DISTVERSIONSUFFIX=	-src
 CATEGORIES=	games
 MASTER_SITES=	https://www.dxx-rebirth.com/download/dxx/rebirth/
 DISTNAME=	${PORTNAME}_${PORTVERSION}${DISTVERSIONSUFFIX}
+
+PATCH_SITES=	https://github.com/dxx-rebirth/dxx-rebirth/commit/
+PATCHFILES=	b8ae2c5e55cc9643cd8c3253ff8e12628c754d84.patch:-p1
 
 MAINTAINER=	pkubaj@FreeBSD.org
 COMMENT=	Open source port of Descent and Descent 2
@@ -28,6 +32,12 @@ MAKE_ARGS=	ignore_unknown_variables=1 sdl2=1
 
 PLIST_FILES=	bin/d1x-rebirth \
 		bin/d2x-rebirth
+
+.include <bsd.port.options.mk>
+
+.if ${ARCH} != powerpc64 && ${ARCH} != riscv64
+MAKE_ARGS+=	lto=1
+.endif
 
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/d1x-rebirth \

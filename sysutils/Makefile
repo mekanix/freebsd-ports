@@ -123,6 +123,7 @@
     SUBDIR += biosfont
     SUBDIR += bkpupsd
     SUBDIR += bksh
+    SUBDIR += bkt
     SUBDIR += boot-extract
     SUBDIR += boxbackup-devel
     SUBDIR += bpytop
@@ -479,6 +480,7 @@
     SUBDIR += gomplate
     SUBDIR += google-compute-engine-oslogin
     SUBDIR += gotop
+    SUBDIR += govmomi
     SUBDIR += gpart
     SUBDIR += graffer
     SUBDIR += graveman
@@ -533,7 +535,6 @@
     SUBDIR += installwatch
     SUBDIR += intel-nvmupdate
     SUBDIR += intel-pcm
-    SUBDIR += intel-pcm-devel
     SUBDIR += intel-undervolt
     SUBDIR += inxi
     SUBDIR += ioc

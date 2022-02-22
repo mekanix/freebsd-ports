@@ -315,6 +315,7 @@
     SUBDIR += py-opn-cli
     SUBDIR += py-pdagent
     SUBDIR += py-pdagent-integrations
+    SUBDIR += py-phonebox-plugin
     SUBDIR += py-prometheus-client
     SUBDIR += py-pyIOSXR
     SUBDIR += py-pyang
@@ -412,5 +413,10 @@
     SUBDIR += zabbix54-java
     SUBDIR += zabbix54-proxy
     SUBDIR += zabbix54-server
+    SUBDIR += zabbix6-agent
+    SUBDIR += zabbix6-frontend
+    SUBDIR += zabbix6-java
+    SUBDIR += zabbix6-proxy
+    SUBDIR += zabbix6-server
 
 .include <bsd.port.subdir.mk>

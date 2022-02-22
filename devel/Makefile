@@ -62,6 +62,7 @@
     SUBDIR += R-cran-gmodels
     SUBDIR += R-cran-gsubfn
     SUBDIR += R-cran-gtools
+    SUBDIR += R-cran-hardhat
     SUBDIR += R-cran-hms
     SUBDIR += R-cran-ini
     SUBDIR += R-cran-iterators
@@ -619,6 +620,7 @@
     SUBDIR += envsubst
     SUBDIR += epl.el
     SUBDIR += epm
+    SUBDIR += eql5
     SUBDIR += eric6
     SUBDIR += eris
     SUBDIR += erlang-backoff

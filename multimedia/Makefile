@@ -2,12 +2,14 @@
 
     SUBDIR += Bento4
     SUBDIR += QtAV
+    SUBDIR += ab-av1
     SUBDIR += ab25
     SUBDIR += acidrip
     SUBDIR += aegisub
     SUBDIR += aom
     SUBDIR += aravis
     SUBDIR += arcan
+    SUBDIR += aribb24
     SUBDIR += assimp
     SUBDIR += atomicparsley
     SUBDIR += audacious
@@ -56,6 +58,7 @@
     SUBDIR += dvdstyler
     SUBDIR += elementary-videos
     SUBDIR += emby-server
+    SUBDIR += emby-server-devel
     SUBDIR += emovix
     SUBDIR += ffaudioconverter
     SUBDIR += ffdec
@@ -275,6 +278,9 @@
     SUBDIR += neolink
     SUBDIR += nordlicht
     SUBDIR += nostt
+    SUBDIR += nymphcast
+    SUBDIR += nymphcastlib
+    SUBDIR += nymphrpc
     SUBDIR += obs-audio-spectralizer
     SUBDIR += obs-ndi
     SUBDIR += obs-qtwebkit
