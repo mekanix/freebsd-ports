@@ -15,9 +15,9 @@ RUN_DEPENDS+=	buffer:misc/buffer \
 		lzop:archivers/lzop \
 		pv:sysutils/pv \
 		wget:ftp/wget \
-		mount.exfat: sysutils/fusefs-exfat \
-		fuse-ext2: sysutils/fusefs-ext2 \
-		lklfuse: sysutils/fusefs-lkl \
+		fuse-ext2:sysutils/fusefs-ext2 \
+		lklfuse:sysutils/fusefs-lkl \
+		mount.exfat:sysutils/fusefs-exfat \
 		ntfs-3g:sysutils/fusefs-ntfs \
 		${ADD_MBR_DEPENDS}
 
