@@ -2,7 +2,7 @@
 
 PORTNAME=	cloudserver
 PKGNAMESUFFIX?=  2
-PORTVERSION?=	2.8.0
+PORTVERSION?=	2.9.0
 CATEGORIES=	axcient
 
 MAINTAINER=	nsemchenkov@axcient.com
@@ -39,7 +39,7 @@ GH_TUPLE?=	\
 		golang:net:e18ecbb05110:golang_net/vendor/golang.org/x/net \
 		golang:protobuf:v1.4.3:golang_protobuf/vendor/github.com/golang/protobuf \
 		golang:sync:09787c993a3a:golang_sync/vendor/golang.org/x/sync \
-		golang:sys:68d13333faf2:golang_sys/vendor/golang.org/x/sys \
+		golang:sys:665e8c7367d1:golang_sys/vendor/golang.org/x/sys \
 		gomodule:redigo:v1.8.4:gomodule_redigo/vendor/github.com/gomodule/redigo \
 		gopherjs:gopherjs:bed99a852dfe:gopherjs_gopherjs/vendor/github.com/gopherjs/gopherjs \
 		kr:text:v0.2.0:kr_text/vendor/github.com/kr/text \

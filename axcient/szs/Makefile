@@ -1,8 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	szs
-PORTVERSION?=	1.15.0
-PORTREVISION?=	2
+PORTVERSION?=	1.16.0
+PORTREVISION?=	0
 CATEGORIES=	axcient
 MASTER_SITES=	GH
 
@@ -36,7 +36,10 @@ GH_TUPLE?=	\
 		census-instrumentation:opencensus-go:v0.22.3:census_instrumentation_opencensus_go/vendor/go.opencensus.io \
 		cespare:xxhash:v2.1.1:cespare_xxhash_v2/vendor/github.com/cespare/xxhash/v2 \
 		davecgh:go-spew:v1.1.1:davecgh_go_spew/vendor/github.com/davecgh/go-spew \
+		dnephin:pflag:v1.0.7:dnephin_pflag/vendor/github.com/dnephin/pflag \
 		dominikh:go-tools:v0.0.1-2020.1.3:dominikh_go_tools/vendor/honnef.co/go/tools \
+		fatih:color:v1.10.0:fatih_color/vendor/github.com/fatih/color \
+		fsnotify:fsnotify:v1.4.9:fsnotify_fsnotify/vendor/github.com/fsnotify/fsnotify \
 		getsentry:sentry-go:v0.10.0:getsentry_sentry_go/vendor/github.com/getsentry/sentry-go \
 		gin-contrib:pprof:v1.3.0:gin_contrib_pprof/vendor/github.com/gin-contrib/pprof \
 		gin-contrib:sse:v0.1.0:gin_contrib_sse/vendor/github.com/gin-contrib/sse \
@@ -62,12 +65,14 @@ GH_TUPLE?=	\
 		golang:snappy:v0.0.1:golang_snappy/vendor/github.com/golang/snappy \
 		golang:sync:09787c993a3a:golang_sync/vendor/golang.org/x/sync \
 		golang:sys:665e8c7367d1:golang_sys/vendor/golang.org/x/sys \
+		golang:term:7de9c90e9dd1:golang_term/vendor/golang.org/x/term \
 		golang:text:v0.3.3:golang_text/vendor/golang.org/x/text \
 		golang:tools:v0.1.0:golang_tools/vendor/golang.org/x/tools \
 		golang:xerrors:5ec99f83aff1:golang_xerrors/vendor/golang.org/x/xerrors \
 		gomodule:redigo:v2.0.0:gomodule_redigo/vendor/github.com/gomodule/redigo \
 		google:go-cmp:v0.5.5:google_go_cmp/vendor/github.com/google/go-cmp \
 		google:go-genproto:beee998c1893:google_go_genproto/vendor/google.golang.org/genproto \
+		google:shlex:e7afc7fbc510:google_shlex/vendor/github.com/google/shlex \
 		google:uuid:v1.1.1:google_uuid/vendor/github.com/google/uuid \
 		googleapis:gax-go:v2.0.5:googleapis_gax_go_v2/vendor/github.com/googleapis/gax-go \
 		googleapis:google-api-go-client:v0.19.0:googleapis_google_api_go_client/vendor/google.golang.org/api \
@@ -76,14 +81,15 @@ GH_TUPLE?=	\
 		gotestyourself:gotestsum:v1.7.0:gotestyourself_gotestsum/vendor/gotest.tools/gotestsum \
 		grpc:grpc-go:v1.27.1:grpc_grpc_go/vendor/google.golang.org/grpc \
 		jmespath:go-jmespath:c2b33e8439af:jmespath_go_jmespath/vendor/github.com/jmespath/go-jmespath \
+		jonboulle:clockwork:v0.2.2:jonboulle_clockwork/vendor/github.com/jonboulle/clockwork \
 		json-iterator:go:v1.1.10:json_iterator_go/vendor/github.com/json-iterator/go \
 		jstemmer:go-junit-report:v0.9.1:jstemmer_go_junit_report/vendor/github.com/jstemmer/go-junit-report \
 		kelseyhightower:envconfig:v1.4.0:kelseyhightower_envconfig/vendor/github.com/kelseyhightower/envconfig \
 		klauspost:compress:v1.10.2:klauspost_compress/vendor/github.com/klauspost/compress \
 		leodido:go-urn:v1.2.0:leodido_go_urn/vendor/github.com/leodido/go-urn \
+		mattn:go-colorable:v0.1.8:mattn_go_colorable/vendor/github.com/mattn/go-colorable \
 		mattn:go-isatty:v0.0.12:mattn_go_isatty/vendor/github.com/mattn/go-isatty \
 		matttproud:golang_protobuf_extensions:v1.0.1:matttproud_golang_protobuf_extensions/vendor/github.com/matttproud/golang_protobuf_extensions \
-		mitchellh:mapstructure:v1.4.2:mitchellh_mapstructure/vendor/github.com/mitchellh/mapstructure \
 		modern-go:concurrent:bacd9c7ef1dd:modern_go_concurrent/vendor/github.com/modern-go/concurrent \
 		modern-go:reflect2:v1.0.1:modern_go_reflect2/vendor/github.com/modern-go/reflect2 \
 		mongodb:mongo-go-driver:v1.3.0:mongodb_mongo_go_driver/vendor/go.mongodb.org/mongo-driver \
