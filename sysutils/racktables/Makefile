@@ -1,9 +1,10 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
 
 PORTNAME=	racktables
-DISTVERSION=	0.21.5
+DISTVERSION=	0.22.0
 CATEGORIES?=	sysutils www
 MASTER_SITES=	SF/${PORTNAME}/
+PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}
 DISTNAME=	RackTables-${DISTVERSION}
 
 MAINTAINER=	dinoex@FreeBSD.org
