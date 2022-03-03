@@ -47,4 +47,53 @@ git-fetch:
 	${RM} -r "$${GITDIR}"; \
 	fi
 
+.ifndef defined(rewritable_variables)
+_ASSIGMENT_MODIFIER=?
+.endif
+
+update-go-port: clean
+	@make update-portversion
+	@make makesum
+	@make DISABLE_LICENSES=yes update-gomod-vendor
+	@make makesum
+
+update-port: clean
+	@make update-portversion
+	@make makesum
+
+# This target creates a brach with changes in distinfo and Makefile in the current directory
+# Usage: make push-branch-with-update
+push-branch-with-update:
+	@branch=cl/update-${PORTNAME}${PKGNAMESUFFIX}-to-${PORTVERSION}; \
+	git branch -m $${branch}; \
+	git add ${.CURDIR}/Makefile; \
+	git add ${.CURDIR}/distinfo; \
+	git commit -m "Update ${PORTNAME}${PKGNAMESUFFIX} to ${PORTVERSION}"; \
+	git push origin $${branch}; \
+
+# This target updates PORTVERSION, GH_TAGNAME and resets PORTREVISION in Makefile in the current directory
+# Usage: make update-portversion version=1.16.0
+update-portversion:
+	@${ECHO_MSG} "===> version=${version} was passed"; \
+	if [ -z "${version}" ]; then \
+		${ECHO_MSG} "===> Please specify new port version"; exit 1; \
+	fi
+	@tagname=`echo "${version}" | sed -e "s|.rc|-rc|g"`; \
+	${SED} -i '' -E "s|^PORTVERSION[\?]{0,1}=[\t|\s]{0,}.*|PORTVERSION${_ASSIGMENT_MODIFIER}=\t${version}|g" ${.CURDIR}/Makefile; \
+	${ECHO_MSG} "===> Package version was updated from ${PORTVERSION} to ${version}"; \
+	${SED} -i '' -E "s|^GH_TAGNAME[\?]{0,1}=[\t|\s]{0,}.*|GH_TAGNAME${_ASSIGMENT_MODIFIER}=\t$${tagname}|g" ${.CURDIR}/Makefile; \
+	${ECHO_MSG} "===> GitHub tagname was updated from ${GH_TAGNAME} to $${tagname}"; \
+	${SED} -i '' -E "/^PORTREVISION[\?]{0,1}=[\t|\s]{0,}.*/d" ${.CURDIR}/Makefile; \
+	${ECHO_MSG} "===> Port revision was reset"; \
+
+# This target updates GH_TUPLE in Makefile in the current directory
+# To accept commercial licenses call it with DISABLE_LICENSES=yes
+# Usage: DISABLE_LICENSES=yes make update-gomod-vendor
+update-gomod-vendor: gomod-vendor-deps patch
+	@if ! type portedit > /dev/null 2>&1; then \
+		${ECHO_MSG} "===> Please install \"ports-mgmt/portfmt\""; exit 1; \
+	fi
+	@cd ${WRKSRC}; ${SETENV} ${GO_ENV} ${GO_CMD} mod vendor; \
+	[ -r vendor/modules.txt ] && ${_MODULES2TUPLE_CMD} vendor/modules.txt | sed -e "s|GH_TUPLE=|GH_TUPLE${_ASSIGMENT_MODIFIER}=|g" | portedit merge -i ${.CURDIR}/Makefile; \
+
 .endif
