@@ -1,0 +1,44 @@
+#! /bin/sh
+
+# Audit SZS safetyarchives for wrongly deleted datasets
+#
+# Add the following lines to /etc/periodic.conf:
+#
+# daily_szs_migrator_audit_enable (bool):	Set to "NO" by default
+
+# If there is a global system configuration file, suck it in.
+#
+if [ -r /etc/defaults/periodic.conf ]
+then
+    . /etc/defaults/periodic.conf
+    source_periodic_confs
+fi
+
+rc=0
+
+case "$daily_szs_migrator_audit_enable" in
+    [Yy][Ee][Ss])
+	anticongestion
+
+	echo
+	echo "Check for wrongly deleted SZS datasets"
+
+	for pool in `/sbin/zpool list -Hpo name`; do
+		for ds in `/sbin/zfs list -Hpo name -d1 ${pool}/SZS/safetyarchive | /usr/bin/grep migrated`; do
+			orm=`echo $ds | /usr/bin/sed -E 's:.*-migrated-([0-9a-z]{8}(-[0-9a-z]{4}){3}-[0-9a-z]{12}).*:\1:'`
+			owner=`%%LOCALBASE%%/bin/szs-dataset-info -c -o $orm resource 2>/dev/null | awk '/Associated resource/ {print $NF}'`
+			if [ $? -ne 0 -o -z "$owner" ]; then
+				echo "Unknown dataset $ds"
+				rc=3
+			elif [ "$pool" == "$owner" ]; then
+				echo "Migrated dataset $ds still owned, according to Partition API"
+				rc=3
+			fi
+		done
+	done
+
+	;;
+    *) rc=0;;
+esac
+
+exit $rc
