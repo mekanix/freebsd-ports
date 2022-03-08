@@ -1,5 +1,5 @@
 PORTNAME=	szs-migrator
-PORTVERSION=	0.1.0.20220224
+PORTVERSION=	0.1.0.20220308
 CATEGORIES=	axcient
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -22,7 +22,7 @@ TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest>=0:devel/py-pytest@${PY_FLAVOR}
 USES=		axcient python
 USE_PYTHON=	autoplist distutils
 WRKSRC_SUBDIR=	szs/maintenance-tool
-SUB_FILES=	900.szs-audit
+SUB_FILES=	900.szs-audit 900.szs-migrator-audit
 
 OPTIONS_DEFINE=		PROMETHEUS
 OPTIONS_DEFAULT=	PROMETHEUS
@@ -33,15 +33,18 @@ PROMETHEUS_DESC=	Export migration status with Prometheus
 NO_ARCH=	yes
 
 GH_PROJECT=	replibit-tools
-GH_TAGNAME=	9d2049c54c14736622a4677f87e55fb72f50bdaa
+GH_TAGNAME=	0ebd5ab27f6700ffde83d5a0ba47d7046f9e8fc8
 
-PLIST_FILES+=	etc/periodic/weekly/900.szs-audit
+PLIST_FILES+=	etc/periodic/weekly/900.szs-audit \
+		etc/periodic/daily/900.szs-migrator-audit
 
 do-test:
 	cd ${WRKSRC} && pytest
 
 post-install:
+	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/periodic/daily
 	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/periodic/weekly
 	${INSTALL_SCRIPT} ${WRKDIR}/900.szs-audit ${STAGEDIR}${PREFIX}/etc/periodic/weekly
+	${INSTALL_SCRIPT} ${WRKDIR}/900.szs-migrator-audit ${STAGEDIR}${PREFIX}/etc/periodic/daily
 
 .include <bsd.port.mk>
