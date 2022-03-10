@@ -24,4 +24,6 @@ checksum:
 pre-build:
 	cd ${WRKSRC}; GOPATH=/tmp go mod vendor
 
+GO_TARGET=	./cmd/api ./cmd/jobs ./cmd/statistics ./cmd/exports ./cmd/safetyarchivecleanup ./cmd/cleanupclones ./cmd/snapshotscleanup ./cmd/clonesnapshots
+
 .include "${MASTERDIR}/Makefile"
