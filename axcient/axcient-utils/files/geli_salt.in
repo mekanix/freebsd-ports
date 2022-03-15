@@ -6,13 +6,14 @@
 # PROVIDE: geli_salt
 # REQUIRE: NETWORKING
 # REQUIRE: hostname
-# BEFORE: cloudserver
+# REQUIRE: sshd
 # BEFORE: ctld
-# BEFORE: ftpd
 # BEFORE: hastd
-# BEFORE: iocage
-# BEFORE: mountd
 # BEFORE: nfsd
+# BEFORE: mountd
+# BEFORE: cloudserver
+# BEFORE: ftpd
+# BEFORE: iocage
 # BEFORE: rsyncd
 # BEFORE: salt_minion
 # BEFORE: szs
@@ -57,12 +58,7 @@ geli_salt_start()
 		echo ""
 		echo "Importing all data pools."
 		/sbin/zpool import -a -c $CACHEFILE -o cachefile=$CACHEFILE
-		# We can't run this script before mountd, because that would
-		# create a circular dependency:
-		# mountd < nfsd < lockd,statd < DAEMON < LOGIN < salt_minion <
-		# geli_salt < mountd
-		# Instead, we'll reload mountd after starting this script
-		pgrep mountd && service mountd reload
+		echo "All data pools imported."
 	fi
 }
 
