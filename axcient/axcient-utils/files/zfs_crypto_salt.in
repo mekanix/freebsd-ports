@@ -6,12 +6,14 @@
 # PROVIDE: zfs_crypto_salt
 # REQUIRE: NETWORKING
 # REQUIRE: hostname
-# BEFORE: cloudserver
+# REQUIRE: sshd
 # BEFORE: ctld
+# BEFORE: hastd
+# BEFORE: nfsd
+# BEFORE: mountd
+# BEFORE: cloudserver
 # BEFORE: ftpd
 # BEFORE: iocage
-# BEFORE: mountd
-# BEFORE: nfsd
 # BEFORE: rsyncd
 # BEFORE: salt_minion
 # BEFORE: szs
@@ -19,6 +21,7 @@
 # BEFORE: szs_jobs
 # BEFORE: vt2
 # BEFORE: zabbix_agentd
+# BEFORE: zfs_exporter
 
 # Load ZFS encryption keys that are stored in Salt and mount the encrypted file
 # systems.  The pools must already be imported!
@@ -46,9 +49,11 @@ zfs_crypto_salt_start()
 	if [ -z "${SECRET}" ]; then
 		echo "ZFS crypto key not found"
 	else
+		echo ""
 		echo "Trying to load the key into all pools"
 		yes "${SECRET}" | /sbin/zfs mount -al
 		yes "${SECRET}" | /sbin/zpool import -al -c $CACHEFILE -o cachefile=$CACHEFILE
+		echo "All data pools imported."
 	fi
 }
 
