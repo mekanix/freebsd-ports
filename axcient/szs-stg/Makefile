@@ -1,12 +1,10 @@
 # $FreeBSD$
 
-PORTVERSION?=	1.16.0.rc1
-PORTREVISION?=	0
+PORTVERSION=	1.17.0.rc1
 PKGNAMESUFFIX=	-stg
 
-GH_TAGNAME=     1.16.0-rc1
-GH_TUPLE=	\
-		BurntSushi:toml:v0.3.1:burntsushi_toml/vendor/github.com/BurntSushi/toml \
+GH_TAGNAME=	1.17.0-rc1
+GH_TUPLE=	BurntSushi:toml:v0.3.1:burntsushi_toml/vendor/github.com/BurntSushi/toml \
 		RichardKnop:logging:1a693bdd4fae:richardknop_logging/vendor/github.com/RichardKnop/logging \
 		RichardKnop:machinery:v1.7.4:richardknop_machinery/vendor/github.com/RichardKnop/machinery \
 		RichardKnop:redsync:v1.2.0:richardknop_redsync/vendor/github.com/RichardKnop/redsync \
@@ -23,10 +21,10 @@ GH_TUPLE=	\
 		getsentry:sentry-go:v0.10.0:getsentry_sentry_go/vendor/github.com/getsentry/sentry-go \
 		gin-contrib:pprof:v1.3.0:gin_contrib_pprof/vendor/github.com/gin-contrib/pprof \
 		gin-contrib:sse:v0.1.0:gin_contrib_sse/vendor/github.com/gin-contrib/sse \
-		gin-gonic:gin:v1.6.2:gin_gonic_gin/vendor/github.com/gin-gonic/gin \
+		gin-gonic:gin:v1.7.0:gin_gonic_gin/vendor/github.com/gin-gonic/gin \
 		go-playground:locales:v0.13.0:go_playground_locales/vendor/github.com/go-playground/locales \
 		go-playground:universal-translator:v0.17.0:go_playground_universal_translator/vendor/github.com/go-playground/universal-translator \
-		go-playground:validator:v10.2.0:go_playground_validator_v10/vendor/github.com/go-playground/validator/v10 \
+		go-playground:validator:v10.4.1:go_playground_validator_v10/vendor/github.com/go-playground/validator/v10 \
 		go-redis:redis:v6.15.7:go_redis_redis/vendor/github.com/go-redis/redis \
 		go-resty:resty:v1.12.0:go_resty_resty/vendor/gopkg.in/resty.v1 \
 		go-stack:stack:v1.8.0:go_stack_stack/vendor/github.com/go-stack/stack \
@@ -94,5 +92,7 @@ CONFLICTS_INSTALL=	szs
 MASTERDIR=	${.CURDIR}/../szs
 DISTINFO_FILE=	${.CURDIR}/distinfo
 PLIST=		${.CURDIR}/pkg-plist
+
+GO_TARGET=	./cmd/api ./cmd/jobs ./cmd/statistics ./cmd/exports ./cmd/safetyarchivecleanup ./cmd/cleanupclones ./cmd/snapshotscleanup ./cmd/clonesnapshots
 
 .include "${MASTERDIR}/Makefile"

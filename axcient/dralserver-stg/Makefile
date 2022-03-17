@@ -1,13 +1,11 @@
 # $FreeBSD$
 
-PORTVERSION=	1.4.0.rc1
-PORTREVISION=	0
+PORTVERSION=	1.5.0.rc1
 PKGNAMESUFFIX=	-stg
 
-GH_TAGNAME=     1.4.0-rc1
+GH_TAGNAME=	1.5.0-rc1
 
-GH_TUPLE=	\
-		BurntSushi:toml:v0.4.1:burntsushi_toml/vendor/github.com/BurntSushi/toml \
+GH_TUPLE=	BurntSushi:toml:v0.4.1:burntsushi_toml/vendor/github.com/BurntSushi/toml \
 		beorn7:perks:v1.0.1:beorn7_perks/vendor/github.com/beorn7/perks \
 		cespare:xxhash:v2.1.2:cespare_xxhash_v2/vendor/github.com/cespare/xxhash/v2 \
 		davecgh:go-spew:v1.1.1:davecgh_go_spew/vendor/github.com/davecgh/go-spew \
@@ -27,8 +25,9 @@ GH_TUPLE=	\
 		golang:text:v0.3.7:golang_text/vendor/golang.org/x/text \
 		gomodule:redigo:v1.8.5:gomodule_redigo/vendor/github.com/gomodule/redigo \
 		google:go-genproto:a5da7257a6f7:google_go_genproto/vendor/google.golang.org/genproto \
+		google:uuid:v1.3.0:google_uuid/vendor/github.com/google/uuid \
 		grpc:grpc-go:v1.42.0:grpc_grpc_go/vendor/google.golang.org/grpc \
-		jarcoal:httpmock:v1.0.8:jarcoal_httpmock/vendor/github.com/jarcoal/httpmock \
+		jarcoal:httpmock:v1.1.0:jarcoal_httpmock/vendor/github.com/jarcoal/httpmock \
 		jinzhu:configor:v1.2.1:jinzhu_configor/vendor/github.com/jinzhu/configor \
 		matttproud:golang_protobuf_extensions:v1.0.1:matttproud_golang_protobuf_extensions/vendor/github.com/matttproud/golang_protobuf_extensions \
 		otiai10:copy:v1.7.0:otiai10_copy/vendor/github.com/otiai10/copy \
@@ -40,7 +39,6 @@ GH_TUPLE=	\
 		protocolbuffers:protobuf-go:v1.27.1:protocolbuffers_protobuf_go/vendor/google.golang.org/protobuf \
 		satori:go.uuid:v1.2.0:satori_go_uuid/vendor/github.com/satori/go.uuid \
 		stretchr:testify:v1.7.0:stretchr_testify/vendor/github.com/stretchr/testify
-
 
 LIB_DEPENDS=    libszs-op.so:axcient/szs-stg
 USES=		axcient go:modules
