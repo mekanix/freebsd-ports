@@ -1,5 +1,5 @@
 PORTNAME=	szs-migrator
-PORTVERSION=	0.1.0.20220308
+PORTVERSION=	0.1.0.20220318
 CATEGORIES=	axcient
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -33,7 +33,7 @@ PROMETHEUS_DESC=	Export migration status with Prometheus
 NO_ARCH=	yes
 
 GH_PROJECT=	replibit-tools
-GH_TAGNAME=	0ebd5ab27f6700ffde83d5a0ba47d7046f9e8fc8
+GH_TAGNAME=	85e3b29403f01f439032ed291b22e5b988fe86ee
 
 PLIST_FILES+=	etc/periodic/weekly/900.szs-audit \
 		etc/periodic/daily/900.szs-migrator-audit
