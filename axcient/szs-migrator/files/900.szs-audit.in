@@ -32,6 +32,9 @@ case "$weekly_szs_audit_enable" in
 			if [ "$ds" = "$pool/SZS/safetyarchive" ]; then
 				continue
 			fi
+			if [ "$ds" = "$pool/SZS/transfer" ]; then
+				continue
+			fi
 			if echo $ds | egrep -q 'clone'; then
 				# Skip clones.  They cannot possibly be orphans
 				# unless their parents also are.
