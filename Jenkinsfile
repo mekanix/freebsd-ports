@@ -173,12 +173,12 @@ pipeline {
                 sh 'cd axcient/vt2-stg; make fetch'
                 sh 'cd net-mgmt/py-zfs-exporter; make fetch'
 
+                sh 'sudo poudriere bulk -j 13_0-AXCIENT3_amd64 -p "${PNAME}" \
+                    ${PORTSMINOR} '
                 sh 'sudo poudriere bulk -j 12_2-AXCIENT1_amd64 -p "${PNAME}" \
                     ${PORTSALL} '
                 sh 'sudo poudriere bulk -j 13_0-AXCIENT1_amd64 -p "${PNAME}" \
                     ${PORTSALL} ${PORTS13} '
-                sh 'sudo poudriere bulk -j 13_0-AXCIENT3_amd64 -p "${PNAME}" \
-                    ${PORTSMINOR} '
             }
         }
         stage('Build dev package') {
