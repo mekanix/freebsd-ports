@@ -24,6 +24,7 @@
     SUBDIR += smart-recovery-dev
     SUBDIR += smart-recovery-stg
     SUBDIR += spxops-vmagent
+    SUBDIR += storage-cleanup
     SUBDIR += szs
     SUBDIR += szs-dev    
     SUBDIR += szs-stg
