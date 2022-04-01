@@ -55,6 +55,7 @@ pipeline {
                     axcient/smart-recovery \
                     axcient/smart-recovery-stg \
                     axcient/spxops-vmagent \
+                    axcient/storage-cleanup \
                     axcient/szs \
                     axcient/szs-stg \
                     axcient/szs-migrator \
@@ -164,6 +165,7 @@ pipeline {
                 sh 'cd axcient/smart-recovery; make fetch'
                 sh 'cd axcient/smart-recovery-stg; make fetch'
                 sh 'cd axcient/spxops-vmagent; make fetch'
+                sh 'cd axcient/storage-cleanup; make fetch'
                 sh 'cd axcient/szs; make fetch'
                 sh 'cd axcient/szs-stg; make fetch'
                 sh 'cd axcient/szs-migrator; make fetch'
