@@ -1,0 +1,3 @@
+Collection of scripts for finding, renaming and destroying VM datasets belonging to VMs that have been decommissioned.
+
+WWW: https://github.com/Axcient/vm-storage-cleanup
