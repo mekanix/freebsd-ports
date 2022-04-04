@@ -22,6 +22,6 @@ CONFLICTS_INSTALL?=      smart-recovery-stg
 CMAKE_ARGS+=	-DCMAKE_VERBOSE_MAKEFILE=ON -DUSE_CHECKS=OFF
 
 do-install:
-	${INSTALL} ${WRKDIR}/.build/src/smart_recovery ${STAGEDIR}${PREFIX}/bin/smart_recovery
+	${INSTALL} ${WRKDIR}/.build/smart_recovery/smart_recovery ${STAGEDIR}${PREFIX}/bin/smart_recovery
 
 .include <bsd.port.mk>
