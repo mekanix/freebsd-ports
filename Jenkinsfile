@@ -76,11 +76,14 @@ pipeline {
                     devel/git \
                     devel/py-virtualenv \
                     devel/uclcmd \
+                    devel/valgrind \
                     editors/nano \
                     editors/vim \
                     emulators/qemu@tools \
+                    java/openjdk8 \
                     lang/expect \
                     mail/ssmtp \
+                    misc/compat12x \
                     misc/mbuffer \
                     net-mgmt/grok_exporter \
                     net-mgmt/iftop \
@@ -88,11 +91,15 @@ pipeline {
                     net-mgmt/pktstat \
                     net-mgmt/py-zfs-exporter \
                     net-mgmt/zabbix5-agent \
+                    net/cloud-init \
                     net/nss-pam-ldapd \
                     net/nss_ldap \
                     net/openldap24-client \
                     net/rsync \
+                    net/samba413 \
+                    net/wireshark \
                     ports-mgmt/portlint \
+                    ports-mgmt/poudriere \
                     security/gnupg \
                     security/nmap \
                     security/pam_mkhomedir \
@@ -127,16 +134,7 @@ pipeline {
                     sysutils/zrepl \
                     sysutils/ztop \
                     textproc/ripgrep \
-                    '
-                PORTS13 = ' \
-                    devel/valgrind \
-                    java/openjdk8 \
-                    misc/compat12x \
-                    net/cloud-init \
-                    net/samba413 \
-                    net/wireshark \
-                    ports-mgmt/poudriere \
-                    www/nginx \
+                    www/nginx
                     '
                 // Ports that need to be rebuilt for every minor version of the
                 // OS, not just major versions.
@@ -177,10 +175,8 @@ pipeline {
 
                 sh 'sudo poudriere bulk -j 13_0-AXCIENT3_amd64 -p "${PNAME}" \
                     ${PORTSMINOR} '
-                sh 'sudo poudriere bulk -j 12_2-AXCIENT1_amd64 -p "${PNAME}" \
-                    ${PORTSALL} '
                 sh 'sudo poudriere bulk -j 13_0-AXCIENT1_amd64 -p "${PNAME}" \
-                    ${PORTSALL} ${PORTS13} '
+                    ${PORTSALL} '
             }
         }
         stage('Build dev package') {
@@ -200,7 +196,6 @@ pipeline {
                 sh 'cd axcient/vt2-dev; make fetch'
 
                 sh "sudo poudriere bulk -j 13_0-AXCIENT1_amd64 -p ${PNAME} axcient/${env.devPackage}"
-                sh "sudo poudriere bulk -j 12_2-AXCIENT1_amd64 -p ${PNAME} axcient/${env.devPackage}"
             }
         }
     }
