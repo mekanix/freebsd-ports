@@ -134,7 +134,7 @@ pipeline {
                     sysutils/zrepl \
                     sysutils/ztop \
                     textproc/ripgrep \
-                    www/nginx
+                    www/nginx \
                     '
                 // Ports that need to be rebuilt for every minor version of the
                 // OS, not just major versions.
