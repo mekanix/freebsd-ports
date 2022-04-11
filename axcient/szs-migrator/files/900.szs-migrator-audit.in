@@ -24,6 +24,9 @@ case "$daily_szs_migrator_audit_enable" in
 	echo "Check for wrongly deleted SZS datasets"
 
 	for pool in `/sbin/zpool list -Hpo name`; do
+		if [ "$pool" = "zroot" ]; then
+			continue
+		fi
 		for ds in `/sbin/zfs list -Hpo name -d1 ${pool}/SZS/safetyarchive | /usr/bin/grep migrated`; do
 			orm=`echo $ds | /usr/bin/sed -E 's:.*-migrated-([0-9a-z]{8}(-[0-9a-z]{4}){3}-[0-9a-z]{12}).*:\1:'`
 			owner=`%%LOCALBASE%%/bin/szs-dataset-info -c -o $orm resource 2>/dev/null | awk '/Associated resource/ {print $NF}'`

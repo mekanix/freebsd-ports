@@ -25,6 +25,9 @@ case "$weekly_szs_audit_enable" in
 	echo "Check for orphaned SZS datasets"
 
 	for pool in `/sbin/zpool list -Hpo name`; do
+		if [ "$pool" = "zroot" ]; then
+			continue
+		fi
 		for ds in `/sbin/zfs list -Hpo name -d1 ${pool}/SZS`; do
 			if [ "$ds" = "$pool/SZS" ]; then
 				continue
