@@ -74,6 +74,7 @@ pipeline {
                     devel/delve \
                     devel/gdb \
                     devel/git \
+                    devel/py-tox \
                     devel/py-virtualenv \
                     devel/uclcmd \
                     devel/valgrind \
