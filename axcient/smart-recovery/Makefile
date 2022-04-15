@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	smart-recovery
-DISTVERSION?=	1.0.4
+DISTVERSION?=	1.1.1
 PORTREVISION?=	0
 CATEGORIES=	axcient sysutils
 MASTER_SITES=	GH
@@ -11,7 +11,7 @@ COMMENT?=	Replibit smart recovery tool
 
 USES=		axcient fuse cmake pkgconfig
 GH_PROJECT=	smart-recovery
-GH_TAGNAME?=	1.0.4
+GH_TAGNAME?=	1.1.1
 
 BUILD_DEPENDS=	boost-libs>=1.72:devel/boost-libs
 
