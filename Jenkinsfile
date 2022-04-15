@@ -104,6 +104,7 @@ pipeline {
                     security/gnupg \
                     security/nmap \
                     security/pam_mkhomedir \
+                    security/py-asyncssh \
                     security/sudo \
                     shells/bash \
                     shells/ksh93 \
