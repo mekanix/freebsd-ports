@@ -8,6 +8,9 @@ DATECODE!=	date -u "+%Y%m%d%H"
 
 COMMENT=	Hourly build of szs's develop branch
 
+#TODO Move this dependency to szs prod port after azure-recovery utility will be released
+RUN_DEPENDS+=vdisk-fuse:axcient/vdisk-fuse
+
 GH_TAGNAME=	develop
 
 ADD_MBR_DEPENDS=	add_mbr:axcient/add_mbr-dev
@@ -24,6 +27,6 @@ checksum:
 pre-build:
 	cd ${WRKSRC}; GOPATH=/tmp go mod vendor
 
-GO_TARGET=	./cmd/api ./cmd/jobs ./cmd/statistics ./cmd/exports ./cmd/safetyarchivecleanup ./cmd/cleanupclones ./cmd/snapshotscleanup ./cmd/clonesnapshots
+GO_TARGET=	./cmd/api ./cmd/jobs ./cmd/statistics ./cmd/exports ./cmd/safetyarchivecleanup ./cmd/cleanupclones ./cmd/snapshotscleanup ./cmd/clonesnapshots ./cmd/azurerecovery
 
 .include "${MASTERDIR}/Makefile"
