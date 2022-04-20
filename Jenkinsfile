@@ -135,8 +135,10 @@ pipeline {
                     sysutils/zfsnap2 \
                     sysutils/zrepl \
                     sysutils/ztop \
+                    textproc/py-elasticsearch \
                     textproc/ripgrep \
                     www/nginx \
+                    www/py-aiohttp \
                     '
                 // Ports that need to be rebuilt for every minor version of the
                 // OS, not just major versions.
