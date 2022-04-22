@@ -59,7 +59,7 @@ GH_TUPLE?=	\
 		uber-go:zap:v1.16.0:uber_go_zap/vendor/go.uber.org/zap
 
 GO_PKGNAME=	github.com/${GH_ACCOUNT}/cloudserver
-GO_TARGET=	cloudserver
+GO_TARGET?=	cloudserver
 
 post-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/newsyslog.conf.d

@@ -78,7 +78,7 @@ update-portversion:
 	if [ -z "${version}" ]; then \
 		${ECHO_MSG} "===> Please specify new port version"; exit 1; \
 	fi
-	@tagname=`echo "${version}" | sed -e "s|.rc|-rc|g"`; \
+	@tagname=`echo "${version}" | sed "s|.rc|-rc|g"`; \
 	${SED} -i '' -E "s|^PORTVERSION[\?]{0,1}=[\t|\s]{0,}.*|PORTVERSION${_ASSIGMENT_MODIFIER}=\t${version}|g" ${.CURDIR}/Makefile; \
 	${ECHO_MSG} "===> Package version was updated from ${PORTVERSION} to ${version}"; \
 	${SED} -i '' -E "s|^GH_TAGNAME[\?]{0,1}=[\t|\s]{0,}.*|GH_TAGNAME${_ASSIGMENT_MODIFIER}=\t$${tagname}|g" ${.CURDIR}/Makefile; \
@@ -94,6 +94,7 @@ update-gomod-vendor: gomod-vendor-deps patch
 		${ECHO_MSG} "===> Please install \"ports-mgmt/portfmt\""; exit 1; \
 	fi
 	@cd ${WRKSRC}; ${SETENV} ${GO_ENV} ${GO_CMD} mod vendor; \
-	[ -r vendor/modules.txt ] && ${_MODULES2TUPLE_CMD} vendor/modules.txt | sed -e "s|GH_TUPLE=|GH_TUPLE${_ASSIGMENT_MODIFIER}=|g" | portedit merge -i ${.CURDIR}/Makefile; \
+	[ -r vendor/modules.txt ] && ${_MODULES2TUPLE_CMD} vendor/modules.txt | sed "s|GH_TUPLE=|GH_TUPLE${_ASSIGMENT_MODIFIER}=|g" | portedit merge -i ${.CURDIR}/Makefile; \
 
 .endif
+

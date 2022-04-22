@@ -1,6 +1,6 @@
-TIMESTAMP = 1647505796
-SHA256 (Axcient-szs-op-1.17.0.rc1-1.17.0-rc1_GH0.tar.gz) = 583381bf976a40b358d3bc529b2f8bd1be2f3b7eafca12c1ab61caff2cf378c2
-SIZE (Axcient-szs-op-1.17.0.rc1-1.17.0-rc1_GH0.tar.gz) = 7322405
+TIMESTAMP = 1650544167
+SHA256 (Axcient-szs-op-1.18.0.rc1-1.18.0-rc1_GH0.tar.gz) = f2841254adff958c0b8a60bad782ae2370b4d07262d8c0ec41621e7383c37feb
+SIZE (Axcient-szs-op-1.18.0.rc1-1.18.0-rc1_GH0.tar.gz) = 7325323
 SHA256 (BurntSushi-toml-v0.3.1_GH0.tar.gz) = 6593da894578ba510a470735ffbdc88ce88033094dc5a8f4d3957ab87e18803f
 SIZE (BurntSushi-toml-v0.3.1_GH0.tar.gz) = 42077
 SHA256 (RichardKnop-logging-1a693bdd4fae_GH0.tar.gz) = 37bb3b4c2be19ce76f9f2601cad9222ed9ed4c711060d01fb585a4298ae99877
