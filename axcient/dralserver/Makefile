@@ -1,8 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	dralserver
-PORTVERSION?=	1.5.0
-PORTREVISION?=	0
+PORTVERSION?=	1.6.0
 CATEGORIES=	axcient
 
 MAINTAINER=	kklimov@axcient.com
@@ -14,7 +13,7 @@ USES=		axcient go:modules
 CONFLICTS_INSTALL?=	dralserver-stg \
 			dralserver-dev
 
-GH_TAGNAME?=	${PORTVERSION}
+GH_TAGNAME?=	1.6.0
 GH_TUPLE?=	BurntSushi:toml:v0.4.1:burntsushi_toml/vendor/github.com/BurntSushi/toml \
 		beorn7:perks:v1.0.1:beorn7_perks/vendor/github.com/beorn7/perks \
 		cespare:xxhash:v2.1.2:cespare_xxhash_v2/vendor/github.com/cespare/xxhash/v2 \
@@ -37,6 +36,7 @@ GH_TUPLE?=	BurntSushi:toml:v0.4.1:burntsushi_toml/vendor/github.com/BurntSushi/t
 		google:go-genproto:a5da7257a6f7:google_go_genproto/vendor/google.golang.org/genproto \
 		google:uuid:v1.3.0:google_uuid/vendor/github.com/google/uuid \
 		grpc:grpc-go:v1.42.0:grpc_grpc_go/vendor/google.golang.org/grpc \
+		hashicorp:go-multierror:v1.1.1:hashicorp_go_multierror/vendor/github.com/hashicorp/go-multierror \
 		jarcoal:httpmock:v1.1.0:jarcoal_httpmock/vendor/github.com/jarcoal/httpmock \
 		jinzhu:configor:v1.2.1:jinzhu_configor/vendor/github.com/jinzhu/configor \
 		matttproud:golang_protobuf_extensions:v1.0.1:matttproud_golang_protobuf_extensions/vendor/github.com/matttproud/golang_protobuf_extensions \
@@ -51,7 +51,7 @@ GH_TUPLE?=	BurntSushi:toml:v0.4.1:burntsushi_toml/vendor/github.com/BurntSushi/t
 		stretchr:testify:v1.7.0:stretchr_testify/vendor/github.com/stretchr/testify
 
 GO_PKGNAME=	github.com/${GH_ACCOUNT}/dralserver
-GO_TARGET?=	./cmd/dralserver
+GO_TARGET?=	./cmd/dralserver ./cmd/cleanupdralclones
 
 .include "${.CURDIR}/post-install.mk"
 

@@ -1,5 +1,13 @@
 bin/dralserver
+bin/dralserver-cleanup-clones
 @sample %%ETCDIR%%/dralserver.yml.sample
 @sample %%EXAMPLESDIR%%/newsyslog.conf.d/dralserver.conf etc/newsyslog.conf.d/dralserver.conf
 etc/rc.d/dralserver
 @sample %%EXAMPLESDIR%%/rsyslog.d/dralserver.conf etc/rsyslog.d/dralserver.conf
+@sample %%EXAMPLESDIR%%/newsyslog.conf.d/dralserver-cleanup-clones.conf etc/newsyslog.conf.d/dralserver-cleanup-clones.conf
+@sample %%EXAMPLESDIR%%/rsyslog.d/dralserver-cleanup-clones.conf etc/rsyslog.d/dralserver-cleanup-clones.conf
+@sample %%EXAMPLESDIR%%/cron.d/dralserver-cleanup-clones etc/cron.d/dralserver-cleanup-clones
+@dir etc/newsyslog.d
+@dir etc/rsyslog.d
+@dir etc/cron.d
+

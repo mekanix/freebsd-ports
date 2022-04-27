@@ -1,8 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	szs
-PORTVERSION?=	1.17.0
-PORTREVISION?=	0
+PORTVERSION?=	1.18.0
 CATEGORIES=	axcient
 MASTER_SITES=	GH
 
@@ -24,7 +23,7 @@ RUN_DEPENDS+=	buffer:misc/buffer \
 USES=		axcient go:modules ssl:run
 USE_LDCONFIG=	yes
 GH_PROJECT=	szs-op
-GH_TAGNAME?=	${PORTVERSION}
+GH_TAGNAME?=	1.18.0
 GH_TUPLE?=	BurntSushi:toml:v0.3.1:burntsushi_toml/vendor/github.com/BurntSushi/toml \
 		RichardKnop:logging:1a693bdd4fae:richardknop_logging/vendor/github.com/RichardKnop/logging \
 		RichardKnop:machinery:v1.7.4:richardknop_machinery/vendor/github.com/RichardKnop/machinery \
