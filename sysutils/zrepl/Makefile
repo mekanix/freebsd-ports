@@ -12,7 +12,7 @@ COMMENT=	ZFS dataset replication tool
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		go:modules,no_vendor_dir
+USES=		go:modules
 USE_RC_SUBR=	zrepl
 
 GO_MODULE=	github.com/${PORTNAME}/${PORTNAME}

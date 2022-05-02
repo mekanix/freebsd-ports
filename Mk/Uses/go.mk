@@ -3,7 +3,7 @@
 #
 # Feature:	go
 # Usage:	USES=go
-# Valid ARGS:	(none), modules, no_targets, no_vendor_dir, run
+# Valid ARGS:	(none), modules, no_targets, run
 #
 # (none)	Setup GOPATH and build in GOPATH mode.
 # modules	If the upstream uses Go modules, this can be set to build
@@ -12,8 +12,6 @@
 #		make/CMake build.  This will setup build environment like
 #		GO_ENV, GO_BUILDFLAGS but will not create post-extract and
 #		do-{build,install,test} targets.
-# no_vendor_dir	don't populate the vendor directory with "go mod vendor"
-#		and don't build with -mod=vendor
 # run		Indicates that Go is needed at run time and adds it to
 #		RUN_DEPENDS.
 #
@@ -65,14 +63,8 @@
 .if !defined(_INCLUDE_USES_GO_MK)
 _INCLUDE_USES_GO_MK=	yes
 
-.if !empty(go_ARGS:Nmodules:Nno_targets:Nno_vendor_dir:Nrun)
-IGNORE=	USES=go has invalid arguments: ${go_ARGS:Nmodules:Nno_targets:Nno_vendor_dir:Nrun}
-.endif
-
-.if !empty(go_ARGS:Mno_vendor_dir)
-.  if empty(go_ARGS:Mmodules)
-IGNORE=	no_vendor_dir requires go:modules
-.  endif
+.if !empty(go_ARGS:Nmodules:Nno_targets:Nrun)
+IGNORE=	USES=go has invalid arguments: ${go_ARGS:Nmodules:Nno_targets:Nrun}
 .endif
 
 # Settable variables
@@ -117,10 +109,8 @@ GO_ENV+=	CGO_ENABLED=${CGO_ENABLED} \
 		GOARM=${GOARM}
 
 .if ${go_ARGS:Mmodules}
-.  if empty(go_ARGS:Mno_vendor_dir)
 GO_BUILDFLAGS+=	-mod=vendor
 GO_TESTFLAGS+=	-mod=vendor
-.  endif
 GO_GOPATH=	${DISTDIR}/go/${PKGORIGIN:S,/,_,g}
 GO_WRKSRC=	${WRKSRC}
 GO_ENV+=	GOPATH="${GO_GOPATH}" \
@@ -178,7 +168,7 @@ post-fetch:
 post-extract:
 	@${MKDIR} ${GO_WRKSRC:H}
 	@${LN} -sf ${WRKSRC} ${GO_WRKSRC}
-.  elif ${go_ARGS:Mmodules} && defined(GO_MODULE) && empty(go_ARGS:Mno_vendor_dir)
+.  elif ${go_ARGS:Mmodules} && defined(GO_MODULE)
 post-extract:
 	@(cd ${GO_WRKSRC}; ${SETENV} ${GO_ENV} GOPROXY=off ${GO_CMD} mod vendor)
 .  endif 
