@@ -2,7 +2,7 @@
 
 PORTNAME=	efl
 DISTVERSION=	1.26.2
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	devel enlightenment
 MASTER_SITES=	http://download.enlightenment.org/rel/libs/${PORTNAME}/
 DIST_SUBDIR=	enlightenment
@@ -122,7 +122,8 @@ WAYLAND_LDFLAGS=		-lepoll-shim
 WAYLAND_MESON_TRUE=		wl
 WAYLAND_BROKEN=			Wayland bits compile but don't yet work at runtime
 
-GSTREAMER_USE=			GSTREAMER1=core
+GSTREAMER_USES=			gstreamer
+GSTREAMER_USE=			GSTREAMER=core
 GSTREAMER_MESON_TRUE=		gstreamer
 
 V4L_BUILD_DEPENDS=		${LOCALBASE}/include/linux/videodev2.h:multimedia/v4l_compat

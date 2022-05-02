@@ -139,8 +139,8 @@
     SUBDIR += dmtx-utils
     SUBDIR += drawing
     SUBDIR += drawpile
-    SUBDIR += drm-current-kmod
-    SUBDIR += drm-devel-kmod
+    SUBDIR += drm-54-kmod
+    SUBDIR += drm-510-kmod
     SUBDIR += drm-fbsd12.0-kmod
     SUBDIR += drm-fbsd13-kmod
     SUBDIR += drm-kmod
@@ -296,6 +296,9 @@
     SUBDIR += gpicview
     SUBDIR += gpsmanshp
     SUBDIR += gpu-firmware-kmod
+    SUBDIR += gpu-firmware-intel-kmod
+    SUBDIR += gpu-firmware-amd-kmod
+    SUBDIR += gpu-firmware-radeon-kmod
     SUBDIR += gpxsee
     SUBDIR += gracula
     SUBDIR += grads
@@ -530,8 +533,8 @@
     SUBDIR += linux-c7-tiff
     SUBDIR += linux-c7-wayland
     SUBDIR += lua-gd
-    SUBDIR += lux
     SUBDIR += luminance-qt5
+    SUBDIR += lux
     SUBDIR += lximage-qt
     SUBDIR += magnum
     SUBDIR += magnum-examples
@@ -893,7 +896,6 @@
     SUBDIR += py-pygeoapi
     SUBDIR += py-pygeos
     SUBDIR += py-pyglet
-    SUBDIR += py-pyglet150
     SUBDIR += py-pygraph
     SUBDIR += py-pygraphviz
     SUBDIR += py-pyinsane2
@@ -1137,7 +1139,6 @@
     SUBDIR += xcftools
     SUBDIR += xd3d
     SUBDIR += xdgagrab
-    SUBDIR += xface.el
     SUBDIR += xfig
     SUBDIR += xfpovray
     SUBDIR += xfractint

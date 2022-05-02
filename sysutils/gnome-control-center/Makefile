@@ -2,7 +2,7 @@
 
 PORTNAME=	gnome-control-center
 PORTVERSION=	42.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME/sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+)\..*/\1/}
 DIST_SUBDIR=	gnome
@@ -44,11 +44,10 @@ RUN_DEPENDS=	cantarell-fonts>=0:x11-fonts/cantarell-fonts \
 
 PORTSCOUT=	limitw:1,even
 
-USES=		compiler:c++11-lib gettext gnome localbase:ldflags meson \
+USES=		compiler:c++11-lib gettext gnome gstreamer localbase:ldflags meson \
 		pkgconfig python:3.6+,build samba:lib tar:xz xorg
 USE_GNOME=	cairo gnomedesktop3 gsound libxml2
 USE_XORG=	x11 xi
-#USE_GSTREAMER1=	yes
 USE_LDCONFIG=	yes
 BINARY_ALIAS=	python3=${PYTHON_VERSION}
 

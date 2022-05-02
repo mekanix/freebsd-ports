@@ -2,11 +2,11 @@
 
 PORTNAME=	xscreensaver
 PORTVERSION=	5.44
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	http://www.jwz.org/xscreensaver/
 
-MAINTAINER=	zeising@FreeBSD.org
+MAINTAINER=	x11@FreeBSD.org
 COMMENT=	Save your screen while you entertain your cat
 
 LICENSE=	MIT

@@ -1,7 +1,7 @@
 # Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
 
 PORTNAME=	xdg
-PORTVERSION=	6.3.1
+PORTVERSION=	6.3.3
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
@@ -13,7 +13,6 @@ LICENSE_NAME=	Hippocratic License 2.1.0
 LICENSE_FILE=	${WRKSRC}/LICENSE.adoc
 LICENSE_PERMS=	auto-accept dist-mirror pkg-mirror
 
-BROKEN_RUBY26=	yes
 BROKEN_RUBY27=	yes
 BROKEN_RUBY30=	yes
 

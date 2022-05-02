@@ -53,6 +53,7 @@
     SUBDIR += dbow
     SUBDIR += dbtool
     SUBDIR += dbview
+    SUBDIR += ejdb
     SUBDIR += elixir-calecto
     SUBDIR += elixir-db_connection
     SUBDIR += elixir-ecto
@@ -410,6 +411,7 @@
     SUBDIR += p5-DBIx-Skinny-Schema-Loader
     SUBDIR += p5-DBIx-Sunny
     SUBDIR += p5-DBIx-TableHash
+    SUBDIR += p5-DBIx-Tracer
     SUBDIR += p5-DBIx-TransactionManager
     SUBDIR += p5-DBIx-Tree
     SUBDIR += p5-DBIx-VersionedDDL
@@ -852,6 +854,7 @@
     SUBDIR += redis
     SUBDIR += redis-devel
     SUBDIR += redis6
+    SUBDIR += redis62
     SUBDIR += redis_exporter
     SUBDIR += redisdesktopmanager
     SUBDIR += redisjson

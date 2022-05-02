@@ -115,6 +115,7 @@
     SUBDIR += deadbeef-waveform-seekbar-plugin
     SUBDIR += dekagen
     SUBDIR += denemo
+    SUBDIR += dexed
     SUBDIR += din
     SUBDIR += discid
     SUBDIR += dmidiplayer
@@ -418,6 +419,7 @@
     SUBDIR += libsndfile
     SUBDIR += libsonic
     SUBDIR += libsoxr
+    SUBDIR += libspecbleach
     SUBDIR += libtremor
     SUBDIR += libumidi
     SUBDIR += libvorbis

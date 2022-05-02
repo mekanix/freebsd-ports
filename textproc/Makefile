@@ -51,6 +51,7 @@
     SUBDIR += apache-commons-digester
     SUBDIR += apache-poi
     SUBDIR += apache-solr
+    SUBDIR += apache-xmlbeans
     SUBDIR += apertium
     SUBDIR += apertium-eng
     SUBDIR += artha
@@ -320,6 +321,7 @@
     SUBDIR += jade
     SUBDIR += jalingo
     SUBDIR += jarnal
+    SUBDIR += jarowinkler-cpp
     SUBDIR += java2html
     SUBDIR += jaxup
     SUBDIR += jdictionary
@@ -451,6 +453,7 @@
     SUBDIR += md4c
     SUBDIR += mdbook
     SUBDIR += mdbook-linkcheck
+    SUBDIR += mdbook-mermaid
     SUBDIR += mdocml
     SUBDIR += meilisearch
     SUBDIR += meld
@@ -1172,6 +1175,7 @@
     SUBDIR += p5-libxml
     SUBDIR += p5-pod2pdf
     SUBDIR += p5-podlators
+    SUBDIR += p5-utf8-all
     SUBDIR += p5-xmltv
     SUBDIR += pa-aspell
     SUBDIR += pageedit
@@ -1333,6 +1337,7 @@
     SUBDIR += py-iso-639
     SUBDIR += py-iso3166
     SUBDIR += py-j2cli
+    SUBDIR += py-jarowinkler
     SUBDIR += py-jc
     SUBDIR += py-jinja2-cli
     SUBDIR += py-jq
@@ -1473,6 +1478,7 @@
     SUBDIR += py-sphinx-autodoc-typehints
     SUBDIR += py-sphinx-book-theme
     SUBDIR += py-sphinx-copybutton
+    SUBDIR += py-sphinx-design
     SUBDIR += py-sphinx-inline-tabs
     SUBDIR += py-sphinx-intl
     SUBDIR += py-sphinx-issues
@@ -1632,6 +1638,7 @@
     SUBDIR += rubygem-css_parser
     SUBDIR += rubygem-cssmin
     SUBDIR += rubygem-cucumber-gherkin
+    SUBDIR += rubygem-cucumber-gherkin22
     SUBDIR += rubygem-cucumber-html-formatter
     SUBDIR += rubygem-cucumber-html-formatter17
     SUBDIR += rubygem-diff-lcs
@@ -1698,6 +1705,7 @@
     SUBDIR += rubygem-kramdown
     SUBDIR += rubygem-kramdown-parser-gfm
     SUBDIR += rubygem-kramdown1
+    SUBDIR += rubygem-kramdown23
     SUBDIR += rubygem-kwalify
     SUBDIR += rubygem-libxml-ruby
     SUBDIR += rubygem-linguistics
@@ -2014,8 +2022,10 @@
     SUBDIR += yi-hunspell
     SUBDIR += yodl
     SUBDIR += yq
+    SUBDIR += zed
     SUBDIR += zenxml
     SUBDIR += zorba
+    SUBDIR += zq
     SUBDIR += zu-aspell
     SUBDIR += zu-hunspell
     SUBDIR += zxing-cpp

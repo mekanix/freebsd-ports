@@ -1,6 +1,6 @@
---- synapse/python_dependencies.py.orig	2022-03-24 17:18:43 UTC
+--- synapse/python_dependencies.py.orig	2022-04-20 00:17:17 UTC
 +++ synapse/python_dependencies.py
-@@ -80,7 +80,7 @@ REQUIREMENTS = [
+@@ -82,7 +82,7 @@ REQUIREMENTS = [
      "typing-extensions>=3.10.0",
      # We enforce that we have a `cryptography` version that bundles an `openssl`
      # with the latest security patches.

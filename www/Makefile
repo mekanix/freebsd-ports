@@ -38,6 +38,9 @@
     SUBDIR += awstats
     SUBDIR += axis2
     SUBDIR += bacula-web
+    SUBDIR += baculum-api
+    SUBDIR += baculum-common
+    SUBDIR += baculum-web
     SUBDIR += baikal
     SUBDIR += bareos-webui
     SUBDIR += bareos18-webui
@@ -419,6 +422,7 @@
     SUBDIR += moodle310
     SUBDIR += moodle311
     SUBDIR += moodle39
+    SUBDIR += moodle40
     SUBDIR += morty
     SUBDIR += mozplugger
     SUBDIR += multisort
@@ -757,6 +761,7 @@
     SUBDIR += p5-Dancer2
     SUBDIR += p5-Dancer2-Plugin-Ajax
     SUBDIR += p5-Dancer2-Plugin-Deferred
+    SUBDIR += p5-Dancer2-Plugin-FormValidator
     SUBDIR += p5-Dancer2-Plugin-Interchange6
     SUBDIR += p5-Dancer2-Plugin-Path-Class
     SUBDIR += p5-Data-TreeDumper-Renderer-DHTML
@@ -802,6 +807,7 @@
     SUBDIR += p5-HTML-Element-Library
     SUBDIR += p5-HTML-Element-Replacer
     SUBDIR += p5-HTML-Encoding
+    SUBDIR += p5-HTML-Escape
     SUBDIR += p5-HTML-ExtractContent
     SUBDIR += p5-HTML-ExtractMain
     SUBDIR += p5-HTML-Field
@@ -1187,6 +1193,7 @@
     SUBDIR += p5-URI-Escape-JavaScript
     SUBDIR += p5-URI-Escape-XS
     SUBDIR += p5-URI-Fetch
+    SUBDIR += p5-URI-Normalize
     SUBDIR += p5-URI-ParseSearchString
     SUBDIR += p5-URI-Sequin
     SUBDIR += p5-URI-Title
@@ -1424,6 +1431,7 @@
     SUBDIR += py-azure-storage
     SUBDIR += py-beaker
     SUBDIR += py-beautifulsoup
+    SUBDIR += py-beautifulsoup449
     SUBDIR += py-betamax
     SUBDIR += py-biscuits
     SUBDIR += py-bjoern
@@ -1453,7 +1461,6 @@
     SUBDIR += py-dj32-django-filter
     SUBDIR += py-dj32-django-graphiql-debug-toolbar
     SUBDIR += py-dj32-django-js-asset
-    SUBDIR += py-dj32-django-modelcluster
     SUBDIR += py-dj32-django-mptt
     SUBDIR += py-dj32-django-prometheus
     SUBDIR += py-dj32-django-redis
@@ -1475,6 +1482,7 @@
     SUBDIR += py-django-babel
     SUBDIR += py-django-bakery
     SUBDIR += py-django-bitfield
+    SUBDIR += py-django-bleach
     SUBDIR += py-django-bootstrap-form
     SUBDIR += py-django-bootstrap-pagination
     SUBDIR += py-django-bootstrap3
@@ -1893,6 +1901,7 @@
     SUBDIR += rubygem-faraday
     SUBDIR += rubygem-faraday-em_http
     SUBDIR += rubygem-faraday-em_synchrony
+    SUBDIR += rubygem-faraday-http-cache
     SUBDIR += rubygem-faraday-httpclient
     SUBDIR += rubygem-faraday-multipart
     SUBDIR += rubygem-faraday-net_http
@@ -2054,7 +2063,6 @@
     SUBDIR += rubygem-rack-protection
     SUBDIR += rubygem-rack-protection1
     SUBDIR += rubygem-rack-proxy
-    SUBDIR += rubygem-rack-proxy06
     SUBDIR += rubygem-rack-ssl
     SUBDIR += rubygem-rack-test
     SUBDIR += rubygem-rack-timeout
@@ -2180,7 +2188,6 @@
     SUBDIR += sfeed
     SUBDIR += sfnt2woff
     SUBDIR += shellinabox
-    SUBDIR += shttpd
     SUBDIR += silicon
     SUBDIR += simple-web-server
     SUBDIR += sitecopy
@@ -2302,8 +2309,10 @@
     SUBDIR += varnish-ip2proxy
     SUBDIR += varnish-libvmod-digest
     SUBDIR += varnish-libvmod-dynamic
+    SUBDIR += varnish-libvmod-geoip2
     SUBDIR += varnish-libvmod-maxminddb
     SUBDIR += varnish-libvmod-querystring
+    SUBDIR += varnish-libvmod-redis
     SUBDIR += varnish-modules
     SUBDIR += varnish-nagios
     SUBDIR += varnish4

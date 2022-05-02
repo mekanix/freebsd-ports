@@ -502,6 +502,7 @@
     SUBDIR += p5-Crypt-GOST_PP
     SUBDIR += p5-Crypt-GPG
     SUBDIR += p5-Crypt-GeneratePassword
+    SUBDIR += p5-Crypt-GpgME
     SUBDIR += p5-Crypt-HCE_MD5
     SUBDIR += p5-Crypt-HCE_SHA
     SUBDIR += p5-Crypt-HSXKPasswd
@@ -781,7 +782,7 @@
     SUBDIR += pinentry-curses
     SUBDIR += pinentry-efl
     SUBDIR += pinentry-fltk
-    SUBDIR += pinentry-gnome3
+    SUBDIR += pinentry-gnome
     SUBDIR += pinentry-gtk2
     SUBDIR += pinentry-qt5
     SUBDIR += pinentry-tty
@@ -827,7 +828,9 @@
     SUBDIR += py-azure-keyvault-certificates
     SUBDIR += py-azure-keyvault-keys
     SUBDIR += py-azure-keyvault-secrets
+    SUBDIR += py-base58
     SUBDIR += py-bcrypt
+    SUBDIR += py-bitbox02
     SUBDIR += py-btchip-python
     SUBDIR += py-cerealizer
     SUBDIR += py-cert-human
@@ -901,11 +904,13 @@
     SUBDIR += py-muacrypt
     SUBDIR += py-netbox-secretstore
     SUBDIR += py-netmiko
+    SUBDIR += py-noiseprotocol
     SUBDIR += py-ntlm-auth
     SUBDIR += py-oauth2client
     SUBDIR += py-oauthlib
     SUBDIR += py-onlykey
     SUBDIR += py-openssl
+    SUBDIR += py-oscrypto
     SUBDIR += py-ospd
     SUBDIR += py-ospd-openvas
     SUBDIR += py-paramiko
@@ -917,6 +922,7 @@
     SUBDIR += py-pgpy
     SUBDIR += py-plaso
     SUBDIR += py-potr
+    SUBDIR += py-pwntools
     SUBDIR += py-pyaes
     SUBDIR += py-pyaff4
     SUBDIR += py-pyaxo
@@ -926,6 +932,7 @@
     SUBDIR += py-pycryptodome
     SUBDIR += py-pycryptodomex
     SUBDIR += py-pyelliptic
+    SUBDIR += py-pyhanko-certvalidator
     SUBDIR += py-pylibacl
     SUBDIR += py-pymacaroons
     SUBDIR += py-pynacl
@@ -954,6 +961,7 @@
     SUBDIR += py-pywinrm
     SUBDIR += py-requests-credssp
     SUBDIR += py-requests-kerberos
+    SUBDIR += py-ropgadget
     SUBDIR += py-ropper
     SUBDIR += py-rsa
     SUBDIR += py-safe
@@ -966,7 +974,6 @@
     SUBDIR += py-signedjson
     SUBDIR += py-social-auth-core
     SUBDIR += py-spake2
-    SUBDIR += py-ssh
     SUBDIR += py-ssh-audit
     SUBDIR += py-sshpubkeys
     SUBDIR += py-stem
@@ -974,6 +981,7 @@
     SUBDIR += py-stix2
     SUBDIR += py-stix2-patterns
     SUBDIR += py-taxii2-client
+    SUBDIR += py-tinyaes
     SUBDIR += py-tls-parser
     SUBDIR += py-tlslite
     SUBDIR += py-tlslite-ng
@@ -991,6 +999,7 @@
     SUBDIR += py-xkcdpass
     SUBDIR += py-xmlsec
     SUBDIR += py-yara
+    SUBDIR += py-yara-python-dex
     SUBDIR += py-yubikey-manager
     SUBDIR += py-zkg
     SUBDIR += py-zope.password
@@ -1063,6 +1072,7 @@
     SUBDIR += rubygem-nexpose
     SUBDIR += rubygem-nmap-parser
     SUBDIR += rubygem-omniauth
+    SUBDIR += rubygem-omniauth-alicloud
     SUBDIR += rubygem-omniauth-atlassian-oauth2
     SUBDIR += rubygem-omniauth-bitbucket
     SUBDIR += rubygem-omniauth-cas
@@ -1143,6 +1153,7 @@
     SUBDIR += seahorse
     SUBDIR += seal
     SUBDIR += seccure
+    SUBDIR += seclists
     SUBDIR += secpanel
     SUBDIR += sectok
     SUBDIR += secure_delete
@@ -1159,6 +1170,7 @@
     SUBDIR += silktools
     SUBDIR += sks
     SUBDIR += smurflog
+    SUBDIR += sniffglue
     SUBDIR += snoopy
     SUBDIR += snort
     SUBDIR += snort-rep

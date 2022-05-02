@@ -5,6 +5,7 @@
     SUBDIR += apache-commons-cli
     SUBDIR += apache-commons-codec
     SUBDIR += apache-commons-collections
+    SUBDIR += apache-commons-collections4
     SUBDIR += apache-commons-dbcp
     SUBDIR += apache-commons-httpclient
     SUBDIR += apache-commons-lang
@@ -94,6 +95,7 @@
     SUBDIR += openjdk16
     SUBDIR += openjdk17
     SUBDIR += openjdk17-jre
+    SUBDIR += openjdk18
     SUBDIR += openjdk7
     SUBDIR += openjdk7-jre
     SUBDIR += openjdk8

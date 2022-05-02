@@ -1,7 +1,7 @@
 # Created by: Kris Moore <kris@pcbsd.org>
 
 PORTNAME=	qtcreator
-DISTVERSION=	6.0.2
+DISTVERSION=	7.0.1
 CATEGORIES=	devel
 MASTER_SITES=	QT/official_releases/qtcreator/${DISTVERSION:R}/${DISTVERSION}
 DISTNAME=	qt-creator-opensource-src-${DISTVERSION}
@@ -37,14 +37,10 @@ SHEBANG_FILES=		tests/system/tools/objectsToTable.py \
 			src/libs/qmljs/parser/changeLicense.py \
 			src/libs/qt-breakpad/qtbreakpadsymbols \
 			src/tools/icons/export.py \
-			scripts/packagePlugins.py \
 			scripts/ninjawrapper.py \
 			scripts/checkInstalledFiles.py \
-			scripts/createDistPackage.py \
-			scripts/createDevPackage.py \
 			scripts/deployqt.py \
 			scripts/dependencyinfo.py \
-			scripts/createSourcePackages.py \
 			scripts/uichanges.py \
 			scripts/makedmg.py
 
@@ -54,6 +50,8 @@ CMAKE_ARGS+=	-DCMAKE_PREFIX_PATH:STRING="${PREFIX}/llvm${LLVM_DEFAULT};${PREFIX}
 CMAKE_ON=	CMAKE_DISABLE_FIND_PACKAGE_elfutils
 # Disable precompiled headers for now, they are missing compile flags.
 CMAKE_OFF=	BUILD_WITH_PCH
+# Disable Qt6 suport for now
+CMAKE_ON+=	CMAKE_DISABLE_FIND_PACKAGE_Qt6
 
 LDFLAGS+=	-lexecinfo
 
