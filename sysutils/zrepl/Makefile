@@ -2,8 +2,8 @@
 
 PORTNAME=	zrepl
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.5.0
-PORTREVISION=	1
+DISTVERSION=	0.5.0-8
+DISTVERSIONSUFFIX=	-g19b2deb
 CATEGORIES=	sysutils
 
 MAINTAINER=	lcook@FreeBSD.org
@@ -12,10 +12,10 @@ COMMENT=	ZFS dataset replication tool
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		go:modules,no_vendor_dir
+USES=		go:modules
 USE_RC_SUBR=	zrepl
 
-GO_MODULE=	github.com/${PORTNAME}/${PORTNAME}
+GO_MODULE=	github.com/${PORTNAME}/${PORTNAME}@v0.5.1-0.20220507195951-19b2deb2cfe5
 GO_BUILDFLAGS=	-ldflags "\
 		-s -w\
 		-X ${GO_MODULE}/version.${PORTNAME}Version=${DISTVERSIONFULL}"
