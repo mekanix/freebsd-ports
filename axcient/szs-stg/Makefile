@@ -1,19 +1,42 @@
 # $FreeBSD$
 
-PORTVERSION=	1.18.0.rc1
+PORTVERSION=	1.19.0.rc1
 PKGNAMESUFFIX=	-stg
 
-GH_TAGNAME=	1.18.0-rc1
-GH_TUPLE=	BurntSushi:toml:v0.3.1:burntsushi_toml/vendor/github.com/BurntSushi/toml \
+GH_TAGNAME=	1.19.0-rc1
+GH_TUPLE=	\
+		Azure:azure-pipeline-go:v0.2.3:azure_azure_pipeline_go/vendor/github.com/Azure/azure-pipeline-go \
+		Azure:azure-sdk-for-go:3e51649a3e16:azure_azure_sdk_for_go_armresources \
+		Azure:azure-sdk-for-go:4f2fa7298d85:azure_azure_sdk_for_go_internal \
+		Azure:azure-sdk-for-go:7b426459db85:azure_azure_sdk_for_go_azcore \
+		Azure:azure-sdk-for-go:9f4f18f4fb03:azure_azure_sdk_for_go_armsubscriptions \
+		Azure:azure-sdk-for-go:f80f698679bf:azure_azure_sdk_for_go_azidentity \
+		Azure:azure-sdk-for-go:v59.0.0:azure_azure_sdk_for_go/vendor/github.com/Azure/azure-sdk-for-go \
+		Azure:azure-storage-blob-go:v0.14.0:azure_azure_storage_blob_go/vendor/github.com/Azure/azure-storage-blob-go \
+		Azure:go-autorest:446f41b7d65b:azure_go_autorest_validation \
+		Azure:go-autorest:70a178d6ca59:azure_go_autorest_cli \
+		Azure:go-autorest:8c1b671de0dd:azure_go_autorest_auth \
+		Azure:go-autorest:a46566dfcbdc:azure_go_autorest_adal \
+		Azure:go-autorest:autorest/v0.11.25:azure_go_autorest_autorest \
+		Azure:go-autorest:b3a0b30a7423:azure_go_autorest_date \
+		Azure:go-autorest:logger/v0.2.1:azure_go_autorest_logger \
+		Azure:go-autorest:tracing/v0.6.0:azure_go_autorest_tracing \
+		Azure:go-autorest:v14.2.0:azure_go_autorest/vendor/github.com/Azure/go-autorest \
+		BurntSushi:toml:v0.3.1:burntsushi_toml/vendor/github.com/BurntSushi/toml \
 		RichardKnop:logging:1a693bdd4fae:richardknop_logging/vendor/github.com/RichardKnop/logging \
 		RichardKnop:machinery:v1.7.4:richardknop_machinery/vendor/github.com/RichardKnop/machinery \
 		RichardKnop:redsync:v1.2.0:richardknop_redsync/vendor/github.com/RichardKnop/redsync \
+		VividCortex:ewma:v1.1.1:vividcortex_ewma/vendor/github.com/VividCortex/ewma \
+		alexflint:go-arg:v1.4.3:alexflint_go_arg/vendor/github.com/alexflint/go-arg \
+		alexflint:go-scalar:v1.1.0:alexflint_go_scalar/vendor/github.com/alexflint/go-scalar \
 		aws:aws-sdk-go:v1.29.15:aws_aws_sdk_go/vendor/github.com/aws/aws-sdk-go \
 		beorn7:perks:v1.0.1:beorn7_perks/vendor/github.com/beorn7/perks \
 		bradfitz:gomemcache:a41fca850d0b:bradfitz_gomemcache/vendor/github.com/bradfitz/gomemcache \
 		census-instrumentation:opencensus-go:v0.22.3:census_instrumentation_opencensus_go/vendor/go.opencensus.io \
 		cespare:xxhash:v2.1.1:cespare_xxhash_v2/vendor/github.com/cespare/xxhash/v2 \
+		cheggaaa:pb:v3.0.8:cheggaaa_pb_v3/vendor/github.com/cheggaaa/pb \
 		davecgh:go-spew:v1.1.1:davecgh_go_spew/vendor/github.com/davecgh/go-spew \
+		dimchansky:utfbom:v1.1.1:dimchansky_utfbom/vendor/github.com/dimchansky/utfbom \
 		dnephin:pflag:v1.0.7:dnephin_pflag/vendor/github.com/dnephin/pflag \
 		dominikh:go-tools:v0.0.1-2020.1.3:dominikh_go_tools/vendor/honnef.co/go/tools \
 		fatih:color:v1.10.0:fatih_color/vendor/github.com/fatih/color \
@@ -28,30 +51,31 @@ GH_TUPLE=	BurntSushi:toml:v0.3.1:burntsushi_toml/vendor/github.com/BurntSushi/to
 		go-redis:redis:v6.15.7:go_redis_redis/vendor/github.com/go-redis/redis \
 		go-resty:resty:v1.12.0:go_resty_resty/vendor/gopkg.in/resty.v1 \
 		go-stack:stack:v1.8.0:go_stack_stack/vendor/github.com/go-stack/stack \
-		go-yaml:yaml:9f266ea9e77c:go_yaml_yaml_1/vendor/gopkg.in/yaml.v3 \
-		go-yaml:yaml:v2.3.0:go_yaml_yaml/vendor/gopkg.in/yaml.v2 \
+		go-yaml:yaml:496545a6307b:go_yaml_yaml_1/vendor/gopkg.in/yaml.v3 \
+		go-yaml:yaml:v2.4.0:go_yaml_yaml/vendor/gopkg.in/yaml.v2 \
+		golang-jwt:jwt:v4.2.0:golang_jwt_jwt_v4/vendor/github.com/golang-jwt/jwt/v4 \
 		golang:appengine:v1.6.5:golang_appengine/vendor/google.golang.org/appengine \
-		golang:crypto:75b288015ac9:golang_crypto/vendor/golang.org/x/crypto \
+		golang:crypto:e495a2d5b3d3:golang_crypto/vendor/golang.org/x/crypto \
 		golang:exp:fcea875c7e85:golang_exp/vendor/golang.org/x/exp \
 		golang:groupcache:8c9f03a8e57e:golang_groupcache/vendor/github.com/golang/groupcache \
 		golang:lint:738671d3881b:golang_lint/vendor/golang.org/x/lint \
 		golang:mock:v1.5.0:golang_mock/vendor/github.com/golang/mock \
-		golang:mod:v0.3.0:golang_mod/vendor/golang.org/x/mod \
-		golang:net:f5854403a974:golang_net/vendor/golang.org/x/net \
+		golang:mod:v0.4.2:golang_mod/vendor/golang.org/x/mod \
+		golang:net:47ca1ff31462:golang_net/vendor/golang.org/x/net \
 		golang:oauth2:bf48bf16ab8d:golang_oauth2/vendor/golang.org/x/oauth2 \
 		golang:protobuf:v1.4.3:golang_protobuf/vendor/github.com/golang/protobuf \
 		golang:snappy:v0.0.1:golang_snappy/vendor/github.com/golang/snappy \
-		golang:sync:09787c993a3a:golang_sync/vendor/golang.org/x/sync \
+		golang:sync:036812b2e83c:golang_sync/vendor/golang.org/x/sync \
 		golang:sys:665e8c7367d1:golang_sys/vendor/golang.org/x/sys \
 		golang:term:7de9c90e9dd1:golang_term/vendor/golang.org/x/term \
-		golang:text:v0.3.3:golang_text/vendor/golang.org/x/text \
-		golang:tools:v0.1.0:golang_tools/vendor/golang.org/x/tools \
+		golang:text:v0.3.6:golang_text/vendor/golang.org/x/text \
+		golang:tools:v0.1.5:golang_tools/vendor/golang.org/x/tools \
 		golang:xerrors:5ec99f83aff1:golang_xerrors/vendor/golang.org/x/xerrors \
 		gomodule:redigo:v2.0.0:gomodule_redigo/vendor/github.com/gomodule/redigo \
 		google:go-cmp:v0.5.5:google_go_cmp/vendor/github.com/google/go-cmp \
 		google:go-genproto:beee998c1893:google_go_genproto/vendor/google.golang.org/genproto \
 		google:shlex:e7afc7fbc510:google_shlex/vendor/github.com/google/shlex \
-		google:uuid:v1.1.1:google_uuid/vendor/github.com/google/uuid \
+		google:uuid:v1.2.0:google_uuid/vendor/github.com/google/uuid \
 		googleapis:gax-go:v2.0.5:googleapis_gax_go_v2/vendor/github.com/googleapis/gax-go \
 		googleapis:google-api-go-client:v0.19.0:googleapis_google_api_go_client/vendor/google.golang.org/api \
 		googleapis:google-cloud-go:pubsub/v1.2.0:googleapis_google_cloud_go_pubsub \
@@ -66,12 +90,16 @@ GH_TUPLE=	BurntSushi:toml:v0.3.1:burntsushi_toml/vendor/github.com/BurntSushi/to
 		klauspost:compress:v1.10.2:klauspost_compress/vendor/github.com/klauspost/compress \
 		leodido:go-urn:v1.2.0:leodido_go_urn/vendor/github.com/leodido/go-urn \
 		mattn:go-colorable:v0.1.8:mattn_go_colorable/vendor/github.com/mattn/go-colorable \
+		mattn:go-ieproxy:v0.0.1:mattn_go_ieproxy/vendor/github.com/mattn/go-ieproxy \
 		mattn:go-isatty:v0.0.12:mattn_go_isatty/vendor/github.com/mattn/go-isatty \
+		mattn:go-runewidth:v0.0.12:mattn_go_runewidth/vendor/github.com/mattn/go-runewidth \
 		matttproud:golang_protobuf_extensions:v1.0.1:matttproud_golang_protobuf_extensions/vendor/github.com/matttproud/golang_protobuf_extensions \
+		mitchellh:go-homedir:v1.1.0:mitchellh_go_homedir/vendor/github.com/mitchellh/go-homedir \
 		modern-go:concurrent:bacd9c7ef1dd:modern_go_concurrent/vendor/github.com/modern-go/concurrent \
 		modern-go:reflect2:v1.0.1:modern_go_reflect2/vendor/github.com/modern-go/reflect2 \
 		mongodb:mongo-go-driver:v1.3.0:mongodb_mongo_go_driver/vendor/go.mongodb.org/mongo-driver \
 		opentracing:opentracing-go:v1.1.0:opentracing_opentracing_go/vendor/github.com/opentracing/opentracing-go \
+		pkg:browser:0a3d74bf9ce4:pkg_browser/vendor/github.com/pkg/browser \
 		pkg:errors:v0.9.1:pkg_errors/vendor/github.com/pkg/errors \
 		pmezard:go-difflib:v1.0.0:pmezard_go_difflib/vendor/github.com/pmezard/go-difflib \
 		prometheus:client_golang:v1.10.0:prometheus_client_golang/vendor/github.com/prometheus/client_golang \
@@ -79,6 +107,7 @@ GH_TUPLE=	BurntSushi:toml:v0.3.1:burntsushi_toml/vendor/github.com/BurntSushi/to
 		prometheus:common:v0.18.0:prometheus_common/vendor/github.com/prometheus/common \
 		prometheus:procfs:v0.6.0:prometheus_procfs/vendor/github.com/prometheus/procfs \
 		protocolbuffers:protobuf-go:v1.23.0:protocolbuffers_protobuf_go/vendor/google.golang.org/protobuf \
+		rivo:uniseg:v0.2.0:rivo_uniseg/vendor/github.com/rivo/uniseg \
 		satori:go.uuid:v1.2.0:satori_go_uuid/vendor/github.com/satori/go.uuid \
 		streadway:amqp:1c71cc93ed71:streadway_amqp/vendor/github.com/streadway/amqp \
 		stretchr:testify:v1.7.0:stretchr_testify/vendor/github.com/stretchr/testify \
@@ -93,6 +122,6 @@ MASTERDIR=	${.CURDIR}/../szs
 DISTINFO_FILE=	${.CURDIR}/distinfo
 PLIST=		${.CURDIR}/pkg-plist
 
-GO_TARGET=	./cmd/api ./cmd/jobs ./cmd/statistics ./cmd/exports ./cmd/safetyarchivecleanup ./cmd/cleanupclones ./cmd/snapshotscleanup ./cmd/clonesnapshots
+GO_TARGET=	./cmd/api ./cmd/jobs ./cmd/statistics ./cmd/exports ./cmd/safetyarchivecleanup ./cmd/cleanupclones ./cmd/snapshotscleanup ./cmd/clonesnapshots ./cmd/azurerecovery
 
 .include "${MASTERDIR}/Makefile"

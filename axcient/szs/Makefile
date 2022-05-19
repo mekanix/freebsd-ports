@@ -106,13 +106,6 @@ GH_TUPLE?=	BurntSushi:toml:v0.3.1:burntsushi_toml/vendor/github.com/BurntSushi/t
 		xdg:scram:7eeb5667e42c:xdg_scram/vendor/github.com/xdg/scram \
 		xdg:stringprep:v1.0.0:xdg_stringprep/vendor/github.com/xdg/stringprep
 
-post-extract:
-	@${RM} -r ${WRKSRC}/vendor/cloud.google.com/go/pubsub
-	@${RLN} ${WRKSRC_googleapis_google_cloud_go_pubsub}/pubsub ${WRKSRC}/vendor/cloud.google.com/go/pubsub
-	# Temporarily delete cleanup_clones
-	# CL-3414
-	@${RM} freebsd-pkg/usr/local/etc/cron.d/cleanup_clones
-
 CONFLICTS_INSTALL?=	szs-stg
 
 GO_PKGNAME=	github.com/${GH_ACCOUNT}/szs-op
@@ -123,6 +116,7 @@ post-build:
 	${MKDIR} ${WRKDIR}/lib
 	cd ${GO_WRKSRC} && ${SETENV} ${MAKE_ENV} ${GO_ENV} ${GO_CMD} build `echo ${GO_BUILDFLAGS} | ${SED} 's/buildmode=exe/buildmode=c-shared/'` -o ${WRKDIR}/lib/libszs-op.so cmd/shared/binding.go
 
+.include "${.CURDIR}/post-extract.mk"
 .include "${.CURDIR}/post-install.mk"
 
 .include <bsd.port.mk>
