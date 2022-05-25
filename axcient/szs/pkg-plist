@@ -6,6 +6,7 @@ bin/szs-op-cleanup-clones
 bin/szs-op-statistics
 bin/szs-op-snapshots-cleanup
 bin/szs-op-clone-snapshots
+bin/szs-op-azure-recovery
 @sample %%EXAMPLESDIR%%/cron.d/safety_archive_cleanup etc/cron.d/safety_archive_cleanup
 @sample %%EXAMPLESDIR%%/cron.d/statistics etc/cron.d/statistics
 @sample %%EXAMPLESDIR%%/cron.d/snapshots_cleanup etc/cron.d/snapshots_cleanup
@@ -30,3 +31,4 @@ lib/libszs-op.so
 @dir etc/newsyslog.d
 @dir etc/rsyslog.d
 @dir etc/cron.d
+
