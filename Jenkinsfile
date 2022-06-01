@@ -52,6 +52,7 @@ pipeline {
                     axcient/efs-vm-utils \
                     axcient/filestore-clone \
                     axcient/py-drive-exporter \
+                    axcient/migration-tools \
                     axcient/smart-recovery \
                     axcient/smart-recovery-stg \
                     axcient/spxops-vmagent \
@@ -166,6 +167,7 @@ pipeline {
                 sh 'cd axcient/dralserver-stg; make fetch'
                 sh 'cd axcient/py-drive-exporter; make fetch'
                 sh 'cd axcient/filestore-clone; make fetch'
+                sh 'cd axcient/migration-tools; make fetch'
                 sh 'cd axcient/smart-recovery; make fetch'
                 sh 'cd axcient/smart-recovery-stg; make fetch'
                 sh 'cd axcient/spxops-vmagent; make fetch'
