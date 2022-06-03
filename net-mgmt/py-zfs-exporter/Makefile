@@ -2,6 +2,7 @@
 
 PORTNAME=	zfs-exporter
 PORTVERSION=	0.2.15
+PORTREVISION=	1
 CATEGORIES=	net-mgmt
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -17,7 +18,7 @@ USERS=		prometheus
 GROUPS=		prometheus
 
 GH_PROJECT=	py-zfs-exporter
-GH_TAGNAME=	v0.2.15
+GH_TAGNAME=	v0.2.14
 
 USE_RC_SUBR=	zfs_exporter
 
