@@ -118,6 +118,7 @@
     SUBDIR += freebsd-doc-es
     SUBDIR += freebsd-doc-fr
     SUBDIR += freebsd-doc-hu
+    SUBDIR += freebsd-doc-id
     SUBDIR += freebsd-doc-it
     SUBDIR += freebsd-doc-ja
     SUBDIR += freebsd-doc-ko
@@ -481,6 +482,7 @@
     SUBDIR += susv2
     SUBDIR += susv3
     SUBDIR += susv4
+    SUBDIR += swissfileknife
     SUBDIR += sword
     SUBDIR += table.el
     SUBDIR += talkfilters
