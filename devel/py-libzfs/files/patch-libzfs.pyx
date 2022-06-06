@@ -19,6 +19,24 @@
  class DatasetType(enum.IntEnum):
      FILESYSTEM = zfs.ZFS_TYPE_FILESYSTEM
      VOLUME = zfs.ZFS_TYPE_VOLUME
+@@ -244,8 +255,6 @@ class SendFlag(enum.Enum):
+     REPLICATE = 1
+     DOALL = 2
+     FROMORIGIN = 3
+-    IF HAVE_SENDFLAGS_T_DEDUP:
+-        DEDUP = 3
+     PROPS = 4
+     DRYRUN = 5
+     PARSABLE = 6
+@@ -264,6 +273,8 @@ class SendFlag(enum.Enum):
+         SAVED = 14
+     IF HAVE_SENDFLAGS_T_PROGRESSASTITLE:
+         PROGRESSASTITLE = 15
++    IF HAVE_SENDFLAGS_T_DEDUP:
++        DEDUP = 16
+ 
+ 
+ class DiffRecordType(enum.Enum):
 @@ -2369,23 +2380,28 @@ cdef class ZPoolScrub(object):
      property bytes_scanned:
          def __get__(self):
