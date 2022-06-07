@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	add_mbr
-PORTVERSION?=	2.0.1
+PORTVERSION?=	2.0.2
 PORTREVISION?=	0
 CATEGORIES=	axcient sysutils
 MASTER_SITES=	GH
@@ -11,7 +11,7 @@ COMMENT?=	Replibit add_mbr tool
 
 USES=		axcient fuse gmake
 GH_PROJECT=	Disk-Manager
-GH_TAGNAME?=	2.0.1
+GH_TAGNAME?=	2.0.2
 
 CONFLICTS_INSTALL?=	add_mbr-stg
 
