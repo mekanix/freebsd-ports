@@ -1,8 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	zfs-exporter
-PORTVERSION=	0.2.15
-PORTREVISION=	1
+PORTVERSION=	0.2.17
 CATEGORIES=	net-mgmt
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -18,7 +17,7 @@ USERS=		prometheus
 GROUPS=		prometheus
 
 GH_PROJECT=	py-zfs-exporter
-GH_TAGNAME=	v0.2.14
+GH_TAGNAME=	v0.2.17
 
 USE_RC_SUBR=	zfs_exporter
 
