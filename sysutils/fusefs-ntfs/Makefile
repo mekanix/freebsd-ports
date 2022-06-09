@@ -2,6 +2,7 @@
 
 PORTNAME=	ntfs
 PORTVERSION=	2022.5.17
+PORTREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	https://download.tuxera.com/opensource/
 PKGNAMEPREFIX=	fusefs-
@@ -22,8 +23,8 @@ CONFIGURE_ARGS=	--exec-prefix=${PREFIX} --disable-mount-helper \
 		--disable-mtab --with-fuse=external --disable-ldconfig
 INSTALL_TARGET=	install-strip
 
-OPTIONS_DEFINE=	CRYPTO DOCS EXTRAS LOCK UBLIO
-OPTIONS_DEFAULT=EXTRAS LOCK UBLIO
+OPTIONS_DEFINE=	CRYPTO DOCS EXTRAS LOCK UBLIO DEVOFFSET
+OPTIONS_DEFAULT=EXTRAS LOCK UBLIO DEVOFFSET
 OPTIONS_SUB=	yes
 
 CRYPTO_DESC=	Enable crypto-related code and utilities

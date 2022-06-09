@@ -359,15 +359,15 @@
  	if (err)
 --- src/ntfs-3g_common.c.orig	2021-05-20 18:42:51 UTC
 +++ src/ntfs-3g_common.c
-@@ -125,6 +125,7 @@ const struct DEFOPTION optionlist[] = {
+@@ -126,6 +126,7 @@ const struct DEFOPTION optionlist[] = {
  	{ "usermapping", OPT_USERMAPPING, FLGOPT_STRING },
  	{ "xattrmapping", OPT_XATTRMAPPING, FLGOPT_STRING },
  	{ "efs_raw", OPT_EFS_RAW, FLGOPT_BOGUS },
 +	{ "dev_offset", OPT_DEV_OFFSET, FLGOPT_DECIMAL },
- 	{ (const char*)NULL, 0, 0 } /* end marker */
- } ;
- 
-@@ -311,6 +312,9 @@ char *parse_mount_options(ntfs_fuse_context_t *ctx,
+ 	{ "posix_nlink", OPT_POSIX_NLINK, FLGOPT_BOGUS },
+ 	{ "special_files", OPT_SPECIAL_FILES, FLGOPT_STRING },
+ 	{ "--help", OPT_HELP, FLGOPT_BOGUS },
+@@ -321,6 +322,9 @@ char *parse_mount_options(ntfs_fuse_context_t *ctx,
  				break;
  			case OPT_DEFAULT_PERMISSIONS :
  				default_permissions = 1;
@@ -379,15 +379,15 @@
  				permissions = 1;
 --- src/ntfs-3g_common.h.orig	2021-05-20 18:42:51 UTC
 +++ src/ntfs-3g_common.h
-@@ -91,6 +91,7 @@ enum {
+@@ -92,6 +92,7 @@ enum {
  	OPT_USERMAPPING,
  	OPT_XATTRMAPPING,
  	OPT_EFS_RAW,
 +	OPT_DEV_OFFSET,
- } ;
- 
- 			/* Option flags */
-@@ -170,6 +171,7 @@ typedef struct {
+ 	OPT_POSIX_NLINK,
+ 	OPT_SPECIAL_FILES,
+ 	OPT_HELP,
+@@ -178,6 +179,7 @@ typedef struct {
  	struct SECURITY_CONTEXT security;
  	struct open_file *open_files; /* only defined in lowntfs-3g */
  	u64 latest_ghost;
