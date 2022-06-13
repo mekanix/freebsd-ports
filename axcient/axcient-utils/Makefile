@@ -20,7 +20,7 @@ NO_ARCH=	yes
 NO_BUILD=	yes
 USES=		axcient python:3.8+,run shebangfix
 GH_PROJECT=	freebsd-utils
-GH_TAGNAME=	5df7f781f98964f41516600b1758dced6ea6c61f
+GH_TAGNAME=	42902c15e27aa717bb8b24f21fb2c6c30b5fc3e1
 
 SUB_FILES=	399.explorer
 USE_RC_SUBR=	geli_salt zfs_crypto_salt
