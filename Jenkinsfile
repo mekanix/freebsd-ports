@@ -165,6 +165,7 @@ pipeline {
                 sh 'cd axcient/dcpkg-stg; make fetch'
                 sh 'cd axcient/dralserver; make fetch'
                 sh 'cd axcient/dralserver-stg; make fetch'
+                sh 'cd axcient/py-axcient; make fetch'
                 sh 'cd axcient/py-drive-exporter; make fetch'
                 sh 'cd axcient/filestore-clone; make fetch'
                 sh 'cd axcient/migration-tools; make fetch'
