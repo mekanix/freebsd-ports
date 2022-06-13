@@ -20,6 +20,7 @@
     SUBDIR += efsserver
     SUBDIR += efs-vm-utils
     SUBDIR += migration-tools
+    SUBDIR += py-axcient
     SUBDIR += py-drive-exporter
     SUBDIR += smart-recovery
     SUBDIR += smart-recovery-dev
