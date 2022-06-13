@@ -51,7 +51,6 @@ pipeline {
                     axcient/efsserver \
                     axcient/efs-vm-utils \
                     axcient/filestore-clone \
-                    axcient/py-axcient \
                     axcient/py-drive-exporter \
                     axcient/migration-tools \
                     axcient/smart-recovery \

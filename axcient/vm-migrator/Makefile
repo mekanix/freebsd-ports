@@ -2,13 +2,15 @@
 
 PORTNAME=	vm-migrator
 PORTVERSION=	0.1.1.20220601
+PORTREVISION= 	1
 CATEGORIES=	axcient
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	jsollvander@axcient.com
 COMMENT=	VM and VM storage migration tool
 
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}libvirt>=0:devel/py-libvirt@${PY_FLAVOR}
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}libvirt>=0:devel/py-libvirt@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}axcient>=0:axcient/py-axcient@${PY_FLAVOR}
 
 USES=		axcient python
 USE_PYTHON=	autoplist distutils
