@@ -1,5 +1,5 @@
-PORTNAME=	axcient
-PORTVERSION=	0.1.0.20220613
+PORTNAME=	axcient-helpers
+PORTVERSION=	0.1.0.20220616
 CATEGORIES=	axcient
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -14,7 +14,7 @@ USE_PYTHON=	autoplist distutils
 NO_ARCH=	yes
 
 GH_PROJECT=	py-axcient
-GH_TAGNAME=	132d93d56609b56c8a4462b9b9fb4e71e6d3c594
+GH_TAGNAME=	859acd6b6db5ff7e1e5d8ac609af44679595b0b9
 
 .include <bsd.port.mk>
 

@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	vm-migrator
-PORTVERSION=	0.1.1.20220601
+PORTVERSION=	0.1.1.20220616
 PORTREVISION= 	1
 CATEGORIES=	axcient
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -10,7 +10,8 @@ MAINTAINER=	jsollvander@axcient.com
 COMMENT=	VM and VM storage migration tool
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}libvirt>=0:devel/py-libvirt@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}axcient>=0:axcient/py-axcient@${PY_FLAVOR}
+		${PYTHON_PKGNAMEPREFIX}migration-tools>=0:axcient/migration-tools@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}axcient-helpers>=0:axcient/py-axcient-helpers@${PY_FLAVOR}
 
 USES=		axcient python
 USE_PYTHON=	autoplist distutils
@@ -18,6 +19,6 @@ USE_PYTHON=	autoplist distutils
 NO_ARCH=	yes
 
 GH_PROJECT=	vm-migrator
-GH_TAGNAME=	693d9ec40636a0c33f5461d6f4ccbcd55abc4c49
+GH_TAGNAME=	fce04d24911dc3e47d81b9757be3831fe3637ac9
 
 .include <bsd.port.mk>
