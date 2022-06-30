@@ -53,6 +53,7 @@
     SUBDIR += apcpwr
     SUBDIR += apcupsd
     SUBDIR += aptly
+    SUBDIR += arc_summary
     SUBDIR += arcconf
     SUBDIR += archey4
     SUBDIR += archivemount
@@ -139,6 +140,7 @@
     SUBDIR += bsdisks
     SUBDIR += bsdstats
     SUBDIR += bstack
+    SUBDIR += btop
     SUBDIR += btsixad
     SUBDIR += bulk_extractor
     SUBDIR += bupstash
@@ -370,7 +372,6 @@
     SUBDIR += finfo
     SUBDIR += firstboot-cloudsetup
     SUBDIR += firstboot-freebsd-update
-    SUBDIR += firstboot-growfs
     SUBDIR += firstboot-pkgs
     SUBDIR += flasher
     SUBDIR += flashrom
@@ -975,6 +976,8 @@
     SUBDIR += php80-posix
     SUBDIR += php81-fileinfo
     SUBDIR += php81-posix
+    SUBDIR += php82-fileinfo
+    SUBDIR += php82-posix
     SUBDIR += phybs
     SUBDIR += pick
     SUBDIR += pidof
@@ -1478,7 +1481,6 @@
     SUBDIR += ucspi-unix
     SUBDIR += udfclient
     SUBDIR += uefi-edk2-bhyve-csm
-    SUBDIR += uefi-edk2-qemu
     SUBDIR += ufetch
     SUBDIR += ufs_copy
     SUBDIR += uhidd

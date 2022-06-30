@@ -1,9 +1,9 @@
 # Created by: Brendan Molloy <brendan+freebsd@bbqsrc.net>
 
 PORTNAME=	matrix-synapse
-DISTVERSIONPREFIX=	v
-DISTVERSION=	1.60.0
+DISTVERSION=	1.61.1
 CATEGORIES=	net-im python
+MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	ports@skyforge.at
@@ -12,8 +12,7 @@ COMMENT=	Matrix protocol reference homeserver
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}poetry-core>=1.0.0:devel/py-poetry-core@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}poetry2setup>=1.0.0:devel/py-poetry2setup@${PY_FLAVOR}
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}poetry-core>=1.0.0:devel/py-poetry-core@${PY_FLAVOR}
 
 # Keep the RUN_DEPENDS layout similar to the master/synapse/python_dependencies.py file
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}jsonschema>=3.0.0:devel/py-jsonschema@${PY_FLAVOR} \
@@ -21,7 +20,6 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}jsonschema>=3.0.0:devel/py-jsonschema@${PY_F
 		${PYTHON_PKGNAMEPREFIX}unpaddedbase64>=2.1.0:devel/py-unpaddedbase64@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}canonicaljson>=1.4.0:devel/py-canonicaljson@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}signedjson>=1.1.0:security/py-signedjson@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}pynacl>=1.2.1:security/py-pynacl@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}service_identity>=18.1.0:security/py-service_identity@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}twisted>=18.9.0:devel/py-twisted@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}treq>=15.1:www/py-treq@${PY_FLAVOR} \
@@ -51,14 +49,11 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}jsonschema>=3.0.0:devel/py-jsonschema@${PY_F
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}virtualenv>=15.0:devel/py-virtualenv@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}tox>=2.3.1:devel/py-tox@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}lxml>0:devel/py-lxml@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}parameterized>=0.7.0:devel/py-parameterized@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}parameterized>=0.7.4:devel/py-parameterized@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}authlib>=0.14.0:security/py-authlib@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}idna>=2.5:dns/py-idna@${PY_FLAVOR}
 
 USES=		python:3.7+
-USE_GITHUB=	yes
-GH_ACCOUNT=	matrix-org
-GH_PROJECT=	synapse
 USE_PYTHON=	autoplist distutils
 USE_RC_SUBR=	synapse
 
@@ -100,9 +95,6 @@ URLPREVIEW_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}lxml>=4.2.0:devel/py-lxml@${PY_FL
 .if (${PYTHON_REL} < 30800)
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}importlib-metadata>=1.4:devel/py-importlib-metadata@${PY_FLAVOR}
 .endif
-
-pre-configure:
-	cd ${WRKSRC} && poetry2setup > setup.py
 
 post-install:
 	${MKDIR} ${STAGEDIR}${ETCDIR}

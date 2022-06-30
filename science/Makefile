@@ -133,6 +133,7 @@
     SUBDIR += libecpint
     SUBDIR += libefp
     SUBDIR += libgeodecomp
+    SUBDIR += libgetar
     SUBDIR += libghemical
     SUBDIR += libgridxc
     SUBDIR += libint
@@ -147,6 +148,7 @@
     SUBDIR += libssm
     SUBDIR += libsvm
     SUBDIR += libsvm-python
+    SUBDIR += libtensorflow1
     SUBDIR += libvdwxc
     SUBDIR += libxc
     SUBDIR += liggghts
@@ -171,6 +173,7 @@
     SUBDIR += molgif
     SUBDIR += molscript
     SUBDIR += molsketch
+    SUBDIR += mopac
     SUBDIR += mpb
     SUBDIR += mpqc
     SUBDIR += msms
@@ -240,6 +243,7 @@
     SUBDIR += phonopy
     SUBDIR += plumed
     SUBDIR += pnetcdf
+    SUBDIR += precice
     SUBDIR += pulseview
     SUBDIR += py-DendroPy
     SUBDIR += py-GPy
@@ -254,6 +258,7 @@
     SUBDIR += py-SimpleSpectral
     SUBDIR += py-abipy
     SUBDIR += py-access
+    SUBDIR += py-asap3
     SUBDIR += py-asdf
     SUBDIR += py-asdf-standard
     SUBDIR += py-asdf-transform-schemas
@@ -290,6 +295,7 @@
     SUBDIR += py-kinematics
     SUBDIR += py-kliff
     SUBDIR += py-liac-arff
+    SUBDIR += py-libgetar
     SUBDIR += py-libpysal
     SUBDIR += py-lifelines
     SUBDIR += py-mdp
@@ -308,6 +314,7 @@
     SUBDIR += py-phono3py
     SUBDIR += py-phonopy
     SUBDIR += py-pupynere
+    SUBDIR += py-py3Dmol
     SUBDIR += py-pyaixi
     SUBDIR += py-pyberny
     SUBDIR += py-pycsw
@@ -319,6 +326,7 @@
     SUBDIR += py-pymatgen
     SUBDIR += py-pymol
     SUBDIR += py-pyosf
+    SUBDIR += py-pyprecice
     SUBDIR += py-pysal
     SUBDIR += py-pyscf
     SUBDIR += py-pyteomics
@@ -389,7 +397,6 @@
     SUBDIR += spglib
     SUBDIR += step
     SUBDIR += svmlight
-    SUBDIR += szip
     SUBDIR += tblite
     SUBDIR += teem
     SUBDIR += tfel

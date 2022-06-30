@@ -136,12 +136,9 @@
     SUBDIR += dual-dhclient-daemon
     SUBDIR += easysoap
     SUBDIR += echoping
-    SUBDIR += elixir-kafka_ex
-    SUBDIR += elixir-oauth2
     SUBDIR += empty
     SUBDIR += endlessh
     SUBDIR += enet
-    SUBDIR += erlang-ranch
     SUBDIR += eternalterminal
     SUBDIR += evans
     SUBDIR += eventviews
@@ -189,6 +186,7 @@
     SUBDIR += gmid
     SUBDIR += gnet2
     SUBDIR += gnetcat
+    SUBDIR += gnome-connections
     SUBDIR += gnome-nettool
     SUBDIR += gnome-online-accounts
     SUBDIR += gnome-online-miners
@@ -241,12 +239,14 @@
     SUBDIR += haproxy22
     SUBDIR += haproxy23
     SUBDIR += haproxy24
+    SUBDIR += haproxy25
     SUBDIR += hblock
     SUBDIR += hexinject
     SUBDIR += hlmaster
     SUBDIR += honeyd
     SUBDIR += hostapd
     SUBDIR += hostapd-devel
+    SUBDIR += hostapd29
     SUBDIR += hping3
     SUBDIR += hsflowd
     SUBDIR += htpdate
@@ -361,7 +361,6 @@
     SUBDIR += libfabric
     SUBDIR += libfb
     SUBDIR += libfixbuf
-    SUBDIR += libgnetwork
     SUBDIR += libgravatar
     SUBDIR += libgrss
     SUBDIR += libgweather
@@ -493,6 +492,7 @@
     SUBDIR += ndpi
     SUBDIR += ndproxy
     SUBDIR += neatvnc
+    SUBDIR += nemesis
     SUBDIR += nepenthes
     SUBDIR += net6
     SUBDIR += netatalk3
@@ -975,7 +975,6 @@
     SUBDIR += pecl-xmlrpc
     SUBDIR += pecl-zmq
     SUBDIR += pen
-    SUBDIR += pfinger
     SUBDIR += php74-ldap
     SUBDIR += php74-soap
     SUBDIR += php74-sockets
@@ -986,6 +985,9 @@
     SUBDIR += php81-ldap
     SUBDIR += php81-soap
     SUBDIR += php81-sockets
+    SUBDIR += php82-ldap
+    SUBDIR += php82-soap
+    SUBDIR += php82-sockets
     SUBDIR += phpldapadmin
     SUBDIR += pichi
     SUBDIR += pimcommon
@@ -1318,6 +1320,7 @@
     SUBDIR += rubygem-no_proxy_fix
     SUBDIR += rubygem-oauth
     SUBDIR += rubygem-oauth2
+    SUBDIR += rubygem-oauth21
     SUBDIR += rubygem-octokit
     SUBDIR += rubygem-octopress-deploy
     SUBDIR += rubygem-omniauth-auth0
@@ -1332,6 +1335,7 @@
     SUBDIR += rubygem-omniauth-kerberos
     SUBDIR += rubygem-omniauth-oauth
     SUBDIR += rubygem-omniauth-oauth2
+    SUBDIR += rubygem-omniauth-oauth2-v1
     SUBDIR += rubygem-omniauth-openid
     SUBDIR += rubygem-omniauth-salesforce
     SUBDIR += rubygem-omniauth-twitter
@@ -1388,6 +1392,7 @@
     SUBDIR += ryu
     SUBDIR += s5cmd
     SUBDIR += sacc
+    SUBDIR += sakisafecli
     SUBDIR += samba412
     SUBDIR += samba413
     SUBDIR += samplicator
@@ -1419,6 +1424,7 @@
     SUBDIR += sipsak
     SUBDIR += skstream
     SUBDIR += sl2tps
+    SUBDIR += slackcat
     SUBDIR += smb4k
     SUBDIR += smcroute
     SUBDIR += smm++

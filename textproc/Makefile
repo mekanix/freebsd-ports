@@ -109,6 +109,7 @@
     SUBDIR += confget
     SUBDIR += consul-template
     SUBDIR += cpp-peglib
+    SUBDIR += cpptoml
     SUBDIR += crex
     SUBDIR += crunch
     SUBDIR += cs-aspell
@@ -173,9 +174,6 @@
     SUBDIR += elasticsearch-plugin-head
     SUBDIR += elasticsearch6
     SUBDIR += elasticsearch7
-    SUBDIR += elixir-earmark
-    SUBDIR += elixir-funnel
-    SUBDIR += elixir-sweet_xml
     SUBDIR += en-aspell
     SUBDIR += en-hunspell
     SUBDIR += en-mythes
@@ -183,10 +181,6 @@
     SUBDIR += enchant2
     SUBDIR += eo-aspell
     SUBDIR += eqe
-    SUBDIR += erlang-edown
-    SUBDIR += erlang-fast_xml
-    SUBDIR += erlang-p1_utils
-    SUBDIR += erlang-yamerl
     SUBDIR += es-aspell
     SUBDIR += es-hunspell
     SUBDIR += es-hyphen
@@ -411,6 +405,7 @@
     SUBDIR += libwps
     SUBDIR += libwps03
     SUBDIR += libxdiff
+    SUBDIR += libxml++
     SUBDIR += libxml++26
     SUBDIR += libxml2
     SUBDIR += libxmlb
@@ -1218,6 +1213,7 @@
     SUBDIR += pecl-xdiff2
     SUBDIR += pecl-yaml
     SUBDIR += peco
+    SUBDIR += peg
     SUBDIR += perl2html
     SUBDIR += php-mecab
     SUBDIR += php74-ctype
@@ -1247,6 +1243,15 @@
     SUBDIR += php81-xmlreader
     SUBDIR += php81-xmlwriter
     SUBDIR += php81-xsl
+    SUBDIR += php82-ctype
+    SUBDIR += php82-dom
+    SUBDIR += php82-enchant
+    SUBDIR += php82-pspell
+    SUBDIR += php82-simplexml
+    SUBDIR += php82-xml
+    SUBDIR += php82-xmlreader
+    SUBDIR += php82-xmlwriter
+    SUBDIR += php82-xsl
     SUBDIR += pict
     SUBDIR += po4a
     SUBDIR += pod2mdoc
@@ -1367,6 +1372,7 @@
     SUBDIR += py-mathics-pygments
     SUBDIR += py-mdit-py-plugins
     SUBDIR += py-mdurl
+    SUBDIR += py-mike
     SUBDIR += py-misaka
     SUBDIR += py-mistune
     SUBDIR += py-mistune0
@@ -1480,6 +1486,7 @@
     SUBDIR += py-sphinx-autoapi
     SUBDIR += py-sphinx-autobuild
     SUBDIR += py-sphinx-autodoc-typehints
+    SUBDIR += py-sphinx-basic-ng
     SUBDIR += py-sphinx-book-theme
     SUBDIR += py-sphinx-copybutton
     SUBDIR += py-sphinx-design
@@ -1516,6 +1523,7 @@
     SUBDIR += py-sphinxext-opengraph
     SUBDIR += py-spylls
     SUBDIR += py-stemming
+    SUBDIR += py-tableschema-to-template
     SUBDIR += py-tabletext
     SUBDIR += py-tablib
     SUBDIR += py-terminaltables
@@ -1622,6 +1630,7 @@
     SUBDIR += rubygem-asciidoctor-kroki
     SUBDIR += rubygem-asciidoctor-pdf
     SUBDIR += rubygem-asciidoctor-plantuml
+    SUBDIR += rubygem-asciidoctor-plantuml00
     SUBDIR += rubygem-autoprefixer-rails
     SUBDIR += rubygem-autoprefixer-rails-node16
     SUBDIR += rubygem-autoprefixer-rails1025
@@ -1651,23 +1660,19 @@
     SUBDIR += rubygem-docdiff
     SUBDIR += rubygem-elasticsearch
     SUBDIR += rubygem-elasticsearch-api
-    SUBDIR += rubygem-elasticsearch-api6
     SUBDIR += rubygem-elasticsearch-api713
     SUBDIR += rubygem-elasticsearch-dsl
     SUBDIR += rubygem-elasticsearch-model
-    SUBDIR += rubygem-elasticsearch-model6
     SUBDIR += rubygem-elasticsearch-model713
     SUBDIR += rubygem-elasticsearch-persistence
     SUBDIR += rubygem-elasticsearch-rails
-    SUBDIR += rubygem-elasticsearch-rails6
     SUBDIR += rubygem-elasticsearch-transport
-    SUBDIR += rubygem-elasticsearch-transport6
     SUBDIR += rubygem-elasticsearch-transport713
     SUBDIR += rubygem-elasticsearch-xpack
-    SUBDIR += rubygem-elasticsearch6
     SUBDIR += rubygem-elasticsearch713
     SUBDIR += rubygem-emot
     SUBDIR += rubygem-escape_utils
+    SUBDIR += rubygem-escape_utils12
     SUBDIR += rubygem-extended-markdown-filter
     SUBDIR += rubygem-ezamar
     SUBDIR += rubygem-fast_xs

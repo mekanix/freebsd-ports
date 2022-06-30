@@ -26,7 +26,6 @@
     SUBDIR += draco
     SUBDIR += dzip
     SUBDIR += engrampa
-    SUBDIR += erlang-snappy
     SUBDIR += fastjar
     SUBDIR += file-roller
     SUBDIR += fpc-bzip2
@@ -165,6 +164,10 @@
     SUBDIR += php81-phar
     SUBDIR += php81-zip
     SUBDIR += php81-zlib
+    SUBDIR += php82-bz2
+    SUBDIR += php82-phar
+    SUBDIR += php82-zip
+    SUBDIR += php82-zlib
     SUBDIR += pigz
     SUBDIR += pixz
     SUBDIR += plzip

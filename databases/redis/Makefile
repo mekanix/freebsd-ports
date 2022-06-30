@@ -1,8 +1,7 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
 
 PORTNAME=	redis
-DISTVERSION=	7.0.0
-PORTREVISION=	1
+DISTVERSION=	7.0.2
 CATEGORIES=	databases
 MASTER_SITES=	https://download.redis.io/releases/
 
@@ -17,6 +16,7 @@ CPE_VENDOR=	redislabs
 
 MAKE_ENV=	OPTIMIZATION= \
 		V=yo
+CONFLICTS_INSTALL=	redis-devel redis6 # etc/rc.d/redis
 
 OPTIONS_DEFINE=		JEMALLOC TESTS TLS TRIB
 OPTIONS_RADIO=		EXTLUA

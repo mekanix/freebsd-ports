@@ -274,7 +274,6 @@
     SUBDIR += glosm
     SUBDIR += glpng
     SUBDIR += glslang
-    SUBDIR += gltt
     SUBDIR += glx-utils
     SUBDIR += gmic
     SUBDIR += gmic-qt
@@ -285,7 +284,6 @@
     SUBDIR += gnome-color-manager
     SUBDIR += gnome-video-effects
     SUBDIR += gocr
-    SUBDIR += goocanvas
     SUBDIR += goocanvas2
     SUBDIR += goocanvas3
     SUBDIR += goocanvasmm2
@@ -561,6 +559,7 @@
     SUBDIR += movit
     SUBDIR += mozjpeg
     SUBDIR += mscgen
+    SUBDIR += msl
     SUBDIR += mtpaint
     SUBDIR += multican
     SUBDIR += mupdf
@@ -768,6 +767,8 @@
     SUBDIR += php80-gd
     SUBDIR += php81-exif
     SUBDIR += php81-gd
+    SUBDIR += php82-exif
+    SUBDIR += php82-gd
     SUBDIR += phplot
     SUBDIR += picpuz
     SUBDIR += piddle
@@ -848,6 +849,7 @@
     SUBDIR += py-glfw
     SUBDIR += py-glooey
     SUBDIR += py-gphoto2
+    SUBDIR += py-graphlib-backport
     SUBDIR += py-graphviz
     SUBDIR += py-graphy
     SUBDIR += py-gvgen

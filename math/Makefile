@@ -179,6 +179,7 @@
     SUBDIR += asymptote
     SUBDIR += atlas
     SUBDIR += barvinok
+    SUBDIR += basic-stats
     SUBDIR += bcal
     SUBDIR += bcps
     SUBDIR += bitwise
@@ -200,6 +201,7 @@
     SUBDIR += cadical
     SUBDIR += cado-nfs
     SUBDIR += calc
+    SUBDIR += calcium
     SUBDIR += calcoo
     SUBDIR += cantor
     SUBDIR += casadi
@@ -397,6 +399,7 @@
     SUBDIR += jsmath-fonts
     SUBDIR += jtransforms
     SUBDIR += jts
+    SUBDIR += kahip
     SUBDIR += kalgebra
     SUBDIR += kalker
     SUBDIR += kbruch
@@ -770,6 +773,7 @@
     SUBDIR += pari_elldata
     SUBDIR += pari_galdata
     SUBDIR += pari_galpol
+    SUBDIR += pari_nflistdata
     SUBDIR += pari_nftables
     SUBDIR += pari_seadata
     SUBDIR += paritwine
@@ -790,6 +794,8 @@
     SUBDIR += php80-gmp
     SUBDIR += php81-bcmath
     SUBDIR += php81-gmp
+    SUBDIR += php82-bcmath
+    SUBDIR += php82-gmp
     SUBDIR += physcalc
     SUBDIR += picosat
     SUBDIR += piranha
@@ -871,6 +877,7 @@
     SUBDIR += py-iohexperimenter
     SUBDIR += py-ipyopt
     SUBDIR += py-jax
+    SUBDIR += py-kahip
     SUBDIR += py-keras
     SUBDIR += py-keras-applications
     SUBDIR += py-keras-preprocessing
@@ -893,6 +900,7 @@
     SUBDIR += py-ndindex
     SUBDIR += py-networkx
     SUBDIR += py-nevergrad
+    SUBDIR += py-nlopt
     SUBDIR += py-numexpr
     SUBDIR += py-numpoly
     SUBDIR += py-numpy
@@ -1087,6 +1095,7 @@
     SUBDIR += triangle
     SUBDIR += trlan
     SUBDIR += trlib
+    SUBDIR += ttmath
     SUBDIR += tvmet
     SUBDIR += ump
     SUBDIR += units

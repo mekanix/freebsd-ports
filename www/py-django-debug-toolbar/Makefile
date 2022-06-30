@@ -1,7 +1,7 @@
 # Created by: Johannes Meixner <johannes@perceivon.net>
 
 PORTNAME=	django-debug-toolbar
-PORTVERSION=	3.4.0
+PORTVERSION=	3.5.0
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -20,7 +20,6 @@ USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes
 
-CONFLICTS_INSTALL=	${PYTHON_PKGNAMEPREFIX}dj31-django-debug-toolbar \
-			${PYTHON_PKGNAMEPREFIX}dj32-django-debug-toolbar
+CONFLICTS_INSTALL=	${PYTHON_PKGNAMEPREFIX}*${PORTNAME}
 
 .include <bsd.port.mk>

@@ -1,6 +1,6 @@
 PORTNAME=	cyrus-imapd
-PORTVERSION=	3.4.3
-PORTREVISION=	3
+PORTVERSION=	3.4.4
+PORTREVISION=	0
 CATEGORIES=	mail
 MASTER_SITES=	https://github.com/cyrusimap/cyrus-imapd/releases/download/${PORTNAME}-${PORTVERSION}/
 PKGNAMESUFFIX=	${CYRUS_IMAPD_VER}
@@ -25,7 +25,7 @@ LIB_DEPENDS=	libsasl2.so:security/cyrus-sasl2 \
 		libpcre.so:devel/pcre \
 		libuuid.so:misc/e2fsprogs-libuuid
 
-CONFLICTS_INSTALL=	cyrus-imapd2? cyrus-imapd3? cyrus-imapd3?-http
+CONFLICTS_INSTALL=	cyrus-imapd2? cyrus-imapd3[0-35-] cyrus-imapd3[0-35-]-http
 
 USES=		compiler:c11 cpe gmake libtool perl5 pkgconfig ssl
 USE_RC_SUBR=	imapd
@@ -195,12 +195,6 @@ PLIST_SUB+=	SQUATTER=""
 PLIST_SUB+=	SQUATTER="@comment "
 .endif
 
-.include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} >= 503600
-IGNORE=		Cannot build with Perl 3.36
-.endif
-
 post-patch:
 	@${REINPLACE_CMD} -e "s|/etc/|${PREFIX}/etc/|" \
 			  -e "s|%%CYRUS_USER%%|${CYRUS_USER}|g" \
@@ -255,4 +249,4 @@ post-install-DOCS-on:
 		"! ( -path */html/_sources* -o -name .buildinfo )"
 	${RM} -r ${STAGEDIR}${DOCSDIR}/rst ${STAGEDIR}${DOCSDIR}/source
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

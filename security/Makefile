@@ -131,12 +131,7 @@
     SUBDIR += duo
     SUBDIR += duo_openvpn
     SUBDIR += easy-rsa
-    SUBDIR += elixir-comeonin
-    SUBDIR += elixir-comeonin_i18n
-    SUBDIR += elixir-jose
     SUBDIR += enchive
-    SUBDIR += erlang-fast_tls
-    SUBDIR += erlang-jose
     SUBDIR += eschalot
     SUBDIR += esteidfirefoxplugin
     SUBDIR += expiretable
@@ -314,6 +309,7 @@
     SUBDIR += libxcrypt
     SUBDIR += libyubikey
     SUBDIR += libzrtpcppcore
+    SUBDIR += lime
     SUBDIR += linux-bitwarden-cli
     SUBDIR += linux-c7-cyrus-sasl2
     SUBDIR += linux-c7-gnutls
@@ -349,7 +345,6 @@
     SUBDIR += minisign
     SUBDIR += mkp224o
     SUBDIR += modsecurity3
-    SUBDIR += modsecurity3-apache
     SUBDIR += modsecurity3-nginx
     SUBDIR += monkeysphere
     SUBDIR += munge
@@ -775,6 +770,8 @@
     SUBDIR += php80-sodium
     SUBDIR += php81-filter
     SUBDIR += php81-sodium
+    SUBDIR += php82-filter
+    SUBDIR += php82-sodium
     SUBDIR += picocrypt
     SUBDIR += picosha2
     SUBDIR += pidgin-encryption
@@ -802,7 +799,6 @@
     SUBDIR += poly1305aes
     SUBDIR += portsentry
     SUBDIR += proftpd-mod_clamav
-    SUBDIR += protonvpn-cli
     SUBDIR += proxycheck
     SUBDIR += proxytunnel
     SUBDIR += pssh
@@ -904,6 +900,7 @@
     SUBDIR += py-mnemonic
     SUBDIR += py-msoffcrypto-tool
     SUBDIR += py-muacrypt
+    SUBDIR += py-nassl
     SUBDIR += py-netbox-secretstore
     SUBDIR += py-netmiko
     SUBDIR += py-noiseprotocol
@@ -977,6 +974,7 @@
     SUBDIR += py-spake2
     SUBDIR += py-ssh-audit
     SUBDIR += py-sshpubkeys
+    SUBDIR += py-sslyze
     SUBDIR += py-stem
     SUBDIR += py-stix
     SUBDIR += py-stix2
@@ -1251,6 +1249,7 @@
     SUBDIR += uacme
     SUBDIR += ubuntu-keyring
     SUBDIR += unhide
+    SUBDIR += unix-selfauth-helper
     SUBDIR += vanguards-tor
     SUBDIR += vault
     SUBDIR += vaultwarden
@@ -1273,6 +1272,7 @@
     SUBDIR += wolfssl
     SUBDIR += wpa_supplicant
     SUBDIR += wpa_supplicant-devel
+    SUBDIR += wpa_supplicant29
     SUBDIR += xca
     SUBDIR += xinetd
     SUBDIR += xml-security
