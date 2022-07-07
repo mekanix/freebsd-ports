@@ -82,6 +82,7 @@ pipeline {
                     editors/nano \
                     editors/vim \
                     emulators/qemu@tools \
+                    graphics/py-pillow \
                     lang/expect \
                     mail/ssmtp \
                     misc/mbuffer \
