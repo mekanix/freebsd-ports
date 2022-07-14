@@ -169,12 +169,10 @@
     SUBDIR += garage
     SUBDIR += gatling
     SUBDIR += gauche-makiki
-    SUBDIR += gecko-mediaplayer
     SUBDIR += geckodriver
     SUBDIR += geneweb
     SUBDIR += geolizer
     SUBDIR += get_flash_videos
-    SUBDIR += getleft
     SUBDIR += gist
     SUBDIR += gitea
     SUBDIR += gitlab-ce
@@ -457,7 +455,6 @@
     SUBDIR += npm-node14
     SUBDIR += npm-node16
     SUBDIR += npm-node18
-    SUBDIR += nspluginwrapper
     SUBDIR += oauth2-proxy
     SUBDIR += obhttpd
     SUBDIR += oneshot
@@ -1445,22 +1442,6 @@
     SUBDIR += py-cssselect
     SUBDIR += py-cssutils
     SUBDIR += py-dj-database-url
-    SUBDIR += py-dj32-django-auth-ldap
-    SUBDIR += py-dj32-django-cacheops
-    SUBDIR += py-dj32-django-cors-headers
-    SUBDIR += py-dj32-django-debug-toolbar
-    SUBDIR += py-dj32-django-filter
-    SUBDIR += py-dj32-django-graphiql-debug-toolbar
-    SUBDIR += py-dj32-django-js-asset
-    SUBDIR += py-dj32-django-mptt
-    SUBDIR += py-dj32-django-prometheus
-    SUBDIR += py-dj32-django-redis
-    SUBDIR += py-dj32-django-tables2
-    SUBDIR += py-dj32-django-taggit
-    SUBDIR += py-dj32-django-timezone-field
-    SUBDIR += py-dj32-django-treebeard
-    SUBDIR += py-dj32-djangorestframework
-    SUBDIR += py-dj32-drf-yasg
     SUBDIR += py-dj40-django-auth-ldap
     SUBDIR += py-dj40-django-cors-headers
     SUBDIR += py-dj40-django-debug-toolbar
@@ -1475,7 +1456,6 @@
     SUBDIR += py-dj40-django-timezone-field
     SUBDIR += py-dj40-djangorestframework
     SUBDIR += py-dj40-drf-yasg
-    SUBDIR += py-django
     SUBDIR += py-django-admin-rangefilter
     SUBDIR += py-django-advanced-filters
     SUBDIR += py-django-allauth
@@ -1484,22 +1464,17 @@
     SUBDIR += py-django-assets
     SUBDIR += py-django-auth-ldap
     SUBDIR += py-django-autocomplete-light
-    SUBDIR += py-django-babel
     SUBDIR += py-django-bakery
     SUBDIR += py-django-bitfield
     SUBDIR += py-django-bleach
-    SUBDIR += py-django-bootstrap-form
     SUBDIR += py-django-bootstrap-pagination
     SUBDIR += py-django-bootstrap3
     SUBDIR += py-django-bootstrap4
     SUBDIR += py-django-braces
-    SUBDIR += py-django-bulk-update
     SUBDIR += py-django-cacheops
     SUBDIR += py-django-ckeditor-5
     SUBDIR += py-django-classy-tags
     SUBDIR += py-django-cms
-    SUBDIR += py-django-common-helpers
-    SUBDIR += py-django-compat
     SUBDIR += py-django-configurations
     SUBDIR += py-django-constance
     SUBDIR += py-django-contact-form
@@ -1521,7 +1496,6 @@
     SUBDIR += py-django-graphiql-debug-toolbar
     SUBDIR += py-django-gravatar2
     SUBDIR += py-django-guardian
-    SUBDIR += py-django-happenings-update
     SUBDIR += py-django-hashid-field
     SUBDIR += py-django-haystack
     SUBDIR += py-django-hierarkey
@@ -1539,7 +1513,6 @@
     SUBDIR += py-django-mezzanine-grappelli
     SUBDIR += py-django-model-utils
     SUBDIR += py-django-modelcluster
-    SUBDIR += py-django-modern-rpc
     SUBDIR += py-django-mptt
     SUBDIR += py-django-netfields
     SUBDIR += py-django-object-actions
@@ -1572,7 +1545,6 @@
     SUBDIR += py-django-statici18n
     SUBDIR += py-django-staticinline
     SUBDIR += py-django-storages
-    SUBDIR += py-django-sudo
     SUBDIR += py-django-tables2
     SUBDIR += py-django-tagging
     SUBDIR += py-django-taggit
@@ -1584,7 +1556,6 @@
     SUBDIR += py-django-voting
     SUBDIR += py-django-webpack-loader
     SUBDIR += py-django-widget-tweaks
-    SUBDIR += py-django22
     SUBDIR += py-django32
     SUBDIR += py-django40
     SUBDIR += py-django_compressor
@@ -1686,7 +1657,6 @@
     SUBDIR += py-httpx-oauth
     SUBDIR += py-httpx-socks
     SUBDIR += py-httpx013
-    SUBDIR += py-hyper
     SUBDIR += py-hypercorn
     SUBDIR += py-hyperframe
     SUBDIR += py-hyperlink
@@ -1696,7 +1666,6 @@
     SUBDIR += py-internetarchive
     SUBDIR += py-jonpy
     SUBDIR += py-jsonfield
-    SUBDIR += py-jsonfield2
     SUBDIR += py-lektor
     SUBDIR += py-lesscpy
     SUBDIR += py-libsass
@@ -1739,7 +1708,6 @@
     SUBDIR += py-pywikibot
     SUBDIR += py-qt5-webengine
     SUBDIR += py-quilt3
-    SUBDIR += py-rackspace-monitoring
     SUBDIR += py-recaptcha
     SUBDIR += py-requests
     SUBDIR += py-requests-aws4auth
@@ -1827,7 +1795,6 @@
     SUBDIR += qutebrowser
     SUBDIR += radicale
     SUBDIR += rearx
-    SUBDIR += redmine4
     SUBDIR += redmine42
     SUBDIR += rejik
     SUBDIR += reportmagic
@@ -2081,6 +2048,7 @@
     SUBDIR += rubygem-rack-test
     SUBDIR += rubygem-rack-timeout
     SUBDIR += rubygem-rack16
+    SUBDIR += rubygem-rack223
     SUBDIR += rubygem-rack_csrf
     SUBDIR += rubygem-rails-settings-cached
     SUBDIR += rubygem-rails-settings-cached-rails5
@@ -2091,7 +2059,6 @@
     SUBDIR += rubygem-rails52
     SUBDIR += rubygem-rails60
     SUBDIR += rubygem-rails61
-    SUBDIR += rubygem-rails61-node16
     SUBDIR += rubygem-rails70
     SUBDIR += rubygem-rails_12factor
     SUBDIR += rubygem-rails_autolink
@@ -2124,6 +2091,7 @@
     SUBDIR += rubygem-responders-rails52
     SUBDIR += rubygem-responders-rails60
     SUBDIR += rubygem-responders-rails61
+    SUBDIR += rubygem-responders-rails70
     SUBDIR += rubygem-rest-client
     SUBDIR += rubygem-rfacebook
     SUBDIR += rubygem-rfeedfinder
@@ -2167,7 +2135,6 @@
     SUBDIR += rubygem-turbolinks-source
     SUBDIR += rubygem-typhoeus
     SUBDIR += rubygem-uglifier
-    SUBDIR += rubygem-uglifier-node16
     SUBDIR += rubygem-underscore-rails
     SUBDIR += rubygem-unicorn
     SUBDIR += rubygem-unicorn-worker-killer

@@ -138,6 +138,7 @@
     SUBDIR += nagios
     SUBDIR += nagios-certexp-plugin
     SUBDIR += nagios-check_bacula11
+    SUBDIR += nagios-check_bacula13
     SUBDIR += nagios-check_bacula9
     SUBDIR += nagios-check_clamav
     SUBDIR += nagios-check_cpu_usage
@@ -322,6 +323,7 @@
     SUBDIR += py-pyeapi
     SUBDIR += py-pynetbox
     SUBDIR += py-pynxos
+    SUBDIR += py-pypowerwall
     SUBDIR += py-pysmi
     SUBDIR += py-pysnmp
     SUBDIR += py-pysnmp-mibs
@@ -382,7 +384,6 @@
     SUBDIR += torrus
     SUBDIR += triton-guesttools
     SUBDIR += unbound_exporter
-    SUBDIR += unifi6
     SUBDIR += unifi7
     SUBDIR += victoria-metrics
     SUBDIR += virt-viewer
@@ -409,5 +410,10 @@
     SUBDIR += zabbix6-java
     SUBDIR += zabbix6-proxy
     SUBDIR += zabbix6-server
+    SUBDIR += zabbix62-agent
+    SUBDIR += zabbix62-frontend
+    SUBDIR += zabbix62-java
+    SUBDIR += zabbix62-proxy
+    SUBDIR += zabbix62-server
 
 .include <bsd.port.subdir.mk>

@@ -167,6 +167,8 @@
     SUBDIR += frp
     SUBDIR += frr7
     SUBDIR += frr7-pythontools
+    SUBDIR += frr8
+    SUBDIR += frr8-pythontools
     SUBDIR += fspclient
     SUBDIR += fspd
     SUBDIR += fsplib
@@ -316,7 +318,6 @@
     SUBDIR += kimap
     SUBDIR += kio-gdrive
     SUBDIR += kippo
-    SUBDIR += kissd
     SUBDIR += kitinerary
     SUBDIR += kldap
     SUBDIR += kmailtransport
@@ -416,6 +417,7 @@
     SUBDIR += libvncserver
     SUBDIR += libwebsockets
     SUBDIR += libyang
+    SUBDIR += libyang2
     SUBDIR += libzapojit
     SUBDIR += libzmq2
     SUBDIR += libzmq3
@@ -1335,7 +1337,6 @@
     SUBDIR += rubygem-omniauth-kerberos
     SUBDIR += rubygem-omniauth-oauth
     SUBDIR += rubygem-omniauth-oauth2
-    SUBDIR += rubygem-omniauth-oauth2-v1
     SUBDIR += rubygem-omniauth-openid
     SUBDIR += rubygem-omniauth-salesforce
     SUBDIR += rubygem-omniauth-twitter
