@@ -25,7 +25,7 @@ PLIST=		${.CURDIR}/pkg-plist
 checksum:
 
 pre-build:
-	cd ${WRKSRC}; GOPATH=/tmp go mod vendor
+	cd ${WRKSRC}; GOPATH=/tmp ${GO_CMD} mod vendor
 
 GO_TARGET=	./cmd/api ./cmd/jobs ./cmd/statistics ./cmd/exports ./cmd/safetyarchivecleanup ./cmd/cleanupclones ./cmd/snapshotscleanup ./cmd/clonesnapshots ./cmd/azurerecovery
 

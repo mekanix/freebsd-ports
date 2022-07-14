@@ -23,6 +23,6 @@ GO_TARGET=	./cmd/dralserver ./cmd/cleanupdralclones
 checksum:
 
 pre-build:
-	cd ${WRKSRC}; GOPATH=/tmp go mod vendor
+	cd ${WRKSRC}; GOPATH=/tmp ${GO_CMD} mod vendor
 
 .include "${MASTERDIR}/Makefile"

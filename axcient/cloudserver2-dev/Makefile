@@ -25,6 +25,6 @@ GO_TARGET=      cloudserver ./cmd/integritycheck
 checksum:
 
 pre-build:
-	cd ${WRKSRC}; GOPATH=/tmp go mod vendor
+	cd ${WRKSRC}; GOPATH=/tmp ${GO_CMD} mod vendor
 
 .include "${MASTERDIR}/Makefile"
