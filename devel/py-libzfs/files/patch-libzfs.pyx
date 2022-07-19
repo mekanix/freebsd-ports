@@ -19,12 +19,20 @@
  class DatasetType(enum.IntEnum):
      FILESYSTEM = zfs.ZFS_TYPE_FILESYSTEM
      VOLUME = zfs.ZFS_TYPE_VOLUME
-@@ -2881,7 +2892,7 @@ cdef class ZFSPool(object):
+@@ -2874,14 +2885,14 @@ cdef class ZFSPool(object):
+     IF HAVE_LZC_SYNC:
+         def sync(self, force=False):
+             cdef int ret
+-            cdef const char *c_name = self.name
++            cdef const char *c_name = libzfs.zpool_get_name(self.handle)
+             cdef NVList innvl = NVList()
+ 
+             innvl["force"] = force
              with nogil:
                  ret = libzfs.lzc_sync(c_name, innvl.handle, NULL)
              if ret != 0:
 -                raise self.root.get_error()
-+                return ZFSException(ret, "Cannot sync pool %s" % self.name)
++                raise OSError(ret, os.strerror(ret))
  
      cdef NVList get_raw_config(self):
          cdef uintptr_t nvl = <uintptr_t>libzfs.zpool_get_config(self.handle, NULL)
