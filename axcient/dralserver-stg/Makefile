@@ -1,10 +1,10 @@
 # $FreeBSD$
 
-PORTVERSION=	1.6.0.rc1
+PORTVERSION=	1.7.0.rc1
 PORTREVISION=	1
 PKGNAMESUFFIX=	-stg
 
-GH_TAGNAME=	1.6.0-rc1
+GH_TAGNAME=	1.7.0-rc1
 
 GH_TUPLE=	BurntSushi:toml:v0.4.1:burntsushi_toml/vendor/github.com/BurntSushi/toml \
 		beorn7:perks:v1.0.1:beorn7_perks/vendor/github.com/beorn7/perks \
@@ -28,6 +28,8 @@ GH_TUPLE=	BurntSushi:toml:v0.4.1:burntsushi_toml/vendor/github.com/BurntSushi/to
 		google:go-genproto:a5da7257a6f7:google_go_genproto/vendor/google.golang.org/genproto \
 		google:uuid:v1.3.0:google_uuid/vendor/github.com/google/uuid \
 		grpc:grpc-go:v1.42.0:grpc_grpc_go/vendor/google.golang.org/grpc \
+		grpc-ecosystem:go-grpc-middleware:v1.3.0:grpc_middleware/vendor/github.com/grpc-ecosystem/go-grpc-middleware \
+		grpc-ecosystem:go-grpc-prometheus:v1.2.0:grpc_prometheu/vendor/github.com/grpc-ecosystem/go-grpc-prometheus \
 		hashicorp:go-multierror:v1.1.1:hashicorp_go_multierror/vendor/github.com/hashicorp/go-multierror \
 		jarcoal:httpmock:v1.1.0:jarcoal_httpmock/vendor/github.com/jarcoal/httpmock \
 		jinzhu:configor:v1.2.1:jinzhu_configor/vendor/github.com/jinzhu/configor \
