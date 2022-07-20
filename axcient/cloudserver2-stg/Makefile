@@ -1,12 +1,15 @@
 # $FreeBSD$
 
-PORTVERSION=	2.10.0.rc1
+PORTVERSION=	2.11.0.rc1
 PKGNAMESUFFIX=	2-stg
 
-GH_TAGNAME=	2.10.0-rc1
+GH_TAGNAME=	2.11.0-rc1
 
 GH_TUPLE=	alexflint:go-arg:v1.4.3:alexflint_go_arg/vendor/github.com/alexflint/go-arg \
 		alexflint:go-scalar:v1.1.0:alexflint_go_scalar/vendor/github.com/alexflint/go-scalar \
+		alecthomas:kingpin:v2.2.6:alecthomas_kingpin/vendor/gopkg.in/alecthomas/kingpin.v2 \
+		alecthomas:template:fb15b899a751:alecthomas_template/vendor/github.com/alecthomas/template \
+		alecthomas:units:f65c72e2690d:alecthomas_units/vendor/github.com/alecthomas/units \
 		apache:thrift:327ebb6c2b6d:apache_thrift/vendor/git.apache.org/thrift.git \
 		beorn7:perks:v1.0.1:beorn7_perks/vendor/github.com/beorn7/perks \
 		cespare:xxhash:v2.1.1:cespare_xxhash_v2/vendor/github.com/cespare/xxhash/v2 \
@@ -36,6 +39,7 @@ GH_TUPLE=	alexflint:go-arg:v1.4.3:alexflint_go_arg/vendor/github.com/alexflint/g
 		hashicorp:go-multierror:v1.0.0:hashicorp_go_multierror/vendor/github.com/hashicorp/go-multierror \
 		klauspost:cpuid:v2.0.12:klauspost_cpuid_v2/vendor/github.com/klauspost/cpuid/v2 \
 		kr:text:v0.2.0:kr_text/vendor/github.com/kr/text \
+		sirupsen:logrus:v1.6.0:logrus/vendor/github.com/sirupsen/logrus \
 		mattn:go-runewidth:v0.0.13:mattn_go_runewidth/vendor/github.com/mattn/go-runewidth \
 		matttproud:golang_protobuf_extensions:v1.0.1:matttproud_golang_protobuf_extensions/vendor/github.com/matttproud/golang_protobuf_extensions \
 		mitchellh:colorstring:d06e56a500db:mitchellh_colorstring/vendor/github.com/mitchellh/colorstring \
