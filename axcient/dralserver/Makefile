@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	dralserver
-PORTVERSION?=	1.6.0
+PORTVERSION?=	1.7.0
 CATEGORIES=	axcient
 
 MAINTAINER=	kklimov@axcient.com
@@ -13,7 +13,7 @@ USES=		axcient go:modules
 CONFLICTS_INSTALL?=	dralserver-stg \
 			dralserver-dev
 
-GH_TAGNAME?=	1.6.0
+GH_TAGNAME?=	1.7.0
 GH_TUPLE?=	BurntSushi:toml:v0.4.1:burntsushi_toml/vendor/github.com/BurntSushi/toml \
 		beorn7:perks:v1.0.1:beorn7_perks/vendor/github.com/beorn7/perks \
 		cespare:xxhash:v2.1.2:cespare_xxhash_v2/vendor/github.com/cespare/xxhash/v2 \
@@ -35,6 +35,8 @@ GH_TUPLE?=	BurntSushi:toml:v0.4.1:burntsushi_toml/vendor/github.com/BurntSushi/t
 		gomodule:redigo:v1.8.5:gomodule_redigo/vendor/github.com/gomodule/redigo \
 		google:go-genproto:a5da7257a6f7:google_go_genproto/vendor/google.golang.org/genproto \
 		google:uuid:v1.3.0:google_uuid/vendor/github.com/google/uuid \
+		grpc-ecosystem:go-grpc-middleware:v1.3.0:grpc_middleware/vendor/github.com/grpc-ecosystem/go-grpc-middleware \
+		grpc-ecosystem:go-grpc-prometheus:v1.2.0:grpc_prometheu/vendor/github.com/grpc-ecosystem/go-grpc-prometheus \
 		grpc:grpc-go:v1.42.0:grpc_grpc_go/vendor/google.golang.org/grpc \
 		hashicorp:go-multierror:v1.1.1:hashicorp_go_multierror/vendor/github.com/hashicorp/go-multierror \
 		jarcoal:httpmock:v1.1.0:jarcoal_httpmock/vendor/github.com/jarcoal/httpmock \

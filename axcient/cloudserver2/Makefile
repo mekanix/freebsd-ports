@@ -2,7 +2,7 @@
 
 PORTNAME=	cloudserver
 PKGNAMESUFFIX?=  2
-PORTVERSION?=	2.10.0
+PORTVERSION?=	2.11.0
 CATEGORIES=	axcient
 
 MAINTAINER=	nsemchenkov@axcient.com
@@ -16,9 +16,12 @@ CONFLICTS_INSTALL?=	cloudserver \
 			cloudserver2-dev \
 			cloudserver2-stg
 
-GH_TAGNAME?=	2.10.0
+GH_TAGNAME?=	2.11.0
 
 GH_TUPLE?=	alexflint:go-arg:v1.4.3:alexflint_go_arg/vendor/github.com/alexflint/go-arg \
+		alecthomas:kingpin:v2.2.6:alecthomas_kingpin/vendor/gopkg.in/alecthomas/kingpin.v2 \
+		alecthomas:template:fb15b899a751:alecthomas_template/vendor/github.com/alecthomas/template \
+		alecthomas:units:f65c72e2690d:alecthomas_units/vendor/github.com/alecthomas/units \
 		alexflint:go-scalar:v1.1.0:alexflint_go_scalar/vendor/github.com/alexflint/go-scalar \
 		apache:thrift:327ebb6c2b6d:apache_thrift/vendor/git.apache.org/thrift.git \
 		beorn7:perks:v1.0.1:beorn7_perks/vendor/github.com/beorn7/perks \
@@ -62,6 +65,7 @@ GH_TUPLE?=	alexflint:go-arg:v1.4.3:alexflint_go_arg/vendor/github.com/alexflint/
 		rivo:uniseg:v0.2.0:rivo_uniseg/vendor/github.com/rivo/uniseg \
 		rs:xid:v1.2.1:rs_xid/vendor/github.com/rs/xid \
 		schollz:progressbar:v3.8.6:schollz_progressbar_v3/vendor/github.com/schollz/progressbar/v3 \
+		sirupsen:logrus:v1.6.0:logrus/vendor/github.com/sirupsen/logrus \
 		smartystreets:assertions:v1.2.0:smartystreets_assertions/vendor/github.com/smartystreets/assertions \
 		stretchr:testify:v1.7.0:stretchr_testify/vendor/github.com/stretchr/testify \
 		uber-go:atomic:v1.7.0:uber_go_atomic/vendor/go.uber.org/atomic \
