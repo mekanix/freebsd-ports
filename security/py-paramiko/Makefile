@@ -2,10 +2,13 @@
 
 PORTNAME=	paramiko
 PORTVERSION=	2.11.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	security python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+
+PATCH_SITES=   https://patch-diff.githubusercontent.com/raw/paramiko/paramiko/pull/
+PATCHFILES+=   2093.diff:-p1
 
 MAINTAINER=	sbz@FreeBSD.org
 COMMENT=	Python SSH2 protocol library
