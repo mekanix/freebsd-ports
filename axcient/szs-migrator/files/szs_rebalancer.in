@@ -36,7 +36,7 @@ logfile=/var/log/szs/rebalancer.log
 command=/usr/sbin/daemon
 command_interpreter=%%PYTHON_CMD%%
 procname=/usr/local/bin/szs-rebalancer
-command_args="-S -s warning -T rebalancer -p ${pidfile} /usr/bin/env ${procname} ${szs_rebalancer_args}"
+command_args="-fS -s warning -T rebalancer -p ${pidfile} /usr/bin/env ${procname} ${szs_rebalancer_args}"
 
 start_precmd=szs_rebalancer_startprecmd
 
