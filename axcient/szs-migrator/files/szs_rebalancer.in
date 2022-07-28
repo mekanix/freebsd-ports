@@ -1,0 +1,62 @@
+#!/bin/sh
+# $FreeBSD$
+
+# PROVIDE: szs_rebalancer
+# REQUIRE: szs
+# KEYWORD: shutdown
+#
+# Add the following lines to /etc/rc.conf.local or /etc/rc.conf
+# to enable this service:
+#
+# szs_rebalanacer_enable (bool):            Set to NO by default.
+#               Set it to YES to enable szs-rebalancer.
+# szs_rebalanacer_args (string):            Set extra arguments to pass to szs-rebalancer.
+#               Default is "--plain".
+# szs_rebalanacer_user (string):            Set user that szs-rebalancer will run under
+#               Default is "rebalancer".
+# szs_rebalanacer_group (string):           Set group that szs-rebalancer will run under
+#               Default is "rebalancer".
+
+. /etc/rc.subr
+
+name=szs_rebalancer
+desc="SZS Rebalancer"
+rcvar=szs_rebalancer_enable
+
+load_rc_config $name
+
+: ${szs_rebalancer_enable:=NO}
+: ${szs_rebalancer_args:="--plain"}
+: ${szs_rebalancer_user:=rebalancer}
+: ${szs_rebalancer_group:=rebalancer}
+
+pidfile=/var/run/szs_rebalancer.pid
+statedir=/var/db/rebalancer
+logfile=/var/log/szs/rebalancer.log
+command=/usr/sbin/daemon
+command_interpreter=%%PYTHON_CMD%%
+procname=/usr/local/bin/szs-rebalancer
+command_args="-S -s warning -T rebalancer -p ${pidfile} /usr/bin/env ${procname} ${szs_rebalancer_args}"
+
+start_precmd=szs_rebalancer_startprecmd
+
+szs_rebalancer_startprecmd()
+{
+    if [ -e ${pidfile} ]; then
+        chown ${szs_rebalancer_user}:${szs_rebalancer_group} ${pidfile};
+    else
+        install -o ${szs_rebalancer_user} -g ${szs_rebalancer_group} /dev/null ${pidfile};
+    fi
+    if [ -d ${statedir} ]; then
+        chown ${szs_rebalancer_user}:${szs_rebalancer_group} ${statedir};
+    else
+        install -d -o ${szs_rebalancer_user} -g ${szs_rebalancer_group} ${statedir};
+    fi
+    if [ -e ${logfile} ]; then
+        chown ${szs_rebalancer_user}:${szs_rebalancer_group} ${logfile};
+    else
+        install -o ${szs_rebalancer_user} -g ${szs_rebalancer_group} /dev/null ${logfile};
+    fi
+}
+
+run_rc_command "$1"
