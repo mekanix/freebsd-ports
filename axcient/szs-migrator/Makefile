@@ -1,5 +1,5 @@
 PORTNAME=	szs-migrator
-PORTVERSION=	0.1.0.20220701
+PORTVERSION=	0.1.0.20220728
 CATEGORIES=	axcient
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -23,6 +23,8 @@ USES=		axcient python
 USE_PYTHON=	autoplist distutils
 WRKSRC_SUBDIR=	szs/maintenance-tool
 SUB_FILES=	900.szs-audit 900.szs-migrator-audit
+# Don't set USERS and GROUPS because we already created the rebalancer user via
+# AD, with IDs that are outside of the usual range for daemon users.
 
 OPTIONS_DEFINE=		PROMETHEUS
 OPTIONS_DEFAULT=	PROMETHEUS
@@ -33,7 +35,11 @@ PROMETHEUS_DESC=	Export migration status with Prometheus
 NO_ARCH=	yes
 
 GH_PROJECT=	replibit-tools
-GH_TAGNAME=	7da8ac8dd48862526892efdaa5515929773e865d
+GH_TAGNAME=	5064f82a5d65ac6e5e790a359974013ed01dff1d
+
+USE_RC_SUBR=	szs_rebalancer
+
+SUB_LIST+=	PYTHON_CMD=${PYTHON_CMD}
 
 PLIST_FILES+=	etc/periodic/weekly/900.szs-audit \
 		etc/periodic/daily/900.szs-migrator-audit
