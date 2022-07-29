@@ -37,6 +37,7 @@ command=/usr/sbin/daemon
 command_interpreter=%%PYTHON_CMD%%
 procname=/usr/local/bin/szs-rebalancer
 command_args="-fS -s warning -T rebalancer -p ${pidfile} /usr/bin/env ${procname} ${szs_rebalancer_args}"
+extra_commands="reload"
 
 start_precmd=szs_rebalancer_startprecmd
 
