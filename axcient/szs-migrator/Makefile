@@ -1,5 +1,5 @@
 PORTNAME=	szs-migrator
-PORTVERSION=	0.1.0.20220729
+PORTVERSION=	0.1.0.20220804
 CATEGORIES=	axcient
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -35,14 +35,15 @@ PROMETHEUS_DESC=	Export migration status with Prometheus
 NO_ARCH=	yes
 
 GH_PROJECT=	replibit-tools
-GH_TAGNAME=	ebfe2ba517c25f69891f8dd002e3396ccd50593a
+GH_TAGNAME=	0c36a12bdba904f9833750c970a72357108ab62e
 
 USE_RC_SUBR=	szs_rebalancer
 
 SUB_LIST+=	PYTHON_CMD=${PYTHON_CMD}
 
 PLIST_FILES+=	etc/periodic/weekly/900.szs-audit \
-		etc/periodic/daily/900.szs-migrator-audit
+		etc/periodic/daily/900.szs-migrator-audit \
+		etc/rsyslog.d/szs_rebalancer.conf
 
 do-test:
 	cd ${WRKSRC} && pytest
@@ -50,6 +51,8 @@ do-test:
 post-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/periodic/daily
 	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/periodic/weekly
+	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/rsyslog.d
+	${INSTALL_SCRIPT} ${FILESDIR}/szs_rebalancer.conf ${STAGEDIR}${PREFIX}/etc/rsyslog.d
 	${INSTALL_SCRIPT} ${WRKDIR}/900.szs-audit ${STAGEDIR}${PREFIX}/etc/periodic/weekly
 	${INSTALL_SCRIPT} ${WRKDIR}/900.szs-migrator-audit ${STAGEDIR}${PREFIX}/etc/periodic/daily
 
