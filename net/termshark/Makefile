@@ -1,9 +1,7 @@
-# Created by: Ryan Steinmetz <zi@FreeBSD.org>
-
 PORTNAME=	termshark
 PORTVERSION=	2.1.1
 DISTVERSIONPREFIX=v
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	net
 
 MAINTAINER=	zi@FreeBSD.org

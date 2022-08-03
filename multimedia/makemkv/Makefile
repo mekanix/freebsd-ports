@@ -1,5 +1,3 @@
-# Created by: Felix Palmen <felix@palmen-it.de>
-
 PORTNAME=	makemkv
 PORTVERSION=	1.17.0
 CATEGORIES=	multimedia
@@ -15,7 +13,7 @@ DISTFILES=	makemkv-oss-${PORTVERSION}.tar.gz:makemkv \
 		openssl-${OPENSSLFULLVER}.tar.gz:openssl
 DIST_SUBDIR=	${PORTNAME}
 
-MAINTAINER=	felix@palmen-it.de
+MAINTAINER=	zirias@FreeBSD.org
 COMMENT=	Video converter reading from DVD and Bluray
 
 # Do not sell. Do not redistribute modified binaries, but

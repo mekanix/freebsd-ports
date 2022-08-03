@@ -1,5 +1,3 @@
-# Created by: Eduard Martinescu
-
 PORTNAME=	smartmontools
 DISTVERSION=	7.3
 PORTREVISION=	1

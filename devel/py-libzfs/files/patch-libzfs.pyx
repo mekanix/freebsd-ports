@@ -1,4 +1,4 @@
---- libzfs.pyx.orig	2022-06-09 20:38:25 UTC
+--- libzfs.pyx.orig	2022-07-19 13:32:17 UTC
 +++ libzfs.pyx
 @@ -29,7 +29,18 @@ include "config.pxi"
  include "nvpair.pxi"
@@ -19,7 +19,7 @@
  class DatasetType(enum.IntEnum):
      FILESYSTEM = zfs.ZFS_TYPE_FILESYSTEM
      VOLUME = zfs.ZFS_TYPE_VOLUME
-@@ -2874,14 +2885,14 @@ cdef class ZFSPool(object):
+@@ -2891,7 +2902,7 @@ cdef class ZFSPool(object):
      IF HAVE_LZC_SYNC:
          def sync(self, force=False):
              cdef int ret
@@ -28,15 +28,7 @@
              cdef NVList innvl = NVList()
  
              innvl["force"] = force
-             with nogil:
-                 ret = libzfs.lzc_sync(c_name, innvl.handle, NULL)
-             if ret != 0:
--                raise self.root.get_error()
-+                raise OSError(ret, os.strerror(ret))
- 
-     cdef NVList get_raw_config(self):
-         cdef uintptr_t nvl = <uintptr_t>libzfs.zpool_get_config(self.handle, NULL)
-@@ -3939,8 +3950,10 @@ cdef class ZFSDataset(ZFSResource):
+@@ -3956,8 +3967,10 @@ cdef class ZFSDataset(ZFSResource):
          if flags:
              convert_sendflags(flags, &cflags)
  
@@ -48,7 +40,7 @@
  
          if err != 0:
              raise self.root.get_error()
-@@ -4195,6 +4208,7 @@ cdef class ZFSSnapshot(ZFSResource):
+@@ -4212,6 +4225,7 @@ cdef class ZFSSnapshot(ZFSResource):
              return result
  
      def get_send_progress(self, fd):
@@ -56,7 +48,7 @@
          IF HAVE_ZFS_IOCTL_HEADER:
              cdef zfs.zfs_cmd_t cmd
              memset(&cmd, 0, cython.sizeof(zfs.zfs_cmd_t))
-@@ -4202,7 +4216,10 @@ cdef class ZFSSnapshot(ZFSResource):
+@@ -4219,7 +4233,10 @@ cdef class ZFSSnapshot(ZFSResource):
              cdef int ret
  
              cmd.zc_cookie = fd
