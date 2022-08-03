@@ -75,28 +75,35 @@ pipeline {
                     devel/delve \
                     devel/gdb \
                     devel/git \
+                    java/openjdk8 \
                     devel/py-pip \
                     devel/py-tox \
                     devel/py-virtualenv \
                     devel/uclcmd \
+                    devel/valgrind \
                     editors/nano \
                     editors/vim \
                     emulators/qemu@tools \
                     graphics/py-pillow \
                     lang/expect \
                     mail/ssmtp \
+                    misc/compat12x \
                     misc/mbuffer \
+                    net/cloud-init \
                     net-mgmt/grok_exporter \
                     net-mgmt/iftop \
                     net-mgmt/nfs-exporter \
                     net-mgmt/pktstat \
                     net-mgmt/py-zfs-exporter \
                     net-mgmt/zabbix5-agent \
+                    net/samba413 \
                     net/nss-pam-ldapd \
                     net/nss_ldap \
                     net/openldap24-client \
                     net/rsync \
+                    net/wireshark \
                     ports-mgmt/portlint \
+                    ports-mgmt/poudriere \
                     security/gnupg \
                     security/nmap \
                     security/pam_mkhomedir \
@@ -133,15 +140,6 @@ pipeline {
                     sysutils/ztop \
                     textproc/py-elasticsearch \
                     textproc/ripgrep \
-                    '
-                PORTS13 = ' \
-                    devel/valgrind \
-                    java/openjdk8 \
-                    misc/compat12x \
-                    net/cloud-init \
-                    net/samba413 \
-                    net/wireshark \
-                    ports-mgmt/poudriere \
                     www/nginx \
                     www/py-aiohttp \
                     '
@@ -185,8 +183,6 @@ pipeline {
                 sh 'cd net-mgmt/py-zfs-exporter; make fetch'
 
                 sh 'sudo poudriere bulk -j 13_0-AXCIENT3_amd64 -p "${PNAME}" \
-                    ${PORTSALL} ${PORTS13} '
-                sh 'sudo poudriere bulk -j 12_2-AXCIENT1_amd64 -p "${PNAME}" \
                     ${PORTSALL} '
                 sh 'sudo poudriere bulk -j 13_1-AXCIENT1_amd64 -p "${PNAME}" \
                     ${PORTSMINOR} '
@@ -209,7 +205,6 @@ pipeline {
                 sh 'cd axcient/vt2-dev; make fetch'
 
                 sh "sudo poudriere bulk -j 13_0-AXCIENT3_amd64 -p ${PNAME} axcient/${env.devPackage}"
-                sh "sudo poudriere bulk -j 12_2-AXCIENT1_amd64 -p ${PNAME} axcient/${env.devPackage}"
             }
         }
     }
