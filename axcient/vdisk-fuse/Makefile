@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	vdisk-fuse
-DISTVERSION=	1.0.4.5
+DISTVERSION=	1.0.6
 CATEGORIES=	axcient sysutils
 MASTER_SITES=	GH
 
