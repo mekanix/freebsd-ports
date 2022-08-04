@@ -1660,6 +1660,7 @@
     SUBDIR += p5-Agent
     SUBDIR += p5-Algorithm-Accounting
     SUBDIR += p5-Algorithm-Annotate
+    SUBDIR += p5-Algorithm-Backoff
     SUBDIR += p5-Algorithm-Binpack
     SUBDIR += p5-Algorithm-Bucketizer
     SUBDIR += p5-Algorithm-C3
@@ -3390,6 +3391,7 @@
     SUBDIR += p5-Test-Command
     SUBDIR += p5-Test-Command-Simple
     SUBDIR += p5-Test-Compile
+    SUBDIR += p5-Test-DBIC-ExpectedQueries
     SUBDIR += p5-Test-DBIx-Class
     SUBDIR += p5-Test-Data
     SUBDIR += p5-Test-Debugger
@@ -7054,6 +7056,7 @@
     SUBDIR += rubygem-zentest
     SUBDIR += rubygem-zhexdump
     SUBDIR += rubygem-zlib
+    SUBDIR += rubygem-zstd-ruby
     SUBDIR += rubymine
     SUBDIR += rudeconfig
     SUBDIR += rudiments
