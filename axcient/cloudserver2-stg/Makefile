@@ -1,9 +1,9 @@
 # $FreeBSD$
 
-PORTVERSION=	2.11.0.rc1
+PORTVERSION=	2.11.0.rc2
 PKGNAMESUFFIX=	2-stg
 
-GH_TAGNAME=	2.11.0-rc1
+GH_TAGNAME=	2.11.0-rc2
 
 GH_TUPLE=	alexflint:go-arg:v1.4.3:alexflint_go_arg/vendor/github.com/alexflint/go-arg \
 		alexflint:go-scalar:v1.1.0:alexflint_go_scalar/vendor/github.com/alexflint/go-scalar \
