@@ -19,6 +19,15 @@
  class DatasetType(enum.IntEnum):
      FILESYSTEM = zfs.ZFS_TYPE_FILESYSTEM
      VOLUME = zfs.ZFS_TYPE_VOLUME
+@@ -369,7 +380,7 @@ class ZFSException(RuntimeError):
+         self.code = code
+ 
+     def __reduce__(self):
+-        return (self.__class__, (self.code, self.args))
++        return (self.__class__, (self.code, self.args[0]))
+ 
+ 
+ class ZFSVdevStatsException(ZFSException):
 @@ -2891,7 +2902,7 @@ cdef class ZFSPool(object):
      IF HAVE_LZC_SYNC:
          def sync(self, force=False):
