@@ -195,7 +195,6 @@
     SUBDIR += octopus
     SUBDIR += openbabel
     SUBDIR += openems
-    SUBDIR += openkim
     SUBDIR += openkim-models
     SUBDIR += openmc
     SUBDIR += openmolcas
@@ -339,6 +338,15 @@
     SUBDIR += py-pyteomics
     SUBDIR += py-qcelemental
     SUBDIR += py-qcengine
+    SUBDIR += py-qiskit
+    SUBDIR += py-qiskit-aer
+    SUBDIR += py-qiskit-experiments
+    SUBDIR += py-qiskit-ibm-experiment
+    SUBDIR += py-qiskit-ibm-provider
+    SUBDIR += py-qiskit-ibmq-provider
+    SUBDIR += py-qiskit-nature
+    SUBDIR += py-qiskit-optimization
+    SUBDIR += py-qiskit-terra
     SUBDIR += py-qspin
     SUBDIR += py-quantities
     SUBDIR += py-rmf
@@ -361,6 +369,7 @@
     SUBDIR += py-thewalrus
     SUBDIR += py-tobler
     SUBDIR += py-trainstation
+    SUBDIR += py-tweedledum
     SUBDIR += py-veusz
     SUBDIR += pybrain
     SUBDIR += pynn
@@ -411,6 +420,7 @@
     SUBDIR += thermofun
     SUBDIR += tinker
     SUBDIR += trilinos
+    SUBDIR += tweedledum
     SUBDIR += udunits
     SUBDIR += ukrmol+
     SUBDIR += v_sim

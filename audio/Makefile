@@ -711,6 +711,7 @@
     SUBDIR += screcord-lv2
     SUBDIR += sdl2_mixer
     SUBDIR += sdl2_sound
+    SUBDIR += sdl_audiolib
     SUBDIR += sdl_mixer
     SUBDIR += sdl_sound
     SUBDIR += sfizz
@@ -794,6 +795,7 @@
     SUBDIR += tetraproc
     SUBDIR += thunar-media-tags-plugin
     SUBDIR += tiatracker
+    SUBDIR += timbre-mill
     SUBDIR += timely-lv2
     SUBDIR += timemachine
     SUBDIR += timidity
