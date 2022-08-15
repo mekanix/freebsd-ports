@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	spxops-vmagent
-PORTVERSION=	1.0.0.20210104
+PORTVERSION=	1.0.0.20220814
 CATEGORIES=	axcient sysutils
 MASTER_SITES=	GH
 
@@ -18,7 +18,7 @@ RUN_DEPENDS=	bash:shells/bash
 NO_ARCH=	yes
 NO_BUILD=	yes
 USES=		axcient
-GH_TAGNAME=	633d4c9eb69775b817772a23f0cdc3dbfde7a16c
+GH_TAGNAME=	9f4772e45b2eb9e15a1d781211d4f648eb93eb85
 
 PLIST_FILES=	sbin/efs-vm-create ${DATADIR}/efs-common.sh /opt/efs/bin/efs-vm-create
 PLIST_DIRS=	${ETCDIR} /opt/efs/bin /opt/efs /opt
