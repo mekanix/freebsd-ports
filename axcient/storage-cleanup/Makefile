@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	storage-cleanup
-PORTVERSION=	0.1.0.20220824
+PORTVERSION=	0.1.0.20220826
 CATEGORIES=	axcient
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -14,6 +14,6 @@ USE_PYTHON=	autoplist distutils
 NO_ARCH=	yes
 
 GH_PROJECT=	vm-storage-cleanup
-GH_TAGNAME=	c7a3261041624a9e0d45d672ec324c146de8308f
+GH_TAGNAME=	90b727e8cd426aeab2d06bd8bfaa0178d3c9d7de
 
 .include <bsd.port.mk>
