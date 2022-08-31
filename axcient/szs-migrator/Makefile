@@ -1,6 +1,5 @@
 PORTNAME=	szs-migrator
-PORTVERSION=	0.1.0.20220826
-PORTREVISION=	1
+PORTVERSION=	0.1.0.20220831
 CATEGORIES=	axcient
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -13,7 +12,6 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}yaml>=5.0.0:devel/py-yaml@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}urllib3>=0:net/py-urllib3@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}requests>=0:www/py-requests@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}simplejson>=0:devel/py-simplejson@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}atomicwrites>=0:devel/py-atomicwrites@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}filelock>=0:sysutils/py-filelock@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}parse>=0:textproc/py-parse@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}psutil>=0:sysutils/py-psutil@${PY_FLAVOR}
@@ -37,7 +35,7 @@ PROMETHEUS_DESC=	Export migration status with Prometheus
 NO_ARCH=	yes
 
 GH_PROJECT=	replibit-tools
-GH_TAGNAME=	36d88f4a0467c7a642948304d7d064ec83d38ed7
+GH_TAGNAME=	bbaf35c042660bc5355ca46ee91be8c581415d7e
 
 USE_RC_SUBR=	szs_rebalancer
 
