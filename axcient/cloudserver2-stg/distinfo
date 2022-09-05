@@ -1,6 +1,6 @@
-TIMESTAMP = 1659974508
-SHA256 (Axcient-cloudserver-2.11.0.rc2-2.11.0-rc2_GH0.tar.gz) = 9aaca3bf46efb74ff7d20e8c0de9248ebfdefce362d23c4c4b4947dccf545858
-SIZE (Axcient-cloudserver-2.11.0.rc2-2.11.0-rc2_GH0.tar.gz) = 24873002
+TIMESTAMP = 1662233692
+SHA256 (Axcient-cloudserver-2.12.0.rc1-2.12.0-rc1_GH0.tar.gz) = e7d362f6a71171f1b8c5b8ed37df572a00cde3023eca6495ce42532477e27e84
+SIZE (Axcient-cloudserver-2.12.0.rc1-2.12.0-rc1_GH0.tar.gz) = 24874003
 SHA256 (alexflint-go-arg-v1.4.3_GH0.tar.gz) = 87ab3d61a81841db4003a75ec6289e711bcc5b81fa3d6c5b34e07c497886ef33
 SIZE (alexflint-go-arg-v1.4.3_GH0.tar.gz) = 39731
 SHA256 (alexflint-go-scalar-v1.1.0_GH0.tar.gz) = 9990f14eb82fcf42940696bb21ad1a7cfb4c2f9fc3a1d6561ff64c68b9ed1b85
