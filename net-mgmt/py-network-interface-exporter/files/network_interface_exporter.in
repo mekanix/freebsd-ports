@@ -1,0 +1,50 @@
+#!/bin/sh
+# $FreeBSD$
+
+# PROVIDE: network_interface_exporter
+# REQUIRE: LOGIN
+# KEYWORD: shutdown
+#
+# Add the following lines to /etc/rc.conf.local or /etc/rc.conf
+# to enable this service:
+#
+# network_interface_exporter_enable (bool):            Set to NO by default.
+#               Set it to YES to enable network-interface-exporter.
+# network_interface_exporter_port (int):               Set network-interface-exporter listening port
+#               Default is 9222.
+# network_interface_exporter_user (string):            Set user that network_interface_exporter will run under
+#               Default is "prometheus".
+# network_interface_exporter_group (string):           Set group that network_interface_exporter will run under
+#               Default is "prometheus".
+
+. /etc/rc.subr
+
+name=network_interface_exporter
+desc="Network interface prometheus exporter"
+rcvar=network_interface_exporter_enable
+
+load_rc_config $name
+
+: ${network_interface_exporter_enable:=NO}
+: ${network_interface_exporter_port:=9927}
+: ${network_interface_exporter_user:=prometheus}
+: ${network_interface_exporter_group:=prometheus}
+
+pidfile=/var/run/network_interface_exporter.pid
+command=/usr/sbin/daemon
+command_interpreter=%%PYTHON_CMD%%
+procname=%%PREFIX%%/bin/network-interface-exporter
+command_args="-f -p ${pidfile} /usr/bin/env ${procname} ${network_interface_exporter_port}"
+
+start_precmd=network_interface_exporter_startprecmd
+
+network_interface_exporter_startprecmd()
+{
+    if [ -e ${pidfile} ]; then
+        chown ${network_interface_exporter_user}:${network_interface_exporter_group} ${pidfile};
+    else
+        install -o ${network_interface_exporter_user} -g ${network_interface_exporter_group} /dev/null ${pidfile};
+    fi
+}
+
+run_rc_command "$1"
