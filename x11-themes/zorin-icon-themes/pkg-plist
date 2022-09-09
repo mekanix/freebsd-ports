@@ -759,6 +759,7 @@ share/icons/Zorin/16x16/apps/com.github.johnfactotum.Foliate.svg
 share/icons/Zorin/16x16/apps/com.github.phase1geo.minder.svg
 share/icons/Zorin/16x16/apps/com.rafaelmardojai.Blanket.svg
 share/icons/Zorin/16x16/apps/com.skype.Client.png
+share/icons/Zorin/16x16/apps/com.transmissionbt.Transmission.png
 share/icons/Zorin/16x16/apps/config-users.png
 share/icons/Zorin/16x16/apps/corebird.png
 share/icons/Zorin/16x16/apps/cs-backgrounds.png
@@ -2064,6 +2065,8 @@ share/icons/Zorin/16x16/mimetypes/application-x-iso9660-appimage.svg
 share/icons/Zorin/16x16/mimetypes/application-x-java.png
 share/icons/Zorin/16x16/mimetypes/application-x-m4.png
 share/icons/Zorin/16x16/mimetypes/application-x-matroska.png
+share/icons/Zorin/16x16/mimetypes/application-x-ms-dos-executable.png
+share/icons/Zorin/16x16/mimetypes/application-x-msi.png
 share/icons/Zorin/16x16/mimetypes/application-x-object.png
 share/icons/Zorin/16x16/mimetypes/application-x-pak.png
 share/icons/Zorin/16x16/mimetypes/application-x-python-bytecode.png
@@ -3531,6 +3534,7 @@ share/icons/Zorin/16x16@2x/apps/com.github.johnfactotum.Foliate.svg
 share/icons/Zorin/16x16@2x/apps/com.github.phase1geo.minder.svg
 share/icons/Zorin/16x16@2x/apps/com.rafaelmardojai.Blanket.svg
 share/icons/Zorin/16x16@2x/apps/com.skype.Client.png
+share/icons/Zorin/16x16@2x/apps/com.transmissionbt.Transmission.png
 share/icons/Zorin/16x16@2x/apps/config-users.png
 share/icons/Zorin/16x16@2x/apps/corebird.png
 share/icons/Zorin/16x16@2x/apps/cs-backgrounds.png
@@ -4836,6 +4840,8 @@ share/icons/Zorin/16x16@2x/mimetypes/application-x-iso9660-appimage.svg
 share/icons/Zorin/16x16@2x/mimetypes/application-x-java.png
 share/icons/Zorin/16x16@2x/mimetypes/application-x-m4.png
 share/icons/Zorin/16x16@2x/mimetypes/application-x-matroska.png
+share/icons/Zorin/16x16@2x/mimetypes/application-x-ms-dos-executable.png
+share/icons/Zorin/16x16@2x/mimetypes/application-x-msi.png
 share/icons/Zorin/16x16@2x/mimetypes/application-x-object.png
 share/icons/Zorin/16x16@2x/mimetypes/application-x-pak.png
 share/icons/Zorin/16x16@2x/mimetypes/application-x-python-bytecode.png
@@ -7040,6 +7046,7 @@ share/icons/Zorin/24x24/apps/com.github.johnfactotum.Foliate.svg
 share/icons/Zorin/24x24/apps/com.github.phase1geo.minder.svg
 share/icons/Zorin/24x24/apps/com.rafaelmardojai.Blanket.svg
 share/icons/Zorin/24x24/apps/com.skype.Client.png
+share/icons/Zorin/24x24/apps/com.transmissionbt.Transmission.png
 share/icons/Zorin/24x24/apps/config-users.png
 share/icons/Zorin/24x24/apps/corebird.png
 share/icons/Zorin/24x24/apps/cs-backgrounds.png
@@ -8358,6 +8365,8 @@ share/icons/Zorin/24x24/mimetypes/application-x-iso9660-appimage.svg
 share/icons/Zorin/24x24/mimetypes/application-x-java.png
 share/icons/Zorin/24x24/mimetypes/application-x-m4.png
 share/icons/Zorin/24x24/mimetypes/application-x-matroska.png
+share/icons/Zorin/24x24/mimetypes/application-x-ms-dos-executable.png
+share/icons/Zorin/24x24/mimetypes/application-x-msi.png
 share/icons/Zorin/24x24/mimetypes/application-x-object.png
 share/icons/Zorin/24x24/mimetypes/application-x-pak.png
 share/icons/Zorin/24x24/mimetypes/application-x-python-bytecode.png
@@ -10453,6 +10462,7 @@ share/icons/Zorin/24x24@2x/apps/com.github.johnfactotum.Foliate.svg
 share/icons/Zorin/24x24@2x/apps/com.github.phase1geo.minder.svg
 share/icons/Zorin/24x24@2x/apps/com.rafaelmardojai.Blanket.svg
 share/icons/Zorin/24x24@2x/apps/com.skype.Client.png
+share/icons/Zorin/24x24@2x/apps/com.transmissionbt.Transmission.png
 share/icons/Zorin/24x24@2x/apps/config-users.png
 share/icons/Zorin/24x24@2x/apps/corebird.png
 share/icons/Zorin/24x24@2x/apps/cs-backgrounds.png
@@ -11770,6 +11780,8 @@ share/icons/Zorin/24x24@2x/mimetypes/application-x-iso9660-appimage.svg
 share/icons/Zorin/24x24@2x/mimetypes/application-x-java.png
 share/icons/Zorin/24x24@2x/mimetypes/application-x-m4.png
 share/icons/Zorin/24x24@2x/mimetypes/application-x-matroska.png
+share/icons/Zorin/24x24@2x/mimetypes/application-x-ms-dos-executable.png
+share/icons/Zorin/24x24@2x/mimetypes/application-x-msi.png
 share/icons/Zorin/24x24@2x/mimetypes/application-x-object.png
 share/icons/Zorin/24x24@2x/mimetypes/application-x-pak.png
 share/icons/Zorin/24x24@2x/mimetypes/application-x-python-bytecode.png
@@ -12784,6 +12796,7 @@ share/icons/Zorin/32x32/apps/com.github.johnfactotum.Foliate.svg
 share/icons/Zorin/32x32/apps/com.github.phase1geo.minder.svg
 share/icons/Zorin/32x32/apps/com.rafaelmardojai.Blanket.svg
 share/icons/Zorin/32x32/apps/com.skype.Client.png
+share/icons/Zorin/32x32/apps/com.transmissionbt.Transmission.png
 share/icons/Zorin/32x32/apps/config-users.png
 share/icons/Zorin/32x32/apps/corebird.png
 share/icons/Zorin/32x32/apps/cs-backgrounds.png
@@ -14102,6 +14115,8 @@ share/icons/Zorin/32x32/mimetypes/application-x-iso9660-appimage.svg
 share/icons/Zorin/32x32/mimetypes/application-x-java.png
 share/icons/Zorin/32x32/mimetypes/application-x-m4.png
 share/icons/Zorin/32x32/mimetypes/application-x-matroska.png
+share/icons/Zorin/32x32/mimetypes/application-x-ms-dos-executable.png
+share/icons/Zorin/32x32/mimetypes/application-x-msi.png
 share/icons/Zorin/32x32/mimetypes/application-x-object.png
 share/icons/Zorin/32x32/mimetypes/application-x-pak.png
 share/icons/Zorin/32x32/mimetypes/application-x-python-bytecode.png
@@ -15116,6 +15131,7 @@ share/icons/Zorin/32x32@2x/apps/com.github.johnfactotum.Foliate.svg
 share/icons/Zorin/32x32@2x/apps/com.github.phase1geo.minder.svg
 share/icons/Zorin/32x32@2x/apps/com.rafaelmardojai.Blanket.svg
 share/icons/Zorin/32x32@2x/apps/com.skype.Client.png
+share/icons/Zorin/32x32@2x/apps/com.transmissionbt.Transmission.png
 share/icons/Zorin/32x32@2x/apps/config-users.png
 share/icons/Zorin/32x32@2x/apps/corebird.png
 share/icons/Zorin/32x32@2x/apps/cs-backgrounds.png
@@ -16434,6 +16450,8 @@ share/icons/Zorin/32x32@2x/mimetypes/application-x-iso9660-appimage.svg
 share/icons/Zorin/32x32@2x/mimetypes/application-x-java.png
 share/icons/Zorin/32x32@2x/mimetypes/application-x-m4.png
 share/icons/Zorin/32x32@2x/mimetypes/application-x-matroska.png
+share/icons/Zorin/32x32@2x/mimetypes/application-x-ms-dos-executable.png
+share/icons/Zorin/32x32@2x/mimetypes/application-x-msi.png
 share/icons/Zorin/32x32@2x/mimetypes/application-x-object.png
 share/icons/Zorin/32x32@2x/mimetypes/application-x-pak.png
 share/icons/Zorin/32x32@2x/mimetypes/application-x-python-bytecode.png
@@ -17448,6 +17466,7 @@ share/icons/Zorin/48x48/apps/com.github.johnfactotum.Foliate.svg
 share/icons/Zorin/48x48/apps/com.github.phase1geo.minder.svg
 share/icons/Zorin/48x48/apps/com.rafaelmardojai.Blanket.svg
 share/icons/Zorin/48x48/apps/com.skype.Client.png
+share/icons/Zorin/48x48/apps/com.transmissionbt.Transmission.png
 share/icons/Zorin/48x48/apps/config-users.png
 share/icons/Zorin/48x48/apps/corebird.png
 share/icons/Zorin/48x48/apps/cs-backgrounds.png
@@ -18766,6 +18785,8 @@ share/icons/Zorin/48x48/mimetypes/application-x-iso9660-appimage.svg
 share/icons/Zorin/48x48/mimetypes/application-x-java.png
 share/icons/Zorin/48x48/mimetypes/application-x-m4.png
 share/icons/Zorin/48x48/mimetypes/application-x-matroska.png
+share/icons/Zorin/48x48/mimetypes/application-x-ms-dos-executable.png
+share/icons/Zorin/48x48/mimetypes/application-x-msi.png
 share/icons/Zorin/48x48/mimetypes/application-x-object.png
 share/icons/Zorin/48x48/mimetypes/application-x-pak.png
 share/icons/Zorin/48x48/mimetypes/application-x-python-bytecode.png
@@ -19820,6 +19841,7 @@ share/icons/Zorin/48x48@2x/apps/com.github.johnfactotum.Foliate.svg
 share/icons/Zorin/48x48@2x/apps/com.github.phase1geo.minder.svg
 share/icons/Zorin/48x48@2x/apps/com.rafaelmardojai.Blanket.svg
 share/icons/Zorin/48x48@2x/apps/com.skype.Client.png
+share/icons/Zorin/48x48@2x/apps/com.transmissionbt.Transmission.png
 share/icons/Zorin/48x48@2x/apps/config-users.png
 share/icons/Zorin/48x48@2x/apps/corebird.png
 share/icons/Zorin/48x48@2x/apps/cs-backgrounds.png
@@ -21138,6 +21160,8 @@ share/icons/Zorin/48x48@2x/mimetypes/application-x-iso9660-appimage.svg
 share/icons/Zorin/48x48@2x/mimetypes/application-x-java.png
 share/icons/Zorin/48x48@2x/mimetypes/application-x-m4.png
 share/icons/Zorin/48x48@2x/mimetypes/application-x-matroska.png
+share/icons/Zorin/48x48@2x/mimetypes/application-x-ms-dos-executable.png
+share/icons/Zorin/48x48@2x/mimetypes/application-x-msi.png
 share/icons/Zorin/48x48@2x/mimetypes/application-x-object.png
 share/icons/Zorin/48x48@2x/mimetypes/application-x-pak.png
 share/icons/Zorin/48x48@2x/mimetypes/application-x-python-bytecode.png
@@ -22152,6 +22176,7 @@ share/icons/Zorin/512x512/apps/com.github.johnfactotum.Foliate.svg
 share/icons/Zorin/512x512/apps/com.github.phase1geo.minder.svg
 share/icons/Zorin/512x512/apps/com.rafaelmardojai.Blanket.svg
 share/icons/Zorin/512x512/apps/com.skype.Client.png
+share/icons/Zorin/512x512/apps/com.transmissionbt.Transmission.png
 share/icons/Zorin/512x512/apps/config-users.png
 share/icons/Zorin/512x512/apps/corebird.png
 share/icons/Zorin/512x512/apps/cs-backgrounds.png
@@ -23470,6 +23495,8 @@ share/icons/Zorin/512x512/mimetypes/application-x-iso9660-appimage.svg
 share/icons/Zorin/512x512/mimetypes/application-x-java.png
 share/icons/Zorin/512x512/mimetypes/application-x-m4.png
 share/icons/Zorin/512x512/mimetypes/application-x-matroska.png
+share/icons/Zorin/512x512/mimetypes/application-x-ms-dos-executable.png
+share/icons/Zorin/512x512/mimetypes/application-x-msi.png
 share/icons/Zorin/512x512/mimetypes/application-x-object.png
 share/icons/Zorin/512x512/mimetypes/application-x-pak.png
 share/icons/Zorin/512x512/mimetypes/application-x-python-bytecode.png
@@ -24484,6 +24511,7 @@ share/icons/Zorin/512x512@2x/apps/com.github.johnfactotum.Foliate.svg
 share/icons/Zorin/512x512@2x/apps/com.github.phase1geo.minder.svg
 share/icons/Zorin/512x512@2x/apps/com.rafaelmardojai.Blanket.svg
 share/icons/Zorin/512x512@2x/apps/com.skype.Client.png
+share/icons/Zorin/512x512@2x/apps/com.transmissionbt.Transmission.png
 share/icons/Zorin/512x512@2x/apps/config-users.png
 share/icons/Zorin/512x512@2x/apps/corebird.png
 share/icons/Zorin/512x512@2x/apps/cs-backgrounds.png
@@ -25802,6 +25830,8 @@ share/icons/Zorin/512x512@2x/mimetypes/application-x-iso9660-appimage.svg
 share/icons/Zorin/512x512@2x/mimetypes/application-x-java.png
 share/icons/Zorin/512x512@2x/mimetypes/application-x-m4.png
 share/icons/Zorin/512x512@2x/mimetypes/application-x-matroska.png
+share/icons/Zorin/512x512@2x/mimetypes/application-x-ms-dos-executable.png
+share/icons/Zorin/512x512@2x/mimetypes/application-x-msi.png
 share/icons/Zorin/512x512@2x/mimetypes/application-x-object.png
 share/icons/Zorin/512x512@2x/mimetypes/application-x-pak.png
 share/icons/Zorin/512x512@2x/mimetypes/application-x-python-bytecode.png

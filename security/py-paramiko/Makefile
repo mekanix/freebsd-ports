@@ -10,6 +10,7 @@ PATCHFILES+=   2093.diff:-p1
 
 MAINTAINER=	sbz@FreeBSD.org
 COMMENT=	Python SSH2 protocol library
+WWW=		https://www.paramiko.org/
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/LICENSE

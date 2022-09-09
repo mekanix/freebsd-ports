@@ -1,11 +1,12 @@
 PORTNAME=	kops
-PORTVERSION=	1.22.3
+PORTVERSION=	1.24.1
+PORTREVISION=	1
 DISTVERSIONPREFIX=	v
-PORTREVISION=	4
 CATEGORIES=	sysutils
 
 MAINTAINER=	danilo@FreeBSD.org
 COMMENT=	Kubernetes Operations
+WWW=		https://github.com/kubernetes/kops
 
 LICENSE=	APACHE20
 
