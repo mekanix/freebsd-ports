@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	efsserver
-PORTVERSION=	3.21.70.20210616
+PORTVERSION=	3.21.70.20220913
 CATEGORIES=	axcient net
 MASTER_SITES=	GH
 
@@ -19,7 +19,7 @@ USES=		axcient gettext-runtime gmake python:3.6+,run,test ssl pgsql:11
 USE_RC_SUBR=	efsserver
 USERS=		monagent iasouser efolder efwebdev aa vmcloud
 GH_PROJECT=	efs-backup
-GH_TAGNAME=	4a991680c60fe7963054e742e3605b4148bf63f0
+GH_TAGNAME=	494c1cec1e499793e8a33d6a46fa1091f83032c0
 GROUPS=		iasouser monagent efolder efdev efwebdev kvm vmcloud
 WANT_PGSQL=	client
 MASTER_VARS=	WANT_PGSQL+=server
