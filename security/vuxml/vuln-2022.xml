@@ -1,3 +1,134 @@
+  <vuln vid="aeb4c85b-3600-11ed-b52d-589cfc007716">
+    <topic>puppetdb -- Potential SQL injection</topic>
+    <affects>
+      <package>
+	<name>puppetdb6</name>
+	<range><lt>6.22.1</lt></range>
+      </package>
+      <package>
+	<name>puppetdb7</name>
+	<range><lt>7.11.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Puppet reports:</p>
+	<blockquote cite="https://puppet.com/docs/puppetdb/7/release_notes.html#puppetdb-7111">
+	  <p>The org.postgresql/postgresql driver has been updated to version 42.4.1 to address CVE-2022-31197, which is an SQL injection risk that according to the CVE report, can only be exploited if an attacker controls the database to the extent that they can adjust relevant tables to have "malicious" column names.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-31197</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2022-31197</url>
+      <url>https://github.com/pgjdbc/pgjdbc/security/advisories/GHSA-r38f-c4h4-hqq2</url>
+    </references>
+    <dates>
+      <discovery>2022-08-03</discovery>
+      <entry>2022-09-16</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="b59847e0-346d-11ed-8fe9-3065ec8fd3ec">
+    <topic>chromium -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>chromium</name>
+	<range><lt>105.0.5195.125</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Chrome Releases reports:</p>
+	<blockquote cite="https://chromereleases.googleblog.com/2022/09/stable-channel-update-for-desktop_14.html">
+	  <p>This release includes 11 security fixes, including:</p>
+	  <ul>
+	    <li>[1358381] High CVE-2022-3195: Out of bounds write in Storage. Reported by Ziling Chen and Nan Wang (@eternalsakura13) of 360 Vulnerability Research Institute on 2022-08-31</li>
+	    <li>[1358090] High CVE-2022-3196: Use after free in PDF. Reported by triplepwns on 2022-08-30</li>
+	    <li>[1358075] High CVE-2022-3197: Use after free in PDF. Reported by triplepwns on 2022-08-30</li>
+	    <li>[1355682] High CVE-2022-3198: Use after free in PDF. Reported by MerdroidSG on 2022-08-23</li>
+	    <li>[1355237] High CVE-2022-3199: Use after free in Frames. Reported by Anonymous on 2022-08-22</li>
+	    <li>[1355103] High CVE-2022-3200: Heap buffer overflow in Internals. Reported by Richard Lorenz, SAP on 2022-08-22</li>
+	    <li>[1343104] High CVE-2022-3201: Insufficient validation of untrusted input in DevTools. Reported by NDevTK on 2022-07-09</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-3195</cvename>
+      <cvename>CVE-2022-3196</cvename>
+      <cvename>CVE-2022-3197</cvename>
+      <cvename>CVE-2022-3198</cvename>
+      <cvename>CVE-2022-3199</cvename>
+      <cvename>CVE-2022-3200</cvename>
+      <cvename>CVE-2022-3201</cvename>
+      <url>https://chromereleases.googleblog.com/2022/09/stable-channel-update-for-desktop_14.html</url>
+    </references>
+    <dates>
+      <discovery>2022-09-14</discovery>
+      <entry>2022-09-14</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="4ebaa983-3299-11ed-95f8-901b0e9408dc">
+    <topic>dendrite -- Signature checks not applied to some retrieved missing events</topic>
+    <affects>
+      <package>
+	<name>dendrite</name>
+	<range><lt>0.9.8</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Dendrite team reports:</p>
+	<blockquote cite="https://github.com/matrix-org/dendrite/security/advisories/GHSA-pfw4-xjgm-267c">
+	  <p>Events retrieved from a remote homeserver using /get_missing_events did
+	  not have their signatures verified correctly. This could potentially allow
+	  a remote homeserver to provide invalid/modified events to Dendrite via this
+	  endpoint.</p>
+	  <p>Note that this does not apply to events retrieved through other endpoints
+	  (e.g. /event, /state) as they have been correctly verified.</p>
+	  <p>Homeservers that have federation disabled are not vulnerable.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://github.com/matrix-org/dendrite/security/advisories/GHSA-pfw4-xjgm-267c</url>
+    </references>
+    <dates>
+      <discovery>2022-09-12</discovery>
+      <entry>2022-09-12</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="f75722ce-31b0-11ed-8b56-0800277bb8a8">
+    <topic>gitea -- multiple issues</topic>
+    <affects>
+      <package>
+	<name>gitea</name>
+	<range><lt>1.17.2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Gitea team reports:</p>
+	<blockquote cite="https://github.com/go-gitea/gitea/pull/20869">
+	  <p>Double check CloneURL is acceptable</p>
+	</blockquote>
+	<blockquote cite="https://github.com/go-gitea/gitea/pull/21011">
+	  <p>Add more checks in migration code</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://blog.gitea.io/2022/09/gitea-1.17.2-is-released/</url>
+    </references>
+    <dates>
+      <discovery>2022-08-19</discovery>
+      <entry>2022-09-11</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="80e057e7-2f0a-11ed-978f-fcaa147e860e">
     <topic>Python -- multiple vulnerabilities</topic>
     <affects>
