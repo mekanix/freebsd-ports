@@ -116,8 +116,6 @@
 @(,,555) /repository/server/check-periodic-report
 @(,,555) /repository/server/check-process-extra-info
 @(,,555) /repository/server/check-services
-@(,,555) /repository/server/check-solaris-disk-issues
-@(,,555) /repository/server/check-solaris-network-issues
 @(,,555) /repository/server/check-update-device-maps
 @(,,555) /repository/server/check-web-stale-data
 @(,,555) /repository/server/common-script-utils
