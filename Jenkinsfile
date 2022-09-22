@@ -94,6 +94,7 @@ pipeline {
                     net-mgmt/iftop \
                     net-mgmt/nfs-exporter \
                     net-mgmt/pktstat \
+                    net-mgmt/py-network-interface-exporter \
                     net-mgmt/py-zfs-exporter \
                     net-mgmt/zabbix5-agent \
                     net/samba413 \
