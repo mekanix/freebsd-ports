@@ -181,6 +181,7 @@ pipeline {
                 sh 'cd axcient/vm-migrator; make fetch'
                 sh 'cd axcient/vt2; make fetch'
                 sh 'cd axcient/vt2-stg; make fetch'
+                sh 'cd net-mgmt/py-network-interface-exporter; make fetch'
                 sh 'cd net-mgmt/py-zfs-exporter; make fetch'
 
                 sh 'sudo poudriere bulk -j 13_0-AXCIENT3_amd64 -p "${PNAME}" \
