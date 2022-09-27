@@ -89,6 +89,7 @@ pipeline {
                     mail/ssmtp \
                     misc/compat12x \
                     misc/mbuffer \
+                    misc/mc \
                     net/cloud-init \
                     net-mgmt/grok_exporter \
                     net-mgmt/iftop \
@@ -139,6 +140,7 @@ pipeline {
                     sysutils/zfsnap2 \
                     sysutils/zrepl \
                     sysutils/ztop \
+                    textproc/jq \
                     textproc/py-elasticsearch \
                     textproc/ripgrep \
                     www/nginx \
