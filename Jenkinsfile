@@ -89,6 +89,7 @@ pipeline {
                     mail/ssmtp \
                     misc/compat12x \
                     misc/mbuffer \
+                    misc/mc \
                     net/cloud-init \
                     net-mgmt/grok_exporter \
                     net-mgmt/iftop \
