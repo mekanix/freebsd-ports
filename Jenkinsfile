@@ -139,6 +139,7 @@ pipeline {
                     sysutils/zfsnap2 \
                     sysutils/zrepl \
                     sysutils/ztop \
+                    textproc/jq \
                     textproc/py-elasticsearch \
                     textproc/ripgrep \
                     www/nginx \
