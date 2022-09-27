@@ -19,6 +19,8 @@ fi
 rc=0
 case "$weekly_spxops_enable" in
     [Yy][Ee][Ss])
+	anticongestion
+
 	echo
 	echo "Audit SPXOps storage server"
 
