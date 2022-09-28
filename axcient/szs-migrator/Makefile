@@ -1,5 +1,5 @@
 PORTNAME=	szs-migrator
-PORTVERSION=	0.1.0.20220831
+PORTVERSION=	0.1.0.20220928
 CATEGORIES=	axcient
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -22,7 +22,7 @@ TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest>=0:devel/py-pytest@${PY_FLAVOR}
 USES=		axcient python
 USE_PYTHON=	autoplist distutils
 WRKSRC_SUBDIR=	szs/maintenance-tool
-SUB_FILES=	900.szs-audit 900.szs-migrator-audit
+SUB_FILES=	900.szs-audit 900.szs-migrator-audit 900.szs-maintenance-auditor
 # Don't set USERS and GROUPS because we already created the rebalancer user via
 # AD, with IDs that are outside of the usual range for daemon users.
 
@@ -35,7 +35,7 @@ PROMETHEUS_DESC=	Export migration status with Prometheus
 NO_ARCH=	yes
 
 GH_PROJECT=	replibit-tools
-GH_TAGNAME=	bbaf35c042660bc5355ca46ee91be8c581415d7e
+GH_TAGNAME=	ad0b6624edc6a2fff61693ad88a726dbc34340d3
 
 USE_RC_SUBR=	szs_rebalancer
 
@@ -43,6 +43,7 @@ SUB_LIST+=	PYTHON_CMD=${PYTHON_CMD}
 
 PLIST_FILES+=	etc/periodic/weekly/900.szs-audit \
 		etc/periodic/daily/900.szs-migrator-audit \
+		etc/periodic/daily/900.szs-maintenance-auditor \
 		etc/rsyslog.d/szs_rebalancer.conf
 
 do-test:
@@ -55,5 +56,6 @@ post-install:
 	${INSTALL_SCRIPT} ${FILESDIR}/szs_rebalancer.conf ${STAGEDIR}${PREFIX}/etc/rsyslog.d
 	${INSTALL_SCRIPT} ${WRKDIR}/900.szs-audit ${STAGEDIR}${PREFIX}/etc/periodic/weekly
 	${INSTALL_SCRIPT} ${WRKDIR}/900.szs-migrator-audit ${STAGEDIR}${PREFIX}/etc/periodic/daily
+	${INSTALL_SCRIPT} ${WRKDIR}/900.szs-maintenance-auditor ${STAGEDIR}${PREFIX}/etc/periodic/daily
 
 .include <bsd.port.mk>

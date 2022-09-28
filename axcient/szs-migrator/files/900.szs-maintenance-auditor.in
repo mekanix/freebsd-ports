@@ -1,0 +1,43 @@
+#! /bin/sh
+
+# Audit SZS maintenance status
+#
+# Add the following lines to /etc/periodic.conf:
+#
+# daily_szs_maintenance_auditor_enable (bool):	Set to "YES" by default
+
+# If there is a global system configuration file, suck it in.
+#
+if [ -r /etc/defaults/periodic.conf ]
+then
+    . /etc/defaults/periodic.conf
+    source_periodic_confs
+fi
+
+: ${daily_maintenance_auditor_enable:="YES"}
+
+rc=0
+case "$daily_szs_maintenance_auditor_enable" in
+    [Yy][Ee][Ss])
+	anticongestion
+
+	echo
+	echo "Check maintenance status on SZS datasets"
+
+	%%LOCALBASE%%/bin/szs-maintenance-auditor
+	case $? in
+	    0)	# No problems
+		;;
+	    2)	# Information to report
+		rc=1
+		;;
+	    3)	# Invalid configuration
+		rc=2
+		;;
+	    *)	# Script crashed
+		rc=3
+		;;
+	esac
+esac
+
+exit $rc
