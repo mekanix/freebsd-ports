@@ -14,7 +14,7 @@ then
     source_periodic_confs
 fi
 
-: ${daily_maintenance_auditor_enable:="YES"}
+: ${daily_szs_maintenance_auditor_enable:="YES"}
 
 rc=0
 case "$daily_szs_maintenance_auditor_enable" in
