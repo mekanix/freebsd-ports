@@ -1,6 +1,6 @@
 PORTNAME=	mesa
-DISTVERSION=	22.2-branchpoint-2962
-DISTVERSIONSUFFIX=	-g8b9a5adf8be
+DISTVERSION=	22.2-branchpoint-3336
+DISTVERSIONSUFFIX=	-gdf3fdbdeb50
 CATEGORIES=	graphics
 PKGNAMESUFFIX=	-devel
 
@@ -41,7 +41,6 @@ SHEBANG_FILES=	src/vulkan/overlay-layer/${PORTNAME}-overlay-control.py
 MESON_ARGS=	-Dgallium-omx=disabled \
 		-Dgallium-opencl=disabled \
 		-Dgallium-xa=disabled \
-		-Dgallium-xvmc=disabled \
 		-Dglvnd=true \
 		-Dplatforms=${PLATFORMS:O:[-1..1]:ts,} \
 		${BINARY_ALIAS:D--native-file=binary_alias.ini} \
