@@ -1,13 +1,8 @@
 PORTNAME=		nss-pam-ldapd
 PORTVERSION=		0.9.12
-PORTREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		http://arthurdejong.org/nss-pam-ldapd/ \
 			ZI
-
-PATCH_SITES=	https://github.com/arthurdejong/nss-pam-ldapd/commit/
-PATCHFILES+=	2f6e65ab384917a9b2ee4b25a172acc107a640b3.diff:-p1
-PATCHFILES+=	1c9b021e78dc67b9cdca5f9ad10cbde08418ee28.diff:-p1
 
 MAINTAINER?=		zi@FreeBSD.org
 COMMENT?=		Advanced fork of nss_ldap
