@@ -111,6 +111,7 @@
     SUBDIR += gxmessage
     SUBDIR += gxneur
     SUBDIR += havoc
+    SUBDIR += health
     SUBDIR += hebcal
     SUBDIR += helpviewer
     SUBDIR += horde-groupware
@@ -146,6 +147,7 @@
     SUBDIR += kongress
     SUBDIR += kontact
     SUBDIR += korganizer
+    SUBDIR += kronometer
     SUBDIR += kruler
     SUBDIR += ktimetracker
     SUBDIR += kuserfeedback
