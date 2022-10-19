@@ -1,13 +1,13 @@
 PORTNAME=			${SAMBA4_BASENAME}413
 PORTVERSION=			${SAMBA4_VERSION}
-PORTREVISION=			2
+PORTREVISION=			3
 CATEGORIES?=			net
 MASTER_SITES=			SAMBA/samba/stable SAMBA/samba/rc
 DISTNAME=			${SAMBA4_DISTNAME}
 
 MAINTAINER=			timur@FreeBSD.org
 COMMENT=			Free SMB/CIFS and AD/DC server and client for Unix
-WWW=		https://www.samba.org/
+WWW=				https://www.samba.org/
 
 LICENSE=			GPLv3+
 LICENSE_FILE=			${WRKSRC}/COPYING

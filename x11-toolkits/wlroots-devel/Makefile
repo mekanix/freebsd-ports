@@ -1,5 +1,5 @@
 PORTNAME=	wlroots
-DISTVERSION=	0.15.0-471
+DISTVERSION=	0.15.0-484
 DISTVERSIONSUFFIX=	-g${GL_COMMIT:C/(.{12}).*/\1/}
 CATEGORIES=	x11-toolkits
 PKGNAMESUFFIX=	-devel
@@ -17,7 +17,7 @@ WWW=		https://gitlab.freedesktop.org/wlroots/wlroots
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	wayland-protocols>=1.25:graphics/wayland-protocols
+BUILD_DEPENDS=	wayland-protocols>=1.27:graphics/wayland-protocols
 LIB_DEPENDS=	libudev.so:devel/libudev-devd \
 		libdrm.so:graphics/libdrm \
 		libwayland-server.so:graphics/wayland \
@@ -30,7 +30,7 @@ USE_GL=		gbm
 USE_XORG=	pixman
 USE_LDCONFIG=	yes
 GL_SITE=	https://gitlab.freedesktop.org
-GL_COMMIT=	221ee83d440fb7dcbfd141ef3a459a5a973331b6
+GL_COMMIT=	0c962c98cc3bc4e1acd3adf83bd527e278b5597b
 MESON_ARGS=	-Dexamples=false -Dbackends=${BACKENDS:ts,} -Drenderers=${RENDERERS:ts,}
 
 .ifdef PKGNAMESUFFIX

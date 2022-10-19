@@ -1080,6 +1080,7 @@
     SUBDIR += lcov
     SUBDIR += leaktracer
     SUBDIR += leatherman
+    SUBDIR += lefthook
     SUBDIR += leiningen
     SUBDIR += lemon
     SUBDIR += level-zero
@@ -1544,7 +1545,8 @@
     SUBDIR += mph
     SUBDIR += mrc
     SUBDIR += msbuild
-    SUBDIR += msgpack
+    SUBDIR += msgpack-c
+    SUBDIR += msgpack-cxx
     SUBDIR += msgpack-d
     SUBDIR += msgpuck
     SUBDIR += msitools
@@ -4667,7 +4669,6 @@
     SUBDIR += py-ipaddr
     SUBDIR += py-ipdb
     SUBDIR += py-ipykernel
-    SUBDIR += py-ipykernel5
     SUBDIR += py-ipympl
     SUBDIR += py-ipyparallel
     SUBDIR += py-ipython_genutils
@@ -4847,6 +4848,7 @@
     SUBDIR += py-nbconvert
     SUBDIR += py-nbdime
     SUBDIR += py-nbformat
+    SUBDIR += py-nbval
     SUBDIR += py-nest-asyncio
     SUBDIR += py-node-semver
     SUBDIR += py-nodeenv
@@ -5081,6 +5083,7 @@
     SUBDIR += py-pylibsrtp
     SUBDIR += py-pylint-django
     SUBDIR += py-pylint-plugin-utils
+    SUBDIR += py-pylint-venv
     SUBDIR += py-pylru
     SUBDIR += py-pylru-cache
     SUBDIR += py-pyls-black
@@ -5169,6 +5172,7 @@
     SUBDIR += py-pytest-sugar
     SUBDIR += py-pytest-timeout
     SUBDIR += py-pytest-tornado
+    SUBDIR += py-pytest-tornasync
     SUBDIR += py-pytest-translations
     SUBDIR += py-pytest-trio
     SUBDIR += py-pytest-twisted
@@ -5224,6 +5228,7 @@
     SUBDIR += py-pyvisa
     SUBDIR += py-pyvisa-py
     SUBDIR += py-pyxb
+    SUBDIR += py-pyxdg
     SUBDIR += py-pyyaml-include
     SUBDIR += py-pyyaml_env_tag
     SUBDIR += py-pyzipper
@@ -5615,6 +5620,7 @@
     SUBDIR += py-zope.traversing
     SUBDIR += py3c
     SUBDIR += pybind11
+    SUBDIR += pybind11-json
     SUBDIR += pybugz
     SUBDIR += pycanberra
     SUBDIR += pycharm-ce
@@ -5700,6 +5706,7 @@
     SUBDIR += rcs57
     SUBDIR += re2
     SUBDIR += re2c
+    SUBDIR += readerwriterqueue
     SUBDIR += readline
     SUBDIR += rebar
     SUBDIR += rebar3
