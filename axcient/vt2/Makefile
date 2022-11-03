@@ -42,6 +42,8 @@ PLIST_FILES=   bin/vaulttransferserver2 \
 	       "@sample ${EXAMPLESDIR}/rsyslog.conf etc/rsyslog.d/vt2.conf" \
 	       "@dir etc/rsyslog.d"
 
+EXTRA_PATCHES?= ${PATCHDIR}/extra-patch-Makefile
+
 do-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/rsyslog.d
 	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}

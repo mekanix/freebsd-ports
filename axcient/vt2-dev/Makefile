@@ -16,6 +16,9 @@ CONFLICTS_INSTALL=	vt2 \
 
 MASTERDIR=	${.CURDIR}/../vt2
 
+EXTRA_PATCHES= 
+MAKE_ARGS+= SERVER_LDFLAGS="${LDFLAGS} -lmicrohttpd -lszs-op -L."
+
 # Disable checksum verification because this port builds from the tip of a
 # branch.
 checksum:
