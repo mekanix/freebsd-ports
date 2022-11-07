@@ -1,5 +1,5 @@
 PORTNAME=	puzzles
-PORTVERSION=	20221019
+PORTVERSION=	20221102
 CATEGORIES=	games
 MASTER_SITES=	https://www.chiark.greenend.org.uk/~sgtatham/puzzles/ \
 		https://mirror.amdmi3.ru/distfiles/
@@ -13,7 +13,7 @@ WWW=		https://www.chiark.greenend.org.uk/~sgtatham/puzzles/
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENCE
 
-COMMITHASH=	dbbe9d3
+COMMITHASH=	289342e
 
 BUILD_DEPENDS=	convert:graphics/ImageMagick6-nox11 \
 		halibut:textproc/halibut

@@ -146,6 +146,7 @@
     SUBDIR += eq10q-lv2
     SUBDIR += espeak-ng
     SUBDIR += espressivo-lv2
+    SUBDIR += essentia
     SUBDIR += etcd
     SUBDIR += eteroj-lv2
     SUBDIR += etktab
@@ -317,6 +318,7 @@
     SUBDIR += invada-studio-plugins-lv2
     SUBDIR += ir-lv2
     SUBDIR += jack
+    SUBDIR += jack-capture
     SUBDIR += jack-example-tools
     SUBDIR += jack-keyboard
     SUBDIR += jack-smf-utils
@@ -484,6 +486,7 @@
     SUBDIR += moodbar
     SUBDIR += moony-lv2
     SUBDIR += mous
+    SUBDIR += mousai-devel
     SUBDIR += mp-player
     SUBDIR += mp3-archive-tools
     SUBDIR += mp3_check
@@ -647,6 +650,7 @@
     SUBDIR += py-musicbrainzngs
     SUBDIR += py-mutagen
     SUBDIR += py-opuslib
+    SUBDIR += py-pocketsphinx
     SUBDIR += py-pulsectl
     SUBDIR += py-pyacoustid
     SUBDIR += py-pyaudio
@@ -667,6 +671,7 @@
     SUBDIR += py-zita-audiotools
     SUBDIR += py-zita-jacktools
     SUBDIR += qaudiosonar
+    SUBDIR += qjackcapture
     SUBDIR += qjackctl
     SUBDIR += qmidiarp
     SUBDIR += qmidictl

@@ -370,6 +370,7 @@
     SUBDIR += nmap
     SUBDIR += nss
     SUBDIR += nss_compat_ossl
+    SUBDIR += nuclei
     SUBDIR += nyx
     SUBDIR += oath-toolkit
     SUBDIR += obfs4proxy-tor
@@ -1096,6 +1097,7 @@
     SUBDIR += rubygem-omniauth-jwt
     SUBDIR += rubygem-omniauth-multipassword
     SUBDIR += rubygem-omniauth-oauth2-generic
+    SUBDIR += rubygem-omniauth-rails_csrf_protection
     SUBDIR += rubygem-omniauth-saml
     SUBDIR += rubygem-omniauth-shibboleth
     SUBDIR += rubygem-omniauth1
@@ -1243,6 +1245,7 @@
     SUBDIR += teleport
     SUBDIR += testssl.sh
     SUBDIR += tfhe
+    SUBDIR += tfsec
     SUBDIR += theonionbox
     SUBDIR += tinc
     SUBDIR += tinc-devel
@@ -1251,6 +1254,7 @@
     SUBDIR += tor
     SUBDIR += tor-devel
     SUBDIR += totp-cli
+    SUBDIR += tpm-quote-tools
     SUBDIR += tpm-tools
     SUBDIR += tpm2-abrmd
     SUBDIR += tpm2-tools

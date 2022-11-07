@@ -495,6 +495,7 @@
     SUBDIR += cxxtools
     SUBDIR += d-feet
     SUBDIR += d-scanner
+    SUBDIR += d-spy
     SUBDIR += darts
     SUBDIR += dash.el
     SUBDIR += dasm
@@ -714,6 +715,7 @@
     SUBDIR += gconfmm26
     SUBDIR += gdb
     SUBDIR += gdcm
+    SUBDIR += gdmd
     SUBDIR += geany
     SUBDIR += geany-plugin-addons
     SUBDIR += geany-plugin-autoclose
@@ -825,6 +827,7 @@
     SUBDIR += glademm
     SUBDIR += glib20
     SUBDIR += glibmm
+    SUBDIR += glibmm26
     SUBDIR += gllvm
     SUBDIR += global
     SUBDIR += glog
@@ -1008,6 +1011,7 @@
     SUBDIR += jsl
     SUBDIR += jsmin
     SUBDIR += json-c
+    SUBDIR += json-dto
     SUBDIR += json-glib
     SUBDIR += jsoncpp
     SUBDIR += jsonnet
@@ -4399,6 +4403,7 @@
     SUBDIR += py-connection_pool
     SUBDIR += py-constantly
     SUBDIR += py-construct
+    SUBDIR += py-construct-classes
     SUBDIR += py-contextlib2
     SUBDIR += py-convertdate
     SUBDIR += py-cookiecutter
@@ -4984,6 +4989,7 @@
     SUBDIR += py-pipreqs
     SUBDIR += py-pipx
     SUBDIR += py-pkgconfig
+    SUBDIR += py-pkgutil-resolve-name
     SUBDIR += py-plac
     SUBDIR += py-plan
     SUBDIR += py-platformdirs
@@ -5231,7 +5237,6 @@
     SUBDIR += py-pyvisa
     SUBDIR += py-pyvisa-py
     SUBDIR += py-pyxb
-    SUBDIR += py-pyxdg
     SUBDIR += py-pyyaml-include
     SUBDIR += py-pyyaml_env_tag
     SUBDIR += py-pyzipper
@@ -5352,7 +5357,6 @@
     SUBDIR += py-sourcemap
     SUBDIR += py-speaklater
     SUBDIR += py-speg
-    SUBDIR += py-spyder
     SUBDIR += py-spyder-kernels
     SUBDIR += py-squint
     SUBDIR += py-sre-yield
@@ -5586,6 +5590,7 @@
     SUBDIR += py-zc.buildout
     SUBDIR += py-zclockfile
     SUBDIR += py-zconfig
+    SUBDIR += py-zfp
     SUBDIR += py-zict
     SUBDIR += py-zipp
     SUBDIR += py-zope.app.basicskin
@@ -7252,6 +7257,7 @@
     SUBDIR += spirv-llvm-translator
     SUBDIR += splint
     SUBDIR += spread-sheet-widget
+    SUBDIR += spyder
     SUBDIR += srecord
     SUBDIR += st
     SUBDIR += stack

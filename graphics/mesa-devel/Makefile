@@ -1,6 +1,6 @@
 PORTNAME=	mesa
-DISTVERSION=	22.2-branchpoint-3982
-DISTVERSIONSUFFIX=	-g9a7e93f1f6b
+DISTVERSION=	22.3-branchpoint-196
+DISTVERSIONSUFFIX=	-g7753e80219c
 CATEGORIES=	graphics
 PKGNAMESUFFIX=	-devel
 
@@ -10,7 +10,6 @@ PATCHFILES+=	50433886a3e3.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-
 PATCHFILES+=	4356e7185193.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/16987
 PATCHFILES+=	b2a22acce617.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/16987
 PATCHFILES+=	19eb2c30bff0.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/16987
-PATCHFILES+=	2be78d6ba4c7.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/19177
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Bleeding edge Mesa drivers (OpenGL, Vulkan)
@@ -56,7 +55,6 @@ OPTIONS_GROUP_VULKAN=	anv hasvk radv
 OPTIONS_EXCLUDE_DragonFly=	LIBUNWIND anv hasvk
 OPTIONS_EXCLUDE_i386=	LTO # anv: vkcube fails on vkCreateSwapchainKHR
 OPTIONS_EXCLUDE_powerpc64=	${"${/usr/bin/ld:L:tA}"==/usr/bin/ld.lld:?LTO:} # https://github.com/llvm/llvm-project/issues/46697
-OPTIONS_EXCLUDE+=	panfrost # https://gitlab.freedesktop.org/mesa/mesa/-/issues/7252
 OPTIONS_EXCLUDE+=	${ARCH:Naarch64:C/.+/panfrost/}
 OPTIONS_EXCLUDE+=	${ARCH:Namd64:Ni386:Nx86_64:C/.+/anv crocus hasvk iris/}
 OPTIONS_EXCLUDE+=	${ARCH:Naarch64:Namd64:Ni386:Npowerpc64:Npowerpc64le:Nx86_64:C/.+/LIBUNWIND/}
@@ -110,6 +108,7 @@ LTO_MESON_TRUE=		b_lto
 VAAPI_DESC=		Hardware encoding/decoding (only r600, radeonsi)
 VAAPI_BUILD_DEPENDS=	libva>0:multimedia/libva
 VAAPI_MESON_ENABLED=	gallium-va
+VAAPI_MESON_ON=		-Dvideo-codecs=vc1dec,h264dec,h264enc,h265dec,h265enc
 
 VDPAU_DESC=		Hardware decoding (only r600, radeonsi) (implies X11)
 VDPAU_BUILD_DEPENDS=	libvdpau>0:multimedia/libvdpau

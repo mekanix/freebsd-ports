@@ -400,6 +400,9 @@
     SUBDIR += py-mxnet
     SUBDIR += py-onnx
     SUBDIR += py-onnx-tf
+    SUBDIR += py-openpaperwork-core
+    SUBDIR += py-openpaperwork-gtk
+    SUBDIR += py-openvdb
     SUBDIR += py-orange3-associate
     SUBDIR += py-orange3-datafusion
     SUBDIR += py-orange3-educational
