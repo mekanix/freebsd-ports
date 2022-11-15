@@ -2,7 +2,7 @@
 
 PORTNAME=	filestore-clone
 PORTVERSION=	0.4.5
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	axcient sysutils
 MASTER_SITES=	GH
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -27,22 +27,15 @@ USE_PYTHON=	autoplist distutils
 
 GH_TAGNAME=	v${PORTVERSION}
 
-SUB_FILES=	filestore-clone
-
 PLIST_FILES=	${PREFIX}/libexec/${PORTNAME}/cron-clone-anchor-filestore.sh \
-		${PREFIX}/libexec/${PORTNAME}/cron-clone-anchor-all.sh \
-		"@sample ${EXAMPLESDIR}/cron ${PREFIX}/etc/cron.d/filestore-clone"
+		${PREFIX}/libexec/${PORTNAME}/cron-clone-anchor-all.sh
 PLIST_DIRS=	/var/db/${PORTNAME} \
-		/var/log/${PORTNAME} \
-		${PREFIX}/etc/cron.d
+		/var/log/${PORTNAME}
 
 post-install:
 	${MKDIR} ${STAGEDIR}/var/db/${PORTNAME}
 	${MKDIR} ${STAGEDIR}/var/log/${PORTNAME}
-	${MKDIR} ${STAGEDIR}${PREFIX}/etc/cron.d
 	${MKDIR} ${STAGEDIR}${PREFIX}/libexec/${PORTNAME}
-	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
-	${INSTALL_DATA} ${WRKDIR}/filestore-clone ${STAGEDIR}${EXAMPLESDIR}/cron
 	${INSTALL_SCRIPT} ${WRKSRC}/scripts/cron-clone-anchor-all.sh ${STAGEDIR}${PREFIX}/libexec/${PORTNAME}/
 	${INSTALL_SCRIPT} ${WRKSRC}/scripts/cron-clone-anchor-filestore.sh ${STAGEDIR}${PREFIX}/libexec/${PORTNAME}/
 
