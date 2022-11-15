@@ -51,6 +51,7 @@ pipeline {
                     axcient/efsserver \
                     axcient/efs-vm-utils \
                     axcient/filestore-clone \
+                    axcient/py-malloc-exporter \
                     axcient/py-drive-exporter \
                     axcient/migration-tools \
                     axcient/smart-recovery \
@@ -178,6 +179,7 @@ pipeline {
                 sh 'cd axcient/dralserver-stg; make fetch'
                 sh 'cd axcient/py-axcient-helpers; make fetch'
                 sh 'cd axcient/py-drive-exporter; make fetch'
+                sh 'cd axcient/py-malloc-exporter; make fetch'
                 sh 'cd axcient/filestore-clone; make fetch'
                 sh 'cd axcient/migration-tools; make fetch'
                 sh 'cd axcient/smart-recovery; make fetch'

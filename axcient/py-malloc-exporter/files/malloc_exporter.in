@@ -1,0 +1,50 @@
+#!/bin/sh
+# $FreeBSD$
+
+# PROVIDE: malloc_exporter
+# REQUIRE: LOGIN
+# KEYWORD: shutdown
+#
+# Add the following lines to /etc/rc.conf.local or /etc/rc.conf
+# to enable this service:
+#
+# malloc_exporter_enable (bool):            Set to NO by default.
+#               Set it to YES to enable malloc-exporter.
+# malloc_exporter_args (string):            Set extra arguments to pass to malloc-exporter
+#               Default is "".
+# malloc_exporter_user (string):            Set user that malloc_exporter will run under
+#               Default is "prometheus".
+# malloc_exporter_group (string):           Set group that malloc_exporter will run under
+#               Default is "prometheus".
+
+. /etc/rc.subr
+
+name=malloc_exporter
+desc="Prometheus 'vmstat -m' statistics exporter"
+rcvar=malloc_exporter_enable
+
+load_rc_config $name
+
+: ${malloc_exporter_enable:=NO}
+: ${malloc_exporter_args:=""}
+: ${malloc_exporter_user:=prometheus}
+: ${malloc_exporter_group:=prometheus}
+
+pidfile=/var/run/malloc_exporter.pid
+command=/usr/sbin/daemon
+command_interpreter=%%PYTHON_CMD%%
+procname=%%PREFIX%%/bin/malloc-exporter
+command_args="-f -p ${pidfile} /usr/bin/env ${procname} ${malloc_exporter_args}"
+
+start_precmd=malloc_exporter_startprecmd
+
+malloc_exporter_startprecmd()
+{
+    if [ -e ${pidfile} ]; then
+        chown ${malloc_exporter_user}:${malloc_exporter_group} ${pidfile};
+    else
+        install -o ${malloc_exporter_user} -g ${malloc_exporter_group} /dev/null ${pidfile};
+    fi
+}
+
+run_rc_command "$1"
