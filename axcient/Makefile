@@ -22,6 +22,7 @@
     SUBDIR += migration-tools
     SUBDIR += py-axcient-helpers
     SUBDIR += py-drive-exporter
+    SUBDIR += py-malloc-exporter
     SUBDIR += smart-recovery
     SUBDIR += smart-recovery-dev
     SUBDIR += smart-recovery-stg
