@@ -18,6 +18,7 @@ RUN_DEPENDS+=	buffer:misc/buffer \
 		xfs-fuse:sysutils/fusefs-xfuse \
 		mount.exfat:sysutils/fusefs-exfat \
 		ntfs-3g:sysutils/fusefs-ntfs \
+		vsftpd-ssl:ftp/vsftpd \
 		${ADD_MBR_DEPENDS}
 
 USES=		axcient go:modules ssl:run
