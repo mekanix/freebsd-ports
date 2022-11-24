@@ -10,6 +10,7 @@ COMMENT=	Hourly build of szs's develop branch
 
 #TODO Move this dependency to szs prod port after azure-recovery utility will be released
 RUN_DEPENDS+=	vdisk-fuse:axcient/vdisk-fuse \
+		pam_pwdfile:security/pam_pwdfile \
 		${LOCALBASE}/libexec/vsftpd:ftp/vsftpd
 
 GH_TAGNAME=	develop
