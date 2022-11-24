@@ -12,7 +12,7 @@ COMMENT=	Hourly build of szs's develop branch
 RUN_DEPENDS+=	vdisk-fuse:axcient/vdisk-fuse \
 		${LOCALBASE}/libexec/vsftpd:ftp/vsftpd
 
-LIB_DEPENDS= pam_pwdfile.so:security/pam_pwdfile
+LIB_DEPENDS=	pam_pwdfile.so:security/pam_pwdfile
 
 GH_TAGNAME=	develop
 
