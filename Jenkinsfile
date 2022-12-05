@@ -108,6 +108,7 @@ pipeline {
                     net/openldap24-client \
                     net/rsync \
                     net/wireshark \
+                    ports-mgmt/modules2tuple \
                     ports-mgmt/portlint \
                     ports-mgmt/poudriere \
                     security/gnupg \
