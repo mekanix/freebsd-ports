@@ -41,8 +41,10 @@ PLIST_FILES=    bin/vaulttransferserver2 \
 		"@sample ${EXAMPLESDIR}/rsyslog.d/vt2server.conf etc/rsyslog.d/vt2.conf" \
 		bin/vaulttransferclient2 \
 		"@sample ${EXAMPLESDIR}/newsyslog.conf.d/vt2client.conf etc/newsyslog.conf.d/vt2client.conf" \
-		"@sample ${EXAMPLESDIR}/rsyslog.d/vt2client.conf etc/rsyslog.d/vt2client.conf" \
-		"@dir etc/rsyslog.d"
+		"@sample ${EXAMPLESDIR}/rsyslog.d/vt2client.conf etc/rsyslog.d/vt2client.conf"
+
+pre-build:
+	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${GO_ENV} GOPATH=/tmp ${GO_CMD} mod vendor
 
 # It is not possible to use the `go:modules` and `gmake` build rules together,
 # so we need to redeclare do-build, containing recipe scripts from both,
