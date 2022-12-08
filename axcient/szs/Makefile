@@ -1,8 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	szs
-PORTVERSION?=	1.24.0
-PORTREVISION= 	2
+PORTVERSION?=	1.25.0
+PORTREVISION= 	0
 CATEGORIES=	axcient
 MASTER_SITES=	GH
 
@@ -25,7 +25,7 @@ RUN_DEPENDS+=	buffer:misc/buffer \
 USES=		axcient go:modules ssl:run
 USE_LDCONFIG=	yes
 GH_PROJECT=	szs-op
-GH_TAGNAME?=	1.24.0
+GH_TAGNAME?=	1.25.0
 GH_TUPLE?=	\
 		Azure:azure-pipeline-go:v0.2.3:azure_azure_pipeline_go/vendor/github.com/Azure/azure-pipeline-go \
 		Azure:azure-sdk-for-go:3e51649a3e16:azure_azure_sdk_for_go_armresources \
@@ -55,7 +55,7 @@ GH_TUPLE?=	\
 		beorn7:perks:v1.0.1:beorn7_perks/vendor/github.com/beorn7/perks \
 		bradfitz:gomemcache:a41fca850d0b:bradfitz_gomemcache/vendor/github.com/bradfitz/gomemcache \
 		census-instrumentation:opencensus-go:v0.22.3:census_instrumentation_opencensus_go/vendor/go.opencensus.io \
-		cespare:xxhash:v2.1.1:cespare_xxhash_v2/vendor/github.com/cespare/xxhash/v2 \
+		cespare:xxhash:v2.1.2:cespare_xxhash_v2/vendor/github.com/cespare/xxhash/v2 \
 		cheggaaa:pb:v3.0.8:cheggaaa_pb_v3/vendor/github.com/cheggaaa/pb \
 		davecgh:go-spew:v1.1.1:davecgh_go_spew/vendor/github.com/davecgh/go-spew \
 		dimchansky:utfbom:v1.1.1:dimchansky_utfbom/vendor/github.com/dimchansky/utfbom \
@@ -70,11 +70,12 @@ GH_TUPLE?=	\
 		go-playground:locales:v0.13.0:go_playground_locales/vendor/github.com/go-playground/locales \
 		go-playground:universal-translator:v0.17.0:go_playground_universal_translator/vendor/github.com/go-playground/universal-translator \
 		go-playground:validator:v10.4.1:go_playground_validator_v10/vendor/github.com/go-playground/validator/v10 \
-		go-redis:redis:v6.15.7:go_redis_redis/vendor/github.com/go-redis/redis \
+		go-redis:redis:v6.15.9:go_redis_redis/vendor/github.com/go-redis/redis \
+		go-redsync:redsync:v4.6.0:go_redsync_redsync_v4/vendor/github.com/go-redsync/redsync/v4 \
 		go-resty:resty:v1.12.0:go_resty_resty/vendor/gopkg.in/resty.v1 \
 		go-stack:stack:v1.8.0:go_stack_stack/vendor/github.com/go-stack/stack \
-		go-yaml:yaml:496545a6307b:go_yaml_yaml_1/vendor/gopkg.in/yaml.v3 \
 		go-yaml:yaml:v2.4.0:go_yaml_yaml/vendor/gopkg.in/yaml.v2 \
+		go-yaml:yaml:v3.0.1:go_yaml_yaml_1/vendor/gopkg.in/yaml.v3 \
 		golang-jwt:jwt:v4.2.0:golang_jwt_jwt_v4/vendor/github.com/golang-jwt/jwt/v4 \
 		golang:appengine:v1.6.5:golang_appengine/vendor/google.golang.org/appengine \
 		golang:crypto:e495a2d5b3d3:golang_crypto/vendor/golang.org/x/crypto \
@@ -82,19 +83,19 @@ GH_TUPLE?=	\
 		golang:groupcache:8c9f03a8e57e:golang_groupcache/vendor/github.com/golang/groupcache \
 		golang:lint:738671d3881b:golang_lint/vendor/golang.org/x/lint \
 		golang:mock:v1.5.0:golang_mock/vendor/github.com/golang/mock \
-		golang:mod:v0.4.2:golang_mod/vendor/golang.org/x/mod \
-		golang:net:47ca1ff31462:golang_net/vendor/golang.org/x/net \
+		golang:mod:9b9b3d81d5e3:golang_mod/vendor/golang.org/x/mod \
+		golang:net:2871e0cb64e4:golang_net/vendor/golang.org/x/net \
 		golang:oauth2:bf48bf16ab8d:golang_oauth2/vendor/golang.org/x/oauth2 \
-		golang:protobuf:v1.4.3:golang_protobuf/vendor/github.com/golang/protobuf \
+		golang:protobuf:v1.5.2:golang_protobuf/vendor/github.com/golang/protobuf \
 		golang:snappy:v0.0.1:golang_snappy/vendor/github.com/golang/snappy \
 		golang:sync:036812b2e83c:golang_sync/vendor/golang.org/x/sync \
-		golang:sys:665e8c7367d1:golang_sys/vendor/golang.org/x/sys \
-		golang:term:7de9c90e9dd1:golang_term/vendor/golang.org/x/term \
-		golang:text:v0.3.6:golang_text/vendor/golang.org/x/text \
-		golang:tools:v0.1.5:golang_tools/vendor/golang.org/x/tools \
+		golang:sys:9388b58f7150:golang_sys/vendor/golang.org/x/sys \
+		golang:term:03fcf44c2211:golang_term/vendor/golang.org/x/term \
+		golang:text:v0.3.7:golang_text/vendor/golang.org/x/text \
+		golang:tools:v0.1.10:golang_tools/vendor/golang.org/x/tools \
 		golang:xerrors:5ec99f83aff1:golang_xerrors/vendor/golang.org/x/xerrors \
 		gomodule:redigo:v2.0.0:gomodule_redigo/vendor/github.com/gomodule/redigo \
-		google:go-cmp:v0.5.5:google_go_cmp/vendor/github.com/google/go-cmp \
+		google:go-cmp:v0.5.8:google_go_cmp/vendor/github.com/google/go-cmp \
 		google:go-genproto:beee998c1893:google_go_genproto/vendor/google.golang.org/genproto \
 		google:shlex:e7afc7fbc510:google_shlex/vendor/github.com/google/shlex \
 		google:uuid:v1.2.0:google_uuid/vendor/github.com/google/uuid \
@@ -104,6 +105,8 @@ GH_TUPLE?=	\
 		googleapis:google-cloud-go:v0.53.0:googleapis_google_cloud_go/vendor/cloud.google.com/go \
 		gotestyourself:gotestsum:v1.7.0:gotestyourself_gotestsum/vendor/gotest.tools/gotestsum \
 		grpc:grpc-go:v1.27.1:grpc_grpc_go/vendor/google.golang.org/grpc \
+		hashicorp:errwrap:v1.0.0:hashicorp_errwrap/vendor/github.com/hashicorp/errwrap \
+		hashicorp:go-multierror:v1.1.0:hashicorp_go_multierror/vendor/github.com/hashicorp/go-multierror \
 		jmespath:go-jmespath:c2b33e8439af:jmespath_go_jmespath/vendor/github.com/jmespath/go-jmespath \
 		jonboulle:clockwork:v0.2.2:jonboulle_clockwork/vendor/github.com/jonboulle/clockwork \
 		json-iterator:go:v1.1.10:json_iterator_go/vendor/github.com/json-iterator/go \
@@ -128,7 +131,7 @@ GH_TUPLE?=	\
 		prometheus:client_model:v0.2.0:prometheus_client_model/vendor/github.com/prometheus/client_model \
 		prometheus:common:v0.18.0:prometheus_common/vendor/github.com/prometheus/common \
 		prometheus:procfs:v0.6.0:prometheus_procfs/vendor/github.com/prometheus/procfs \
-		protocolbuffers:protobuf-go:v1.23.0:protocolbuffers_protobuf_go/vendor/google.golang.org/protobuf \
+		protocolbuffers:protobuf-go:v1.28.0:protocolbuffers_protobuf_go/vendor/google.golang.org/protobuf \
 		rivo:uniseg:v0.2.0:rivo_uniseg/vendor/github.com/rivo/uniseg \
 		satori:go.uuid:v1.2.0:satori_go_uuid/vendor/github.com/satori/go.uuid \
 		streadway:amqp:1c71cc93ed71:streadway_amqp/vendor/github.com/streadway/amqp \
