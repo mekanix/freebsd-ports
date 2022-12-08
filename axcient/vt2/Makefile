@@ -25,7 +25,7 @@ LIB_DEPENDS=	libmicrohttpd.so:www/libmicrohttpd \
 # https://raw.githubusercontent.com/Axcient/vaulttransfer2/6d5d3224796695bf163b9e6d37fe089f2b4109af/freebsd-pkg/%2BMANIFEST?token=AAA7VONVI376NMBQPJLHG6K6T4YLG
 RUN_DEPENDS+=	ca_root_nss>0:security/ca_root_nss
 
-USES=		axcient gmake
+USES+=		axcient gmake
 GH_PROJECT=	vaulttransfer2
 GH_TAGNAME?=     1.1.6
 
@@ -36,7 +36,7 @@ ALL_TARGET=	server
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-PLIST_FILES=   bin/vaulttransferserver2 \
+PLIST_FILES?=   bin/vaulttransferserver2 \
 	       "@sample ${EXAMPLESDIR}/newsyslog.conf etc/newsyslog.conf.d/vt2.conf" \
 	       etc/rc.d/vt2 \
 	       "@sample ${EXAMPLESDIR}/rsyslog.conf etc/rsyslog.d/vt2.conf" \
@@ -44,6 +44,7 @@ PLIST_FILES=   bin/vaulttransferserver2 \
 
 EXTRA_PATCHES?= ${PATCHDIR}/extra-patch-Makefile
 
+.  if !target(do-install)
 do-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/rsyslog.d
 	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
@@ -51,5 +52,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/freebsd-pkg/usr/local/etc/newsyslog.conf.d/vt2.conf ${STAGEDIR}${EXAMPLESDIR}/newsyslog.conf
 	${INSTALL_SCRIPT} ${WRKSRC}/freebsd-pkg/usr/local/etc/rc.d/vt2 ${STAGEDIR}${PREFIX}/etc/rc.d
 	${INSTALL_DATA} ${WRKSRC}/freebsd-pkg/usr/local/etc/rsyslog.d/vt2.conf ${STAGEDIR}${EXAMPLESDIR}/rsyslog.conf
+.  endif
 
 .include <bsd.port.mk>
