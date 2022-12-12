@@ -1,6 +1,6 @@
 PORTNAME=	octave-forge-internal-fluid-flow
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.2.2
+DISTVERSION=	0.3.1
 CATEGORIES=	math
 
 MAINTAINER=	stephen@FreeBSD.org
@@ -22,6 +22,8 @@ OCTSRC=		Internal-Fluid-Flow-for-GNU-Octave-${DISTVERSION}
 
 do-build:
 	@${DO_NADA}
+
+NO_ARCH=	yes
 
 post-build:
 	${RM} ${WRKSRC}/Makefile ${WRKSRC}/configure

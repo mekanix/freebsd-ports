@@ -97,6 +97,7 @@
     SUBDIR += ntk
     SUBDIR += nuklear
     SUBDIR += ocaml-lablgtk2
+    SUBDIR += ocaml-lablgtk3
     SUBDIR += ocaml-labltk
     SUBDIR += open-motif
     SUBDIR += open-motif-devel
@@ -158,6 +159,7 @@
     SUBDIR += py-guietta
     SUBDIR += py-python-xlib
     SUBDIR += py-qt5-chart
+    SUBDIR += py-qt6-chart
     SUBDIR += py-tkinter
     SUBDIR += py-tktreectrl
     SUBDIR += py-wxPython4
@@ -224,7 +226,7 @@
     SUBDIR += vte
     SUBDIR += vte3
     SUBDIR += wlroots
-    SUBDIR += wlroots-devel
+    SUBDIR += wlroots015
     SUBDIR += wmapp
     SUBDIR += wxgtk28
     SUBDIR += wxgtk28-common
@@ -235,6 +237,7 @@
     SUBDIR += xbae
     SUBDIR += xforms
     SUBDIR += xmhtml
+    SUBDIR += xwallpaper
     SUBDIR += ztoolkit
 
 .include <bsd.port.subdir.mk>

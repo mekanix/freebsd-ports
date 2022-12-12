@@ -12,6 +12,7 @@
     SUBDIR += bee-host
     SUBDIR += biew
     SUBDIR += bitedit
+    SUBDIR += bless
     SUBDIR += boiling-egg
     SUBDIR += bpatch
     SUBDIR += bvi
@@ -197,6 +198,7 @@
     SUBDIR += linux-sublime3
     SUBDIR += linux-wps-office
     SUBDIR += lite
+    SUBDIR += lite-xl
     SUBDIR += madedit
     SUBDIR += marker
     SUBDIR += mg
@@ -262,6 +264,7 @@
     SUBDIR += texworks
     SUBDIR += the
     SUBDIR += treeform
+    SUBDIR += turbo
     SUBDIR += tweak
     SUBDIR += uemacs
     SUBDIR += uzap

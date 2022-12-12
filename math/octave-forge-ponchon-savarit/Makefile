@@ -1,6 +1,6 @@
 PORTNAME=	octave-forge-ponchon-savarit
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.1.1
+DISTVERSION=	0.1.3
 CATEGORIES=	math
 
 MAINTAINER=	stephen@FreeBSD.org
@@ -22,6 +22,8 @@ WRKSRC=		${WRKDIR}/${OCTSRC}/src
 
 do-build:
 	@${DO_NADA}
+
+NO_ARCH=	yes
 
 .include "${.CURDIR}/../../Mk/bsd.octave.mk"
 

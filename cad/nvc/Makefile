@@ -10,6 +10,7 @@ WWW=		https://github.com/nickg/nvc
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+BROKEN_armv6=	compilation fails: no member named '_gregs' in 'mcontext_t'; did you mean '__gregs', see https://github.com/nickg/nvc/issues/534
 BROKEN_armv7=	compilation fails: no member named '_gregs' in 'mcontext_t'; did you mean '__gregs', see https://github.com/nickg/nvc/issues/534
 BROKEN_FreeBSD_14_i386=	clang creashes, see https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=265826
 
@@ -50,8 +51,8 @@ CONFIGURE_CMD=		${WRKSRC}/configure
 
 .include <bsd.port.options.mk>
 
-.if ${ARCH} == powerpc64
-CONFIGURE_ARGS+=	--enable-lto=no
+.if ${ARCH} == "i386" || ${ARCH} == powerpc64 # see the bug#268319 for the LTO failure on i386
+CONFIGURE_ARGS+=	--disable-lto # workaround for https://github.com/nickg/nvc/issues/579 (undefined symbol: _GLOBAL_OFFSET_TABLE_, see error: undefined symbol: _GLOBAL_OFFSET_TABLE_)
 .endif
 
 post-install:

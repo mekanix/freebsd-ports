@@ -1,6 +1,6 @@
 PORTNAME=	octave-forge-mccabe-thiele
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.1.4
+DISTVERSION=	0.1.5
 CATEGORIES=	math
 
 MAINTAINER=	stephen@FreeBSD.org
@@ -24,6 +24,8 @@ RUN_DEPENDS+=	${TARBALLS_DIR}/sockets.tar.gz:math/octave-forge-sockets
 
 do-build:
 	@${DO_NADA}
+
+NO_ARCH=	yes
 
 post-build:
 	${RM} ${WRKSRC}/Makefile ${WRKSRC}/configure
