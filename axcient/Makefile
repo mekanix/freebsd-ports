@@ -19,6 +19,7 @@
     SUBDIR += dralserver-stg
     SUBDIR += efsserver
     SUBDIR += efs-vm-utils
+    SUBDIR += grpc-tests-dev
     SUBDIR += migration-tools
     SUBDIR += py-axcient-helpers
     SUBDIR += py-drive-exporter
