@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTVERSION=	1.26.0.${DATECODE}
-PORTREVISION=	0
+PORTREVISION=	1
 PKGNAMESUFFIX=	-dev
 
 DATECODE!=	date -u "+%Y%m%d%H"
@@ -9,9 +9,7 @@ DATECODE!=	date -u "+%Y%m%d%H"
 COMMENT=	Hourly build of szs's develop branch
 
 #TODO Move this dependency to szs prod port after azure-recovery utility will be released
-RUN_DEPENDS+=	vdisk-fuse:axcient/vdisk-fuse \
-		${LOCALBASE}/lib/pam_pwdfile.so:security/pam_pwdfile \
-		${LOCALBASE}/libexec/vsftpd:ftp/vsftpd
+RUN_DEPENDS+=	vdisk-fuse:axcient/vdisk-fuse
 
 
 GH_TAGNAME=	develop
