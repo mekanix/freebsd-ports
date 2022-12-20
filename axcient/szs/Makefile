@@ -2,7 +2,7 @@
 
 PORTNAME=	szs
 PORTVERSION?=	1.25.0
-PORTREVISION= 	0
+PORTREVISION= 	1
 CATEGORIES=	axcient
 MASTER_SITES=	GH
 
@@ -19,6 +19,7 @@ RUN_DEPENDS+=	buffer:misc/buffer \
 		xfs-fuse:sysutils/fusefs-xfuse \
 		mount.exfat:sysutils/fusefs-exfat \
 		ntfs-3g:sysutils/fusefs-ntfs \
+		${LOCALBASE}/lib/pam_pwdfile.so:security/pam_pwdfile \
 		${LOCALBASE}/libexec/vsftpd:ftp/vsftpd \
 		${ADD_MBR_DEPENDS}
 
