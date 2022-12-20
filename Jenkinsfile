@@ -219,6 +219,7 @@ pipeline {
                 sh 'cd axcient/add_mbr-dev; make fetch'
                 sh 'cd axcient/cloudserver2-dev; make fetch'
                 sh 'cd axcient/dralserver-dev; make fetch'
+                sh 'cd axcient/grpc-tests-dev; make fetch'
                 sh 'cd axcient/smart-recovery-dev; make fetch'
                 sh 'cd axcient/szs-dev; make fetch'
                 sh 'cd axcient/vt2-dev; make fetch'
