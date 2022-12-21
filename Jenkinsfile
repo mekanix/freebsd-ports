@@ -118,7 +118,6 @@ pipeline {
                     security/sudo \
                     shells/bash \
                     shells/ksh93 \
-                    sysutils/beats6 \
                     sysutils/beats7 \
                     sysutils/bpytop \
                     sysutils/dmidecode \
