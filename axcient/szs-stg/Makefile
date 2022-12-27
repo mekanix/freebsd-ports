@@ -1,9 +1,9 @@
 # $FreeBSD$
 
-PORTVERSION=	1.26.0.rc1
+PORTVERSION=	1.26.0.rc2
 PKGNAMESUFFIX=	-stg
 
-GH_TAGNAME=     1.26.0-rc1
+GH_TAGNAME=     1.26.0-rc2
 GH_TUPLE=       \
 		Azure:azure-pipeline-go:v0.2.3:azure_azure_pipeline_go/vendor/github.com/Azure/azure-pipeline-go \
 		Azure:azure-sdk-for-go:3e51649a3e16:azure_azure_sdk_for_go_armresources \
