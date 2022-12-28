@@ -1,6 +1,6 @@
-TIMESTAMP = 1670494305
-SHA256 (Axcient-szs-op-1.25.0_GH0.tar.gz) = a6913d22c7b424075c6299dbcc56cde74034a2326706bc65a5f506727c9eacfe
-SIZE (Axcient-szs-op-1.25.0_GH0.tar.gz) = 386037
+TIMESTAMP = 1672247685
+SHA256 (Axcient-szs-op-1.26.0_GH0.tar.gz) = bdb12d9da34cebfbec16c2184450d3270b1c42af0bb674d96d5a5207b36dd994
+SIZE (Axcient-szs-op-1.26.0_GH0.tar.gz) = 386424
 SHA256 (Azure-azure-pipeline-go-v0.2.3_GH0.tar.gz) = 99bd58f4a07dd02d9615e3638b3bb6dbfad80ef678ccdb8e17e3fa2b0fef343e
 SIZE (Azure-azure-pipeline-go-v0.2.3_GH0.tar.gz) = 17102
 SHA256 (Azure-azure-sdk-for-go-3e51649a3e16_GH0.tar.gz) = d592e596a9b5c2b1753e30ee15491a6cd8f29dc02020e5c4e0008e54c3919ad9
