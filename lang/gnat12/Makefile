@@ -1,6 +1,6 @@
 PORTNAME=	gnat12
 PORTVERSION=	12.2.0
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GCC}:gcc	\
 		LOCAL/thierry:gnat
@@ -59,7 +59,6 @@ CONFIGURE_ARGS=	--enable-languages="c,ada"	\
 		--enable-gnu-indirect-function	\
 		--with-as=${LOCALBASE}/bin/as	\
 		--with-ld=${LOCALBASE}/bin/ld	\
-		--program-suffix=${GCCVER}	\
 		--enable-threads=posix	\
 		--disable-libquadmath	\
 		--enable-host-shared	\
@@ -87,7 +86,7 @@ REVFILE=	${WRKSRC}/gcc/REVISION
 PHASEFILE=	${WRKSRC}/gcc/DEV-PHASE
 ASSET_FILE=	gnat-${GARCH}-${OPSYS:tl}.${OSREL:R}-${PKGVERSION}
 PREV_ASSET_VER?=	${PORTVERSION}
-PREV_ASSET_REV?=	_1
+PREV_ASSET_REV?=	_2
 PREV_ASSET_GCC=	${PREV_ASSET_VER:R:R}
 PREV_ASSET_OSREL?=	${OSREL:R}
 PREV_ASSET_FILE=gnat-${GARCH}-${OPSYS:tl}.${PREV_ASSET_OSREL}-${PREV_ASSET_VER}${PREV_ASSET_REV}
@@ -98,14 +97,26 @@ PLIST_SUB=	CONFTRGT=${CONFIGURE_TARGET} VER=${PORTVERSION}	\
 INFOS=		cpp cppinternals gcc gccinstall gccint gnat_rm gnat_ugn	\
 		gnat-style libitm
 
+.include <bsd.port.pre.mk>
+
+.if ${ARCH} == i386 || ${ARCH} == aarch64
+LIB_DIR_32=	""
+PLIST_SUB+=	64BITS="@comment "
+.else
+LIB_DIR_32=	"" 32
+PLIST_SUB+=	64BITS=""
+.endif
+.if ${ARCH} == aarch64
+PLIST_SUB+=	ARM="" NOARM="@comment "
+.else
+PLIST_SUB+=	ARM="@comment " NOARM=""
+.endif
+
 pre-configure:
+	${FIND} ${WRKSRC}/gcc/config -name "*freebsd.h" | ${XARGS}	\
+		${REINPLACE_CMD} -e 's|!static:[[:blank:]]|!static: --hash-style=gnu -rpath ${PREFIX}/gnat${GCCVER}/lib |'
 	${ECHO} "-=> GNAT ${OS_LABEL4VERS}" > ${REVFILE}
 	${ECHO} "release" > ${PHASEFILE}
-
-pre-configure-PREVASSET-on:
-	cd ${PATHAUX} ; for f in *${PREV_ASSET_GCC} ; do	\
-	${LN} -sf $${f} $${f%${PREV_ASSET_GCC}} ;			\
-	done
 
 post-install-ASSETS-on:
 	${MKDIR} ${WRKDIR}/${ASSET_FILE} ${STAGEDIR}${DATADIR}/assets
@@ -115,7 +126,7 @@ post-install-ASSETS-on:
 
 post-stage:
 	${RM} -rf ${STAGEDIR}${PKG_PREFIX}/share/info
-.for d in "" 32
+.for d in ${LIB_DIR_32}
 .  for l in libgnarl-${GCCVER} libgnat-${GCCVER}
 	${STRIP_CMD}	\
 		${STAGEDIR}${PKG_PREFIX}/lib/gcc/${CONFIGURE_TARGET}/${PORTVERSION}/${d}/adalib/${l}.so
@@ -131,4 +142,4 @@ post-stage-ASSETS-on:
 	@${ECHO_CMD} "(and adjust distinfo)"	\
 		>> ${PKGMESSAGE}
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
