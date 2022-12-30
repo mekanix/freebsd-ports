@@ -143,6 +143,7 @@ pipeline {
                     sysutils/sas2flash \
                     sysutils/sas3flash \
                     sysutils/sas3ircu \
+                    sysutils/storcli \
                     sysutils/screen \
                     sysutils/sdparm \
                     sysutils/sg3_utils \
