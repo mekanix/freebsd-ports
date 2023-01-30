@@ -2,7 +2,6 @@
 
 PORTVERSION=	1.1.1.${DATECODE}
 # Set PORTREVISION explicitly so it won't be inherited from the MASTERDIR
-PORTREVISION=	0
 PKGNAMESUFFIX=	-dev
 
 DATECODE!=	date -u "+%Y%m%d%H"

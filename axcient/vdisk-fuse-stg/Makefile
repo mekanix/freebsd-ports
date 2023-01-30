@@ -1,7 +1,6 @@
 # $FreeBSD$
 
 DISTVERSION=	1.1.0
-PORTREVISION=	0
 PKGNAMESUFFIX=	-stg
 
 GH_TAGNAME=	vdisk_fuse-1.1.0
