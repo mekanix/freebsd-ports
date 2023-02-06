@@ -175,7 +175,6 @@
     SUBDIR += libfame
     SUBDIR += libgav1
     SUBDIR += libhdhomerun
-    SUBDIR += libkate
     SUBDIR += libmatroska
     SUBDIR += libmediaart
     SUBDIR += libmediainfo
@@ -261,9 +260,11 @@
     SUBDIR += nymphcastlib
     SUBDIR += nymphrpc
     SUBDIR += obs-qtwebkit
+    SUBDIR += obs-recursion-effect
     SUBDIR += obs-scrab
     SUBDIR += obs-streamfx
     SUBDIR += obs-studio
+    SUBDIR += obs-text-pthread
     SUBDIR += obs-waveform
     SUBDIR += oggvideotools
     SUBDIR += ogmrip
@@ -379,6 +380,8 @@
     SUBDIR += transcode
     SUBDIR += tvheadend
     SUBDIR += ustreamer
+    SUBDIR += uvg266
+    SUBDIR += uxplay
     SUBDIR += v4l-utils
     SUBDIR += v4l_compat
     SUBDIR += vamps
@@ -417,6 +420,7 @@
     SUBDIR += vmaf
     SUBDIR += vtkmpeg2encode
     SUBDIR += vvdec
+    SUBDIR += vvenc
     SUBDIR += w_scan2
     SUBDIR += webcamd
     SUBDIR += webcamoid

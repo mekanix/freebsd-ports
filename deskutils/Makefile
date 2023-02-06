@@ -128,6 +128,7 @@
     SUBDIR += itinerary
     SUBDIR += jjclient
     SUBDIR += jlj
+    SUBDIR += jot
     SUBDIR += just
     SUBDIR += kaddressbook
     SUBDIR += kalarm
@@ -139,6 +140,7 @@
     SUBDIR += kdepim-addons
     SUBDIR += kdepim-runtime
     SUBDIR += keditbookmarks
+    SUBDIR += keep-presence
     SUBDIR += kfind
     SUBDIR += kmail
     SUBDIR += kmail-account-wizard
@@ -152,6 +154,7 @@
     SUBDIR += ktimetracker
     SUBDIR += kuserfeedback
     SUBDIR += latte-dock
+    SUBDIR += lazycli
     SUBDIR += libcprime
     SUBDIR += libkdepim
     SUBDIR += libportal
@@ -236,6 +239,7 @@
     SUBDIR += showdown
     SUBDIR += sigi
     SUBDIR += simpleagenda
+    SUBDIR += skim
     SUBDIR += sliderule
     SUBDIR += solanum
     SUBDIR += sowon
@@ -252,6 +256,7 @@
     SUBDIR += teapot
     SUBDIR += terminal-image-viewer
     SUBDIR += thinkingrock
+    SUBDIR += thokr
     SUBDIR += timewarrior
     SUBDIR += todo
     SUBDIR += todour
@@ -266,6 +271,7 @@
     SUBDIR += when
     SUBDIR += wmpinboard
     SUBDIR += x026
+    SUBDIR += xannotate
     SUBDIR += xcalendar
     SUBDIR += xcbautolock
     SUBDIR += xchm

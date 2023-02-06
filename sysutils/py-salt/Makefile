@@ -1,7 +1,7 @@
 PORTNAME=	salt
 PORTVERSION=	3005.1
 CATEGORIES=	sysutils python
-MASTER_SITES=	CHEESESHOP
+MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 PATCH_SITES=   https://patch-diff.githubusercontent.com/raw/saltstack/salt/pull/

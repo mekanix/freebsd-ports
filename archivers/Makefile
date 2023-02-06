@@ -5,6 +5,7 @@
     SUBDIR += R-cran-zip
     SUBDIR += advancecomp
     SUBDIR += amigadepacker
+    SUBDIR += ancient
     SUBDIR += apache-commons-compress
     SUBDIR += arc
     SUBDIR += arj
@@ -99,6 +100,7 @@
     SUBDIR += ocaml-bz2
     SUBDIR += ocaml-zip
     SUBDIR += opkg-openwrt
+    SUBDIR += ouch
     SUBDIR += p5-Archive-Any
     SUBDIR += p5-Archive-Any-Lite
     SUBDIR += p5-Archive-Any-Plugin-Rar

@@ -2,7 +2,7 @@ PORTNAME=	paramiko
 PORTVERSION=	2.11.0
 PORTREVISION=	2
 CATEGORIES=	security python
-MASTER_SITES=	CHEESESHOP
+MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 PATCH_SITES=   https://patch-diff.githubusercontent.com/raw/paramiko/paramiko/pull/
