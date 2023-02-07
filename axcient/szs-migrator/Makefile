@@ -1,5 +1,5 @@
 PORTNAME=	szs-migrator
-PORTVERSION=	0.1.0.20230207
+PORTVERSION=	0.1.0.20230208
 CATEGORIES=	axcient
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -8,15 +8,14 @@ COMMENT=	Replibit dataset migrator
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}yaml>=5.0.0:devel/py-yaml@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}paramiko>=2.11.0_2:security/py-paramiko@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}libzfs>=0:devel/py-libzfs@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}libzfs>=1.1.2023020200:devel/py-libzfs@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}urllib3>=0:net/py-urllib3@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}requests>=0:www/py-requests@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}simplejson>=0:devel/py-simplejson@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}filelock>=0:sysutils/py-filelock@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}parse>=0:textproc/py-parse@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}psutil>=0:sysutils/py-psutil@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}sqlite3>=0:databases/py-sqlite3@${PY_FLAVOR}
-PROMETHEUS_RUN_DEPENDS=	\
+		${PYTHON_PKGNAMEPREFIX}sqlite3>=0:databases/py-sqlite3@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}libzfs_core>=0:devel/py-libzfs_core@${PY_FLAVOR}
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest>=0:devel/py-pytest@${PY_FLAVOR}
 
@@ -27,16 +26,12 @@ SUB_FILES=	900.szs-audit 900.szs-migrator-audit 900.szs-maintenance-auditor
 # Don't set USERS and GROUPS because we already created the rebalancer user via
 # AD, with IDs that are outside of the usual range for daemon users.
 
-OPTIONS_DEFINE=		PROMETHEUS
-OPTIONS_DEFAULT=	PROMETHEUS
-PROMETHEUS_DESC=	Export migration status with Prometheus
-
 .include <bsd.port.options.mk>
 
 NO_ARCH=	yes
 
 GH_PROJECT=	replibit-tools
-GH_TAGNAME=	df99339814dc3e5b0553da63b7c85a1966fdcc40
+GH_TAGNAME=	e3d067001ce195ad856f82c3dd90515dd25d3dbe
 
 USE_RC_SUBR=	szs_rebalancer
 
