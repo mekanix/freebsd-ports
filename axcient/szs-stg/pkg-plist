@@ -14,22 +14,22 @@ etc/rc.d/szs_vsftpd_conf
 %%ETCDIR%%/config.yml.sample
 include/szs-op.h
 lib/libszs-op.so
-%%PORTEXAMPLES%%%%EXAMPLESDIR%%/cron.d/cleanup_clones
-%%PORTEXAMPLES%%%%EXAMPLESDIR%%/cron.d/clone_snapshots
-%%PORTEXAMPLES%%%%EXAMPLESDIR%%/cron.d/safety_archive_cleanup
-%%PORTEXAMPLES%%%%EXAMPLESDIR%%/cron.d/snapshots_cleanup
-%%PORTEXAMPLES%%%%EXAMPLESDIR%%/cron.d/statistics
-%%PORTEXAMPLES%%%%EXAMPLESDIR%%/newsyslog.conf.d/szs.conf
-%%PORTEXAMPLES%%%%EXAMPLESDIR%%/newsyslog.conf.d/szs_exports.conf
-%%PORTEXAMPLES%%%%EXAMPLESDIR%%/newsyslog.conf.d/szs_jobs.conf
-%%PORTEXAMPLES%%%%EXAMPLESDIR%%/rsyslog.d/cleanup_clones.conf
-%%PORTEXAMPLES%%%%EXAMPLESDIR%%/rsyslog.d/clone_snapshots.conf
-%%PORTEXAMPLES%%%%EXAMPLESDIR%%/rsyslog.d/safety_archive_cleanup.conf
-%%PORTEXAMPLES%%%%EXAMPLESDIR%%/rsyslog.d/snapshots_cleanup.conf
-%%PORTEXAMPLES%%%%EXAMPLESDIR%%/rsyslog.d/statistics.conf
-%%PORTEXAMPLES%%%%EXAMPLESDIR%%/rsyslog.d/szs.conf
-%%PORTEXAMPLES%%%%EXAMPLESDIR%%/rsyslog.d/szs_exports.conf
-%%PORTEXAMPLES%%%%EXAMPLESDIR%%/rsyslog.d/szs_jobs.conf
+@sample %%EXAMPLESDIR%%/cron.d/cleanup_clones
+@sample %%EXAMPLESDIR%%/cron.d/clone_snapshots
+@sample %%EXAMPLESDIR%%/cron.d/safety_archive_cleanup
+@sample %%EXAMPLESDIR%%/cron.d/snapshots_cleanup
+@sample %%EXAMPLESDIR%%/cron.d/statistics
+@sample %%EXAMPLESDIR%%/newsyslog.conf.d/szs.conf
+@sample %%EXAMPLESDIR%%/newsyslog.conf.d/szs_exports.conf
+@sample %%EXAMPLESDIR%%/newsyslog.conf.d/szs_jobs.conf
+@sample %%EXAMPLESDIR%%/rsyslog.d/cleanup_clones.conf
+@sample %%EXAMPLESDIR%%/rsyslog.d/clone_snapshots.conf
+@sample %%EXAMPLESDIR%%/rsyslog.d/safety_archive_cleanup.conf
+@sample %%EXAMPLESDIR%%/rsyslog.d/snapshots_cleanup.conf
+@sample %%EXAMPLESDIR%%/rsyslog.d/statistics.conf
+@sample %%EXAMPLESDIR%%/rsyslog.d/szs.conf
+@sample %%EXAMPLESDIR%%/rsyslog.d/szs_exports.conf
+@sample %%EXAMPLESDIR%%/rsyslog.d/szs_jobs.conf
 @dir etc/cron.d
 @dir etc/newsyslog.d
 @dir etc/rsyslog.d
