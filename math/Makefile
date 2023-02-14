@@ -417,6 +417,7 @@
     SUBDIR += kcalc
     SUBDIR += kfr
     SUBDIR += kig
+    SUBDIR += kissat
     SUBDIR += kktdirect
     SUBDIR += kmplot
     SUBDIR += labplot
@@ -982,6 +983,7 @@
     SUBDIR += py-pplpy
     SUBDIR += py-primecountpy
     SUBDIR += py-primme
+    SUBDIR += py-py-find-1st
     SUBDIR += py-pyFFTW
     SUBDIR += py-pyaudi
     SUBDIR += py-pybloom

@@ -1,6 +1,7 @@
 PORTNAME=	veryl
 DISTVERSIONPREFIX=	veryl-v
-DISTVERSION=	0.3.1
+DISTVERSION=	0.3.4
+PORTREVISION=	1
 CATEGORIES=	cad
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -27,7 +28,7 @@ CARGO_CRATES=	addr2line-0.19.0 \
 		ammonia-3.3.0 \
 		android_system_properties-0.1.5 \
 		anes-0.1.6 \
-		anyhow-1.0.68 \
+		anyhow-1.0.69 \
 		arc-swap-1.6.0 \
 		arrayvec-0.7.2 \
 		async-trait-0.1.63 \
@@ -301,7 +302,7 @@ CARGO_CRATES=	addr2line-0.19.0 \
 		reqwest-0.11.14 \
 		resolv-conf-0.7.0 \
 		ring-0.16.20 \
-		ropey-1.5.1 \
+		ropey-1.6.0 \
 		rustc-demangle-0.1.21 \
 		rustix-0.36.7 \
 		rustls-0.20.8 \
@@ -317,9 +318,9 @@ CARGO_CRATES=	addr2line-0.19.0 \
 		semver-1.0.16 \
 		serde-1.0.152 \
 		serde_derive-1.0.152 \
-		serde_json-1.0.91 \
+		serde_json-1.0.92 \
 		serde_repr-0.1.10 \
-		serde_spanned-0.6.0 \
+		serde_spanned-0.6.1 \
 		serde_urlencoded-0.7.1 \
 		sha-1-0.10.1 \
 		sha1-0.10.5 \
@@ -362,16 +363,16 @@ CARGO_CRATES=	addr2line-0.19.0 \
 		tinytemplate-1.2.1 \
 		tinyvec-1.6.0 \
 		tinyvec_macros-0.1.0 \
-		tokio-1.24.2 \
+		tokio-1.25.0 \
 		tokio-macros-1.8.2 \
 		tokio-rustls-0.23.4 \
 		tokio-stream-0.1.11 \
 		tokio-tungstenite-0.17.2 \
 		tokio-util-0.7.4 \
 		toml-0.5.11 \
-		toml-0.7.0 \
-		toml_datetime-0.6.0 \
-		toml_edit-0.19.0 \
+		toml-0.7.2 \
+		toml_datetime-0.6.1 \
+		toml_edit-0.19.3 \
 		topological-sort-0.2.2 \
 		tower-0.4.13 \
 		tower-layer-0.3.2 \
@@ -405,12 +406,12 @@ CARGO_CRATES=	addr2line-0.19.0 \
 		warp-0.3.3 \
 		wasi-0.10.0+wasi-snapshot-preview1 \
 		wasi-0.11.0+wasi-snapshot-preview1 \
-		wasm-bindgen-0.2.83 \
-		wasm-bindgen-backend-0.2.83 \
+		wasm-bindgen-0.2.84 \
+		wasm-bindgen-backend-0.2.84 \
 		wasm-bindgen-futures-0.4.33 \
-		wasm-bindgen-macro-0.2.83 \
-		wasm-bindgen-macro-support-0.2.83 \
-		wasm-bindgen-shared-0.2.83 \
+		wasm-bindgen-macro-0.2.84 \
+		wasm-bindgen-macro-support-0.2.84 \
+		wasm-bindgen-shared-0.2.84 \
 		web-sys-0.3.60 \
 		webpki-0.22.0 \
 		webpki-roots-0.22.6 \

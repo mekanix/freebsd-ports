@@ -1,7 +1,6 @@
 PORTNAME=	mesa
-DISTVERSION=	23.0-branchpoint-990
-DISTVERSIONSUFFIX=	-gea413e826b2
-PORTREVISION=	3
+DISTVERSION=	23.0-branchpoint-1462
+DISTVERSIONSUFFIX=	-g5c246e21b71
 CATEGORIES=	graphics
 PKGNAMESUFFIX=	-devel
 
@@ -9,6 +8,8 @@ PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
 PATCHFILES+=	700efacda59c.patch:-p1
 PATCHFILES+=	50433886a3e3.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/6881
 PATCHFILES+=	4c7408374e3d.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/21052
+PATCHFILES+=	bad0a8c5e02b.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/21185
+PATCHFILES+=	2c78f6e521ef.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/21185
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Bleeding edge Mesa drivers (OpenCL, OpenGL, Vulkan)
@@ -38,7 +39,6 @@ USE_LDCONFIG=	yes
 BINARY_ALIAS=	python=${PYTHON_CMD}
 SHEBANG_FILES=	src/vulkan/overlay-layer/${PORTNAME}-overlay-control.py
 MESON_ARGS=	-Dgallium-omx=disabled \
-		-Dgallium-opencl=disabled \
 		-Dgallium-xa=disabled \
 		-Dglvnd=true \
 		-Dplatforms=${PLATFORMS:O:[-1..1]:ts,} \
@@ -115,6 +115,7 @@ OPENCL_CONFIGURE_ENV=	PKG_CONFIG_PATH="${LLVM_PREFIX}/libdata/pkgconfig"
 OPENCL_MESON_FALSE=	b_lundef # environ
 OPENCL_MESON_TRUE=	gallium-rusticl
 OPENCL_MESON_ON=	-Dgallium-opencl=icd
+OPENCL_MESON_OFF=	-Dgallium-opencl=disabled
 OPENCL_VARS=		LLVM_USES=llvm:15,lib # chase libclc + rust (LTO)
 .if ${MACHINE_ARCH} != aarch64 # XXX missing in ONLY_FOR_ARCHS
 OPENCL_VARS+=		COINST_RUN_DEPENDS+=clover>0:lang/clover # ICD

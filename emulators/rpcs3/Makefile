@@ -1,11 +1,8 @@
 PORTNAME=	rpcs3
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.0.26-14614 # git rev-list --count HEAD
-DISTVERSIONSUFFIX=	-g7c4734c24d
+DISTVERSION=	0.0.26-14713 # git rev-list --count HEAD
+DISTVERSIONSUFFIX=	-g3a68b7ac0d
 CATEGORIES=	emulators wayland
-
-PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
-PATCHFILES+=	3df5f4f16158.patch:-p1 # https://github.com/RPCS3/rpcs3/pull/13302
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	PS3 emulator/debugger
@@ -17,6 +14,7 @@ LICENSE_FILE_ISCL=	${WRKSRC_cubeb}/LICENSE
 LICENSE_FILE_ZLIB=	${WRKSRC_asmjit}/LICENSE.md
 
 FLAVORS=	qt5 qt6
+qt6_BROKEN=	fails to build: no matching function for call to 'min'
 
 BUILD_DEPENDS=	flatc:devel/flatbuffers
 LIB_DEPENDS=	libxxhash.so:devel/xxhash \
@@ -30,7 +28,7 @@ ONLY_FOR_ARCHS_REASON=	requires int128 and SSE2
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	RPCS3
-GH_TUPLE=	RPCS3:hidapi:hidapi-0.13.0-2-ga3ce129:hidapi/3rdparty/hidapi/hidapi \
+GH_TUPLE=	RPCS3:hidapi:hidapi-0.13.1-2-gecf1b62:hidapi/3rdparty/hidapi/hidapi \
 		RPCS3:llvm-mirror:9b52b6c39ae9:llvm/llvm \
 		RPCS3:soundtouch:2.3.1-16-g83cfba6:soundtouch/3rdparty/SoundTouch/soundtouch \
 		asmjit:asmjit:06d0bad:asmjit/3rdparty/asmjit/asmjit \
@@ -39,7 +37,7 @@ GH_TUPLE=	RPCS3:hidapi:hidapi-0.13.0-2-ga3ce129:hidapi/3rdparty/hidapi/hidapi \
 		KhronosGroup:SPIRV-Tools:v2022.4:spirv_tools/3rdparty/SPIRV/SPIRV-Tools \
 		KhronosGroup:glslang:11.11.0-2-g10423ec6:glslang/3rdparty/glslang/glslang \
 		kinetiknz:cubeb:cubeb-0.2-1391-gdc511c6:cubeb/3rdparty/cubeb/cubeb \
-		wolfSSL:wolfssl:v5.5.0-stable:wolfssl/3rdparty/wolfssl/wolfssl
+		wolfSSL:wolfssl:v5.5.4-stable:wolfssl/3rdparty/wolfssl/wolfssl
 
 USES=		cmake elfctl gl iconv:wchar_t localbase:ldflags \
 		openal:soft pkgconfig python:3.4+,build qt:5 xorg
@@ -54,7 +52,7 @@ ELF_FEATURES=	+noaslr,wxneeded:bin/${PORTNAME}
 
 .if ${FLAVOR:U} == qt6 || make(makesum) || make(fetch)
 PATCH_SITES+=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/:qt6
-PATCHFILES+=	cb5204344a80.patch:-p1:qt6 # https://github.com/RPCS3/rpcs3/pull/12471
+PATCHFILES+=	07395dd8fa08.patch:-p1:qt6 # https://github.com/RPCS3/rpcs3/pull/12471
 PKGNAMESUFFIX=	-${FLAVOR}
 USES:=		${USES:S/qt:5/qt:6/}
 USE_QT=		base multimedia svg
@@ -82,7 +80,8 @@ ALSA_CMAKE_BOOL=	USE_ALSA
 EVDEV_DESC=		libevdev-based joystick support
 EVDEV_CMAKE_BOOL=	USE_LIBEVDEV
 EVDEV_BUILD_DEPENDS=	evdev-proto>0:devel/evdev-proto
-EVDEV_LIB_DEPENDS=	libevdev.so:devel/libevdev
+EVDEV_LIB_DEPENDS=	libevdev.so:devel/libevdev \
+			libudev.so:devel/libudev-devd
 
 FAUDIO_DESC=		FAudio audio support
 FAUDIO_LIB_DEPENDS=	libFAudio.so:audio/faudio

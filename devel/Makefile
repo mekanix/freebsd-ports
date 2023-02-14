@@ -171,6 +171,7 @@
     SUBDIR += app-builder
     SUBDIR += appstream
     SUBDIR += appstream-glib
+    SUBDIR += appstream-qt
     SUBDIR += apr1
     SUBDIR += arachne-pnr
     SUBDIR += arcanist
@@ -337,6 +338,7 @@
     SUBDIR += ccache-static
     SUBDIR += cccc
     SUBDIR += ccdoc
+    SUBDIR += ccls
     SUBDIR += ccrtp
     SUBDIR += cctz
     SUBDIR += cdash
@@ -577,6 +579,7 @@
     SUBDIR += easyloggingpp
     SUBDIR += ebnf2yacc
     SUBDIR += ecgi
+    SUBDIR += edi
     SUBDIR += editline
     SUBDIR += efivar
     SUBDIR += efl

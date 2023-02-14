@@ -21,6 +21,9 @@ USES=		compiler cpe tar:bzip2 perl5
 USE_CSTD=	c99
 USE_PERL5=	run
 
+# LLVM15 workaround
+CFLAGS=		-Wno-int-conversion
+
 # Exim build system is job unsafe atm
 MAKE_JOBS_UNSAFE=	yes
 # One can tune the following "hidden" knobs:
@@ -54,7 +57,7 @@ ICONV_USES=	iconv:lib,build
 INTERNATIONAL_LIB_DEPENDS=	libidn.so:dns/libidn
 LMDB_LIB_DEPENDS=	liblmdb.so:databases/lmdb
 MYSQL_USES=	mysql
-OPENLDAP_USE=	openldap=yes
+OPENLDAP_USES=	ldap
 PGSQL_LIB_DEPENDS=	libicudata.so:devel/icu
 PGSQL_USES=	pgsql pkgconfig
 REDIS_LIB_DEPENDS=	libhiredis.so:databases/hiredis
@@ -319,10 +322,6 @@ SEDLIST+=	-e 's,XX_ICONV_LIBS_XX,-L${LOCALBASE:S/,/\\,/g}/lib ${ICONV_LIB},' \
 		-e 's,^\# (HAVE_ICONV=),\1,'
 .else
 SEDLIST+=	-e 's,XX_ICONV_LIBS_XX,,'
-.endif
-
-.if ${PORT_OPTIONS:MOPENLDAP_VER} && ${WITH_OPENLDAP_VER:tl} != "auto"
-WANT_OPENLDAP_VER=	${WITH_OPENLDAP_VER}
 .endif
 
 .if ${PORT_OPTIONS:MOPENLDAP}

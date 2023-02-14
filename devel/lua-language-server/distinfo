@@ -1,6 +1,6 @@
-TIMESTAMP = 1675443829
-SHA256 (sumneko-lua-language-server-3.6.9_GH0.tar.gz) = 6e291e769184cabeb4a42969eaa80cf42fbfeb79e3731ce016209946f1aeafcd
-SIZE (sumneko-lua-language-server-3.6.9_GH0.tar.gz) = 3293832
+TIMESTAMP = 1676212670
+SHA256 (luals-lua-language-server-3.6.9_GH0.tar.gz) = 6e291e769184cabeb4a42969eaa80cf42fbfeb79e3731ce016209946f1aeafcd
+SIZE (luals-lua-language-server-3.6.9_GH0.tar.gz) = 3293832
 SHA256 (actboy168-bee.lua-c4e989a_GH0.tar.gz) = 801cf72c57960293507d2fabe7b3686c9a1343977475cd0ddf72c6b7d841d663
 SIZE (actboy168-bee.lua-c4e989a_GH0.tar.gz) = 480401
 SHA256 (actboy168-bee.lua-eff9325_GH0.tar.gz) = 7c139b1b318a652f41414c677061ddf76e7ed723ca52bb73b83071568e43b229
