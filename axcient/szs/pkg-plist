@@ -17,6 +17,7 @@ bin/szs-op-azure-recovery
 etc/rc.d/szs
 etc/rc.d/szs_exports
 etc/rc.d/szs_jobs
+etc/rc.d/szs_vsftpd_conf
 @sample %%EXAMPLESDIR%%/rsyslog.d/szs.conf etc/rsyslog.d/szs.conf
 @sample %%EXAMPLESDIR%%/rsyslog.d/szs_jobs.conf etc/rsyslog.d/szs_jobs.conf
 @sample %%EXAMPLESDIR%%/rsyslog.d/cleanup_clones.conf etc/rsyslog.d/cleanup_clones.conf
