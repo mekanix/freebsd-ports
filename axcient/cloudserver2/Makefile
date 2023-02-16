@@ -2,7 +2,7 @@
 
 PORTNAME=	cloudserver
 PKGNAMESUFFIX?=  2
-PORTVERSION?=	2.12.0
+PORTVERSION?=	2.13.0
 CATEGORIES=	axcient
 
 MAINTAINER=	nsemchenkov@axcient.com
@@ -16,9 +16,9 @@ CONFLICTS_INSTALL?=	cloudserver \
 			cloudserver2-dev \
 			cloudserver2-stg
 
-GH_TAGNAME?=	2.12.0
+GH_TAGNAME?=	2.13.0
 
-GH_TUPLE?=	alecthomas:kingpin:v2.2.6:alecthomas_kingpin/vendor/gopkg.in/alecthomas/kingpin.v2 \
+GH_TUPLE=       alecthomas:kingpin:v2.2.6:alecthomas_kingpin/vendor/gopkg.in/alecthomas/kingpin.v2 \
 		alecthomas:template:fb15b899a751:alecthomas_template/vendor/github.com/alecthomas/template \
 		alecthomas:units:f65c72e2690d:alecthomas_units/vendor/github.com/alecthomas/units \
 		alexflint:go-arg:v1.4.3:alexflint_go_arg/vendor/github.com/alexflint/go-arg \
@@ -41,7 +41,7 @@ GH_TUPLE?=	alecthomas:kingpin:v2.2.6:alecthomas_kingpin/vendor/gopkg.in/alecthom
 		golang:lint:83fdc39ff7b5:golang_lint/vendor/golang.org/x/lint \
 		golang:mock:v1.5.0:golang_mock/vendor/github.com/golang/mock \
 		golang:mod:v0.4.2:golang_mod/vendor/golang.org/x/mod \
-		golang:net:69e39bad7dc2:golang_net/vendor/golang.org/x/net \
+		golang:net:2871e0cb64e4:golang_net/vendor/golang.org/x/net \
 		golang:protobuf:v1.4.3:golang_protobuf/vendor/github.com/golang/protobuf \
 		golang:sync:09787c993a3a:golang_sync/vendor/golang.org/x/sync \
 		golang:sys:e17cdc41300f:golang_sys/vendor/golang.org/x/sys \
@@ -50,7 +50,9 @@ GH_TUPLE?=	alecthomas:kingpin:v2.2.6:alecthomas_kingpin/vendor/gopkg.in/alecthom
 		gopherjs:gopherjs:bed99a852dfe:gopherjs_gopherjs/vendor/github.com/gopherjs/gopherjs \
 		hashicorp:errwrap:v1.0.0:hashicorp_errwrap/vendor/github.com/hashicorp/errwrap \
 		hashicorp:go-multierror:v1.0.0:hashicorp_go_multierror/vendor/github.com/hashicorp/go-multierror \
+		klauspost:compress:v1.15.15:klauspost_compress/vendor/github.com/klauspost/compress \
 		klauspost:cpuid:v2.0.12:klauspost_cpuid_v2/vendor/github.com/klauspost/cpuid/v2 \
+		konsorten:go-windows-terminal-sequences:v1.0.3:konsorten_go_windows_terminal_sequences/vendor/github.com/konsorten/go-windows-terminal-sequences \
 		kr:text:v0.2.0:kr_text/vendor/github.com/kr/text \
 		mattn:go-runewidth:v0.0.13:mattn_go_runewidth/vendor/github.com/mattn/go-runewidth \
 		matttproud:golang_protobuf_extensions:v1.0.1:matttproud_golang_protobuf_extensions/vendor/github.com/matttproud/golang_protobuf_extensions \
@@ -65,7 +67,7 @@ GH_TUPLE?=	alecthomas:kingpin:v2.2.6:alecthomas_kingpin/vendor/gopkg.in/alecthom
 		rivo:uniseg:v0.2.0:rivo_uniseg/vendor/github.com/rivo/uniseg \
 		rs:xid:v1.2.1:rs_xid/vendor/github.com/rs/xid \
 		schollz:progressbar:v3.8.6:schollz_progressbar_v3/vendor/github.com/schollz/progressbar/v3 \
-		sirupsen:logrus:v1.6.0:logrus/vendor/github.com/sirupsen/logrus \
+		sirupsen:logrus:v1.6.0:sirupsen_logrus/vendor/github.com/sirupsen/logrus \
 		smartystreets:assertions:v1.2.0:smartystreets_assertions/vendor/github.com/smartystreets/assertions \
 		stretchr:testify:v1.7.0:stretchr_testify/vendor/github.com/stretchr/testify \
 		uber-go:atomic:v1.7.0:uber_go_atomic/vendor/go.uber.org/atomic \
