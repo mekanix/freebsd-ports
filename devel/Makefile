@@ -170,6 +170,7 @@
     SUBDIR += apitrace
     SUBDIR += app-builder
     SUBDIR += appstream
+    SUBDIR += appstream-compose
     SUBDIR += appstream-glib
     SUBDIR += appstream-qt
     SUBDIR += apr1
@@ -270,6 +271,7 @@
     SUBDIR += bcunit
     SUBDIR += bear
     SUBDIR += benchmark
+    SUBDIR += bencodetools
     SUBDIR += bennugd-core
     SUBDIR += bennugd-modules
     SUBDIR += bfg
@@ -306,6 +308,7 @@
     SUBDIR += bugzilla44
     SUBDIR += bugzilla50
     SUBDIR += build
+    SUBDIR += build2
     SUBDIR += buildkite-agent
     SUBDIR += buildstream
     SUBDIR += bullet
@@ -846,6 +849,7 @@
     SUBDIR += glade
     SUBDIR += glademm
     SUBDIR += glib20
+    SUBDIR += glibd
     SUBDIR += glibmm
     SUBDIR += glibmm26
     SUBDIR += glitter
@@ -4804,6 +4808,7 @@
     SUBDIR += py-lazr.uri
     SUBDIR += py-lazy
     SUBDIR += py-lazy-object-proxy
+    SUBDIR += py-lazy_loader
     SUBDIR += py-libcst
     SUBDIR += py-libcst03
     SUBDIR += py-libioc
@@ -7360,6 +7365,7 @@
     SUBDIR += shtool
     SUBDIR += shunit2
     SUBDIR += sigar
+    SUBDIR += signal-fts5-extension
     SUBDIR += sigslot
     SUBDIR += silc-toolkit
     SUBDIR += silentbob
@@ -7600,7 +7606,6 @@
     SUBDIR += yajl
     SUBDIR += yajl-tcl
     SUBDIR += yaml-cpp
-    SUBDIR += yaml-cpp03
     SUBDIR += yaml2argdata
     SUBDIR += yasm
     SUBDIR += yder

@@ -15,6 +15,7 @@
     SUBDIR += akonadi-mime
     SUBDIR += akonadi-notes
     SUBDIR += akonadi-search
+    SUBDIR += alligator
     SUBDIR += aluminum
     SUBDIR += aoe
     SUBDIR += apache-commons-net
@@ -244,7 +245,6 @@
     SUBDIR += haproxy18
     SUBDIR += haproxy20
     SUBDIR += haproxy22
-    SUBDIR += haproxy23
     SUBDIR += haproxy24
     SUBDIR += haproxy25
     SUBDIR += haproxy26

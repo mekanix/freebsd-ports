@@ -181,9 +181,11 @@
     SUBDIR += cfengine-masterfiles318
     SUBDIR += cfengine-masterfiles319
     SUBDIR += cfengine-masterfiles320
+    SUBDIR += cfengine-masterfiles321
     SUBDIR += cfengine318
     SUBDIR += cfengine319
     SUBDIR += cfengine320
+    SUBDIR += cfengine321
     SUBDIR += chaoskube
     SUBDIR += checkrestart
     SUBDIR += chezmoi
@@ -1354,6 +1356,7 @@
     SUBDIR += smug
     SUBDIR += snap
     SUBDIR += snapraid
+    SUBDIR += sndy
     SUBDIR += snmp_exporter
     SUBDIR += snooze
     SUBDIR += sockaddr

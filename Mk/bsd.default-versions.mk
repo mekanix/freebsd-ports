@@ -70,7 +70,7 @@ LAZARUS_DEFAULT?=       2.2.4
 LAZARUS_DEFAULT?=       2.3.0
 .  endif
 # Possible values: rust, legacy
-.  if empty(ARCH:Naarch64:Narmv6:Narmv7:Namd64:Ni386:Npowerpc64:Npowerpc64le:Npowerpc)
+.  if empty(ARCH:Naarch64:Narmv7:Namd64:Ni386:Npowerpc64:Npowerpc64le:Npowerpc)
 LIBRSVG2_DEFAULT?=	rust
 .  else
 LIBRSVG2_DEFAULT?=	legacy
@@ -90,7 +90,7 @@ LUAJIT_DEFAULT?=	luajit-devel
 # Possible values: 5.10, 5.20, 6.8
 MONO_DEFAULT=		5.10
 # Possible values: 5.6, 5.7, 8.0, 10.3m, 10.4m, 10.5m, 5.7p, 5.7w
-MYSQL_DEFAULT?=		5.7
+MYSQL_DEFAULT?=		8.0
 # Possible values: ninja, samurai
 NINJA_DEFAULT?=		ninja
 # Possible value: 14, 16, 18, 19, current, lts (Note: current = 19 and lts = 18)
