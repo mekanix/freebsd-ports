@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	axcient-utils
-PORTVERSION=	1.0.0.20230228
+PORTVERSION=	1.0.0.20230307
 CATEGORIES=	axcient sysutils
 MASTER_SITES=	GH
 
@@ -14,13 +14,14 @@ LICENSE_TEXT=	"Copyright Axcient, inc.  All Rights Reserved"
 LICENSE_PERMS=	pkg-mirror  # Not really, only since our pkg server is private
 
 RUN_DEPENDS=	bash:shells/bash \
-		salt-call:sysutils/py-salt
+		salt-call:sysutils/py-salt \
+		${PYTHON_PKGNAMEPREFIX}libzfs>=0:devel/py-libzfs@${PY_FLAVOR}
 
 NO_ARCH=	yes
 NO_BUILD=	yes
 USES=		axcient python:3.8+,run shebangfix
 GH_PROJECT=	freebsd-utils
-GH_TAGNAME=	112704a4889eb6218c7161ff1deebf1a39c96bd9
+GH_TAGNAME=	00f698ab9940d4ac2e7f04b2302bb4a20fbf5682
 
 SUB_FILES=	399.explorer
 USE_RC_SUBR=	geli_salt zfs_crypto_salt
