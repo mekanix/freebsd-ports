@@ -1,5 +1,5 @@
 PORTNAME=	gstreamer1-plugins-rust
-DISTVERSION=	0.10.1
+DISTVERSION=	0.10.3
 CATEGORIES=	multimedia
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -16,11 +16,11 @@ BUILD_DEPENDS=	cargo-cbuild:devel/cargo-c
 USES=		cargo gnome gstreamer meson pkgconfig python:build shebangfix ssl
 USE_GITLAB=	yes
 USE_GNOME=	glib20
-USE_GSTREAMER=	bad # webrtc
+USE_GSTREAMER=	bad gl # webrtc
 GL_SITE=	https://gitlab.freedesktop.org
 GL_ACCOUNT=	gstreamer
 GL_PROJECT=	gst-plugins-rs
-GL_COMMIT=	9cd68ffb5fa303643b9ed2e96bc059cd0da5c20d
+GL_COMMIT=	4e4d226b7120ee6eaf809eccab843edb6999bfb0
 SHEBANG_FILES=	dependencies.py
 MAKE_ENV=	${CARGO_ENV}
 CARGO_BUILD=	no

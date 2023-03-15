@@ -339,6 +339,7 @@
     SUBDIR += ccache-memcached
     SUBDIR += ccache-memcached-static
     SUBDIR += ccache-static
+    SUBDIR += ccache4
     SUBDIR += cccc
     SUBDIR += ccdoc
     SUBDIR += ccls
@@ -385,6 +386,7 @@
     SUBDIR += clazy
     SUBDIR += cld2
     SUBDIR += clewn
+    SUBDIR += cli
     SUBDIR += cli11
     SUBDIR += clig
     SUBDIR += cligen
@@ -883,6 +885,8 @@
     SUBDIR += godot-tools
     SUBDIR += godot2
     SUBDIR += godot2-tools
+    SUBDIR += godot35
+    SUBDIR += godot35-tools
     SUBDIR += goffice
     SUBDIR += gogs
     SUBDIR += golangci-lint
@@ -1155,6 +1159,7 @@
     SUBDIR += libburn
     SUBDIR += libcbor
     SUBDIR += libccid
+    SUBDIR += libcdada
     SUBDIR += libcdb
     SUBDIR += libcds
     SUBDIR += libcfu
@@ -1338,7 +1343,6 @@
     SUBDIR += libpo6
     SUBDIR += libpololu-avr
     SUBDIR += libpru
-    SUBDIR += libpthread-stubs
     SUBDIR += libqb
     SUBDIR += libqcow
     SUBDIR += libqsbr
@@ -1419,6 +1423,7 @@
     SUBDIR += libvanessa_socket
     SUBDIR += libvc
     SUBDIR += libversion
+    SUBDIR += libvex
     SUBDIR += libvhdi
     SUBDIR += libvirt
     SUBDIR += libvirt-dbus
@@ -1562,6 +1567,7 @@
     SUBDIR += mercurial
     SUBDIR += mergify
     SUBDIR += meson
+    SUBDIR += meson-python
     SUBDIR += microsoft-gsl
     SUBDIR += mill
     SUBDIR += mimalloc
@@ -4590,6 +4596,7 @@
     SUBDIR += py-flake8-bugbear
     SUBDIR += py-flake8-builtins
     SUBDIR += py-flake8-docstrings
+    SUBDIR += py-flake8-future-annotations
     SUBDIR += py-flake8-import-order
     SUBDIR += py-flake8-polyfill
     SUBDIR += py-flake8-print
@@ -4739,6 +4746,7 @@
     SUBDIR += py-itemadapter
     SUBDIR += py-itemloaders
     SUBDIR += py-iteration-utilities
+    SUBDIR += py-itertree
     SUBDIR += py-itypes
     SUBDIR += py-janus
     SUBDIR += py-jaraco
@@ -5109,6 +5117,7 @@
     SUBDIR += py-purl
     SUBDIR += py-py
     SUBDIR += py-py-ubjson
+    SUBDIR += py-pyTooling
     SUBDIR += py-py_interface
     SUBDIR += py-pyasn1
     SUBDIR += py-pyasn1-modules
@@ -5479,6 +5488,7 @@
     SUBDIR += py-telepath
     SUBDIR += py-tempora
     SUBDIR += py-tenacity
+    SUBDIR += py-tendo
     SUBDIR += py-termcolor
     SUBDIR += py-termcolor-whl
     SUBDIR += py-termstyle
@@ -6695,14 +6705,22 @@
     SUBDIR += rubygem-glib2
     SUBDIR += rubygem-gobject-introspection
     SUBDIR += rubygem-google-api-client
+    SUBDIR += rubygem-google-apis-cloudbilling_v1
+    SUBDIR += rubygem-google-apis-cloudresourcemanager_v1
     SUBDIR += rubygem-google-apis-compute_v1
+    SUBDIR += rubygem-google-apis-compute_v1_057
+    SUBDIR += rubygem-google-apis-container_v1
+    SUBDIR += rubygem-google-apis-container_v1beta1
     SUBDIR += rubygem-google-apis-core
     SUBDIR += rubygem-google-apis-discovery_v1
     SUBDIR += rubygem-google-apis-generator
+    SUBDIR += rubygem-google-apis-iam_v1
     SUBDIR += rubygem-google-apis-iamcredentials_v1
     SUBDIR += rubygem-google-apis-monitoring_v3
     SUBDIR += rubygem-google-apis-pubsub_v1
+    SUBDIR += rubygem-google-apis-serviceusage_v1
     SUBDIR += rubygem-google-apis-sqladmin_v1beta4
+    SUBDIR += rubygem-google-apis-sqladmin_v1beta4_041
     SUBDIR += rubygem-google-apis-storage_v1
     SUBDIR += rubygem-google-gax
     SUBDIR += rubygem-google-iam-v1
@@ -7629,6 +7647,7 @@
     SUBDIR += zpu-binutils
     SUBDIR += zpu-gcc
     SUBDIR += zthread
+    SUBDIR += zycore-c
     SUBDIR += zydis
     SUBDIR += zziplib
 

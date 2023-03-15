@@ -75,7 +75,7 @@
     SUBDIR += gutenprint
     SUBDIR += gv
     SUBDIR += harfbuzz
-    SUBDIR += harfbuzz-hb-view
+    SUBDIR += harfbuzz-cairo
     SUBDIR += harfbuzz-icu
     SUBDIR += hp2xx
     SUBDIR += hplip
@@ -232,6 +232,7 @@
     SUBDIR += sgf2tex
     SUBDIR += shrinkpdf
     SUBDIR += simple-fb2-reader
+    SUBDIR += sioyek
     SUBDIR += splix
     SUBDIR += system-config-printer
     SUBDIR += t1utils

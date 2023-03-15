@@ -12,13 +12,7 @@ WWW=		http://www.mit.edu/people/marc/pks/
 LICENSE=	BSD4CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BROKEN_SSL=	openssl
-BROKEN_SSL_REASON_openssl=	member access into incomplete type 'EVP_PKEY' (aka 'evp_pkey_st')
-DEPRECATED=	Broken with recent ssl
-EXPIRATION_DATE=	2023-03-20
-
 USES=		bdb ssl
-USE_GCC=	yes
 USE_RC_SUBR=	pksd
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
@@ -26,10 +20,8 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--datadir=${DATADIR} \
 		--localstatedir=/var/pks \
-		--with-libwrap \
+		--with-db --with-ipv6 --with-libwrap \
 		--with-openssl=${OPENSSLBASE}
-MAKE_ENV+=	SUBDIRS=
-LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ENV=	DBLIB="-L${BDB_LIB_DIR} -l${BDB_LIB_NAME}" \
 		DBINC=-I${BDB_INCLUDE_DIR} DBHDR=db.h
 
@@ -52,11 +44,5 @@ post-install:
 post-install-DOCS-on:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}/
 	cd ${WRKSRC}/ && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}/
-
-.include <bsd.port.options.mk>
-
-.if ${OPSYS} == FreeBSD && ${SSL_DEFAULT} == base
-BROKEN=	Does not build with OpenSSL 1.1
-.endif
 
 .include <bsd.port.mk>

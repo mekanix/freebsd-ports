@@ -1,6 +1,6 @@
 PORTNAME=	gitlab-ce
-PORTVERSION=	15.8.3
-PORTREVISION=	0
+PORTVERSION=	15.8.4
+PORTREVISION=	1
 CATEGORIES=	www devel
 
 MAINTAINER=	mfechner@FreeBSD.org
@@ -276,7 +276,7 @@ USE_GITLAB=	yes
 GL_ACCOUNT=	gitlab-org
 GL_PROJECT=	gitlab-foss
 # Find the here: https://gitlab.com/gitlab-org/gitlab-foss/-/tags
-GL_COMMIT=	22f43167474102e26b4b585df6dbb541e48b7879
+GL_COMMIT=	54f2a13176e4d174500a39302d29895d7e729d38
 
 USERS=	git
 GROUPS=	git
@@ -291,6 +291,15 @@ OPTIONS_DEFAULT=		KERBEROS
 KERBEROS_BUILD_DEPENDS=		rubygem-timfel-krb5-auth>=0.8<1:security/rubygem-timfel-krb5
 KERBEROS_RUN_DEPENDS=		rubygem-timfel-krb5-auth>=0.8<1:security/rubygem-timfel-krb5
 KERBEROS_EXTRA_PATCHES_OFF=	${FILESDIR}/extra-patch-Gemfile-kerberos-off
+
+SHEBANG_FILES=	scripts/build_qa_image \
+		scripts/db_tasks \
+		scripts/rails-update-bisect \
+		scripts/generate-e2e-pipeline \
+		scripts/frontend/execute-on-staged-files.sh \
+		scripts/frontend/start_storybook.sh \
+		.lefthook/pre-push/merge_conflicts \
+		qa/bin/test
 
 post-patch:
 	${REINPLACE_CMD} -e "s|%%PREFIX%%|${PREFIX}|" ${WRKSRC}/config/gitlab.yml.example \
@@ -335,7 +344,10 @@ do-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/www/${PORTNAME}/shared/artifacts/tmp/work
 	${MKDIR} ${STAGEDIR}${PREFIX}/www/${PORTNAME}/vendor/assets/stylesheets
 	${MKDIR} ${STAGEDIR}${PREFIX}/www/${PORTNAME}/workhorse/changelogs/unreleased
-	(cd ${WRKSRC} && ${COPYTREE_SHARE} . ${STAGEDIR}${PREFIX}/www/${PORTNAME})
+	# Skip file having an executable bit
+	(cd ${WRKSRC} && ${COPYTREE_SHARE} . ${STAGEDIR}${PREFIX}/www/${PORTNAME} "-not ( -type f -perm -a=x )")
+	# now copy all files having an execution bit and preserve to x bit (this fixes some issues we saw)
+	(cd ${WRKSRC} && ${COPYTREE_BIN} . ${STAGEDIR}${PREFIX}/www/${PORTNAME} "-type f -perm -a=x")
 
 post-install:
 	${FIND} -s ${STAGEDIR}${WWWDIR} -not -type d | ${SORT} | \

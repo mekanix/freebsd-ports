@@ -45,6 +45,7 @@
     SUBDIR += avahi-libdns
     SUBDIR += avahi-qt5
     SUBDIR += avahi-sharp
+    SUBDIR += aws-ec2-imdsv2-get
     SUBDIR += axa
     SUBDIR += babeld
     SUBDIR += balance
@@ -388,6 +389,7 @@
     SUBDIR += libmdf
     SUBDIR += libmediawiki
     SUBDIR += libnatpmp
+    SUBDIR += libndp
     SUBDIR += libnet
     SUBDIR += libnfs
     SUBDIR += libngtcp2
@@ -1170,6 +1172,7 @@
     SUBDIR += pyrad
     SUBDIR += qadsl
     SUBDIR += qoauth-qt5
+    SUBDIR += qrcp
     SUBDIR += qt5-network
     SUBDIR += qt5-networkauth
     SUBDIR += qt6-networkauth
@@ -1528,8 +1531,6 @@
     SUBDIR += trickle
     SUBDIR += tsclient
     SUBDIR += tsctp
-    SUBDIR += tshark
-    SUBDIR += tshark-lite
     SUBDIR += tsocks
     SUBDIR += tunneller
     SUBDIR += turnserver
@@ -1584,7 +1585,6 @@
     SUBDIR += wireguard-tools
     SUBDIR += wireproxy
     SUBDIR += wireshark
-    SUBDIR += wireshark-lite
     SUBDIR += wlan2eth
     SUBDIR += wlvncc
     SUBDIR += wmnd
@@ -1599,6 +1599,7 @@
     SUBDIR += x11vnc
     SUBDIR += x2goclient
     SUBDIR += x2goclient-cli
+    SUBDIR += xapsd
     SUBDIR += xisp
     SUBDIR += xmlrpc-c
     SUBDIR += xmlrpc-epi

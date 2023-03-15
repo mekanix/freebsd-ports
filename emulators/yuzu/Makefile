@@ -1,5 +1,5 @@
 PORTNAME=	yuzu
-PORTVERSION=	s20230217
+PORTVERSION=	s20230313
 CATEGORIES=	emulators wayland
 .if make(makesum)
 MASTER_SITES=	https://api.yuzu-emu.org/gamedb/?dummy=/:gamedb
@@ -8,9 +8,6 @@ MASTER_SITES=	LOCAL/jbeich:gamedb
 .endif
 DISTFILES=	${PORTNAME}-${DISTVERSIONFULL}/compatibility_list.json:gamedb
 EXTRACT_ONLY=	${DISTFILES:N*\:gamedb:C/\:.*//}
-
-PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
-PATCHFILES+=	c17d71240b23.patch:-p1 # https://github.com/yuzu-emu/yuzu/pull/9042 mainline-merge
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Nintendo Switch emulator/debugger
@@ -53,7 +50,7 @@ qt6_OPTIONS_EXCLUDE=	QT5
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	yuzu-emu
-GH_TAGNAME=	e91ff9b7b
+GH_TAGNAME=	8870fae67
 GH_TUPLE=	yuzu-emu:mbedtls:v2.16.9-115-g8c88150ca:mbedtls/externals/mbedtls \
 		yuzu-emu:sirit:ab75463:sirit/externals/sirit \
 		KhronosGroup:SPIRV-Headers:1.5.4.raytracing.fixed-201-gc214f6f:SPIRV_Headers/externals/sirit/externals/SPIRV-Headers \
@@ -62,13 +59,16 @@ GH_TUPLE=	yuzu-emu:mbedtls:v2.16.9-115-g8c88150ca:mbedtls/externals/mbedtls \
 		arsenm:sanitizers-cmake:aab6948:sanitizers_cmake/externals/cubeb/cmake/sanitizers-cmake \
 		benhoyt:inih:r52:inih/externals/inih/inih \
 		kinetiknz:cubeb:cubeb-0.2-1350-gf79e0cf:cubeb/externals/cubeb \
-		yhirose:cpp-httplib:v0.10.8-1-g305a7ab:cpp_httplib/externals/cpp-httplib
+		yhirose:cpp-httplib:v0.12.0-3-g6d963fb:cpp_httplib/externals/cpp-httplib
 
 USES=		cmake:testing elfctl localbase:ldflags pkgconfig sdl ssl
 USE_SDL=	sdl2
 CMAKE_ON=	Boost_USE_STATIC_LIBS
 CMAKE_ON+=	BUNDLE_SPEEX # only used by cubeb tests
+CMAKE_ON+=	CMAKE_DISABLE_FIND_PACKAGE_LLVM # only need Demangle but llvm* is huge
 CMAKE_OFF=	YUZU_CHECK_SUBMODULES YUZU_USE_EXTERNAL_SDL2 YUZU_USE_EXTERNAL_VULKAN_HEADERS
+CMAKE_OFF+=	HTTPLIB_USE_BROTLI_IF_AVAILABLE # unused by ENABLE_WEB_SERVICE
+CMAKE_OFF+=	${ARCH:Maarch64:C/.+/YUZU_USE_PRECOMPILED_HEADERS DYNARMIC_USE_PRECOMPILED_HEADERS/}
 CMAKE_OFF+=	${CMAKE_TESTING_ON}
 CMAKE_TESTING_ON=	YUZU_TESTS
 LDFLAGS+=	-Wl,--as-needed # Qt5Network
@@ -76,8 +76,8 @@ ELF_FEATURES=	${PLIST_FILES:Mbin/*:S/^/+wxneeded:/}
 PLIST_FILES=	bin/${PORTNAME}-cmd \
 		bin/${PORTNAME}-room
 
-OPTIONS_DEFINE=	ALSA GUI PULSEAUDIO JACK NLS SNDIO VAAPI VULKAN WEBENGINE
-OPTIONS_DEFAULT=PULSEAUDIO JACK QT5 SNDIO VAAPI VULKAN WEBENGINE
+OPTIONS_DEFINE=	ALSA GUI PULSEAUDIO JACK LTO NLS SNDIO VAAPI VULKAN WEBENGINE
+OPTIONS_DEFAULT=PULSEAUDIO JACK LTO QT5 SNDIO VAAPI VULKAN WEBENGINE
 OPTIONS_SINGLE=	GUI
 OPTIONS_SINGLE_GUI=	QT5 QT6
 OPTIONS_SLAVE=		${${FLAVOR}_OPTIONS_SLAVE}
@@ -96,6 +96,8 @@ GUI_PLIST_FILES=	bin/${PORTNAME} \
 
 JACK_BUILD_DEPENDS=	jackit>0:audio/jack
 JACK_CMAKE_BOOL=	USE_JACK
+
+LTO_CMAKE_BOOL=		YUZU_ENABLE_LTO
 
 NLS_DESC=		UI translations (implies ${NLS_IMPLIES})
 NLS_USE=		QT=${"${PORT_OPTIONS:MQT5}":?linguist:}tools:build
@@ -148,6 +150,7 @@ post-patch-VAAPI-off:
 .if !exists(/usr/include/c++/v1/__ranges/as_rvalue_view.h) || make(makesum) || make(fetch)
 . if !exists(/usr/include/c++/v1/__memory/concepts.h)
 USES+=		llvm:min=14,build
+PATH:=		${LLVM_PREFIX}/bin:${PATH} # XXX _CMAKE_TOOLCHAIN_SUFFIX vs. devel/llvm*
 CC=		clang${LLVM_VERSION}
 CXX=		clang++${LLVM_VERSION}
 CPP=		clang-cpp${LLVM_VERSION}

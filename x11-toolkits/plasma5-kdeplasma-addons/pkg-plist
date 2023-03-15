@@ -968,6 +968,7 @@ share/locale/km/LC_MESSAGES/plasma_runner_datetime.mo
 share/locale/km/LC_MESSAGES/plasma_runner_katesessions.mo
 share/locale/km/LC_MESSAGES/plasma_runner_krunner_dictionary.mo
 share/locale/km/LC_MESSAGES/plasma_runner_spellcheckrunner.mo
+share/locale/ko/LC_MESSAGES/plasma_addons_engine_dict.mo
 share/locale/ko/LC_MESSAGES/plasma_applet_org.kde.plasma.addons.katesessions.mo
 share/locale/ko/LC_MESSAGES/plasma_applet_org.kde.plasma.binaryclock.mo
 share/locale/ko/LC_MESSAGES/plasma_applet_org.kde.plasma.calculator.mo
@@ -2025,10 +2026,10 @@ share/plasma/plasmoids/org.kde.plasma.weather/metadata.json
 %%QTWEBENGINE%%share/plasma/plasmoids/org.kde.plasma.webbrowser/contents/ui/main.qml
 %%QTWEBENGINE%%share/plasma/plasmoids/org.kde.plasma.webbrowser/metadata.json
 %%QTWEBENGINE%%share/plasma/plasmoids/org.kde.plasma_applet_dict/contents/config/config.qml
-share/plasma/plasmoids/org.kde.plasma_applet_dict/contents/config/main.xml
-share/plasma/plasmoids/org.kde.plasma_applet_dict/contents/ui/AvailableDictSheet.qml
+%%QTWEBENGINE%%share/plasma/plasmoids/org.kde.plasma_applet_dict/contents/config/main.xml
+%%QTWEBENGINE%%share/plasma/plasmoids/org.kde.plasma_applet_dict/contents/ui/AvailableDictSheet.qml
 %%QTWEBENGINE%%share/plasma/plasmoids/org.kde.plasma_applet_dict/contents/ui/ConfigDictionaries.qml
-share/plasma/plasmoids/org.kde.plasma_applet_dict/contents/ui/DictItemDelegate.qml
+%%QTWEBENGINE%%share/plasma/plasmoids/org.kde.plasma_applet_dict/contents/ui/DictItemDelegate.qml
 %%QTWEBENGINE%%share/plasma/plasmoids/org.kde.plasma_applet_dict/contents/ui/main.qml
 %%QTWEBENGINE%%share/plasma/plasmoids/org.kde.plasma_applet_dict/metadata.json
 share/plasma/wallpapers/org.kde.haenau/contents/ui/BackgroundElement.qml

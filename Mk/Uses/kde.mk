@@ -75,7 +75,7 @@ _KDE_RELNAME=		KDE${_KDE_VERSION}
 
 # === VERSIONS OF THE DIFFERENT COMPONENTS =====================================
 # Current KDE desktop.
-KDE_PLASMA_VERSION?=		5.27.1
+KDE_PLASMA_VERSION?=		5.27.3
 KDE_PLASMA_BRANCH?=		stable
 
 # Current KDE frameworks.
@@ -83,10 +83,10 @@ KDE_FRAMEWORKS_VERSION?=	5.103.0
 KDE_FRAMEWORKS_BRANCH?= 	stable
 
 # Current KDE applications.
-KDE_APPLICATIONS_VERSION?=	22.12.2
-KDE_APPLICATIONS_SHLIB_VER?=	5.22.2
+KDE_APPLICATIONS_VERSION?=	22.12.3
+KDE_APPLICATIONS_SHLIB_VER?=	5.22.3
 # G as in KDE Gear, and as in "don't make the variable name longer than required"
-KDE_APPLICATIONS_SHLIB_G_VER?=	22.12.2
+KDE_APPLICATIONS_SHLIB_G_VER?=	22.12.3
 KDE_APPLICATIONS_BRANCH?=	stable
 
 # Extended KDE universe applications.
@@ -271,7 +271,7 @@ _USE_PLASMA_ALL=	activitymanagerd breeze breeze-gtk \
 			libksysguard milou oxygen plasma-browser-integration \
 			plasma-desktop plasma-disks plasma-integration plasma-pa \
 			plasma-sdk plasma-workspace plasma-workspace-wallpapers \
-			polkit-kde-agent-1 powerdevil systemsettings
+			polkit-kde-agent-1 powerdevil systemsettings xdg-desktop-portal-kde
 
 # List of components of the KDE PIM distribution (part of applications).
 _USE_KDEPIM5_ALL=	akonadicontacts akonadiimportwizard akonadimime akonadinotes \
@@ -649,6 +649,9 @@ kde-powerdevil_LIB=		libpowerdevilcore.so
 
 kde-systemsettings_PORT=	sysutils/plasma5-systemsettings
 kde-systemsettings_PATH=	${KDE_PREFIX}/bin/systemsettings5
+
+kde-xdg-desktop-portal-kde_PATH=	${KDE_PREFIX}/lib/libexec/xdg-desktop-portal-kde
+kde-xdg-desktop-portal-kde_PORT=	deskutils/plasma5-xdg-desktop-portal-kde
 # ====================== end of plasma components ==============================
 
 # ====================== pim5 components =======================================

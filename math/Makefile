@@ -649,6 +649,7 @@
     SUBDIR += oink
     SUBDIR += oleo
     SUBDIR += onednn
+    SUBDIR += onednn252
     SUBDIR += openblas
     SUBDIR += openfst
     SUBDIR += openlibm
@@ -893,6 +894,7 @@
     SUBDIR += py-cmaes
     SUBDIR += py-cmyt
     SUBDIR += py-colormath
+    SUBDIR += py-contourpy
     SUBDIR += py-cryptominisat
     SUBDIR += py-cvxopt
     SUBDIR += py-cvxpy

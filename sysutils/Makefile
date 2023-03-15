@@ -52,6 +52,7 @@
     SUBDIR += apcctrl
     SUBDIR += apcpwr
     SUBDIR += apcupsd
+    SUBDIR += appjail
     SUBDIR += apt-mirror-devel
     SUBDIR += aptly
     SUBDIR += arc_summary
@@ -150,6 +151,7 @@
     SUBDIR += bstack
     SUBDIR += btop
     SUBDIR += btsixad
+    SUBDIR += budgie-control-center
     SUBDIR += buildah
     SUBDIR += bulk_extractor
     SUBDIR += bupstash
@@ -1296,6 +1298,7 @@
     SUBDIR += runj
     SUBDIR += runwhen
     SUBDIR += rush
+    SUBDIR += rust-coreutils
     SUBDIR += rw
     SUBDIR += s-tui
     SUBDIR += s6
@@ -1322,7 +1325,6 @@
     SUBDIR += schilyutils
     SUBDIR += screen
     SUBDIR += screenfetch
-    SUBDIR += screenfetch-nox11
     SUBDIR += screenie
     SUBDIR += scterc
     SUBDIR += sd-agent
@@ -1432,6 +1434,7 @@
     SUBDIR += tmpwatch
     SUBDIR += tmux
     SUBDIR += tmux-mem-cpu-load
+    SUBDIR += tmux-xpanes
     SUBDIR += tmux23
     SUBDIR += topgrade
     SUBDIR += topless
@@ -1547,7 +1550,6 @@
     SUBDIR += userneu-devel
     SUBDIR += usrinfo
     SUBDIR += utcount
-    SUBDIR += uutils
     SUBDIR += vagrant
     SUBDIR += vbetool
     SUBDIR += vchanger

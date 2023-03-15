@@ -1,5 +1,6 @@
 PORTNAME=	ocp
 PORTVERSION=	0.2.103
+PORTREVISION=	2
 PORTEPOCH=	1
 CATEGORIES=	audio
 MASTER_SITES=	https://stian.cubic.org/ocp/
@@ -29,7 +30,8 @@ USES=		compiler:c11 dos2unix gmake gnome iconv jpeg localbase:ldflags \
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--libdir=${PREFIX}/lib \
 		--with-dir-suffix="" \
-		--without-sdl
+		--without-sdl \
+		--without-update-desktop-database
 CONFIGURE_ENV=	SHARED_FLAGS="${LDFLAGS} -shared" \
 		XA=${PREFIX}/bin/xa65
 

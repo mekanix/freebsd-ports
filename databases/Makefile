@@ -143,6 +143,7 @@
     SUBDIR += libmemcache
     SUBDIR += libmemcached
     SUBDIR += libmongo-client
+    SUBDIR += libmongocrypt
     SUBDIR += libmswstr
     SUBDIR += libnvpair
     SUBDIR += libodbc++
@@ -666,14 +667,6 @@
     SUBDIR += postgresql-semver
     SUBDIR += postgresql-tds_fdw
     SUBDIR += postgresql-zhparser
-    SUBDIR += postgresql10-client
-    SUBDIR += postgresql10-contrib
-    SUBDIR += postgresql10-docs
-    SUBDIR += postgresql10-pgtcl
-    SUBDIR += postgresql10-plperl
-    SUBDIR += postgresql10-plpython
-    SUBDIR += postgresql10-pltcl
-    SUBDIR += postgresql10-server
     SUBDIR += postgresql11-client
     SUBDIR += postgresql11-contrib
     SUBDIR += postgresql11-docs

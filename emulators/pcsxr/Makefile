@@ -1,6 +1,6 @@
 PORTNAME=	pcsxr
 PORTVERSION=	1.9.95.20180604
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	emulators
 
 MAINTAINER=	martymac@FreeBSD.org
@@ -8,6 +8,9 @@ COMMENT=	Playstation (PSX) emulator
 WWW=		http://pcsxr.codeplex.com
 
 LICENSE=	GPLv3+
+
+DEPRECATED=	Abandoned upstream and no development in 5+ years, consider using games/retroarch
+EXPIRATION_DATE=2023-03-31
 
 ONLY_FOR_ARCHS=	amd64 i386
 
