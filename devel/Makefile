@@ -4688,6 +4688,8 @@
     SUBDIR += py-hash_ring
     SUBDIR += py-hatch
     SUBDIR += py-hatch-fancy-pypi-readme
+    SUBDIR += py-hatch-nodejs-version
+    SUBDIR += py-hatch-requirements-txt
     SUBDIR += py-hatch-vcs
     SUBDIR += py-hatchling
     SUBDIR += py-heapdict
@@ -5732,7 +5734,6 @@
     SUBDIR += pycount
     SUBDIR += pydbus-common
     SUBDIR += pydeps
-    SUBDIR += pydio-packr
     SUBDIR += pyenv
     SUBDIR += pygobject3-common
     SUBDIR += pylint

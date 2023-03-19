@@ -205,6 +205,7 @@
     SUBDIR += fcitx5
     SUBDIR += fcitx5-configtool
     SUBDIR += fcitx5-gtk
+    SUBDIR += fcitx5-gtk-common
     SUBDIR += fcitx5-lua
     SUBDIR += fcitx5-m17n
     SUBDIR += fcitx5-qt
@@ -1782,6 +1783,7 @@
     SUBDIR += rubygem-phone
     SUBDIR += rubygem-pretty-xml
     SUBDIR += rubygem-psych
+    SUBDIR += rubygem-psych3
     SUBDIR += rubygem-puppet-strings
     SUBDIR += rubygem-raabro
     SUBDIR += rubygem-rails-dom-testing
