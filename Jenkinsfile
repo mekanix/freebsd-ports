@@ -95,6 +95,7 @@ pipeline {
                     net/cloud-init \
                     net-mgmt/grok_exporter \
                     net-mgmt/iftop \
+                    net-mgmt/lldpd \
                     net-mgmt/nfs-exporter \
                     net-mgmt/pktstat \
                     net-mgmt/py-network-interface-exporter \
