@@ -1,9 +1,9 @@
 # $FreeBSD$
 
-PORTVERSION=	1.27.0.rc1
+PORTVERSION=	1.28.0.rc1
 PKGNAMESUFFIX=	-stg
 
-GH_TAGNAME=     1.27.0-rc1
+GH_TAGNAME=     1.28.0-rc1
 GH_TUPLE=       \
 		Azure:azure-pipeline-go:v0.2.3:azure_azure_pipeline_go/vendor/github.com/Azure/azure-pipeline-go \
 		Azure:azure-sdk-for-go:3e51649a3e16:azure_azure_sdk_for_go_armresources \
@@ -125,6 +125,6 @@ MASTERDIR=	${.CURDIR}/../szs
 DISTINFO_FILE=	${.CURDIR}/distinfo
 PLIST=		${.CURDIR}/pkg-plist
 
-GO_TARGET=	./cmd/api ./cmd/jobs ./cmd/statistics ./cmd/exports ./cmd/safetyarchivecleanup ./cmd/cleanupclones ./cmd/snapshotscleanup ./cmd/clonesnapshots ./cmd/azurerecovery
+GO_TARGET=	./cmd/api ./cmd/jobs ./cmd/statistics ./cmd/safetyarchivecleanup ./cmd/cleanupclones ./cmd/snapshotscleanup ./cmd/clonesnapshots ./cmd/azurerecovery
 
 .include "${MASTERDIR}/Makefile"
