@@ -2,6 +2,7 @@
 
 PORTNAME=	efsserver
 PORTVERSION=	3.21.70.20221019
+PORTREVISION= 	1
 CATEGORIES=	axcient net
 MASTER_SITES=	GH
 
@@ -124,9 +125,6 @@ do-install:
 	# Sigh.  The repository contains two copies of this file.  I think this
 	# is the correct copy.
 	${INSTALL_DATA} ${WRKSRC}/certs/efolder-ca-list.pem ${STAGEDIR}/repository/efolder-cfg
-	# Install cron script
-	@${MKDIR} ${STAGEDIR}/${PREFIX}/etc/cron.d
-	${INSTALL_DATA} ${WRKSRC}/eFolderStore/deploy/installserver/files/server-cfg/freebsd/etc/cron.d/* ${STAGEDIR}/${PREFIX}/etc/cron.d
 
 #do-test:
 	#@cd ${WRKSRC}/testing && gmake -f Makefile.freebsd precompile run
