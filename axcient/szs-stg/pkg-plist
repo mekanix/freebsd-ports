@@ -1,5 +1,4 @@
 bin/szs-op
-bin/szs-op-exports
 bin/szs-op-jobs
 bin/szs-op-safety-archive-cleanup
 bin/szs-op-cleanup-clones
@@ -13,12 +12,9 @@ bin/szs-op-azure-recovery
 @sample %%EXAMPLESDIR%%/cron.d/snapshots_cleanup etc/cron.d/snapshots_cleanup
 @sample %%EXAMPLESDIR%%/cron.d/clone_snapshots etc/cron.d/clone_snapshots
 @sample %%EXAMPLESDIR%%/newsyslog.conf.d/szs.conf etc/newsyslog.conf.d/szs.conf
-@sample %%EXAMPLESDIR%%/newsyslog.conf.d/szs_exports.conf etc/newsyslog.conf.d/szs_exports.conf
 @sample %%EXAMPLESDIR%%/newsyslog.conf.d/szs_jobs.conf etc/newsyslog.conf.d/szs_jobs.conf
 etc/rc.d/szs
-etc/rc.d/szs_exports
 etc/rc.d/szs_jobs
-etc/rc.d/szs_vsftpd_conf
 @sample %%EXAMPLESDIR%%/rsyslog.d/szs.conf etc/rsyslog.d/szs.conf
 @sample %%EXAMPLESDIR%%/rsyslog.d/szs_jobs.conf etc/rsyslog.d/szs_jobs.conf
 @sample %%EXAMPLESDIR%%/rsyslog.d/cleanup_clones.conf etc/rsyslog.d/cleanup_clones.conf
@@ -26,7 +22,6 @@ etc/rc.d/szs_vsftpd_conf
 @sample %%EXAMPLESDIR%%/rsyslog.d/snapshots_cleanup.conf etc/rsyslog.d/snapshots_cleanup.conf
 @sample %%EXAMPLESDIR%%/rsyslog.d/clone_snapshots.conf etc/rsyslog.d/clone_snapshots.conf
 @sample %%EXAMPLESDIR%%/rsyslog.d/statistics.conf etc/rsyslog.d/statistics.conf
-@sample %%EXAMPLESDIR%%/rsyslog.d/szs_exports.conf etc/rsyslog.d/szs_exports.conf
 @sample %%ETCDIR%%/config.yml.sample
 include/szs-op.h
 lib/libszs-op.so
