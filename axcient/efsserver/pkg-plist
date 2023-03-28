@@ -159,7 +159,6 @@
 @(,,555) /repository/server/util-identify-upper-lower.py
 @(root,wheel,555) /repository/tools/misc/total-open-files
 @(root,wheel,) /repository/tools/perf/dsk-bw.tar.gz
-etc/cron.d/efsserver
 %%DATADIR%%/efs-common.sh
 @dir(efolder,efolder,770) /repository/cfg
 @dir(efolder,efolder,770) /repository/efolder-cfg
