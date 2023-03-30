@@ -27,7 +27,4 @@ post-extract:
 	@${RLN} ${WRKSRC_azure_go_autorest_logger}/logger ${WRKSRC}/vendor/github.com/Azure/go-autorest/logger
 	@${RM} -r ${WRKSRC}/vendor/github.com/Azure/go-autorest/tracing
 	@${RLN} ${WRKSRC_azure_go_autorest_tracing}/tracing ${WRKSRC}/vendor/github.com/Azure/go-autorest/tracing
-	# Temporarily delete cleanup_clones
-	# CL-3414
-	@${RM} freebsd-pkg/usr/local/etc/cron.d/cleanup_clones
 
