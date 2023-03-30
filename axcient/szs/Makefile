@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	szs
-PORTVERSION?=	1.27.0
+PORTVERSION?=	1.28.0
 PORTREVISION= 	0
 CATEGORIES=	axcient
 MASTER_SITES=	GH
@@ -26,7 +26,7 @@ RUN_DEPENDS+=	buffer:misc/buffer \
 USES=		axcient go:modules ssl:run
 USE_LDCONFIG=	yes
 GH_PROJECT=	szs-op
-GH_TAGNAME?=	1.27.0
+GH_TAGNAME?=	1.28.0
 GH_TUPLE?=	\
 		Azure:azure-pipeline-go:v0.2.3:azure_azure_pipeline_go/vendor/github.com/Azure/azure-pipeline-go \
 		Azure:azure-sdk-for-go:3e51649a3e16:azure_azure_sdk_for_go_armresources \
@@ -143,7 +143,7 @@ GH_TUPLE?=	\
 CONFLICTS_INSTALL?=	szs-stg
 
 GO_PKGNAME=	github.com/${GH_ACCOUNT}/szs-op
-GO_TARGET?=	./cmd/api ./cmd/jobs ./cmd/statistics ./cmd/exports ./cmd/safetyarchivecleanup ./cmd/cleanupclones ./cmd/snapshotscleanup ./cmd/clonesnapshots ./cmd/azurerecovery
+GO_TARGET?=	./cmd/api ./cmd/jobs ./cmd/statistics ./cmd/safetyarchivecleanup ./cmd/cleanupclones ./cmd/snapshotscleanup ./cmd/clonesnapshots ./cmd/azurerecovery
 
 # go.mk doesn't have any code for building shared libraries
 post-build:
