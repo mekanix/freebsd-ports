@@ -28,7 +28,7 @@ checksum:
 pre-build:
 	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${GO_ENV} GOPATH=/tmp ${GO_CMD} mod vendor
 
-GO_BUILDFLAGS=	-ldflags "-X main.version=${PORTVERSION}"
+GO_BUILDFLAGS=	-ldflags "-X=main.version=${PORTVERSION}"
 GO_TARGET=	./cmd/api ./cmd/jobs ./cmd/statistics ./cmd/safetyarchivecleanup ./cmd/cleanupclones ./cmd/snapshotscleanup ./cmd/clonesnapshots ./cmd/azurerecovery
 
 .include "${MASTERDIR}/Makefile"
