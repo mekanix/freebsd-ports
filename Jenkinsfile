@@ -201,7 +201,7 @@ pipeline {
                 sh 'cd net-mgmt/py-network-interface-exporter; make fetch'
                 sh 'cd net-mgmt/py-zfs-exporter; make fetch'
 
-                sh 'sudo poudriere bulk -j 13_1-AXCIENT3_amd64 -p "${PNAME}" \
+                sh 'sudo poudriere bulk -j 13_1-AXCIENT1_amd64 -p "${PNAME}" \
                     ${PORTSALL} '
                 sh 'sudo poudriere bulk -j 13_1-AXCIENT1_amd64 -p "${PNAME}" \
                     ${PORTSMINOR} '
@@ -224,7 +224,7 @@ pipeline {
                 sh 'cd axcient/szs-dev; make fetch'
                 sh 'cd axcient/vt2-dev; make fetch'
 
-                sh "sudo poudriere bulk -j 13_1-AXCIENT3_amd64 -p ${PNAME} axcient/${env.devPackage}"
+                sh "sudo poudriere bulk -j 13_1-AXCIENT1_amd64 -p ${PNAME} axcient/${env.devPackage}"
             }
         }
     }
