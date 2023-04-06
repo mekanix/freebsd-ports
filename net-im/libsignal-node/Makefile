@@ -28,7 +28,7 @@ GH_TUPLE=	google:boringssl:f1c75347daa2ea81a941e953f2263e0a4d970c8d:boringssl \
 		google:boringssl:ae223d6138807a13006342edfeef32e813246b39:boringssl_fips
 
 # keep NODE_VERSION in sync with www/node16 DISTVERSION
-NODE_VERSION=	16.19.1
+NODE_VERSION=	16.20.0
 
 CARGO_CRATES=	addr2line-0.17.0 \
 		adler-1.0.2 \
@@ -246,9 +246,7 @@ CARGO_CRATES=	addr2line-0.17.0 \
 		boring,boring-sys@git+https://github.com/signalapp/boring?branch=libsignal\#25e1dd8fa519ae90772008fbd4a284582096fece \
 		curve25519-dalek@git+https://github.com/signalapp/curve25519-dalek?branch=lizard2\#4f0aa6653c51598daa0a2f53b8ba54ce0eedfbdd
 
-MAKE_ENV=	ELECTRON_OVERRIDE_DIST_PATH=${LOCALBASE}/share/electron21 \
-		ELECTRON_SKIP_BINARY_DOWNLOAD=1 \
-		HOME=${WRKDIR} \
+MAKE_ENV=	HOME=${WRKDIR} \
 		PYTHON=${PYTHON_CMD} \
 		XDG_CACHE_HOME=${WRKDIR}/.cache
 

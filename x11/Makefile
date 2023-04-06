@@ -116,6 +116,7 @@
     SUBDIR += hhpc
     SUBDIR += hs-xmobar
     SUBDIR += hsetroot
+    SUBDIR += hybrid-bar
     SUBDIR += hyprland-share-picker
     SUBDIR += hyprpaper
     SUBDIR += hyprpicker
@@ -383,6 +384,7 @@
     SUBDIR += swayrbar
     SUBDIR += swaysettings
     SUBDIR += sxhkd
+    SUBDIR += sxmo-wayout
     SUBDIR += sxpc
     SUBDIR += tabbed
     SUBDIR += taiga
@@ -430,6 +432,7 @@
     SUBDIR += wmcliphist
     SUBDIR += wmctrl
     SUBDIR += wmdrawer
+    SUBDIR += wmenu
     SUBDIR += wmfocus
     SUBDIR += wmsystemtray
     SUBDIR += wmutils-core

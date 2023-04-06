@@ -18,10 +18,10 @@
     SUBDIR += mkreadmes
     SUBDIR += modules2tuple
     SUBDIR += octopkg
-    SUBDIR += p5-FreeBSD-Portindex
     SUBDIR += p5-FreeBSD-Ports
     SUBDIR += p5-FreeBSD-Ports-INDEXhash
     SUBDIR += packagekit
+    SUBDIR += packagekit-qt
     SUBDIR += parfetch-overlay
     SUBDIR += pchecker
     SUBDIR += pkg

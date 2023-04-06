@@ -1,10 +1,11 @@
 PORTNAME=	tiledb
-PORTVERSION=	2.14.0
+PORTVERSION=	2.14.2
 CATEGORIES=	databases
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	TileDB array data management
-WWW=		https://www.tiledb.io/
+WWW=		https://www.tiledb.io/ \
+		https://github.com/TileDB-Inc/TileDB
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -16,11 +17,11 @@ LIB_DEPENDS=	libcapnp.so:devel/capnproto080 \
 		liblz4.so:archivers/liblz4 \
 		libzstd.so:archivers/zstd
 RUN_DEPENDS=	capnproto080>=0.8.0:devel/capnproto080 \
-		catch>=2.13.8:devel/catch \
+		catch2>=3.1:devel/catch2 \
 		clipp>=1.2.3:devel/clipp \
 		curl>=7.74.0:ftp/curl \
 		liblz4>=1.9.3,1:archivers/liblz4 \
-		spdlog>=1.9.0:devel/spdlog \
+		spdlog>=1.11.0:devel/spdlog \
 		zstd>=1.4.8:archivers/zstd
 
 USES=		cmake compiler:c++17-lang localbase:ldflags pkgconfig ssl

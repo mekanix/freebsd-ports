@@ -463,7 +463,6 @@
     SUBDIR += micro_proxy
     SUBDIR += microsocks
     SUBDIR += minidlna
-    SUBDIR += minisapserver
     SUBDIR += minissdpd
     SUBDIR += miniupnpc
     SUBDIR += miniupnpd
@@ -521,7 +520,6 @@
     SUBDIR += netselect
     SUBDIR += netstrain
     SUBDIR += netwib
-    SUBDIR += nfs-ganesha-kmod
     SUBDIR += nfsshell
     SUBDIR += nfstrace
     SUBDIR += ng_mikrotik_eoip
@@ -581,7 +579,6 @@
     SUBDIR += openrsync
     SUBDIR += opensips31
     SUBDIR += openslp
-    SUBDIR += opentracker
     SUBDIR += openvswitch
     SUBDIR += ortp
     SUBDIR += osrtspproxy
@@ -1157,6 +1154,7 @@
     SUBDIR += py-twitter-tools
     SUBDIR += py-txamqp
     SUBDIR += py-txrestapi
+    SUBDIR += py-uri-template
     SUBDIR += py-uritemplate
     SUBDIR += py-uritools
     SUBDIR += py-url-normalize
@@ -1215,7 +1213,6 @@
     SUBDIR += rp-pppoe
     SUBDIR += rpki-client
     SUBDIR += rscsi
-    SUBDIR += rsocket-cpp
     SUBDIR += rsplib
     SUBDIR += rssguard
     SUBDIR += rsync
@@ -1286,7 +1283,6 @@
     SUBDIR += rubygem-gitaly
     SUBDIR += rubygem-gitaly-proto
     SUBDIR += rubygem-gitlab-fog-azure-rm
-    SUBDIR += rubygem-gitlab-omniauth-openid-connect
     SUBDIR += rubygem-gitlab_omniauth-ldap
     SUBDIR += rubygem-google-cloud-bigquery
     SUBDIR += rubygem-google-cloud-bigtable
@@ -1299,6 +1295,7 @@
     SUBDIR += rubygem-google-cloud-logging-v2
     SUBDIR += rubygem-google-cloud-pubsub
     SUBDIR += rubygem-google-cloud-pubsub-v1
+    SUBDIR += rubygem-google-cloud-resource_manager
     SUBDIR += rubygem-google-cloud-spanner
     SUBDIR += rubygem-google-cloud-spanner-admin-database-v1
     SUBDIR += rubygem-google-cloud-spanner-admin-instance-v1
@@ -1310,6 +1307,7 @@
     SUBDIR += rubygem-http-parser
     SUBDIR += rubygem-http_parser.rb
     SUBDIR += rubygem-httpauth
+    SUBDIR += rubygem-interfacez
     SUBDIR += rubygem-ipaddr
     SUBDIR += rubygem-ipaddr122
     SUBDIR += rubygem-ipaddress
@@ -1357,6 +1355,7 @@
     SUBDIR += rubygem-orchestrator_client
     SUBDIR += rubygem-ovirt-engine-sdk
     SUBDIR += rubygem-packetfu
+    SUBDIR += rubygem-packetgen
     SUBDIR += rubygem-pcaprub
     SUBDIR += rubygem-private_address_check
     SUBDIR += rubygem-proxifier
@@ -1399,6 +1398,7 @@
     SUBDIR += rubygem-whois
     SUBDIR += rubygem-xmlrpc
     SUBDIR += rude
+    SUBDIR += rustdesk-server
     SUBDIR += ryu
     SUBDIR += s5cmd
     SUBDIR += sacc
@@ -1514,7 +1514,6 @@
     SUBDIR += tigervnc-server
     SUBDIR += tigervnc-viewer
     SUBDIR += tigervnc-viewer-java
-    SUBDIR += tightvnc
     SUBDIR += timed
     SUBDIR += tintin++
     SUBDIR += tiny-network-utilities

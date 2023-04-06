@@ -99,6 +99,7 @@
     SUBDIR += courierpasswd
     SUBDIR += courieruserinfo
     SUBDIR += cowrie
+    SUBDIR += cpfx
     SUBDIR += cracklib
     SUBDIR += crackpkcs12
     SUBDIR += create-cert
@@ -218,6 +219,7 @@
     SUBDIR += honeytrap
     SUBDIR += honggfuzz
     SUBDIR += horcrux
+    SUBDIR += howdy
     SUBDIR += hpenc
     SUBDIR += hs-cryptol
     SUBDIR += hydra
@@ -406,15 +408,14 @@
     SUBDIR += openiked-portable
     SUBDIR += opensaml
     SUBDIR += opensc
-    SUBDIR += openscep
     SUBDIR += openssh-askpass
     SUBDIR += openssh-portable
     SUBDIR += openssl
-    SUBDIR += openssl30
-    SUBDIR += openssl31
     SUBDIR += openssl-agent
     SUBDIR += openssl-quictls
     SUBDIR += openssl-unsafe
+    SUBDIR += openssl30
+    SUBDIR += openssl31
     SUBDIR += openssl_tpm_engine
     SUBDIR += openvas
     SUBDIR += openvpn
@@ -423,7 +424,6 @@
     SUBDIR += openvpn-auth-radius
     SUBDIR += openvpn-auth-script
     SUBDIR += openvpn-devel
-    SUBDIR += openvpn25
     SUBDIR += ophcrack
     SUBDIR += opie
     SUBDIR += ossec-hids
@@ -721,6 +721,7 @@
     SUBDIR += pam_fprint
     SUBDIR += pam_google_authenticator
     SUBDIR += pam_helper
+    SUBDIR += pam_howdy
     SUBDIR += pam_jail
     SUBDIR += pam_kde
     SUBDIR += pam_krb5
@@ -732,6 +733,7 @@
     SUBDIR += pam_pkcs11
     SUBDIR += pam_pwdfile
     SUBDIR += pam_require
+    SUBDIR += pam_rssh
     SUBDIR += pam_script
     SUBDIR += pam_search_list
     SUBDIR += pam_ssh_agent_auth
@@ -820,7 +822,6 @@
     SUBDIR += plasma5-kwallet-pam
     SUBDIR += please
     SUBDIR += poly1305aes
-    SUBDIR += portsentry
     SUBDIR += proftpd-mod_clamav
     SUBDIR += proxycheck
     SUBDIR += proxytunnel
@@ -883,6 +884,7 @@
     SUBDIR += py-cryptography-vectors
     SUBDIR += py-ctypescrypto
     SUBDIR += py-cybox
+    SUBDIR += py-detect-secrets
     SUBDIR += py-dfdatetime
     SUBDIR += py-dfvfs
     SUBDIR += py-dfwinreg
@@ -1030,6 +1032,7 @@
     SUBDIR += py-zkg
     SUBDIR += py-zope.password
     SUBDIR += py-zxcvbn
+    SUBDIR += pygost
     SUBDIR += qtkeychain
     SUBDIR += quantis-kmod
     SUBDIR += racoon2
@@ -1069,6 +1072,7 @@
     SUBDIR += rubygem-doorkeeper-rails5
     SUBDIR += rubygem-doorkeeper-rails50
     SUBDIR += rubygem-doorkeeper-rails61
+    SUBDIR += rubygem-doorkeeper562
     SUBDIR += rubygem-ed25519
     SUBDIR += rubygem-ed2551912
     SUBDIR += rubygem-encryptor
@@ -1134,6 +1138,8 @@
     SUBDIR += rubygem-pundit61
     SUBDIR += rubygem-pyu-ruby-sasl
     SUBDIR += rubygem-rack-oauth2
+    SUBDIR += rubygem-rack-oauth21
+    SUBDIR += rubygem-rasn1
     SUBDIR += rubygem-razorback-scriptNugget
     SUBDIR += rubygem-rbnacl
     SUBDIR += rubygem-rbnacl-libsodium
@@ -1267,7 +1273,6 @@
     SUBDIR += tclsasl
     SUBDIR += tcpcrypt
     SUBDIR += teleport
-    SUBDIR += teleport5
     SUBDIR += testssl.sh
     SUBDIR += tfhe
     SUBDIR += tfsec

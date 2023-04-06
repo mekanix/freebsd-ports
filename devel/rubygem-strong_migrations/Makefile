@@ -1,5 +1,5 @@
 PORTNAME=	strong_migrations
-PORTVERSION=	1.4.2
+PORTVERSION=	1.4.4
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 

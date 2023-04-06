@@ -1,6 +1,5 @@
     COMMENT = Programming languages
 
-    SUBDIR += J
     SUBDIR += abcl
     SUBDIR += alchemist.el
     SUBDIR += algol68g
@@ -41,7 +40,6 @@
     SUBDIR += cython-devel
     SUBDIR += dhall
     SUBDIR += dlang-tools
-    SUBDIR += dlv
     SUBDIR += duktape
     SUBDIR += duktape-lib
     SUBDIR += ecl
@@ -221,6 +219,7 @@
     SUBDIR += onyx
     SUBDIR += oo2c
     SUBDIR += opencoarrays
+    SUBDIR += opensycl
     SUBDIR += ott
     SUBDIR += owl-lisp
     SUBDIR += p5-Data-JavaScript
@@ -366,7 +365,6 @@
     SUBDIR += v8
     SUBDIR += v8-beta
     SUBDIR += vala
-    SUBDIR += visualworks
     SUBDIR += voc
     SUBDIR += yabasic
     SUBDIR += yap

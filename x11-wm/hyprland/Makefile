@@ -1,7 +1,7 @@
 PORTNAME=	hyprland
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.23.0beta
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11-wm wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -29,6 +29,7 @@ GH_ACCOUNT=	hyprwm
 GH_PROJECT=	Hyprland
 GH_TUPLE=	hyprwm:hyprland-protocols:301733a:hyprland_protocols/subprojects/hyprland-protocols \
 		canihavesomecoffee:udis86:1.7.2-186-g5336633:udis86/subprojects/udis86
+MESON_ARGS=	-Dsystemd=disabled
 
 OPTIONS_DEFINE=	X11
 OPTIONS_DEFAULT=X11
@@ -70,7 +71,7 @@ CMAKE_BIN=	${LOCALBASE}/bin/cmake
 CMAKE_ARGS+=	-GNinja
 
 # XXX Move into separate port and standardize via USES
-GH_TUPLE+=	llvm:llvm-project:llvmorg-16.0.0:libcxx
+GH_TUPLE+=	llvm:llvm-project:llvmorg-16.0.1:libcxx
 CXXFLAGS+=	-nostdinc++ -isystem${WRKDIR}/libcxx_prefix/include/c++/v1
 # Don't link against new libc++ as it's not necessary
 #LDFLAGS+=	-nostdlib++ -L${WRKDIR}/libcxx_prefix/lib -l:libc++.a -lcxxrt

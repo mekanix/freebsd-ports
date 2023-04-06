@@ -1,5 +1,5 @@
 PORTNAME=	grpc
-PORTVERSION=	1.51.1
+PORTVERSION=	1.52.1
 DISTVERSIONPREFIX=	v
 PORTEPOCH=	2
 CATEGORIES=	devel
@@ -46,8 +46,8 @@ CONFLICTS_INSTALL=	grpc[0-9][0-9][0-9]
 
 .include <bsd.port.pre.mk>
 
-# Remove openssl from grpc.pc because we do not ship openssl.pc in base system
-.if ${SSL_DEFAULT} == base
+# Skip openssl.pc while using OpenSSL from base system on older FreeBSD versions which does not skip this file
+.if ${SSL_DEFAULT} == base && !exists(/usr/libdata/pkgconfig/openssl.pc)
 EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-openssl
 .endif
 

@@ -32,13 +32,7 @@ GN_ARGS+=	use_custom_libcxx=false
 post-patch:
 # Search assets under PREFIX instead of current directory
 	@${REINPLACE_CMD} 's,assets",../${DATADIR_REL}/&,' \
-		${WRKSRC}/cargo-crates/bevy_asset-*/src/lib.rs
-# XXX Drop after FreeBSD 12.3 EOL around 2023-03-31
-# https://cgit.freebsd.org/src/commit/?id=98a049f22ef3
-.if !exists(/usr/bin/llvm-readelf)
-	@${REINPLACE_CMD} '/readelf/s/llvm-//' \
-		${WRKSRC}/cargo-crates/v8-*/build/toolchain/gcc_toolchain.gni
-.endif
+		${WRKSRC_crate_bevy_asset}/src/lib.rs
 
 post-install:
 	(cd ${WRKSRC} && ${COPYTREE_SHARE} "assets" ${STAGEDIR}${DATADIR})
