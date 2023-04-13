@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	axcient-utils
-PORTVERSION=	1.0.0.20230316
+PORTVERSION=	1.0.0.20230529
 CATEGORIES=	axcient sysutils
 MASTER_SITES=	GH
 
@@ -21,16 +21,18 @@ NO_ARCH=	yes
 NO_BUILD=	yes
 USES=		axcient python:3.8+,run shebangfix
 GH_PROJECT=	freebsd-utils
-GH_TAGNAME=	35ced739ca07f8d1ccd5ab87a2a106b7cfbb0a5f
+GH_TAGNAME=	0de01c817f6fcd869f51a8cfec28f244e658b39e
 
 SUB_FILES=	399.explorer
-USE_RC_SUBR=	geli_salt zfs_crypto_salt
+USE_RC_SUBR=	geli_salt zfs_crypto_salt jbod
 
 SHEBANG_FILES=	jbod-support/jbod-util
 
 PLIST_FILES=	sbin/geli-util
 PLIST_FILES+=	sbin/jbod-util
+PLIST_FILES+=	sbin/jbod-devd
 PLIST_FILES+=	etc/periodic/weekly/399.explorer
+PLIST_FILES+=	etc/devd/auto-jbod.conf
 PLIST_FILES+=	sbin/gentle-destroy
 PLIST_FILES+=	sbin/hbaerrs
 
@@ -39,6 +41,9 @@ PLIST_DIRS=	/var/explorer
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/geli/geli-util ${STAGEDIR}${PREFIX}/sbin
 	${INSTALL_SCRIPT} ${WRKSRC}/jbod-support/jbod-util ${STAGEDIR}${PREFIX}/sbin
+	${INSTALL_SCRIPT} ${WRKSRC}/jbod-support/jbod-devd.sh ${STAGEDIR}${PREFIX}/sbin/jbod-devd
+	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/devd
+	${INSTALL_DATA} ${WRKSRC}/jbod-support/auto-jbod.conf ${STAGEDIR}${PREFIX}/etc/devd
 	${INSTALL_SCRIPT} ${WRKSRC}/hbaerrs.sh ${STAGEDIR}${PREFIX}/sbin/hbaerrs
 	${INSTALL_SCRIPT} ${WRKSRC}/gentle-destroy.sh ${STAGEDIR}${PREFIX}/sbin/gentle-destroy
 	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/periodic/weekly
