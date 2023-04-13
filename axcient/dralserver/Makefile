@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	dralserver
-PORTVERSION?=	1.9.0
+PORTVERSION?=	1.10.0
 CATEGORIES=	axcient
 
 MAINTAINER=	kklimov@axcient.com
@@ -13,7 +13,7 @@ USES=		axcient go:modules
 CONFLICTS_INSTALL?=	dralserver-stg \
 			dralserver-dev
 
-GH_TAGNAME?=	1.9.0
+GH_TAGNAME?=	1.10.0
 GH_TUPLE?=	BurntSushi:toml:v0.4.1:burntsushi_toml/vendor/github.com/BurntSushi/toml \
 		beorn7:perks:v1.0.1:beorn7_perks/vendor/github.com/beorn7/perks \
 		cespare:xxhash:v2.1.2:cespare_xxhash_v2/vendor/github.com/cespare/xxhash/v2 \
