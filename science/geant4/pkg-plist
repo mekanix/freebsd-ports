@@ -4353,7 +4353,6 @@ lib/cmake/Geant4/G4EXPATShim.cmake
 lib/cmake/Geant4/G4FreetypeShim.cmake
 lib/cmake/Geant4/G4HDF5Shim.cmake
 lib/cmake/Geant4/G4MotifShim.cmake
-lib/cmake/Geant4/G4VecGeomShim.cmake
 lib/cmake/Geant4/G4X11Shim.cmake
 lib/cmake/Geant4/Geant4Config.cmake
 lib/cmake/Geant4/Geant4ConfigVersion.cmake

@@ -1,5 +1,6 @@
 PORTNAME=	nut
 PORTVERSION=	${NUT_COMMIT_DATE}
+PORTREVISION=	1
 CATEGORIES=	sysutils
 PKGNAMESUFFIX=	-devel
 # MASTER_SITES=	http://www.networkupstools.org/source/${PORTVERSION:R}/
@@ -18,8 +19,8 @@ CONFLICTS=	nut-[0-9]*
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	networkupstools
-GH_TAGNAME=	8ff556dca
-NUT_COMMIT_DATE=	2023.03.31
+GH_TAGNAME=	73ee107fa
+NUT_COMMIT_DATE=	2023.04.13
 
 MAKE_JOBS_UNSAFE=	yes
 USE_GCC=	yes
@@ -147,7 +148,9 @@ pre-configure:
 
 pre-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/libexec/nut
+.if ${PORT_OPTIONS:MUSB}
 	@${REINPLACE_CMD} -e 's/device-name\*/cdev/g' ${WRKSRC}/scripts/devd/nut-usb.conf
+.endif
 
 post-install:
 	@${MKDIR} ${STAGEDIR}${STATEDIR}
