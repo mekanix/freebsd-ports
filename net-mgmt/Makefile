@@ -337,6 +337,7 @@
     SUBDIR += py-pysnmp
     SUBDIR += py-pysnmp-mibs
     SUBDIR += py-pyzabbix
+    SUBDIR += py-smartctl-exporter
     SUBDIR += py-snmp_passpersist
     SUBDIR += py-snmpclitools
     SUBDIR += py-zfs-exporter

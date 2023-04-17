@@ -101,7 +101,7 @@ pipeline {
                     net-mgmt/py-network-interface-exporter \
                     net-mgmt/py-gstat_exporter \
                     net-mgmt/py-zfs-exporter \
-                    net-mgmt/smartctl_exporter \
+                    net-mgmt/py-smartctl-exporter \
                     net-mgmt/zabbix5-agent \
                     net/samba413 \
                     net/nss-pam-ldapd \
@@ -200,6 +200,7 @@ pipeline {
                 sh 'cd axcient/vt2; make fetch'
                 sh 'cd axcient/vt2-stg; make fetch'
                 sh 'cd net-mgmt/py-network-interface-exporter; make fetch'
+                sh 'cd net-mgmt/py-smartctl-exporter; make fetch'
                 sh 'cd net-mgmt/py-zfs-exporter; make fetch'
 
                 sh 'sudo poudriere bulk -j 13_1-AXCIENT1_amd64 -p "${PNAME}" \
