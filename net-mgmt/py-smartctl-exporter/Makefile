@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	smartctl-exporter
-PORTVERSION=	0.0.1
+PORTVERSION=	0.0.2
 CATEGORIES=	net-mgmt
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -13,8 +13,6 @@ RUN_DEPENDS=	smartctl:sysutils/smartmontools \
 
 USES=		axcient python
 USE_PYTHON=	autoplist distutils
-USERS=		prometheus
-GROUPS=		prometheus
 
 GH_PROJECT=	py-smartctl-exporter
 
