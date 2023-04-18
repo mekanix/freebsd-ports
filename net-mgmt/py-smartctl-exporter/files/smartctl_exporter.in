@@ -10,12 +10,6 @@
 #
 # smartctl_exporter_enable (bool):            Set to NO by default.
 #               Set it to YES to enable smartctl-exporter.
-# smartctl_exporter_args (string):            Set extra arguments to pass to smartctl-exporter
-#               Default is "".
-# smartctl_exporter_user (string):            Set user that smartctl_exporter will run under
-#               Default is "prometheus".
-# smartctl_exporter_group (string):           Set group that smartctl_exporter will run under
-#               Default is "prometheus".
 
 . /etc/rc.subr
 
@@ -26,15 +20,12 @@ rcvar=smartctl_exporter_enable
 load_rc_config $name
 
 : ${smartctl_exporter_enable:=NO}
-: ${smartctl_exporter_args:=""}
-: ${smartctl_exporter_user:=prometheus}
-: ${smartctl_exporter_group:=prometheus}
 
-pidfile=/var/run/smartctl_exporter.pid
+pidfile="/var/run/${name}.pid"
 command=/usr/sbin/daemon
 command_interpreter=%%PYTHON_CMD%%
 procname=%%PREFIX%%/bin/smartctl-exporter
-command_args="-f -p ${pidfile} /usr/bin/env ${procname} ${smartctl_exporter_args}"
+command_args="-f -p ${pidfile} /usr/bin/env ${procname}"
 
 start_precmd=smartctl_exporter_startprecmd
 
