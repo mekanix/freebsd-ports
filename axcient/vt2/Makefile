@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	vt2
-PORTVERSION?=	1.3.0
+PORTVERSION?=	1.4.0
 PORTREVISION?=	1
 CATEGORIES=	axcient
 MASTER_SITES=	GH
@@ -27,7 +27,7 @@ RUN_DEPENDS+=	ca_root_nss>0:security/ca_root_nss
 
 USES+=		axcient gmake
 GH_PROJECT=	vaulttransfer2
-GH_TAGNAME?=    1.3.0
+GH_TAGNAME?=    1.4.0
 
 GH_TUPLE=       alexflint:go-arg:v1.4.3:alexflint_go_arg/vendor/github.com/alexflint/go-arg \
                 alexflint:go-scalar:v1.1.0:alexflint_go_scalar/vendor/github.com/alexflint/go-scalar \
