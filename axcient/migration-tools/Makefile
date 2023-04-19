@@ -1,5 +1,5 @@
 PORTNAME=	migration-tools
-PORTVERSION=	0.1.0.20230223
+PORTVERSION=	0.1.0.20230419
 CATEGORIES=	axcient
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -19,7 +19,7 @@ USE_PYTHON=	autoplist distutils
 NO_ARCH=	yes
 
 GH_PROJECT=	migration-tools
-GH_TAGNAME=	dd7bc308a348f7d6eba58d9670898541f795048a
+GH_TAGNAME=	f68afaf6ed1abf70fbd8adfacbd1772a60e8a4d4
 
 
 do-test:
