@@ -13,6 +13,7 @@
 
 . /etc/rc.subr
 
+PATH="${PATH}:%%PREFIX%%/sbin"
 name=smartctl_exporter
 desc="SMART prometheus exporter"
 rcvar=smartctl_exporter_enable
@@ -31,11 +32,9 @@ start_precmd=smartctl_exporter_startprecmd
 
 smartctl_exporter_startprecmd()
 {
-    if [ -e ${pidfile} ]; then
-        chown ${smartctl_exporter_user}:${smartctl_exporter_group} ${pidfile};
-    else
-        install -o ${smartctl_exporter_user} -g ${smartctl_exporter_group} /dev/null ${pidfile};
-    fi
+	if [ ! -e ${pidfile} ]; then
+		install /dev/null ${pidfile};
+	fi
 }
 
 run_rc_command "$1"
