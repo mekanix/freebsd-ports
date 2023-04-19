@@ -13,6 +13,7 @@
 
 . /etc/rc.subr
 
+PATH="${PATH}:%%PREFIX%%/sbin"
 name=smartctl_exporter
 desc="SMART prometheus exporter"
 rcvar=smartctl_exporter_enable
