@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	vm-migrator
-PORTVERSION=	0.1.1.20221005
+PORTVERSION=	0.1.1.20230419
 CATEGORIES=	axcient
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -18,6 +18,6 @@ USE_PYTHON=	autoplist distutils
 NO_ARCH=	yes
 
 GH_PROJECT=	vm-migrator
-GH_TAGNAME=	fad6edda0532ec02a057d990176092cecb6be9cb
+GH_TAGNAME=	9c85e1af3cb84923199262fe8db64edd96ff501e
 
 .include <bsd.port.mk>
