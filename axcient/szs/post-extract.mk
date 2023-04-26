@@ -1,30 +1,4 @@
 post-extract:
 	@${RM} -r ${WRKSRC}/vendor/cloud.google.com/go/pubsub
 	@${RLN} ${WRKSRC_googleapis_google_cloud_go_pubsub}/pubsub ${WRKSRC}/vendor/cloud.google.com/go/pubsub
-	@${RM} -r ${WRKSRC}/vendor/github.com/Azure/azure-sdk-for-go/sdk/azcore
-	@${RLN} ${WRKSRC_azure_azure_sdk_for_go_azcore}/sdk/azcore ${WRKSRC}/vendor/github.com/Azure/azure-sdk-for-go/sdk/azcore
-	@${RM} -r ${WRKSRC}/vendor/github.com/Azure/azure-sdk-for-go/sdk/azidentity
-	@${RLN} ${WRKSRC_azure_azure_sdk_for_go_azidentity}/sdk/azidentity ${WRKSRC}/vendor/github.com/Azure/azure-sdk-for-go/sdk/azidentity
-	@${RM} -r ${WRKSRC}/vendor/github.com/Azure/azure-sdk-for-go/sdk/internal
-	@${RLN} ${WRKSRC_azure_azure_sdk_for_go_internal}/sdk/internal ${WRKSRC}/vendor/github.com/Azure/azure-sdk-for-go/sdk/internal
-	@${RM} -r ${WRKSRC}/vendor/github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/resources/armresources
-	@${RLN} ${WRKSRC_azure_azure_sdk_for_go_armresources}/sdk/resourcemanager/resources/armresources ${WRKSRC}/vendor/github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/resources/armresources
-	@${RM} -r ${WRKSRC}/vendor/github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/resources/armsubscriptions
-	@${RLN} ${WRKSRC_azure_azure_sdk_for_go_armsubscriptions}/sdk/resourcemanager/resources/armsubscriptions ${WRKSRC}/vendor/github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/resources/armsubscriptions
-	@${RM} -r ${WRKSRC}/vendor/github.com/Azure/go-autorest/autorest
-	@${RLN} ${WRKSRC_azure_go_autorest_autorest}/autorest ${WRKSRC}/vendor/github.com/Azure/go-autorest/autorest
-	@${RM} -r ${WRKSRC}/vendor/github.com/Azure/go-autorest/autorest/adal
-	@${RLN} ${WRKSRC_azure_go_autorest_adal}/autorest/adal ${WRKSRC}/vendor/github.com/Azure/go-autorest/autorest/adal
-	@${RM} -r ${WRKSRC}/vendor/github.com/Azure/go-autorest/autorest/azure/auth
-	@${RLN} ${WRKSRC_azure_go_autorest_auth}/autorest/azure/auth ${WRKSRC}/vendor/github.com/Azure/go-autorest/autorest/azure/auth
-	@${RM} -r ${WRKSRC}/vendor/github.com/Azure/go-autorest/autorest/azure/cli
-	@${RLN} ${WRKSRC_azure_go_autorest_cli}/autorest/azure/cli ${WRKSRC}/vendor/github.com/Azure/go-autorest/autorest/azure/cli
-	@${RM} -r ${WRKSRC}/vendor/github.com/Azure/go-autorest/autorest/date
-	@${RLN} ${WRKSRC_azure_go_autorest_date}/autorest/date ${WRKSRC}/vendor/github.com/Azure/go-autorest/autorest/date
-	@${RM} -r ${WRKSRC}/vendor/github.com/Azure/go-autorest/autorest/validation
-	@${RLN} ${WRKSRC_azure_go_autorest_validation}/autorest/validation ${WRKSRC}/vendor/github.com/Azure/go-autorest/autorest/validation
-	@${RM} -r ${WRKSRC}/vendor/github.com/Azure/go-autorest/logger
-	@${RLN} ${WRKSRC_azure_go_autorest_logger}/logger ${WRKSRC}/vendor/github.com/Azure/go-autorest/logger
-	@${RM} -r ${WRKSRC}/vendor/github.com/Azure/go-autorest/tracing
-	@${RLN} ${WRKSRC_azure_go_autorest_tracing}/tracing ${WRKSRC}/vendor/github.com/Azure/go-autorest/tracing
 
