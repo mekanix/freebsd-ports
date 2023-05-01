@@ -59,7 +59,11 @@ GHOSTSCRIPT_DEFAULT?=	agpl
 GL_DEFAULT?=		mesa-libs
 # Possible values: 1.18, 1.19, 1.20, 1.21-devel
 GO_DEFAULT?=		1.20
-# Possible values: 6, 6-nox11, 7, 7-nox11
+# Possible versions: 6, 7
+# Possible flavors:  x11, nox11
+#                    (defaults to x11 when not specified)
+# Format:	     version[-flavor]
+# Examples:	     6-nox11, 7
 IMAGEMAGICK_DEFAULT?=	7
 # Possible values: 7, 8, 11, 17, 18
 JAVA_DEFAULT?=		8
@@ -93,7 +97,7 @@ MONO_DEFAULT?=		5.10
 MYSQL_DEFAULT?=		8.0
 # Possible values: ninja, samurai
 NINJA_DEFAULT?=		ninja
-# Possible value: 14, 16, 18, 19, current, lts (Note: current = 19 and lts = 18)
+# Possible value: 14, 16, 18, 19, 20, current, lts (Note: current = 20 and lts = 18)
 NODEJS_DEFAULT?=	lts
 # Possible value: 24, 25, 26
 OPENLDAP_DEFAULT?=	26

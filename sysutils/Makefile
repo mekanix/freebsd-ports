@@ -166,6 +166,7 @@
     SUBDIR += byobu
     SUBDIR += calamares
     SUBDIR += catfish
+    SUBDIR += catsit
     SUBDIR += cbsd
     SUBDIR += cbsd-mq-api
     SUBDIR += cbsd-mq-router
@@ -339,6 +340,7 @@
     SUBDIR += dwatch-gource
     SUBDIR += dwatch-json
     SUBDIR += dwatch-pwsnoop
+    SUBDIR += dynamic_motd
     SUBDIR += e2fsprogs
     SUBDIR += e2fsprogs-core
     SUBDIR += e2tools
@@ -357,6 +359,7 @@
     SUBDIR += envconsul
     SUBDIR += epazote
     SUBDIR += equinix-metal-cli
+    SUBDIR += erdtree
     SUBDIR += etc_os-release
     SUBDIR += etcmerge
     SUBDIR += ethname
@@ -559,6 +562,7 @@
     SUBDIR += i7z
     SUBDIR += iat
     SUBDIR += iichid
+    SUBDIR += imgurbash2
     SUBDIR += immortal
     SUBDIR += incron
     SUBDIR += inotify-tools
@@ -672,6 +676,7 @@
     SUBDIR += linux-rkbin
     SUBDIR += linuxfdisk
     SUBDIR += lizardfs
+    SUBDIR += llama
     SUBDIR += lmmon
     SUBDIR += lmon
     SUBDIR += lnav
@@ -833,6 +838,7 @@
     SUBDIR += nrg2iso
     SUBDIR += nss_ndb
     SUBDIR += nsysctl
+    SUBDIR += ntfs2btrfs
     SUBDIR += ntfy
     SUBDIR += ntpstat
     SUBDIR += nut
@@ -1054,8 +1060,10 @@
     SUBDIR += puppet-mode.el
     SUBDIR += puppet6
     SUBDIR += puppet7
+    SUBDIR += puppet8
     SUBDIR += puppetserver6
     SUBDIR += puppetserver7
+    SUBDIR += puppetserver8
     SUBDIR += pv
     SUBDIR += pwd_unmkdb
     SUBDIR += pwgen
@@ -1113,7 +1121,6 @@
     SUBDIR += py-power
     SUBDIR += py-prometheus-zfs
     SUBDIR += py-psutil
-    SUBDIR += py-psutil121
     SUBDIR += py-ptyprocess
     SUBDIR += py-puremagic
     SUBDIR += py-py-cpuinfo
@@ -1516,7 +1523,6 @@
     SUBDIR += u-boot-sopine
     SUBDIR += u-boot-sopine-spi
     SUBDIR += u-boot-tools
-    SUBDIR += u-boot-utilite
     SUBDIR += u-boot-wandboard
     SUBDIR += ua
     SUBDIR += ucspi-ipc

@@ -1,5 +1,5 @@
 PORTNAME=	gcc
-PORTVERSION=	13.0.1.s20230416
+PORTVERSION=	13.0.1.s20230422
 CATEGORIES=	lang
 MASTER_SITES=	GCC/snapshots/${DIST_VERSION}
 PKGNAMESUFFIX=	${SUFFIX}-devel
@@ -26,6 +26,8 @@ BUILD_DEPENDS+=	runtest:misc/dejagnu
 USES=		compiler:c++11-lang cpe gmake iconv libtool makeinfo perl5 tar:xz
 USE_BINUTILS=	yes
 USE_PERL5=	build
+
+CONFLICTS=	gcc13
 
 CPE_VENDOR=	gnu
 CPE_VERSION=	${GCC_VERSION}

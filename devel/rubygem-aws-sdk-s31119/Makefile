@@ -1,5 +1,5 @@
 PORTNAME=	aws-sdk-s3
-PORTVERSION=	1.119.1
+PORTVERSION=	1.119.2
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 PKGNAMESUFFIX=	1119
@@ -19,6 +19,6 @@ USES=		gem
 
 NO_ARCH=	yes
 
-PORTSCOUT=	limit:^1\1.119\.
+PORTSCOUT=	limit:^1\.119\.
 
 .include <bsd.port.mk>

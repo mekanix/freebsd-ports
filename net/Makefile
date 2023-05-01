@@ -234,6 +234,7 @@
     SUBDIR += gupnp-av
     SUBDIR += gupnp-dlna
     SUBDIR += gupnp-igd
+    SUBDIR += gupnp-igd12
     SUBDIR += gupnp-tools
     SUBDIR += gupnp-ui
     SUBDIR += gupnp14
@@ -1141,6 +1142,7 @@
     SUBDIR += py-socketio-client
     SUBDIR += py-socksio
     SUBDIR += py-softlayer
+    SUBDIR += py-speedometer
     SUBDIR += py-speedtest-cli
     SUBDIR += py-sshtunnel
     SUBDIR += py-sshuttle
@@ -1532,6 +1534,7 @@
     SUBDIR += trafshow
     SUBDIR += trafshow3
     SUBDIR += trickle
+    SUBDIR += trippy
     SUBDIR += tsclient
     SUBDIR += tsctp
     SUBDIR += tsocks
@@ -1579,6 +1582,12 @@
     SUBDIR += webalizer-geodb
     SUBDIR += whois
     SUBDIR += widentd
+    SUBDIR += wifi-firmware-ath10k-kmod
+    SUBDIR += wifi-firmware-ath11k-kmod
+    SUBDIR += wifi-firmware-base
+    SUBDIR += wifi-firmware-mt76-kmod
+    SUBDIR += wifi-firmware-rtw88-kmod
+    SUBDIR += wifi-firmware-rtw89-kmod
     SUBDIR += wifibox
     SUBDIR += wifibox-alpine
     SUBDIR += wifibox-core

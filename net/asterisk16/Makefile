@@ -1,5 +1,6 @@
 PORTNAME=	asterisk
 PORTVERSION=	16.30.0
+PORTREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	https://downloads.asterisk.org/pub/telephony/%SUBDIR%/:DEFAULT,g729
 MASTER_SITE_SUBDIR=	asterisk/ \
@@ -12,6 +13,9 @@ DIST_SUBDIR=	${PORTNAME}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Open Source PBX and telephony toolkit
 WWW=		https://www.asterisk.org
+
+DEPRECATED=		Upstream EOL reaches on 2023-10-09
+EXPIRATION_DATE=	2023-12-31
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
