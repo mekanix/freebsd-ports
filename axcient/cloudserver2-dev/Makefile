@@ -18,6 +18,7 @@ CONFLICTS_INSTALL=	cloudserver2 \
 
 MASTERDIR=	${.CURDIR}/../cloudserver2
 
+GO_BUILDFLAGS=	-ldflags "-X=main.version=${PORTVERSION}"
 GO_TARGET=      cloudserver ./cmd/integritycheck
 
 # Disable checksum verification because this port builds from the tip of a
