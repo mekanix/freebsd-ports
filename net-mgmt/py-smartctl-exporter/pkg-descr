@@ -1,1 +1,2 @@
-smartctl_exporter exports smartctl json metrics to Prometheus.
+Export smartctl json as Prometheus metrics. This exporter is intended for large
+number of devices per server.
