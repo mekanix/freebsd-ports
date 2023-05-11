@@ -1,12 +1,12 @@
-# $FreeBSD$
-
 PORTNAME=	smartctl-exporter
-PORTVERSION=	0.0.3
+PORTVERSION=	0.0.4
 CATEGORIES=	net-mgmt
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	gmekic@axcient.com
 COMMENT=	Prometheus SMART exporter
+
+LICENSE=	AXCIENT
 
 RUN_DEPENDS=	smartctl:sysutils/smartmontools \
 		${PYTHON_PKGNAMEPREFIX}prometheus-client>=0.7.0:net-mgmt/py-prometheus-client@${PY_FLAVOR}
