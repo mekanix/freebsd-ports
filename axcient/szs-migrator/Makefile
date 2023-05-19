@@ -1,5 +1,5 @@
 PORTNAME=	szs-migrator
-PORTVERSION=	0.1.0.20230505
+PORTVERSION=	0.1.0.20230519
 CATEGORIES=	axcient
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -31,7 +31,7 @@ SUB_FILES=	900.szs-audit 900.szs-migrator-audit 900.szs-maintenance-auditor
 NO_ARCH=	yes
 
 GH_PROJECT=	replibit-tools
-GH_TAGNAME=	380a76068415b89f3a619a4bb11aae8aa56362a6
+GH_TAGNAME=	9b79ad3924b74c5b14f2bfd8f4a3ecac2759049a
 
 USE_RC_SUBR=	szs_rebalancer
 
