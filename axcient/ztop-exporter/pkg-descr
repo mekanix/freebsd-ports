@@ -1,0 +1,4 @@
+ZFS per-dataset performance exporter for Prometheus
+
+It exports all of the information displayed by ztop to Prometheus, using metric
+names that are compatible with node_exporter.

@@ -40,5 +40,6 @@
     SUBDIR += vt2
     SUBDIR += vt2-dev    
     SUBDIR += vt2-stg
+    SUBDIR += ztop-exporter
 
 .include <bsd.port.subdir.mk>
