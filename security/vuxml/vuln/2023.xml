@@ -1,3 +1,624 @@
+  <vuln vid="7d6be8d4-f812-11ed-a7ff-589cfc0f81b0">
+    <topic>phpmyfaq -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>phpmyfaq</name>
+	<range><lt>3.1.14</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>phpmyfaq developers report:</p>
+	<blockquote cite="https://www.phpmyfaq.de/security/advisory-2023-04-23">
+	  <p>Multiple XSS vulnerabilities</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://huntr.dev/bounties/4d89c7cc-fb4c-4b64-9b67-f0189f70a620/</url>
+      <url>https://huntr.dev/bounties/8282d78e-f399-4bf4-8403-f39103a31e78/</url>
+    </references>
+    <dates>
+      <discovery>2023-05-17</discovery>
+      <entry>2023-05-21</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="a4f8bb03-f52f-11ed-9859-080027083a05">
+    <topic>curl -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>curl</name>
+	<range><lt>8.1.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Wei Chong Tan, Harry Sintonen, and Hiroki Kurosawa reports:</p>
+	<blockquote cite="https://curl.se/docs/security.html">
+	  <p>This update fixes 4 security vulnerabilities:</p>
+	    <ul>
+	      <li>Medium CVE-2023-28319: UAF in SSH sha256 fingerprint check. Reported by Wei Chong Tan on 2023-03-21</li>
+	      <li>Low CVE-2023-28320: siglongjmp race condition. Reported by Harry Sintonen on 2023-04-02</li>
+	      <li>Low CVE-2023-28321: IDN wildcard match. Reported by Hiroki Kurosawa on 2023-04-17</li>
+	      <li>Low CVE-2023-28322: more POST-after-PUT confusion. Reported by Hiroki Kurosawa on 2023-04-19</li>
+	    </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-28319</cvename>
+	<url>https://curl.se/docs/CVE-2023-28319.html</url>
+	<cvename>CVE-2023-28320</cvename>
+	<url>https://curl.se/docs/CVE-2023-28320.html</url>
+	<cvename>CVE-2023-28321</cvename>
+	<url>https://curl.se/docs/CVE-2023-28321.html</url>
+	<cvename>CVE-2023-28322</cvename>
+	<url>https://curl.se/docs/CVE-2023-28322.html</url>
+    </references>
+    <dates>
+      <discovery>2023-03-21</discovery>
+      <entry>2023-05-19</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="1ab7357f-a3c2-406a-89fb-fd00e49a71b5">
+    <topic>zeek -- potential DoS vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>zeek</name>
+	<range><lt>5.0.9</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Tim Wojtulewicz of Corelight reports:</p>
+	<blockquote cite="https://github.com/zeek/zeek/releases/tag/v5.0.9">
+	  <p> A specially-crafted series of FTP packets with a CMD
+	  command with a large path followed by a very large number
+	  of replies could cause Zeek to spend a long time processing
+	  the data. </p>
+	  <p> A specially-crafted with a truncated header can cause
+	  Zeek to overflow memory and potentially crash. </p>
+	  <p> A specially-crafted series of SMTP packets can cause
+	  Zeek to generate a very large number of events and take
+	  a long time to process them. </p>
+	  <p> A specially-crafted series of POP3 packets containing
+	  MIME data can cause Zeek to spend a long time dealing
+	  with each individual file ID. </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://github.com/zeek/zeek/releases/tag/v5.0.9</url>
+    </references>
+    <dates>
+      <discovery>2023-05-19</discovery>
+      <entry>2023-05-19</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="b09d77d0-b27c-48ae-b69b-9641bb68b39e">
+    <topic>electron -- vulnerability</topic>
+    <affects>
+      <package>
+	<name>electron22</name>
+	<range><lt>22.3.10</lt></range>
+      </package>
+      <package>
+	<name>electron23</name>
+	<range><lt>23.3.3</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Electron developers report:</p>
+	<blockquote cite="https://github.com/electron/electron/releases/tag/v22.3.10">
+	  <p>This update fixes the following vulnerability:</p>
+	  <ul>
+	    <li>Security: backported fix for CVE-2023-29469</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-29469</cvename>
+      <url>https://github.com/advisories/GHSA-7jv7-hr35-fwjr</url>
+    </references>
+    <dates>
+      <discovery>2023-05-17</discovery>
+      <entry>2023-05-18</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="bea52545-f4a7-11ed-8290-a8a1599412c6">
+    <topic>chromium -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+       <name>chromium</name>
+       <range><lt>113.0.5672.126</lt></range>
+      </package>
+      <package>
+       <name>ungoogled-chromium</name>
+       <range><lt>113.0.5672.126</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Chrome Releases reports:</p>
+       <blockquote cite="https://chromereleases.googleblog.com/2023/05/stable-channel-update-for-desktop_16.html">
+	 <p>This update includes 12 security fixes:</p>
+	 <ul>
+	    <li>[1444360] Critical CVE-2023-2721: Use after free in Navigation. Reported by Guang Gong of Alpha Lab, Qihoo 360 on 2023-05-10</li>
+	    <li>[1400905] High CVE-2023-2722: Use after free in Autofill UI. Reported by Rong Jian of VRI on 2022-12-14</li>
+	    <li>[1435166] High CVE-2023-2723: Use after free in DevTools. Reported by asnine on 2023-04-21</li>
+	    <li>[1433211] High CVE-2023-2724: Type Confusion in V8. Reported by Sergei Glazunov of Google Project Zero on 2023-04-14</li>
+	    <li>[1442516] High CVE-2023-2725: Use after free in Guest View. Reported by asnine on 2023-05-04</li>
+	    <li>[1442018] Medium CVE-2023-2726: Inappropriate implementation in WebApp Installs. Reported by Ahmed ElMasry on 2023-05-03</li>
+	 </ul>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-2721</cvename>
+      <cvename>CVE-2023-2722</cvename>
+      <cvename>CVE-2023-2723</cvename>
+      <cvename>CVE-2023-2724</cvename>
+      <cvename>CVE-2023-2725</cvename>
+      <cvename>CVE-2023-2726</cvename>
+      <url>https://chromereleases.googleblog.com/2023/05/stable-channel-update-for-desktop_16.html</url>
+    </references>
+    <dates>
+      <discovery>2023-05-16</discovery>
+      <entry>2023-05-17</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="4a08a4fb-f152-11ed-9c88-001b217b3468">
+    <topic>Gitlab -- Vulnerability</topic>
+    <affects>
+      <package>
+	<name>gitlab-ce</name>
+	<range><ge>15.11.0</ge><lt>15.11.3</lt></range>
+	<range><ge>15.10.0</ge><lt>15.10.7</lt></range>
+	<range><ge>9.0</ge><lt>15.9.8</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Gitlab reports:</p>
+	<blockquote cite="https://about.gitlab.com/releases/2023/05/10/security-release-gitlab-15-11-3-released/">
+	  <p>Smuggling code changes via merge requests with refs/replace</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-2181</cvename>
+      <url>https://about.gitlab.com/releases/2023/05/10/security-release-gitlab-15-11-3-released/</url>
+    </references>
+    <dates>
+      <discovery>2023-05-10</discovery>
+      <entry>2023-05-13</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="ec63bc8e-f092-11ed-85ca-001517a2e1a4">
+    <topic>piwigo -- SQL injection</topic>
+    <affects>
+      <package>
+	<name>piwigo</name>
+	<range><lt>13.7.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Piwigo reports:</p>
+	<blockquote cite="https://www.piwigo.org/release-13.7.0">
+	  <p>Piwigo is affected by multiple SQL injection issues.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://www.piwigo.org/release-13.7.0</url>
+    </references>
+    <dates>
+      <discovery>2023-03-01</discovery>
+      <entry>2023-05-12</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="4b636f50-f011-11ed-bbae-6cc21735f730">
+    <topic>postgresql-server -- Row security policies disregard user ID changes after inlining</topic>
+    <affects>
+      <package>
+	<name>postgresql-server</name>
+	<range><lt>15.3</lt></range>
+	<range><lt>14.8</lt></range>
+	<range><lt>13.11</lt></range>
+	<range><lt>12.15</lt></range>
+	<range><lt>11.20</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>PostgreSQL Project reports</p>
+	<blockquote cite="https://www.postgresql.org/support/security/CVE-2023-2455/">
+	  <p>
+	    While CVE-2016-2193 fixed most interaction between row security and
+	    user ID changes, it missed a scenario involving function
+	    inlining. This leads to potentially incorrect policies being
+	    applied in cases where role-specific policies are used and a
+	    given query is planned under one role and then executed under
+	    other roles. This scenario can happen under security definer
+	    functions or when a common user and query is planned
+	    initially and then re-used across multiple SET ROLEs.
+	    Applying an incorrect policy may permit a user to complete
+	    otherwise-forbidden reads and modifications. This affects
+	    only databases that have used CREATE POLICY to define a row
+	    security policy.
+	  </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-2455</cvename>
+      <url>https://www.postgresql.org/support/security/CVE-2023-2455/</url>
+    </references>
+    <dates>
+      <discovery>2023-05-11</discovery>
+      <entry>2023-05-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="fbb5a260-f00f-11ed-bbae-6cc21735f730">
+    <topic>postgresql-server -- CREATE SCHEMA ... schema elements defeats protective search_path changes</topic>
+    <affects>
+      <package>
+	<name>postgresql-server</name>
+	<range><lt>15.3</lt></range>
+	<range><lt>14.8</lt></range>
+	<range><lt>13.11</lt></range>
+	<range><lt>12.15</lt></range>
+	<range><lt>11.20</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>PostgreSQL Project reports</p>
+	<blockquote cite="https://www.postgresql.org/support/security/CVE-2023-2454/">
+	  <p>
+	    This enabled an attacker having database-level CREATE
+	    privilege to execute arbitrary code as the bootstrap
+	    superuser. Database owners have that right by default,
+	    and explicit grants may extend it to other users.
+	  </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-2454</cvename>
+      <url>https://www.postgresql.org/support/security/CVE-2023-2454/</url>
+    </references>
+    <dates>
+      <discovery>2023-05-11</discovery>
+      <entry>2023-05-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="7913fe6d-2c6e-40ba-a7d7-35696f3db2b6">
+    <topic>vscode -- Visual Studio Code Information Disclosure Vulnerability</topic>
+    <affects>
+      <package>
+	<name>vscode</name>
+	<range><lt>1.78.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>secure@microsoft.com reports:</p>
+	<blockquote cite="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-29338">
+	  <p>Visual Studio Code Information Disclosure Vulnerability</p>
+	  <p>A information disclosure vulnerability exists in VS Code 1.78.0 and earlier versions on Windows when file system operations are performed on malicious UNC paths. Examples include reading or resolving metadata of such paths. An authorised attacker must send the user a malicious file and convince the user to open it for the vulnerability to occur. Exploiting this vulnerability could allow the disclosure of NTLM hashes.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-29338</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2023-29338</url>
+      <url>https://github.com/microsoft/vscode/security/advisories/GHSA-mmfh-4pv3-39hr</url>
+    </references>
+    <dates>
+      <discovery>2023-05-09</discovery>
+      <entry>2023-05-10</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="68958e18-ed94-11ed-9688-b42e991fc52e">
+    <topic>glpi -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>glpi</name>
+	<range><lt>10.0.7</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>glpi Project reports:</p>
+	<blockquote cite="https://github.com/glpi-project/glpi/releases/tag/10.0.7">
+	  <p>Multiple vulnerabilities found and fixed in this version:</p>
+	  <ul>
+	    <li>High CVE-2023-28849: SQL injection and Stored XSS via inventory agent request.</li>
+	    <li>High CVE-2023-28632: Account takeover by authenticated user.</li>
+	    <li>High CVE-2023-28838: SQL injection through dynamic reports.</li>
+	    <li>Moderate CVE-2023-28852: Stored XSS through dashboard administration.</li>
+	    <li>Moderate CVE-2023-28636: Stored XSS on external links.</li>
+	    <li>Moderate CVE-2023-28639: Reflected XSS in search pages.</li>
+	    <li>Moderate CVE-2023-28634: Privilege Escalation from technician to super-admin.</li>
+	    <li>Low CVE-2023-28633: Blind Server-Side Request Forgery (SSRF) in RSS feeds.</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-28849</cvename>
+      <url>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28849</url>
+      <cvename>CVE-2023-28632</cvename>
+      <url>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28632</url>
+      <cvename>CVE-2023-28838</cvename>
+      <url>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28838</url>
+      <cvename>CVE-2023-28852</cvename>
+      <url>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28852</url>
+      <cvename>CVE-2023-28636</cvename>
+      <url>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28636</url>
+      <cvename>CVE-2023-28639</cvename>
+      <url>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28639</url>
+      <cvename>CVE-2023-28634</cvename>
+      <url>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28634</url>
+    </references>
+    <dates>
+      <discovery>2023-03-20</discovery>
+      <entry>2023-05-08</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="96b2d4db-ddd2-11ed-b6ea-080027f5fec9">
+    <topic>redis -- HINCRBYFLOAT can be used to crash a redis-server process</topic>
+    <affects>
+      <package>
+	<name>redis</name>
+	<range><lt>7.0.11</lt></range>
+      </package>
+      <package>
+	<name>redis62</name>
+	<range><lt>6.2.12</lt></range>
+      </package>
+      <package>
+	<name>redis6</name>
+	<range><lt>6.0.19</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Redis core team reports:</p>
+	<blockquote cite="https://github.com/redis/redis/security/advisories/GHSA-hjv8-vjf6-wcr6">
+	  <p>
+	    Authenticated users can use the HINCRBYFLOAT command to
+	    create an invalid hash field that may later crash Redis on
+	    access.
+	  </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-28856</cvename>
+      <url>https://github.com/redis/redis/security/advisories/GHSA-hjv8-vjf6-wcr6</url>
+    </references>
+    <dates>
+      <discovery>2023-04-17</discovery>
+      <entry>2023-05-08</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="89fdbd85-ebd2-11ed-9c88-001b217b3468">
+    <topic>Gitlab -- Multiple Vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>gitlab-ce</name>
+	<range><ge>15.11.0</ge><lt>15.11.2</lt></range>
+	<range><ge>15.10.0</ge><lt>15.10.6</lt></range>
+	<range><ge>9.0</ge><lt>15.9.7</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Gitlab reports:</p>
+	<blockquote cite="https://about.gitlab.com/releases/2023/05/05/critical-security-release-gitlab-15-11-2-released/">
+	  <p>Malicious Runner Attachment via GraphQL</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-2478</cvename>
+      <url>https://about.gitlab.com/releases/2023/05/05/critical-security-release-gitlab-15-11-2-released/</url>
+    </references>
+    <dates>
+      <discovery>2023-05-05</discovery>
+      <entry>2023-05-06</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="d55e1b4d-eadc-11ed-9cc0-080027de9982">
+    <topic>Django -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>py37-django32</name>
+	<name>py38-django32</name>
+	<name>py39-django32</name>
+	<name>py310-django32</name>
+	<name>py311-django32</name>
+	<range><lt>3.2.19</lt></range>
+      </package>
+      <package>
+	<name>py38-django41</name>
+	<name>py39-django41</name>
+	<name>py310-django41</name>
+	<name>py311-django41</name>
+	<range><lt>4.1.9</lt></range>
+      </package>
+      <package>
+	<name>py38-django42</name>
+	<name>py39-django42</name>
+	<name>py310-django42</name>
+	<name>py311-django42</name>
+	<range><lt>4.2.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Django reports:</p>
+	<blockquote cite="https://www.djangoproject.com/weblog/2023/may/03/security-releases/">
+	  <p>CVE-2023-31047: Potential bypass of validation when uploading multiple
+	    files using one form field.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-31047</cvename>
+      <url>https://www.djangoproject.com/weblog/2023/may/03/security-releases/</url>
+    </references>
+    <dates>
+      <discovery>2023-05-01</discovery>
+      <entry>2023-05-05</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="246174d3-e979-11ed-8290-a8a1599412c6">
+    <topic>chromium -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+       <name>chromium</name>
+       <range><lt>113.0.5672.63</lt></range>
+      </package>
+      <package>
+       <name>ungoogled-chromium</name>
+       <range><lt>113.0.5672.63</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Chrome Releases reports:</p>
+       <blockquote cite="https://chromereleases.googleblog.com/2023/05/stable-channel-update-for-desktop.html">
+	 <p>This update includes 15 security fixes:</p>
+	 <ul>
+	    <li>[1423304] Medium CVE-2023-2459: Inappropriate implementation in Prompts. Reported by Rong Jian of VRI on 2023-03-10</li>
+	    <li>[1419732] Medium CVE-2023-2460: Insufficient validation of untrusted input in Extensions. Reported by Martin Bajanik, Fingerprint[.]com on 2023-02-27</li>
+	    <li>[1350561] Medium CVE-2023-2461: Use after free in OS Inputs. Reported by @ginggilBesel on 2022-08-06</li>
+	    <li>[1375133] Medium CVE-2023-2462: Inappropriate implementation in Prompts. Reported by Alesandro Ortiz on 2022-10-17</li>
+	    <li>[1406120] Medium CVE-2023-2463: Inappropriate implementation in Full Screen Mode. Reported by Irvan Kurniawan (sourc7) on 2023-01-10</li>
+	    <li>[1418549] Medium CVE-2023-2464: Inappropriate implementation in PictureInPicture. Reported by Thomas Orlita on 2023-02-23</li>
+	    <li>[1399862] Medium CVE-2023-2465: Inappropriate implementation in CORS. Reported by @kunte_ctf on 2022-12-10</li>
+	    <li>[1385714] Low CVE-2023-2466: Inappropriate implementation in Prompts. Reported by Jasper Rebane (popstonia) on 2022-11-17</li>
+	    <li>[1413586] Low CVE-2023-2467: Inappropriate implementation in Prompts. Reported by Thomas Orlita on 2023-02-07</li>
+	    <li>[1416380] Low CVE-2023-2468: Inappropriate implementation in PictureInPicture. Reported by Alesandro Ortiz on 2023-02-15</li>
+	 </ul>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-2459</cvename>
+      <cvename>CVE-2023-2460</cvename>
+      <cvename>CVE-2023-2461</cvename>
+      <cvename>CVE-2023-2462</cvename>
+      <cvename>CVE-2023-2463</cvename>
+      <cvename>CVE-2023-2464</cvename>
+      <cvename>CVE-2023-2465</cvename>
+      <cvename>CVE-2023-2466</cvename>
+      <cvename>CVE-2023-2467</cvename>
+      <cvename>CVE-2023-2468</cvename>
+      <url>https://chromereleases.googleblog.com/2023/05/stable-channel-update-for-desktop.html</url>
+    </references>
+    <dates>
+      <discovery>2023-05-03</discovery>
+      <entry>2023-05-03</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="4ffcccae-e924-11ed-9c88-001b217b3468">
+    <topic>Gitlab -- Multiple Vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>gitlab-ce</name>
+	<range><ge>15.11.0</ge><lt>15.11.1</lt></range>
+	<range><ge>15.10.0</ge><lt>15.10.5</lt></range>
+	<range><ge>9.0</ge><lt>15.9.6</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Gitlab reports:</p>
+	<blockquote cite="https://about.gitlab.com/releases/2023/05/02/security-release-gitlab-15-11-1-released/">
+	  <p>Privilege escalation for external users when OIDC is enabled under certain conditions</p>
+	  <p>Account takeover through open redirect for Group SAML accounts</p>
+	  <p>Users on banned IP addresses can still commit to projects</p>
+	  <p>User with developer role (group) can modify Protected branches setting on imported project and leak group CI/CD variables</p>
+	  <p>The Gitlab web interface does not guarantee file integrity when downloading source code or installation packages from a tag or from a release.</p>
+	  <p>Banned group member continues to have access to the public projects of a public group with the access level as same as before the ban.</p>
+	  <p>The main branch of a repository with a specially designed name allows an attacker to create repositories with malicious code.</p>
+	  <p>XSS and content injection and iframe injection when viewing raw files on iOS devices</p>
+	  <p>Authenticated users can find other users by their private email</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-2182</cvename>
+      <cvename>CVE-2023-1965</cvename>
+      <cvename>CVE-2023-1621</cvename>
+      <cvename>CVE-2023-2069</cvename>
+      <cvename>CVE-2023-1178</cvename>
+      <cvename>CVE-2023-0805</cvename>
+      <cvename>CVE-2023-0756</cvename>
+      <cvename>CVE-2023-1836</cvename>
+      <cvename>CVE-2022-4376</cvename>
+      <url>https://about.gitlab.com/releases/2023/05/02/security-release-gitlab-15-11-1-released/</url>
+    </references>
+    <dates>
+      <discovery>2023-05-02</discovery>
+      <entry>2023-05-02</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="02562a78-e6b7-11ed-b0ce-b42e991fc52e">
+    <topic>cloud-init -- sensitive data exposure in cloud-init logs</topic>
+    <affects>
+      <package>
+	<name>cloud-init</name>
+	<range><lt>23.1.2</lt></range>
+      </package>
+      <package>
+	<name>cloud-init-devel</name>
+	<range><lt>23.1.2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>security@ubuntu.com reports:</p>
+	<blockquote cite="https://bugs.launchpad.net/cloud-init/+bug/2013967">
+	  <p>Sensitive data could be exposed in logs of cloud-init before version
+	23.1.2.  An attacker could use this information to find hashed
+	passwords and possibly escalate their privilege.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-1786</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2023-1786</url>
+    </references>
+    <dates>
+      <discovery>2023-04-26</discovery>
+      <entry>2023-04-29</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="4da51989-5a8b-4eb9-b442-46d94ec0802d">
       <topic>h2o -- Malformed HTTP/1.1 causes Out-of-Memory Denial of Service</topic>
     <affects>
@@ -4144,7 +4765,7 @@
       </package>
     </affects>
     <description>
-      <body>
+      <body xmlns="http://www.w3.org/1999/xhtml">
 	<p>MinIO reports:</p>
 	<blockquote cite="https://github.com/minio/minio/security/advisories/GHSA-2j69-jjmg-534q">
 	  <p>

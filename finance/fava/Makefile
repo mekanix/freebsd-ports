@@ -1,6 +1,5 @@
 PORTNAME=	fava
-PORTVERSION=	1.23.1
-PORTREVISION=	1
+PORTVERSION=	1.24.4
 CATEGORIES=	finance
 MASTER_SITES=	PYPI
 
@@ -31,6 +30,7 @@ USE_PYTHON=	autoplist distutils noflavors
 
 # Upstream archive contains files with UTF-8 names
 EXTRACT_CMD=	${SETENV} LC_ALL=en_US.UTF-8 /usr/bin/bsdtar
+NO_ARCH=	yes
 
 post-patch:
 	@${ECHO_CMD} "from setuptools import setup" > ${WRKSRC}/setup.py

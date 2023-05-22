@@ -50,7 +50,7 @@
 # Exported variables:
 #
 # PYTHON_VERSION	- The chosen Python interpreter including the version,
-#			  e.g. python2.7, python3.5, etc.
+#			  e.g. python2.7, python3.7, etc.
 #
 # Variables, which can be set by the port:
 #
@@ -217,10 +217,10 @@
 # PYTHON_PORTSDIR	- The port directory of the chosen Python interpreter
 #
 # PYTHON_REL		- The release number of the chosen Python interpreter
-#			  without dots, e.g. 20706, 30401, ...
+#			  without dots, e.g. 20706, 30701, ...
 #
 # PYTHON_SUFFIX		- The major-minor release number of the chosen Python
-#			  interpreter without dots, e.g. 27, 36, ...
+#			  interpreter without dots, e.g. 27, 37, ...
 #			  Used for prefixes and suffixes.
 #
 # PYTHON_MAJOR_VER	- The major release version of the chosen Python
@@ -527,7 +527,7 @@ PYTHON_PORTSDIR=	${_PYTHON_RELPORTDIR}${PYTHON_SUFFIX}
 .include "${PORTSDIR}/${PYTHON_PORTSDIR}/Makefile.version"
 .  endif
 # Create a 5 integer version string, prefixing 0 to the minor and patch
-# tokens if it's a single character. Only use the the first 3 tokens of
+# tokens if it's a single character. Only use the first 3 tokens of
 # PORTVERSION to support pre-release versions (rc3, alpha4, etc) of
 # any Python port (lang/pythonXY)
 PYTHON_REL=	${PYTHON_DISTVERSION:C/^([0-9]+\.[0-9]+\.[0-9]+).*/\1/:C/\.([0-9])$/.0\1/:C/\.([0-9]\.[0-9]+)/.0\1/:S/.//g}
@@ -909,7 +909,9 @@ do-install:
 	@cd ${INSTALL_WRKSRC} && ${SETENV} ${MAKE_ENV} ${PEP517_INSTALL_CMD}
 	@${PYTHON_CMD} -B ${PORTSDIR}/Mk/Scripts/strip_RECORD.py \
 		${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/${PORTNAME:C|[-_]+|_|g}-${DISTVERSION}*.dist-info/RECORD >> ${_PYTHONPKGLIST}
-	@${REINPLACE_CMD} -e 's|^|${PYTHONPREFIX_SITELIBDIR}/|' \
+	@${REINPLACE_CMD} \
+		-e '/\.pyc$$/d' \
+		-e 's|^|${PYTHONPREFIX_SITELIBDIR}/|' \
 		-e 's|^${PYTHONPREFIX_SITELIBDIR}/../../../etc/|etc/|' \
 		-e 's|^${PYTHONPREFIX_SITELIBDIR}/../../../bin/|bin/|' \
 		-e 's|^${PYTHONPREFIX_SITELIBDIR}/../../../include/|include/|' \
@@ -919,7 +921,7 @@ do-install:
 		-e 's|^${PYTHONPREFIX_SITELIBDIR}/../../../man/|man/|' \
 		-e 's|^${PYTHONPREFIX_SITELIBDIR}/../../../sbin/|sbin/|' \
 		-e 's|^${PYTHONPREFIX_SITELIBDIR}/../../../share/|share/|' \
-		${_PYTHONPKGLIST}
+			${_PYTHONPKGLIST}
 	@cd ${STAGEDIR}${PREFIX} && ${FIND} lib -name '*.pyc' >> ${_PYTHONPKGLIST}
 .    endif
 .  endif # defined(_PYTHON_FEATURE_PEP517)

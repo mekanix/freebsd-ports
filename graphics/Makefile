@@ -92,7 +92,6 @@
     SUBDIR += cairo
     SUBDIR += cairomm
     SUBDIR += cal3d
-    SUBDIR += camera
     SUBDIR += camerakit
     SUBDIR += cbonsai
     SUBDIR += cbviewer
@@ -852,6 +851,8 @@
     SUBDIR += py-cartopy
     SUBDIR += py-cogdumper
     SUBDIR += py-colorcet
+    SUBDIR += py-colorthief
+    SUBDIR += py-colorz
     SUBDIR += py-colour
     SUBDIR += py-descartes
     SUBDIR += py-django-easy-thumbnails
@@ -878,6 +879,7 @@
     SUBDIR += py-graphy
     SUBDIR += py-gvgen
     SUBDIR += py-h3
+    SUBDIR += py-haishoku
     SUBDIR += py-hiplot
     SUBDIR += py-imageio
     SUBDIR += py-imageio-ffmpeg
@@ -1074,6 +1076,7 @@
     SUBDIR += scrot
     SUBDIR += scwm-icons
     SUBDIR += sdl2_gfx
+    SUBDIR += sdl2_gpu
     SUBDIR += sdl2_image
     SUBDIR += sdl2_ttf
     SUBDIR += sdl_gfx

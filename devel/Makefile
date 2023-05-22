@@ -31,6 +31,7 @@
     SUBDIR += R-cran-cliapp
     SUBDIR += R-cran-clipr
     SUBDIR += R-cran-clisymbols
+    SUBDIR += R-cran-clock
     SUBDIR += R-cran-collapse
     SUBDIR += R-cran-covr
     SUBDIR += R-cran-cpp11
@@ -125,6 +126,7 @@
     SUBDIR += R-cran-tibble
     SUBDIR += R-cran-tidyr
     SUBDIR += R-cran-tidyselect
+    SUBDIR += R-cran-timechange
     SUBDIR += R-cran-tinytest
     SUBDIR += R-cran-tzdb
     SUBDIR += R-cran-usethis
@@ -599,6 +601,7 @@
     SUBDIR += electron21
     SUBDIR += electron22
     SUBDIR += electron23
+    SUBDIR += electron24
     SUBDIR += elf
     SUBDIR += elf-dissector
     SUBDIR += elfcat
@@ -837,7 +840,6 @@
     SUBDIR += gitg
     SUBDIR += github-backup-utils
     SUBDIR += gitinspector
-    SUBDIR += gitklient
     SUBDIR += gitlab-metrics-exporter
     SUBDIR += gitlab-runner
     SUBDIR += gitlab-shell
@@ -1105,6 +1107,7 @@
     SUBDIR += kms-cmake-utils
     SUBDIR += kodi-platform
     SUBDIR += kokkos
+    SUBDIR += kommit
     SUBDIR += kore
     SUBDIR += kpublictransport
     SUBDIR += kronosnet
@@ -4167,6 +4170,7 @@
     SUBDIR += py-PyUtilib
     SUBDIR += py-QtPy
     SUBDIR += py-RPyC
+    SUBDIR += py-strenum
     SUBDIR += py-ZopeUndo
     SUBDIR += py-about-time
     SUBDIR += py-absl
@@ -4259,6 +4263,7 @@
     SUBDIR += py-azure-mgmt-advisor
     SUBDIR += py-azure-mgmt-apimanagement
     SUBDIR += py-azure-mgmt-appconfiguration
+    SUBDIR += py-azure-mgmt-appcontainers
     SUBDIR += py-azure-mgmt-applicationinsights
     SUBDIR += py-azure-mgmt-authorization
     SUBDIR += py-azure-mgmt-batch
@@ -4399,6 +4404,7 @@
     SUBDIR += py-cdg
     SUBDIR += py-celery
     SUBDIR += py-celery-progress
+    SUBDIR += py-celery-singleton
     SUBDIR += py-cerberus
     SUBDIR += py-certsrv
     SUBDIR += py-cffi
@@ -4538,8 +4544,6 @@
     SUBDIR += py-diskcache
     SUBDIR += py-distlib
     SUBDIR += py-distributed
-    SUBDIR += py-dj40-django-rq
-    SUBDIR += py-dj40-graphene-django
     SUBDIR += py-dj41-django-rq
     SUBDIR += py-dj41-graphene-django
     SUBDIR += py-django-rq
@@ -5186,6 +5190,7 @@
     SUBDIR += py-pycomplete
     SUBDIR += py-pycparser
     SUBDIR += py-pydantic
+    SUBDIR += py-pydantic-core
     SUBDIR += py-pydash
     SUBDIR += py-pydecor
     SUBDIR += py-pydenticon
@@ -5372,6 +5377,7 @@
     SUBDIR += py-pyvisa
     SUBDIR += py-pyvisa-py
     SUBDIR += py-pyxb
+    SUBDIR += py-pyxb-x
     SUBDIR += py-pyyaml-include
     SUBDIR += py-pyyaml5
     SUBDIR += py-pyyaml_env_tag
@@ -5432,6 +5438,7 @@
     SUBDIR += py-rfc3339
     SUBDIR += py-rfc3339-validator
     SUBDIR += py-rfc3986-validator
+    SUBDIR += py-rich-click
     SUBDIR += py-robotframework
     SUBDIR += py-robotframework-databaselibrary
     SUBDIR += py-robotframework-pabot
@@ -5617,6 +5624,7 @@
     SUBDIR += py-types-cryptography
     SUBDIR += py-types-docutils
     SUBDIR += py-types-futures
+    SUBDIR += py-types-jsonschema
     SUBDIR += py-types-mock
     SUBDIR += py-types-protobuf
     SUBDIR += py-types-psutil
@@ -6294,6 +6302,7 @@
     SUBDIR += rubygem-aws-sdk-route53resolver
     SUBDIR += rubygem-aws-sdk-s3
     SUBDIR += rubygem-aws-sdk-s31119
+    SUBDIR += rubygem-aws-sdk-s31121
     SUBDIR += rubygem-aws-sdk-s3control
     SUBDIR += rubygem-aws-sdk-s3outposts
     SUBDIR += rubygem-aws-sdk-sagemaker
@@ -6572,6 +6581,7 @@
     SUBDIR += rubygem-coffee-script-source
     SUBDIR += rubygem-colorize
     SUBDIR += rubygem-columnize
+    SUBDIR += rubygem-corefoundation
     SUBDIR += rubygem-commander
     SUBDIR += rubygem-concurrent-ruby
     SUBDIR += rubygem-concurrent-ruby-edge
@@ -6780,6 +6790,7 @@
     SUBDIR += rubygem-gobject-introspection
     SUBDIR += rubygem-google-api-client
     SUBDIR += rubygem-google-apis-androidpublisher_v3
+    SUBDIR += rubygem-google-apis-androidpublisher_v3034
     SUBDIR += rubygem-google-apis-bigquery_v2
     SUBDIR += rubygem-google-apis-cloudbilling_v1
     SUBDIR += rubygem-google-apis-cloudresourcemanager_v1
@@ -7158,6 +7169,7 @@
     SUBDIR += rubygem-rubocop
     SUBDIR += rubygem-rubocop-ast
     SUBDIR += rubygem-rubocop-capybara
+    SUBDIR += rubygem-rubocop-factory_bot
     SUBDIR += rubygem-rubocop-performance
     SUBDIR += rubygem-rubocop-rake
     SUBDIR += rubygem-rubocop-rspec

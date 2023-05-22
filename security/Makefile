@@ -196,7 +196,7 @@
     SUBDIR += gpgdir
     SUBDIR += gpgme
     SUBDIR += gpgme-cpp
-    SUBDIR += gpgme-qt5
+    SUBDIR += gpgme-qt
     SUBDIR += gsa
     SUBDIR += gsad
     SUBDIR += gsasl
@@ -238,6 +238,7 @@
     SUBDIR += ipsec-tools
     SUBDIR += ipv6toolkit
     SUBDIR += isal-kmod
+    SUBDIR += ismtp
     SUBDIR += isnprober
     SUBDIR += john
     SUBDIR += kbfsd
@@ -918,6 +919,7 @@
     SUBDIR += py-iris-check-module
     SUBDIR += py-iris-client
     SUBDIR += py-iris-evtx-module
+    SUBDIR += py-iris-intelowl-module
     SUBDIR += py-iris-misp-module
     SUBDIR += py-iris-module-interface
     SUBDIR += py-iris-vt-module
@@ -938,6 +940,7 @@
     SUBDIR += py-msoffcrypto-tool
     SUBDIR += py-muacrypt
     SUBDIR += py-nassl
+    SUBDIR += py-netbox-secrets
     SUBDIR += py-netbox-secretstore
     SUBDIR += py-netmiko
     SUBDIR += py-noiseprotocol
@@ -1293,6 +1296,7 @@
     SUBDIR += tinc-devel
     SUBDIR += tinyca
     SUBDIR += tls-check
+    SUBDIR += tlsc
     SUBDIR += tor
     SUBDIR += tor-devel
     SUBDIR += totp-cli

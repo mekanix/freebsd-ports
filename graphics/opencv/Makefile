@@ -1,7 +1,10 @@
 PORTNAME=	opencv
 DISTVERSION=	4.6.0
-PORTREVISION=	7
+PORTREVISION=	9
 CATEGORIES=	graphics
+
+PATCH_SITES=	https://github.com/${PORTNAME}/${PORTNAME}/commit/
+PATCHFILES=	496eed950f6d0e7fd92619d47e3cec8f06e96ace.patch:-p1
 
 MAINTAINER=	desktop@FreeBSD.org
 COMMENT=	Open Source Computer Vision library

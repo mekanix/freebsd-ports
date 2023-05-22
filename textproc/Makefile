@@ -1378,6 +1378,7 @@
     SUBDIR += py-jsx-lexer
     SUBDIR += py-jtextfsm
     SUBDIR += py-junit-xml
+    SUBDIR += py-jupyter_sphinx
     SUBDIR += py-jupyterlab-pygments
     SUBDIR += py-langdetect
     SUBDIR += py-langid
@@ -1499,6 +1500,7 @@
     SUBDIR += py-readchar
     SUBDIR += py-recommonmark
     SUBDIR += py-regex
+    SUBDIR += py-reindent
     SUBDIR += py-reno
     SUBDIR += py-restructuredtext-lint
     SUBDIR += py-reverend
@@ -1773,6 +1775,7 @@
     SUBDIR += rubygem-loggability
     SUBDIR += rubygem-loofah
     SUBDIR += rubygem-loofah219
+    SUBDIR += rubygem-loofah221
     SUBDIR += rubygem-ltsv
     SUBDIR += rubygem-markaby
     SUBDIR += rubygem-mdl
