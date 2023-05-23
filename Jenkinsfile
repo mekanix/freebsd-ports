@@ -65,6 +65,7 @@ pipeline {
                     axcient/vm-migrator \
                     axcient/vt2 \
                     axcient/vt2-stg \
+                    axcient/ztop-exporter \
                     benchmarks/fio \
                     benchmarks/flamegraph \
                     benchmarks/iozone \
@@ -199,6 +200,7 @@ pipeline {
                 sh 'cd axcient/vm-migrator; make fetch'
                 sh 'cd axcient/vt2; make fetch'
                 sh 'cd axcient/vt2-stg; make fetch'
+                sh 'cd axcient/ztop-exporter; make fetch'
                 sh 'cd net-mgmt/py-network-interface-exporter; make fetch'
                 sh 'cd net-mgmt/py-smartctl-exporter; make fetch'
                 sh 'cd net-mgmt/py-zfs-exporter; make fetch'
