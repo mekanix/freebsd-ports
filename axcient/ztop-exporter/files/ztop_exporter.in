@@ -1,0 +1,48 @@
+#!/bin/sh
+
+# PROVIDE: ztop_exporter
+# REQUIRE: LOGIN
+# KEYWORD: shutdown
+#
+# Add the following lines to /etc/rc.conf.local or /etc/rc.conf
+# to enable this service:
+#
+# ztop_exporter_enable (bool):            Set to NO by default.
+#               Set it to YES to enable ztop-exporter.
+# ztop_exporter_args (string):            Set extra arguments to pass to ztop-exporter
+#               Default is "".
+# ztop_exporter_user (string):            Set user that ztop_exporter will run under
+#               Default is "nobody".
+# ztop_exporter_group (string):           Set group that ztop_exporter will run under
+#               Default is "nobody".
+
+. /etc/rc.subr
+
+name=ztop_exporter
+desc="ztop prometheus exporter"
+rcvar=ztop_exporter_enable
+
+load_rc_config $name
+
+: ${ztop_exporter_enable:=NO}
+: ${ztop_exporter_args:=""}
+: ${ztop_exporter_user:=nobody}
+: ${ztop_exporter_group:=nobody}
+
+pidfile=/var/run/ztop_exporter.pid
+command=/usr/sbin/daemon
+procname=%%PREFIX%%/bin/ztop-exporter
+command_args="-f -p ${pidfile} /usr/bin/env ${procname} ${ztop_exporter_args}"
+
+start_precmd=ztop_exporter_startprecmd
+
+ztop_exporter_startprecmd()
+{
+    if [ -e ${pidfile} ]; then
+        chown ${ztop_exporter_user}:${ztop_exporter_group} ${pidfile};
+    else
+        install -o ${ztop_exporter_user} -g ${ztop_exporter_group} /dev/null ${pidfile};
+    fi
+}
+
+run_rc_command "$1"

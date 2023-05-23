@@ -1,5 +1,6 @@
 PORTNAME=	ztop-exporter
 PORTVERSION=	0.1.0.20230522
+PORTREVISION=	1
 CATEGORIES=	axcient net-mgmt
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -7,6 +8,7 @@ MAINTAINER=	asomers@axcient.com
 COMMENT=	Export ZFS performance statistics to Prometheus
 
 USES=		axcient cargo
+USE_RC_SUBR=	ztop_exporter
 
 GH_PROJECT=	ztop-exporter
 GH_TAGNAME=	fa4ced93efc999915a744410bd1ea587bdd7e442
