@@ -1,6 +1,5 @@
 PORTNAME=	ztop-exporter
-PORTVERSION=	0.1.0.20230522
-PORTREVISION=	1
+PORTVERSION=	0.1.0.20230524
 CATEGORIES=	axcient net-mgmt
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -11,7 +10,7 @@ USES=		axcient cargo
 USE_RC_SUBR=	ztop_exporter
 
 GH_PROJECT=	ztop-exporter
-GH_TAGNAME=	fa4ced93efc999915a744410bd1ea587bdd7e442
+GH_TAGNAME=	b788de769f2767cba28beaf4d0f4dc2a6371d1a5
 
 CARGO_CRATES=	aho-corasick-0.7.18 \
 		ascii-1.1.0 \
@@ -38,6 +37,7 @@ CARGO_CRATES=	aho-corasick-0.7.18 \
 		lock_api-0.4.9 \
 		log-0.4.17 \
 		memchr-2.4.1 \
+		nix-0.26.2 \
 		once_cell-1.15.0 \
 		os_str_bytes-6.3.0 \
 		parking_lot-0.12.1 \
@@ -56,6 +56,7 @@ CARGO_CRATES=	aho-corasick-0.7.18 \
 		scopeguard-1.1.0 \
 		serde-1.0.163 \
 		smallvec-1.10.0 \
+		static_assertions-1.1.0 \
 		strsim-0.10.0 \
 		syn-1.0.89 \
 		sysctl-0.4.4 \
