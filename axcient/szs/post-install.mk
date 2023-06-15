@@ -3,10 +3,12 @@ post-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/newsyslog.d
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/rsyslog.d
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/szs
+	${MKDIR} ${STAGEDIR}${DATADIR}
 	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}/cron.d
 	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}/newsyslog.conf.d
 	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}/rsyslog.d
+	${MKDIR} ${STAGEDIR}${PREFIX}/etc/periodic/monthly
 	${MV} ${STAGEDIR}${PREFIX}/bin/api ${STAGEDIR}${PREFIX}/bin/szs-op
 	${MV} ${STAGEDIR}${PREFIX}/bin/jobs ${STAGEDIR}${PREFIX}/bin/szs-op-jobs
 	${MV} ${STAGEDIR}${PREFIX}/bin/safetyarchivecleanup ${STAGEDIR}${PREFIX}/bin/szs-op-safety-archive-cleanup
@@ -33,4 +35,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/freebsd-pkg/usr/local/etc/rsyslog.d/clone_snapshots.conf ${STAGEDIR}${EXAMPLESDIR}/rsyslog.d/
 	${INSTALL_DATA} ${WRKSRC}/freebsd-pkg/usr/local/etc/rsyslog.d/statistics.conf ${STAGEDIR}${EXAMPLESDIR}/rsyslog.d/
 	${INSTALL_DATA} ${WRKSRC}/freebsd-pkg/usr/local/etc/szs/config.yml.example ${STAGEDIR}${PREFIX}/etc/szs/config.yml.sample
+	${INSTALL_DATA} ${WRKDIR}/zfs-holds.lua ${STAGEDIR}${DATADIR}/zfs-holds.lua
+	${INSTALL_SCRIPT} ${WRKDIR}/900.zfs-holds ${STAGEDIR}${PREFIX}/etc/periodic/monthly
 
