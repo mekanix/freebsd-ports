@@ -2,8 +2,8 @@ PORTNAME=	cfengine-masterfiles
 PORTVERSION=	3.${CFENGINE_COMMIT_DATE}
 CATEGORIES=	sysutils
 PKGNAMESUFFIX=	-devel
-HASH=		6a1065f2
-CFENGINE_COMMIT_DATE=	2023.05.05
+HASH=		4460d813
+CFENGINE_COMMIT_DATE=	2023.06.08
 
 MAINTAINER=	cy@FreeBSD.org
 COMMENT=	cfengine sample policies for installations and upgrades

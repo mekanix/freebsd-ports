@@ -138,6 +138,7 @@
     SUBDIR += bzflag
     SUBDIR += bzflag-server
     SUBDIR += cake
+    SUBDIR += candycrisis
     SUBDIR += caph
     SUBDIR += cardpics
     SUBDIR += cataclysm-dda
@@ -927,7 +928,6 @@
     SUBDIR += solarus-quest-editor
     SUBDIR += solver
     SUBDIR += spacejunk
-    SUBDIR += spacezero
     SUBDIR += speak
     SUBDIR += species
     SUBDIR += spellcast
