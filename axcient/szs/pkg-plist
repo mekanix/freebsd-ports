@@ -5,6 +5,8 @@ bin/szs-op-cleanup-clones
 bin/szs-op-statistics
 bin/szs-op-snapshots-cleanup
 bin/szs-op-clone-snapshots
+etc/periodic/monthly/900.zfs-holds
+%%DATADIR%%/zfs-holds.lua
 @sample %%EXAMPLESDIR%%/cron.d/safety_archive_cleanup etc/cron.d/safety_archive_cleanup
 @sample %%EXAMPLESDIR%%/cron.d/cleanup_clones etc/cron.d/cleanup_clones
 @sample %%EXAMPLESDIR%%/cron.d/statistics etc/cron.d/statistics
@@ -27,4 +29,3 @@ lib/libszs-op.so
 @dir etc/newsyslog.d
 @dir etc/rsyslog.d
 @dir etc/cron.d
-

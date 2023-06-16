@@ -1,0 +1,42 @@
+args = ...
+argv = args["argv"]
+usage = [[
+
+
+usage: zfs program -n <pool> zfs-holds.lua dataset
+
+print all zfs holds not related to "zfs send" on the dataset and its children
+]]
+
+function table_concat(t1,t2)
+    for k,v in pairs(t2) do
+        t1[k] = v
+    end
+    return t1
+end
+
+function recursive_get_children(dataset)
+    local allholds = {}
+
+    for ss in zfs.list.snapshots(dataset) do
+        for tag,ts in zfs.list.holds(ss) do
+            if not string.match(tag, ".send-") then
+                allholds[ss] = tag
+            end
+        end
+    end
+
+    for child in zfs.list.children(dataset) do
+        if not string.match(child, "transfer") and
+           not string.match(child, "safetyarchive") and
+           not string.match(child, "to-del") then
+            allholds = table_concat(allholds, recursive_get_children(child))
+        end
+    end
+
+    return allholds
+end
+
+dataset = argv[1]
+
+return recursive_get_children(dataset)

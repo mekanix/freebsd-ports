@@ -1,0 +1,35 @@
+# If there is a global system configuration file, suck it in.
+#
+if [ -r /etc/defaults/periodic.conf ]
+then
+    . /etc/defaults/periodic.conf
+    source_periodic_confs
+fi
+
+export rc=0
+case "$monthly_status_zfs_holds_enable" in
+    [Yy][Ee][Ss])
+	echo
+	echo 'Checking for ZFS holds':
+	TMP=`mktemp -t 900.zfs-holds`
+	for pool in `/sbin/zpool list -Hpo name | /usr/bin/egrep -v zroot`; do
+		/sbin/zfs list -Hpo name -d1 $pool/SZS | egrep "SZS/" | /usr/bin/xargs -n1 zfs program -n $pool %%DATADIR%%/zfs-holds.lua || rm -f "$TMP"
+	done | /usr/bin/grep SZS
+	case $? in
+		0) # Holds found
+			rc=3
+			;;
+		1) # No Holds found
+			;;
+		*) # Shouldn't be possible
+			rc=3
+			;;
+	esac
+	if [ ! -e "$TMP" ]; then
+		# "zfs program" crashed
+		rc=3
+	fi
+	rm -f "$TMP"
+esac
+
+exit $rc

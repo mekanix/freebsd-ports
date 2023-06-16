@@ -2,7 +2,7 @@
 
 PORTNAME=	szs
 PORTVERSION?=	1.30.0
-PORTREVISION= 	0
+PORTREVISION=	1
 CATEGORIES=	axcient
 MASTER_SITES=	GH
 
@@ -113,6 +113,8 @@ GH_TUPLE?=	\
 		xdg:stringprep:v1.0.0:xdg_stringprep/vendor/github.com/xdg/stringprep
 CONFLICTS_INSTALL?=	szs-stg
 
+SUB_FILES=	zfs-holds.lua 900.zfs-holds
+
 GO_PKGNAME=	github.com/${GH_ACCOUNT}/szs-op
 GO_BUILDFLAGS=	-ldflags "-X=main.version=${PORTVERSION}"
 GO_TARGET?=	./cmd/api ./cmd/jobs ./cmd/statistics ./cmd/safetyarchivecleanup ./cmd/cleanupclones ./cmd/snapshotscleanup ./cmd/clonesnapshots
@@ -126,4 +128,3 @@ post-build:
 .include "${.CURDIR}/post-install.mk"
 
 .include <bsd.port.mk>
-
