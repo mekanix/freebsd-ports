@@ -5,6 +5,7 @@ bin/szs-op-cleanup-clones
 bin/szs-op-statistics
 bin/szs-op-snapshots-cleanup
 bin/szs-op-clone-snapshots
+bin/generate_jail_base.sh
 etc/periodic/monthly/900.zfs-holds
 %%DATADIR%%/zfs-holds.lua
 @sample %%EXAMPLESDIR%%/cron.d/safety_archive_cleanup etc/cron.d/safety_archive_cleanup
