@@ -35,6 +35,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/freebsd-pkg/usr/local/etc/rsyslog.d/clone_snapshots.conf ${STAGEDIR}${EXAMPLESDIR}/rsyslog.d/
 	${INSTALL_DATA} ${WRKSRC}/freebsd-pkg/usr/local/etc/rsyslog.d/statistics.conf ${STAGEDIR}${EXAMPLESDIR}/rsyslog.d/
 	${INSTALL_DATA} ${WRKSRC}/freebsd-pkg/usr/local/etc/szs/config.yml.example ${STAGEDIR}${PREFIX}/etc/szs/config.yml.sample
+	${INSTALL_SCRIPT} ${WRKSRC}/freebsd-pkg/usr/local/bin/generate_jail_base.sh ${STAGEDIR}${PREFIX}/bin/generate_jail_base.sh
 	${INSTALL_DATA} ${WRKDIR}/zfs-holds.lua ${STAGEDIR}${DATADIR}/zfs-holds.lua
 	${INSTALL_SCRIPT} ${WRKDIR}/900.zfs-holds ${STAGEDIR}${PREFIX}/etc/periodic/monthly
 
