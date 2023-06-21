@@ -70,6 +70,7 @@ pipeline {
                     benchmarks/flamegraph \
                     benchmarks/iozone \
                     benchmarks/iperf3 \
+                    benchmarks/netperf \
                     converters/unix2dos \
                     databases/pgbouncer \
                     databases/py-prometheus-pgbouncer-exporter \
