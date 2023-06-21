@@ -78,6 +78,7 @@ pipeline {
                     devel/delve \
                     devel/gdb \
                     devel/git \
+                    devel/hwloc2 \
                     java/openjdk8 \
                     devel/py-pip \
                     devel/py-tox \
