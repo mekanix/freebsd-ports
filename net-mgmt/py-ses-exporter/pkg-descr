@@ -1,0 +1,2 @@
+Export SES device data as Prometheus metrics, namely statuses, temperatures and
+voltages of elements.
