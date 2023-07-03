@@ -1,0 +1,39 @@
+#!/bin/sh
+# $FreeBSD$
+
+# PROVIDE: ses_exporter
+# REQUIRE: LOGIN
+# KEYWORD: shutdown
+#
+# Add the following lines to /etc/rc.conf.local or /etc/rc.conf
+# to enable this service:
+#
+# ses_exporter_enable (bool):            Set to NO by default.
+#               Set it to YES to enable ses-exporter.
+
+. /etc/rc.subr
+
+name=ses_exporter
+desc="SES prometheus exporter"
+rcvar=ses_exporter_enable
+
+load_rc_config $name
+
+: ${ses_exporter_enable:=NO}
+
+pidfile="/var/run/${name}.pid"
+command=/usr/sbin/daemon
+command_interpreter=%%PYTHON_CMD%%
+procname=%%PREFIX%%/bin/ses-exporter
+command_args="-f -p ${pidfile} /usr/bin/env ${procname}"
+
+start_precmd=ses_exporter_startprecmd
+
+ses_exporter_startprecmd()
+{
+	if [ ! -e ${pidfile} ]; then
+		install /dev/null ${pidfile};
+	fi
+}
+
+run_rc_command "$1"
