@@ -31,8 +31,8 @@ case "$daily_szs_migrator_audit_enable" in
 			orm=`echo $ds | /usr/bin/sed -E 's:.*-migrated-([0-9a-z]{8}(-[0-9a-z]{4}){3}-[0-9a-z]{12}).*:\1:'`
 			owner=`%%LOCALBASE%%/bin/szs-dataset-info -c -o $orm resource 2>/dev/null | awk '/Associated resource/ {print $NF}'`
 			if [ $? -ne 0 -o -z "$owner" ]; then
-				echo "Unknown dataset $ds"
-				rc=3
+				# The dataset was probably deleted first from
+				# storage and then from the partition API.
 			elif [ "$pool" == "$owner" ]; then
 				echo "Migrated dataset $ds still owned, according to Partition API"
 				rc=3
