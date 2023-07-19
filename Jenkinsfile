@@ -116,7 +116,6 @@ pipeline {
                     net/wireshark \
                     ports-mgmt/modules2tuple \
                     ports-mgmt/portlint \
-                    ports-mgmt/portupgrade \
                     ports-mgmt/poudriere \
                     security/gnupg \
                     security/nmap \
