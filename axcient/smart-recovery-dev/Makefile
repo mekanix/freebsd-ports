@@ -10,6 +10,7 @@ DATECODE!=	date -u "+%Y%m%d%H"
 COMMENT=	Hourly build of smart-recovery's develop branch
 
 GH_TAGNAME=	develop
+GH_COMMIT_FILE=	.gitcommit
 
 CONFLICTS_INSTALL=	smart-recovery \
 			smart-recovery-stg

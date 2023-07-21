@@ -20,6 +20,7 @@ FETCH_DEPENDS+=		git:devel/git
 
 USE_GITHUB=		yes
 GH_ACCOUNT=		Axcient
+GH_COMMIT_FILE?=	/dev/null
 
 # Most if not all of Axcient's software is hosted in private Github repos.
 # Since they're private, the distfiles can't be fetched over https.  Instead,
@@ -39,6 +40,7 @@ git-fetch:
 	  git fetch --tags 2>/dev/null && \
 	  git fetch origin ${GH_TAGNAME} && \
 	  git checkout ${GH_TAGNAME} 2>/dev/null && \
+	  git rev-parse --short HEAD > ${GH_COMMIT_FILE} && \
 	  ${RM} -r .git && \
 	  cd .. && \
 	  ${FIND} "$${GITDIR}" -exec ${TOUCH} -h -d 1970-01-01T00:00:00Z '{}' \; && \
