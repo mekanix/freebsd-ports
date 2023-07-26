@@ -107,6 +107,7 @@ pipeline {
                     net-mgmt/py-zfs-exporter \
                     net-mgmt/py-ses-exporter \
                     net-mgmt/py-smartctl-exporter \
+                    net-mgmt/telegraf \
                     net-mgmt/zabbix5-agent \
                     net/samba413 \
                     net/nss-pam-ldapd \
