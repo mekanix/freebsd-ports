@@ -9,6 +9,7 @@ DATECODE!=	date -u "+%Y%m%d%H"
 COMMENT=	Hourly build of vdisk-fuse's develop branch
 
 GH_TAGNAME=	develop
+GH_COMMIT_FILE=	.gitcommit
 
 CONFLICTS_INSTALL=	vdisk-fuse \
 			vdisk-fuse-stg
