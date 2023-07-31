@@ -1,10 +1,10 @@
 # $FreeBSD$
 
-PORTVERSION=	1.31.0.rc2
+PORTVERSION=	1.32.0.rc1
 PKGNAMESUFFIX=	-stg
 
-GH_TAGNAME=     1.31.0-rc2
-GH_TUPLE=       \
+GH_TAGNAME=     1.32.0-rc1
+GH_TUPLE=	\
 		RichardKnop:logging:1a693bdd4fae:richardknop_logging/vendor/github.com/RichardKnop/logging \
 		RichardKnop:machinery:v1.10.6:richardknop_machinery/vendor/github.com/RichardKnop/machinery \
 		aws:aws-sdk-go:v1.37.16:aws_aws_sdk_go/vendor/github.com/aws/aws-sdk-go \
@@ -12,6 +12,7 @@ GH_TUPLE=       \
 		bradfitz:gomemcache:a41fca850d0b:bradfitz_gomemcache/vendor/github.com/bradfitz/gomemcache \
 		census-instrumentation:opencensus-go:v0.22.6:census_instrumentation_opencensus_go/vendor/go.opencensus.io \
 		cespare:xxhash:v2.1.2:cespare_xxhash_v2/vendor/github.com/cespare/xxhash/v2 \
+		coreos:go-semver:v0.3.1:coreos_go_semver/vendor/github.com/coreos/go-semver \
 		davecgh:go-spew:v1.1.1:davecgh_go_spew/vendor/github.com/davecgh/go-spew \
 		dgryski:go-rendezvous:9f7001d12a5f:dgryski_go_rendezvous/vendor/github.com/dgryski/go-rendezvous \
 		dnephin:pflag:v1.0.7:dnephin_pflag/vendor/github.com/dnephin/pflag \
