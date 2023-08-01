@@ -132,7 +132,7 @@ pipeline {
                     sysutils/fusefs-encfs \
                     sysutils/fusefs-ntfs \
                     sysutils/gstat-rs \
-                    sysutils/intel-nvmupdate \
+                    sysutils/intel-nvmupdate-100g \
                     sysutils/iocage \
                     sysutils/ipmitool \
                     sysutils/mcelog \
