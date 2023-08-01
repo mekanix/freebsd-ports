@@ -18,19 +18,21 @@ end
 function recursive_get_children(dataset)
     local allholds = {}
 
-    for ss in zfs.list.snapshots(dataset) do
-        for tag,ts in zfs.list.holds(ss) do
-            if not string.match(tag, ".send-") then
-                allholds[ss] = tag
+    if zfs.exists(dataset) then
+        for ss in zfs.list.snapshots(dataset) do
+            for tag,ts in zfs.list.holds(ss) do
+                if not string.match(tag, ".send-") then
+                    allholds[ss] = tag
+                end
             end
         end
-    end
 
-    for child in zfs.list.children(dataset) do
-        if not string.match(child, "transfer") and
-           not string.match(child, "safetyarchive") and
-           not string.match(child, "to-del") then
-            allholds = table_concat(allholds, recursive_get_children(child))
+        for child in zfs.list.children(dataset) do
+            if not string.match(child, "transfer") and
+               not string.match(child, "safetyarchive") and
+               not string.match(child, "to-del") then
+                allholds = table_concat(allholds, recursive_get_children(child))
+            end
         end
     end
 

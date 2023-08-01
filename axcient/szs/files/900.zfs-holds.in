@@ -13,6 +13,7 @@ case "$monthly_status_zfs_holds_enable" in
 	echo 'Checking for ZFS holds':
 	TMP=`mktemp -t 900.zfs-holds`
 	for pool in `/sbin/zpool list -Hpo name | /usr/bin/egrep -v zroot`; do
+		/sbin/zfs list -Hpo name $pool/SZS > /dev/null 2>&1 || continue;
 		/sbin/zfs list -Hpo name -d1 $pool/SZS | egrep "SZS/" | /usr/bin/xargs -n1 zfs program -n $pool %%DATADIR%%/zfs-holds.lua || rm -f "$TMP"
 	done | /usr/bin/grep SZS
 	case $? in
