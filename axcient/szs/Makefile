@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	szs
-PORTVERSION?=	1.31.0
+PORTVERSION?=	1.32.0
 PORTREVISION=	0
 CATEGORIES=	axcient
 MASTER_SITES=	GH
@@ -26,7 +26,7 @@ RUN_DEPENDS+=	buffer:misc/buffer \
 USES=		axcient go:modules ssl:run
 USE_LDCONFIG=	yes
 GH_PROJECT=	szs-op
-GH_TAGNAME?=	1.31.0
+GH_TAGNAME?=	1.32.0
 GH_TUPLE?=	\
 		RichardKnop:logging:1a693bdd4fae:richardknop_logging/vendor/github.com/RichardKnop/logging \
 		RichardKnop:machinery:v1.10.6:richardknop_machinery/vendor/github.com/RichardKnop/machinery \
@@ -35,6 +35,7 @@ GH_TUPLE?=	\
 		bradfitz:gomemcache:a41fca850d0b:bradfitz_gomemcache/vendor/github.com/bradfitz/gomemcache \
 		census-instrumentation:opencensus-go:v0.22.6:census_instrumentation_opencensus_go/vendor/go.opencensus.io \
 		cespare:xxhash:v2.1.2:cespare_xxhash_v2/vendor/github.com/cespare/xxhash/v2 \
+		coreos:go-semver:v0.3.1:coreos_go_semver/vendor/github.com/coreos/go-semver \
 		davecgh:go-spew:v1.1.1:davecgh_go_spew/vendor/github.com/davecgh/go-spew \
 		dgryski:go-rendezvous:9f7001d12a5f:dgryski_go_rendezvous/vendor/github.com/dgryski/go-rendezvous \
 		dnephin:pflag:v1.0.7:dnephin_pflag/vendor/github.com/dnephin/pflag \
