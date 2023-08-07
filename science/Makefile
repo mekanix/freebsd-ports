@@ -103,6 +103,7 @@
     SUBDIR += gamess-us
     SUBDIR += gbtolib
     SUBDIR += gchemutils
+    SUBDIR += gcp
     SUBDIR += gdma
     SUBDIR += geant4
     SUBDIR += gemmi
@@ -314,6 +315,7 @@
     SUBDIR += py-cirq-rigetti
     SUBDIR += py-coards
     SUBDIR += py-dftbplus
+    SUBDIR += py-dftd4
     SUBDIR += py-dimod
     SUBDIR += py-dipy
     SUBDIR += py-dlib
@@ -331,6 +333,7 @@
     SUBDIR += py-dwavebinarycsp
     SUBDIR += py-earthpy
     SUBDIR += py-eccodes
+    SUBDIR += py-emmet-core
     SUBDIR += py-esda
     SUBDIR += py-fresnel
     SUBDIR += py-gemmi
@@ -362,9 +365,12 @@
     SUBDIR += py-mmtf-python
     SUBDIR += py-molmod
     SUBDIR += py-moltemplate
+    SUBDIR += py-mp-api
+    SUBDIR += py-mpcontribs-client
     SUBDIR += py-mrchem
     SUBDIR += py-netCDF4
     SUBDIR += py-netcdf-flattener
+    SUBDIR += py-nglview
     SUBDIR += py-nibabel
     SUBDIR += py-nilearn
     SUBDIR += py-obspy
@@ -388,6 +394,7 @@
     SUBDIR += py-pygmo2
     SUBDIR += py-pyked
     SUBDIR += py-pymatgen
+    SUBDIR += py-pymatgen-analysis-alloys
     SUBDIR += py-pymbd
     SUBDIR += py-pymol
     SUBDIR += py-pyosf
@@ -457,6 +464,8 @@
     SUBDIR += rubygem-rgeo-proj4
     SUBDIR += rubygem-rgeo-shapefile
     SUBDIR += rubygem-ruby-netcdf
+    SUBDIR += salome-configuration
+    SUBDIR += salome-kernel
     SUBDIR += scidavis
     SUBDIR += sciplot
     SUBDIR += segyio

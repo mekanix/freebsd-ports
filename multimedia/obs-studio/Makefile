@@ -1,12 +1,7 @@
 PORTNAME=	obs-studio
-DISTVERSION=	29.0.2
+DISTVERSION=	29.1.3
 PORTREVISION=	2
 CATEGORIES=	multimedia
-
-PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
-PATCHFILES=	e98c9fbd65aa4e3d91da081b6020962c7b3e68ee.patch:-p1 \
-		0a257a71e83225d1e6b503a5cc2dc0eea99c1e13.patch:-p1 \
-		2e79d4c902abf3e6bb4ad1b5bf779c0cc22a6fd0.patch:-p1
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Open source streaming/recording software
@@ -42,17 +37,11 @@ LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg \
 		libxcb-render-util.so:x11/xcb-util-renderutil \
 		libxcb-util.so:x11/xcb-util \
 		libxkbcommon.so:x11/libxkbcommon \
-		libva.so:multimedia/libva \
-		${LIB_DEPENDS_${ARCH}}
-LIB_DEPENDS_amd64=	libluajit-5.1.so:lang/luajit
-LIB_DEPENDS_armv7=	libluajit-5.1.so:lang/luajit
-LIB_DEPENDS_i386=	libluajit-5.1.so:lang/luajit
-LIB_DEPENDS_powerpc=	libluajit-5.1.so:lang/luajit
-LIB_DEPENDS_powerpc64=	libluajit-5.1.so:lang/luajit-openresty
-LIB_DEPENDS_powerpc64le=	libluajit-5.1.so:lang/luajit-openresty
+		libuuid.so:misc/e2fsprogs-libuuid \
+		libva.so:multimedia/libva
 
-USES=		cmake compiler:c++17-lang desktop-file-utils gl gnome lua pkgconfig python:3.4+ \
-		qt:6 xorg
+USES=		cmake compiler:c++17-lang desktop-file-utils gl gnome lua luajit \
+		pkgconfig python qt:6 xorg
 USE_QT=		base svg tools:build
 USE_GNOME=	glib20
 USE_GL=		gl

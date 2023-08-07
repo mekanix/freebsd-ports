@@ -9,7 +9,7 @@ DISTNAME=	${PORTNAME}-community-latest
 DIST_SUBDIR=	${PORTNAME}-${PORTVERSION}
 PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}
 
-MAINTAINER=	feld@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Autodiscovering PHP/MySQL/SNMP based network monitoring
 WWW=		https://observium.org
 
@@ -20,7 +20,7 @@ LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-USES=		cpe php:cli,flavors python:3.5+ shebangfix
+USES=		cpe php:cli,flavors python shebangfix
 IGNORE_WITH_PHP=	82 83
 SHEBANG_FILES=	\
 		poller-wrapper.py \

@@ -1,6 +1,7 @@
 PORTNAME=	electron
 DISTVERSIONPREFIX=	v
 DISTVERSION=	${ELECTRON_VER:S/-beta./.b/}
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/tagattie/FreeBSD-Electron/releases/download/v24.4.0/:chromium \
 		https://commondatastorage.googleapis.com/chromium-nodejs/:chromium_node \
@@ -221,7 +222,7 @@ REACTIVEOBJC_VER=		74ab5baccc6f7202c8ac69a8d1e152c29dc1ea76
 # See ${WRKSRC}/electron/DEPS for MANTLE_VER
 MANTLE_VER=			78d3966b3c331292ea29ec38661b25df0a245948
 
-YARN_TIMESTAMP=	1686553181
+YARN_TIMESTAMP=	1690431844
 
 .include "Makefile.version"
 .include <bsd.port.pre.mk>
@@ -282,6 +283,8 @@ pre-fetch:
 		${MTREE_CMD} -cbnSp yarn-offline-cache | ${MTREE_CMD} -C | ${SED} \
 			-e 's:time=[0-9.]*:time=${YARN_TIMESTAMP}.000000000:' \
 			-e 's:\([gu]id\)=[0-9]*:\1=0:g' \
+			-e 's:mode=\([0-9]\)7[0-9][0-9]:mode=\1755:' \
+			-e 's:mode=\([0-9]\)6[0-9][0-9]:mode=\1644:' \
 			-e 's:flags=.*:flags=none:' \
 			-e 's:^\.:./yarn-offline-cache:' > yarn-offline-cache.mtree; \
 		${TAR} cJf ${DISTDIR}/${DIST_SUBDIR}/electron-yarn-cache-${ELECTRON_VER}${EXTRACT_SUFX} \

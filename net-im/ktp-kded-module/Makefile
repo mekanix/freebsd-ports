@@ -10,6 +10,9 @@ WWW=		https://community.kde.org/KTp
 LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+DEPRECATED=	Will not be part of KDE Gear 23.08 in August
+EXPIRATION_DATE=	2023-09-30
+
 LIB_DEPENDS=	libtelepathy-qt5.so:net-im/telepathy-qt \
 		libKTpCommonInternals.so:net-im/ktp-common-internals
 

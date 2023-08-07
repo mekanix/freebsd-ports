@@ -24,7 +24,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}attrs>=19.2.0:devel/py-attrs@${PY_FLAVOR} \
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cython-test-exception-raiser>=1.0.2<2:devel/py-cython-test-exception-raiser@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}PyHamcrest>=1.9.0:textproc/py-pyhamcrest@${PY_FLAVOR}
 
-USES=		cpe python:3.7-3.10
+USES=		cpe python:3.8-3.10
 USE_PYTHON=	autoplist concurrent distutils
 
 CPE_VENDOR=	twistedmatrix
@@ -36,9 +36,9 @@ OPTIONS_DEFAULT=CONCH HTTP2 SERIAL TLS
 CONCH_DESC=	Conch secure shell SSH
 SERIAL_DESC=	Serial port extension
 
+CONCH_USES=		pycryptography:run
 CONCH_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}appdirs>=1.4.0:devel/py-appdirs@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}bcrypt>=3.0.0:security/py-bcrypt@${PY_FLAVOR} \
-			${PYTHON_PKGNAMEPREFIX}cryptography>=2.6:security/py-cryptography@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}pyasn1>=0:devel/py-pyasn1@${PY_FLAVOR}
 HTTP2_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}h2>=3.0<5.0:www/py-h2@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}priority1>=1.1.0<2.0:www/py-priority1@${PY_FLAVOR}

@@ -29,6 +29,12 @@ ITK_LIB=	libitk.so.${MAJOR}
 
 ITK_LIB_FILE=	${ITK_LIB}.${SHLIB_MAJOR}
 
+.include <bsd.port.options.mk>
+
+.if ${OPSYS} == FreeBSD && ( ${OSVERSION} >= 1400091 || ( ${OSVERSION} >= 1302507 && ${OSVERSION} < 1400000 ))
+CFLAGS+=	-Wno-error=incompatible-function-pointer-types
+.endif
+
 .if defined(DISPLAY)
 post-build:	test
 .else

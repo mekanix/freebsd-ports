@@ -1,5 +1,5 @@
 PORTNAME=	bottom
-DISTVERSION=	0.9.2
+DISTVERSION=	0.9.4
 CATEGORIES=	sysutils
 
 MAINTAINER=	adamw@FreeBSD.org

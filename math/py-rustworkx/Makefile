@@ -1,6 +1,5 @@
 PORTNAME=	rustworkx
-DISTVERSION=	0.13.0
-PORTREVISION=	1
+DISTVERSION=	0.13.1
 CATEGORIES=	math python
 #MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -18,7 +17,7 @@ TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}matplotlib>=3.0:math/py-matplotlib@${PY_FLA
 		${PYTHON_PKGNAMEPREFIX}pillow>=5.4:graphics/py-pillow@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}tox>0:devel/py-tox@${PY_FLAVOR}
 
-USES=		cargo python:3.7+
+USES=		cargo python
 USE_PYTHON=	autoplist distutils
 
 USE_GITHUB=	yes
@@ -68,11 +67,11 @@ CARGO_CRATES=	ahash-0.7.6 \
 		ppv-lite86-0.2.16 \
 		priority-queue-1.2.2 \
 		proc-macro2-1.0.52 \
-		pyo3-0.19.0 \
-		pyo3-build-config-0.19.0 \
-		pyo3-ffi-0.19.0 \
-		pyo3-macros-0.19.0 \
-		pyo3-macros-backend-0.19.0 \
+		pyo3-0.19.1 \
+		pyo3-build-config-0.19.1 \
+		pyo3-ffi-0.19.1 \
+		pyo3-macros-0.19.1 \
+		pyo3-macros-backend-0.19.1 \
 		quick-xml-0.28.2 \
 		quote-1.0.26 \
 		rand-0.8.5 \

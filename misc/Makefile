@@ -222,6 +222,7 @@
     SUBDIR += lesspipe
     SUBDIR += lf
     SUBDIR += libad9361-iio
+    SUBDIR += libartnet
     SUBDIR += libcomps
     SUBDIR += libeatmydata
     SUBDIR += libemos
@@ -279,6 +280,7 @@
     SUBDIR += nsf
     SUBDIR += numchar
     SUBDIR += nut
+    SUBDIR += ola
     SUBDIR += ompl
     SUBDIR += ondir
     SUBDIR += onnx
@@ -415,6 +417,7 @@
     SUBDIR += py-gluoncv
     SUBDIR += py-gluonnlp
     SUBDIR += py-halo
+    SUBDIR += py-hist
     SUBDIR += py-histoprint
     SUBDIR += py-huepy
     SUBDIR += py-icoextract
@@ -426,6 +429,7 @@
     SUBDIR += py-mffpy
     SUBDIR += py-molequeue
     SUBDIR += py-mxnet
+    SUBDIR += py-npTDMS
     SUBDIR += py-numcodecs
     SUBDIR += py-onnx
     SUBDIR += py-onnx-tf
@@ -449,8 +453,10 @@
     SUBDIR += py-pyct
     SUBDIR += py-pyfiglet
     SUBDIR += py-pykml
+    SUBDIR += py-pymatreader
     SUBDIR += py-pypatent
     SUBDIR += py-pyprind
+    SUBDIR += py-pyqir
     SUBDIR += py-python-geohash
     SUBDIR += py-python-utils
     SUBDIR += py-pytorch
@@ -465,10 +471,12 @@
     SUBDIR += py-spdx-lookup
     SUBDIR += py-spdx-tools
     SUBDIR += py-spinners
+    SUBDIR += py-synced-collections
     SUBDIR += py-tes
     SUBDIR += py-tflearn
     SUBDIR += py-tflite
     SUBDIR += py-tflite-support
+    SUBDIR += py-thermocouples_reference
     SUBDIR += py-toil
     SUBDIR += py-torch-geometric
     SUBDIR += py-torchmetrics
@@ -483,6 +491,7 @@
     SUBDIR += pytorch
     SUBDIR += qbrew
     SUBDIR += qlas
+    SUBDIR += qlcplus
     SUBDIR += qt5-doc
     SUBDIR += qt5-examples
     SUBDIR += qt5-l10n

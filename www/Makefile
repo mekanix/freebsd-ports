@@ -27,6 +27,7 @@
     SUBDIR += amphetadesk
     SUBDIR += analog
     SUBDIR += angie
+    SUBDIR += angie-module-geoip2
     SUBDIR += anyremote2html
     SUBDIR += apache-mode.el
     SUBDIR += apache24
@@ -278,7 +279,6 @@
     SUBDIR += kineto
     SUBDIR += kiwix-tools
     SUBDIR += kohana
-    SUBDIR += kristall
     SUBDIR += lagrange
     SUBDIR += larbin
     SUBDIR += libapreq2
@@ -323,6 +323,7 @@
     SUBDIR += lychee
     SUBDIR += lynx
     SUBDIR += lynx-current
+    SUBDIR += lzr
     SUBDIR += madsonic
     SUBDIR += man2web
     SUBDIR += mathjax
@@ -334,6 +335,7 @@
     SUBDIR += mediawiki135
     SUBDIR += mediawiki138
     SUBDIR += mediawiki139
+    SUBDIR += mediawiki140
     SUBDIR += mergelog
     SUBDIR += mhonarc
     SUBDIR += micro_httpd
@@ -414,8 +416,6 @@
     SUBDIR += mongoose
     SUBDIR += mongrel2
     SUBDIR += monolith
-    SUBDIR += moodle311
-    SUBDIR += moodle40
     SUBDIR += moodle41
     SUBDIR += moodle42
     SUBDIR += morty
@@ -455,7 +455,6 @@
     SUBDIR += node
     SUBDIR += node16
     SUBDIR += node18
-    SUBDIR += node19
     SUBDIR += node20
     SUBDIR += nostromo
     SUBDIR += novnc
@@ -465,7 +464,6 @@
     SUBDIR += npm
     SUBDIR += npm-node16
     SUBDIR += npm-node18
-    SUBDIR += npm-node19
     SUBDIR += npm-node20
     SUBDIR += oauth2-proxy
     SUBDIR += obhttpd
@@ -1086,6 +1084,7 @@
     SUBDIR += p5-Plack-Middleware-FixMissingBodyInRedirect
     SUBDIR += p5-Plack-Middleware-ForceEnv
     SUBDIR += p5-Plack-Middleware-Header
+    SUBDIR += p5-Plack-Middleware-Headers
     SUBDIR += p5-Plack-Middleware-IEnosniff
     SUBDIR += p5-Plack-Middleware-InteractiveDebugger
     SUBDIR += p5-Plack-Middleware-JSConcat
@@ -1422,7 +1421,6 @@
     SUBDIR += py-Tenjin
     SUBDIR += py-WebError
     SUBDIR += py-WebFlash
-    SUBDIR += py-WebTest
     SUBDIR += py-adblock
     SUBDIR += py-aioh2
     SUBDIR += py-aiohttp
@@ -1452,6 +1450,8 @@
     SUBDIR += py-bottle
     SUBDIR += py-bottle-cork
     SUBDIR += py-branca
+    SUBDIR += py-bravado
+    SUBDIR += py-bravado-core
     SUBDIR += py-cachecontrol
     SUBDIR += py-cachelib
     SUBDIR += py-caldav
@@ -1686,6 +1686,7 @@
     SUBDIR += py-httpretty
     SUBDIR += py-httptools
     SUBDIR += py-httpx
+    SUBDIR += py-httpx-cache
     SUBDIR += py-httpx-gssapi
     SUBDIR += py-httpx-oauth
     SUBDIR += py-httpx-socks
@@ -1748,6 +1749,7 @@
     SUBDIR += py-requests
     SUBDIR += py-requests-aws4auth
     SUBDIR += py-requests-cache
+    SUBDIR += py-requests-cache0
     SUBDIR += py-requests-cache93
     SUBDIR += py-requests-file
     SUBDIR += py-requests-futures
@@ -1817,6 +1819,7 @@
     SUBDIR += py-webdriver_manager
     SUBDIR += py-webob
     SUBDIR += py-websocket-client
+    SUBDIR += py-webtest
     SUBDIR += py-webunit
     SUBDIR += py-werkzeug
     SUBDIR += py-wfuzz
@@ -1840,6 +1843,7 @@
     SUBDIR += qt5-websockets
     SUBDIR += qt5-websockets-qml
     SUBDIR += qt5-webview
+    SUBDIR += qt6-httpserver
     SUBDIR += qt6-webchannel
     SUBDIR += qt6-webengine
     SUBDIR += qt6-websockets
@@ -1848,7 +1852,6 @@
     SUBDIR += radicale
     SUBDIR += rearx
     SUBDIR += reddsaver
-    SUBDIR += redmine42
     SUBDIR += redmine50
     SUBDIR += rejik
     SUBDIR += remark42
@@ -2072,6 +2075,7 @@
     SUBDIR += rubygem-net-http-persistent
     SUBDIR += rubygem-net-http-persistent2
     SUBDIR += rubygem-net-http-pipeline
+    SUBDIR += rubygem-net-http011
     SUBDIR += rubygem-nicovideo
     SUBDIR += rubygem-ntlm-http
     SUBDIR += rubygem-octopress
@@ -2302,7 +2306,6 @@
     SUBDIR += tokyopromenade
     SUBDIR += tomcat-devel
     SUBDIR += tomcat-native
-    SUBDIR += tomcat10
     SUBDIR += tomcat101
     SUBDIR += tomcat85
     SUBDIR += tomcat9
@@ -2382,7 +2385,6 @@
     SUBDIR += varnish7
     SUBDIR += varnish_exporter
     SUBDIR += vaultwarden-web_vault
-    SUBDIR += vdr-plugin-live
     SUBDIR += vdradmin-am
     SUBDIR += vertx
     SUBDIR += vger
@@ -2442,7 +2444,6 @@
     SUBDIR += yarn
     SUBDIR += yarn-node16
     SUBDIR += yarn-node18
-    SUBDIR += yarn-node19
     SUBDIR += yarn-node20
     SUBDIR += yarr
     SUBDIR += yaws
@@ -2455,6 +2456,7 @@
     SUBDIR += zend-framework
     SUBDIR += zenphoto
     SUBDIR += zerowait-httpd
+    SUBDIR += zgrab2
     SUBDIR += zola
 
 .include <bsd.port.subdir.mk>

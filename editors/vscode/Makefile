@@ -1,5 +1,5 @@
 PORTNAME=	vscode
-DISTVERSION=	1.79.1
+DISTVERSION=	1.81.0
 CATEGORIES=	editors
 MASTER_SITES=	https://github.com/tagattie/FreeBSD-VSCode/releases/download/${DISTVERSION}/:yarn_cache
 DISTFILES=	yarn-offline-cache-${DISTVERSION}${EXTRACT_SUFX}:yarn_cache \
@@ -45,6 +45,7 @@ LIB_DEPENDS=	libatk-bridge-2.0.so:accessibility/at-spi2-core \
 		libcups.so:print/cups \
 		libfreetype.so:print/freetype2 \
 		libharfbuzz.so:print/harfbuzz \
+		libkrb5.so.3:security/krb5 \
 		libsecret-1.so:security/libsecret \
 		libnss3.so:security/nss \
 		libexpat.so:textproc/expat2 \
@@ -62,7 +63,7 @@ USES=		desktop-file-utils gl gmake gnome iconv:wchar_t jpeg \
 USE_GITHUB=	yes
 GH_ACCOUNT=	microsoft
 
-SOURCE_COMMIT_HASH=	67fa15cbc7ecfcc164127c5a346c1185596e9dce
+SOURCE_COMMIT_HASH=	6445d93c81ebe42c4cbd7a60712e0b17d9463e97
 
 BINARY_ALIAS=	python=${PYTHON_CMD}
 
@@ -74,7 +75,7 @@ USE_GNOME=	atk cairo pango gdkpixbuf2 gtk30 libxml2 libxslt
 USE_LDCONFIG=	${DATADIR}
 
 # Keep NODE_VER in sync with www/node16 DISTVERSION
-NODE_VER=	16.20.0
+NODE_VER=	16.20.1
 NODE_VER_MAJOR=	${NODE_VER:C/\..*$//}
 
 SHEBANG_REGEX=	./(extensions|resources|scripts|src)/.*\.sh$$
@@ -111,6 +112,10 @@ pre-everything::
 	@${ECHO_MSG} "line to poudriere.conf:"
 	@${ECHO_MSG} "MAX_FILES_${PORTNAME}=4096"
 	@${ECHO_MSG} ""
+
+post-extract:
+	${CP} ${WRKSRC}/build/.moduleignore.linux \
+		${WRKSRC}/build/.moduleignore.freebsd
 
 post-patch:
 	# force use of electron version matching port one
@@ -206,6 +211,9 @@ do-build:
 	cd ${WRKDIR}/.cache/electron/${ELECTRON_DOWNLOAD_URL_HASH} && \
 		${SHA256} -r *-v${ELECTRON_VER}-linux-*.zip | \
 		${SED} -e 's/ / */' > SHASUMS256.txt
+	cd ${WRKDIR}/.cache/electron/${ELECTRON_DOWNLOAD_URL_HASH} && \
+		${SHA256} -r *-v${ELECTRON_VER}-linux-*.zip | \
+		${SED} -e 's/ / */' >> ${WRKSRC}/build/checksums/electron.txt
 	# build and package vscode
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} yarn run tsc -p build/tsconfig.build.json
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} yarn gulp vscode-linux-x64-min

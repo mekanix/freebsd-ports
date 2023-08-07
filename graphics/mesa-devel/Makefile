@@ -1,6 +1,6 @@
 PORTNAME=	mesa
-DISTVERSION=	23.1-branchpoint-3076
-DISTVERSIONSUFFIX=	-gde60b463d76
+DISTVERSION=	23.2.0-branchpoint-1953
+DISTVERSIONSUFFIX=	-g8c62b3938a8
 CATEGORIES=	graphics
 PKGNAMESUFFIX=	-devel
 
@@ -29,7 +29,7 @@ LIB_DEPENDS=	libdrm.so:graphics/libdrm \
 LIB_DEPENDS+=	libelf.so:devel/libelf
 .endif
 
-USES=		bison cpe compiler:c++11-lib meson pkgconfig python:3.6+,build shebangfix
+USES=		bison cpe compiler:c++11-lib meson pkgconfig python:build shebangfix
 CPE_VENDOR=	mesa3d
 USE_GITHUB=	yes
 GH_ACCOUNT=	mesa3d
@@ -44,6 +44,7 @@ MESON_ARGS=	-Dgallium-omx=disabled \
 		-Dvalgrind=disabled \
 		-Dglvnd=true \
 		-Dplatforms=${PLATFORMS:O:[-1..1]:ts,} \
+		-Dvideo-codecs=vc1dec,h264dec,h264enc,h265dec,h265enc \
 		${NULL}
 PLIST_SUB=	ARCH=${ARCH:S/amd/x86_/}
 
@@ -128,7 +129,6 @@ OPENCL_IMPLIES=		LLVM ${"${PORT_OPTIONS:Miris}":?iris:radeonsi} # any from OPTIO
 VAAPI_DESC=		Hardware encoding/decoding (only r600, radeonsi)
 VAAPI_BUILD_DEPENDS=	libva>0:multimedia/libva
 VAAPI_MESON_ENABLED=	gallium-va
-VAAPI_MESON_ON=		-Dvideo-codecs=vc1dec,h264dec,h264enc,h265dec,h265enc
 
 VDPAU_DESC=		Hardware decoding (only r600, radeonsi) (implies X11)
 VDPAU_BUILD_DEPENDS=	libvdpau>0:multimedia/libvdpau
@@ -147,7 +147,7 @@ WAYLAND_VARS=		PLATFORMS+=wayland
 X11_USES=		xorg
 X11_USE=		XORG=x11,xcb,xdamage,xext,xfixes,xorgproto,xrandr,xshmfence,xxf86vm
 X11_VARS=		PLATFORMS+=x11
-X11_MESON_OFF=		-Dglx=disabled
+X11_MESON_OFF=		-Dglx=disabled -Dxlib-lease=disabled
 
 ZSTD_DESC=		Use ZSTD for shader cache
 ZSTD_LIB_DEPENDS=	libzstd.so:archivers/zstd

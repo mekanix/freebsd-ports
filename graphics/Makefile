@@ -1,11 +1,10 @@
     COMMENT = Graphics tools and libraries
 
-    SUBDIR += 3d-ascii-viewer-c
+    SUBDIR += 3d-ascii-viewer
     SUBDIR += 4va
     SUBDIR += Coin
     SUBDIR += GraphicsMagick
     SUBDIR += Hermes
-    SUBDIR += IPA
     SUBDIR += ImageMagick6
     SUBDIR += ImageMagick7
     SUBDIR += O2-tools
@@ -81,7 +80,6 @@
     SUBDIR += blend2d
     SUBDIR += blender
     SUBDIR += blender-doc
-    SUBDIR += blender-lts29
     SUBDIR += bmeps
     SUBDIR += bmp2html
     SUBDIR += bonzomatic
@@ -201,7 +199,6 @@
     SUBDIR += flphoto
     SUBDIR += fly
     SUBDIR += fortytwo
-    SUBDIR += fotofix
     SUBDIR += fotoxx
     SUBDIR += founts
     SUBDIR += fpc-cairo
@@ -225,6 +222,7 @@
     SUBDIR += freetype-gl
     SUBDIR += frei0r
     SUBDIR += frei0r-plugins
+    SUBDIR += frei0r-plugins-cairo
     SUBDIR += frei0r-plugins-gavl
     SUBDIR += frei0r-plugins-opencv
     SUBDIR += frogr
@@ -362,7 +360,6 @@
     SUBDIR += iec16022
     SUBDIR += igt-gpu-tools
     SUBDIR += iiview
-    SUBDIR += ikona
     SUBDIR += imageindex
     SUBDIR += imageviewer
     SUBDIR += imageworsener
@@ -428,6 +425,7 @@
     SUBDIR += kqtquickcharts
     SUBDIR += kquickimageeditor
     SUBDIR += krita
+    SUBDIR += krita-gmic-plugin
     SUBDIR += ksanecore
     SUBDIR += kseexpr
     SUBDIR += ksnip
@@ -523,6 +521,7 @@
     SUBDIR += libwmf
     SUBDIR += libwmf-nox11
     SUBDIR += libwpg03
+    SUBDIR += libxisf
     SUBDIR += libyuv
     SUBDIR += libzmf
     SUBDIR += lightzone
@@ -764,7 +763,6 @@
     SUBDIR += pear-Image_GraphViz
     SUBDIR += pear-Image_Transform
     SUBDIR += pecl-imagick
-    SUBDIR += pecl-imagick-im7
     SUBDIR += pecl-qrencode
     SUBDIR += pecl-vips
     SUBDIR += pencil2d
@@ -854,6 +852,7 @@
     SUBDIR += py-cairocffi
     SUBDIR += py-cairosvg
     SUBDIR += py-cartopy
+    SUBDIR += py-chart-studio
     SUBDIR += py-cogdumper
     SUBDIR += py-colorcet
     SUBDIR += py-colorthief
@@ -950,6 +949,7 @@
     SUBDIR += py-pyx
     SUBDIR += py-qpageview
     SUBDIR += py-qrencode
+    SUBDIR += py-qt6-3d
     SUBDIR += py-railroad-diagrams
     SUBDIR += py-rasterio
     SUBDIR += py-rasterstats
@@ -995,6 +995,7 @@
     SUBDIR += qt6-3d
     SUBDIR += qt6-imageformats
     SUBDIR += qt6-lottie
+    SUBDIR += qt6-quickeffectmaker
     SUBDIR += qt6-svg
     SUBDIR += qt6-wayland
     SUBDIR += qtawesome

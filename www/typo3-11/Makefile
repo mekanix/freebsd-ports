@@ -13,8 +13,6 @@ WWW=		https://typo3.org/
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-IGNORE_WITH_MYSQL=	56 101m
-
 USES=		cpe php:web,flavors shebangfix
 USE_PHP=	ctype dom fileinfo filter intl session simplexml \
 		tokenizer xml zip
@@ -31,7 +29,7 @@ SUB_LIST+=	PREFIX=${PREFIX} \
 
 PORT_V_MAJOR=	11
 PORT_V_MINOR=	5
-PORT_V_PATCH=	28
+PORT_V_PATCH=	29
 
 TYPO3WWW=	www
 TYPO3SRC=	${PORTNAME}_src-${PORTVERSION}

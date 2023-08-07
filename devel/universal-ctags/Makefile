@@ -1,5 +1,5 @@
 PORTNAME=	universal-ctags
-PORTVERSION=	p6.0.20230409.0
+PORTVERSION=	p6.0.20230723.0
 CATEGORIES=	devel
 
 MAINTAINER=	dereks@lifeofadishwasher.com
@@ -9,7 +9,7 @@ WWW=		https://ctags.io/
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		autoreconf gmake pkgconfig python:3.5+,test
+USES=		autoreconf gmake pkgconfig python:test
 USE_GITHUB=	yes
 GH_PROJECT=	ctags
 

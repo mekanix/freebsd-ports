@@ -1,6 +1,6 @@
 PORTNAME=	libvmod-fileserver
 PORTVERSION=	0.0.5
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	www
 PKGNAMEPREFIX=	varnish-
 
@@ -19,7 +19,7 @@ BUILD_DEPENDS=	llvm${LLVM_DEFAULT}>0:devel/llvm${LLVM_DEFAULT} \
 		rst2man:textproc/py-docutils@${PY_FLAVOR}
 
 USES=		cargo compiler:c++17-lang libtool pkgconfig \
-		python:3.5+,build varnish:7
+		python:build varnish:7
 USE_LDCONFIG=	yes
 
 PLIST_FILES=	lib/varnish/vmods/libvmod_fileserver.so

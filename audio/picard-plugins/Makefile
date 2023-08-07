@@ -1,5 +1,5 @@
 PORTNAME=	picard-plugins
-PORTVERSION=	2.0.20230511
+PORTVERSION=	2.0.20230725
 CATEGORIES=	audio python
 
 MAINTAINER=	jhale@FreeBSD.org
@@ -9,11 +9,11 @@ WWW=		https://picard.musicbrainz.org/plugins/
 LICENSE=	GPLv2+ GPLv3+ MIT WTFPL
 LICENSE_COMB=	multi
 
-USES=		python:3.7+
+USES=		python
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	metabrainz
-GH_TAGNAME=	c03c7f1
+GH_TAGNAME=	c5708b2
 
 PORTSCOUT=	limit:^2\.
 

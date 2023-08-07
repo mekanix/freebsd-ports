@@ -1,6 +1,7 @@
 PORTNAME=	elinks
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.16.1.1
+PORTREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	jailbird@fdf.net
@@ -12,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	xmlto:textproc/xmlto
 
-USES=		bison:alias cpe gmake iconv meson perl5 pkgconfig python:3.7+ ssl
+USES=		bison:alias cpe gmake iconv meson perl5 pkgconfig python ssl
 USE_GITHUB=	yes
 GH_ACCOUNT=	rkd77
 
@@ -46,7 +47,7 @@ BROTLI_MESON_TRUE=	brotli
 NLS_USES=		gettext
 NLS_MESON_TRUE=		nls
 
-GUILE_LIB_DEPENDS=	libguile-3.0.so:lang/guile
+GUILE_USES=		guile:3.0
 GUILE_MESON_TRUE=	guile
 
 LUA_USES=		lua:52-53

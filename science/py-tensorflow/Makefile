@@ -1,7 +1,7 @@
 PORTNAME=	tensorflow
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.9.1
-PORTREVISION=	10
+PORTREVISION=	11
 CATEGORIES=	science python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DIST_SUBDIR=	${PORTNAME}
@@ -60,7 +60,7 @@ RUN_DEPENDS=	pybind11>=2.6.2:devel/pybind11 \
 		${PYTHON_PKGNAMEPREFIX}packaging>=21.3:devel/py-packaging@${PY_FLAVOR} \
 		pybind11>=2.6.2:devel/pybind11
 
-USES=		jpeg llvm:16 python:3.7+ shebangfix ssl
+USES=		jpeg llvm:16 python shebangfix ssl
 USE_CXXSTD=     c++17
 USE_GITHUB=	yes
 USE_PYTHON=	distutils

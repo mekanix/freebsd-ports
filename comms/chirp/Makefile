@@ -1,5 +1,5 @@
 PORTNAME=	chirp
-PORTVERSION=	20230520
+PORTVERSION=	20230731
 CATEGORIES=	comms hamradio
 PKGNAMESUFFIX=	${PYTHON_PKGNAMESUFFIX}
 DIST_SUBDIR=	chirp
@@ -24,7 +24,7 @@ SHEBANG_GLOB=	*.py
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	kk7ds
-GH_TAGNAME=	ec34ec9b7f37301c792e41eefa054a837fae59fe
+GH_TAGNAME=	c49fb6d8a46270a47718b0b4857695d5d0d83780
 
 USE_GNOME=	gtk-update-icon-cache
 
@@ -51,9 +51,6 @@ post-install:
 
 .if ${PYTHON_REL} < 31000
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}importlib-resources>0:devel/py-importlib-resources@${PY_FLAVOR}
-.endif
-.if ${PYTHON_REL} < 30800
-RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}importlib-metadata>0:devel/py-importlib-metadata@${PY_FLAVOR}
 .endif
 
 .include <bsd.port.post.mk>

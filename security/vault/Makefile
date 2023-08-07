@@ -1,5 +1,6 @@
 PORTNAME=	vault
-PORTVERSION=	1.13.3
+PORTVERSION=	1.14.0
+PORTREVISION=	2
 DISTVERSIONPREFIX=	v
 CATEGORIES=	security
 MASTER_SITES=	https://raw.githubusercontent.com/hashicorp/vault/${DISTVERSIONFULL}/
@@ -27,7 +28,7 @@ GO_MODULE=	github.com/hashicorp/vault
 GO_BUILDFLAGS=	-ldflags="-s \
 		-X github.com/hashicorp/vault/version.GitCommit=${GITID} \
 		-X github.com/hashicorp/vault/version.BuildDate=${SOURCE_DATE_EPOCH:U${SOURCE_DATE_EPOCH_CMD:sh}} \
-		"
+		" -tags "vault ui"
 
 SUB_FILES=	pkg-message
 
@@ -36,7 +37,7 @@ GROUPS=		vault
 
 PLIST_FILES=	bin/${PORTNAME}
 
-GITID=	b9b773f1628260423e6cc9745531fd903cae853f
+GITID=	13a649f860186dffe3f3a4459814d87191efc321
 
 .include <bsd.port.pre.mk>
 

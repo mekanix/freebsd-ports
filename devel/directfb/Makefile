@@ -1,6 +1,6 @@
 PORTNAME=	directfb
 PORTVERSION=	1.4.17
-PORTREVISION=	2
+PORTREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	http://sources.buildroot.net/
 DISTNAME=	DirectFB-${PORTVERSION}
@@ -11,6 +11,9 @@ WWW=		https://www.directfb.org/
 
 LICENSE=	LGPL21
 
+DEPRECATED=		Last upstream release was in 2015
+EXPIRATION_DATE=	2023-09-30
+
 LIB_DEPENDS=	libpng.so:graphics/png
 
 USES=		compiler cpe gmake jpeg libtool localbase ncurses pathfix perl5 pkgconfig
@@ -18,6 +21,7 @@ USE_LDCONFIG=	yes
 USE_PERL5=	build
 
 GNU_CONFIGURE=	yes
+USE_CXXSTD=	c++14
 CONFIGURE_ARGS=	--disable-osx --disable-extra-warnings --disable-profiling \
 		--disable-debug --enable-debug-support --disable-trace \
 		--enable-text --enable-gettid --enable-network \
@@ -60,7 +64,7 @@ X11_CONFIGURE_ENABLE=	x11
 
 .include <bsd.port.pre.mk>
 
-.if ${OPSYS} == FreeBSD && ( ${OSVERSION} >= 1400079 || ( ${OSVERSION} >= 1302505 && ${OSVERSION} < 1400000 ))
+.if ${COMPILER_TYPE} == clang && ${COMPILER_VERSION} >= 150
 CFLAGS+=	-Wno-error=int-conversion
 .endif
 

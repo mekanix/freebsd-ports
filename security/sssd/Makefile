@@ -1,6 +1,6 @@
 PORTNAME=	sssd
 PORTVERSION=	1.16.5
-PORTREVISION=	9
+PORTREVISION=	10
 CATEGORIES=	security
 MASTER_SITES=	https://releases.pagure.org/SSSD/${PORTNAME}/
 
@@ -62,7 +62,7 @@ SUB_FILES=	pkg-message
 TEST_TARGET=	check
 
 USES=		autoreconf cpe gettext gmake iconv ldap libtool pathfix pkgconfig \
-		python:3.6+ shebangfix gssapi:mit
+		python shebangfix gssapi:mit
 USE_LDCONFIG=	yes
 INSTALL_TARGET=	install-strip
 CPE_VENDOR=	fedoraproject

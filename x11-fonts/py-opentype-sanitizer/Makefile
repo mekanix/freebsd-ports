@@ -11,12 +11,12 @@ WWW=		https://github.com/googlefonts/ots-python
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools>=0:devel/py-setuptools@${PY_FLAVOR} \
+BUILD_DEPENDS=	${PY_SETUPTOOLS} \
 		${PYTHON_PKGNAMEPREFIX}setuptools_scm>=0:devel/py-setuptools_scm@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}wheel>=0:devel/py-wheel@${PY_FLAVOR}
 RUN_DEPENDS=	ots-sanitize:x11-fonts/ots
 
-USES=		python:3.6+
+USES=		python
 USE_PYTHON=	autoplist concurrent pep517 pytest
 
 LDFLAGS+=	-lpython${PYTHON_VER}${PYTHON_ABIVER}

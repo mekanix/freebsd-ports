@@ -1,7 +1,7 @@
 PORTNAME=	rpcs3
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.0.28-15203 # git rev-list --count HEAD
-DISTVERSIONSUFFIX=	-g6dcf63009e
+DISTVERSION=	0.0.29-15444 # git rev-list --count HEAD
+DISTVERSIONSUFFIX=	-g6672499dde
 CATEGORIES=	emulators wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -12,8 +12,6 @@ LICENSE=	APACHE20 ISCL GPLv2 MIT ZLIB
 LICENSE_COMB=	multi
 LICENSE_FILE_ISCL=	${WRKSRC_cubeb}/LICENSE
 LICENSE_FILE_ZLIB=	${WRKSRC_asmjit}/LICENSE.md
-
-FLAVORS=	qt5 qt6
 
 BUILD_DEPENDS=	flatc:devel/flatbuffers
 LIB_DEPENDS=	libxxhash.so:devel/xxhash \
@@ -36,38 +34,18 @@ GH_TUPLE=	RPCS3:hidapi:hidapi-0.14.0-2-g8b43a97:hidapi/3rdparty/hidapi/hidapi \
 		KhronosGroup:glslang:11.11.0-2-g10423ec6:glslang/3rdparty/glslang/glslang \
 		kinetiknz:cubeb:cubeb-0.2-1425-g88585b6:cubeb/3rdparty/cubeb/cubeb \
 		miniupnp:miniupnp:miniupnpd_2_3_3:miniupnp/3rdparty/miniupnp/miniupnp \
-		wolfSSL:wolfssl:v5.6.0-stable:wolfssl/3rdparty/wolfssl/wolfssl
+		wolfSSL:wolfssl:v5.6.3-stable:wolfssl/3rdparty/wolfssl/wolfssl
 
 USES=		cmake elfctl gl iconv:wchar_t llvm:min=16,lib localbase:ldflags \
-		openal:soft pkgconfig python:3.4+,build qt:5 xorg
+		openal:soft pkgconfig python:build qt:6 xorg
 USE_GL=		gl glew
-USE_QT=		qmake:build buildtools:build core concurrent dbus gui multimedia svg widgets
+USE_QT=		base multimedia svg
 USE_XORG=	x11
 CMAKE_ON=	CMAKE_SKIP_RPATH ${CURL FFMPEG FLATBUFFERS LIBPNG PUGIXML XXHASH:L:S/^/USE_SYSTEM_/}
 CMAKE_ON+=	BUNDLE_SPEEX # only used by cubeb tests
 CMAKE_OFF=	USE_NATIVE_INSTRUCTIONS USE_PRECOMPILED_HEADERS
 LDFLAGS+=	-Wl,--as-needed # GLU
-ELF_FEATURES=	+noaslr,wxneeded:bin/${PORTNAME}
-
-.if ${FLAVOR:U} == qt6 || make(makesum) || make(fetch)
-PATCH_SITES+=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/:qt6
-PATCHFILES+=	c196f09833b4.patch:-p1:qt6 # https://github.com/RPCS3/rpcs3/pull/12471
-PKGNAMESUFFIX=	-${FLAVOR}
-USES:=		${USES:S/qt:5/qt:6/}
-USE_QT=		base multimedia svg
-
-CONFLICTS_INSTALL=	${PORTNAME}
-
-post-patch:	${FLAVOR}-post-patch
-${FLAVOR}-post-patch:
-# patch(1) doesn't support renames unlike git-apply(1)
-	@${MV}  ${WRKSRC}/rpcs3/rpcs3qt/qt_camera_video_surface.cpp \
-		${WRKSRC}/rpcs3/rpcs3qt/qt_camera_video_sink.cpp
-	@${MV}  ${WRKSRC}/rpcs3/rpcs3qt/qt_camera_video_surface.h \
-		${WRKSRC}/rpcs3/rpcs3qt/qt_camera_video_sink.h
-.else
-CONFLICTS_INSTALL=	${PORTNAME}-qt6
-.endif
+ELF_FEATURES=	+wxneeded:bin/${PORTNAME}
 
 OPTIONS_DEFINE=	ALSA EVDEV FAUDIO PULSEAUDIO JACK SDL SNDIO VULKAN
 OPTIONS_DEFAULT=EVDEV FAUDIO PULSEAUDIO JACK SDL SNDIO VULKAN

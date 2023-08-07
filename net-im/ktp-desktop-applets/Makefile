@@ -12,6 +12,9 @@ LIB_DEPENDS=	libKTpCommonInternals.so:net-im/ktp-common-internals
 LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/COPYING.LIB
 
+DEPRECATED=	Will not be part of KDE Gear 23.08 in August
+EXPIRATION_DATE=	2023-09-30
+
 USES=		compiler:c++11-lang cmake gettext kde:5 qt:5 tar:xz xorg
 USE_KDE=	plasma-framework windowsystem \
 		ecm:build

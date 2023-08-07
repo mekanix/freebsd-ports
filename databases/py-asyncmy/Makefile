@@ -12,9 +12,9 @@ LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}poetry-core>=0:devel/py-poetry-core@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}setuptools>=0:devel/py-setuptools@${PY_FLAVOR}
+		${PY_SETUPTOOLS}
 
-USES=		python:3.7+
+USES=		python
 USE_PYTHON=	autoplist concurrent cython pep517
 
 post-patch:

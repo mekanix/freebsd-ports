@@ -1,7 +1,7 @@
 PORTNAME=	node
 DISTVERSIONPREFIX=	v
-DISTVERSION=	16.20.0
-PORTREVISION=	1
+DISTVERSION=	16.20.1
+PORTREVISION?=	0
 CATEGORIES=	www
 MASTER_SITES=	https://nodejs.org/dist/v${DISTVERSION}/
 PKGNAMESUFFIX=	16
@@ -25,7 +25,7 @@ LIB_DEPENDS+=	libbrotlidec.so:archivers/brotli \
 		libnghttp2.so:www/libnghttp2 \
 		libuv.so:devel/libuv
 
-USES=		compiler:c++11-lib gmake localbase pkgconfig python:3.6+,build \
+USES=		compiler:c++11-lib gmake localbase pkgconfig python:build \
 		shebangfix
 
 BROKEN_SSL=	libressl libressl-devel
@@ -94,7 +94,7 @@ NLS_CONFIGURE_ON=	--with-intl=system-icu
 
 PREFIX_RELDEST=	${PREFIX:S,^${DESTDIR},,}
 
-.include <bsd.port.options.mk>
+.include <bsd.port.pre.mk>
 
 .if (defined(PPC_ABI) && ${PPC_ABI} == ELFv2) || ${ARCH} == powerpc64le
 EXTRA_PATCHES=	${PATCHDIR}/extra-patch-common.gypi
@@ -106,6 +106,10 @@ EXTRA_PATCHES=	${PATCHDIR}/extra-patch-tools_v8__gypfiles_v8.gyp
 
 .if ${PORT_OPTIONS:MBUNDLED_SSL} && ${ARCH} != amd64
 CONFIGURE_ARGS+=	--openssl-no-asm
+.endif
+
+.if ${COMPILER_TYPE} == clang && ${COMPILER_VERSION} >= 160
+CXXFLAGS+=	-Wno-error=enum-constexpr-conversion
 .endif
 
 post-patch:
@@ -130,4 +134,4 @@ post-install-DTRACE-on:
 	${MKDIR} ${STAGEDIR}${PREFIX}/lib/dtrace
 	${INSTALL_DATA} ${WRKSRC}/out/Release/node.d ${STAGEDIR}${PREFIX}/lib/dtrace
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>

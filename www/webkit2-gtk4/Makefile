@@ -1,6 +1,6 @@
 PORTNAME=	webkit
 DISTVERSION=	2.38.3
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	https://webkitgtk.org/releases/
 PKGNAMESUFFIX=	2-gtk4
@@ -99,6 +99,12 @@ WAYLAND_LIB_DEPENDS=	libwayland-egl.so:graphics/wayland \
 			libwpe-1.0.so:www/libwpe \
 			libWPEBackend-fdo-1.0.so:www/wpebackend-fdo
 
+.include <bsd.port.pre.mk>
+
+.if ${COMPILER_TYPE} == clang && ${COMPILER_VERSION} >= 160
+CXXFLAGS+=	-Wno-error=enum-constexpr-conversion
+.endif
+
 pre-configure:
 # .if !exists() evaluates too early before cairo has a chance to be installed
 	@if ! pkg-config --exists cairo-egl; then \
@@ -118,4 +124,4 @@ post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/libexec/webkit2gtk-5.0/*
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/WebKitWebDriver-5
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>

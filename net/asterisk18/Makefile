@@ -1,5 +1,5 @@
 PORTNAME=	asterisk
-PORTVERSION=	18.18.0
+PORTVERSION=	18.19.0
 CATEGORIES=	net
 MASTER_SITES=	https://downloads.asterisk.org/pub/telephony/%SUBDIR%/:DEFAULT,g729
 MASTER_SITE_SUBDIR=	asterisk/ \
@@ -214,7 +214,7 @@ ASTERISK_MOH_G729_SOUNDS=	asterisk-moh-opsound-g729-2.03.tar.gz
 ASTERISK_USER?=		asterisk
 ASTERISK_GROUP?=	asterisk
 
-PJSIP_VERSION=	2.13
+PJSIP_VERSION=	2.13.1
 
 .include <bsd.port.options.mk>
 
@@ -226,6 +226,10 @@ CXX=            clang++${LLVM_VERSION}
 .endif
 
 .include <bsd.port.pre.mk>
+
+.if ( ${OPSYS} == FreeBSD && ${OSVERSION} >= 1400092 && ${SSL_DEFAULT} == base ) || ${SSL_DEFAULT:Mopenssl3*}
+CFLAGS+=      -DOPENSSL_API_COMPAT=0x30000000L
+.endif
 
 .if empty(ICONV_LIB)
 CONFIGURE_ARGS+=ac_cv_lib_iconv_iconv_open=no \

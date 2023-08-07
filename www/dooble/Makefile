@@ -1,7 +1,7 @@
 PORTNAME=	dooble
-DISTVERSION=	2023.05.31
+DISTVERSION=	2023.07.15
+PORTREVISION=	1
 CATEGORIES=	www
-PKGNAMESUFFIX=	-${FLAVOR}
 
 MAINTAINER=	eric@camachat.org
 COMMENT=	Dooble Web Browser
@@ -10,7 +10,7 @@ WWW=		https://textbrowser.github.io/dooble/
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-FLAVORS=	qt5 qt6
+FLAVORS=	qt6 qt5
 FLAVOR?=	${FLAVORS:[1]}
 qt5_CONFLICTS_INSTALL=	qt6
 qt6_CONFLICTS_INSTALL=	qt5
@@ -21,11 +21,12 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	textbrowser
 USE_GL=		gl
 .if ${FLAVOR} == qt5
+PKGNAMESUFFIX=	-${FLAVOR}
 USE_QT=		concurrent core declarative gui location network printsupport \
 		sql webchannel webengine widgets xml sql-sqlite3:run \
 		buildtools:build qmake:build
 . elif ${FLAVOR} == qt6
-USE_QT=		base charts webchannel webengine
+USE_QT=		base charts sqldriver-sqlite webchannel webengine
 .endif
 USE_XORG=	xcb
 

@@ -1,4 +1,4 @@
-PORTREVISION=	1
+PORTREVISION=	2
 
 .include "${.CURDIR}/Makefile.common"
 
@@ -119,7 +119,7 @@ SHEBANG_GLOB=	*.py
 GNU_CONFIGURE=	yes
 USES=		autoreconf:build bison compiler:c++17-lang cpe desktop-file-utils \
 		gettext gl gmake gnome jpeg ldap localbase:ldflags perl5 pkgconfig \
-		python:3.8+ shebangfix shared-mime-info ssl tar:xz xorg
+		python shebangfix shared-mime-info ssl tar:xz xorg
 USE_GL=		gl glew glu
 USE_GNOME=	cairo glib20 libxml2 libxslt
 USE_PERL5=	build
@@ -222,7 +222,7 @@ MMEDIA_USES=		gstreamer
 MMEDIA_CONFIGURE_ENABLE=	gstreamer-1-0
 
 PDFIUM_CONFIGURE_ENABLE=	pdfium
-PDFIUM_DISTFILES=	pdfium-5408.tar.bz2:src
+PDFIUM_DISTFILES=	pdfium-5778.tar.bz2:src
 PDFIUM_LIB_DEPENDS=	libabsl_strings.so:devel/abseil \
 			libopenjp2.so:graphics/openjpeg
 
@@ -333,8 +333,6 @@ BINARY_ALIAS=	sed=gsed
 .include <bsd.port.pre.mk>
 
 .if ${OPSYS} == FreeBSD && ( \
-    (${OSVERSION} >= 1300525 && ${OSVERSION} < 1301000) || \
-    (${OSVERSION} >= 1301500 && ${OSVERSION} < 1301502) || \
     (${OSVERSION} >= 1400051 && ${OSVERSION} < 1400057))
 BROKEN=	please update FreeBSD base system first to fix an ABI incompatibility
 .endif

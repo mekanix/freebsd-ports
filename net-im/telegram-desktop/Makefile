@@ -1,6 +1,6 @@
 PORTNAME=	telegram-desktop
-DISTVERSION=	4.8.1
-PORTREVISION=	4
+DISTVERSION=	4.8.4
+PORTREVISION=	2
 CATEGORIES=	net-im
 MASTER_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/releases/download/v${DISTVERSION}/
 DISTNAME=	tdesktop-${DISTVERSION}-full
@@ -19,7 +19,8 @@ BROKEN_SSL_REASON=	undefined symbol: ERR_load_BIO_strings
 NOT_FOR_ARCHS=		powerpc powerpc64 powerpcspe
 NOT_FOR_ARCHS_REASON=	Only little endian is supported
 
-BUILD_DEPENDS=	microsoft-gsl>0:devel/microsoft-gsl \
+BUILD_DEPENDS=	boost-libs>0:devel/boost-libs \
+		microsoft-gsl>0:devel/microsoft-gsl \
 		range-v3>0:devel/range-v3 \
 		tl-expected>0:devel/tl-expected \
 		v4l_compat>0:multimedia/v4l_compat \
@@ -29,6 +30,7 @@ LIB_DEPENDS=	libabsl_base.so:devel/abseil \
 		libavformat.so:multimedia/ffmpeg \
 		libdbus-1.so:devel/dbus \
 		libdispatch.so:devel/libdispatch \
+		libfmt.so:devel/libfmt \
 		libhunspell-1.7.so:textproc/hunspell \
 		liblz4.so:archivers/liblz4 \
 		libopenh264.so:multimedia/openh264 \
@@ -50,7 +52,7 @@ qt5_CONFLICTS_INSTALL=	${PORTNAME}-qt6
 qt6_CONFLICTS_INSTALL=	${PORTNAME}
 
 USES=		cmake desktop-file-utils gl gnome jpeg localbase \
-		minizip openal pkgconfig python:3.7+,build ssl xorg
+		minizip openal pkgconfig python:build ssl xorg
 
 USE_CXXSTD=	c++17
 USE_GITHUB=	nodefault
@@ -68,7 +70,7 @@ USE_QT=		5compat base imageformats lottie shadertools svg tools:build wayland
 .endif
 
 USE_GL=		gl
-USE_GNOME=	glib20 glibmm26
+USE_GNOME=	glib20 glibmm26 introspection
 USE_XORG=	x11 xcb xcomposite xdamage xext xfixes xrandr xrender xtst
 
 CMAKE_ARGS=	-DTDESKTOP_API_ID=${TELEGRAM_API_ID} -DTDESKTOP_API_HASH=${TELEGRAM_API_HASH}

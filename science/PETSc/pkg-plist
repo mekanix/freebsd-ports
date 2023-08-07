@@ -3899,6 +3899,7 @@ libdata/pkgconfig/petsc.pc
 %%DATADIR%%/examples/src/mat/tests/output/ex12_2.out
 %%DATADIR%%/examples/src/mat/tests/output/ex12_3.out
 %%DATADIR%%/examples/src/mat/tests/output/ex12_4.out
+%%DATADIR%%/examples/src/mat/tests/output/ex12_5.out
 %%DATADIR%%/examples/src/mat/tests/output/ex132_1.out
 %%DATADIR%%/examples/src/mat/tests/output/ex132_1_par.out
 %%DATADIR%%/examples/src/mat/tests/output/ex132_2.out
@@ -5024,6 +5025,7 @@ libdata/pkgconfig/petsc.pc
 %%DATADIR%%/examples/src/snes/tutorials/output/ex17_3d_q3_trig_vlap.out
 %%DATADIR%%/examples/src/snes/tutorials/output/ex17_ge_q1_0.out
 %%DATADIR%%/examples/src/snes/tutorials/output/ex17_ge_q1_gdsw.out
+%%DATADIR%%/examples/src/snes/tutorials/output/ex17_ge_q1_gmg.out
 %%DATADIR%%/examples/src/snes/tutorials/output/ex18_1.out
 %%DATADIR%%/examples/src/snes/tutorials/output/ex18_2.out
 %%DATADIR%%/examples/src/snes/tutorials/output/ex18_3.out
@@ -6531,8 +6533,7 @@ libdata/pkgconfig/petsc.pc
 %%DATADIR%%/examples/src/ts/tutorials/hamiltonian/makefile
 %%DATADIR%%/examples/src/ts/tutorials/hamiltonian/output/ex1_1.out
 %%DATADIR%%/examples/src/ts/tutorials/hamiltonian/output/ex1_2.out
-%%DATADIR%%/examples/src/ts/tutorials/hamiltonian/output/ex2_bsi1q3.out
-%%DATADIR%%/examples/src/ts/tutorials/hamiltonian/output/ex2_bsi2q3.out
+%%DATADIR%%/examples/src/ts/tutorials/hamiltonian/output/ex2_bsiq3.out
 %%DATADIR%%/examples/src/ts/tutorials/hybrid/ex1.c
 %%DATADIR%%/examples/src/ts/tutorials/hybrid/ex1adj.c
 %%DATADIR%%/examples/src/ts/tutorials/hybrid/ex1fd.c

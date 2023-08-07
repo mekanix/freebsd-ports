@@ -1,9 +1,10 @@
 PORTNAME=	tflint
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.46.1
+PORTREVISION=	2
 CATEGORIES=	sysutils
 
-MAINTAINER=	0xdutra@gmail.com
+MAINTAINER=	nulldutra@proton.me
 COMMENT=	Terraform Linter
 WWW=		https://github.com/terraform-linters/tflint
 

@@ -1,6 +1,6 @@
 PORTNAME=	openclonk
 DISTVERSION=	8.1
-PORTREVISION=	3
+PORTREVISION=	4
 DISTVERSIONSUFFIX=	-src
 CATEGORIES=	games
 MASTER_SITES=	http://www.openclonk.org/builds/release/${DISTVERSION}/
@@ -33,6 +33,7 @@ USE_GL=		gl glew glu
 USE_SDL=	sdl2
 USE_XORG=	x11 xpm
 CMAKE_ARGS=	-DAudio_TK:STRING="OpenAL"
+CFLAGS_powerpc64le=	-DNO_WARN_X86_INTRINSICS
 LDFLAGS_i386=	-Wl,-znotext
 
 .include <bsd.port.pre.mk>

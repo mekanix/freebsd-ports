@@ -1,6 +1,6 @@
 PORTNAME=	opencv
 DISTVERSION=	4.6.0
-PORTREVISION=	10
+PORTREVISION=	11
 CATEGORIES=	graphics
 
 PATCH_SITES=	https://github.com/${PORTNAME}/${PORTNAME}/commit/
@@ -107,7 +107,7 @@ PROTOBUF_LIB_DEPENDS=	libprotobuf.so:devel/protobuf
 PYTHON_DESC=		Enable Python Support 3.6 or greater
 PYTHON_BUILD_DEPENDS=	${PYNUMPY}
 PYTHON_RUN_DEPENDS=	${PYNUMPY}
-PYTHON_USES=		python:3.6+
+PYTHON_USES=		python
 PYTHON_CMAKE_BOOL=	BUILD_opencv_python3
 PYTHON_CMAKE_ON=	-DOPENCV_PYTHON3_INSTALL_PATH=${PYTHON_SITELIBDIR}
 
@@ -213,6 +213,12 @@ OPENJPEG_LIB_DEPENDS=	libopenjp2.so:graphics/openjpeg
 
 _IPPICV_i386=		ippicv/ippicv_2020_lnx_ia32_20191018_general.tgz
 _IPPICV_amd64=		ippicv/ippicv_2020_lnx_intel64_20191018_general.tgz
+
+.include <bsd.port.options.mk>
+
+.if ${ARCH} == powerpc64le && defined(MACHINE_CPU) && ${MACHINE_CPU:Mvsx3}
+CMAKE_ARGS+=		-DCPU_BASELINE:STRING="VSX;VSX3;"
+.endif
 
 post-extract:
 	# Handle contrib

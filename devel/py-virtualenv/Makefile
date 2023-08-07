@@ -1,5 +1,5 @@
 PORTNAME=	virtualenv
-PORTVERSION=	20.23.0
+PORTVERSION=	20.24.2
 CATEGORIES=	devel python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -14,7 +14,7 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}distlib>=0.3.6:devel/py-distlib@${PY_FLAVO
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}distlib>=0.3.6:devel/py-distlib@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}filelock>=3.4.1:sysutils/py-filelock@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}platformdirs>=2.4:devel/py-platformdirs@${PY_FLAVOR}
-# tests: 299 passed, 35 skipped, 705 warnings
+# tests: 296 passed, 26 skipped
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}covdefaults>=2.2.2:devel/py-covdefaults@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}coverage_enable_subprocess>=1.0:devel/py-coverage_enable_subprocess@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}flaky>=3.7.0:devel/py-flaky@${PY_FLAVOR} \
@@ -22,9 +22,10 @@ TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}covdefaults>=2.2.2:devel/py-covdefaults@${P
 		${PYTHON_PKGNAMEPREFIX}pytest-env>=0.6.2:devel/py-pytest-env@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pytest-mock>0:devel/py-pytest-mock@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pytest-randomly>=3.10.3:devel/py-pytest-randomly@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}pytest-timeout>=2.1.0:devel/py-pytest-timeout@${PY_FLAVOR}
+		${PYTHON_PKGNAMEPREFIX}pytest-timeout>=2.1.0:devel/py-pytest-timeout@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}time-machine>=2.10.0:devel/py-time-machine@${PY_FLAVOR}
 
-USES=		cpe python:3.7+
+USES=		cpe python
 USE_GITHUB=	yes
 GH_ACCOUNT=	pypa
 USE_PYTHON=	autoplist concurrent pep517 pytest
@@ -71,11 +72,4 @@ post-install-DOCS-on:
 	${LOCALBASE}/bin/sphinx-build-${PYTHON_VER} -d ${WRKDIR} -b html -n ${WRKSRC}/docs ${STAGEDIR}${DOCSDIR}
 	${LOCALBASE}/bin/sphinx-build-${PYTHON_VER} -d ${WRKDIR} -b man -n ${WRKSRC}/docs ${STAGEDIR}${MANPREFIX}/man/man1
 
-.include <bsd.port.pre.mk>
-
-.if "${PYTHON_VER}" == "3.7"
-RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}importlib-metadata>=4.8.1:devel/py-importlib-metadata@${PY_FLAVOR}
-
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

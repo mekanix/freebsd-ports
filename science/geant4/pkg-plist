@@ -2464,7 +2464,6 @@ include/Geant4/G4ParticleHPFissionERelease.hh
 include/Geant4/G4ParticleHPFissionFS.hh
 include/Geant4/G4ParticleHPFissionSpectrum.hh
 include/Geant4/G4ParticleHPFSFissionFS.hh
-include/Geant4/G4ParticleHPGamma.hh
 include/Geant4/G4ParticleHPHash.hh
 include/Geant4/G4ParticleHPHe3InelasticFS.hh
 include/Geant4/G4ParticleHPInelastic.hh
@@ -2482,7 +2481,7 @@ include/Geant4/G4ParticleHPLabAngularEnergy.hh
 include/Geant4/G4ParticleHPLCFissionFS.hh
 include/Geant4/G4ParticleHPLegendreStore.hh
 include/Geant4/G4ParticleHPLegendreTable.hh
-include/Geant4/G4ParticleHPLevel.hh
+include/Geant4/G4ParticleHPNucLevel.hh
 include/Geant4/G4ParticleHPList.hh
 include/Geant4/G4ParticleHPMadlandNixSpectrum.hh
 include/Geant4/G4ParticleHPManager.hh

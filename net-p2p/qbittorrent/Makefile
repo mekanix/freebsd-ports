@@ -1,5 +1,6 @@
 PORTNAME=	qbittorrent
-DISTVERSION=	4.5.3
+DISTVERSION=	4.5.4
+PORTREVISION=	1
 CATEGORIES=	net-p2p
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
@@ -50,7 +51,7 @@ OPTIONS_EXCLUDE=	DBUS
 OPTIONS_DEFINE=			DBUS PYTHON DEBUG
 OPTIONS_RADIO=			LIBTORRENT
 OPTIONS_RADIO_LIBTORRENT=	LIBTORRENT1 LIBTORRENT2
-OPTIONS_DEFAULT=		DBUS LIBTORRENT1
+OPTIONS_DEFAULT=		DBUS PYTHON LIBTORRENT1
 
 LIBTORRENT_DESC=	libtorrent version number to use
 LIBTORRENT1_DESC=	Version 1.x (default)
@@ -67,7 +68,7 @@ LIBTORRENT2_RUN_DEPENDS=	libtorrent-rasterbar2>0:net-p2p/libtorrent-rasterbar2
 LIBTORRENT2_EXTRA_PATCHES=	${FILESDIR}/extrapatch-libtorrent-rasterbar2-settings
 
 PYTHON_DESC=		Install Python to support some plugin functionality
-PYTHON_USES=		python:3.6+,run
+PYTHON_USES=		python:run
 
 post-patch-PYTHON-on:
 	@${REINPLACE_CMD} -e 's|"python3"|"${PYTHON_CMD}"|' ${WRKSRC}/src/base/utils/foreignapps.cpp

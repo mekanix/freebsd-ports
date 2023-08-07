@@ -1,5 +1,5 @@
 PORTNAME=	pciids
-PORTVERSION=	20230523
+PORTVERSION=	20230730
 CATEGORIES=	misc
 
 MAINTAINER=	sunpoet@FreeBSD.org
@@ -15,9 +15,9 @@ NO_BUILD=	yes
 
 PORTDATA=	pci.ids
 
-GH_ACCOUNT=	pciutils
-GH_TAGNAME=	f52a641
 USE_GITHUB=	yes
+GH_ACCOUNT=	pciutils
+GH_TAGNAME=	3402be6
 
 do-install:
 	${MKDIR} ${STAGEDIR}${DATADIR}/

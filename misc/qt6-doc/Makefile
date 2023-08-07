@@ -1,6 +1,5 @@
 PORTNAME=	doc
 DISTVERSION=	${QT6_VERSION}
-PORTREVISION=	1
 CATEGORIES=	misc
 PKGNAMEPREFIX=	qt6-
 
@@ -17,5 +16,6 @@ USE_QT=		base declarative tools \
 
 ALL_TARGET=	docs
 INSTALL_TARGET=	install_docs
+NO_ARCH=	yes
 
 .include <bsd.port.mk>

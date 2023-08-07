@@ -1,6 +1,5 @@
 PORTNAME=	py-cpuinfo
-DISTVERSION=	8.0.0
-PORTREVISION=	1
+DISTVERSION=	9.0.0
 CATEGORIES=	sysutils python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -12,7 +11,7 @@ WWW=		https://github.com/workhorsy/py-cpuinfo
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		python:3.6+
+USES=		python
 USE_PYTHON=	distutils concurrent autoplist
 
 NO_ARCH=	yes

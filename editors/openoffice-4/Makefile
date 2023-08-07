@@ -1,6 +1,6 @@
 PORTNAME=	apache-openoffice
 PORTVERSION=	${AOOVERSION}
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	editors java
 MASTER_SITES=	https://dlcdn.apache.org/openoffice/${PORTVERSION}/source/ \
 		https://archive.apache.org/dist/openoffice/${PORTVERSION}/source/ \
@@ -203,7 +203,6 @@ WITH=	SDK
 .include <bsd.port.pre.mk>
 
 .if ${OPSYS} == FreeBSD && ( \
-    (${OSVERSION} >= 1301500 && ${OSVERSION} < 1301502) || \
     (${OSVERSION} >= 1400051 && ${OSVERSION} < 1400057))
 BROKEN=	please update FreeBSD base system first to fix an ABI incompatibility
 .endif

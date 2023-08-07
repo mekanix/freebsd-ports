@@ -1,6 +1,6 @@
 PORTNAME=	ringrtc
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.27.0
+DISTVERSION=	2.28.1
 PORTREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	LOCAL/mikael/ringrtc/:base \
@@ -45,7 +45,7 @@ LIB_DEPENDS=	libasound.so:audio/alsa-lib \
 		libfreetype.so:print/freetype2 \
 		libpulse.so:audio/pulseaudio
 
-USES=		cargo gnome localbase:ldflags ninja pkgconfig python:3.7+,build \
+USES=		cargo gnome localbase:ldflags ninja pkgconfig python:build \
 		tar:xz
 USE_GNOME=	glib20
 USE_GITHUB=	yes
@@ -54,7 +54,7 @@ GH_TUPLE=	signalapp:ringrtc:${DISTVERSIONPREFIX}${DISTVERSION} \
 		signalapp:webrtc:${WEBRTC_REV}:webrtc
 
 # sh net-im/signal-desktop/get_deps.sh
-WEBRTC_REV=	5615a
+WEBRTC_REV=	5615b
 
 # modify webrtc_fetch.sh, then sh webrtc_fetch.sh
 BASE_REV=		0fc91d5d9071a1619d481fbc6a166fcd9a4ac0a9
@@ -100,7 +100,7 @@ MAKE_ARGS=	-C out/${BUILDTYPE}
 WRKSRC=		${WRKDIR}/${PORTNAME}-${DISTVERSION}/src/rust
 WEBRTCDIR=	${WRKDIR}/${PORTNAME}-${DISTVERSION}/src/webrtc/src
 
-# fetch -qo - https://raw.githubusercontent.com/signalapp/ringrtc/v2.26.4/src/rust/Cargo.lock | awk -f /usr/ports/Mk/Scripts/cargo-crates.awk | portedit merge -i Makefile
+# fetch -qo - https://raw.githubusercontent.com/signalapp/ringrtc/v2.28.1/src/rust/Cargo.lock | awk -f /usr/ports/Mk/Scripts/cargo-crates.awk | portedit merge -i Makefile
 CARGO_CRATES=	adler-1.0.2 \
 		aead-0.4.3 \
 		aes-0.7.5 \
@@ -127,7 +127,6 @@ CARGO_CRATES=	adler-1.0.2 \
 		crc32fast-1.3.2 \
 		crypto-mac-0.11.1 \
 		ctr-0.8.0 \
-		curve25519-dalek-3.2.1 \
 		darling-0.20.1 \
 		darling_core-0.20.1 \
 		darling_macro-0.20.1 \

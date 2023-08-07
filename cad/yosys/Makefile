@@ -1,6 +1,6 @@
 PORTNAME=	yosys
 DISTVERSIONPREFIX=	yosys-
-DISTVERSION=	0.30
+DISTVERSION=	0.31
 CATEGORIES=	cad
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -18,7 +18,7 @@ RUN_DEPENDS=	xdot:x11/py-xdot@${PY_FLAVOR}
 TEST_DEPENDS=	bash:shells/bash \
 		iverilog:cad/iverilog
 
-USES=		bison compiler:c++11-lang gmake pkgconfig python:3.6+ readline \
+USES=		bison compiler:c++11-lang gmake pkgconfig python readline \
 		shebangfix tcl
 
 SHEBANG_FILES=	backends/smt2/smtbmc.py \
