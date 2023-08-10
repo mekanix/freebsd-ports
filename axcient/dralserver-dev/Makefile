@@ -16,7 +16,7 @@ CONFLICTS_INSTALL=	dralserver \
 
 MASTERDIR=	${.CURDIR}/../dralserver
 
-GO_TARGET=	./cmd/dralserver ./cmd/cleanupdralclones
+GO_TARGET=	./cmd/dralserver ./cmd/cleanupdralclones ./cmd/cleanupdralftpsexports
 
 # Disable checksum verification because this port builds from the tip of a
 # branch.
