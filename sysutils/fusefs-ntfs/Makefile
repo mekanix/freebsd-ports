@@ -1,5 +1,6 @@
 PORTNAME=	ntfs
 PORTVERSION=	2022.10.3
+PORTREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	https://download.tuxera.com/opensource/
 PKGNAMEPREFIX=	fusefs-
@@ -45,7 +46,8 @@ UBLIO_CFLAGS=	-DUSE_UBLIO
 DEVOFFSET_DESC=	Enable mount option dev_offset
 EXTRA_PATCHES += ${FILESDIR}/extra-patch-libntfs-3g__unix_io.c \
 		${FILESDIR}/extra-patch-libntfs-3g__device.c
-DEVOFFSET_EXTRA_PATCHES= ${FILESDIR}/extra-patch-dev_offset
+DEVOFFSET_EXTRA_PATCHES= ${FILESDIR}/extra-patch-dev_offset \
+		${FILESDIR}/extra-patch-dev_offset-utils
 
 SUB_FILES=	pkg-message
 DOCSDIR=	${PREFIX}/share/doc/ntfs-3g

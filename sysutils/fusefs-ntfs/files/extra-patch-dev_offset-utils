@@ -1,0 +1,92 @@
+--- ntfsprogs/utils.h.orig	2023-08-08 12:11:09.951804000 +0000
++++ ntfsprogs/utils.h	2023-08-08 12:17:39.425679000 +0000
+@@ -56,6 +56,7 @@
+ 
+ int utils_valid_device(const char *name, int force);
+ ntfs_volume * utils_mount_volume(const char *device, unsigned long flags);
++ntfs_volume * utils_mount_volume_ext(const char *device, unsigned long flags, const s64 dev_offset);
+ 
+ /**
+  * defines...
+--- ntfsprogs/utils.c.orig	2023-08-08 12:45:02.139460000 +0000
++++ ntfsprogs/utils.c	2023-08-08 12:43:00.491660000 +0000
+@@ -254,8 +254,14 @@
+ /**
+  * utils_mount_volume - Mount an NTFS volume
+  */
++
+ ntfs_volume * utils_mount_volume(const char *device, unsigned long flags)
+ {
++    return utils_mount_volume_ext(device, flags, 0);
++}
++
++ntfs_volume * utils_mount_volume_ext(const char *device, unsigned long flags, const s64 dev_offset)
++{
+ 	ntfs_volume *vol;
+ 
+ 	if (!device) {
+@@ -281,7 +287,7 @@
+ 	if (!utils_valid_device(device, flags & NTFS_MNT_RECOVER))
+ 		return NULL;
+ 
+-	vol = ntfs_mount(device, flags);
++	vol = ntfs_mount_ext(device, flags, dev_offset);
+ 	if (!vol) {
+ 		ntfs_log_perror("Failed to mount '%s'", device);
+ 		if (errno == EINVAL)
+--- ntfsprogs/ntfsls.c.orig	2021-09-13 07:34:39.000000000 +0000
++++ ntfsprogs/ntfsls.c	2023-08-08 13:55:59.611433000 +0000
+@@ -118,6 +118,7 @@
+ 	int classify;
+ 	int recursive;
+ 	const char *path;
++	s64 dev_offset;
+ } opts;
+ 
+ typedef struct {
+@@ -172,6 +173,7 @@
+ 		"    -V, --version        Display version information\n"
+ 		"    -v, --verbose        More output\n"
+ 		"    -x, --dos            Use short (DOS 8.3) names\n"
++		"    -o, --dev_offset     Use offset for volume\n"
+ 		"\n",
+ 		EXEC_NAME);
+ 
+@@ -191,7 +193,7 @@
+  */
+ static int parse_options(int argc, char *argv[])
+ {
+-	static const char *sopt = "-aFfh?ilp:qRsVvx";
++	static const char *sopt = "-aFfh?ilp:o:qRsVvx";
+ 	static const struct option lopt[] = {
+ 		{ "all",	 no_argument,		NULL, 'a' },
+ 		{ "classify",	 no_argument,		NULL, 'F' },
+@@ -206,6 +208,7 @@
+ 		{ "version",	 no_argument,		NULL, 'V' },
+ 		{ "verbose",	 no_argument,		NULL, 'v' },
+ 		{ "dos",	 no_argument,		NULL, 'x' },
++		{ "dev_offset",	 required_argument,	NULL, 'o' },
+ 		{ NULL, 0, NULL, 0 },
+ 	};
+ 
+@@ -232,6 +235,9 @@
+ 		case 'p':
+ 			opts.path = optarg;
+ 			break;
++		case 'o':
++			opts.dev_offset = optarg ? atoll(optarg) : 0;
++			break;
+ 		case 'f':
+ 			opts.force++;
+ 			break;
+@@ -650,8 +656,8 @@
+ 
+ 	utils_set_locale();
+ 
+-	vol = utils_mount_volume(opts.device, NTFS_MNT_RDONLY |
+-			(opts.force ? NTFS_MNT_RECOVER : 0));
++	vol = utils_mount_volume_ext(opts.device, NTFS_MNT_RDONLY |
++			(opts.force ? NTFS_MNT_RECOVER : 0), opts.dev_offset);
+ 	if (!vol) {
+ 		// FIXME: Print error... (AIA)
+ 		return 2;
