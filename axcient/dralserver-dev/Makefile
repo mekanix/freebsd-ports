@@ -15,6 +15,7 @@ CONFLICTS_INSTALL=	dralserver \
 			dralserver-stg
 
 MASTERDIR=	${.CURDIR}/../dralserver
+PLIST=		${.CURDIR}/pkg-plist
 
 GO_TARGET=	./cmd/dralserver ./cmd/cleanupdralclones ./cmd/cleanupdralftpsexports
 
