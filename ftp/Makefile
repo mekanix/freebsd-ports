@@ -7,6 +7,7 @@
     SUBDIR += bbftp-server
     SUBDIR += bftpd
     SUBDIR += bsdftpd-ssl
+    SUBDIR += cap-ftpd
     SUBDIR += cmdftp
     SUBDIR += coeurl
     SUBDIR += curl

@@ -89,6 +89,7 @@ pipeline {
                     editors/vim \
                     emulators/open-vm-tools \
                     emulators/qemu@tools \
+                    ftp/cap-ftpd \
                     graphics/py-pillow \
                     lang/expect \
                     mail/ssmtp \
@@ -208,6 +209,7 @@ pipeline {
                 sh 'cd axcient/vt2; make fetch'
                 sh 'cd axcient/vt2-stg; make fetch'
                 sh 'cd axcient/ztop-exporter; make fetch'
+                sh 'cd ftp/cap-ftpd; make fetch'
                 sh 'cd net-mgmt/py-network-interface-exporter; make fetch'
                 sh 'cd net-mgmt/py-smartctl-exporter; make fetch'
                 sh 'cd net-mgmt/py-zfs-exporter; make fetch'

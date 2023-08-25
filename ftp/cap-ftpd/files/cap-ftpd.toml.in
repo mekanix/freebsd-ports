@@ -1,0 +1,19 @@
+# Bind address and port
+addr =	"127.0.0.1:21"
+
+# Path to the password file, in json format
+auth = "%%LOCALBASE%%/etc/cap-ftpd/cap-ftpd-users.json"
+
+# FTP root directory.  This should be the lowest common parent directory
+# of every user's home directory.  It is highly recommended not to use
+# "/".
+root = "/ftp"
+
+# Path to the TLS certificate file, in PEM format.
+# If undefined, TLS will not be used
+# cert = "/usr/local/etc/cap-ftpd/cert.crt"
+# Path to the TLS private key, in PEM format.
+# privkey = "/usr/local/etc/cap-ftpd/key.key"
+
+# Path to the worker exectuable
+worker_path = "%%LOCALBASE%%/libexec/cap-ftpd-worker"

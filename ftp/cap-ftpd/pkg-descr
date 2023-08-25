@@ -1,0 +1,4 @@
+Highly secure FTPS server
+
+cap-ftpd forks a separate process per-connection, and locks each one into
+Capsicum mode, jailed into a single user's home directory.
