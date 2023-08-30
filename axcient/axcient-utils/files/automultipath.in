@@ -12,7 +12,9 @@ automultipath_start() {
 }
 
 automultipath_stop() {
-	rm "/var/run/${name}"
+	if [ -e "/var/run/${name}" ]; then
+		rm "/var/run/${name}"
+	fi
 }
 
 load_rc_config $name
