@@ -495,6 +495,8 @@ include/folly/folly-config.h
 include/folly/functional/ApplyTuple.h
 include/folly/functional/Invoke.h
 include/folly/functional/Partial.h
+include/folly/functional/protocol.h
+include/folly/functional/traits.h
 include/folly/futures/Barrier.h
 include/folly/futures/Future-inl.h
 include/folly/futures/Future-pre.h
@@ -600,6 +602,8 @@ include/folly/io/async/test/AsyncSSLSocketTest.h
 include/folly/io/async/test/AsyncSocketTest.h
 include/folly/io/async/test/AsyncSocketTest2.h
 include/folly/io/async/test/BlockingSocket.h
+include/folly/io/async/test/CallbackStateEnum.h
+include/folly/io/async/test/ConnCallback.h
 include/folly/io/async/test/MockAsyncSSLSocket.h
 include/folly/io/async/test/MockAsyncServerSocket.h
 include/folly/io/async/test/MockAsyncSocket.h
@@ -608,12 +612,14 @@ include/folly/io/async/test/MockAsyncUDPSocket.h
 include/folly/io/async/test/MockTimeoutManager.h
 include/folly/io/async/test/ScopedBoundPort.h
 include/folly/io/async/test/SocketPair.h
+include/folly/io/async/test/TFOUtil.h
 include/folly/io/async/test/TestSSLServer.h
 include/folly/io/async/test/TimeUtil.h
 include/folly/io/async/test/UndelayedDestruction.h
 include/folly/io/async/test/Util.h
 include/folly/io/coro/ServerSocket.h
 include/folly/io/coro/Transport.h
+include/folly/io/coro/TransportCallbackBase.h
 include/folly/json.h
 include/folly/json_patch.h
 include/folly/json_pointer.h

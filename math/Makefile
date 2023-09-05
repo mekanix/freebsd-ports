@@ -622,6 +622,7 @@
     SUBDIR += octave-forge-pkg-octave-doc
     SUBDIR += octave-forge-plot
     SUBDIR += octave-forge-ponchon-savarit
+    SUBDIR += octave-forge-prompt
     SUBDIR += octave-forge-psychrometrics
     SUBDIR += octave-forge-pythonic
     SUBDIR += octave-forge-quaternion
@@ -892,6 +893,8 @@
     SUBDIR += py-arviz
     SUBDIR += py-arybo
     SUBDIR += py-autograd
+    SUBDIR += py-awkward
+    SUBDIR += py-awkward-cpp
     SUBDIR += py-baycomp
     SUBDIR += py-bayesian-optimization
     SUBDIR += py-benford_py

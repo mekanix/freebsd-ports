@@ -1,12 +1,14 @@
 PORTNAME=	moto
-PORTVERSION=	4.1.12
+PORTVERSION=	4.2.2
 CATEGORIES=	devel python
-MASTER_SITES=	PYPI
+MASTER_SITES=	PYPI \
+		https://github.com/getmoto/moto/releases/download/${PORTVERSION}/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Allow your python tests to easily mock out the boto library
-WWW=		https://github.com/getmoto/moto
+WWW=		https://docs.getmoto.org/en/latest/ \
+		https://github.com/getmoto/moto
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

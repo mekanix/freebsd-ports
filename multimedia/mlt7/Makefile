@@ -1,6 +1,6 @@
 PORTNAME=		${_MLT_PORTNAME}
 DISTVERSION=		${_MLT_VERSION}
-PORTREVISION?=		0
+PORTREVISION?=		1
 CATEGORIES?=		multimedia
 # Don't use GitHub "fake" downloads that are auto-generated from a
 # tag; the project uploads tarballs for each release.
@@ -106,8 +106,8 @@ PLUSGPL_DESC=		Enable plus GPL module
 PLUSGPL_CMAKE_BOOL=	MOD_PLUSGPL
 
 PLUS_DESC=		Enable plus module
-PLUS_LIB_DEPENDS=	libebur128.so:audio/ebur128 \
-			libfftw3.so:math/fftw3
+PLUS_USES=		ebur128
+PLUS_LIB_DEPENDS=	libfftw3.so:math/fftw3
 PLUS_CMAKE_BOOL=	MOD_PLUS
 
 RESAMPLE_DESC=		Enable resample module

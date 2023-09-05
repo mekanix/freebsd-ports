@@ -1,6 +1,6 @@
 PORTNAME=	Quaternion
 DISTVERSION=	0.0.95.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	net-im
 
 MAINTAINER=	adridg@FreeBSD.org
@@ -13,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSES/GPL-3.0-or-later.txt
 LIB_DEPENDS=	libqt5keychain.so:security/qtkeychain@qt5 \
 		libsecret-1.so:security/libsecret \
 		libolm.so:security/olm
-BUILD_DEPENDS=	libquotient>=0.8:net-im/libquotient
+BUILD_DEPENDS=	libquotient>=0.8.1:net-im/libquotient
 # Quotient is a static lib, doesn't need to be in RUN_DEPENDS
 
 USES=		cmake compiler:c++17-lang desktop-file-utils \
@@ -29,5 +29,14 @@ CMAKE_OFF=	BUILD_WITH_QT6
 USE_GITHUB=	yes
 GH_ACCOUNT=	quotient-im
 GH_TAGNAME=	447d8ec4f990499fb589a37b7e8eae8c6781cadc
+
+.include <bsd.port.options.mk>
+
+.if ${OPSYS} == FreeBSD && ( ${OSVERSION} >= 1400091 || ( ${OSVERSION} >= 1302507 && ${OSVERSION} < 1400000 ))
+USES+=	llvm:max=15
+CPP=	clang-cpp${LLVM_VERSION}
+CC=	clang${LLVM_VERSION}
+CXX=	clang++${LLVM_VERSION}
+.endif
 
 .include <bsd.port.mk>

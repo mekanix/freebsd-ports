@@ -13,7 +13,6 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	wayland-protocols>0:graphics/wayland-protocols
 LIB_DEPENDS=	libjson-c.so:devel/json-c \
-		libepoll-shim.so:devel/libepoll-shim \
 		libwayland-client.so:graphics/wayland \
 		libfreetype.so:print/freetype2 \
 		libfontconfig.so:x11-fonts/fontconfig \
@@ -29,6 +28,12 @@ PLIST_FILES=	bin/${PORTNAME} \
 		share/applications/${PORTNAME}.desktop \
 		share/icons/hicolor/64x64/apps/${PORTNAME}.png \
 		${NULL}
+
+# XXX Drop after FreeBSD 13.4 EOL around 2026-01-31
+# https://cgit.freebsd.org/src/commit/?id=af93fea71038
+.if !exists(/usr/include/sys/timerfd.h)
+LIB_DEPENDS+=	libepoll-shim.so:devel/libepoll-shim
+.endif
 
 OPTIONS_DEFINE=	BASH GIF HEIF JPEG JXL LIBEXIF LIBRSVG2 OPENEXR PNG TIFF WEBP ZSH
 OPTIONS_DEFAULT=BASH GIF HEIF JPEG JXL LIBEXIF LIBRSVG2 OPENEXR PNG TIFF WEBP ZSH
@@ -72,6 +77,12 @@ WEBP_MESON_ENABLED=	webp
 
 ZSH_MESON_ENABLED=	zsh
 ZSH_PLIST_FILES=	share/zsh/site-functions/_${PORTNAME}
+
+.include <bsd.port.options.mk>
+
+.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1400097
+CFLAGS+=	-D__BSD_VISIBLE -D__XSI_VISIBLE
+.endif
 
 post-patch:
 # Respect PREFIX for system-wide config

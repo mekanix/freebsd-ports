@@ -13,6 +13,7 @@
     SUBDIR += R-cran-digest
     SUBDIR += R-cran-gitcreds
     SUBDIR += R-cran-openssl
+    SUBDIR += R-cran-sodium
     SUBDIR += acme.sh
     SUBDIR += acmed
     SUBDIR += acmetool
@@ -56,6 +57,7 @@
     SUBDIR += bitwarden-cli
     SUBDIR += boringssl
     SUBDIR += botan2
+    SUBDIR += botan3
     SUBDIR += bruteblock
     SUBDIR += bsdsfv
     SUBDIR += bsmtrace
@@ -169,6 +171,7 @@
     SUBDIR += fwlogwatch
     SUBDIR += gcr
     SUBDIR += gef
+    SUBDIR += git-credential-azure
     SUBDIR += git-credential-gopass
     SUBDIR += git-credential-oauth
     SUBDIR += git-crypt
@@ -930,6 +933,7 @@
     SUBDIR += py-iris-webhooks-module
     SUBDIR += py-itsdangerous
     SUBDIR += py-josepy
+    SUBDIR += py-jwcrypto
     SUBDIR += py-keepkey
     SUBDIR += py-kerberos
     SUBDIR += py-keyring
@@ -945,7 +949,6 @@
     SUBDIR += py-muacrypt
     SUBDIR += py-nassl
     SUBDIR += py-netbox-secrets
-    SUBDIR += py-netbox-secretstore
     SUBDIR += py-netmiko
     SUBDIR += py-noiseprotocol
     SUBDIR += py-notus-scanner
@@ -1015,6 +1018,7 @@
     SUBDIR += py-scrypt
     SUBDIR += py-secure
     SUBDIR += py-securesystemslib
+    SUBDIR += py-service-identity
     SUBDIR += py-service_identity
     SUBDIR += py-signedjson
     SUBDIR += py-social-auth-core
@@ -1033,6 +1037,7 @@
     SUBDIR += py-tlslite-ng
     SUBDIR += py-trezor
     SUBDIR += py-trustme
+    SUBDIR += py-truststore
     SUBDIR += py-tuf
     SUBDIR += py-txtorcon
     SUBDIR += py-uhashring
@@ -1071,6 +1076,7 @@
     SUBDIR += rubygem-airbrussh
     SUBDIR += rubygem-android_key_attestation
     SUBDIR += rubygem-attr_encrypted
+    SUBDIR += rubygem-attr_encrypted3
     SUBDIR += rubygem-bcrypt
     SUBDIR += rubygem-bcrypt-ruby
     SUBDIR += rubygem-bcrypt_pbkdf
@@ -1081,6 +1087,7 @@
     SUBDIR += rubygem-devise-two-factor-rails5
     SUBDIR += rubygem-devise-two-factor-rails61
     SUBDIR += rubygem-devise-two-factor-rails70
+    SUBDIR += rubygem-devise-two-factor40-rails70
     SUBDIR += rubygem-devise_pam_authenticatable2
     SUBDIR += rubygem-devise_pam_authenticatable2-rails61
     SUBDIR += rubygem-digest
@@ -1090,6 +1097,7 @@
     SUBDIR += rubygem-doorkeeper-rails5
     SUBDIR += rubygem-doorkeeper-rails50
     SUBDIR += rubygem-doorkeeper-rails61
+    SUBDIR += rubygem-doorkeeper-rails70
     SUBDIR += rubygem-duo_api
     SUBDIR += rubygem-ed25519
     SUBDIR += rubygem-encryptor
@@ -1145,7 +1153,6 @@
     SUBDIR += rubygem-openssl-ccm
     SUBDIR += rubygem-openssl-cmac
     SUBDIR += rubygem-openssl-signature_algorithm
-    SUBDIR += rubygem-openssl2
     SUBDIR += rubygem-openvas-omp
     SUBDIR += rubygem-origami
     SUBDIR += rubygem-pbkdf2-ruby
@@ -1279,6 +1286,7 @@
     SUBDIR += stoken
     SUBDIR += strongswan
     SUBDIR += stunnel
+    SUBDIR += su-exec
     SUBDIR += subversion-gnome-keyring
     SUBDIR += sudo
     SUBDIR += sudoscript

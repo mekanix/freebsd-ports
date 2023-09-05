@@ -28,6 +28,7 @@
     SUBDIR += abstreet
     SUBDIR += abuse_sdl
     SUBDIR += ace-of-penguins
+    SUBDIR += adom
     SUBDIR += adonthell
     SUBDIR += adonthell-wastesedge
     SUBDIR += aestats
@@ -142,7 +143,6 @@
     SUBDIR += caph
     SUBDIR += cardpics
     SUBDIR += cataclysm-dda
-    SUBDIR += cataclysm-dda-tiles
     SUBDIR += catesc
     SUBDIR += cave9
     SUBDIR += cavezofphear

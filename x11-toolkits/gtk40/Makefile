@@ -50,7 +50,7 @@ OPTIONS_DEFINE=	CUPS COLORD DEBUG BROADWAY GSTREAMER VULKAN WAYLAND X11
 OPTIONS_DEFAULT=CUPS COLORD BROADWAY GSTREAMER VULKAN WAYLAND X11
 OPTIONS_SUB=	yes
 
-BROADWAY_DESC=	Enable GDK Broadway backend for showing GTK+ in the webbrowser using HTML5 and web sockets.
+BROADWAY_DESC=	Enable GDK Broadway backend for showing GTK in the webbrowser using HTML5 and web sockets.
 BROADWAY_MESON_TRUE=	broadway-backend
 
 COLORD_DESC=	Color profile support
@@ -71,6 +71,7 @@ VULKAN_BUILD_DEPENDS=	glslc:graphics/shaderc \
 VULKAN_LIB_DEPENDS=	libvulkan.so:graphics/vulkan-loader
 VULKAN_RUN_DEPENDS=	vulkan-headers>0:graphics/vulkan-headers
 VULKAN_MESON_ENABLED=	vulkan
+VULKAN_CFLAGS=		-Wno-error=int-conversion # https://gitlab.gnome.org/GNOME/gtk/-/issues/6033
 
 WAYLAND_DESC=		GDK Wayland backend
 WAYLAND_MESON_TRUE=	wayland-backend

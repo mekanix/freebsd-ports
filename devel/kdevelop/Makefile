@@ -40,15 +40,15 @@ SHEBANG_FILES=	kdevplatform/util/kdevplatform_shell_environment.sh \
 # IDE, which **probably** is used for Qt / KDE development (also
 # other things, but let's guess a target market), pull in some
 # additional development things that are otherwise build-dep-only.
-USE_KDE+=	ecm
+USE_KDE+=	ecm:build
 USE_QT+=	testlib
 
 CMAKE_ARGS=	-DCMAKE_POLICY_DEFAULT_CMP0074=NEW \
 		-DClang_DIR=${LLVM_PREFIX}/lib/cmake/clang
 
 # Versioning values, to reduce plist churn
-SO_VER=		511
-SO_VER_LONG=	5.11.230403
+SO_VER=		512
+SO_VER_LONG=	5.12.230800
 PLIST_SUB+=	SO_VER=${SO_VER} SO_VER_LONG=${SO_VER_LONG}
 
 OPTIONS_DEFINE=	WEBENGINE

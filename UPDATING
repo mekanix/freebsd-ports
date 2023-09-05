@@ -5,6 +5,77 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20230904:
+  AUTHOR: netchild@FreeBSD.org
+  AFFECTS: users of misc/openhab
+
+  The rc.d script of 4.0.2 had an error which didn't take the user to
+  run openhab into account. After installing the update and stopping
+  openhab run (for the default settings)
+    chown -R openhab:openhab /var/db/openhab/userdata /var/log/openhab
+  If you use other directories for the userdata and logs, you need to
+  adapt accordingly.
+
+20230822:
+  AUTHOR: arrowd@FreeBSD.org
+  AFFECTS: users of sysutils/polkit together with sysutils/consolekit2
+
+  ConsoleKit2 has grown some logind1 compatibility which resulted in breaking
+  changes in its API. One of its consumers, Polkit, is patched to handle it,
+  so make sure to update both ports simultaneously.
+
+20230822:
+  AUTHOR: leres@FreeBSD.org
+  AFFECTS: users of security/zeek
+
+  Zeek has been upgraded to 6.0.0 and the NETMAP option was removed;
+  it was too difficult to build it without zeek being installed in
+  %%PREFIX%%.
+
+  The consensus was that this was a rarely used feature, please
+  reach out to me if need this (I've done some work on a new
+  security/zeek-netmap port that is probably the right way forward).
+
+  When I upgraded zeek on my systems I found some cruft left over
+  from previous versions. The way I recommend upgrading from 5.0.9 to
+  6.0.0 is:
+
+      service zeek stop
+      pkg delete -fy zeek py311-zkg
+      [clean up leftover files in /usr/local/lib/zeek]
+      pkg install -y zeek
+      service zeek deploy
+
+20230817:
+  AFFECTS: users of databases/redis
+  AUTHOR: yasu@FreeBSD.org
+
+  The databases/redis port has been updated to 7.2. Users wanting to
+  stay on 7.0 can replace databases/redis with databases/redis70 with
+  one of the following commands.
+
+  If you use pkg with binary packages:
+    # pkg set -o databases/redis:databases/redis70
+    # pkg upgrade
+  If you use portmaster:
+    # portmaster -o databases/redis70 databases/redis
+  If you use portupgrade:
+    # portupgrade -o databases/redis70 databases/redis
+
+20230814:
+  AFFECTS: usrs of www/kdsoap
+  AUTHOR: kde@FreeBSD.org
+
+  The port www/kdsoap has been flavorized to support both Qt5 and Qt6.
+  For symmetry, the Qt5 package has been renamed to kdsoap-qt5.
+
+20230811:
+  AFFECTS: users of www/p5-AnyEvent-WebSocket-Client
+  AUTHOR: rodrigo@FreeBSD.org
+
+  The update to AnyEvent-WebSocket-Client 0.55 introduce a change in behavior:
+  close() default return code is now 1000 instead of 1005
+
 20230730:
   AFFECTS: users of lang/perl5*
   AUTHOR: delphij@FreeBSD.org
@@ -237,7 +308,7 @@ you update your ports collection, before attempting any port upgrades.
   AFFECTS: users of sysutils/py-mqttwarn
   AUTHOR: dvl@FreeBSD.org
 
-  The redis optoin REISPUB has been renamed to REDISPUB
+  The redis option REISPUB has been renamed to REDISPUB
   You should update any make.conf setting etc which refer to this.
   e.g. change sysutils_py-mqttwarn_REISPUB to sysutils_py-mqttwarn_REDISPUB
 
@@ -391,7 +462,7 @@ you update your ports collection, before attempting any port upgrades.
   AUTHOR: tcberner@FreeBSD.org
 
   The packages accessibility/atk and accessibility/at-spi2-atk have been
-  integegrated upstream into at-spi2-core.
+  integrated upstream into at-spi2-core.
 
   Users of these packages can manually remove them prior to updating
   accessibility/at-spi2-core using

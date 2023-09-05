@@ -487,6 +487,7 @@
     SUBDIR += ml-aspell
     SUBDIR += ml1
     SUBDIR += mn-aspell
+    SUBDIR += moar
     SUBDIR += modlogan
     SUBDIR += mp_doccer
     SUBDIR += mr-aspell
@@ -668,6 +669,7 @@
     SUBDIR += p5-Number-Format-Metric
     SUBDIR += p5-Number-Spell
     SUBDIR += p5-ODF-lpOD
+    SUBDIR += p5-ODF-lpOD-Helper
     SUBDIR += p5-OpenOffice-OODoc
     SUBDIR += p5-PDF-API2
     SUBDIR += p5-PDF-API2-Simple
@@ -1192,6 +1194,7 @@
     SUBDIR += p5-ack
     SUBDIR += p5-dTemplate
     SUBDIR += p5-docx2txt
+    SUBDIR += p5-excel2csv
     SUBDIR += p5-libsoldout
     SUBDIR += p5-libxml
     SUBDIR += p5-pod2pdf
@@ -1367,6 +1370,7 @@
     SUBDIR += py-googletrans
     SUBDIR += py-grako
     SUBDIR += py-grapheme
+    SUBDIR += py-griffe
     SUBDIR += py-guess-language
     SUBDIR += py-hashids
     SUBDIR += py-hexdump
@@ -1378,6 +1382,7 @@
     SUBDIR += py-humanfriendly
     SUBDIR += py-hunspell
     SUBDIR += py-ini2toml
+    SUBDIR += py-interegular
     SUBDIR += py-isbnlib
     SUBDIR += py-isbntools
     SUBDIR += py-iso-639
@@ -1405,6 +1410,7 @@
     SUBDIR += py-m2r
     SUBDIR += py-mako
     SUBDIR += py-markdown
+    SUBDIR += py-markdown-callouts
     SUBDIR += py-markdown-include
     SUBDIR += py-markdown-it-py
     SUBDIR += py-markdown2
@@ -1431,6 +1437,9 @@
     SUBDIR += py-mkdocs-redirects
     SUBDIR += py-mkdocs-simple-hooks
     SUBDIR += py-mkdocstrings
+    SUBDIR += py-mkdocstrings-crystal
+    SUBDIR += py-mkdocstrings-python
+    SUBDIR += py-mkdocstrings-python-legacy
     SUBDIR += py-morse3
     SUBDIR += py-mwparserfromhell
     SUBDIR += py-myst-parser
@@ -1448,6 +1457,7 @@
     SUBDIR += py-os-api-ref
     SUBDIR += py-packageurl-python
     SUBDIR += py-pager
+    SUBDIR += py-paginate
     SUBDIR += py-pallets-sphinx-themes
     SUBDIR += py-pandocfilters
     SUBDIR += py-paragrep
@@ -1515,6 +1525,7 @@
     SUBDIR += py-qrcode
     SUBDIR += py-rdflib
     SUBDIR += py-readchar
+    SUBDIR += py-readtime
     SUBDIR += py-recommonmark
     SUBDIR += py-regex
     SUBDIR += py-reindent
@@ -1591,6 +1602,7 @@
     SUBDIR += py-texttable
     SUBDIR += py-textual
     SUBDIR += py-three-merge
+    SUBDIR += py-tiktoken
     SUBDIR += py-tinycss
     SUBDIR += py-tinycss2
     SUBDIR += py-toml
@@ -1610,6 +1622,7 @@
     SUBDIR += py-ufal.udpipe
     SUBDIR += py-unicodeitplus
     SUBDIR += py-untangle
+    SUBDIR += py-wavedrom
     SUBDIR += py-wcmatch
     SUBDIR += py-whatthepatch
     SUBDIR += py-whoosh
@@ -1631,8 +1644,6 @@
     SUBDIR += py-yapf
     SUBDIR += py-youseedee
     SUBDIR += py-zope.i18nmessageid
-    SUBDIR += py-zope.structuredtext
-    SUBDIR += py-zope.tal
     SUBDIR += py-zpt
     SUBDIR += qprint
     SUBDIR += qr
@@ -1663,6 +1674,7 @@
     SUBDIR += resume
     SUBDIR += resume-extensions
     SUBDIR += rfcdiff
+    SUBDIR += riffdiff
     SUBDIR += ripgrep
     SUBDIR += ripgrep-all
     SUBDIR += ripole
@@ -1719,13 +1731,12 @@
     SUBDIR += rubygem-css_parser
     SUBDIR += rubygem-cssmin
     SUBDIR += rubygem-cucumber-gherkin
-    SUBDIR += rubygem-cucumber-gherkin23
     SUBDIR += rubygem-cucumber-html-formatter
-    SUBDIR += rubygem-cucumber-html-formatter19
     SUBDIR += rubygem-diff-lcs
     SUBDIR += rubygem-diff_match_patch
     SUBDIR += rubygem-diffy
     SUBDIR += rubygem-docdiff
+    SUBDIR += rubygem-elastic-apm
     SUBDIR += rubygem-elastic-transport
     SUBDIR += rubygem-elasticsearch
     SUBDIR += rubygem-elasticsearch-api
@@ -1898,6 +1909,7 @@
     SUBDIR += rubygem-ya2yaml
     SUBDIR += rubygem-yard
     SUBDIR += rubygem-yard-chef
+    SUBDIR += rubygem-yarp
     SUBDIR += rubygem-zmq
     SUBDIR += rw-aspell
     SUBDIR += rxp

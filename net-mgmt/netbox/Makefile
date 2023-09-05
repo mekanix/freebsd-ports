@@ -1,6 +1,7 @@
 PORTNAME=	netbox
 DISTVERSIONPREFIX=	v
-DISTVERSION=	3.5.7
+DISTVERSION=	3.5.9
+PORTREVISION=	1
 CATEGORIES=	net-mgmt python
 
 MAINTAINER=	kai@FreeBSD.org
@@ -38,7 +39,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}django41>=4.1.10<4.2:www/py-django41@${PY_FL
 		${PYTHON_PKGNAMEPREFIX}dj41-django-timezone-field>=5.1<6:www/py-dj41-django-timezone-field@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}dj41-djangorestframework>=3.14.0<3.15.0:www/py-dj41-djangorestframework@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}dj41-drf-spectacular>=0.26.4<1:www/py-dj41-drf-spectacular@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}dj41-drf-spectacular-sidecar>=2023.7.1:www/py-dj41-drf-spectacular-sidecar@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}dj41-drf-spectacular-sidecar>=2023.8.1:www/py-dj41-drf-spectacular-sidecar@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}dj41-graphene-django>=3.0.0,1<3.0.0_99,1:devel/py-dj41-graphene-django@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}django-pglocks>=1.0.4<1.1:www/py-django-pglocks@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}bleach>=5.0.1<7:www/py-bleach@${PY_FLAVOR} \
@@ -49,7 +50,8 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}django41>=4.1.10<4.2:www/py-django41@${PY_FL
 		${PYTHON_PKGNAMEPREFIX}markdown>=3.3.7<3.4:textproc/py-markdown@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}markdown-include>=0.7.0<1:textproc/py-markdown-include@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}mkdocs-material>=9.1.21<10:textproc/py-mkdocs-material@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}mkdocstrings>=0.17.0<1:textproc/py-mkdocstrings@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}mkdocstrings>=0.22.0<1:textproc/py-mkdocstrings@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}mkdocstrings-python-legacy>0:textproc/py-mkdocstrings-python-legacy@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}netaddr>=0.8.0<1:net/py-netaddr@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pillow>=9.5.0:graphics/py-pillow@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}psycopg2>=2.9.6<3:databases/py-psycopg2@${PY_FLAVOR} \

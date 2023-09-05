@@ -1,8 +1,12 @@
 PORTNAME=	budgie-desktop
-DISTVERSION=	10.7.2
+DISTVERSION=	10.8
 DISTVERSIONPREFIX=	v
+PORTREVISION=	1
 CATEGORIES=	x11 budgie
 MASTER_SITES=	BUDGIE
+
+PATCH_SITES=	https://github.com/BuddiesOfBudgie/budgie-desktop/commit/
+PATCHFILES=	980b72e1651b53fd9f11e2c87dd4ea029896c858.patch:-p1
 
 MAINTAINER=	duchateau.olivier@gmail.com
 COMMENT=	Modern and familiar desktop environment
@@ -22,7 +26,6 @@ LIB_DEPENDS=	libpolkit-gobject-1.so:sysutils/polkit \
 		libaccountsservice.so:sysutils/accountsservice \
 		libpulse.so:audio/pulseaudio \
 		libasound.so:audio/alsa-lib \
-		libmutter-10.so:x11-wm/mutter \
 		libgraphene-1.0.so:graphics/graphene \
 		libupower-glib.so:sysutils/upower \
 		libibus-1.0.so:textproc/ibus \
@@ -37,7 +40,7 @@ RUN_DEPENDS=	gsettings-desktop-schemas>0:devel/gsettings-desktop-schemas \
 
 USES=		budgie gettext gnome gstreamer meson pkgconfig tar:xz \
 		vala:build xorg
-USE_BUDGIE=	screensaver:build
+USE_BUDGIE=	libmagpie screensaver:build
 USE_GNOME=	cairo gdkpixbuf2 glib20 gnomedesktop3 gnomemenus3 \
 		gtk30 intltool introspection libwnck3
 USE_GSTREAMER=	libgstreamer
@@ -62,9 +65,11 @@ GLIB_SCHEMAS=	20_buddiesofbudgie.budgie-desktop.notifications.gschema.override \
 		com.solus-project.places-indicator.gschema.xml \
 		com.solus-project.spacer.gschema.xml \
 		com.solus-project.status.gschema.xml \
+		com.solus-project.trash.gschema.xml \
 		com.solus-project.tray.gschema.xml \
 		com.solus-project.workspaces.gschema.xml \
 		org.buddiesofbudgie.budgie-desktop.raven.widget.Calendar.gschema.xml \
+		org.buddiesofbudgie.budgie-desktop.raven.widget.SoundInput.gschema.xml \
 		org.buddiesofbudgie.budgie-desktop.raven.widget.SoundOutput.gschema.xml \
 		org.buddiesofbudgie.budgie-desktop.raven.widget.UsageMonitor.gschema.xml \
 		org.buddiesofbudgie.budgie-desktop.screenshot.gschema.xml \

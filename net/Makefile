@@ -550,6 +550,7 @@
     SUBDIR += ntopng
     SUBDIR += ntp
     SUBDIR += ntpa
+    SUBDIR += ntpd-rs
     SUBDIR += ntpsec
     SUBDIR += ntraceroute
     SUBDIR += nusoap
@@ -1040,6 +1041,7 @@
     SUBDIR += py-amqplib
     SUBDIR += py-anonfile
     SUBDIR += py-avahi
+    SUBDIR += py-blobfile
     SUBDIR += py-bonsai
     SUBDIR += py-cepa
     SUBDIR += py-cjdns
@@ -1333,6 +1335,7 @@
     SUBDIR += rubygem-mqtt
     SUBDIR += rubygem-nats-pure
     SUBDIR += rubygem-net-ldap
+    SUBDIR += rubygem-net-ldap017
     SUBDIR += rubygem-net-netrc
     SUBDIR += rubygem-net-ntp
     SUBDIR += rubygem-net-ping
@@ -1348,6 +1351,7 @@
     SUBDIR += rubygem-octokit
     SUBDIR += rubygem-octokit4
     SUBDIR += rubygem-octokit5
+    SUBDIR += rubygem-octokit6
     SUBDIR += rubygem-octopress-deploy
     SUBDIR += rubygem-omniauth-auth0
     SUBDIR += rubygem-omniauth-authentiq
