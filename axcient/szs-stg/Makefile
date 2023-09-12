@@ -1,9 +1,9 @@
 # $FreeBSD$
 
-PORTVERSION=	1.32.0.rc1
+PORTVERSION=	1.33.0.rc1
 PKGNAMESUFFIX=	-stg
 
-GH_TAGNAME=     1.32.0-rc1
+GH_TAGNAME=     1.33.0-rc1
 GH_TUPLE=	\
 		RichardKnop:logging:1a693bdd4fae:richardknop_logging/vendor/github.com/RichardKnop/logging \
 		RichardKnop:machinery:v1.10.6:richardknop_machinery/vendor/github.com/RichardKnop/machinery \
