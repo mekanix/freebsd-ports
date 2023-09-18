@@ -1,5 +1,5 @@
 PORTNAME=	cap-ftpd
-PORTVERSION=	0.1.0.20230825
+PORTVERSION=	0.1.0.20230918
 CATEGORIES=	ftp axcient
 
 MAINTAINER=	asomers@axcient.com
@@ -9,12 +9,12 @@ USES=		axcient cargo
 SUB_FILES=	cap-ftpd.toml
 
 GH_PROJECT=	cap-ftpd
-GH_TAGNAME=	d51d14dc5c59a594bf5a49f70fd47fd9318f5d6b
+GH_TAGNAME=	5554b00444fff097eac40b69864459bd96602a4d
 
 CARGO_CRATES=	addr2line-0.21.0 \
 		adler-1.0.2 \
 		adler32-1.2.0 \
-		aho-corasick-1.0.4 \
+		aho-corasick-1.1.0 \
 		ambient-authority-0.0.2 \
 		android-tzdata-0.1.1 \
 		android_system_properties-0.1.5 \
@@ -28,22 +28,20 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		autocfg-1.1.0 \
 		backtrace-0.3.69 \
 		base64-0.13.1 \
-		base64-0.21.2 \
+		base64-0.21.4 \
 		bitflags-1.3.2 \
 		bitflags-2.4.0 \
 		block-buffer-0.10.4 \
-		bumpalo-3.13.0 \
+		bumpalo-3.14.0 \
 		bytecount-0.6.3 \
-		bytes-1.4.0 \
+		bytes-1.5.0 \
 		camino-1.1.6 \
-		cap-primitives-2.0.0 \
-		cap-std-2.0.0 \
 		capsicum-0.2.0 \
 		cargo-platform-0.1.3 \
 		cargo_metadata-0.14.2 \
 		cc-1.0.83 \
 		cfg-if-1.0.0 \
-		chrono-0.4.26 \
+		chrono-0.4.31 \
 		clap-4.3.0 \
 		clap_builder-4.3.0 \
 		clap_derive-4.3.0 \
@@ -57,7 +55,7 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		crossbeam-utils-0.8.16 \
 		crypto-common-0.1.6 \
 		ctor-0.1.26 \
-		dashmap-5.5.1 \
+		dashmap-5.5.3 \
 		data-encoding-2.4.0 \
 		der-parser-8.2.0 \
 		deranged-0.3.8 \
@@ -67,7 +65,7 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		dirs-sys-next-0.1.2 \
 		displaydoc-0.2.4 \
 		doc-comment-0.3.3 \
-		errno-0.3.2 \
+		errno-0.3.3 \
 		errno-dragonfly-0.1.2 \
 		error-chain-0.12.4 \
 		fastrand-2.0.0 \
@@ -100,37 +98,36 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		itoa-1.0.9 \
 		js-sys-0.3.64 \
 		lazy_static-1.4.0 \
-		libc-0.2.147 \
+		libc-0.2.148 \
 		libflate-1.4.0 \
 		libflate_lz77-1.2.0 \
 		linux-raw-sys-0.3.8 \
-		linux-raw-sys-0.4.5 \
+		linux-raw-sys-0.4.7 \
 		lock_api-0.4.10 \
 		log-0.4.20 \
 		maybe-owned-0.3.4 \
 		md-5-0.10.5 \
-		memchr-2.5.0 \
+		memchr-2.6.3 \
 		memoffset-0.9.0 \
 		minimal-lexical-0.2.1 \
 		miniz_oxide-0.7.1 \
 		mio-0.8.8 \
-		moka-0.9.9 \
-		nix-0.26.2 \
+		moka-0.11.3 \
+		nix-0.26.4 \
 		nom-7.1.3 \
 		num-bigint-0.4.4 \
 		num-integer-0.1.45 \
 		num-traits-0.2.16 \
-		num_cpus-1.16.0 \
 		num_threads-0.1.6 \
-		object-0.32.0 \
+		object-0.32.1 \
 		oid-registry-0.6.1 \
 		once_cell-1.18.0 \
 		parking_lot-0.12.1 \
 		parking_lot_core-0.9.8 \
 		path_abs-0.5.1 \
-		pin-project-lite-0.2.12 \
+		pin-project-lite-0.2.13 \
 		pin-utils-0.1.0 \
-		proc-macro2-1.0.66 \
+		proc-macro2-1.0.67 \
 		prometheus-0.13.3 \
 		proxy-protocol-0.5.0 \
 		pulldown-cmark-0.9.3 \
@@ -138,18 +135,19 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		redox_syscall-0.2.16 \
 		redox_syscall-0.3.5 \
 		redox_users-0.4.3 \
-		regex-1.9.3 \
-		regex-automata-0.3.6 \
-		regex-syntax-0.7.4 \
+		regex-1.9.5 \
+		regex-automata-0.3.8 \
+		regex-syntax-0.7.5 \
 		ring-0.16.20 \
 		rle-decode-fast-1.0.3 \
 		rustc-demangle-0.1.23 \
 		rustc_version-0.4.0 \
 		rusticata-macros-4.1.0 \
 		rustix-0.37.23 \
-		rustix-0.38.8 \
-		rustls-0.20.8 \
+		rustix-0.38.13 \
+		rustls-0.21.7 \
 		rustls-pemfile-1.0.3 \
+		rustls-webpki-0.101.5 \
 		rustversion-1.0.14 \
 		ryu-1.0.15 \
 		same-file-1.0.6 \
@@ -157,14 +155,14 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		scopeguard-1.2.0 \
 		sct-0.7.0 \
 		semver-1.0.18 \
-		serde-1.0.186 \
-		serde_derive-1.0.186 \
-		serde_json-1.0.105 \
+		serde-1.0.188 \
+		serde_derive-1.0.188 \
+		serde_json-1.0.107 \
 		signal-hook-registry-1.4.1 \
 		skeptic-0.13.7 \
 		slab-0.4.9 \
 		slog-2.7.0 \
-		slog-async-2.7.0 \
+		slog-async-2.8.0 \
 		slog-kvfilter-0.7.0 \
 		slog-scope-4.4.0 \
 		slog-stdlog-4.1.1 \
@@ -173,28 +171,27 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		smallvec-1.11.0 \
 		snafu-0.6.10 \
 		snafu-derive-0.6.10 \
-		socket2-0.5.3 \
+		socket2-0.5.4 \
 		spin-0.5.2 \
-		static_assertions-1.1.0 \
 		std_prelude-0.2.12 \
 		stfu8-0.2.6 \
 		syn-1.0.109 \
-		syn-2.0.29 \
+		syn-2.0.37 \
 		synstructure-0.12.6 \
 		tagptr-0.2.0 \
 		take_mut-0.2.2 \
 		tempfile-3.8.0 \
 		term-0.7.0 \
 		terminal_size-0.2.6 \
-		thiserror-1.0.47 \
-		thiserror-impl-1.0.47 \
+		thiserror-1.0.48 \
+		thiserror-impl-1.0.48 \
 		thread_local-1.1.7 \
-		time-0.3.27 \
+		time-0.3.28 \
 		time-core-0.1.1 \
-		time-macros-0.2.13 \
+		time-macros-0.2.14 \
 		tokio-1.32.0 \
 		tokio-macros-2.1.0 \
-		tokio-rustls-0.23.4 \
+		tokio-rustls-0.24.1 \
 		tokio-stream-0.1.14 \
 		tokio-util-0.7.8 \
 		toml-0.5.11 \
@@ -204,15 +201,15 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		trackable-1.3.0 \
 		trackable_derive-1.0.0 \
 		triomphe-0.1.9 \
-		typenum-1.16.0 \
+		typenum-1.17.0 \
 		unicase-2.7.0 \
-		unicode-ident-1.0.11 \
+		unicode-ident-1.0.12 \
 		unicode-xid-0.2.4 \
 		untrusted-0.7.1 \
 		uuid-1.4.1 \
 		valid-0.3.1 \
 		version_check-0.9.4 \
-		walkdir-2.3.3 \
+		walkdir-2.4.0 \
 		wasi-0.11.0+wasi-snapshot-preview1 \
 		wasm-bindgen-0.2.87 \
 		wasm-bindgen-backend-0.2.87 \
@@ -220,7 +217,6 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		wasm-bindgen-macro-support-0.2.87 \
 		wasm-bindgen-shared-0.2.87 \
 		web-sys-0.3.64 \
-		webpki-0.22.0 \
 		widestring-0.4.3 \
 		winapi-0.3.9 \
 		winapi-i686-pc-windows-gnu-0.4.0 \
@@ -237,9 +233,10 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		windows_x86_64_gnu-0.48.5 \
 		windows_x86_64_gnullvm-0.48.5 \
 		windows_x86_64_msvc-0.48.5 \
-		winx-0.36.1 \
+		winx-0.36.2 \
 		x509-parser-0.14.0 \
-		libunftp,unftp-auth-jsonfile,unftp-sbe-fs@git+https://github.com/asomers/libunftp.git?rev=e882f4a\#e882f4a59a6729c246e6c39a3ed7844042f18cfd
+		cap-primitives,cap-std@git+https://github.com/asomers/cap-std.git?rev=f7e7d6e\#f7e7d6e8051c50baf8bcc916f60b93b6c4ca7ae2 \
+		libunftp,unftp-auth-jsonfile,unftp-sbe-fs@git+https://github.com/asomers/libunftp.git?rev=5ccb7dc\#5ccb7dcca11e1131c8535ff554bc5aa1e1e5a99b
 
 PLIST_FILES=	bin/${PORTNAME} \
 		libexec/${PORTNAME}-worker \
