@@ -414,6 +414,7 @@
     SUBDIR += libpcapnav
     SUBDIR += libpfctl
     SUBDIR += libproxy
+    SUBDIR += libproxy-duktape
     SUBDIR += libproxy-gnome3
     SUBDIR += libproxy-kde
     SUBDIR += libproxy-pacrunner
@@ -1074,6 +1075,7 @@
     SUBDIR += py-ldap
     SUBDIR += py-ldap0
     SUBDIR += py-ldap3
+    SUBDIR += py-ldapdomaindump
     SUBDIR += py-ldappool
     SUBDIR += py-libcloud
     SUBDIR += py-libdnet
@@ -1118,7 +1120,6 @@
     SUBDIR += py-pystun
     SUBDIR += py-python-barbicanclient
     SUBDIR += py-python-bitcoinrpc
-    SUBDIR += py-python-ceilometerclient
     SUBDIR += py-python-cinderclient
     SUBDIR += py-python-designateclient
     SUBDIR += py-python-glanceclient

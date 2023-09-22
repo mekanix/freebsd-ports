@@ -828,6 +828,7 @@
     SUBDIR += plasma5-kwallet-pam
     SUBDIR += please
     SUBDIR += poly1305aes
+    SUBDIR += portacl-rc
     SUBDIR += proftpd-mod_clamav
     SUBDIR += proxycheck
     SUBDIR += proxytunnel
@@ -919,6 +920,7 @@
     SUBDIR += py-google-auth-oauthlib
     SUBDIR += py-gpgme
     SUBDIR += py-gpsoauth
+    SUBDIR += py-greenbone-feed-sync
     SUBDIR += py-gssapi
     SUBDIR += py-gvm-tools
     SUBDIR += py-hkdf

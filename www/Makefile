@@ -31,6 +31,7 @@
     SUBDIR += angie-module-auth-spnego
     SUBDIR += angie-module-brotli
     SUBDIR += angie-module-cache-purge
+    SUBDIR += angie-module-dav-ext
     SUBDIR += angie-module-echo
     SUBDIR += angie-module-enhanced-memcached
     SUBDIR += angie-module-eval
@@ -39,6 +40,7 @@
     SUBDIR += angie-module-image-filter
     SUBDIR += angie-module-jwt
     SUBDIR += angie-module-keyval
+    SUBDIR += angie-module-lua
     SUBDIR += angie-module-ndk
     SUBDIR += angie-module-njs
     SUBDIR += angie-module-perl
@@ -127,6 +129,7 @@
     SUBDIR += ctemplate
     SUBDIR += cutelyst
     SUBDIR += darkhttpd
+    SUBDIR += dasherr
     SUBDIR += davical
     SUBDIR += davix
     SUBDIR += dddbl
@@ -140,6 +143,7 @@
     SUBDIR += dokuwiki
     SUBDIR += dolibarr
     SUBDIR += dolibarr16
+    SUBDIR += dolibarr17
     SUBDIR += domoticz
     SUBDIR += dooble
     SUBDIR += dot-http
@@ -1787,6 +1791,7 @@
     SUBDIR += py-qt5-webengine
     SUBDIR += py-qt6-webengine
     SUBDIR += py-quilt3
+    SUBDIR += py-readability-lxml
     SUBDIR += py-recaptcha
     SUBDIR += py-requests
     SUBDIR += py-requests-aws4auth
@@ -1819,6 +1824,7 @@
     SUBDIR += py-selenium-wire
     SUBDIR += py-semiphemeral
     SUBDIR += py-sentinelhub
+    SUBDIR += py-simple-websocket
     SUBDIR += py-slimit
     SUBDIR += py-slumber
     SUBDIR += py-social-auth-app-django

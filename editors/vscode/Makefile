@@ -1,6 +1,6 @@
 PORTNAME=	vscode
-DISTVERSION=	1.81.1
-PORTREVISION=	4
+DISTVERSION=	1.82.2
+PORTREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	https://github.com/tagattie/FreeBSD-VSCode/releases/download/${DISTVERSION}/:yarn_cache
 DISTFILES=	yarn-offline-cache-${DISTVERSION}${EXTRACT_SUFX}:yarn_cache \
@@ -29,7 +29,9 @@ LIB_DEPENDS=	libatk-bridge-2.0.so:accessibility/at-spi2-core \
 		libsndio.so:audio/sndio \
 		libdbus-1.so:devel/dbus \
 		libicuuc.so:devel/icu \
+		libepoll-shim.so:devel/libepoll-shim \
 		libevent.so:devel/libevent \
+		libffi.so:devel/libffi \
 		libinotify.so:devel/libinotify \
 		libnotify.so:devel/libnotify \
 		libpci.so:devel/libpci \
@@ -41,6 +43,7 @@ LIB_DEPENDS=	libatk-bridge-2.0.so:accessibility/at-spi2-core \
 		libpng.so:graphics/png \
 		libwayland-client.so:graphics/wayland \
 		libwebp.so:graphics/webp \
+		libdav1d.so:multimedia/dav1d \
 		libvpx.so:multimedia/libvpx \
 		libopenh264.so:multimedia/openh264 \
 		libcups.so:print/cups \
@@ -64,7 +67,7 @@ USES=		desktop-file-utils gl gmake gnome iconv:wchar_t jpeg \
 USE_GITHUB=	yes
 GH_ACCOUNT=	microsoft
 
-SOURCE_COMMIT_HASH=	6c3e3dba23e8fadc360aed75ce363ba185c49794
+SOURCE_COMMIT_HASH=	abd2f3db4bdb28f9e95536dfa84d8479f1eb312d
 
 BINARY_ALIAS=	python=${PYTHON_CMD}
 
@@ -76,7 +79,7 @@ USE_GNOME=	atk cairo pango gdkpixbuf2 gtk30 libxml2 libxslt
 USE_LDCONFIG=	${DATADIR}
 
 # Keep NODE_VER in sync with www/node16 DISTVERSION
-NODE_VER=	16.20.1
+NODE_VER=	18.17.1
 NODE_VER_MAJOR=	${NODE_VER:C/\..*$//}
 
 SHEBANG_REGEX=	./(extensions|resources|scripts|src)/.*\.sh$$
@@ -99,7 +102,7 @@ OPTIONS_DEFINE=	REH
 OPTIONS_DEFAULT=# none
 REH_DESC=	Build remote extension host
 
-ELECTRON_DIR=	${.CURDIR}/../../devel/electron22
+ELECTRON_DIR=	${.CURDIR}/../../devel/electron25
 .include	"${ELECTRON_DIR}/Makefile.version"
 
 ELECTRON_DOWNLOAD_URL=	https://github.com/electron/electron/releases/download/v${ELECTRON_VER}

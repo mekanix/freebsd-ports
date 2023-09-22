@@ -52,6 +52,7 @@
     SUBDIR += elk
     SUBDIR += elm
     SUBDIR += emacs-lisp-intro
+    SUBDIR += emilua
     SUBDIR += erlang
     SUBDIR += erlang-doc
     SUBDIR += erlang-java
@@ -217,6 +218,7 @@
     SUBDIR += nickle
     SUBDIR += nim
     SUBDIR += njs
+    SUBDIR += nll
     SUBDIR += nqc
     SUBDIR += nwcc
     SUBDIR += nx

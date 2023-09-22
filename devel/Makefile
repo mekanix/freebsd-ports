@@ -332,6 +332,7 @@
     SUBDIR += caliper
     SUBDIR += capnproto
     SUBDIR += capnproto080
+    SUBDIR += capslock
     SUBDIR += capstone
     SUBDIR += capstone3
     SUBDIR += capstone4
@@ -1455,6 +1456,7 @@
     SUBDIR += libxo
     SUBDIR += libxs
     SUBDIR += libxtend
+    SUBDIR += libzakalwe
     SUBDIR += libzim
     SUBDIR += libzookeeper
     SUBDIR += libzvbi
@@ -1661,6 +1663,7 @@
     SUBDIR += obby
     SUBDIR += objconv
     SUBDIR += objecthash
+    SUBDIR += objfw
     SUBDIR += ocaml-annexlib
     SUBDIR += ocaml-calendar
     SUBDIR += ocaml-camljava
@@ -4422,6 +4425,7 @@
     SUBDIR += py-buildbot-worker
     SUBDIR += py-buildbot-www
     SUBDIR += py-bullet3
+    SUBDIR += py-bump2version
     SUBDIR += py-bytecode
     SUBDIR += py-cabby
     SUBDIR += py-cached-property
@@ -7391,6 +7395,7 @@
     SUBDIR += rubygem-sugar-high
     SUBDIR += rubygem-sumbur
     SUBDIR += rubygem-sundawg_country_codes
+    SUBDIR += rubygem-sus
     SUBDIR += rubygem-svn2git
     SUBDIR += rubygem-swagger-blocks
     SUBDIR += rubygem-sync
