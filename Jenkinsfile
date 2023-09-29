@@ -92,6 +92,7 @@ pipeline {
                     ftp/cap-ftpd \
                     graphics/py-pillow \
                     lang/expect \
+                    lang/go121 \
                     mail/ssmtp \
                     misc/compat12x \
                     misc/mbuffer \
