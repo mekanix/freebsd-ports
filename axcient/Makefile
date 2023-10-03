@@ -41,5 +41,6 @@
     SUBDIR += vt2-dev    
     SUBDIR += vt2-stg
     SUBDIR += ztop-exporter
+    SUBDIR += rsync-proxy-dev
 
 .include <bsd.port.subdir.mk>

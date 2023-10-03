@@ -238,6 +238,7 @@ pipeline {
                 sh 'cd axcient/smart-recovery-dev; make fetch'
                 sh 'cd axcient/szs-dev; make fetch'
                 sh 'cd axcient/vt2-dev; make fetch'
+                sh 'cd axcient/rsync-proxy-dev; make fetch'
 
                 sh "sudo poudriere bulk -j 13_1-AXCIENT1_amd64 -p ${PNAME} axcient/${env.devPackage}"
             }
