@@ -128,6 +128,7 @@ pipeline {
                     shells/bash \
                     shells/ksh93 \
                     sysutils/beats7 \
+                    sysutils/beats8 \
                     sysutils/bpytop \
                     sysutils/dmidecode \
                     sysutils/dtrace-toolkit \
