@@ -118,7 +118,7 @@
 %%DATADIR%%/Definitions/boxingtorrents.yml
 %%DATADIR%%/Definitions/broadcity.yml
 %%DATADIR%%/Definitions/brsociety-api.yml
-%%DATADIR%%/Definitions/btdigg.yml
+%%DATADIR%%/Definitions/btarg.yml
 %%DATADIR%%/Definitions/btetree.yml
 %%DATADIR%%/Definitions/btmet.yml
 %%DATADIR%%/Definitions/btnext.yml
@@ -151,7 +151,6 @@
 %%DATADIR%%/Definitions/cpasbienclone.yml
 %%DATADIR%%/Definitions/crackingpatching.yml
 %%DATADIR%%/Definitions/crazyhd.yml
-%%DATADIR%%/Definitions/crazyspirits.yml
 %%DATADIR%%/Definitions/crnaberza.yml
 %%DATADIR%%/Definitions/crt2fa.yml
 %%DATADIR%%/Definitions/dajiao.yml
@@ -182,6 +181,7 @@
 %%DATADIR%%/Definitions/esharenet.yml
 %%DATADIR%%/Definitions/estone.yml
 %%DATADIR%%/Definitions/ex-torrenty.yml
+%%DATADIR%%/Definitions/exitorrent-org.yml
 %%DATADIR%%/Definitions/exkinoray.yml
 %%DATADIR%%/Definitions/extratorrent-st.yml
 %%DATADIR%%/Definitions/extremebits.yml
@@ -243,8 +243,10 @@
 %%DATADIR%%/Definitions/hdroute.yml
 %%DATADIR%%/Definitions/hdsky.yml
 %%DATADIR%%/Definitions/hdtime.yml
+%%DATADIR%%/Definitions/hdtorrentsit.yml
 %%DATADIR%%/Definitions/hdturk.yml
 %%DATADIR%%/Definitions/hdu.yml
+%%DATADIR%%/Definitions/hdvbits.yml
 %%DATADIR%%/Definitions/hdvideo.yml
 %%DATADIR%%/Definitions/hdzone.yml
 %%DATADIR%%/Definitions/hebits.yml
@@ -259,6 +261,7 @@
 %%DATADIR%%/Definitions/idope.yml
 %%DATADIR%%/Definitions/ilcorsaroblu.yml
 %%DATADIR%%/Definitions/ilcorsaronero.yml
+%%DATADIR%%/Definitions/ildragonero.yml
 %%DATADIR%%/Definitions/immortuos.yml
 %%DATADIR%%/Definitions/indietorrents.yml
 %%DATADIR%%/Definitions/infire.yml
@@ -305,7 +308,6 @@
 %%DATADIR%%/Definitions/lst.yml
 %%DATADIR%%/Definitions/mactorrentsdownload.yml
 %%DATADIR%%/Definitions/madsrevolution.yml
-%%DATADIR%%/Definitions/magicheaven.yml
 %%DATADIR%%/Definitions/magico.yml
 %%DATADIR%%/Definitions/majomparade.yml
 %%DATADIR%%/Definitions/marinetracker.yml
@@ -377,7 +379,6 @@
 %%DATADIR%%/Definitions/polishtracker-api.yml
 %%DATADIR%%/Definitions/pornbay.yml
 %%DATADIR%%/Definitions/pornolab.yml
-%%DATADIR%%/Definitions/pornoslab.yml
 %%DATADIR%%/Definitions/pornotorrent.yml
 %%DATADIR%%/Definitions/portugas-api.yml
 %%DATADIR%%/Definitions/potuk.yml
@@ -420,6 +421,7 @@
 %%DATADIR%%/Definitions/rutor.yml
 %%DATADIR%%/Definitions/rutracker-ru.yml
 %%DATADIR%%/Definitions/satclubbing.yml
+%%DATADIR%%/Definitions/scenelinks.yml
 %%DATADIR%%/Definitions/scenerush.yml
 %%DATADIR%%/Definitions/seedfile.yml
 %%DATADIR%%/Definitions/seedoff.yml
@@ -458,7 +460,6 @@
 %%DATADIR%%/Definitions/teamos.yml
 %%DATADIR%%/Definitions/tekno3d.yml
 %%DATADIR%%/Definitions/teracod.yml
-%%DATADIR%%/Definitions/the-crazy-ones.yml
 %%DATADIR%%/Definitions/theempire.yml
 %%DATADIR%%/Definitions/thefallingangels.yml
 %%DATADIR%%/Definitions/thegeeks.yml
@@ -469,6 +470,7 @@
 %%DATADIR%%/Definitions/theoldschool-api.yml
 %%DATADIR%%/Definitions/thepiratebay.yml
 %%DATADIR%%/Definitions/theplace.yml
+%%DATADIR%%/Definitions/therarbg.yml
 %%DATADIR%%/Definitions/therebels-api.yml
 %%DATADIR%%/Definitions/thesceneplace.yml
 %%DATADIR%%/Definitions/theshinning-api.yml
@@ -529,7 +531,6 @@
 %%DATADIR%%/Definitions/turkseed.yml
 %%DATADIR%%/Definitions/turktorrent.yml
 %%DATADIR%%/Definitions/tvchaosuk.yml
-%%DATADIR%%/Definitions/tvroad.yml
 %%DATADIR%%/Definitions/u2.yml
 %%DATADIR%%/Definitions/ubits.yml
 %%DATADIR%%/Definitions/uhdbits.yml
@@ -539,10 +540,12 @@
 %%DATADIR%%/Definitions/uniongang.yml
 %%DATADIR%%/Definitions/unleashthecartoons.yml
 %%DATADIR%%/Definitions/unlimitz.yml
+%%DATADIR%%/Definitions/uploadcx.yml
 %%DATADIR%%/Definitions/utopia.yml
 %%DATADIR%%/Definitions/vsthouse.yml
 %%DATADIR%%/Definitions/vstorrent.yml
 %%DATADIR%%/Definitions/vsttorrents.yml
+%%DATADIR%%/Definitions/wdt.yml
 %%DATADIR%%/Definitions/whiteangel.yml
 %%DATADIR%%/Definitions/wihd.yml
 %%DATADIR%%/Definitions/wintersakura.yml
@@ -786,6 +789,7 @@
 %%DATADIR%%/System.Text.Encoding.Extensions.dll
 %%DATADIR%%/System.Text.Encoding.dll
 %%DATADIR%%/System.Text.Encodings.Web.dll
+%%DATADIR%%/System.Text.Json.dll
 %%DATADIR%%/System.Text.RegularExpressions.dll
 %%DATADIR%%/System.Threading.Overlapped.dll
 %%DATADIR%%/System.Threading.Tasks.Extensions.dll

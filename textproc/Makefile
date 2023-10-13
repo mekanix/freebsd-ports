@@ -83,6 +83,7 @@
     SUBDIR += biodiff
     SUBDIR += bn-aspell
     SUBDIR += br-aspell
+    SUBDIR += bsd-spell
     SUBDIR += bsddiff
     SUBDIR += bsdgrep
     SUBDIR += btparse
@@ -387,7 +388,6 @@
     SUBDIR += libe-book
     SUBDIR += libebml
     SUBDIR += libepubgen
-    SUBDIR += libextractor
     SUBDIR += libexttextcat
     SUBDIR += libfo
     SUBDIR += libfolia
@@ -1284,7 +1284,6 @@
     SUBDIR += pict
     SUBDIR += po4a
     SUBDIR += pod2mdoc
-    SUBDIR += popup
     SUBDIR += popup-stacks
     SUBDIR += ppower4
     SUBDIR += print-n-times
@@ -1302,6 +1301,7 @@
     SUBDIR += py-agate-dbf
     SUBDIR += py-agate-excel
     SUBDIR += py-alabaster
+    SUBDIR += py-ansi2html
     SUBDIR += py-anyascii
     SUBDIR += py-arabic-reshaper
     SUBDIR += py-asciinema
@@ -1558,11 +1558,15 @@
     SUBDIR += py-sphinx-copybutton
     SUBDIR += py-sphinx-design
     SUBDIR += py-sphinx-examples
+    SUBDIR += py-sphinx-gallery
     SUBDIR += py-sphinx-inline-tabs
     SUBDIR += py-sphinx-intl
     SUBDIR += py-sphinx-issues
     SUBDIR += py-sphinx-markdown-tables
+    SUBDIR += py-sphinx-material
     SUBDIR += py-sphinx-me
+    SUBDIR += py-sphinx-multiversion
+    SUBDIR += py-sphinx-multiversion-zrepl
     SUBDIR += py-sphinx-sitemap
     SUBDIR += py-sphinx-tabs
     SUBDIR += py-sphinx-theme-builder
@@ -1658,7 +1662,6 @@
     SUBDIR += rand
     SUBDIR += randlm
     SUBDIR += rapidxml
-    SUBDIR += raptor
     SUBDIR += raptor2
     SUBDIR += rasqal
     SUBDIR += re-flex
@@ -1733,6 +1736,7 @@
     SUBDIR += rubygem-css_parser
     SUBDIR += rubygem-cssmin
     SUBDIR += rubygem-cucumber-gherkin
+    SUBDIR += rubygem-cucumber-gherkin26
     SUBDIR += rubygem-cucumber-html-formatter
     SUBDIR += rubygem-diff-lcs
     SUBDIR += rubygem-diff_match_patch
@@ -1826,6 +1830,7 @@
     SUBDIR += rubygem-parslet1
     SUBDIR += rubygem-phone
     SUBDIR += rubygem-pretty-xml
+    SUBDIR += rubygem-prism
     SUBDIR += rubygem-psych
     SUBDIR += rubygem-psych3
     SUBDIR += rubygem-puppet-strings
@@ -1862,6 +1867,7 @@
     SUBDIR += rubygem-rubypants
     SUBDIR += rubygem-rugments
     SUBDIR += rubygem-sanitize
+    SUBDIR += rubygem-sanitize60
     SUBDIR += rubygem-sass
     SUBDIR += rubygem-sass-listen
     SUBDIR += rubygem-sass-rails-rails4
@@ -2115,7 +2121,6 @@
     SUBDIR += xwindiff
     SUBDIR += y2l
     SUBDIR += yali
-    SUBDIR += yamcha
     SUBDIR += yaml-mode.el
     SUBDIR += yaml.el
     SUBDIR += yamlfmt
