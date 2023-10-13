@@ -138,6 +138,7 @@ pipeline {
                     sysutils/intel-nvmupdate-100g \
                     sysutils/iocage \
                     sysutils/ipmitool \
+                    sysutils/jail_exporter \
                     sysutils/mcelog \
                     sysutils/moosefs3-cgi \
                     sysutils/moosefs3-cgiserv \
