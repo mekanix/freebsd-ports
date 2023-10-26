@@ -5,6 +5,8 @@
 name="automultipath"
 start_cmd="${name}_start"
 stop_cmd="${name}_stop"
+status_cmd="${name}_status"
+extra_commands="status"
 rcvar=${name}_enable
 
 automultipath_start() {
@@ -15,6 +17,16 @@ automultipath_stop() {
 	if [ -e "/var/run/${name}" ]; then
 		rm "/var/run/${name}"
 	fi
+}
+
+automultipath_status() {
+        if [ -e "/var/run/${name}" ]; then
+                echo "${name} is enabled"
+                exit 0
+        else
+                echo "${name} is disabled"
+                exit 1
+        fi
 }
 
 load_rc_config $name
