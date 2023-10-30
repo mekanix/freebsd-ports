@@ -34,6 +34,7 @@ GH_TUPLE=	\
 
 GO_PKGNAME=	github.com/${GH_ACCOUNT}/cloudserver
 GO_TARGET=	cloudserver
+GO_BUILDFLAGS=  -ldflags "-X=main.version=${PORTVERSION}"
 
 post-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/newsyslog.conf.d
