@@ -33,6 +33,7 @@ GH_TUPLE=	\
 		stretchr:testify:v1.6.1:stretchr_testify/vendor/github.com/stretchr/testify
 
 GO_PKGNAME=	github.com/${GH_ACCOUNT}/cloudserver
+GO_BUILDFLAGS=  -ldflags "-X=main.version=${PORTVERSION}"
 GO_TARGET=	cloudserver
 
 post-install:

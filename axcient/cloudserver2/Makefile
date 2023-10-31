@@ -2,7 +2,7 @@
 
 PORTNAME=	cloudserver
 PKGNAMESUFFIX?=  2
-PORTVERSION?=	2.13.0
+PORTVERSION?=	2.14.0
 CATEGORIES=	axcient
 
 MAINTAINER=	nsemchenkov@axcient.com
@@ -16,7 +16,7 @@ CONFLICTS_INSTALL?=	cloudserver \
 			cloudserver2-dev \
 			cloudserver2-stg
 
-GH_TAGNAME?=	2.13.0
+GH_TAGNAME?=	2.14.0
 
 GH_TUPLE=       alecthomas:kingpin:v2.2.6:alecthomas_kingpin/vendor/gopkg.in/alecthomas/kingpin.v2 \
 		alecthomas:template:fb15b899a751:alecthomas_template/vendor/github.com/alecthomas/template \
@@ -76,6 +76,7 @@ GH_TUPLE=       alecthomas:kingpin:v2.2.6:alecthomas_kingpin/vendor/gopkg.in/ale
 		zeebo:blake3:v0.2.3:zeebo_blake3/vendor/github.com/zeebo/blake3
 
 GO_PKGNAME=	github.com/${GH_ACCOUNT}/cloudserver
+GO_BUILDFLAGS=  -ldflags "-X=main.version=${PORTVERSION}"
 GO_TARGET?=	cloudserver ./cmd/integritycheck
 
 post-install:
