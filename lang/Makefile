@@ -73,6 +73,8 @@
     SUBDIR += ficl
     SUBDIR += fpc
     SUBDIR += fpc-base
+    SUBDIR += fpc-devel
+    SUBDIR += fpc-devel-source
     SUBDIR += fpc-docs
     SUBDIR += fpc-lua
     SUBDIR += fpc-pastojs
@@ -146,6 +148,7 @@
     SUBDIR += hs-unlambda
     SUBDIR += huc
     SUBDIR += icc
+    SUBDIR += inko
     SUBDIR += intel-compute-runtime
     SUBDIR += intercal
     SUBDIR += io
@@ -319,6 +322,7 @@
     SUBDIR += rexx-regutil
     SUBDIR += rexx-wrapper
     SUBDIR += rhino
+    SUBDIR += rizin
     SUBDIR += ruby30
     SUBDIR += ruby31
     SUBDIR += ruby32
@@ -329,6 +333,7 @@
     SUBDIR += rust
     SUBDIR += rust-bootstrap
     SUBDIR += rust-nightly
+    SUBDIR += s7
     SUBDIR += sagittarius-scheme
     SUBDIR += sather-specification
     SUBDIR += sather-tutorial
