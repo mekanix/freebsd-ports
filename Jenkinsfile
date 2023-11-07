@@ -125,6 +125,7 @@ pipeline {
                     security/nmap \
                     security/pam_mkhomedir \
                     security/py-asyncssh \
+                    security/py-python-pam \
                     security/sudo \
                     shells/bash \
                     shells/ksh93 \
