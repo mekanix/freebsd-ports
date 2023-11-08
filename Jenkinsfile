@@ -80,6 +80,7 @@ pipeline {
                     devel/git \
                     devel/hwloc2 \
                     java/openjdk8 \
+                    devel/libdwarf \
                     devel/py-pip \
                     devel/py-tox \
                     devel/py-virtualenv \
