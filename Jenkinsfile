@@ -70,7 +70,6 @@ pipeline {
                     benchmarks/flamegraph \
                     benchmarks/iozone \
                     benchmarks/iperf3 \
-                    benchmarks/netperf \
                     converters/unix2dos \
                     databases/pgbouncer \
                     databases/py-prometheus-pgbouncer-exporter \
@@ -94,7 +93,6 @@ pipeline {
                     lang/expect \
                     lang/go121 \
                     mail/ssmtp \
-                    misc/compat12x \
                     misc/mbuffer \
                     misc/mc \
                     net/bmon \
@@ -112,7 +110,6 @@ pipeline {
                     net-mgmt/py-smartctl-exporter \
                     net-mgmt/telegraf \
                     net-mgmt/zabbix5-agent \
-                    net/samba413 \
                     net/nss-pam-ldapd \
                     net/nss_ldap \
                     net/openldap24-client \
@@ -130,10 +127,8 @@ pipeline {
                     shells/ksh93 \
                     sysutils/beats7 \
                     sysutils/beats8 \
-                    sysutils/bpytop \
                     sysutils/dmidecode \
                     sysutils/dtrace-toolkit \
-                    sysutils/fusefs-encfs \
                     sysutils/fusefs-ntfs \
                     sysutils/gstat-rs \
                     sysutils/intel-nvmupdate-100g \
@@ -158,7 +153,6 @@ pipeline {
                     sysutils/sas3ircu \
                     sysutils/storcli \
                     sysutils/screen \
-                    sysutils/sdparm \
                     sysutils/sg3_utils \
                     sysutils/smartmontools \
                     sysutils/smp_utils \
