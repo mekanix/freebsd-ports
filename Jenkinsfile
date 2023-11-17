@@ -78,7 +78,6 @@ pipeline {
                     devel/gdb \
                     devel/git \
                     devel/hwloc2 \
-                    java/openjdk8 \
                     devel/py-pip \
                     devel/py-tox \
                     devel/py-virtualenv \
@@ -117,7 +116,6 @@ pipeline {
                     net/wireshark \
                     ports-mgmt/modules2tuple \
                     ports-mgmt/portlint \
-                    ports-mgmt/poudriere \
                     security/gnupg \
                     security/nmap \
                     security/pam_mkhomedir \
@@ -164,8 +162,12 @@ pipeline {
                     textproc/jq \
                     textproc/py-elasticsearch \
                     textproc/ripgrep \
-                    www/nginx \
                     www/py-aiohttp \
+                    '
+                PORTS14 = ' \
+                    java/openjdk8 \
+                    ports-mgmt/poudriere \
+                    www/nginx \
                     '
                 // Ports that need to be rebuilt for every minor version of the
                 // OS, not just major versions.
@@ -216,6 +218,8 @@ pipeline {
                     ${PORTSALL} '
                 sh 'sudo poudriere bulk -j 13_1-AXCIENT1_amd64 -p "${PNAME}" \
                     ${PORTSMINOR} '
+                sh 'sudo poudriere bulk -j 14_0-AXCIENT1_amd64 -p "${PNAME}" \
+                    ${PORTSALL} ${PORTS14}'
             }
         }
         stage('Build dev package') {
