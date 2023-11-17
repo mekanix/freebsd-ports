@@ -111,7 +111,6 @@ pipeline {
                     net-mgmt/zabbix5-agent \
                     net/nss-pam-ldapd \
                     net/nss_ldap \
-                    net/openldap24-client \
                     net/rsync \
                     net/wireshark \
                     ports-mgmt/modules2tuple \
