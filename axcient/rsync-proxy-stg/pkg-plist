@@ -1,0 +1,7 @@
+bin/rsync-proxy
+@sample %%ETCDIR%%/rsync-proxy.yml.sample
+@sample %%EXAMPLESDIR%%/newsyslog.conf.d/rsync-proxy.conf etc/newsyslog.conf.d/rsync-proxy.conf
+etc/rc.d/rsync_proxy
+@sample %%EXAMPLESDIR%%/rsyslog.d/rsync-proxy.conf etc/rsyslog.d/rsync-proxy.conf
+@dir etc/newsyslog.d
+@dir etc/rsyslog.d

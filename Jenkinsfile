@@ -54,6 +54,7 @@ pipeline {
                     axcient/py-malloc-exporter \
                     axcient/py-drive-exporter \
                     axcient/migration-tools \
+                    axcient/rsync-proxy-stg \
                     axcient/smart-recovery \
                     axcient/smart-recovery-stg \
                     axcient/spxops-vmagent \
@@ -197,6 +198,7 @@ pipeline {
                 sh 'cd net-mgmt/py-ses-exporter; make fetch'
                 sh 'cd axcient/filestore-clone; make fetch'
                 sh 'cd axcient/migration-tools; make fetch'
+                sh 'cd axcient/rsync-proxy-stg; make fetch'
                 sh 'cd axcient/smart-recovery; make fetch'
                 sh 'cd axcient/smart-recovery-stg; make fetch'
                 sh 'cd axcient/spxops-vmagent; make fetch'
