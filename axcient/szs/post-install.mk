@@ -1,12 +1,10 @@
 post-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/cron.d
-	${MKDIR} ${STAGEDIR}${PREFIX}/etc/newsyslog.d
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/rsyslog.d
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/szs
 	${MKDIR} ${STAGEDIR}${DATADIR}
 	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}/cron.d
-	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}/newsyslog.conf.d
 	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}/rsyslog.d
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/periodic/monthly
 	${MV} ${STAGEDIR}${PREFIX}/bin/api ${STAGEDIR}${PREFIX}/bin/szs-op
@@ -23,8 +21,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/freebsd-pkg/usr/local/etc/cron.d/statistics ${STAGEDIR}${EXAMPLESDIR}/cron.d/
 	${INSTALL_DATA} ${WRKSRC}/freebsd-pkg/usr/local/etc/cron.d/snapshots_cleanup ${STAGEDIR}${EXAMPLESDIR}/cron.d/
 	${INSTALL_DATA} ${WRKSRC}/freebsd-pkg/usr/local/etc/cron.d/clone_snapshots ${STAGEDIR}${EXAMPLESDIR}/cron.d/
-	${INSTALL_DATA} ${WRKSRC}/freebsd-pkg/usr/local/etc/newsyslog.conf.d/szs.conf ${STAGEDIR}${EXAMPLESDIR}/newsyslog.conf.d/
-	${INSTALL_DATA} ${WRKSRC}/freebsd-pkg/usr/local/etc/newsyslog.conf.d/szs_jobs.conf ${STAGEDIR}${EXAMPLESDIR}/newsyslog.conf.d/
 	${INSTALL_SCRIPT} ${WRKSRC}/freebsd-pkg/usr/local/etc/rc.d/szs ${STAGEDIR}${PREFIX}/etc/rc.d
 	${INSTALL_SCRIPT} ${WRKSRC}/freebsd-pkg/usr/local/etc/rc.d/szs_jobs ${STAGEDIR}${PREFIX}/etc/rc.d
 	${INSTALL_DATA} ${WRKSRC}/freebsd-pkg/usr/local/etc/rsyslog.d/szs.conf ${STAGEDIR}${EXAMPLESDIR}/rsyslog.d/
