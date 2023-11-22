@@ -1,7 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	libzfs_core
-# The real library version is defined by SRC_BASE
+# The real Python library version is defined by SRC_BASE.
+# The port version is not related, unfortunately.
 PORTVERSION=	1.0.0
 CATEGORIES=	devel python
 MASTER_SITES=	# empty
@@ -15,7 +16,9 @@ COMMENT=	Python libzfs_core bindings
 LICENSE=	APACHE20
 
 GNU_CONFIGURE=	yes
-USES=		autoreconf:build libtool python
+CONFIGURE_ARGS=	MAKE=gmake --prefix=${PREFIX} --with-config="user"
+CONFIGURE_ARGS+=	--with-python=${PYTHON_VER}
+USES=		autoreconf:build libtool python gmake
 USE_PYTHON=	autoplist distutils
 
 # openzfs also installs py-libzfs_core bindings
@@ -35,6 +38,10 @@ INSTALL_WRKSRC=	${BUILD_WRKSRC}
 IGNORE=	needs FreeBSD 13 with OpenZFS
 .endif
 
+.if ${OSVERSION} < 1400000
+EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-contrib_pyzfs_libzfs__core_bindings_____init____.py
+.endif
+
 .if !exists(${SRC_BASE}/sys/Makefile)
 IGNORE=	requires kernel source files in ${SRC_BASE}
 .endif
@@ -45,4 +52,8 @@ do-extract:
 pre-configure:
 	cd ${WRKSRC} && ./autogen.sh
 
+.if ${OSVERSION} > 1400000
+pre-build:
+	cd ${WRKSRC} && gmake pyzfs-all-local
+.endif
 .include <bsd.port.post.mk>
