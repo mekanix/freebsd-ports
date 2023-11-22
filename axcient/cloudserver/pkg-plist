@@ -1,6 +1,5 @@
 bin/cloudserver
 @sample %%ETCDIR%%/cloudserver.conf.sample
-@sample %%EXAMPLESDIR%%/newsyslog.conf.d/cloudserver.conf etc/newsyslog.conf.d/cloudserver.conf
 etc/rc.d/cloudserver
 @sample %%EXAMPLESDIR%%/rsyslog.d/cloudserver.conf etc/rsyslog.d/cloudserver.conf
 @dir etc/rsyslog.d

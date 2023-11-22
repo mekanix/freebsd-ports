@@ -2,7 +2,7 @@
 
 PORTNAME=	vt2
 PORTVERSION?=	1.4.0
-PORTREVISION?=	1
+PORTREVISION?=	2
 CATEGORIES=	axcient
 MASTER_SITES=	GH
 
@@ -47,9 +47,7 @@ PLIST_FILES?=  etc/rc.d/vt2 \
                "@dir etc/rsyslog.d" \
                bin/vaulttransferserver2 \
                bin/vaulttransferclient2 \
-               "@sample ${EXAMPLESDIR}/newsyslog.conf etc/newsyslog.conf.d/vt2.conf" \
                "@sample ${EXAMPLESDIR}/rsyslog.conf etc/rsyslog.d/vt2.conf" \
-               "@sample ${EXAMPLESDIR}/newsyslog.conf.d/vt2client.conf etc/newsyslog.conf.d/vt2client.conf" \
                "@sample ${EXAMPLESDIR}/rsyslog.d/vt2client.conf etc/rsyslog.d/vt2client.conf"
 
 
@@ -97,16 +95,13 @@ do-build:
 do-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/rsyslog.d
 	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
-	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}/newsyslog.conf.d
 	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}/rsyslog.d
 	# Server files
 	${INSTALL_PROGRAM} ${WRKSRC}/../vaulttransferserver2 ${STAGEDIR}${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/../freebsd-pkg/usr/local/etc/newsyslog.conf.d/vt2.conf ${STAGEDIR}${EXAMPLESDIR}/newsyslog.conf
 	${INSTALL_SCRIPT} ${WRKSRC}/../freebsd-pkg/usr/local/etc/rc.d/vt2 ${STAGEDIR}${PREFIX}/etc/rc.d
 	${INSTALL_DATA} ${WRKSRC}/../freebsd-pkg/usr/local/etc/rsyslog.d/vt2.conf ${STAGEDIR}${EXAMPLESDIR}/rsyslog.conf
 	# Client files
 	${INSTALL_PROGRAM} ${GO_WRKDIR_BIN}/vaulttransferclient2 ${STAGEDIR}${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/build/freebsd-pkg/usr/local/etc/newsyslog.conf.d/vt2client.conf ${STAGEDIR}${EXAMPLESDIR}/newsyslog.conf.d/vt2client.conf
 	${INSTALL_DATA} ${WRKSRC}/build/freebsd-pkg/usr/local/etc/rsyslog.d/vt2client.conf ${STAGEDIR}${EXAMPLESDIR}/rsyslog.d/vt2client.conf
 .  endif
 
