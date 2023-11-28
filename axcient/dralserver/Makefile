@@ -2,7 +2,7 @@
 
 PORTNAME=	dralserver
 PORTVERSION?=	2.0.0
-PORTREVISION?=	1
+PORTREVISION?=	2
 CATEGORIES=	axcient
 
 MAINTAINER=	kklimov@axcient.com

@@ -1,10 +1,8 @@
 post-install:
-	${MKDIR} ${STAGEDIR}${PREFIX}/etc/cron.d
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/rsyslog.d
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/szs
 	${MKDIR} ${STAGEDIR}${DATADIR}
 	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
-	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}/cron.d
 	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}/rsyslog.d
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/periodic/monthly
 	${MV} ${STAGEDIR}${PREFIX}/bin/api ${STAGEDIR}${PREFIX}/bin/szs-op
@@ -16,11 +14,6 @@ post-install:
 	${MV} ${STAGEDIR}${PREFIX}/bin/clonesnapshots ${STAGEDIR}${PREFIX}/bin/szs-op-clone-snapshots
 	${INSTALL_LIB} ${WRKDIR}/lib/libszs-op.so ${STAGEDIR}${PREFIX}/lib
 	${INSTALL_DATA} ${WRKDIR}/lib/libszs-op.h ${STAGEDIR}${PREFIX}/include/szs-op.h
-	${INSTALL_DATA} ${WRKSRC}/freebsd-pkg/usr/local/etc/cron.d/safety_archive_cleanup ${STAGEDIR}${EXAMPLESDIR}/cron.d/
-	${INSTALL_DATA} ${WRKSRC}/freebsd-pkg/usr/local/etc/cron.d/cleanup_clones ${STAGEDIR}${EXAMPLESDIR}/cron.d/
-	${INSTALL_DATA} ${WRKSRC}/freebsd-pkg/usr/local/etc/cron.d/statistics ${STAGEDIR}${EXAMPLESDIR}/cron.d/
-	${INSTALL_DATA} ${WRKSRC}/freebsd-pkg/usr/local/etc/cron.d/snapshots_cleanup ${STAGEDIR}${EXAMPLESDIR}/cron.d/
-	${INSTALL_DATA} ${WRKSRC}/freebsd-pkg/usr/local/etc/cron.d/clone_snapshots ${STAGEDIR}${EXAMPLESDIR}/cron.d/
 	${INSTALL_SCRIPT} ${WRKSRC}/freebsd-pkg/usr/local/etc/rc.d/szs ${STAGEDIR}${PREFIX}/etc/rc.d
 	${INSTALL_SCRIPT} ${WRKSRC}/freebsd-pkg/usr/local/etc/rc.d/szs_jobs ${STAGEDIR}${PREFIX}/etc/rc.d
 	${INSTALL_DATA} ${WRKSRC}/freebsd-pkg/usr/local/etc/rsyslog.d/szs.conf ${STAGEDIR}${EXAMPLESDIR}/rsyslog.d/

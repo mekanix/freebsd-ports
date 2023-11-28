@@ -8,11 +8,6 @@ bin/szs-op-clone-snapshots
 bin/generate_jail_base.sh
 etc/periodic/monthly/900.zfs-holds
 %%DATADIR%%/zfs-holds.lua
-@sample %%EXAMPLESDIR%%/cron.d/safety_archive_cleanup etc/cron.d/safety_archive_cleanup
-@sample %%EXAMPLESDIR%%/cron.d/cleanup_clones etc/cron.d/cleanup_clones
-@sample %%EXAMPLESDIR%%/cron.d/statistics etc/cron.d/statistics
-@sample %%EXAMPLESDIR%%/cron.d/snapshots_cleanup etc/cron.d/snapshots_cleanup
-@sample %%EXAMPLESDIR%%/cron.d/clone_snapshots etc/cron.d/clone_snapshots
 etc/rc.d/szs
 etc/rc.d/szs_jobs
 @sample %%EXAMPLESDIR%%/rsyslog.d/szs.conf etc/rsyslog.d/szs.conf
@@ -26,4 +21,3 @@ etc/rc.d/szs_jobs
 include/szs-op.h
 lib/libszs-op.so
 @dir etc/rsyslog.d
-@dir etc/cron.d

@@ -4,7 +4,5 @@ bin/dralserver-cleanup-clones
 etc/rc.d/dralserver
 @sample %%EXAMPLESDIR%%/rsyslog.d/dralserver.conf etc/rsyslog.d/dralserver.conf
 @sample %%EXAMPLESDIR%%/rsyslog.d/dralserver-cleanup-clones.conf etc/rsyslog.d/dralserver-cleanup-clones.conf
-@sample %%EXAMPLESDIR%%/cron.d/dralserver-cleanup-clones etc/cron.d/dralserver-cleanup-clones
 @dir etc/rsyslog.d
-@dir etc/cron.d
 
