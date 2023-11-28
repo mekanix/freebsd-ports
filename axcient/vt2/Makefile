@@ -64,9 +64,15 @@ WRKSRC_SUBDIR=go
 GO_PKGNAME=     github.com/${GH_ACCOUNT}/${GH_PROJECT}
 GO_TARGET=${WRKSRC}/cmd/client/main.go:vaulttransferclient2
 
-USES+=          axcient gmake go:modules
+USES+=          axcient compiler:c11 gmake go:modules
 
 MAKE_ARGS+= SERVER_LDFLAGS="${LDFLAGS} -lmicrohttpd -lszs-op -L."
+
+.include <bsd.port.pre.mk>
+
+.if ${COMPILER_TYPE} == clang && ${COMPILER_VERSION} >= 160
+CFLAGS+=      -Wno-error=incompatible-function-pointer-types
+.endif
 
 # It is not possible to use the `go:modules` and `gmake` build rules together,
 # so we need to redeclare do-build, containing recipe scripts from both,
@@ -105,4 +111,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/build/freebsd-pkg/usr/local/etc/rsyslog.d/vt2client.conf ${STAGEDIR}${EXAMPLESDIR}/rsyslog.d/vt2client.conf
 .  endif
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>

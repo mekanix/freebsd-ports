@@ -39,7 +39,7 @@ LIB_DEPENDS=    libmicrohttpd.so:www/libmicrohttpd \
 # https://raw.githubusercontent.com/Axcient/vaulttransfer2/6d5d3224796695bf163b9e6d37fe089f2b4109af/freebsd-pkg/%2BMANIFEST?token=AAA7VONVI376NMBQPJLHG6K6T4YLG
 RUN_DEPENDS+=   ca_root_nss>0:security/ca_root_nss
 
-USES+=          axcient gmake go:modules
+USES+=          axcient compiler:c11 gmake go:modules
 
 MASTERDIR=	${.CURDIR}/../vt2
 DISTINFO_FILE=	${.CURDIR}/distinfo
@@ -72,6 +72,12 @@ PLIST_FILES?=   bin/vaulttransferserver2 \
 
 
 MAKE_ARGS+= SERVER_LDFLAGS="${LDFLAGS} -lmicrohttpd -lszs-op -L."
+
+.include <bsd.port.pre.mk>
+
+.if ${COMPILER_TYPE} == clang && ${COMPILER_VERSION} >= 160
+CFLAGS+=      -Wno-error=incompatible-function-pointer-types
+.endif
 
 # It is not possible to use the `go:modules` and `gmake` build rules together,
 # so we need to redeclare do-build, containing recipe scripts from both,
@@ -113,4 +119,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/build/freebsd-pkg/usr/local/etc/rsyslog.d/vt2client.conf ${STAGEDIR}${EXAMPLESDIR}/rsyslog.d/vt2client.conf
 .  endif
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
