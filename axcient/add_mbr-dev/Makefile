@@ -1,6 +1,6 @@
 # $FreeBSD$
 
-PORTVERSION=	2.0.2.${DATECODE}
+PORTVERSION=	2.0.5.${DATECODE}
 # Set PORTREVISION explicitly so it won't be inherited from the MASTERDIR
 PORTREVISION=	0
 PKGNAMESUFFIX=	-dev
