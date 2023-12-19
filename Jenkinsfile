@@ -242,6 +242,7 @@ pipeline {
                 sh 'cd axcient/rsync-proxy-dev; make fetch'
 
                 sh "sudo poudriere bulk -j 13_1-AXCIENT1_amd64 -p ${PNAME} axcient/${env.devPackage}"
+                sh "sudo poudriere bulk -j 14_0-AXCIENT1_amd64 -p ${PNAME} axcient/${env.devPackage}"
             }
         }
     }
