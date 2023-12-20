@@ -1,11 +1,11 @@
 PORTNAME=	ugrep
 DISTVERSIONPREFIX=	v
-DISTVERSION=	4.3.1
+DISTVERSION=	4.4.0
 CATEGORIES=	textproc
 
 MAINTAINER=	ashish@FreeBSD.org
 COMMENT=	NEW ultra fast grep with interactive query UI
-WWW=		https://github.com/Genivia/ugrep
+WWW=		https://ugrep.com
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
@@ -14,15 +14,18 @@ USES=		compiler:c++11-lang gmake shebangfix
 USE_GITHUB=	yes
 GH_ACCOUNT=	Genivia
 
-OPTIONS_DEFINE=		COLOR HIDDEN LZ4 MMAP PAGER PCRE2 PRETTY ZSTD
+OPTIONS_DEFINE=		COLOR HIDDEN LZ4 MMAP PAGER PCRE2 PRETTY ZSTD BROTLI BZIP3
 OPTIONS_DEFINE_aarch64=	NEON
 OPTIONS_DEFINE_amd64=	AVX SSE2
-OPTIONS_DEFAULT=	COLOR HIDDEN LZ4 MMAP PAGER PCRE2 PRETTY ZSTD
+OPTIONS_DEFAULT=	COLOR HIDDEN LZ4 MMAP PAGER PCRE2 PRETTY ZSTD BROTLI BZIP3
 OPTIONS_DEFAULT_aarch64=	NEON
 OPTIONS_DEFAULT_amd64=	AVX SSE2
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--with-boost-regex
+CONFIGURE_ARGS=	--with-boost-regex \
+		--with-bash-completion-dir=${PREFIX}/etc/bash_completion.d \
+		--with-fish-completion-dir=${PREFIX}/share/fish/completions \
+		--with-zsh-completion-dir=${PREFIX}/share/zsh/site-functions
 
 SHEBANG_FILES=	bin/ug+ bin/ugrep+
 bash_CMD=	${SH}
@@ -51,5 +54,10 @@ MMAP_DESC=			Enable memory mapped files by default
 MMAP_CONFIGURE_ENABLE=		mmap
 ZSTD_CONFIGURE_WITH=		zstd=${LOCALBASE}
 ZSTD_LIB_DEPENDS=		libzstd.so:archivers/zstd
+BROTLI_CONFIGURE_WITH=		brotli=${LOCALBASE}
+BROTLI_LIB_DEPENDS=		libbrotlidec.so:archivers/brotli
+BZIP3_DESC=			bzip3 compression support
+BZIP3_CONFIGURE_WITH=		bzip3=${LOCALBASE}
+BZIP3_LIB_DEPENDS=		libbzip3.so:archivers/bzip3
 
 .include <bsd.port.mk>

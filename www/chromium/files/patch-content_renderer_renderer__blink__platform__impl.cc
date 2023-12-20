@@ -1,14 +1,14 @@
---- content/renderer/renderer_blink_platform_impl.cc.orig	2023-10-11 18:22:24 UTC
+--- content/renderer/renderer_blink_platform_impl.cc.orig	2023-12-10 06:10:27 UTC
 +++ content/renderer/renderer_blink_platform_impl.cc
-@@ -114,7 +114,7 @@
+@@ -113,7 +113,7 @@
  
  #if BUILDFLAG(IS_MAC)
  #include "content/child/child_process_sandbox_support_impl_mac.h"
 -#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  #include "content/child/child_process_sandbox_support_impl_linux.h"
+ #include "content/child/sandboxed_process_thread_type_handler.h"
  #endif
- 
 @@ -182,13 +182,13 @@ RendererBlinkPlatformImpl::RendererBlinkPlatformImpl(
        sudden_termination_disables_(0),
        is_locked_to_site_(false),
@@ -34,7 +34,7 @@
    if (sandboxEnabled()) {
  #if BUILDFLAG(IS_MAC)
      sandbox_support_ = std::make_unique<WebSandboxSupportMac>();
-@@ -255,7 +255,7 @@ void RendererBlinkPlatformImpl::SetThreadType(base::Pl
+@@ -258,7 +258,7 @@ void RendererBlinkPlatformImpl::SetThreadType(base::Pl
  #endif
  
  blink::WebSandboxSupport* RendererBlinkPlatformImpl::GetSandboxSupport() {

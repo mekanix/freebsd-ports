@@ -1,9 +1,9 @@
---- CMakeLists.txt.orig	2023-06-29 08:54:06 UTC
+--- CMakeLists.txt.orig	2023-11-28 09:23:37 UTC
 +++ CMakeLists.txt
 @@ -21,8 +21,8 @@ endif()
  set(PODOFO_VERSION_MAJOR "0" CACHE STRING "Major part of podofo version number")
  set(PODOFO_VERSION_MINOR "10" CACHE STRING "Minor part of podofo version number")
- set(PODOFO_VERSION_PATCH "1" CACHE STRING "Patchlevel part of podofo version number")
+ set(PODOFO_VERSION_PATCH "3" CACHE STRING "Patchlevel part of podofo version number")
 -set(PODOFO_VERSION "${PODOFO_VERSION_MAJOR}.${PODOFO_VERSION_MINOR}.${PODOFO_VERSION_PATCH}")
  set(PODOFO_SOVERSION "2")
 +set(PODOFO_VERSION "${PODOFO_SOVERSION}.${PODOFO_VERSION_MAJOR}.${PODOFO_VERSION_MINOR}.${PODOFO_VERSION_PATCH}")

@@ -1,5 +1,6 @@
 PORTNAME=	waybar
-DISTVERSION=	0.9.22
+DISTVERSION=	0.9.24
+PORTREVISION=	1
 CATEGORIES=	x11 wayland
 PKGNAMESUFFIX=	${FLAVOR:N${FLAVORS:[1]}:C/.+/-${FLAVOR}/}
 
@@ -70,7 +71,8 @@ JACK_MESON_ENABLED=	jack
 
 MANPAGES_BUILD_DEPENDS=	scdoc:textproc/scdoc
 MANPAGES_MESON_ENABLED=	man-pages
-MANPAGES_PLIST_FILES=	man/man5/${PORTNAME}-backlight.5.gz \
+MANPAGES_PLIST_FILES=	man/man5/${PORTNAME}-backlight-slider.5.gz \
+			man/man5/${PORTNAME}-backlight.5.gz \
 			man/man5/${PORTNAME}-battery.5.gz \
 			man/man5/${PORTNAME}-bluetooth.5.gz \
 			man/man5/${PORTNAME}-cava.5.gz \
@@ -88,6 +90,7 @@ MANPAGES_PLIST_FILES=	man/man5/${PORTNAME}-backlight.5.gz \
 			man/man5/${PORTNAME}-mpd.5.gz \
 			man/man5/${PORTNAME}-mpris.5.gz \
 			man/man5/${PORTNAME}-network.5.gz \
+			man/man5/${PORTNAME}-pulseaudio-slider.5.gz \
 			man/man5/${PORTNAME}-pulseaudio.5.gz \
 			man/man5/${PORTNAME}-river-layout.5.gz \
 			man/man5/${PORTNAME}-river-mode.5.gz \
@@ -156,5 +159,26 @@ pre-test:
 		${MAKE} -C${.CURDIR} build MESON_ARGS="${MESON_ARGS} --reconfigure -Dtests=enabled"; \
 		${TOUCH} ${WRKDIR}/.meson_build_tests; \
 	fi
+
+# XXX https://github.com/HowardHinnant/date/issues/799
+.if ${CXX} == c++ && exists(/usr/include/c++/v1/__chrono/concepts.h)
+BUILD_DEPENDS+=	${CMAKE_BIN}:devel/cmake-core
+CONFIGURE_ENV+=	CC="${CC}" CXX="${CXX}" CPP="${CPP}"
+CMAKE_BIN=	${LOCALBASE}/bin/cmake
+
+# XXX Move into separate port and standardize via USES
+GH_TUPLE+=	llvm:llvm-project:llvmorg-16.0.1:libcxx
+CXXFLAGS+=	-nostdinc++ -isystem${WRKDIR}/libcxx_prefix/include/c++/v1
+# Don't link against new libc++ as it's not necessary
+#LDFLAGS+=	-nostdlib++ -L${WRKDIR}/libcxx_prefix/lib -l:libc++.a -lcxxrt
+
+pre-configure:	bundled-libcxx
+bundled-libcxx:
+	@${SETENV} ${CONFIGURE_ENV} ${CMAKE_BIN} ${CMAKE_ARGS} \
+		-DLIBCXX_INCLUDE_BENCHMARKS:BOOL=OFF \
+		-DCMAKE_INSTALL_PREFIX:PATH=${WRKDIR}/libcxx_prefix \
+		-B ${WRKDIR}/libcxx_build -S ${WRKSRC_libcxx}/libcxx
+	@${DO_MAKE_BUILD:NDESTDIR*} install -C ${WRKDIR}/libcxx_build
+.endif # exists(/usr/include/c++/v1/__chrono/concepts.h)
 
 .include <bsd.port.mk>

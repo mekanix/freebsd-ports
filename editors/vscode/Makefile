@@ -1,6 +1,5 @@
 PORTNAME=	vscode
-DISTVERSION=	1.83.1
-PORTREVISION=	2
+DISTVERSION=	1.85.1
 CATEGORIES=	editors
 MASTER_SITES=	https://github.com/tagattie/FreeBSD-VSCode/releases/download/${DISTVERSION}/:yarn_cache
 DISTFILES=	yarn-offline-cache-${DISTVERSION}${EXTRACT_SUFX}:yarn_cache \
@@ -67,7 +66,7 @@ USES=		desktop-file-utils gl gmake gnome iconv:wchar_t jpeg \
 USE_GITHUB=	yes
 GH_ACCOUNT=	microsoft
 
-SOURCE_COMMIT_HASH=	f1b07bd25dfad64b0167beb15359ae573aecd2cc
+SOURCE_COMMIT_HASH=	0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2
 
 BINARY_ALIAS=	python=${PYTHON_CMD}
 
@@ -79,7 +78,7 @@ USE_GNOME=	atk cairo pango gdkpixbuf2 gtk30 libxml2 libxslt
 USE_LDCONFIG=	${DATADIR}
 
 # Keep NODE_VER in sync with www/node18 DISTVERSION
-NODE_VER=	18.18.0
+NODE_VER=	18.18.2
 NODE_VER_MAJOR=	${NODE_VER:C/\..*$//}
 
 SHEBANG_REGEX=	./(extensions|resources|scripts|src)/.*\.sh$$
@@ -114,7 +113,7 @@ pre-everything::
 	@${ECHO_MSG} "opened by a jail (default 1024) is exceeded during the build of ${PORTNAME}."
 	@${ECHO_MSG} "To successfully build ${PORTNAME} with poudriere(8), you must add the following"
 	@${ECHO_MSG} "line to poudriere.conf:"
-	@${ECHO_MSG} "MAX_FILES_${PORTNAME}=4096"
+	@${ECHO_MSG} "MAX_FILES_${PORTNAME}=8192"
 	@${ECHO_MSG} ""
 
 post-extract:
@@ -215,6 +214,11 @@ do-build:
 	cd ${WRKDIR}/.cache/electron/${ELECTRON_DOWNLOAD_URL_HASH} && \
 		${SHA256} -r *-v${ELECTRON_VER}-linux-*.zip | \
 		${SED} -e 's/ / */' > SHASUMS256.txt
+	# add newline character at the end of the file if not already
+	${AWK} '1' ${WRKSRC}/build/checksums/electron.txt > \
+		${WRKSRC}/build/checksums/electron.txt.new
+	${MV} -f ${WRKSRC}/build/checksums/electron.txt.new \
+		${WRKSRC}/build/checksums/electron.txt
 	cd ${WRKDIR}/.cache/electron/${ELECTRON_DOWNLOAD_URL_HASH} && \
 		${SHA256} -r *-v${ELECTRON_VER}-linux-*.zip | \
 		${SED} -e 's/ / */' >> ${WRKSRC}/build/checksums/electron.txt

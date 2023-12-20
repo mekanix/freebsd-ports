@@ -147,7 +147,6 @@
     SUBDIR += libctl
     SUBDIR += libecpint
     SUBDIR += libefp
-    SUBDIR += libgeodecomp
     SUBDIR += libgetar
     SUBDIR += libghemical
     SUBDIR += libgridxc
@@ -175,6 +174,7 @@
     SUBDIR += maeparser
     SUBDIR += massxpert
     SUBDIR += mbdyn
+    SUBDIR += mcpl
     SUBDIR += mcstas
     SUBDIR += mcstas-comps
     SUBDIR += mctc-lib
@@ -202,7 +202,9 @@
     SUBDIR += mstore
     SUBDIR += multicharge
     SUBDIR += multiwfn
+    SUBDIR += mutationpp
     SUBDIR += namd
+    SUBDIR += ncrystal
     SUBDIR += nest
     SUBDIR += netcdf
     SUBDIR += netcdf-cxx
@@ -367,6 +369,7 @@
     SUBDIR += py-mp-api
     SUBDIR += py-mpcontribs-client
     SUBDIR += py-mrchem
+    SUBDIR += py-ncrystal
     SUBDIR += py-netCDF4
     SUBDIR += py-netcdf-flattener
     SUBDIR += py-nglview
@@ -439,6 +442,7 @@
     SUBDIR += py-thewalrus
     SUBDIR += py-tobler
     SUBDIR += py-trainstation
+    SUBDIR += py-trx-python
     SUBDIR += py-tweedledum
     SUBDIR += py-vedo
     SUBDIR += py-veusz

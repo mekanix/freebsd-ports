@@ -357,6 +357,7 @@
     SUBDIR += routers2-extensions
     SUBDIR += routers2-extras
     SUBDIR += rrdbot
+    SUBDIR += rs-aggregate
     SUBDIR += rtrlib
     SUBDIR += rubygem-blimpy
     SUBDIR += rubygem-checkson
@@ -398,6 +399,7 @@
     SUBDIR += triton-guesttools
     SUBDIR += unbound_exporter
     SUBDIR += unifi7
+    SUBDIR += unifi8
     SUBDIR += victoria-metrics
     SUBDIR += virt-viewer
     SUBDIR += vmutils

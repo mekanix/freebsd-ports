@@ -62,6 +62,7 @@ include/folly/MPMCQueue.h
 include/folly/MacAddress.h
 include/folly/MapUtil.h
 include/folly/Math.h
+include/folly/MaybeManagedPtr.h
 include/folly/Memory.h
 include/folly/MicroLock.h
 include/folly/MicroSpinLock.h
@@ -308,6 +309,7 @@ include/folly/experimental/channels/FanoutChannel-inl.h
 include/folly/experimental/channels/FanoutChannel.h
 include/folly/experimental/channels/FanoutSender-inl.h
 include/folly/experimental/channels/FanoutSender.h
+include/folly/experimental/channels/MaxConcurrentRateLimiter.h
 include/folly/experimental/channels/Merge-inl.h
 include/folly/experimental/channels/Merge.h
 include/folly/experimental/channels/MergeChannel-inl.h
@@ -411,6 +413,7 @@ include/folly/experimental/io/IoUringBackend.h
 include/folly/experimental/io/IoUringEvent.h
 include/folly/experimental/io/IoUringEventBaseLocal.h
 include/folly/experimental/io/Liburing.h
+include/folly/experimental/io/MuxIOThreadPoolExecutor.h
 include/folly/experimental/io/SimpleAsyncIO.h
 include/folly/experimental/observer/CoreCachedObserver.h
 include/folly/experimental/observer/HazptrObserver.h

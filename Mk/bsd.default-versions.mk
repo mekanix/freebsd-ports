@@ -50,8 +50,12 @@ EBUR128_DEFAULT?=	legacy
 FIREBIRD_DEFAULT?=	3.0
 # Possible values: gfortran
 FORTRAN_DEFAULT?=	gfortran
-# Possible values: 3.2.2
+# Possible values: 3.2.2, 3.3.1
+.  if !defined(WANT_FPC_DEVEL)
 FPC_DEFAULT?=		3.2.2
+.  else
+FPC_DEFAULT?=		3.3.1
+.  endif
 # Possible values: 8 (last to support powerpcspe), 9, 10, 11, 12
 # (Any other version is completely unsupported and not meant for general use.)
 .  if ${ARCH} == "powerpcspe"
@@ -101,11 +105,11 @@ LUAJIT_DEFAULT?=	luajit-devel
 .  endif
 # Possible values: 5.10, 5.20, 6.8
 MONO_DEFAULT?=		5.20
-# Possible values: 5.7, 8.0, 10.5m, 10.6m, 10.11m, 5.7p, 5.7w
+# Possible values: 5.7, 8.0, 8.1, 10.5m, 10.6m, 10.11m, 5.7p, 5.7w
 MYSQL_DEFAULT?=		8.0
 # Possible values: ninja, samurai
 NINJA_DEFAULT?=		ninja
-# Possible value: 16, 18, 20, current, lts (Note: current = 20 and lts = 18)
+# Possible value: 16, 18, 20, 21, current, lts (Note: current = 21 and lts = 20)
 NODEJS_DEFAULT?=	lts
 # Possible value: 25, 26
 OPENLDAP_DEFAULT?=	26
@@ -127,7 +131,7 @@ PERL5_DEFAULT:=		${_PERL5_FROM_BIN:R}
 # Possible values: 11, 12, 13, 14, 15, 16
 PGSQL_DEFAULT?=		15
 # Possible values: 8.0, 8.1, 8.2, 8.3
-PHP_DEFAULT?=		8.1
+PHP_DEFAULT?=		8.2
 # Possible values: rust, legacy
 .  if empty(ARCH:Naarch64:Namd64:Narmv7:Ni386:Npowerpc64:Npowerpc64le:Npowerpc:Nriscv64)
 PYCRYPTOGRAPHY_DEFAULT?=	rust

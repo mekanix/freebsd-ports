@@ -1,12 +1,11 @@
 PORTNAME=	hyprland
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.31.0
+DISTVERSION=	0.33.1
 PORTREVISION=	2
 CATEGORIES=	x11-wm wayland
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
-PATCHFILES+=	913c8b81ad44.patch:-p1 # https://github.com/hyprwm/Hyprland/pull/3589
-PATCHFILES+=	df00727310b8.patch:-p1 # wlroots 0.17
+PATCHFILES+=	ef445093f9fb.patch:-p1 # https://github.com/hyprwm/Hyprland/issues/4188
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Dynamic tiling Wayland compositor that doesn't sacrifice on its looks #'
@@ -20,8 +19,9 @@ BROKEN_FreeBSD_12=	libc++ too old
 BUILD_DEPENDS=	cmake:devel/cmake-core \
 		evdev-proto>0:devel/evdev-proto \
 		wayland-protocols>=1.25:graphics/wayland-protocols \
-		wlroots>=0.16.0.791<0.17.0:x11-toolkits/wlroots
-LIB_DEPENDS=	libwayland-server.so:graphics/wayland \
+		wlroots>=0.17.0<0.18.0:x11-toolkits/wlroots
+LIB_DEPENDS=	libdrm.so:graphics/libdrm \
+		libwayland-server.so:graphics/wayland \
 		libwlroots.so:x11-toolkits/wlroots \
 		libinput.so:x11/libinput \
 		libxkbcommon.so:x11/libxkbcommon
@@ -48,22 +48,21 @@ OPTIONS_DEFAULT=X11
 X11_USE=		XORG=xcb
 X11_MESON_ENABLED=	xwayland
 
-post-extract:
-.if defined(PATCHFILES) && ${PATCHFILES:Mdf00727310b8*}
-# Pretend to be a regular file for vendor patch to apply as is
-	@${RMDIR} ${WRKSRC}/subprojects/wlroots
-	@${ECHO_CMD} "Subproject commit 3406c1b17a4a7e6d4e2a7d9c1176affa72bce1bc" \
-		>${WRKSRC}/subprojects/wlroots
-.endif
-
 post-patch:
 # Extract (snapshot) version from the port instead of meson.build
-	@${REINPLACE_CMD} -i .nogit -e "/GIT_BRANCH/s/run_command.*/'main'/" \
-		-e "/GIT_COMMIT_HASH/s/run_command.*/'${DISTVERSIONFULL}'/" \
-		-e "/GIT_COMMIT_MESSAGE/d" \
-		-e "/GIT_DIRTY/s/run_command.*/'portbld'/" \
+	@${REINPLACE_CMD} -i .nogit \
 		-e "/version.*jq/s/run_command.*/'${DISTVERSIONFULL}',/" \
 		${WRKSRC}/meson.build
+	@${REINPLACE_CMD} -i .nogit \
+		-e '/^HASH/s/=.*/=${DISTVERSIONFULL:C/.*-g//}/' \
+		-e '/^BRANCH/s/=.*/=main/' \
+		-e '/^MESSAGE/s/=.*/="?"/' \
+		-e "/^DATE/s/=.*/=\"$$(date -ur $$(${AWK} \
+			'/TIMESTAMP/ { print $$3 }' ${DISTINFO_FILE}))\"/" \
+		-e '/^DIRTY/s/=.*/=portbld/' \
+		-e '/^TAG/s/=.*/=${DISTVERSIONFULL}/' \
+		${WRKSRC}/scripts/generateVersion.sh
+
 # Respect PREFIX for wallpapers
 	@${REINPLACE_CMD} 's,/usr/share,${DATADIR:H},' \
 		${WRKSRC}/src/render/OpenGL.cpp
@@ -101,11 +100,4 @@ bundled-libcxx:
 	@${DO_MAKE_BUILD:NDESTDIR*} install -C ${WRKDIR}/libcxx_build
 .endif
 .endif # exists(/usr/lib/libc++.so)
-
-.include "${.CURDIR:H:H}/x11-toolkits/wlroots-devel/override.mk"
-post-patch:	wlroots-devel-patch
-wlroots-devel-patch:
-# Prefer <wlr/*> headers (used by <hyprland/*>) from wlroots-devel
-	@${REINPLACE_CMD} -i .devel "/subdirs/s|''|'../wlroots-devel/include', &|" \
-		${WRKSRC}/meson.build
 .include <bsd.port.mk>

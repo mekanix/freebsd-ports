@@ -1,6 +1,5 @@
 PORTNAME=	kio-extras
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
-PORTREVISION=	1
 CATEGORIES=	devel kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
@@ -17,10 +16,10 @@ USE_KDE=	activities archive auth bookmarks codecs completion config \
 		configwidgets coreaddons crash dbusaddons dnssd doctools \
 		emoticons guiaddons i18n iconthemes init itemmodels itemviews \
 		jobwidgets js kdelibs4support khtml kio notifications parts \
-		pty service solid sonnet syntaxhighlighting textwidgets unitconversion \
+		phonon pty service solid sonnet syntaxhighlighting textwidgets unitconversion \
 		widgetsaddons windowsystem xmlgui \
 		ecm:build
-USE_QT=		concurrent core dbus declarative gui location network phonon4 printsupport \
+USE_QT=		concurrent core dbus declarative gui location network printsupport \
 		sql svg testlib webchannel widgets xml \
 		buildtools:build qmake:build
 USE_XORG=	x11 xcursor

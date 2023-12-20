@@ -1,5 +1,5 @@
 PORTNAME=	pika
-DISTVERSION=	0.17.0
+DISTVERSION=	0.21.0
 PORTREVISION=	1
 CATEGORIES=	devel
 
@@ -14,10 +14,8 @@ BROKEN_FreeBSD_12=	compilation error: /usr/include/sys/sysctl.h:1117:25: error: 
 BROKEN_aarch64=		compilation error: error: 'regparm' is not valid on this platform
 
 BUILD_DEPENDS=	boost-libs>=0:devel/boost-libs
-LIB_DEPENDS=	libboost_context.so:devel/boost-libs \
-		libfmt.so:devel/libfmt \
-		libhwloc.so:devel/hwloc2 \
-		libtcmalloc_minimal.so:devel/google-perftools
+LIB_DEPENDS=	libfmt.so:devel/libfmt \
+		libhwloc.so:devel/hwloc2
 
 USES=		cmake:testing compiler:c++17-lang
 USE_LDCONFIG=	yes
@@ -27,15 +25,17 @@ GH_ACCOUNT=	pika-org
 
 CMAKE_ON=	PIKA_WITH_MALLOC
 CMAKE_ON+=	PIKA_WITH_GENERIC_CONTEXT_COROUTINES # prerequisite, build breaks on aarch64, armv6 w/out it
-CMAKE_TESTING_ON=	PIKA_WITH_TESTS PIKA_WITH_TESTS_UNIT PIKA_WITH_TESTS_REGRESSIONS
-CMAKE_TESTING_TARGET=	tests
+CMAKE_TESTING_ON=	PIKA_WITH_TESTS PIKA_WITH_TESTS_UNIT PIKA_WITH_TESTS_REGRESSIONS # see https://pikacpp.org/usage.html#testing
+CMAKE_TESTING_TARGET=	tests # first build the tests, according to https://pikacpp.org/usage.html#testing
 
 BINARY_ALIAS=	git=false
 
 post-install:
 	@${RM} -r ${STAGEDIR}${DATADIR} # remove copy of license
 
-pre-test: # unlike most other cmake projects tests fail to build when reconfigured, and require full rebuild
-	@${RM} -r ${BUILD_WRKSRC}/*
+post-test: # run the tests according to https://pikacpp.org/usage.html#testing (make tests test doesn't work)
+	# some tests fail, see https://github.com/pika-org/pika/issues/895
+	@cd ${BUILD_WRKSRC} && \
+		${MAKE_CMD} test
 
 .include <bsd.port.mk>

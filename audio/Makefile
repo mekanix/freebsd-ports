@@ -36,6 +36,7 @@
     SUBDIR += asterisk-espeak
     SUBDIR += asterisk-flite
     SUBDIR += asunder
+    SUBDIR += atracdenc
     SUBDIR += atunes
     SUBDIR += aubio
     SUBDIR += audacity
@@ -164,7 +165,6 @@
     SUBDIR += festlex-cmu
     SUBDIR += festlex-czech
     SUBDIR += festlex-oald
-    SUBDIR += festlex-ogi
     SUBDIR += festlex-poslex
     SUBDIR += festvox-cmu_us_awb_arctic
     SUBDIR += festvox-cmu_us_bdl_arctic
@@ -196,11 +196,6 @@
     SUBDIR += fomp-lv2
     SUBDIR += foo-yc20
     SUBDIR += fossmixer
-    SUBDIR += fpc-a52
-    SUBDIR += fpc-mad
-    SUBDIR += fpc-modplug
-    SUBDIR += fpc-oggvorbis
-    SUBDIR += fpc-openal
     SUBDIR += freac
     SUBDIR += freealut
     SUBDIR += freebsd-13-mixer
@@ -231,7 +226,6 @@
     SUBDIR += gonic
     SUBDIR += goobox
     SUBDIR += gqradio
-    SUBDIR += gradio
     SUBDIR += gramofile
     SUBDIR += grip
     SUBDIR += gsequencer
@@ -323,12 +317,14 @@
     SUBDIR += juk
     SUBDIR += juke
     SUBDIR += julius
+    SUBDIR += kaldi
     SUBDIR += kapitonov-plugins-pack-lv2
     SUBDIR += kid3
     SUBDIR += klystrack
     SUBDIR += kmix
     SUBDIR += komposter
     SUBDIR += kwave
+    SUBDIR += ladish
     SUBDIR += ladspa
     SUBDIR += lame
     SUBDIR += lash
@@ -457,6 +453,7 @@
     SUBDIR += midiomatic-lv2
     SUBDIR += midipp
     SUBDIR += midisharelight
+    SUBDIR += midivisualizer
     SUBDIR += mikmod
     SUBDIR += milkytracker
     SUBDIR += miniaudio
@@ -465,14 +462,12 @@
     SUBDIR += mixer.app
     SUBDIR += mixertui
     SUBDIR += mixxx
-    SUBDIR += mixxx22
     SUBDIR += mkcue
     SUBDIR += mmtc
     SUBDIR += moc
     SUBDIR += modplug-tools
     SUBDIR += moodbar
     SUBDIR += moony-lv2
-    SUBDIR += mous
     SUBDIR += mousai
     SUBDIR += mp-player
     SUBDIR += mp3-archive-tools
@@ -605,6 +600,10 @@
     SUBDIR += plasma5-kpipewire
     SUBDIR += plasma5-oxygen-sounds
     SUBDIR += plasma5-plasma-pa
+    SUBDIR += plasma6-kpipewire
+    SUBDIR += plasma6-ocean-sound-theme
+    SUBDIR += plasma6-oxygen-sounds
+    SUBDIR += plasma6-plasma-pa
     SUBDIR += play
     SUBDIR += playgsf
     SUBDIR += playmidi
@@ -670,6 +669,7 @@
     SUBDIR += py-speechrecognition
     SUBDIR += py-spotipy
     SUBDIR += py-tagpy
+    SUBDIR += py-torchaudio
     SUBDIR += py-wavio
     SUBDIR += py-webrtcvad
     SUBDIR += py-zita-audiotools
@@ -851,6 +851,7 @@
     SUBDIR += vsound
     SUBDIR += vst3sdk
     SUBDIR += waon
+    SUBDIR += wasabi
     SUBDIR += wavbreaker
     SUBDIR += wavegain
     SUBDIR += wavetral

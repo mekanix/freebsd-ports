@@ -1,6 +1,5 @@
 PORTNAME=		${_MLT_PORTNAME}
 DISTVERSION=		${_MLT_VERSION}
-PORTREVISION?=		2
 CATEGORIES?=		multimedia
 MASTER_SITES=		https://github.com/mltframework/mlt/releases/download/v${DISTVERSION}/
 DISTFILES=		mlt-${DISTVERSION}${EXTRACT_SUFX}
@@ -16,6 +15,9 @@ LICENSE_COMB?=		multi
 USES+=			alias cmake compiler:c++11-lang eigen:3 localbase \
 			pathfix pkgconfig
 USE_LDCONFIG=		yes
+
+# Suppress errors with lld >= 17 due to undefined symbols.
+LDFLAGS+=		-Wl,--undefined-version
 
 DATADIR=		${PREFIX}/share/mlt-7
 
@@ -112,7 +114,6 @@ RESAMPLE_LIB_DEPENDS=	libsamplerate.so:audio/libsamplerate
 RESAMPLE_CMAKE_BOOL=	MOD_RESAMPLE
 
 RTAUDIO_DESC=		Enable RtAudio module
-RTAUDIO_BROKEN=		fails to build with RtAudio 6.0.0, see https://github.com/mltframework/mlt/issues/930
 RTAUDIO_LIB_DEPENDS=	librtaudio.so:audio/rtaudio \
 			libpulse-simple.so:audio/pulseaudio
 RTAUDIO_CMAKE_BOOL=	MOD_RTAUDIO

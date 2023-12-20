@@ -1,4 +1,4 @@
---- chrome/browser/themes/theme_service.cc.orig	2023-10-11 18:22:24 UTC
+--- chrome/browser/themes/theme_service.cc.orig	2023-12-10 06:10:27 UTC
 +++ chrome/browser/themes/theme_service.cc
 @@ -74,7 +74,7 @@
  #include "extensions/browser/extension_registry_observer.h"

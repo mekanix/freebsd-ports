@@ -1,6 +1,6 @@
---- requirements/base.txt.orig	2023-06-16 12:12:05 UTC
+--- requirements/base.txt.orig	2023-11-26 11:34:24 UTC
 +++ requirements/base.txt
-@@ -8,5 +8,3 @@ distro>=1.0.1
+@@ -8,5 +8,3 @@ looseversion
  psutil>=5.0.0
  packaging>=21.3
  looseversion

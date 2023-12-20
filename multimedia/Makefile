@@ -68,8 +68,7 @@
     SUBDIR += flvmeta
     SUBDIR += flvstreamer
     SUBDIR += flvtool++
-    SUBDIR += fpc-dts
-    SUBDIR += fpc-libvlc
+    SUBDIR += fswebcam
     SUBDIR += fxtv
     SUBDIR += gaupol
     SUBDIR += gavl
@@ -257,7 +256,6 @@
     SUBDIR += nymphcastlib
     SUBDIR += nymphrpc
     SUBDIR += obs-recursion-effect
-    SUBDIR += obs-scrab
     SUBDIR += obs-streamfx
     SUBDIR += obs-studio
     SUBDIR += obs-text-pthread

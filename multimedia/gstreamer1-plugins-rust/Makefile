@@ -1,7 +1,7 @@
 PORTNAME=	gstreamer1-plugins-rust
 DISTVERSION=	0.11.1
 DISTVERSIONSUFFIX=	+fixup
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	multimedia
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -29,7 +29,7 @@ CARGO_BUILD=	no
 CARGO_INSTALL=	no
 CARGO_TEST=	no
 
-.if ${MACHINE_ARCH} == i386
+.if ${MACHINE_ARCH} == i386 || "${MACHINE_ARCH:Marmv?}" != ""
 # https://github.com/rust-lang/rust/issues/85598
 LTO_UNSAFE=	yes
 CARGO_ENV+=	CARGO_PROFILE_RELEASE_LTO=false

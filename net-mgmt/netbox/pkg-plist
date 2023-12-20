@@ -1345,6 +1345,7 @@
 %%DATADIR%%/utilities/templatetags/buttons.py
 %%DATADIR%%/utilities/templatetags/form_helpers.py
 %%DATADIR%%/utilities/templatetags/helpers.py
+%%DATADIR%%/utilities/templatetags/mptt.py
 %%DATADIR%%/utilities/templatetags/navigation.py
 %%DATADIR%%/utilities/templatetags/perms.py
 %%DATADIR%%/utilities/templatetags/tabs.py
@@ -1362,6 +1363,7 @@
 %%DATADIR%%/utilities/tests/test_forms.py
 %%DATADIR%%/utilities/tests/test_managers.py
 %%DATADIR%%/utilities/tests/test_ordering.py
+%%DATADIR%%/utilities/tests/test_request.py
 %%DATADIR%%/utilities/tests/test_utils.py
 %%DATADIR%%/utilities/tracking.py
 %%DATADIR%%/utilities/urls.py

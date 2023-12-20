@@ -86,6 +86,7 @@
     SUBDIR += ipcheck
     SUBDIR += kadnode
     SUBDIR += kf5-kdnssd
+    SUBDIR += kf6-kdnssd
     SUBDIR += knock
     SUBDIR += knot-resolver
     SUBDIR += knot3
@@ -105,6 +106,7 @@
     SUBDIR += mDNSResponder_nss
     SUBDIR += maradns
     SUBDIR += mdnsd
+    SUBDIR += mosdns
     SUBDIR += namesilo_ddns
     SUBDIR += nextdns
     SUBDIR += noip
@@ -199,6 +201,7 @@
     SUBDIR += py-pywdns
     SUBDIR += py-tld
     SUBDIR += py-tldextract
+    SUBDIR += q-dns
     SUBDIR += qmdnsengine
     SUBDIR += radns
     SUBDIR += rbldnsd
@@ -239,6 +242,7 @@
     SUBDIR += wrapsrv
     SUBDIR += yadifa
     SUBDIR += yandex-ddns
+    SUBDIR += zdns
     SUBDIR += zkt
     SUBDIR += zonenotify
 
