@@ -86,7 +86,6 @@ pipeline {
                     devel/valgrind \
                     editors/nano \
                     editors/vim \
-                    emulators/open-vm-tools \
                     emulators/qemu@tools \
                     ftp/cap-ftpd \
                     graphics/py-pillow \
