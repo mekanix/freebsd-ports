@@ -1,8 +1,12 @@
 PORTNAME=	salt
 PORTVERSION=	3006.5
+PORTREVISION=	1
 CATEGORIES=	sysutils python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+
+PATCH_SITES=	https://patch-diff.githubusercontent.com/raw/saltstack/salt/pull/
+PATCHFILES+=	65738.diff:-p1
 
 MAINTAINER=	krion@FreeBSD.org
 COMMENT=	Distributed remote execution and configuration management system
