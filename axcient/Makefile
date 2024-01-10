@@ -24,6 +24,8 @@
     SUBDIR += py-axcient-helpers
     SUBDIR += py-drive-exporter
     SUBDIR += py-malloc-exporter
+    SUBDIR += rsync-proxy
+    SUBDIR += rsync-proxy-dev
     SUBDIR += rsync-proxy-stg
     SUBDIR += smart-recovery
     SUBDIR += smart-recovery-dev
@@ -42,6 +44,5 @@
     SUBDIR += vt2-dev    
     SUBDIR += vt2-stg
     SUBDIR += ztop-exporter
-    SUBDIR += rsync-proxy-dev
 
 .include <bsd.port.subdir.mk>

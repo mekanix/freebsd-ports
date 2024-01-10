@@ -1,0 +1,3 @@
+bin/rsync-proxy
+@sample %%ETCDIR%%/rsync-proxy.yml.sample
+etc/rc.d/rsync_proxy
