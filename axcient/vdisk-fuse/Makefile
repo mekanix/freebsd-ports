@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	vdisk-fuse
-DISTVERSION=	1.1.2
+DISTVERSION=	1.1.3
 PORTREVISION?=	0
 CATEGORIES=	axcient sysutils
 MASTER_SITES=	GH
@@ -12,6 +12,7 @@ COMMENT=	Vdisk-fuse is utility to wrap blockdevice to disk images format.
 USES=		axcient fuse cmake pkgconfig
 GH_PROJECT=	vdisk-fuse
 GH_TAGNAME?=	vdisk_fuse-${DISTVERSION}
+GH_COMMIT_FILE=	.gitcommit
 
 CMAKE_ARGS+=	-DCMAKE_VERBOSE_MAKEFILE=ON
 PLIST_FILES=    bin/vdisk-fuse \
