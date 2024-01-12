@@ -164,6 +164,9 @@ pipeline {
                     textproc/ripgrep \
                     www/py-aiohttp \
                     '
+                PORTS13 = ' \
+                    devel/ncurses \
+                    '
                 PORTS14 = ' \
                     java/openjdk8 \
                     ports-mgmt/poudriere \
@@ -217,7 +220,7 @@ pipeline {
                 sh 'cd net-mgmt/py-zfs-exporter; make fetch'
 
                 sh 'sudo poudriere bulk -j 13_1-AXCIENT1_amd64 -p "${PNAME}" \
-                    ${PORTSALL} '
+                    ${PORTSALL} ${PORTS13}'
                 sh 'sudo poudriere bulk -j 13_1-AXCIENT1_amd64 -p "${PNAME}" \
                     ${PORTSMINOR} '
                 sh 'sudo poudriere bulk -j 14_0-AXCIENT1_amd64 -p "${PNAME}" \
