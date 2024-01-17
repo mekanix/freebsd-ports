@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# PROVIDE: cap_ftpd
+# REQUIRE: ???
+# BEFORE:  ???
+
+. /etc/rc.subr
+
+name=cap_ftpd
+rcvar=cap_ftpd_enable
+command="/usr/local/sbin/cap-ftpd"
+load_rc_config $name
+: ${cap_ftpd_enable:="NO"}
+: ${cap_ftpd_pidfile:="/var/run/cap-ftpd.pid"}
+: ${cap_ftpd_config:="%%ETCDIR%%/cap-ftpd.toml"}
+pidfile="${cap_ftpd_pidfile}"
+command_args="-p ${pidfile} -f ${cap_ftpd_config}"
+required_files="${cap_ftpd_config}"
+
+run_rc_command "$1"
