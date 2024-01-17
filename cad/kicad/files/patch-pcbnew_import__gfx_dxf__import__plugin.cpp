@@ -1,5 +1,5 @@
---- pcbnew/import_gfx/dxf_import_plugin.cpp.orig	2023-01-25 22:16:35.742131000 +0100
-+++ pcbnew/import_gfx/dxf_import_plugin.cpp	2023-01-25 23:02:52.939723000 +0100
+--- pcbnew/import_gfx/dxf_import_plugin.cpp.orig	2023-11-05 13:16:47 UTC
++++ pcbnew/import_gfx/dxf_import_plugin.cpp
 @@ -28,6 +28,9 @@
  // like void DXF_IMPORT_PLUGIN::addLine( const DL_LineData& data ) when a line is read.
  // this function just add the BOARD entity from dxf parameters (start and end point ...)
@@ -10,7 +10,7 @@
  
  #include "dxf_import_plugin.h"
  #include <wx/arrstr.h>
-@@ -580,7 +583,7 @@
+@@ -587,7 +590,7 @@ void DXF_IMPORT_PLUGIN::addEllipse( const DL_EllipseDa
      // For now, we assume ellipses in the XY plane.
  
      VECTOR2D center( mapX( centerCoords.x ), mapY( centerCoords.y ) );
@@ -19,7 +19,14 @@
  
      // DXF elliptical arcs store their angles in radians (unlike circular arcs which use degrees)
      // The arcs wind CCW as in KiCad.  The end angle must be greater than the start angle, and if
-@@ -598,7 +601,7 @@
+@@ -602,12 +605,12 @@ void DXF_IMPORT_PLUGIN::addEllipse( const DL_EllipseDa
+         endAngle += ANGLE_360;
+ 
+     // Angles are relative to major axis
+-    startAngle -= EDA_ANGLE( major );
+-    endAngle -= EDA_ANGLE( major );
++    startAngle -= EDA_ANGLE( vmajor );
++    endAngle -= EDA_ANGLE( vmajor );
  
      if( aData.ratio == 1.0 )
      {
@@ -28,8 +35,8 @@
  
          if( startAngle == endAngle )
          {
-@@ -616,7 +619,7 @@
-     }
+@@ -627,7 +630,7 @@ void DXF_IMPORT_PLUGIN::addEllipse( const DL_EllipseDa
+     // TODO: testcases for negative extrusion vector; handle it here
  
      std::vector<BEZIER<double>> splines;
 -    ELLIPSE<double> ellipse( center, major, aData.ratio, startAngle, endAngle );
@@ -37,7 +44,7 @@
  
      TransformEllipseToBeziers( ellipse, splines );
  
-@@ -630,8 +633,8 @@
+@@ -641,8 +644,8 @@ void DXF_IMPORT_PLUGIN::addEllipse( const DL_EllipseDa
          bufferToUse->AddSpline( b.Start, b.C1, b.C2, b.End, lineWidth );
  
      // Naive bounding
