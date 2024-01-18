@@ -97,6 +97,7 @@ pipeline {
                     misc/mc \
                     net/bmon \
                     net/cloud-init \
+                    net/glusterfs \
                     net/mtr-nox11 \
                     net-mgmt/grok_exporter \
                     net-mgmt/iftop \
