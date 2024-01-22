@@ -1,8 +1,11 @@
 PORTNAME=	zrepl
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.6.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	sysutils
+
+PATCH_SITES=    https://github.com/zrepl/zrepl/pull/
+PATCHFILES+=    761.patch:-p1
 
 MAINTAINER=	driesm@FreeBSD.org
 COMMENT=	ZFS dataset replication tool
