@@ -1,9 +1,9 @@
 # $FreeBSD$
 
-PORTVERSION=	2.15.0.rc1
+PORTVERSION=	2.15.1.rc1
 PKGNAMESUFFIX=	2-stg
 
-GH_TAGNAME=	2.15.0-rc1
+GH_TAGNAME=	2.15.1-rc1
 
 GH_TUPLE=       alecthomas:kingpin:v2.2.6:alecthomas_kingpin/vendor/gopkg.in/alecthomas/kingpin.v2 \
 		alecthomas:template:fb15b899a751:alecthomas_template/vendor/github.com/alecthomas/template \
