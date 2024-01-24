@@ -2,7 +2,7 @@
 
 PORTNAME=	cloudserver
 PKGNAMESUFFIX?=  2
-PORTVERSION?=	2.15.0
+PORTVERSION?=	2.15.1
 PORTREVISION?=	0
 CATEGORIES=	axcient
 
@@ -17,7 +17,7 @@ CONFLICTS_INSTALL?=	cloudserver \
 			cloudserver2-dev \
 			cloudserver2-stg
 
-GH_TAGNAME?=	2.15.0
+GH_TAGNAME?=	2.15.1
 
 GH_TUPLE=       alecthomas:kingpin:v2.2.6:alecthomas_kingpin/vendor/gopkg.in/alecthomas/kingpin.v2 \
 		alecthomas:template:fb15b899a751:alecthomas_template/vendor/github.com/alecthomas/template \
