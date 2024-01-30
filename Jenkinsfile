@@ -103,6 +103,7 @@ pipeline {
                     net-mgmt/iftop \
                     net-mgmt/lldpd \
                     net-mgmt/nfs-exporter \
+                    net-mgmt/unbound_exporter \
                     net-mgmt/pktstat \
                     net-mgmt/py-network-interface-exporter \
                     net-mgmt/py-gstat_exporter \
