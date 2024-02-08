@@ -76,6 +76,7 @@ pipeline {
                     databases/pgbouncer \
                     databases/py-prometheus-pgbouncer-exporter \
                     databases/redis \
+                    dns/dnsmasq \
                     devel/delve \
                     devel/gdb \
                     devel/git \
