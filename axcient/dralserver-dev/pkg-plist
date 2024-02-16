@@ -1,4 +1,5 @@
 bin/dralserver
+bin/dralserver-cli
 bin/dralserver-cleanup-clones
 bin/dralserver-cleanup-ftps-exports
 @sample %%ETCDIR%%/dralserver.yml.sample
