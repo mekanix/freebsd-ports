@@ -10,6 +10,7 @@ DATECODE!=	date -u "+%Y%m%d%H"
 COMMENT=	Hourly build of add_mbr's develop branch
 
 GH_TAGNAME=	develop
+GH_COMMIT_FILE=	.gitcommit
 
 CONFLICTS_INSTALL=	add_mbr \
 			add_mbr-stg
