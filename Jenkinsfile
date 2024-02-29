@@ -172,7 +172,7 @@ pipeline {
                     devel/ncurses \
                     '
                 PORTS14 = ' \
-                    java/openjdk8 \
+                    java/openjdk11 \
                     ports-mgmt/poudriere \
                     www/nginx \
                     '
