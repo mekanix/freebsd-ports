@@ -50,9 +50,19 @@ case "$weekly_szs_audit_enable" in
 				orphaned_data=$(( $orphaned_data + `/sbin/zfs list -Hpo used $ds || echo 0`))
 				rc=3
 			elif [ "$pool" != "$owner" ]; then
-				orphaned_data=$(( $orphaned_data + `/sbin/zfs list -Hpo used $ds || echo 0`))
-				echo "Misplaced dataset $ds.  Should be on $owner"
-				rc=3
+				this_orphaned_data=`/sbin/zfs list -Hpo used $ds 2>/dev/null`
+				if [ $? -ne 0 ]; then
+					# This dataset disappeared.  Probably
+					# it was in the process of being
+					# migrated when the big "zfs list"
+					# command ran, and before the
+					# "szs-dataset-info" could run.
+					# This is normal.
+				else
+					orphaned_data=$(( $orphaned_data + $this_orphaned_data ))
+					echo "Misplaced dataset $ds.  Should be on $owner"
+					rc=3
+				fi
 			fi
 		done
 	done
