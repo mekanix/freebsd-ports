@@ -1,5 +1,5 @@
-TIMESTAMP = 1700977764
-SHA256 (go/sysutils_terraform/terraform-v1.6.4/v1.6.4.mod) = ad5a268028a0feb12162319d0b6f92b215e4b25957fc2e67289a2058c2e01113
-SIZE (go/sysutils_terraform/terraform-v1.6.4/v1.6.4.mod) = 14042
-SHA256 (go/sysutils_terraform/terraform-v1.6.4/v1.6.4.zip) = 47001dd44827b1345410690f5c340da5c17fc3274a6fde19a3497790b7b08365
-SIZE (go/sysutils_terraform/terraform-v1.6.4/v1.6.4.zip) = 7578148
+TIMESTAMP = 1708793881
+SHA256 (go/sysutils_terraform/terraform-v1.7.4/v1.7.4.mod) = 95b101e424b7fa2d52cecc37083127dfb07b96d26c43742df6cd8f585fdfdae0
+SIZE (go/sysutils_terraform/terraform-v1.7.4/v1.7.4.mod) = 14089
+SHA256 (go/sysutils_terraform/terraform-v1.7.4/v1.7.4.zip) = 92c9befc8ae456f659060ea713da81e975064f945ea2f85232badf59e547a27a
+SIZE (go/sysutils_terraform/terraform-v1.7.4/v1.7.4.zip) = 8268318

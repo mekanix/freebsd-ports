@@ -163,7 +163,6 @@
     SUBDIR += libssm
     SUBDIR += libsvm
     SUBDIR += libsvm-python
-    SUBDIR += libtensorflow1
     SUBDIR += libvdwxc
     SUBDIR += libxc
     SUBDIR += liggghts
@@ -225,6 +224,7 @@
     SUBDIR += opensim-core
     SUBDIR += opensph
     SUBDIR += opsin
+    SUBDIR += optench
     SUBDIR += orthanc
     SUBDIR += orthanc-dicomweb
     SUBDIR += orthanc-mysql

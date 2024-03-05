@@ -46,7 +46,8 @@ CMAKE_OFF+=	QT_FEATURE_qtwebengine_build
 SYS_LIBS=	freetype
 .else
 BUILD_DEPENDS+=	${LOCALBASE}/include/linux/videodev2.h:multimedia/v4l_compat
-LIB_DEPENDS+=	libavcodec.so:multimedia/ffmpeg \
+LIB_DEPENDS+=	libabsl_base.so:devel/abseil \
+		libavcodec.so:multimedia/ffmpeg \
 		libdbus-1.so:devel/dbus \
 		libdrm.so:graphics/libdrm \
 		libevent.so:devel/libevent \

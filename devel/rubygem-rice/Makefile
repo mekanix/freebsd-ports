@@ -1,5 +1,5 @@
 PORTNAME=	rice
-PORTVERSION=	4.1.0
+PORTVERSION=	4.2.1
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
@@ -9,8 +9,6 @@ WWW=		https://github.com/jasonroelofs/rice
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING
-
-BROKEN_FreeBSD_12_powerpc64=	fails to configure: could not find ruby.h
 
 USES=		gem
 

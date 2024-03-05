@@ -55,6 +55,7 @@
     SUBDIR += bfbtester
     SUBDIR += binwalk
     SUBDIR += bitwarden-cli
+    SUBDIR += blst
     SUBDIR += boringssl
     SUBDIR += botan2
     SUBDIR += botan3
@@ -67,12 +68,14 @@
     SUBDIR += caesarcipher
     SUBDIR += caldera
     SUBDIR += caldera-ot
+    SUBDIR += caldera4
     SUBDIR += calife
     SUBDIR += cardpeek
     SUBDIR += cargo-audit
     SUBDIR += ccrypt
     SUBDIR += ccsrch
     SUBDIR += certmgr
+    SUBDIR += certspotter
     SUBDIR += cfs
     SUBDIR += cfssl
     SUBDIR += cfv
@@ -147,17 +150,13 @@
     SUBDIR += enchive
     SUBDIR += eschalot
     SUBDIR += expiretable
-    SUBDIR += f-prot
-    SUBDIR += fakebo
     SUBDIR += fakeident
     SUBDIR += fakeroot
     SUBDIR += farmhash
-    SUBDIR += fcheck
     SUBDIR += fcrackzip
     SUBDIR += ffuf
     SUBDIR += fiked
     SUBDIR += fizz
-    SUBDIR += fl0p
     SUBDIR += flawfinder
     SUBDIR += fprint_demo
     SUBDIR += fprintd
@@ -283,6 +282,7 @@
     SUBDIR += lego
     SUBDIR += libargon2
     SUBDIR += libassuan
+    SUBDIR += libcaes
     SUBDIR += libcryptui
     SUBDIR += libdecaf
     SUBDIR += libecc
@@ -328,7 +328,6 @@
     SUBDIR += libwhisker
     SUBDIR += libxcrypt
     SUBDIR += libyubikey
-    SUBDIR += libzrtpcppcore
     SUBDIR += lime
     SUBDIR += linux-bitwarden-cli
     SUBDIR += linux-c7-ca-certificates
@@ -497,6 +496,7 @@
     SUBDIR += p5-Bytes-Random-Secure
     SUBDIR += p5-Bytes-Random-Secure-Tiny
     SUBDIR += p5-CACertOrg-CA
+    SUBDIR += p5-CPAN-Audit
     SUBDIR += p5-CSP
     SUBDIR += p5-Cisco-Hash
     SUBDIR += p5-Crypt-Anubis
@@ -753,7 +753,6 @@
     SUBDIR += paperkey
     SUBDIR += passh
     SUBDIR += passivedns
-    SUBDIR += pbc
     SUBDIR += pcsc-tools
     SUBDIR += pdfcrack
     SUBDIR += pear-Auth
@@ -801,8 +800,6 @@
     SUBDIR += pgpdump
     SUBDIR += pgpgpg
     SUBDIR += pgpin
-    SUBDIR += php80-filter
-    SUBDIR += php80-sodium
     SUBDIR += php81-filter
     SUBDIR += php81-sodium
     SUBDIR += php82-filter
@@ -836,7 +833,6 @@
     SUBDIR += plasma6-ksshaskpass
     SUBDIR += plasma6-kwallet-pam
     SUBDIR += please
-    SUBDIR += poly1305aes
     SUBDIR += portacl-rc
     SUBDIR += proftpd-mod_clamav
     SUBDIR += proxycheck
@@ -987,7 +983,6 @@
     SUBDIR += py-pyaes
     SUBDIR += py-pyaff4
     SUBDIR += py-pyaxo
-    SUBDIR += py-pyblake2
     SUBDIR += py-pyclamd
     SUBDIR += py-pycryptodome
     SUBDIR += py-pycryptodome-test-vectors
@@ -1004,7 +999,6 @@
     SUBDIR += py-pysaml24
     SUBDIR += py-pysaml26
     SUBDIR += py-pyscard
-    SUBDIR += py-pysha3
     SUBDIR += py-pysodium
     SUBDIR += py-pyspnego
     SUBDIR += py-python-axolotl
@@ -1034,7 +1028,6 @@
     SUBDIR += py-secure
     SUBDIR += py-securesystemslib
     SUBDIR += py-service-identity
-    SUBDIR += py-service_identity
     SUBDIR += py-signedjson
     SUBDIR += py-social-auth-core
     SUBDIR += py-spake2
@@ -1074,6 +1067,7 @@
     SUBDIR += qtkeychain
     SUBDIR += quantis-kmod
     SUBDIR += racoon2
+    SUBDIR += rage-encryption
     SUBDIR += ratproxy
     SUBDIR += rats
     SUBDIR += rcracki_mt
@@ -1086,6 +1080,7 @@
     SUBDIR += rndpassw
     SUBDIR += rnp
     SUBDIR += rotate
+    SUBDIR += rpm-sequoia
     SUBDIR += rubygem-acme-client
     SUBDIR += rubygem-aes_key_wrap
     SUBDIR += rubygem-airbrussh
@@ -1290,7 +1285,7 @@
     SUBDIR += sslscan
     SUBDIR += sslsplit
     SUBDIR += sssd
-    SUBDIR += sssd-devel
+    SUBDIR += sssd2
     SUBDIR += ssss
     SUBDIR += sst
     SUBDIR += starttls
@@ -1327,6 +1322,7 @@
     SUBDIR += tpm-quote-tools
     SUBDIR += tpm-tools
     SUBDIR += tpm2-abrmd
+    SUBDIR += tpm2-pkcs11
     SUBDIR += tpm2-tools
     SUBDIR += tpm2-tss
     SUBDIR += transcrypt
@@ -1350,6 +1346,7 @@
     SUBDIR += vouch-proxy
     SUBDIR += vpnc
     SUBDIR += vuls
+    SUBDIR += vulsrepo
     SUBDIR += vuxml
     SUBDIR += vxquery
     SUBDIR += wapiti
@@ -1374,6 +1371,7 @@
     SUBDIR += xmlsec1
     SUBDIR += xorsearch
     SUBDIR += xray-core
+    SUBDIR += xhash
     SUBDIR += yafic
     SUBDIR += yapet
     SUBDIR += yara

@@ -1,15 +1,18 @@
 PORTNAME=	aqualung
 PORTVERSION=	1.0
-PORTREVISION=	25
+PORTREVISION=	26
 CATEGORIES=	audio
 MASTER_SITES=	SF
 
-MAINTAINER=	portmaster@BSDforge.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Music player with rich features
 WWW=		https://aqualung.jeremyevans.net/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
+
+DEPRECATED=	Depends on legacy libraries such as GTK2 and FFmpeg 4, consider using audio/strawberry instead
+EXPIRATION_DATE=2024-02-29
 
 LIB_DEPENDS=	libFLAC.so:audio/flac \
 		libmp3lame.so:audio/lame \
@@ -31,6 +34,7 @@ LIB_DEPENDS=	libFLAC.so:audio/flac \
 USES=		compiler:c++11-lang cpe gettext gnome localbase lua:52 pkgconfig
 USE_GNOME=	gtk20 libxml2 libxslt
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 
 LDFLAGS+=	-L${LOCALBASE}/ffmpeg4/lib
 CONFIGURE_ENV+=	PKG_CONFIG_PATH="${LOCALBASE}/ffmpeg4/libdata/pkgconfig"

@@ -1,7 +1,7 @@
 PORTNAME=	wayfire
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.8.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	x11-wm wayland
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
@@ -15,13 +15,13 @@ WWW=		https://wayfire.org/
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	evdev-proto>0:devel/evdev-proto \
+BUILD_DEPENDS=	cmake:devel/cmake-core \
+		evdev-proto>0:devel/evdev-proto \
 		nlohmann-json>0:devel/nlohmann-json \
 		wf-config>=0.8.0<0.9.0:devel/wf-config \
 		${LOCALBASE}/include/xf86drmMode.h:graphics/libdrm \
 		wayland-protocols>=1.12:graphics/wayland-protocols \
-		glm>=0.9.8:math/glm \
-		wlroots>=0.16.0<0.17.0:x11-toolkits/wlroots
+		glm>=0.9.8:math/glm
 LIB_DEPENDS=	libevdev.so:devel/libevdev \
 		libinotify.so:devel/libinotify \
 		libwf-config.so:devel/wf-config \

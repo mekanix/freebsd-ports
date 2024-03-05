@@ -1,5 +1,5 @@
 PORTNAME=	c-ares
-DISTVERSION=	1.23.0
+DISTVERSION=	1.27.0
 CATEGORIES=	dns
 MASTER_SITES=	https://github.com/${PORTNAME}/${PORTNAME}/releases/download/cares-${DISTVERSION:S/./_/g}/ \
 		https://c-ares.org/download/
@@ -16,15 +16,12 @@ USE_LDCONFIG=	yes
 
 CONFLICTS=	py*-ripe.atlas.tools
 
-CMAKE_ARGS=		-DCMAKE_INSTALL_MANDIR:PATH=${MANPREFIX}/man
-
-OPTIONS_DEFINE=		TEST
+OPTIONS_DEFINE=	TEST
 
 TEST_BUILD_DEPENDS=	googletest>0:devel/googletest
 TEST_USES=		compiler:c++14-lang localbase:ldflags
-TEST_USE_CXXSTD=	c++14
-TEST_TEST_TARGET=	test
 TEST_CMAKE_BOOL=	CARES_BUILD_TESTS
+TEST_TEST_TARGET=	test
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|ares-test-live.cc||g' \

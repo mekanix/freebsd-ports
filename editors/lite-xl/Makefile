@@ -1,7 +1,6 @@
 PORTNAME=	lite-xl
-PORTVERSION=	2.1.1
+PORTVERSION=	2.1.3
 DISTVERSIONPREFIX=	v
-PORTREVISION=	1
 CATEGORIES=	editors
 
 MAINTAINER=	danfe@FreeBSD.org
@@ -15,10 +14,11 @@ LIB_DEPENDS=	libfreetype.so:print/freetype2 \
 
 USES=		desktop-file-utils lua:54 meson pkgconfig sdl
 USE_SDL=	sdl2
+MESON_ARGS=	-Duse_system_lua=true
 
 USE_GITHUB=	yes
 GH_PROJECT=	${PORTNAME}-colors:colors ${PORTNAME}-plugins:plugins
-GH_TAGNAME=	b3a9cdd:colors b1eb39c:plugins
+GH_TAGNAME=	ad3b053:colors 66a42c3:plugins
 
 OPTIONS_DEFINE=	DOCS
 

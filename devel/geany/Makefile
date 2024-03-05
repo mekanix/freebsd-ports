@@ -1,5 +1,6 @@
 PORTNAME=	geany
 PORTVERSION=	2.0
+PORTREVISION=	2
 CATEGORIES=	devel editors
 MASTER_SITES=	https://download.geany.org/ \
 		SF
@@ -21,6 +22,7 @@ USE_LDCONFIG=	yes
 
 SHEBANG_FILES=	scripts/gen-api-gtkdoc.py
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 INSTALL_TARGET=	install-strip
 
 OPTIONS_DEFINE=		DOCS NLS THEMES VTE

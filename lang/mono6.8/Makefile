@@ -1,6 +1,6 @@
 PORTNAME=	mono
 PORTVERSION=	6.8.0.123
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	lang
 MASTER_SITES=	https://download.mono-project.com/sources/mono/
 PKGNAMESUFFIX=	6.8
@@ -13,7 +13,7 @@ WWW=		https://www.mono-project.com/
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-NOT_FOR_ARCHS=	riscv64 riscv64sf sparc64
+NOT_FOR_ARCHS=	riscv64 riscv64sf
 
 BUILD_DEPENDS=	p5-XML-Parser>=0:textproc/p5-XML-Parser \
 		bash:shells/bash \
@@ -31,6 +31,7 @@ USES=	autoreconf:2.69 bison compiler:c11 cpe gmake iconv libtool localbase \
 USE_PERL5=	build
 
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 USE_LDCONFIG=	yes
 
 SHEBANG_FILES=	mono/mini/genmdesc.py \

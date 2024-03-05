@@ -53,7 +53,6 @@
     SUBDIR += bamp-lv2
     SUBDIR += bangr-lv2
     SUBDIR += baresip
-    SUBDIR += baudline
     SUBDIR += bcg729
     SUBDIR += bchoppr-lv2
     SUBDIR += beep
@@ -216,7 +215,6 @@
     SUBDIR += gnome-metronome
     SUBDIR += gnome-music
     SUBDIR += gnome-podcasts
-    SUBDIR += gnormalize
     SUBDIR += gnuitar
     SUBDIR += gnupod
     SUBDIR += gnuspeechsa
@@ -318,6 +316,7 @@
     SUBDIR += juke
     SUBDIR += julius
     SUBDIR += kaldi
+    SUBDIR += kaldi-vosk
     SUBDIR += kapitonov-plugins-pack-lv2
     SUBDIR += kid3
     SUBDIR += klystrack
@@ -397,6 +396,7 @@
     SUBDIR += libsonic
     SUBDIR += libsoxr
     SUBDIR += libspecbleach
+    SUBDIR += libvgm
     SUBDIR += libvorbis
     SUBDIR += libxmp
     SUBDIR += lilv
@@ -476,17 +476,13 @@
     SUBDIR += mp3blaster
     SUBDIR += mp3burn
     SUBDIR += mp3check
-    SUBDIR += mp3ck
     SUBDIR += mp3gain
     SUBDIR += mp3guessenc
-    SUBDIR += mp3info
     SUBDIR += mp3lint
     SUBDIR += mp3mover
     SUBDIR += mp3plot
-    SUBDIR += mp3rename
     SUBDIR += mp3riot
     SUBDIR += mp3splt
-    SUBDIR += mp3splt-gtk
     SUBDIR += mp3stat
     SUBDIR += mp3unicode
     SUBDIR += mp3val
@@ -500,11 +496,13 @@
     SUBDIR += mps
     SUBDIR += mpz
     SUBDIR += mumble
+    SUBDIR += mumble-server
     SUBDIR += murmur
     SUBDIR += murmur-cli
     SUBDIR += muse-sequencer
     SUBDIR += musepack
     SUBDIR += musescore
+    SUBDIR += musescore3
     SUBDIR += musiccontrol
     SUBDIR += musicpc
     SUBDIR += musicpd
@@ -604,11 +602,9 @@
     SUBDIR += plasma6-ocean-sound-theme
     SUBDIR += plasma6-oxygen-sounds
     SUBDIR += plasma6-plasma-pa
-    SUBDIR += play
     SUBDIR += playgsf
     SUBDIR += playmidi
     SUBDIR += playumidi
-    SUBDIR += pm3umpdl
     SUBDIR += pms
     SUBDIR += pms-devel
     SUBDIR += pocketsphinx
@@ -670,6 +666,7 @@
     SUBDIR += py-spotipy
     SUBDIR += py-tagpy
     SUBDIR += py-torchaudio
+    SUBDIR += py-vosk
     SUBDIR += py-wavio
     SUBDIR += py-webrtcvad
     SUBDIR += py-zita-audiotools
@@ -762,9 +759,6 @@
     SUBDIR += speex
     SUBDIR += speexdsp
     SUBDIR += spek
-    SUBDIR += sphinx
-    SUBDIR += sphinx3
-    SUBDIR += sphinxbase
     SUBDIR += spiralloops
     SUBDIR += spiralsynth
     SUBDIR += spiralsynthmodular
@@ -778,7 +772,6 @@
     SUBDIR += ssr-lv2
     SUBDIR += stegosaurus-lv2
     SUBDIR += stk
-    SUBDIR += stmp
     SUBDIR += stone-phaser-lv2
     SUBDIR += strawberry
     SUBDIR += streamripper
@@ -789,13 +782,11 @@
     SUBDIR += supercollider
     SUBDIR += surge-synthesizer-lv2
     SUBDIR += surge-synthesizer-xt-lv2
-    SUBDIR += sweep
     SUBDIR += swh-lv2
     SUBDIR += swhplugins
     SUBDIR += synthpod-lv2
     SUBDIR += synthv1-lv2
     SUBDIR += taglib
-    SUBDIR += taglib-extras
     SUBDIR += taglookup
     SUBDIR += tagutil
     SUBDIR += tamgamp-lv2
@@ -826,7 +817,6 @@
     SUBDIR += tse3
     SUBDIR += tta
     SUBDIR += tuner
-    SUBDIR += tuneradio
     SUBDIR += twolame
     SUBDIR += uade
     SUBDIR += umix
@@ -848,6 +838,7 @@
     SUBDIR += volumeicon
     SUBDIR += vorbis-tools
     SUBDIR += vorbisgain
+    SUBDIR += vosk-api
     SUBDIR += vsound
     SUBDIR += vst3sdk
     SUBDIR += waon
@@ -880,7 +871,6 @@
     SUBDIR += xmixer
     SUBDIR += xmmix
     SUBDIR += xmp
-    SUBDIR += xmradio
     SUBDIR += xoscope
     SUBDIR += xsynth-dssi
     SUBDIR += xuidesigner

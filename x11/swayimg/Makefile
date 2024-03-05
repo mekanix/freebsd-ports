@@ -1,7 +1,7 @@
 PORTNAME=	swayimg
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.12
-PORTREVISION=	2
+DISTVERSION=	2.1
+PORTREVISION=	1
 CATEGORIES=	x11 wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -13,6 +13,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	wayland-protocols>0:graphics/wayland-protocols
 LIB_DEPENDS=	libjson-c.so:devel/json-c \
+		libinotify.so:devel/libinotify \
 		libwayland-client.so:graphics/wayland \
 		libfreetype.so:print/freetype2 \
 		libfontconfig.so:x11-fonts/fontconfig \
@@ -23,10 +24,11 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	artemsen
 MESON_ARGS=	-Dversion="${DISTVERSIONFULL}"
 PLIST_FILES=	bin/${PORTNAME} \
-		man/man1/${PORTNAME}.1.gz \
-		man/man5/${PORTNAME}rc.5.gz \
+		share/man/man1/${PORTNAME}.1.gz \
+		share/man/man5/${PORTNAME}rc.5.gz \
 		share/applications/${PORTNAME}.desktop \
 		share/icons/hicolor/64x64/apps/${PORTNAME}.png \
+		${DATADIR}/swayimgrc \
 		${NULL}
 
 # XXX Drop after FreeBSD 13.4 EOL around 2026-01-31
@@ -35,9 +37,12 @@ PLIST_FILES=	bin/${PORTNAME} \
 LIB_DEPENDS+=	libepoll-shim.so:devel/libepoll-shim
 .endif
 
-OPTIONS_DEFINE=	BASH GIF HEIF JPEG JXL LIBEXIF LIBRSVG2 OPENEXR PNG TIFF WEBP ZSH
-OPTIONS_DEFAULT=BASH GIF HEIF JPEG JXL LIBEXIF LIBRSVG2 OPENEXR PNG TIFF WEBP ZSH
+OPTIONS_DEFINE=	AVIF BASH GIF HEIF JPEG JXL LIBEXIF LIBRSVG2 OPENEXR PNG TIFF WEBP ZSH
+OPTIONS_DEFAULT=AVIF BASH GIF HEIF JPEG JXL LIBEXIF LIBRSVG2 OPENEXR PNG TIFF WEBP ZSH
 OPTIONS_EXCLUDE=${LIBRSVG2_DEFAULT:Mlegacy:C/.+/LIBRSVG2/}
+
+AVIF_LIB_DEPENDS=	libavif.so:graphics/libavif
+AVIF_MESON_ENABLED=	avif
 
 BASH_BUILD_DEPENDS=	bash-completion>0:shells/bash-completion
 BASH_MESON_ENABLED=	bash
@@ -81,6 +86,7 @@ ZSH_PLIST_FILES=	share/zsh/site-functions/_${PORTNAME}
 post-patch:
 # Respect PREFIX for system-wide config
 	@${REINPLACE_CMD} 's,/etc,${PREFIX}&,' \
+		${WRKSRC}/extra/${PORTNAME}rc \
 		${WRKSRC}/extra/${PORTNAME}rc.5 \
 		${WRKSRC}/src/config.c
 

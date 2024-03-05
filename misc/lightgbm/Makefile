@@ -1,6 +1,6 @@
 PORTNAME=	lightgbm
 DISTVERSIONPREFIX=	v
-DISTVERSION=	4.1.0
+DISTVERSION=	4.2.0
 CATEGORIES=	misc # machine-learning
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -25,6 +25,10 @@ CMAKE_TESTING_ON=	BUILD_CPP_TEST
 CMAKE_TESTING_TARGET=
 
 CXXFLAGS+=	-I${LOCALBASE}/include/eigen3
+
+.if !exists(/usr/include/omp.h)
+CMAKE_ARGS+=	-DUSE_OPENMP:BOOL=OFF
+.endif
 
 post-test:
 	@${WRKSRC}/testlightgbm

@@ -1,6 +1,7 @@
 PORTNAME=	adguardhome
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.107.42
+DISTVERSION=	0.107.43
+PORTREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -36,6 +37,8 @@ CPE_VENDOR=	adguard
 .if (${DEV_UPDATE_MODE} == "yes")
 BUILD_DEPENDS=	npm:www/npm \
 		yarn:www/yarn
+MAKE_ENV+=	NODE_OPTIONS=--openssl-legacy-provider # workaround suggested in https://github.com/AdguardTeam/AdGuardHome/issues/6585
+
 do-build:
 	@cd ${WRKSRC} && \
 		${SETENV} ${MAKE_ENV} ${MAKE_CMD} js-deps js-build && \

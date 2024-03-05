@@ -1,6 +1,6 @@
 PORTNAME=	xfuse
 DISTVERSION=	0.1.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	CRATESIO
 MASTER_SITE_SUBDIR=	xfs-fuse/${DISTVERSION}
@@ -18,10 +18,10 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.md
 USES=		cargo fuse:3
 
 PLIST_FILES=	bin/xfs-fuse \
-		man/man1/xfs-fuse.1.gz
+		share/man/man1/xfs-fuse.1.gz
 
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/xfs-fuse
-	${INSTALL_MAN} ${WRKSRC}/doc/xfs-fuse.1 ${STAGEDIR}${MAN1PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/xfs-fuse.1 ${STAGEDIR}${PREFIX}/share/man/man1
 
 .include <bsd.port.mk>

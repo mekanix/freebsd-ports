@@ -1,5 +1,6 @@
 PORTNAME=	deforaos-integration
 PORTVERSION=	0.1.2
+PORTREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	https://ftp.defora.org/pub/DeforaOS/Apps/Desktop/src/Integration/
 DISTNAME=	Integration-${PORTVERSION}
@@ -33,8 +34,6 @@ USES=		gnome pkgconfig xorg desktop-file-utils
 USE_GNOME=	gtk30 cairo gdkpixbuf2
 USE_XORG=	x11
 USE_LDCONFIG=	yes
-#MAKE_ARGS+=	PREFIX=${PREFIX}
-#MAKE_ENV+=	MANDIR=${STAGEDIR}${MANPREFIX}/man
 
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/Phone/modem/*.so \

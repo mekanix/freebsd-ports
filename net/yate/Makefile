@@ -1,6 +1,6 @@
 PORTNAME=	yate
 PORTVERSION=	6.4.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	http://yate.null.ro/tarballs/yate6/
 DISTNAME=	${PORTNAME}-${PORTVERSION}-1
@@ -11,7 +11,7 @@ WWW=		http://yate.null.ro
 
 LICENSE=	GPLv2
 
-ONLY_FOR_ARCHS=		amd64 armv6 armv7 i386 powerpc powerpc64 powerpc64le sparc64
+ONLY_FOR_ARCHS=		amd64 armv6 armv7 i386 powerpc powerpc64 powerpc64le
 
 LIB_DEPENDS=	libasound.so:audio/alsa-lib \
 		libspeex.so:audio/speex \
@@ -28,6 +28,7 @@ SHEBANG_FILES=	share/scripts/banbrutes.php \
 		share/scripts/voicemail.php
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 
 CONFIGURE_ARGS=	--without-fdsize \
 		--without-libqt4 \

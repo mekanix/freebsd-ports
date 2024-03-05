@@ -7,11 +7,11 @@ bin/etags
 libexec/emacs/%%EMACS_VER%%/%%GNU_HOST%%/hexl
 libexec/emacs/%%EMACS_VER%%/%%GNU_HOST%%/movemail
 libexec/emacs/%%EMACS_VER%%/%%GNU_HOST%%/rcs2log
-man/man1/ctags.1.gz
-man/man1/ebrowse.1.gz
-man/man1/emacs.1.gz
-man/man1/emacsclient.1.gz
-man/man1/etags.1.gz
+share/man/man1/ctags.1.gz
+share/man/man1/ebrowse.1.gz
+share/man/man1/emacs.1.gz
+share/man/man1/emacsclient.1.gz
+share/man/man1/etags.1.gz
 share/applications/emacs.desktop
 share/applications/emacsclient.desktop
 share/applications/emacs-mail.desktop
@@ -225,6 +225,10 @@ share/applications/emacsclient-mail.desktop
 %%DATADIR%%/%%EMACS_VER%%/etc/images/checked.xpm
 %%DATADIR%%/%%EMACS_VER%%/etc/images/close.pbm
 %%DATADIR%%/%%EMACS_VER%%/etc/images/close.xpm
+%%DATADIR%%/%%EMACS_VER%%/etc/images/commit.pbm
+%%DATADIR%%/%%EMACS_VER%%/etc/images/commit.xpm
+%%DATADIR%%/%%EMACS_VER%%/etc/images/conceal.pbm
+%%DATADIR%%/%%EMACS_VER%%/etc/images/conceal.svg
 %%DATADIR%%/%%EMACS_VER%%/etc/images/connect-to-url.pbm
 %%DATADIR%%/%%EMACS_VER%%/etc/images/connect-to-url.xpm
 %%DATADIR%%/%%EMACS_VER%%/etc/images/connect.pbm
@@ -315,13 +319,15 @@ share/applications/emacsclient-mail.desktop
 %%DATADIR%%/%%EMACS_VER%%/etc/images/ezimage/unlock.xpm
 %%DATADIR%%/%%EMACS_VER%%/etc/images/fwd-arrow.pbm
 %%DATADIR%%/%%EMACS_VER%%/etc/images/fwd-arrow.xpm
+%%DATADIR%%/%%EMACS_VER%%/etc/images/gen-changelog.pbm
+%%DATADIR%%/%%EMACS_VER%%/etc/images/gen-changelog.xpm
 %%DATADIR%%/%%EMACS_VER%%/etc/images/gnus.pbm
-%%DATADIR%%/%%EMACS_VER%%/etc/images/gnus/gnus-pointer.svg
 %%DATADIR%%/%%EMACS_VER%%/etc/images/gnus/README
 %%DATADIR%%/%%EMACS_VER%%/etc/images/gnus/followup.pbm
 %%DATADIR%%/%%EMACS_VER%%/etc/images/gnus/followup.xpm
 %%DATADIR%%/%%EMACS_VER%%/etc/images/gnus/fuwo.pbm
 %%DATADIR%%/%%EMACS_VER%%/etc/images/gnus/fuwo.xpm
+%%DATADIR%%/%%EMACS_VER%%/etc/images/gnus/gnus-pointer.svg
 %%DATADIR%%/%%EMACS_VER%%/etc/images/gnus/gnus-pointer.xbm
 %%DATADIR%%/%%EMACS_VER%%/etc/images/gnus/gnus-pointer.xpm
 %%DATADIR%%/%%EMACS_VER%%/etc/images/gnus/gnus.png
@@ -468,6 +474,8 @@ share/applications/emacsclient-mail.desktop
 %%DATADIR%%/%%EMACS_VER%%/etc/images/index.xpm
 %%DATADIR%%/%%EMACS_VER%%/etc/images/info.pbm
 %%DATADIR%%/%%EMACS_VER%%/etc/images/info.xpm
+%%DATADIR%%/%%EMACS_VER%%/etc/images/ins-changelog.pbm
+%%DATADIR%%/%%EMACS_VER%%/etc/images/ins-changelog.xpm
 %%DATADIR%%/%%EMACS_VER%%/etc/images/jump-to.pbm
 %%DATADIR%%/%%EMACS_VER%%/etc/images/jump-to.xpm
 %%DATADIR%%/%%EMACS_VER%%/etc/images/last-page.pbm
@@ -477,6 +485,8 @@ share/applications/emacsclient-mail.desktop
 %%DATADIR%%/%%EMACS_VER%%/etc/images/left.svg
 %%DATADIR%%/%%EMACS_VER%%/etc/images/letter.pbm
 %%DATADIR%%/%%EMACS_VER%%/etc/images/letter.xpm
+%%DATADIR%%/%%EMACS_VER%%/etc/images/load-changelog.pbm
+%%DATADIR%%/%%EMACS_VER%%/etc/images/load-changelog.xpm
 %%DATADIR%%/%%EMACS_VER%%/etc/images/lock-broken.pbm
 %%DATADIR%%/%%EMACS_VER%%/etc/images/lock-broken.xpm
 %%DATADIR%%/%%EMACS_VER%%/etc/images/lock-ok.pbm
@@ -603,6 +613,8 @@ share/applications/emacsclient-mail.desktop
 %%DATADIR%%/%%EMACS_VER%%/etc/images/redo.xpm
 %%DATADIR%%/%%EMACS_VER%%/etc/images/refresh.pbm
 %%DATADIR%%/%%EMACS_VER%%/etc/images/refresh.xpm
+%%DATADIR%%/%%EMACS_VER%%/etc/images/reveal.pbm
+%%DATADIR%%/%%EMACS_VER%%/etc/images/reveal.svg
 %%DATADIR%%/%%EMACS_VER%%/etc/images/right-arrow.pbm
 %%DATADIR%%/%%EMACS_VER%%/etc/images/right-arrow.xpm
 %%DATADIR%%/%%EMACS_VER%%/etc/images/right.svg
@@ -796,6 +808,8 @@ share/applications/emacsclient-mail.desktop
 %%DATADIR%%/%%EMACS_VER%%/etc/images/up-node.pbm
 %%DATADIR%%/%%EMACS_VER%%/etc/images/up-node.xpm
 %%DATADIR%%/%%EMACS_VER%%/etc/images/up.svg
+%%DATADIR%%/%%EMACS_VER%%/etc/images/view-diff.pbm
+%%DATADIR%%/%%EMACS_VER%%/etc/images/view-diff.xpm
 %%DATADIR%%/%%EMACS_VER%%/etc/images/zoom-in.pbm
 %%DATADIR%%/%%EMACS_VER%%/etc/images/zoom-in.xpm
 %%DATADIR%%/%%EMACS_VER%%/etc/images/zoom-out.pbm
@@ -912,6 +926,7 @@ share/applications/emacsclient-mail.desktop
 %%DATADIR%%/%%EMACS_VER%%/etc/srecode/test.srt
 %%DATADIR%%/%%EMACS_VER%%/etc/srecode/texi.srt
 %%DATADIR%%/%%EMACS_VER%%/etc/srecode/wisent.srt
+%%DATADIR%%/%%EMACS_VER%%/etc/syncdoc-type-hierarchy.el
 %%DATADIR%%/%%EMACS_VER%%/etc/themes/adwaita-theme.el
 %%DATADIR%%/%%EMACS_VER%%/etc/themes/deeper-blue-theme.el
 %%DATADIR%%/%%EMACS_VER%%/etc/themes/dichromacy-theme.el
@@ -1615,6 +1630,8 @@ share/applications/emacsclient-mail.desktop
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/comp-run.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/comp.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/comp.elc
+%%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/compat.el.gz
+%%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/compat.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/copyright.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/copyright.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/crm.el.gz
@@ -1655,6 +1672,8 @@ share/applications/emacsclient-mail.desktop
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/elint.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/elp.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/elp.elc
+%%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/ert-font-lock.el.gz
+%%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/ert-font-lock.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/ert-x.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/ert-x.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/ert.el.gz
@@ -1767,6 +1786,8 @@ share/applications/emacsclient-mail.desktop
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/trace.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/unsafep.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/unsafep.elc
+%%DATADIR%%/%%EMACS_VER%%/lisp/visual-wrap.el.gz
+%%DATADIR%%/%%EMACS_VER%%/lisp/visual-wrap.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/vtable.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/vtable.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/warnings.el.gz
@@ -2953,6 +2974,8 @@ share/applications/emacsclient-mail.desktop
 %%DATADIR%%/%%EMACS_VER%%/lisp/net/telnet.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/net/tramp-adb.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/net/tramp-adb.elc
+%%DATADIR%%/%%EMACS_VER%%/lisp/net/tramp-androidsu.el.gz
+%%DATADIR%%/%%EMACS_VER%%/lisp/net/tramp-androidsu.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/net/tramp-archive.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/net/tramp-archive.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/net/tramp-cache.el.gz
@@ -3591,6 +3614,8 @@ share/applications/emacsclient-mail.desktop
 %%DATADIR%%/%%EMACS_VER%%/lisp/progmodes/elixir-ts-mode.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/progmodes/erts-mode.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/progmodes/erts-mode.elc
+%%DATADIR%%/%%EMACS_VER%%/lisp/progmodes/etags-regen.el.gz
+%%DATADIR%%/%%EMACS_VER%%/lisp/progmodes/etags-regen.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/progmodes/etags.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/progmodes/etags.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/progmodes/executable.el.gz

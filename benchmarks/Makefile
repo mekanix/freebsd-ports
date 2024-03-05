@@ -82,7 +82,6 @@
     SUBDIR += py-throughpy
     SUBDIR += py-zopkio
     SUBDIR += raidtest
-    SUBDIR += ramspeed
     SUBDIR += randomio
     SUBDIR += rubygem-benchmark
     SUBDIR += rubygem-benchmark-ips
@@ -104,6 +103,7 @@
     SUBDIR += sysbench
     SUBDIR += tcpblast
     SUBDIR += thrulay
+    SUBDIR += tinymembench
     SUBDIR += tsung
     SUBDIR += ttcp
     SUBDIR += typometer

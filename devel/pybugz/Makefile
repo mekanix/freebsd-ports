@@ -1,5 +1,5 @@
 PORTNAME=	pybugz
-DISTVERSION=	0.13
+DISTVERSION=	0.14
 PORTREVISION=	1
 CATEGORIES=	devel python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -17,10 +17,10 @@ USES=		python
 USE_GITHUB=	yes
 USE_PYTHON=	autoplist distutils
 
-GH_ACCOUNT=	williamh
+GH_ACCOUNT=	glebius
+GH_TAGNAME=	a583724
 
 post-patch:
-	${REINPLACE_CMD} 's,share/man,man,' ${WRKSRC}/${PYSETUP}
 	${REINPLACE_CMD} -e 's,/usr,${PREFIX},' \
 		-e 's,/etc,${PREFIX}&,' \
 		${WRKSRC}/man/pybugz.d.5

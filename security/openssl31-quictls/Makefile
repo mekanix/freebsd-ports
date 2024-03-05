@@ -1,6 +1,7 @@
 PORTNAME=	openssl
-PORTVERSION=	3.1.4
-PORTREVISION=	1
+DISTVERSIONPREFIX=	opernssl-
+DISTVERSION=	3.1.5
+DISTVERSIONSUFFIX=	-quic1
 CATEGORIES=	security devel
 PKGNAMESUFFIX=	31-quictls
 
@@ -25,7 +26,6 @@ USES=		cpe perl5
 USE_PERL5=	build
 USE_GITHUB=	yes
 GH_ACCOUNT=	${PKGNAMESUFFIX:C/.*-//}
-GH_TAGNAME=	${PORTNAME}-${PORTVERSION}-quic1
 
 TEST_TARGET=	test
 
@@ -143,21 +143,13 @@ PORTSCOUT=		limit=^3\.1\.
 IGNORE=	the OpenSSL port can not be installed over the base version
 .endif
 
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1300000 && !${PORT_OPTIONS:MCRYPTODEV}
-CONFIGURE_ARGS+=        no-devcryptoeng
-.endif
-
 OPENSSLDIR?=	${PREFIX}/openssl
 PLIST_SUB+=	OPENSSLDIR=${OPENSSLDIR:S=^${PREFIX}/==}
 
 .include "version.mk"
 
-.if ${PORT_OPTIONS:MASM}
-BROKEN_sparc64=	option ASM generates illegal instructions
-.endif
-
 post-patch:
-	${REINPLACE_CMD} -Ee 's|^MANDIR=.*$$|MANDIR=$$(INSTALLTOP)/man|' \
+	${REINPLACE_CMD} -Ee 's|^MANDIR=.*$$|MANDIR=$$(INSTALLTOP)/share/man|' \
 		-e 's|^(build\|install)_docs: .*|\1_docs: \1_man_docs|' \
 		${WRKSRC}/Configurations/unix-Makefile.tmpl
 	${REINPLACE_CMD} 's|SHLIB_VERSION=81.3|SHLIB_VERSION=${OPENSSL_SHLIBVER}|' \
@@ -184,7 +176,7 @@ post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/openssl
 
 post-install-MAN3-on:
-	( cd ${STAGEDIR}/${PREFIX} ; find man/man3 -not -type d ; \
-		find man/man7 -not -type d ) | sed 's/$$/.gz/' >> ${TMPPLIST}
+	( cd ${STAGEDIR}/${PREFIX} ; find share/man/man3 -not -type d ; \
+		find share/man/man7 -not -type d ) | sed 's/$$/.gz/' >> ${TMPPLIST}
 
 .include <bsd.port.post.mk>

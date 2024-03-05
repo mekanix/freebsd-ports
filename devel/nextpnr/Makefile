@@ -1,6 +1,6 @@
 PORTNAME=	nextpnr
 DISTVERSIONPREFIX=	${PORTNAME}-
-DISTVERSION=	0.6
+DISTVERSION=	0.7
 PORTEPOCH=	1
 CATEGORIES=	devel
 
@@ -13,7 +13,6 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 NOT_FOR_ARCHS=	i386
 NOT_FOR_ARCHS_REASON=	clang segfault
-BROKEN_FreeBSD_12_powerpc64=	runaway build
 
 BUILD_DEPENDS=	${LOCALBASE}/share/trellis/database:devel/trellis \
 		${LOCALBASE}/share/icebox:devel/icestorm
@@ -22,7 +21,7 @@ LIB_DEPENDS=	libboost_thread.so:devel/boost-libs \
 		libboost_program_options.so:devel/boost-libs \
 		${PY_BOOST}
 
-USES=		compiler:c++14-lang cmake qt:5 eigen:3 python gl
+USES=		compiler:c++17-lang cmake qt:5 eigen:3 python gl
 USE_QT=		buildtools:build core gui opengl qmake:build widgets
 USE_GL=		gl glu
 USE_GITHUB=	yes

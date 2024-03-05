@@ -109,7 +109,6 @@
     SUBDIR += font-winitzki-cyrillic
     SUBDIR += font-xfree86-type1
     SUBDIR += fontconfig
-    SUBDIR += fontmatrix
     SUBDIR += fontobene
     SUBDIR += fontpreview
     SUBDIR += fonts-indic
@@ -136,6 +135,7 @@
     SUBDIR += hanazono-fonts-ttf
     SUBDIR += hermit
     SUBDIR += iansui
+    SUBDIR += ibmfonts
     SUBDIR += inconsolata-lgc-ttf
     SUBDIR += inconsolata-ttf
     SUBDIR += intel-one-mono
@@ -243,6 +243,7 @@
     SUBDIR += py-fontfeatures
     SUBDIR += py-fontmake
     SUBDIR += py-gflanguages
+    SUBDIR += py-gfsubsets
     SUBDIR += py-glyphsLib
     SUBDIR += py-opentype-sanitizer
     SUBDIR += py-opentypespec

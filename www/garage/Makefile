@@ -1,5 +1,5 @@
 PORTNAME=	garage
-DISTVERSION=	0.8.4
+DISTVERSION=	0.9.0
 PORTREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	https://git.deuxfleurs.fr/Deuxfleurs/${PORTNAME}/archive/v${PORTVERSION}.tar.gz?dummy=/

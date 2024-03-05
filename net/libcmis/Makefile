@@ -1,5 +1,6 @@
 PORTNAME=	libcmis
 PORTVERSION=	0.6.2
+PORTREVISION=	1
 CATEGORIES=	net devel
 MASTER_SITES=	https://github.com/tdf/libcmis/releases/download/v${PORTVERSION}/ \
 		https://dev-www.libreoffice.org/src/
@@ -10,8 +11,6 @@ WWW=		https://github.com/tdf/libcmis
 
 LICENSE=	LGPL20 MPL11 GPLv2
 LICENSE_COMB=	dual
-
-BROKEN_sparc64=	cannot link with boost
 
 BUILD_DEPENDS=	cppunit-config:devel/cppunit \
 		${LOCALBASE}/lib/libboost_regex.a:devel/boost-libs

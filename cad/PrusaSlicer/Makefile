@@ -1,7 +1,7 @@
 PORTNAME=	PrusaSlicer
 DISTVERSIONPREFIX=version_
 DISTVERSION=	2.6.0
-PORTREVISION=	6
+PORTREVISION=	8
 CATEGORIES=	cad
 DIST_SUBDIR=	PrusaSlicer
 
@@ -11,6 +11,8 @@ WWW=		https://www.prusa3d.com/prusaslicer/
 
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+BROKEN=		fails to build, error: no member named 'prior' in namespace 'boost'
 
 BUILD_DEPENDS=	cereal>=1.3.0.10:devel/cereal \
 		cgal>=5.0.2:math/cgal \

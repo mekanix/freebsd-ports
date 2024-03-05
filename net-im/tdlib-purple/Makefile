@@ -17,10 +17,11 @@ LIB_DEPENDS=	libfmt.so:devel/libfmt	\
 		libtdapi.so:net-im/tdlib	\
 		librlottie.so:graphics/rlottie	\
 		libwebp.so:graphics/webp	\
+		libpurple.so:net-im/libpurple	\
 		libpng.so:graphics/png
 TEST_LIB_DEPENDS=libgtest.so:devel/googletest
 
-USES=		cmake localbase
+USES=		cmake localbase pkgconfig
 
 USE_GITHUB=	yeah
 GH_ACCOUNT=	ars3niy
@@ -33,6 +34,7 @@ TEST_DESC=	Do not enable, tests are broken
 CMAKE_ON+=	NoVoip	# tgvoip is yet to be ported
 CMAKE_ON+=	NoBundledLottie	# Using graphics/rlottie
 NLS_CMAKE_OFF+=	-DNoTranslations=1
+NLS_USES=	gettext-tools gettext-runtime
 
 EXTRACT_AFTER_ARGS=--exclude rlottie --exclude fmt
 

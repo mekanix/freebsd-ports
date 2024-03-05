@@ -1,4 +1,4 @@
-PORTREVISION=	0
+PORTREVISION=	1
 PKGNAMESUFFIX=	-lts
 
 MAINTAINER=	lev@FreeBSD.org
@@ -45,7 +45,10 @@ SVNFSTYPE?=	fsfs
 SVNGROUP?=	svn
 SVNUSER?=	svn
 
-CONFIGURE_ARGS+=	--without-gnome-keyring \
+CONFIGURE_ARGS+=	--without-swig-perl \
+			--without-swig-python \
+			--without-swig-ruby \
+			--without-gnome-keyring \
 			--without-kwallet \
 			--with-apxs=no
 

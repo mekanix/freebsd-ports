@@ -1,5 +1,5 @@
 PORTNAME=	cbsd
-DISTVERSION=	14.0.2
+DISTVERSION=	14.0.4
 CATEGORIES=	sysutils
 
 MAINTAINER=	olevole@olevole.ru
@@ -10,8 +10,10 @@ LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LIB_DEPENDS=	libsqlite3.so:databases/sqlite3 \
+		libcurl.so:ftp/curl \
 		libssh2.so:security/libssh2
 RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:security/ca_root_nss \
+		curl:ftp/curl \
 		rsync:net/rsync \
 		sqlite3:databases/sqlite3 \
 		sudo:security/sudo
@@ -63,7 +65,7 @@ do-install:
 		${STAGEDIR}${PREFIX}/cbsd/sbin/src \
 		${STAGEDIR}${PREFIX}/cbsd/tools/src
 	${INSTALL_MAN} ${WRKSRC}/man/cbsd.8 \
-		${STAGEDIR}${MANPREFIX}/man/man8
+		${STAGEDIR}${PREFIX}/share/man/man8
 	@${MKDIR} ${STAGEDIR}${PREFIX}/libexec/bsdconfig
 	${RLN} ${STAGEDIR}${CBSD_HOME}/share/bsdconfig/cbsd \
 		${STAGEDIR}${PREFIX}/libexec/bsdconfig/cbsd

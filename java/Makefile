@@ -92,6 +92,7 @@
     SUBDIR += openjdk19
     SUBDIR += openjdk20
     SUBDIR += openjdk21
+    SUBDIR += openjdk22
     SUBDIR += openjdk8
     SUBDIR += openjdk8-jre
     SUBDIR += openjfx14
@@ -107,6 +108,6 @@
     SUBDIR += trove4j
     SUBDIR += veditor
     SUBDIR += visualvm
-    SUBDIR += wildfly10
+    SUBDIR += wildfly
 
 .include <bsd.port.subdir.mk>

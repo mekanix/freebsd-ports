@@ -1,6 +1,6 @@
 PORTNAME=	darkbot
 PORTVERSION=	6f6.r6
-PORTREVISION=	3
+PORTREVISION=	4
 PORTEPOCH=	1
 CATEGORIES=	irc
 MASTER_SITES=	http://darkbot.sourceforge.net/archive/unix/ \
@@ -17,6 +17,9 @@ LICENSE_NAME=	darkbot
 LICENSE_TEXT=	no commercial distribution
 LICENSE_PERMS=	dist-mirror pkg-mirror auto-accept
 
+DEPRECATED=	Abandonware, last release in 2005 and no activity upstream since 2014
+EXPIRATION_DATE=2024-03-31
+
 SUB_FILES=	pkg-message
 
 PORTDOCS=	README
@@ -28,7 +31,7 @@ pre-configure:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1.gz ${STAGEDIR}${MAN1PREFIX}/man/man1/
+	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1.gz ${STAGEDIR}${PREFIX}/share/man/man1/
 	${MKDIR} ${STAGEDIR}${ETCDIR}/dat ${STAGEDIR}${ETCDIR}/logs
 	${TOUCH} ${STAGEDIR}${ETCDIR}/logs/.pkgcreate
 	cd ${WRKSRC}/dat; \

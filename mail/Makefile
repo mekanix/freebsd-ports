@@ -181,7 +181,6 @@
     SUBDIR += libpst
     SUBDIR += libsieve
     SUBDIR += libspamtest
-    SUBDIR += libspf
     SUBDIR += libspf2
     SUBDIR += libsrs2
     SUBDIR += libsrs_alt
@@ -456,7 +455,6 @@
     SUBDIR += perdition
     SUBDIR += pflogsumm
     SUBDIR += pfqueue
-    SUBDIR += php80-imap
     SUBDIR += php81-imap
     SUBDIR += php82-imap
     SUBDIR += php83-imap
@@ -484,7 +482,6 @@
     SUBDIR += postfixadmin-lite
     SUBDIR += postfixadmin33
     SUBDIR += postfixadmin33-lite
-    SUBDIR += postforward
     SUBDIR += postgrey
     SUBDIR += postsrsd
     SUBDIR += prepflog
@@ -508,6 +505,7 @@
     SUBDIR += py-flask-mail
     SUBDIR += py-flufl.bounce
     SUBDIR += py-fuglu
+    SUBDIR += py-imap-tools
     SUBDIR += py-imapclient
     SUBDIR += py-imaplib2
     SUBDIR += py-mail-parser
@@ -551,7 +549,6 @@
     SUBDIR += qmhandle
     SUBDIR += qpopper
     SUBDIR += qsf
-    SUBDIR += qsheff
     SUBDIR += queue-fix
     SUBDIR += queue-repair
     SUBDIR += rainloop
@@ -718,7 +715,6 @@
     SUBDIR += tlb
     SUBDIR += tmpmail
     SUBDIR += tpop3d
-    SUBDIR += trojita
     SUBDIR += tumgreyspf
     SUBDIR += up-imapproxy
     SUBDIR += usendmail

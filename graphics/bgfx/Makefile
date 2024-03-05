@@ -1,6 +1,6 @@
 PORTNAME=	bgfx
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.124.8632-460
+DISTVERSION=	1.126.8700-463
 CATEGORIES=	graphics
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -17,9 +17,9 @@ USE_XORG=	ice x11 xext sm
 USE_GITHUB=	yes
 GH_ACCOUNT=	bkaradzic
 GH_PROJECT=	bgfx.cmake
-GH_TUPLE=	bkaradzic:bgfx:5de37d0:bgfx/bgfx \
-		bkaradzic:bimg:6c4d188:bimg/bimg \
-		bkaradzic:bx:be3e348:bx/bx
+GH_TUPLE=	bkaradzic:bgfx:56ad576:bgfx/bgfx \
+		bkaradzic:bimg:0903ea2:bimg/bimg \
+		bkaradzic:bx:dc3bf29:bx/bx
 
 CMAKE_OFF=	BGFX_BUILD_EXAMPLES BGFX_INSTALL_EXAMPLES \
 		BGFX_CUSTOM_TARGETS

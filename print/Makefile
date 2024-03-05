@@ -56,8 +56,6 @@
     SUBDIR += freetype2
     SUBDIR += ft2demos
     SUBDIR += ghostscript10
-    SUBDIR += ghostscript9-agpl-base
-    SUBDIR += ghostscript9-agpl-x11
     SUBDIR += gimp-gutenprint
     SUBDIR += gl2ps
     SUBDIR += gsfonts
@@ -154,6 +152,7 @@
     SUBDIR += pkfonts360
     SUBDIR += pkfonts400
     SUBDIR += pkfonts600
+    SUBDIR += plasma6-print-manager
     SUBDIR += pnm2ppa
     SUBDIR += posterazor
     SUBDIR += print-manager
@@ -223,6 +222,7 @@
     SUBDIR += rubygem-rbpdf
     SUBDIR += rubygem-rbpdf-font
     SUBDIR += rubygem-ttfunk
+    SUBDIR += scribus
     SUBDIR += scribus-devel
     SUBDIR += sgf2tex
     SUBDIR += shrinkpdf

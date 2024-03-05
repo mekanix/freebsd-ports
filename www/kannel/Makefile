@@ -1,6 +1,6 @@
 PORTNAME=	kannel
 PORTVERSION=	1.4.4
-PORTREVISION=	13
+PORTREVISION=	14
 PORTEPOCH=	1
 CATEGORIES=	www
 MASTER_SITES=	http://www.kannel.org/download/${PORTVERSION}/
@@ -23,6 +23,7 @@ USE_GNOME=	libxml2
 USE_RC_SUBR=	${PORTNAME}_bearerbox ${PORTNAME}_smsbox ${PORTNAME}_wapbox
 
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 CONFIGURE_ARGS=	--enable-pcre=yes --enable-docs=no --with-malloc=native \
 		--enable-start-stop-daemon=no
 
@@ -38,7 +39,7 @@ OPTIONS_DEFAULT=	SQLITE3
 
 MYSQL_USES=	mysql
 MYSQL_CONFIGURE_WITH=	mysql
-MYSQL_VARS=	IGNORE_WITH_MYSQL=80
+MYSQL_VARS=	IGNORE_WITH_MYSQL="80 81"
 PGSQL_USES=	pgsql
 PGSQL_CONFIGURE_WITH=	pgsql
 SQLITE3_USES=	sqlite:3

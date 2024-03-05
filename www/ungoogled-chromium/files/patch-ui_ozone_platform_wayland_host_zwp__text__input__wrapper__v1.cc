@@ -1,4 +1,4 @@
---- ui/ozone/platform/wayland/host/zwp_text_input_wrapper_v1.cc.orig	2023-10-13 13:20:35 UTC
+--- ui/ozone/platform/wayland/host/zwp_text_input_wrapper_v1.cc.orig	2024-02-03 15:42:55 UTC
 +++ ui/ozone/platform/wayland/host/zwp_text_input_wrapper_v1.cc
 @@ -226,6 +226,10 @@ void ZWPTextInputWrapperV1::SetSurroundingText(
    // so if it exceeds 16 bits, it may be broken.

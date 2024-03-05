@@ -1,6 +1,6 @@
 PORTNAME=	gnats
 PORTVERSION=	4.1.0
-PORTREVISION=	19
+PORTREVISION=	21
 CATEGORIES=	databases devel
 MASTER_SITES=	GNU
 PKGNAMESUFFIX=	4
@@ -14,13 +14,13 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 BROKEN_mips=		Does not build: error: conflicting types for yy_scan_string
 BROKEN_mips64=		Does not build: error: conflicting types for yy_scan_string
-BROKEN_FreeBSD_12_powerpc64=	fails to build on powerpc64 elfv1: conflicting types for yy_scan_string
 
 USES=		cpe gettext-runtime gmake
 CPE_VENDOR=	gnu
 USE_GCC=	yes
 
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 CONFIGURE_ARGS+=	--sharedstatedir=${GNATSDBDIR}
 
 .ifdef WANT_FREEFALL_CFG

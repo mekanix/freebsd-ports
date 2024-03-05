@@ -67,10 +67,6 @@ NLS_LIB_DEPENDS=	libicui18n.so:devel/icu
 .include "Makefile.version"
 .include <bsd.port.options.mk>
 
-.if (defined(PPC_ABI) && ${PPC_ABI} == ELFv2) || ${ARCH} == powerpc64le
-EXTRA_PATCHES=	${PATCHDIR}/extra-patch-common.gypi
-.endif
-
 .if ${PORT_OPTIONS:MBUNDLED_SSL} && ${ARCH} != amd64
 CONFIGURE_ARGS+=--openssl-no-asm
 .endif
@@ -89,5 +85,6 @@ post-configure:
 
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/node
+	${MV} ${STAGEDIR}${PREFIX}/man/man1/node.1 ${STAGEDIR}${PREFIX}/share/man/man1/node.1
 
 .include <bsd.port.mk>

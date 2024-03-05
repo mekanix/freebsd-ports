@@ -2,9 +2,9 @@ PORTNAME=	cfengine
 PORTVERSION=	3.${CFENGINE_COMMIT_DATE}
 CATEGORIES=	sysutils
 PKGNAMESUFFIX=	-devel
-CFENGINE_HASH=		574818ccb
-LIBNTECH_HASH=		5726ca8
-CFENGINE_COMMIT_DATE=	2023.12.05
+CFENGINE_HASH=		2e29b055b
+LIBNTECH_HASH=		58705c5
+CFENGINE_COMMIT_DATE=	2024.03.01
 
 MAINTAINER=	cy@FreeBSD.org
 COMMENT=	Systems administration tool for networks
@@ -30,7 +30,9 @@ USES=		autoreconf:build cpe gmake gnome libtool localbase shebangfix \
 		ssl
 USE_GNOME=	libxml2
 SHEBANG_FILES=	examples/remake_outputs.pl
-CFLAGS+=	-Wno-return-type -fcommon
+CFLAGS+=	-Wno-return-type -fcommon \
+		-Wno-int-conversion \
+		-Wno-implicit-function-declaration
 # EXAMPLESDIR=	${PREFIX}/share/examples/cfengine3
 DOCSDIR=	${PREFIX}/share/doc/cfengine
 MAKE_ENV=	EXPLICIT_VERSION=${PORTVERSION}-${HASH}
@@ -60,7 +62,6 @@ PGSQL_USES=		pgsql
 PGSQL_CONFIGURE_WITH=	postgresql=${LOCALBASE}
 
 MYSQL_USES=		mysql
-MYSQL_BROKEN=		configure: error: MySQL client library exports symbols (EVP_CIPHER_CTX_init) clashing with OpenSSL.
 MYSQL_CONFIGURE_WITH=	mysql=${LOCALBASE}
 MYSQL_LIB_DEPENDS=	libmysqlclient.so:${_MYSQL_CLIENT}
 MYSQL_LDFLAGS=		-L${LOCALBASE}/lib/mysql

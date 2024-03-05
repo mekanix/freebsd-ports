@@ -13,6 +13,7 @@
     SUBDIR += dendrite
     SUBDIR += dino
     SUBDIR += discordo
+    SUBDIR += dissent
     SUBDIR += echat
     SUBDIR += ejabberd
     SUBDIR += farstream
@@ -21,12 +22,10 @@
     SUBDIR += fractal
     SUBDIR += freetalk
     SUBDIR += gajim
-    SUBDIR += gitterdone
     SUBDIR += gloox
     SUBDIR += gomuks
     SUBDIR += gotktrix
     SUBDIR += gotosocial
-    SUBDIR += gtkcord4
     SUBDIR += gurk-rs
     SUBDIR += icmpchat
     SUBDIR += icqlib
@@ -43,7 +42,7 @@
     SUBDIR += kaidan
     SUBDIR += kopete
     SUBDIR += libaccounts-glib
-    SUBDIR += libaccounts-qt5
+    SUBDIR += libaccounts-qt
     SUBDIR += libmesode
     SUBDIR += libnice
     SUBDIR += libnice-gst1
@@ -105,16 +104,19 @@
     SUBDIR += purple-discord
     SUBDIR += purple-facebook
     SUBDIR += purple-googlechat
+    SUBDIR += purple-gowhatsapp
     SUBDIR += purple-mattermost
     SUBDIR += purple-plugin-pack
     SUBDIR += purple-rocketchat
     SUBDIR += purple-slack
     SUBDIR += py-fbmq
     SUBDIR += py-matrix-synapse
+    SUBDIR += py-mattermostdriver
     SUBDIR += py-nbxmpp
     SUBDIR += py-punjab
     SUBDIR += py-python-telegram-bot
     SUBDIR += py-slack-sdk
+    SUBDIR += py-slackeventsapi
     SUBDIR += py-slixmpp
     SUBDIR += py-telepot
     SUBDIR += py-toxcore-c
@@ -143,7 +145,6 @@
     SUBDIR += talkatu
     SUBDIR += tdlib
     SUBDIR += tdlib-purple
-    SUBDIR += teamwords
     SUBDIR += telegram-cli
     SUBDIR += telegram-desktop
     SUBDIR += telegram-purple

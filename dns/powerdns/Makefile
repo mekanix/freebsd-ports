@@ -1,5 +1,6 @@
 PORTNAME=	powerdns
-DISTVERSION=	4.8.3
+DISTVERSION=	4.8.4
+PORTREVISION=	2
 CATEGORIES=	dns
 MASTER_SITES=	https://downloads.powerdns.com/releases/
 DISTNAME=	pdns-${DISTVERSION}
@@ -10,7 +11,6 @@ WWW=		https://www.powerdns.com/auth.html
 
 LICENSE=	GPLv2
 
-BROKEN_sparc64=	does not compile: error: to_string is not a member of std
 NOT_FOR_ARCHS=	i386
 NOT_FOR_ARCHS_REASON=	archs with 32-bits time_t are no longer supported by upstream
 
@@ -23,7 +23,8 @@ USES=		autoreconf compiler:c++11-lib cpe gmake libtool \
 USE_RC_SUBR=	pdns
 USE_SUBMAKE=	YES
 
-GNU_CONFIGURE=	YES
+GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 CONFIGURE_ARGS=	--disable-static \
 		--docdir="${PREFIX}/share/doc/powerdns" \
 		--sysconfdir="${PREFIX}/etc/pdns" \

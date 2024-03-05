@@ -1,5 +1,6 @@
 PORTNAME=	reflex
 PORTVERSION=	20230523
+PORTREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	https://invisible-mirror.net/archives/reflex/ \
 		LOCAL/sunpoet
@@ -14,6 +15,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 USES=		tar:tgz
 
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 TEST_TARGET=	bigcheck
 
 .include <bsd.port.mk>
