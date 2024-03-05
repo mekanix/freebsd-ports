@@ -1,12 +1,11 @@
-# $FreeBSD$
-
 PORTNAME=	efsserver
-PORTVERSION=	3.21.70.20231127
+PORTVERSION=	3.21.70.20240305
 CATEGORIES=	axcient net
 MASTER_SITES=	GH
 
 MAINTAINER=	asomers@axcient.com
 COMMENT=	eFolder backup storage server
+WWW=		https://github.com/Axcient/efs-backup
 
 FETCH_DEPENDS=	git:devel/git
 LIB_DEPENDS=	libpcre.so:devel/pcre \
@@ -15,11 +14,11 @@ RUN_DEPENDS=	${LOCALBASE}/bin/mailx:mail/heirloom-mailx \
 		${LOCALBASE}/bin/gawk:lang/gawk \
 		${LOCALBASE}/bin/python3:lang/python3
 
-USES=		axcient gettext-runtime gmake python:3.6+,run,test ssl pgsql:11
+USES=		axcient gettext-runtime gmake python:3.6+,run,test ssl pgsql:12
 USE_RC_SUBR=	efsserver
 USERS=		monagent iasouser efolder efwebdev aa vmcloud
 GH_PROJECT=	efs-backup
-GH_TAGNAME=	360c67cef484e31bae3d8c5887e38f35164903aa
+GH_TAGNAME=	2920d47a2567ab3194669b94c23233fa9298cb57
 GROUPS=		iasouser monagent efolder efdev efwebdev kvm vmcloud
 WANT_PGSQL=	client
 MASTER_VARS=	WANT_PGSQL+=server
