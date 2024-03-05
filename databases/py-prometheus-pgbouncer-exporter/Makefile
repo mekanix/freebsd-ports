@@ -4,7 +4,7 @@ PORTNAME=	prometheus-pgbouncer-exporter
 PORTVERSION=	2.1.1
 PORTREVISION=	2
 CATEGORIES=	databases python
-MASTER_SITES=	CHEESESHOP
+MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 PATCH_SITES=   https://patch-diff.githubusercontent.com/raw/spreaker/prometheus-pgbouncer-exporter/pull/
