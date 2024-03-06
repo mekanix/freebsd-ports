@@ -1,5 +1,5 @@
 PORTNAME=         rsync-proxy
-PORTVERSION?=     1.0.0
+PORTVERSION?=     1.1.0
 PORTREVISION?=    0
 CATEGORIES=       axcient
 MAINTAINER=       kklimov@axcient.com
@@ -10,7 +10,7 @@ LIB_DEPENDS=          libszs-op.so:axcient/szs
 #TODO remove 1.21 pinned version when `GO_DEFAULT` will be go1.21 or higher, the USES should be: `USES=axcient go:modules`
 USES=                 axcient go:1.21,modules
 
-GH_TAGNAME=  1.0.0
+GH_TAGNAME=  1.1.0
 GH_TUPLE=	\
 		alexflint:go-arg:v1.4.3:alexflint_go_arg/vendor/github.com/alexflint/go-arg \
 		alexflint:go-scalar:v1.2.0:alexflint_go_scalar/vendor/github.com/alexflint/go-scalar \
