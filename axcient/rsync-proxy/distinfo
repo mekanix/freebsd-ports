@@ -1,6 +1,6 @@
-TIMESTAMP = 1704812590
-SHA256 (Axcient-rsync-proxy-1.0.0_GH0.tar.gz) = ab3bec91f4d0048dddd64cba5d3e217edb440fa0fd4f26e769068ce57a9b8eb7
-SIZE (Axcient-rsync-proxy-1.0.0_GH0.tar.gz) = 41194
+TIMESTAMP = 1709728760
+SHA256 (Axcient-rsync-proxy-1.1.0_GH0.tar.gz) = 09cb39b5027ab9f5a616b23680298391ef7a3d1625005ebca3195166e0ce7fe1
+SIZE (Axcient-rsync-proxy-1.1.0_GH0.tar.gz) = 41471
 SHA256 (alexflint-go-arg-v1.4.3_GH0.tar.gz) = 87ab3d61a81841db4003a75ec6289e711bcc5b81fa3d6c5b34e07c497886ef33
 SIZE (alexflint-go-arg-v1.4.3_GH0.tar.gz) = 39731
 SHA256 (alexflint-go-scalar-v1.2.0_GH0.tar.gz) = 76e0cb8d47b7e4f41dd85c33f5ca30a6fb147b31717ceae69f0aba677dfa2392
