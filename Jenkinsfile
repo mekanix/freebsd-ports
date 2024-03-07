@@ -158,7 +158,6 @@ pipeline {
                     sysutils/sg3_utils \
                     sysutils/smartmontools \
                     sysutils/smp_utils \
-                    sysutils/syslinux \
                     sysutils/tmux \
                     sysutils/zfs-stats-lite \
                     sysutils/zfsnap2 \
