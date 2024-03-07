@@ -90,6 +90,7 @@ pipeline {
                     editors/vim \
                     emulators/qemu@tools \
                     ftp/cap-ftpd \
+                    ftp/wget \
                     graphics/py-pillow \
                     lang/expect \
                     lang/go121 \
