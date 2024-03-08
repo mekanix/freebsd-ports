@@ -16,6 +16,9 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.md
 
 USES=		cargo fuse:3
 
+# Don't strip so we can debug in the field
+STRIP=
+
 PLIST_FILES=	bin/xfs-fuse \
 		share/man/man1/xfs-fuse.1.gz
 
