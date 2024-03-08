@@ -1,6 +1,6 @@
-TIMESTAMP = 1695943900
-SHA256 (rust/crates/xfs-fuse-0.1.1.crate) = 9d281a145d87e410c600eddb44f49efec318ee4825e4a9888bf1c5da819de4c2
-SIZE (rust/crates/xfs-fuse-0.1.1.crate) = 743673
+TIMESTAMP = 1709854587
+SHA256 (rust/crates/xfs-fuse-0.2.0.crate) = 61cbd10e3cd0fc0a203bec3e455edd3bb72100a133af2c2dbfe277415cb382d7
+SIZE (rust/crates/xfs-fuse-0.2.0.crate) = 41224
 SHA256 (rust/crates/aho-corasick-1.0.5.crate) = 0c378d78423fdad8089616f827526ee33c19f2fddbd5de1629152c9593ba4783
 SIZE (rust/crates/aho-corasick-1.0.5.crate) = 172064
 SHA256 (rust/crates/anstyle-1.0.2.crate) = 15c4c2c83f81532e5845a733998b6971faca23490340a418e9b72a3ec9de12ea
