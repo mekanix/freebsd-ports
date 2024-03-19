@@ -167,6 +167,7 @@ pipeline {
                     textproc/py-elasticsearch \
                     textproc/ripgrep \
                     www/py-aiohttp \
+                    www/uwsgi \
                     '
                 PORTS13 = ' \
                     devel/ncurses \
