@@ -92,9 +92,7 @@ pipeline {
                     misc/compat12x \
                     misc/mbuffer \
                     misc/mc \
-                    net/ceph14 \
                     net/cloud-init \
-                    net/glusterfs \
                     net-mgmt/grok_exporter \
                     net-mgmt/iftop \
                     net-mgmt/nfs-exporter \
