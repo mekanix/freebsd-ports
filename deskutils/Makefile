@@ -210,6 +210,7 @@
     SUBDIR += pim-data-exporter
     SUBDIR += pim-sieve-editor
     SUBDIR += pinot
+    SUBDIR += pipecolor
     SUBDIR += plan
     SUBDIR += plans
     SUBDIR += plasma5-milou
@@ -244,9 +245,9 @@
     SUBDIR += qownnotes
     SUBDIR += qtfeedback
     SUBDIR += recoll
+    SUBDIR += rednotebook
     SUBDIR += remind
     SUBDIR += rolo
-    SUBDIR += rubrica
     SUBDIR += rubygem-shellplay
     SUBDIR += rubygem-taskjuggler
     SUBDIR += semantik

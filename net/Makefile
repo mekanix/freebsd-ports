@@ -1142,6 +1142,7 @@
     SUBDIR += py-s4cmd
     SUBDIR += py-saltyrtc.server
     SUBDIR += py-sbws
+    SUBDIR += py-scamper
     SUBDIR += py-shodan
     SUBDIR += py-siosocks
     SUBDIR += py-smart-open
@@ -1208,8 +1209,10 @@
     SUBDIR += rdapper
     SUBDIR += rdesktop
     SUBDIR += rdist6
+    SUBDIR += rdist7
     SUBDIR += read_bbrlog
     SUBDIR += realtek-re-kmod
+    SUBDIR += realtek-re-kmod198
     SUBDIR += reaver
     SUBDIR += recvnet
     SUBDIR += redir
@@ -1636,6 +1639,7 @@
     SUBDIR += wol
     SUBDIR += wpa_supplicant_gui
     SUBDIR += wping
+    SUBDIR += wstunnel
     SUBDIR += x11vnc
     SUBDIR += x2goclient
     SUBDIR += x2goclient-cli

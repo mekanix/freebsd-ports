@@ -186,6 +186,7 @@
     SUBDIR += flexget
     SUBDIR += flickcurl
     SUBDIR += foreign-cdm
+    SUBDIR += forgejo
     SUBDIR += formication
     SUBDIR += foswiki
     SUBDIR += free-sa-devel
@@ -472,7 +473,6 @@
     SUBDIR += nginx-vts-exporter
     SUBDIR += nift
     SUBDIR += node
-    SUBDIR += node16
     SUBDIR += node18
     SUBDIR += node20
     SUBDIR += node21
@@ -482,7 +482,6 @@
     SUBDIR += npapi-xine
     SUBDIR += npc
     SUBDIR += npm
-    SUBDIR += npm-node16
     SUBDIR += npm-node18
     SUBDIR += npm-node20
     SUBDIR += npm-node21
@@ -1506,14 +1505,18 @@
     SUBDIR += py-dj42-django-graphiql-debug-toolbar
     SUBDIR += py-dj42-django-guardian
     SUBDIR += py-dj42-django-js-asset
+    SUBDIR += py-dj42-django-modelcluster
     SUBDIR += py-dj42-django-mptt
     SUBDIR += py-dj42-django-multiselectfield
+    SUBDIR += py-dj42-django-otp
+    SUBDIR += py-dj42-django-permissionedforms
     SUBDIR += py-dj42-django-prometheus
     SUBDIR += py-dj42-django-redis
     SUBDIR += py-dj42-django-rich
     SUBDIR += py-dj42-django-tables2
     SUBDIR += py-dj42-django-taggit
     SUBDIR += py-dj42-django-timezone-field
+    SUBDIR += py-dj42-django-treebeard
     SUBDIR += py-dj42-djangoql
     SUBDIR += py-dj42-djangorestframework
     SUBDIR += py-dj42-djangorestframework-guardian
@@ -1749,6 +1752,7 @@
     SUBDIR += py-jonpy
     SUBDIR += py-jsonfield
     SUBDIR += py-kiss-headers
+    SUBDIR += py-laces
     SUBDIR += py-lektor
     SUBDIR += py-lesscpy
     SUBDIR += py-libsass
@@ -2522,7 +2526,6 @@
     SUBDIR += xurls
     SUBDIR += yabb
     SUBDIR += yarn
-    SUBDIR += yarn-node16
     SUBDIR += yarn-node18
     SUBDIR += yarn-node20
     SUBDIR += yarn-node21

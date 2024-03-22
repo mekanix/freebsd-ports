@@ -1,3 +1,533 @@
+  <vuln vid="80815c47-e84f-11ee-8e76-a8a1599412c6">
+    <topic>chromium -- multiple security fixes</topic>
+    <affects>
+      <package>
+       <name>chromium</name>
+       <range><lt>123.0.6312.58</lt></range>
+      </package>
+      <package>
+       <name>ungoogled-chromium</name>
+       <range><lt>123.0.6312.58</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Chrome Releases reports:</p>
+       <blockquote cite="https://chromereleases.googleblog.com/2024/03/stable-channel-update-for-desktop_19.html">
+	 <p>This update includes 12 security fixes:</p>
+	 <ul>
+	    <li>[327740539] High CVE-2024-2625: Object lifecycle issue in V8. Reported by Ganjiang Zhou(@refrain_areu) of ChaMd5-H1 team on 2024-03-01</li>
+	    <li>[40945098] Medium CVE-2024-2626: Out of bounds read in Swiftshader. Reported by Cassidy Kim(@cassidy6564) on 2023-11-22</li>
+	    <li>[41493290] Medium CVE-2024-2627: Use after free in Canvas. Reported by Anonymous on 2024-01-21</li>
+	    <li>[41487774] Medium CVE-2024-2628: Inappropriate implementation in Downloads. Reported by Ath3r1s on 2024-01-03</li>
+	    <li>[41487721] Medium CVE-2024-2629: Incorrect security UI in iOS. Reported by Muneaki Nishimura (nishimunea) on 2024-01-02</li>
+	    <li>[41481877] Medium CVE-2024-2630: Inappropriate implementation in iOS. Reported by James Lee (@Windowsrcer) on 2023-12-07</li>
+	    <li>[41495878] Low CVE-2024-2631: Inappropriate implementation in iOS. Reported by Ramit Gangwar on 2024-01-29</li>
+	 </ul>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2024-2625</cvename>
+      <cvename>CVE-2024-2626</cvename>
+      <cvename>CVE-2024-2627</cvename>
+      <cvename>CVE-2024-2628</cvename>
+      <cvename>CVE-2024-2629</cvename>
+      <cvename>CVE-2024-2630</cvename>
+      <cvename>CVE-2024-2631</cvename>
+      <url>https://chromereleases.googleblog.com/2024/03/stable-channel-update-for-desktop_19.html</url>
+    </references>
+    <dates>
+      <discovery>2024-03-19</discovery>
+      <entry>2024-03-22</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="7a7129ef-e790-11ee-a1c0-0050569f0b83">
+    <topic>security/shibboleth-idp -- CAS service SSRF</topic>
+    <affects>
+      <package>
+	<name>shibboleth-idp</name>
+	<range><ge>4.3.0</ge><lt>4.3.2</lt></range>
+	<range><ge>5.0.0</ge><lt>5.1.1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Shibboleth Developers report:</p>
+	<blockquote cite="https://shibboleth.net/community/advisories/secadv_20240320.txt">
+	  <p>The Identity Provider's CAS support relies on a function in the
+	     Spring Framework to parse CAS service URLs and append the ticket
+	     parameter.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://shibboleth.net/community/advisories/secadv_20240320.txt</url>
+    </references>
+    <dates>
+      <discovery>2024-03-20</discovery>
+      <entry>2024-03-21</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="a8448963-e6f5-11ee-a784-dca632daf43b">
+    <topic>databases/mongodb* -- Improper Certificate Validation</topic>
+    <affects>
+      <package>
+	<name>mongodb44</name>
+	<range><lt>4.4.29</lt></range>
+      </package>
+      <package>
+	<name>mongodb50</name>
+	<range><lt>5.0.25</lt></range>
+      </package>
+      <package>
+	<name>mongodb60</name>
+	<range><lt>6.0.14</lt></range>
+      </package>
+      <package>
+	<name>mongodb70</name>
+	<range><lt>7.0.6</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>MongoDB, Inc. reports:</p>
+	<blockquote cite="https://jira.mongodb.org/browse/SERVER-72839">
+	  <p>A security vulnerability was found where a server process
+	  running MongoDB 3.2.6 or later will allow incoming connections
+	  to skip peer certificate validation if the server process was
+	  started with TLS enabled (net.tls.mode set to allowTLS,
+	  preferTLS, or requireTLS) and without a net.tls.CAFile
+	  configured (CVE-2024-1351).</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-1351</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2024-1351</url>
+    </references>
+    <dates>
+      <discovery>2024-03-07</discovery>
+      <entry>2024-03-20</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="05b7180b-e571-11ee-a1c0-0050569f0b83">
+    <topic>www/varnish7 -- Denial of Service</topic>
+    <affects>
+      <package>
+	<name>varnish7</name>
+	<range><lt>7.4.3</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Varnish Development Team reports:</p>
+	<blockquote cite="https://varnish-cache.org/security/VSV00014.html#vsv00014">
+	<p>A denial of service attack can be performed on Varnish Cacher servers
+	   that have the HTTP/2 protocol turned on. An attacker can let the
+	   servers HTTP/2 connection control flow window run out of credits
+	   indefinitely and prevent progress in the processing of streams,
+	   retaining the associated resources.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2023-43622</cvename>
+      <url>https://varnish-cache.org/security/VSV00014.html#vsv00014</url>
+    </references>
+    <dates>
+      <discovery>2019-04-19</discovery>
+      <entry>2024-03-18</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="0a48e552-e470-11ee-99b3-589cfc0f81b0">
+    <topic>amavisd-new -- multipart boundary confusion</topic>
+    <affects>
+      <package>
+	<name>amavisd-new</name>
+	<range><lt>2.12.3</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Amavis project reports:</p>
+	<blockquote cite="https://gitlab.com/amavis/amavis/-/raw/v2.12.3/README_FILES/README.CVE-2024-28054">
+	  <p>Emails which consist of multiple parts (`Content-Type: multipart/*`)
+	  incorporate boundary information stating at which point one part ends and the
+	  next part begins.</p>
+	  <p>A boundary is announced by an Content-Type header's `boundary` parameter. To
+	  our current knowledge, RFC2046 and RFC2045 do not explicitly specify how a
+	  parser should handle multiple boundary parameters that contain conflicting
+	  values. As a result, there is no canonical choice which of the values should or
+	  should not be used for mime part decomposition.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-28054</cvename>
+      <url>https://gitlab.com/amavis/amavis/-/raw/v2.12.3/README_FILES/README.CVE-2024-28054</url>
+    </references>
+    <dates>
+      <discovery>2024-03-14</discovery>
+      <entry>2024-03-17</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="1ad3d264-e36b-11ee-9c27-40b034429ecf">
+    <topic>typo3-{11,12} -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>typo3-11</name>
+	<range><lt>11.5.35</lt></range>
+      </package>
+      <package>
+	<name>typo3-12</name>
+	<range><lt>12.4.11</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Typo3 developers reports:</p>
+	<blockquote cite="https://typo3.org/article/typo3-1301-12411-and-11535-security-releases-published">
+	  <p>All versions are security releases and contain important security fixes - read the corresponding security advisories here:</p>
+	<ul>
+	  <li>Path Traversal in TYPO3 File Abstraction Layer Storages CVE-2023-30451</li>
+	  <li>Code Execution in TYPO3 Install Tool CVE-2024-22188</li>
+	  <li>Information Disclosure of Hashed Passwords in TYPO3 Backend Forms CVE-2024-25118</li>
+	  <li>Information Disclosure of Encryption Key in TYPO3 Install Tool CVE-2024-25119</li>
+	  <li>Improper Access Control of Resources Referenced by t3:// URI Scheme CVE-2024-25120</li>
+	  <li>Improper Access Control Persisting File Abstraction Layer Entities via Data Handler CVE-2024-25121</li>
+	</ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2023-30451</cvename>
+      <cvename>CVE-2024-22188</cvename>
+      <cvename>CVE-2024-25118</cvename>
+      <cvename>CVE-2024-25119</cvename>
+      <cvename>CVE-2024-25120</cvename>
+      <cvename>CVE-2024-25121</cvename>
+      <url>https://typo3.org/article/typo3-1301-12411-and-11535-security-releases-published</url>
+    </references>
+    <dates>
+      <discovery>2024-02-13</discovery>
+      <entry>2024-03-16</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="49dd9362-4473-48ae-8fac-e1b69db2dedf">
+    <topic>electron{27,28} -- Out of bounds memory access in V8</topic>
+    <affects>
+      <package>
+	<name>electron27</name>
+	<range><lt>27.3.6</lt></range>
+      </package>
+      <package>
+	<name>electron28</name>
+	<range><lt>28.2.7</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Electron developers report:</p>
+	<blockquote cite="https://github.com/electron/electron/releases/tag/v27.3.6">
+	  <p>This update fixes the following vulnerability:</p>
+	  <ul>
+	    <li>Security: backported fix for CVE-2024-2173.</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-2173</cvename>
+      <url>https://github.com/advisories/GHSA-6hhg-hj7x-7qv8</url>
+    </references>
+    <dates>
+      <discovery>2024-03-13</discovery>
+      <entry>2024-03-14</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="b6dd9d93-e09b-11ee-92fc-1c697a616631">
+    <topic>Intel CPUs -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>cpu-microcode-intel</name>
+	<range><lt>20240312</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Intel reports:</p>
+	<blockquote cite="https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00972.html">
+	  <p>2024.1 IPU - Intel Processor Bus Lock Advisory</p>
+
+	  <p>A potential security vulnerability in the bus lock regulator
+	  mechanism for some Intel Processors may allow denial of service. Intel
+	  is releasing firmware updates to mitigate this potential
+	  vulnerability.</p>
+	</blockquote>
+	<blockquote cite="https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00982.html">
+	  <p>2024.1 IPU - Intel Processor Return Predictions Advisory</p>
+
+	  <p>A potential security vulnerability in some Intel Processors may
+	  allow information disclosure.</p>
+	</blockquote>
+	<blockquote cite="https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00898.html">
+	  <p>2024.1 IPU - Intel Atom Processor Advisory</p>
+
+	  <p>A potential security vulnerability in some Intel Atom Processors
+	  may allow information disclosure.</p>
+	</blockquote>
+	<blockquote cite="https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00960.html">
+	  <p>2024.1 IPU - Intel Xeon Processor Advisory</p>
+
+	  <p>A potential security vulnerability in some 3rd and 4th Generation
+	  Intel Xeon Processors when using Intel Software Guard Extensions (SGX)
+	  or Intel Trust Domain Extensions (TDX) may allow escalation of
+	  privilege.</p>
+	</blockquote>
+	<blockquote cite="https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01045.html">
+	  <p>2024.1 IPU OOB - Intel Xeon D Processor Advisory</p>
+
+	  <p>A potential security vulnerability in some Intel Xeon D Processors
+	  with Intel Software Guard Extensions (SGX) may allow information
+	  disclosure.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2023-39368</cvename>
+      <cvename>CVE-2023-38575</cvename>
+      <cvename>CVE-2023-28746</cvename>
+      <cvename>CVE-2023-22655</cvename>
+      <cvename>CVE-2023-43490</cvename>
+      <url>https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files/releases/tag/microcode-20240312</url>
+    </references>
+    <dates>
+      <discovery>2023-03-12</discovery>
+      <entry>2024-03-12</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="c2ad8700-de25-11ee-9190-84a93843eb75">
+    <topic>Unbound -- Denial-of-Service vulnerability</topic>
+    <affects>
+      <package>
+	<name>unbound</name>
+	<range><gt>1.18.0</gt><lt>1.19.2</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>NLNet Labs reports:</p>
+	<blockquote cite="https://www.nlnetlabs.nl/downloads/unbound/CVE-2024-1931.txt">
+	  <p>Unbound 1.18.0 introduced a feature that removes EDE records from
+	    responses with size higher than the client's advertised buffer size.
+	    Before removing all the EDE records however, it would try to see if
+	    trimming the extra text fields on those records would result in an
+	    acceptable size while still retaining the EDE codes. Due to an
+	    unchecked condition, the code that trims the text of the EDE records
+	    could loop indefinitely. This happens when Unbound would reply with
+	    attached EDE information on a positive reply and the client's buffer
+	    size is smaller than the needed space to include EDE records.
+
+	    The vulnerability can only be triggered when the 'ede: yes' option
+	    is used; non default configuration.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-1931</cvename>
+      <url>https://www.nlnetlabs.nl/downloads/unbound/CVE-2024-1931.txt</url>
+    </references>
+    <dates>
+      <discovery>2024-03-07</discovery>
+      <entry>2024-03-09</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="e74da31b-276a-4a22-9772-17dd42b97559">
+    <topic>electron{27,28} -- vulnerability in libxml2</topic>
+    <affects>
+      <package>
+	<name>electron27</name>
+	<range><lt>27.3.5</lt></range>
+      </package>
+      <package>
+	<name>electron28</name>
+	<range><lt>28.2.6</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Electron developers report:</p>
+	<blockquote cite="https://github.com/electron/electron/releases/tag/v27.3.5">
+	  <p>This update fixes the following vulnerability:</p>
+	  <ul>
+	    <li>Security: backported fix for CVE-2024-25062.</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-25062</cvename>
+      <url>https://github.com/advisories/GHSA-x77r-6xxm-wjmx</url>
+    </references>
+    <dates>
+      <discovery>2024-03-06</discovery>
+      <entry>2024-03-07</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="b2caae55-dc38-11ee-96dc-001b217b3468">
+    <topic>Gitlab -- Vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>gitlab-ce</name>
+	<range><ge>16.9.0</ge><lt>16.9.2</lt></range>
+	<range><ge>16.8.0</ge><lt>16.8.4</lt></range>
+	<range><ge>11.3.0</ge><lt>16.7.7</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Gitlab reports:</p>
+	<blockquote cite="https://about.gitlab.com/releases/2024/03/06/security-release-gitlab-16-9-2-released/">
+	  <p>Bypassing CODEOWNERS approval allowing to steal protected variables</p>
+	  <p>Guest with manage group access tokens can rotate and see group access token with owner permissions</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-0199</cvename>
+      <cvename>CVE-2024-1299</cvename>
+      <url>https://about.gitlab.com/releases/2024/03/06/security-release-gitlab-16-9-2-released/</url>
+    </references>
+    <dates>
+      <discovery>2024-03-06</discovery>
+      <entry>2024-03-07</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="b1b039ec-dbfc-11ee-9165-901b0e9408dc">
+    <topic>go -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>go122</name>
+	<range><lt>1.22.1</lt></range>
+      </package>
+      <package>
+	<name>go121</name>
+	<range><lt>1.21.8</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Go project reports reports:</p>
+	<blockquote cite="https://go.dev/issue/65390">
+	  <p>crypto/x509: Verify panics on certificates with an
+	  unknown public key algorithm</p>
+	  <p>Verifying a certificate chain which contains a
+	  certificate with an unknown public key algorithm will
+	  cause Certificate.Verify to panic.</p>
+	</blockquote>
+	<blockquote cite="https://go.dev/issue/65383">
+	  <p>net/http: memory exhaustion in Request.ParseMultipartForm</p>
+	  <p>When parsing a multipart form (either explicitly with
+	  Request.ParseMultipartForm or implicitly with Request.FormValue,
+	  Request.PostFormValue, or Request.FormFile), limits on the total
+	  size of the parsed form were not applied to the memory consumed
+	  while reading a single form line. This permitted a maliciously
+	  crafted input containing very long lines to cause allocation of
+	  arbitrarily large amounts of memory, potentially leading to memory
+	  exhaustion.</p>
+	</blockquote>
+	<blockquote cite="https://go.dev/issue/65065">
+	  <p>net/http, net/http/cookiejar: incorrect forwarding
+	  of sensitive headers and cookies on HTTP redirect</p>
+	  <p>When following an HTTP redirect to a domain which
+	  is not a subdomain match or exact match of the initial
+	  domain, an http.Client does not forward sensitive headers
+	  such as "Authorization" or "Cookie". For example, a
+	  redirect from foo.com to www.foo.com will forward the
+	  Authorization header, but a redirect to bar.com will not.</p>
+	</blockquote>
+	<blockquote cite="https://go.dev/issue/65697">
+	  <p>html/template: errors returned from MarshalJSON methods
+	  may break template escaping</p>
+	  <p>If errors returned from MarshalJSON methods contain user
+	  controlled data, they may be used to break the contextual
+	  auto-escaping behavior of the html/template package, allowing
+	  for subsequent actions to inject unexpected content into
+	  templates.</p>
+	</blockquote>
+	<blockquote cite="https://go.dev/issue/65083">
+	  <p>net/mail: comments in display names are incorrectly handled</p>
+	  <p>The ParseAddressList function incorrectly handles comments
+	  (text within parentheses) within display names. Since this is a
+	  misalignment with conforming address parsers, it can result in
+	  different trust decisions being made by programs using different
+	  parsers.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2023-45289</cvename>
+      <cvename>CVE-2023-45290</cvename>
+      <cvename>CVE-2024-24783</cvename>
+      <cvename>CVE-2024-24784</cvename>
+      <cvename>CVE-2024-24785</cvename>
+      <url>https://groups.google.com/g/golang-announce/c/5pwGVUPoMbg/m/46oA5yPABQAJ</url>
+    </references>
+    <dates>
+      <discovery>2024-03-05</discovery>
+      <entry>2024-03-06</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="fd3401a1-b6df-4577-917a-2c22fee99d34">
+    <topic>chromium -- multiple security fixes</topic>
+    <affects>
+      <package>
+       <name>chromium</name>
+       <range><lt>122.0.6261.111</lt></range>
+      </package>
+      <package>
+       <name>ungoogled-chromium</name>
+       <range><lt>122.0.6261.111</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Chrome Releases reports:</p>
+       <blockquote cite="https://chromereleases.googleblog.com/2024/03/stable-channel-update-for-desktop.html">
+	 <p>This update includes 3 security fixes:</p>
+	 <ul>
+	    <li>[325893559] High CVE-2024-2173: Out of bounds memory access in V8. Reported by 5fceb6172bbf7e2c5a948183b53565b9 on 2024-02-19</li>
+	    <li>[325866363] High CVE-2024-2174: Inappropriate implementation in V8. Reported by 5f46f4ee2e17957ba7b39897fb376be8 on 2024-02-19</li>
+	    <li>[325936438] High CVE-2024-2176: Use after free in FedCM. Reported by Anonymous on 2024-02-20</li>
+	 </ul>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2024-2173</cvename>
+      <cvename>CVE-2024-2174</cvename>
+      <cvename>CVE-2024-2176</cvename>
+      <url>https://chromereleases.googleblog.com/2024/03/stable-channel-update-for-desktop.html</url>
+    </references>
+    <dates>
+      <discovery>2024-03-05</discovery>
+      <entry>2024-03-06</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="0ef3398e-da21-11ee-b23a-080027a5b8e9">
     <topic>Django -- multiple vulnerabilities</topic>
     <affects>
@@ -93,39 +623,6 @@
     </references>
     <dates>
       <discovery>2024-02-14</discovery>
-      <entry>2024-03-01</entry>
-    </dates>
-  </vuln>
-
-  <vuln vid="46a9eb0f-d7d2-11ee-bb12-001b217b3468">
-    <topic>null -- null</topic>
-    <affects>
-      <package>
-	<name>null</name>
-	<range><lt>null</lt></range>
-      </package>
-    </affects>
-    <description>
-	<body xmlns="http://www.w3.org/1999/xhtml">
-	<p>support@hackerone.com reports:</p>
-	<blockquote cite="https://hackerone.com/reports/2237545">
-	  <p>On Linux, Node.js ignores certain environment variables if those
-	may have been set by an unprivileged user while the process is
-	running with elevated privileges with the only exception of
-	CAP_NET_BIND_SERVICE.  Due to a bug in the implementation of this
-	exception, Node.js incorrectly applies this exception even when
-	certain other capabilities have been set.  This allows unprivileged
-	users to inject code that inherits the process&apos;s elevated
-	privileges.</p>
-	</blockquote>
-	</body>
-    </description>
-    <references>
-      <cvename>CVE-2024-21892</cvename>
-      <url>https://nvd.nist.gov/vuln/detail/CVE-2024-21892</url>
-    </references>
-    <dates>
-      <discovery>2024-02-20</discovery>
       <entry>2024-03-01</entry>
     </dates>
   </vuln>

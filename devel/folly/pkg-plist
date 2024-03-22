@@ -287,11 +287,6 @@ include/folly/experimental/STTimerFDTimeoutManager.h
 include/folly/experimental/Select64.h
 include/folly/experimental/SingleWriterFixedHashMap.h
 include/folly/experimental/SingletonRelaxedCounter.h
-include/folly/experimental/StringKeyedCommon.h
-include/folly/experimental/StringKeyedMap.h
-include/folly/experimental/StringKeyedSet.h
-include/folly/experimental/StringKeyedUnorderedMap.h
-include/folly/experimental/StringKeyedUnorderedSet.h
 include/folly/experimental/TLRefCount.h
 include/folly/experimental/TestUtil.h
 include/folly/experimental/ThreadedRepeatingFunctionRunner.h
@@ -792,6 +787,7 @@ include/folly/ssl/OpenSSLLockTypes.h
 include/folly/ssl/OpenSSLPtrTypes.h
 include/folly/ssl/OpenSSLTicketHandler.h
 include/folly/ssl/OpenSSLVersionFinder.h
+include/folly/ssl/PasswordCollector.h
 include/folly/ssl/SSLSession.h
 include/folly/ssl/SSLSessionManager.h
 include/folly/ssl/detail/OpenSSLSession.h

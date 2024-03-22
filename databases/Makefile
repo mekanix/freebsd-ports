@@ -118,6 +118,7 @@
     SUBDIR += ldb20
     SUBDIR += ldb21
     SUBDIR += ldb22
+    SUBDIR += ldb25
     SUBDIR += leo_center
     SUBDIR += leofs
     SUBDIR += leveldb
@@ -737,6 +738,7 @@
     SUBDIR += py-fdb
     SUBDIR += py-firebirdsql
     SUBDIR += py-flask-sqlalchemy
+    SUBDIR += py-flask-sqlalchemy30
     SUBDIR += py-gdbm
     SUBDIR += py-geoalchemy2
     SUBDIR += py-hiredis
