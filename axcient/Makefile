@@ -24,6 +24,7 @@
     SUBDIR += py-axcient-helpers
     SUBDIR += py-drive-exporter
     SUBDIR += py-malloc-exporter
+    SUBDIR += py-pxeweb
     SUBDIR += rsync-proxy
     SUBDIR += rsync-proxy-dev
     SUBDIR += rsync-proxy-stg
