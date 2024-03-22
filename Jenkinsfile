@@ -202,6 +202,7 @@ pipeline {
                 sh 'cd axcient/py-axcient-helpers; make fetch'
                 sh 'cd axcient/py-drive-exporter; make fetch'
                 sh 'cd axcient/py-malloc-exporter; make fetch'
+                sh 'cd axcient/py-pxeweb; make fetch'
                 sh 'cd net-mgmt/py-ses-exporter; make fetch'
                 sh 'cd axcient/filestore-clone; make fetch'
                 sh 'cd axcient/migration-tools; make fetch'
