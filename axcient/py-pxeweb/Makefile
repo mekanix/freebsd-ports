@@ -4,7 +4,7 @@ CATEGORIES=	axcient
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	jsollvander@axcient.com
-COMMENT=	Simple Python/Flask website for configuring DHCP IP reservations for PXE/netboot.
+COMMENT=	Python/Flask web app for configuring DHCP IP reservations
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}flask>=3.0.0:www/py-flask@${PY_FLAVOR}
 
@@ -19,4 +19,3 @@ GH_PROJECT=	pxeweb
 GH_TAGNAME=	2e4bd29294c8b6ee44b8000c83773b4af4937cd7
 
 .include <bsd.port.mk>
-
