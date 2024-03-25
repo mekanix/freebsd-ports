@@ -51,9 +51,8 @@ geli_salt_start()
 	if [ -z "${SECRET}" ]; then
 		echo "geli key is empty, will not attempt attaching devices"
 	else
-		DISKS=$(ls -1 /dev/multipath/mp_J* /dev/label/SLOG_* /dev/label/SPARE_* /dev/label/DATA_* /dev/vtbd[1-9]* 2>/dev/null | grep -v '.eli$')
 		echo "Trying to attach all devices."
-		echo "${SECRET}" | /sbin/geli attach -j - ${DISKS}
+		echo "${SECRET}" | /usr/local/sbin/geli-util -p - -a
 	fi
 	if [ -f "${CACHEFILE}" ]; then
 		echo ""
