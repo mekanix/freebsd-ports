@@ -2,6 +2,7 @@
 
 PORTNAME=	axcient-utils
 PORTVERSION=	1.0.0.20240124
+PORTREVISION= 	1
 CATEGORIES=	axcient sysutils
 MASTER_SITES=	GH
 
