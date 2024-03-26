@@ -20,6 +20,7 @@
 # BEFORE: szs
 # BEFORE: szs_exports
 # BEFORE: szs_jobs
+# BEFORE: telegraf
 # BEFORE: vt2
 # BEFORE: zabbix_agentd
 # BEFORE: zfs_exporter
