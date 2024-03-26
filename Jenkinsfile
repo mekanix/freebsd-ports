@@ -53,6 +53,7 @@ pipeline {
                     axcient/filestore-clone \
                     axcient/py-malloc-exporter \
                     axcient/py-drive-exporter \
+                    axcient/py-pxeweb \
                     axcient/migration-tools \
                     axcient/rsync-proxy \
                     axcient/rsync-proxy-stg \
