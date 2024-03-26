@@ -1,5 +1,5 @@
 PORTNAME=	efsserver
-PORTVERSION=	3.21.70.20240305
+PORTVERSION=	3.21.70.20240326
 CATEGORIES=	axcient net
 MASTER_SITES=	GH
 
@@ -11,14 +11,13 @@ FETCH_DEPENDS=	git:devel/git
 LIB_DEPENDS=	libpcre.so:devel/pcre \
 		libsqlite3.so:databases/sqlite3
 RUN_DEPENDS=	${LOCALBASE}/bin/mailx:mail/heirloom-mailx \
-		${LOCALBASE}/bin/gawk:lang/gawk \
-		${LOCALBASE}/bin/python3:lang/python3
+		${LOCALBASE}/bin/gawk:lang/gawk
 
 USES=		axcient gettext-runtime gmake python:3.6+,run,test ssl pgsql:12
 USE_RC_SUBR=	efsserver
 USERS=		monagent iasouser efolder efwebdev aa vmcloud
 GH_PROJECT=	efs-backup
-GH_TAGNAME=	2920d47a2567ab3194669b94c23233fa9298cb57
+GH_TAGNAME=	fb4ad913f8f1a4bb860340d5af0fbe2831f67734
 GROUPS=		iasouser monagent efolder efdev efwebdev kvm vmcloud
 WANT_PGSQL=	client
 MASTER_VARS=	WANT_PGSQL+=server
