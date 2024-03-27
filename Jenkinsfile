@@ -126,6 +126,7 @@ pipeline {
                     security/pam_mkhomedir \
                     security/py-asyncssh \
                     security/sudo \
+                    security/wazuh-agent \
                     shells/bash \
                     shells/ksh93 \
                     sysutils/beats7 \
