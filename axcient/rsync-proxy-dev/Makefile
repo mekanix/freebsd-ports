@@ -15,6 +15,7 @@ USES=			axcient go:1.21,modules
 
 GH_TAGNAME=	develop
 GO_PKGNAME=	github.com/${GH_ACCOUNT}/rsync-proxy
+GO_BUILDFLAGS=	-ldflags "-X=main.version=${PORTVERSION}"
 GO_TARGET=	./cmd/proxy
 
 NO_CHECKSUM=	yes
