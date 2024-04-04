@@ -23,6 +23,7 @@
 # BEFORE: vt2
 # BEFORE: zabbix_agentd
 # BEFORE: zfs_exporter
+# BEFORE: zrepl
 
 # Start geli disks whose keys are stored in Salt, and import pools residing on
 # those disks.
