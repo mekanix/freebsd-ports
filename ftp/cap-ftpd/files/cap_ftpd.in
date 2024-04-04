@@ -1,8 +1,8 @@
 #!/bin/sh
 
 # PROVIDE: cap_ftpd
-# REQUIRE: ???
-# BEFORE:  ???
+# REQUIRE: DAEMON
+# KEYWORD: shutdown
 
 . /etc/rc.subr
 

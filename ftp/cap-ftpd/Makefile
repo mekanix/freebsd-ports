@@ -1,5 +1,6 @@
 PORTNAME=	cap-ftpd
 PORTVERSION=	0.1.0.20240116
+PORTREVISION=	1
 CATEGORIES=	ftp axcient
 
 MAINTAINER=	asomers@axcient.com
