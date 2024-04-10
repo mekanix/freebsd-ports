@@ -226,9 +226,9 @@ pipeline {
                 sh 'cd net-mgmt/py-smartctl-exporter; make fetch'
                 sh 'cd net-mgmt/py-zfs-exporter; make fetch'
 
-                sh 'sudo poudriere bulk -j 13_1-AXCIENT1_amd64 -p "${PNAME}" \
+                sh 'sudo poudriere bulk -j 13_2-AXCIENT1_amd64 -p "${PNAME}" \
                     ${PORTSALL} ${PORTS13}'
-                sh 'sudo poudriere bulk -j 13_1-AXCIENT1_amd64 -p "${PNAME}" \
+                sh 'sudo poudriere bulk -j 13_2-AXCIENT1_amd64 -p "${PNAME}" \
                     ${PORTSMINOR} '
                 sh 'sudo poudriere bulk -j 14_0-AXCIENT1_amd64 -p "${PNAME}" \
                     ${PORTSALL} ${PORTS14}'
@@ -252,7 +252,7 @@ pipeline {
                 sh 'cd axcient/vt2-dev; make fetch'
                 sh 'cd axcient/rsync-proxy-dev; make fetch'
 
-                sh "sudo poudriere bulk -j 13_1-AXCIENT1_amd64 -p ${PNAME} axcient/${env.devPackage}"
+                sh "sudo poudriere bulk -j 13_2-AXCIENT1_amd64 -p ${PNAME} axcient/${env.devPackage}"
                 sh "sudo poudriere bulk -j 14_0-AXCIENT1_amd64 -p ${PNAME} axcient/${env.devPackage}"
             }
         }
