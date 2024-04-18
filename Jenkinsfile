@@ -101,6 +101,7 @@ pipeline {
                     net/cloud-init \
                     net/glusterfs \
                     net/mtr-nox11 \
+                    net-mgmt/geom-exporter \
                     net-mgmt/grok_exporter \
                     net-mgmt/iftop \
                     net-mgmt/lldpd \
@@ -108,7 +109,6 @@ pipeline {
                     net-mgmt/unbound_exporter \
                     net-mgmt/pktstat \
                     net-mgmt/py-network-interface-exporter \
-                    net-mgmt/py-gstat_exporter \
                     net-mgmt/py-zfs-exporter \
                     net-mgmt/py-ses-exporter \
                     net-mgmt/py-smartctl-exporter \
