@@ -1,8 +1,12 @@
 bin/dralserver
+bin/dralserver-cli
 bin/dralserver-cleanup-clones
+bin/dralserver-cleanup-ftps-exports
 @sample %%ETCDIR%%/dralserver.yml.sample
 etc/rc.d/dralserver
 @sample %%EXAMPLESDIR%%/rsyslog.d/dralserver.conf etc/rsyslog.d/dralserver.conf
 @sample %%EXAMPLESDIR%%/rsyslog.d/dralserver-cleanup-clones.conf etc/rsyslog.d/dralserver-cleanup-clones.conf
+@sample %%EXAMPLESDIR%%/newsyslog.conf.d/dralserver-cleanup-ftps-exports.conf etc/newsyslog.conf.d/dralserver-cleanup-ftps-exports.conf
+@sample %%EXAMPLESDIR%%/rsyslog.d/dralserver-cleanup-ftps-exports.conf etc/rsyslog.d/dralserver-cleanup-ftps-exports.conf
 @dir etc/rsyslog.d
 
