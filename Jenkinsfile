@@ -99,7 +99,6 @@ pipeline {
                     misc/mc \
                     net/bmon \
                     net/cloud-init \
-                    net/glusterfs \
                     net/mtr-nox11 \
                     net-mgmt/geom-exporter \
                     net-mgmt/grok_exporter \
@@ -139,14 +138,6 @@ pipeline {
                     sysutils/ipmitool \
                     sysutils/jail_exporter \
                     sysutils/mcelog \
-                    sysutils/moosefs3-cgi \
-                    sysutils/moosefs3-cgiserv \
-                    sysutils/moosefs3-chunkserver \
-                    sysutils/moosefs3-cli \
-                    sysutils/moosefs3-client \
-                    sysutils/moosefs3-master \
-                    sysutils/moosefs3-metalogger \
-                    sysutils/moosefs3-netdump \
                     sysutils/node_exporter \
                     sysutils/pv \
                     sysutils/py-salt \
