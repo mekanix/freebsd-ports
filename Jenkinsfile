@@ -98,6 +98,7 @@ pipeline {
                     misc/mbuffer \
                     misc/mc \
                     net/bmon \
+                    net/ipxe \
                     net/cloud-init \
                     net/mtr-nox11 \
                     net-mgmt/geom-exporter \
