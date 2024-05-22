@@ -95,6 +95,7 @@ pipeline {
                     lang/expect \
                     lang/go121 \
                     mail/ssmtp \
+                    mail/mutt \
                     misc/mbuffer \
                     misc/mc \
                     net/bmon \
