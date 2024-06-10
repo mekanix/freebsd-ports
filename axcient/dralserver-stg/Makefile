@@ -1,10 +1,10 @@
 # $FreeBSD$
 
-PORTVERSION=    2.2.0.rc1
-PORTREVISION=   0
-PKGNAMESUFFIX=  -stg
+PORTVERSION=	2.2.0.rc1
+PORTREVISION=	0
+PKGNAMESUFFIX=	-stg
 
-GH_TAGNAME=     2.2.0-rc1
+GH_TAGNAME=	2.2.0-rc1
 
 GH_TUPLE=       BurntSushi:toml:v0.4.1:burntsushi_toml/vendor/github.com/BurntSushi/toml \
                 atotto:clipboard:v0.1.4:atotto_clipboard/vendor/github.com/atotto/clipboard \
@@ -69,14 +69,14 @@ GH_TUPLE=       BurntSushi:toml:v0.4.1:burntsushi_toml/vendor/github.com/BurntSu
                 stretchr:testify:v1.7.0:stretchr_testify/vendor/github.com/stretchr/testify
 
 LIB_DEPENDS=    libszs-op.so:axcient/szs-stg
-USES=           axcient go:modules
+USES=		axcient go:modules
 
-CONFLICTS_INSTALL=      dralserver \
-                        dralserver-dev
+CONFLICTS_INSTALL=	dralserver \
+			dralserver-dev
 
-MASTERDIR=      ${.CURDIR}/../dralserver
-DISTINFO_FILE=  ${.CURDIR}/distinfo
+MASTERDIR=	${.CURDIR}/../dralserver
+DISTINFO_FILE=	${.CURDIR}/distinfo
 
-GO_TARGET=      ./cmd/dralserver ./cmd/cleanupdralclones ./cmd/cleanupdralftpsexports ./cmd/cli
+GO_TARGET=	./cmd/dralserver ./cmd/cleanupdralclones ./cmd/cleanupdralftpsexports ./cmd/cli
 
 .include "${MASTERDIR}/Makefile"
