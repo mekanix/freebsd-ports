@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	dralserver
-PORTVERSION?=	2.1.0
+PORTVERSION?=	2.2.0
 PORTREVISION?=	0
 CATEGORIES=	axcient
 
@@ -14,7 +14,7 @@ USES=		axcient go:modules
 CONFLICTS_INSTALL?=	dralserver-stg \
 			dralserver-dev
 
-GH_TAGNAME?=	2.1.0
+GH_TAGNAME?=	2.2.0
 GH_TUPLE?=      BurntSushi:toml:v0.4.1:burntsushi_toml/vendor/github.com/BurntSushi/toml \
                 atotto:clipboard:v0.1.4:atotto_clipboard/vendor/github.com/atotto/clipboard \
                 aymanbagabas:go-osc52:v2.0.1:aymanbagabas_go_osc52_v2/vendor/github.com/aymanbagabas/go-osc52/v2 \
@@ -39,10 +39,11 @@ GH_TUPLE?=      BurntSushi:toml:v0.4.1:burntsushi_toml/vendor/github.com/BurntSu
                 golang:net:v0.14.0:golang_net/vendor/golang.org/x/net \
                 golang:protobuf:v1.5.2:golang_protobuf/vendor/github.com/golang/protobuf \
                 golang:sync:v0.3.0:golang_sync/vendor/golang.org/x/sync \
-                golang:sys:v0.12.0:golang_sys/vendor/golang.org/x/sys \
+                golang:sys:090e33056c14:golang_sys/vendor/golang.org/x/sys \
                 golang:term:v0.11.0:golang_term/vendor/golang.org/x/term \
                 golang:text:v0.12.0:golang_text/vendor/golang.org/x/text \
                 golang:xerrors:04be3eba64a2:golang_xerrors/vendor/golang.org/x/xerrors \
+                golang:glog:23def4e6c14b:golang_glog/vendor/github.com/golang/glog \
                 gomodule:redigo:v1.8.5:gomodule_redigo/vendor/github.com/gomodule/redigo \
                 google:go-genproto:a5da7257a6f7:google_go_genproto/vendor/google.golang.org/genproto \
                 google:uuid:v1.3.0:google_uuid/vendor/github.com/google/uuid \
@@ -71,6 +72,8 @@ GH_TUPLE?=      BurntSushi:toml:v0.4.1:burntsushi_toml/vendor/github.com/BurntSu
                 protocolbuffers:protobuf-go:v1.31.0:protocolbuffers_protobuf_go/vendor/google.golang.org/protobuf \
                 rivo:uniseg:v0.2.0:rivo_uniseg/vendor/github.com/rivo/uniseg \
                 satori:go.uuid:v1.2.0:satori_go_uuid/vendor/github.com/satori/go.uuid \
+                dgraph-io:ristretto:v0.1.1:dgraph_io_ristretto/vendor/github.com/dgraph-io/ristretto \
+                dustin:go-humanize:v1.0.0:dustin_go_humanize/vendor/github.com/dustin/go-humanize \
                 stretchr:testify:v1.7.0:stretchr_testify/vendor/github.com/stretchr/testify
 GO_PKGNAME=	github.com/${GH_ACCOUNT}/dralserver
 GO_TARGET?=	./cmd/dralserver ./cmd/cleanupdralclones ./cmd/cleanupdralftpsexports ./cmd/cli
