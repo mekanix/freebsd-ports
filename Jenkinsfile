@@ -250,6 +250,16 @@ pipeline {
                 sh "sudo poudriere bulk -j 14_0-AXCIENT1_amd64 -p ${PNAME} axcient/${env.devPackage}"
                 sh "sudo poudriere bulk -j 13_2-AXCIENT1_amd64 -p ${PNAME} axcient/${env.devPackage}"
             }
+            post {
+                failure {
+                    slackSend(
+                        channel: "#freebsd-ports-dev-failures", 
+                        color: 'danger', 
+                        message: "freebsd-ports dev package build failed:\n\nJob: ${env.JOB_NAME} \nBuild Number: ${env.BUILD_NUMBER}\nbuild URL: ${env.BUILD_URL}", 
+                        tokenCredentialId: 'RBQASlackToken'
+                    )
+                }
+            }
         }
     }
     post {
