@@ -255,7 +255,7 @@ pipeline {
                     slackSend(
                         channel: "#freebsd-ports-dev-failures", 
                         color: 'danger', 
-                        message: "freebsd-ports dev package build failed:\n\nJob: ${env.JOB_NAME} \nBuild Number: ${env.BUILD_NUMBER}\nbuild URL: ${env.BUILD_URL}", 
+                        message: "freebsd-ports dev package build failed \n\nPort: ${env.devPackage} \nJob: ${env.JOB_NAME} \nBuild Number: ${env.BUILD_NUMBER} \nbuild URL: ${env.BUILD_URL}",
                         tokenCredentialId: 'RBQASlackToken'
                     )
                 }
