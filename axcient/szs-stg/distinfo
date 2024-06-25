@@ -1,6 +1,6 @@
-TIMESTAMP = 1716830603
-SHA256 (Axcient-szs-op-2.2.1.rc1-2.2.1-rc1_GH0.tar.gz) = ec0db40e5af3e0863ac4315f2e7fb91ff2fc3f82301ac17eefe8e8a19103cd53
-SIZE (Axcient-szs-op-2.2.1.rc1-2.2.1-rc1_GH0.tar.gz) = 457447
+TIMESTAMP = 1719329583
+SHA256 (Axcient-szs-op-2.3.0.rc1-2.3.0-rc1_GH0.tar.gz) = 50d17b9236e82c386ea9d3e5f1531baba9be082908a1be22c784768d48546529
+SIZE (Axcient-szs-op-2.3.0.rc1-2.3.0-rc1_GH0.tar.gz) = 458361
 SHA256 (RichardKnop-logging-1a693bdd4fae_GH0.tar.gz) = 37bb3b4c2be19ce76f9f2601cad9222ed9ed4c711060d01fb585a4298ae99877
 SIZE (RichardKnop-logging-1a693bdd4fae_GH0.tar.gz) = 9312
 SHA256 (RichardKnop-machinery-v1.10.6_GH0.tar.gz) = 3cd195eef111200c51d8e59cf6b95f19a212c99fa0641c74b28a7dc3e1513114
