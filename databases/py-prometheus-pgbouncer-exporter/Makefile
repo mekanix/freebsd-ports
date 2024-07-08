@@ -1,8 +1,6 @@
-# $FreeBSD$
-
 PORTNAME=	prometheus-pgbouncer-exporter
 PORTVERSION=	2.1.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	databases python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -18,7 +16,7 @@ LICENSE=	MIT
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}prometheus-client>=0.8:net-mgmt/py-prometheus-client@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}python-json-logger>=0.111:devel/py-python-json-logger@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}psycopg2>=2.8.5:databases/py-psycopg2@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}yaml>=5.3.1:devel/py-yaml@${PY_FLAVOR}
+		${PYTHON_PKGNAMEPREFIX}yaml>=5.3.1:devel/py-pyyaml@${PY_FLAVOR}
 
 TEST_DEPENDS=	pip:devel/py-pip@${PY_FLAVOR} \
 		pycodestyle:devel/py-pycodestyle@${PY_FLAVOR} \
