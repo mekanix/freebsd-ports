@@ -1,5 +1,6 @@
 PORTNAME=	szs-migrator
 PORTVERSION=	0.1.0.20240529
+PORTREVISION=	1
 CATEGORIES=	axcient
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -7,7 +8,7 @@ MAINTAINER=	asomers@axcient.com
 COMMENT=	Replibit dataset migrator
 WWW=		https://github.com/Axcient/replibit-tools
 
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}yaml>=5.0.0:devel/py-yaml@${PY_FLAVOR} \
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}yaml>=5.0.0:devel/py-pyyaml@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}paramiko>=2.11.0_2:security/py-paramiko@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}libzfs>=1.1.2023020200:devel/py-libzfs@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}urllib3>=0:net/py-urllib3@${PY_FLAVOR} \
