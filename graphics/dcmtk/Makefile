@@ -1,7 +1,6 @@
 PORTNAME=	dcmtk
 DISTVERSIONPREFIX=	${PORTNAME:tu}-
-DISTVERSION=	3.6.7
-PORTREVISION=	4
+DISTVERSION=	3.6.8
 CATEGORIES=	graphics devel
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -29,7 +28,13 @@ OPTIONS_DEFINE=	DOCS
 
 PORTDOCS=	*
 
+ETCDIR=		${PREFIX}/etc/${PORTNAME}-${PORTVERSION}
+DATADIR=	${PREFIX}/share/${PORTNAME}-${PORTVERSION}
+DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}-${PORTVERSION}
+
 TEST_TARGET=	test test-exhaustive
+
+PORTSCOUT=	limit:^.*[0-9].*$$ # prevent tags like latest
 
 .include <bsd.port.pre.mk>
 

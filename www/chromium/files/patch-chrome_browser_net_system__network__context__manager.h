@@ -1,6 +1,6 @@
---- chrome/browser/net/system_network_context_manager.h.orig	2024-02-23 21:04:38 UTC
+--- chrome/browser/net/system_network_context_manager.h.orig	2024-06-17 12:56:06 UTC
 +++ chrome/browser/net/system_network_context_manager.h
-@@ -200,7 +200,7 @@ class SystemNetworkContextManager {
+@@ -197,7 +197,7 @@ class SystemNetworkContextManager {
    class URLLoaderFactoryForSystem;
    class NetworkProcessLaunchWatcher;
  
@@ -9,7 +9,7 @@
    class GssapiLibraryLoadObserver
        : public network::mojom::GssapiLibraryLoadObserver {
     public:
-@@ -236,7 +236,7 @@ class SystemNetworkContextManager {
+@@ -233,7 +233,7 @@ class SystemNetworkContextManager {
    void UpdateExplicitlyAllowedNetworkPorts();
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -18,9 +18,9 @@
    // Applies the current value of the kEnforceLocalAnchorConstraintsEnabled
    // pref to the enforcement state.
    void UpdateEnforceLocalAnchorConstraintsEnabled();
-@@ -284,7 +284,7 @@ class SystemNetworkContextManager {
- 
-   static std::optional<bool> certificate_transparency_enabled_for_testing_;
+@@ -285,7 +285,7 @@ class SystemNetworkContextManager {
+   std::unique_ptr<NetworkAnnotationMonitor> network_annotation_monitor_;
+ #endif  // BUILDFLAG(IS_CHROMEOS)
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)

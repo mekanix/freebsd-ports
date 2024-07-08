@@ -1,5 +1,5 @@
 PORTNAME=	cosmic-comp
-PORTVERSION=	s20240322
+PORTVERSION=	s20240628
 CATEGORIES=	x11-wm wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -15,14 +15,15 @@ LIB_DEPENDS=	libudev.so:devel/libudev-devd \
 		libxkbcommon.so:x11/libxkbcommon
 RUN_DEPENDS=	mesa-dri>0:graphics/mesa-dri \
 		vulkan-loader>0:graphics/vulkan-loader \
-		xwayland-devel>0:x11-servers/xwayland-devel
+		Xwayland:x11-servers/xwayland
 
-USES=		cargo gl
+USES=		cargo gl xorg
 USE_GITHUB=	yes
 USE_GL=		gbm
+USE_XORG=	pixman
 GH_ACCOUNT=	pop-os
-GH_TAGNAME=	fc2173d
-GH_TUPLE=	pop-os:iced:0.4.2-1768-g6115280d:iced/../${WRKSRC_crate_iced:T}/iced
+GH_TAGNAME=	62afa4c
+GH_TUPLE=	pop-os:iced:0.4.2-1997-gd0ba4985:iced/../${WRKSRC_crate_iced:T}/iced
 CARGO_FEATURES=	--no-default-features # disable systemd
 PLIST_FILES=	bin/${PORTNAME} \
 		share/wayland-sessions/${PORTNAME:S/-comp//}.desktop \

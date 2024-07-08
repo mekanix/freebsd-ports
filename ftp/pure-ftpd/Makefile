@@ -1,5 +1,6 @@
 PORTNAME=	pure-ftpd
 PORTVERSION=	1.0.51
+PORTREVISION=	1
 CATEGORIES=	ftp
 MASTER_SITES=	https://github.com/jedisct1/pure-ftpd/releases/download/${PORTVERSION}/ \
 		https://download.pureftpd.org/pub/pure-ftpd/releases/
@@ -21,7 +22,6 @@ CONFIGURE_ARGS=	--sysconfdir=${PREFIX}/etc \
 		--with-language=${LANGUAGE} --with-paranoidmsg --with-puredb \
 		--with-quotas --with-ratios
 GNU_CONFIGURE=	yes
-GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 USE_RC_SUBR=	pure-ftpd
 
 SUB_FILES=	pkg-message

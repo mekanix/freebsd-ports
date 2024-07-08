@@ -1,3 +1,3 @@
-TIMESTAMP = 1709390334
-SHA256 (pytest_lazy_fixtures-1.0.5.tar.gz) = 066b253a94c249e6d9cdfad465e2503d2219139fb468d8f687243dfde39ab9cb
-SIZE (pytest_lazy_fixtures-1.0.5.tar.gz) = 4989
+TIMESTAMP = 1711466168
+SHA256 (pytest_lazy_fixtures-1.0.7.tar.gz) = 87ef7424dc0229ff9cb72d482f49b7806535c3500641f612c13ddf243c9adacb
+SIZE (pytest_lazy_fixtures-1.0.7.tar.gz) = 6958

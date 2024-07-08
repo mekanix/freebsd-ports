@@ -22,7 +22,6 @@ USE_SDL=	sdl2
 USE_XORG=	x11 xext
 
 GNU_CONFIGURE=	yes
-GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 CONFIGURE_ARGS=	--disable-static \
 		--enable-shared \
 		--with-icondir=${PREFIX}/share/pixmaps
@@ -33,8 +32,6 @@ PLIST?=			${.CURDIR}/pkg-plist
 
 .if !defined(MASTERDIR)
 MASTER_SITES=	http://prdownloads.sourceforge.net/exult/
-EXTRA_PATCHES=	${PATCHDIR}/extra-patch-version.cc \
-		${PATCHDIR}/extra-patch-configure.ac
 .else
 USE_GITHUB=	yes
 .endif

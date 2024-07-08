@@ -1,6 +1,5 @@
 PORTNAME=	pspp
-PORTVERSION=	2.0.0
-PORTREVISION=	1
+PORTVERSION=	2.0.1
 CATEGORIES=	math
 MASTER_SITES=	GNU
 
@@ -19,6 +18,9 @@ LIB_DEPENDS=	libcairo.so:graphics/cairo \
 
 USES=		cpe charsetfix gettext-tools gmake gnome iconv localbase \
 		libtool perl5 pkgconfig python:build readline
+
+BROKEN_FreeBSD_15=	fills disk with endless log of errors
+BROKEN_FreeBSD_14=	fills disk with endless log of errors
 
 CPE_VENDOR=	gnu
 USE_GNOME=	libxml2

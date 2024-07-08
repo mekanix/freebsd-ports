@@ -1,6 +1,6 @@
 PORTNAME=	caldera
 DISTVERSION=	5.0.0
-PORTREVISION=	2
+PORTREVISION=	10
 CATEGORIES=	security python
 
 MAINTAINER=	acm@FreeBSD.org
@@ -19,7 +19,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}aiohttp>0:www/py-aiohttp@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}aiohttp-security>0:security/py-aiohttp-security@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}aiohttp-apispec>0:devel/py-aiohttp-apispec@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}Jinja2>0:devel/py-Jinja2@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}yaml>0:devel/py-yaml@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}pyyaml>=0:devel/py-pyyaml@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}websockets>0:devel/py-websockets@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}sphinx>0:textproc/py-sphinx@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}docutils>0:textproc/py-docutils@${PY_FLAVOR} \
@@ -111,11 +111,14 @@ post-build:
 	@${ECHO} "(!!!) Please upload the cache archive: ${DISTDIR}/${DIST_SUBDIR}/${PORTNAME}-cache-${DISTVERSION}${EXTRACT_SUFX}"
 .else
 MASTER_SITES+=	LOCAL/acm/caldera/:npm_cache
-DISTFILES+=	${PORTNAME}-cache-${DISTVERSION}${EXTRACT_SUFX}:npm_cache
+DISTFILES+=	${PORTNAME}-cache-${DISTVERSION}${EXTRACT_SUFX}:npm_cache \
+		${PORTNAME}-freebsd-logos.tar.gz:npm_cache
 NPM_ARGS=	run build
 
 post-extract:
 	@${MV} ${WRKDIR}/node_modules ${WRKSRC}/plugins/magma/
+	@${MV} ${WRKDIR}/freebsd.red.svg ${WRKSRC}/plugins/magma/src/assets/img/graph/freebsd-icon-privileged.svg
+	@${MV} ${WRKDIR}/freebsd.black.svg ${WRKSRC}/plugins/magma/src/assets/img/graph/freebsd-icon.svg
 	${RM} -R ${WRKSRC}/.github
 	cd ${WRKSRC} && ${RM} .coveragerc .dockerignore .eslintrc.js .flake8 \
 		.git* .pre* .stylelintrc.json Dockerfile

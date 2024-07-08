@@ -1,0 +1,11 @@
+--- pyproject.toml.orig	2024-06-20 17:09:56 UTC
++++ pyproject.toml
+@@ -2,7 +2,7 @@ requires = [
+ requires = [
+     "setuptools",
+     "wheel",
+-    "numpy>=2.0.0",
++    "numpy",
+ ]
+ build-backend = "setuptools.build_meta"
+ 

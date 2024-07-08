@@ -27,6 +27,7 @@
     SUBDIR += bgs
     SUBDIR += bitmap
     SUBDIR += bmpanel2
+    SUBDIR += boomer
     SUBDIR += brisk-menu
     SUBDIR += budgie
     SUBDIR += budgie-desktop
@@ -42,6 +43,7 @@
     SUBDIR += cinnamon-session
     SUBDIR += cl-clx
     SUBDIR += cl-clx-sbcl
+    SUBDIR += clip
     SUBDIR += clipcat
     SUBDIR += cliphist
     SUBDIR += clipman
@@ -205,6 +207,7 @@
     SUBDIR += libfm
     SUBDIR += libfm-extra
     SUBDIR += libfm-qt
+    SUBDIR += libfm-qt6
     SUBDIR += libgnomekbd
     SUBDIR += libinput
     SUBDIR += libmatekbd
@@ -235,6 +238,9 @@
     SUBDIR += linux-nvidia-libs-340
     SUBDIR += linux-nvidia-libs-390
     SUBDIR += linux-nvidia-libs-470
+    SUBDIR += linux-rl9-libxkbcommon
+    SUBDIR += linux-rl9-pixman
+    SUBDIR += linux-rl9-xorg-libs
     SUBDIR += listres
     SUBDIR += lsw
     SUBDIR += luit
@@ -271,7 +277,6 @@
     SUBDIR += mlterm
     SUBDIR += mons
     SUBDIR += mrxvt
-    SUBDIR += multi-aterm
     SUBDIR += mxascii
     SUBDIR += mxico
     SUBDIR += nezd
@@ -282,7 +287,6 @@
     SUBDIR += nvidia-driver-340
     SUBDIR += nvidia-driver-390
     SUBDIR += nvidia-driver-470
-    SUBDIR += nvidia-hybrid-graphics
     SUBDIR += nvidia-secondary-driver
     SUBDIR += nvidia-secondary-driver-390
     SUBDIR += nvidia-settings
@@ -465,6 +469,7 @@
     SUBDIR += wf-shell
     SUBDIR += windowtolayer
     SUBDIR += wl-clipboard
+    SUBDIR += wl-kbptr
     SUBDIR += wl-mirror
     SUBDIR += wlogout
     SUBDIR += wlopm
@@ -475,7 +480,7 @@
     SUBDIR += wmblob
     SUBDIR += wmbutton
     SUBDIR += wmcliphist
-    SUBDIR += wmctrl
+    SUBDIR += wmctrl-fork
     SUBDIR += wmdrawer
     SUBDIR += wmenu
     SUBDIR += wmfocus
@@ -543,7 +548,6 @@
     SUBDIR += xdotool
     SUBDIR += xdpyinfo
     SUBDIR += xdriinfo
-    SUBDIR += xdtm
     SUBDIR += xedit
     SUBDIR += xev
     SUBDIR += xeyes
@@ -658,6 +662,7 @@
     SUBDIR += xvt
     SUBDIR += xwatchwin
     SUBDIR += xwayland-run
+    SUBDIR += xwayland-satellite
     SUBDIR += xwaylandvideobridge
     SUBDIR += xwd
     SUBDIR += xwininfo

@@ -1,5 +1,5 @@
-TIMESTAMP = 1710961855
-SHA256 (go/sysutils_terragrunt/terragrunt-v0.55.18/v0.55.18.mod) = 5e5a7fe1b122e729d47bab0b687655832f26dfe74d813744eac03fa3e1989702
-SIZE (go/sysutils_terragrunt/terragrunt-v0.55.18/v0.55.18.mod) = 11765
-SHA256 (go/sysutils_terragrunt/terragrunt-v0.55.18/v0.55.18.zip) = 28a770673f17aafb0316cdefbbce4d93a39cb6cd3c96b831c0a5d7d6c78211da
-SIZE (go/sysutils_terragrunt/terragrunt-v0.55.18/v0.55.18.zip) = 4803365
+TIMESTAMP = 1719634561
+SHA256 (go/sysutils_terragrunt/terragrunt-v0.59.6/v0.59.6.mod) = f576924041a75ba8704f955a3dc2b87c4ee0d7182bd97dcc1332e8b654788ecb
+SIZE (go/sysutils_terragrunt/terragrunt-v0.59.6/v0.59.6.mod) = 12520
+SHA256 (go/sysutils_terragrunt/terragrunt-v0.59.6/v0.59.6.zip) = 1018bd6e4aa69f392fce12eb2b029057e09c1023cbcffdfac9e004a7a27d6d5a
+SIZE (go/sysutils_terragrunt/terragrunt-v0.59.6/v0.59.6.zip) = 4942454

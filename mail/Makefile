@@ -21,7 +21,6 @@
     SUBDIR += astroid
     SUBDIR += automx
     SUBDIR += autorespond
-    SUBDIR += avenger
     SUBDIR += balsa
     SUBDIR += batv-milter
     SUBDIR += bayespam
@@ -48,6 +47,7 @@
     SUBDIR += claws-mail-bsfilter
     SUBDIR += claws-mail-clamd
     SUBDIR += claws-mail-dillo
+    SUBDIR += claws-mail-fancy
     SUBDIR += claws-mail-fetchinfo
     SUBDIR += claws-mail-gdata
     SUBDIR += claws-mail-keyword_warner
@@ -155,6 +155,7 @@
     SUBDIR += hashcash
     SUBDIR += hbiff
     SUBDIR += heirloom-mailx
+    SUBDIR += hydroxide
     SUBDIR += ifile
     SUBDIR += im
     SUBDIR += imapdedup
@@ -185,6 +186,7 @@
     SUBDIR += libsrs2
     SUBDIR += libsrs_alt
     SUBDIR += libvmime
+    SUBDIR += linux-r7-organizer-pro
     SUBDIR += listadmin
     SUBDIR += lmtp2nntp
     SUBDIR += lookout
@@ -198,6 +200,7 @@
     SUBDIR += mailfront
     SUBDIR += mailgraph
     SUBDIR += mailhog
+    SUBDIR += mailio
     SUBDIR += mailman
     SUBDIR += mailman-exim4
     SUBDIR += mailman-postfix
@@ -244,6 +247,7 @@
     SUBDIR += mls
     SUBDIR += mmh
     SUBDIR += mmr
+    SUBDIR += mox
     SUBDIR += mpop
     SUBDIR += msglint
     SUBDIR += msmtp
@@ -267,6 +271,7 @@
     SUBDIR += nullmailer
     SUBDIR += openarc
     SUBDIR += opendkim
+    SUBDIR += opendkim-devel
     SUBDIR += opendmarc
     SUBDIR += opensmtpd
     SUBDIR += opensmtpd-extras
@@ -599,6 +604,7 @@
     SUBDIR += rubygem-email_reply_parser-discourse
     SUBDIR += rubygem-email_reply_trimmer
     SUBDIR += rubygem-exception_notification
+    SUBDIR += rubygem-extended_email_reply_parser
     SUBDIR += rubygem-gitlab-mail_room
     SUBDIR += rubygem-mail
     SUBDIR += rubygem-mail_room
@@ -616,6 +622,7 @@
     SUBDIR += rubygem-premailer-rails-rails60
     SUBDIR += rubygem-premailer-rails-rails61
     SUBDIR += rubygem-premailer-rails-rails70
+    SUBDIR += rubygem-premailer-rails-rails71
     SUBDIR += rubygem-premailer-rails110-rails70
     SUBDIR += rubygem-rmail
     SUBDIR += rubygem-roadie
@@ -625,6 +632,7 @@
     SUBDIR += rubygem-roadie3
     SUBDIR += rubygem-ruby-qmail
     SUBDIR += rubygem-valid_email
+    SUBDIR += rubygem-valid_email02
     SUBDIR += rubygem-vmail
     SUBDIR += s-nail
     SUBDIR += sa-stats

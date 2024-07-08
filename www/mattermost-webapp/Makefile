@@ -1,11 +1,10 @@
 PORTNAME=	mattermost-webapp
-PORTVERSION=	8.1.11
+PORTVERSION=	9.5.7
 DISTVERSIONPREFIX=	v
 CATEGORIES=	www
 MASTER_SITES=	https://releases.mattermost.com/${PORTVERSION}/
 DISTNAME=	mattermost-${PORTVERSION}-linux-amd64
 
-# implicit-approval+ for decke
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Webapp of Mattermost server
 WWW=		https://mattermost.org/
@@ -23,7 +22,7 @@ USERS=		${MATTERMOSTD_USER}
 GROUPS=		${MATTERMOSTD_GROUP}
 
 PLIST_SUB=	MATTERMOSTD_USER=${MATTERMOSTD_USER} \
-			MATTERMOSTD_GROUP=${MATTERMOSTD_GROUP}
+		MATTERMOSTD_GROUP=${MATTERMOSTD_GROUP}
 
 do-install:
 	${MKDIR} ${STAGEDIR}${WWWDIR}

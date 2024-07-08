@@ -1,5 +1,5 @@
 PORTNAME=	ncdu
-PORTVERSION=	1.19
+PORTVERSION=	1.20
 CATEGORIES=	sysutils
 MASTER_SITES=	https://dev.yorhel.nl/download/
 
@@ -14,7 +14,6 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 USES=		ncurses
 
 GNU_CONFIGURE=	yes
-GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 
 PLIST_FILES=	bin/ncdu \
 		share/man/man1/ncdu.1.gz

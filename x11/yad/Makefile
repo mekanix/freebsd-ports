@@ -1,8 +1,6 @@
 PORTNAME=	yad
-PORTVERSION=	13.0
-PORTREVISION=	1
+PORTVERSION=	14.1
 DISTVERSIONPREFIX=	v
-PORTREVISION=	1
 CATEGORIES=	x11 gnome
 
 MAINTAINER=	danilo@FreeBSD.org
@@ -19,7 +17,6 @@ USES=		autoreconf gettext gnome gmake pkgconfig
 
 USE_GNOME=	cairo gtk30 intltool
 GNU_CONFIGURE=	yes
-GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 CONFIGURE_ENV+=	DATADIRNAME=share
 CONFIGURE_ARGS+=	--with-rgb=${LOCALBASE}/lib/X11/rgb.txt
 GLIB_SCHEMAS=	yad.gschema.xml

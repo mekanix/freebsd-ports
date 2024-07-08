@@ -1,4 +1,4 @@
---- ui/ozone/platform/wayland/ozone_platform_wayland.cc.orig	2024-02-23 21:04:38 UTC
+--- ui/ozone/platform/wayland/ozone_platform_wayland.cc.orig	2024-06-17 12:56:06 UTC
 +++ ui/ozone/platform/wayland/ozone_platform_wayland.cc
 @@ -66,13 +66,13 @@
  #include "ui/events/ozone/layout/stub/stub_keyboard_layout_engine.h"
@@ -34,7 +34,16 @@
      linux_ui_delegate_ =
          std::make_unique<LinuxUiDelegateWayland>(connection_.get());
  #endif
-@@ -514,7 +514,7 @@ class OzonePlatformWayland : public OzonePlatform,
+@@ -343,7 +343,7 @@ class OzonePlatformWayland : public OzonePlatform,
+       properties->supports_global_screen_coordinates =
+           kDefaultScreenCoordinateEnabled;
+ 
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+       // TODO(crbug.com/40800718): Revisit (and maybe remove) once proper
+       // support, probably backed by org.freedesktop.portal.Screenshot.PickColor
+       // API is implemented. Note: this is restricted to Linux Desktop as Lacros
+@@ -536,7 +536,7 @@ class OzonePlatformWayland : public OzonePlatform,
    DrmRenderNodePathFinder path_finder_;
  #endif
  

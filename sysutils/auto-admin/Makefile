@@ -1,12 +1,11 @@
 PORTNAME=	auto-admin
-DISTVERSION=	0.8.0-25
-DISTVERSIONSUFFIX=	-g9cd1f50
-PORTREVISION=	1
+DISTVERSION=	0.8.0-33
+DISTVERSIONSUFFIX=	-g87ddd9c
 CATEGORIES=	sysutils
 
 MAINTAINER=	jwb@FreeBSD.org
 COMMENT=	Portable tools for automating systems management
-WWW=		https://acadix.biz/auto-admin.php
+WWW=		https://github.com/outpaddling/auto-admin
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

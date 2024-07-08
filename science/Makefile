@@ -166,6 +166,7 @@
     SUBDIR += libvdwxc
     SUBDIR += libxc
     SUBDIR += liggghts
+    SUBDIR += linearelasticity
     SUBDIR += linux-zotero
     SUBDIR += luscus
     SUBDIR += m-aneos
@@ -186,6 +187,7 @@
     SUBDIR += metaphysicl
     SUBDIR += minc2
     SUBDIR += mmdb2
+    SUBDIR += mmg
     SUBDIR += mmtf-cpp
     SUBDIR += mol2ps
     SUBDIR += molgif
@@ -230,7 +232,6 @@
     SUBDIR += orthanc-mysql
     SUBDIR += orthanc-postgresql
     SUBDIR += orthanc-webviewer
-    SUBDIR += p5-Algorithm-SVMLight
     SUBDIR += p5-Chemistry-3DBuilder
     SUBDIR += p5-Chemistry-Bond-Find
     SUBDIR += p5-Chemistry-Canonicalize
@@ -279,6 +280,7 @@
     SUBDIR += py-GPy
     SUBDIR += py-GPyOpt
     SUBDIR += py-HepMC3
+    SUBDIR += py-HofstadterTools
     SUBDIR += py-MDAnalysis
     SUBDIR += py-MDAnalysisTests
     SUBDIR += py-OpenFermion
@@ -297,7 +299,6 @@
     SUBDIR += py-asdf
     SUBDIR += py-asdf-standard
     SUBDIR += py-asdf-transform-schemas
-    SUBDIR += py-asdf-unit-schemas
     SUBDIR += py-ase
     SUBDIR += py-atomium
     SUBDIR += py-avogadrolibs
@@ -346,6 +347,7 @@
     SUBDIR += py-gsd
     SUBDIR += py-h5json
     SUBDIR += py-h5py
+    SUBDIR += py-h5pyd
     SUBDIR += py-hiphive
     SUBDIR += py-hoomd-blue
     SUBDIR += py-inequality
@@ -368,6 +370,8 @@
     SUBDIR += py-moltemplate
     SUBDIR += py-mp-api
     SUBDIR += py-mpcontribs-client
+    SUBDIR += py-mplhep
+    SUBDIR += py-mplhep-data
     SUBDIR += py-mrchem
     SUBDIR += py-ncrystal
     SUBDIR += py-netCDF4
@@ -383,6 +387,7 @@
     SUBDIR += py-paida
     SUBDIR += py-paramz
     SUBDIR += py-penaltymodel
+    SUBDIR += py-periodictable
     SUBDIR += py-phono3py
     SUBDIR += py-phonopy
     SUBDIR += py-pupynere
@@ -407,17 +412,6 @@
     SUBDIR += py-pyteomics
     SUBDIR += py-qcelemental
     SUBDIR += py-qcengine
-    SUBDIR += py-qiskit
-    SUBDIR += py-qiskit-aer
-    SUBDIR += py-qiskit-dynamics
-    SUBDIR += py-qiskit-experiments
-    SUBDIR += py-qiskit-finance
-    SUBDIR += py-qiskit-ibm-experiment
-    SUBDIR += py-qiskit-ibm-provider
-    SUBDIR += py-qiskit-ibmq-provider
-    SUBDIR += py-qiskit-nature
-    SUBDIR += py-qiskit-optimization
-    SUBDIR += py-qiskit-terra
     SUBDIR += py-qspin
     SUBDIR += py-quantities
     SUBDIR += py-rmf
@@ -494,7 +488,6 @@
     SUBDIR += spglib
     SUBDIR += spheral
     SUBDIR += step
-    SUBDIR += svmlight
     SUBDIR += tblite
     SUBDIR += teem
     SUBDIR += tfel

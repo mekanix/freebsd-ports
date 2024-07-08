@@ -1,6 +1,6 @@
---- chrome/browser/ui/startup/startup_browser_creator_impl.cc.orig	2024-02-23 21:04:38 UTC
+--- chrome/browser/ui/startup/startup_browser_creator_impl.cc.orig	2024-06-17 12:56:06 UTC
 +++ chrome/browser/ui/startup/startup_browser_creator_impl.cc
-@@ -256,7 +256,7 @@ Browser* StartupBrowserCreatorImpl::OpenTabsInBrowser(
+@@ -233,7 +233,7 @@ Browser* StartupBrowserCreatorImpl::OpenTabsInBrowser(
      // at the state of the MessageLoop.
      Browser::CreateParams params = Browser::CreateParams(profile_, false);
      params.creation_source = Browser::CreationSource::kStartupCreator;

@@ -1,6 +1,7 @@
     COMMENT = Desktop publishing
 
     SUBDIR += R-cran-knitr
+    SUBDIR += R-cran-textshaping
     SUBDIR += R-cran-tinytex
     SUBDIR += a2pdf
     SUBDIR += a2ps
@@ -97,12 +98,16 @@
     SUBDIR += linux-c7-freetype
     SUBDIR += linux-c7-harfbuzz
     SUBDIR += linux-jabref
+    SUBDIR += linux-rl9-cups-libs
+    SUBDIR += linux-rl9-freetype
+    SUBDIR += linux-rl9-harfbuzz
     SUBDIR += lout
     SUBDIR += lprps
     SUBDIR += lyx
     SUBDIR += magicfilter
     SUBDIR += makeindex
     SUBDIR += mftrace
+    SUBDIR += microtex
     SUBDIR += miktex
     SUBDIR += min12xxw
     SUBDIR += mp-a4
@@ -124,7 +129,6 @@
     SUBDIR += p5-XML-ApacheFOP
     SUBDIR += p5-XML-Handler-AxPoint
     SUBDIR += p910nd
-    SUBDIR += panda
     SUBDIR += papersize-default-a4
     SUBDIR += papersize-default-letter
     SUBDIR += paps
@@ -204,6 +208,7 @@
     SUBDIR += rubygem-color-tools
     SUBDIR += rubygem-color_diff
     SUBDIR += rubygem-pdf-core
+    SUBDIR += rubygem-pdf-core09
     SUBDIR += rubygem-pdf-reader
     SUBDIR += rubygem-pdf-writer
     SUBDIR += rubygem-prawn
@@ -218,10 +223,12 @@
     SUBDIR += rubygem-prawn-svg
     SUBDIR += rubygem-prawn-table
     SUBDIR += rubygem-prawn-templates
+    SUBDIR += rubygem-prawn24
     SUBDIR += rubygem-prawn_shapes
     SUBDIR += rubygem-rbpdf
     SUBDIR += rubygem-rbpdf-font
     SUBDIR += rubygem-ttfunk
+    SUBDIR += rubygem-ttfunk17
     SUBDIR += scribus
     SUBDIR += scribus-devel
     SUBDIR += sgf2tex

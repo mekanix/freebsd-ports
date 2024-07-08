@@ -7,7 +7,9 @@ MASTER_SITES=	https://api.yuzu-emu.org/gamedb/?dummy=/:gamedb
 .else
 MASTER_SITES=	LOCAL/jbeich:gamedb
 .endif
+MASTER_SITES+=	https://codeberg.org/TxzK/${PORTNAME}/archive/${GH_TAGNAME}${EXTRACT_SUFX}?dummy=/
 DISTFILES=	${PORTNAME}-s20230424/compatibility_list.json:gamedb
+DISTFILES+=	${DISTNAME}${EXTRACT_SUFX}
 EXTRACT_ONLY=	${DISTFILES:N*\:gamedb:C/\:.*//}
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -48,7 +50,7 @@ qt5_OPTIONS_SLAVE=	QT5
 qt5_OPTIONS_EXCLUDE=	QT6
 qt6_CONFLICTS_INSTALL=	${PORTNAME}-qt5
 
-USE_GITHUB=	yes
+USE_GITHUB=	nodefault
 GH_ACCOUNT=	yuzu-mirror
 GH_TAGNAME=	15e6e48bef
 GH_TUPLE=	yuzu-mirror:mbedtls:v2.16.9-115-g8c88150ca:mbedtls/externals/mbedtls \
@@ -66,6 +68,7 @@ GH_TUPLE=	yuzu-mirror:mbedtls:v2.16.9-115-g8c88150ca:mbedtls/externals/mbedtls \
 
 USES=		cmake:testing elfctl localbase:ldflags pkgconfig sdl ssl
 USE_SDL=	sdl2
+WRKSRC=		${WRKDIR}/${PORTNAME}
 CMAKE_ON=	Boost_USE_STATIC_LIBS
 CMAKE_ON+=	BUNDLE_SPEEX # only used by cubeb tests
 CMAKE_ON+=	CMAKE_DISABLE_FIND_PACKAGE_LLVM # only need Demangle but llvm* is huge
@@ -156,22 +159,5 @@ post-patch:
 post-patch-VAAPI-off:
 	@${REINPLACE_CMD} -i .nova '/pkg_check.*libva/d' \
 		${WRKSRC}/CMakeLists.txt
-
-# XXX Drop after FreeBSD 13.2 EOL around 2024-07-01 (don't forget distinfo)
-.if !exists(/usr/include/c++/v1/__ranges/as_rvalue_view.h) || make(makesum) || make(fetch)
-# XXX Move into separate port and standardize via USES
-GH_TUPLE+=	llvm:llvm-project:llvmorg-16.0.1:libcxx
-CXXFLAGS+=	-nostdinc++ -isystem${WRKDIR}/libcxx_prefix/include/c++/v1
-# Don't link against new libc++ to avoid ABI mismatch in Qt
-#LDFLAGS+=	-nostdlib++ -L${WRKDIR}/libcxx_prefix/lib -l:libc++.a -lcxxrt
-
-pre-configure:	bundled-libcxx
-bundled-libcxx:
-	@${SETENV} ${CONFIGURE_ENV} ${CMAKE_BIN} ${CMAKE_ARGS:M*Ninja*} \
-		-DLIBCXX_INCLUDE_BENCHMARKS:BOOL=OFF \
-		-DCMAKE_INSTALL_PREFIX:PATH=${WRKDIR}/libcxx_prefix \
-		-B ${WRKDIR}/libcxx_build -S ${WRKSRC_libcxx}/libcxx
-	@${DO_MAKE_BUILD:NDESTDIR*} install -C ${WRKDIR}/libcxx_build
-.endif
 
 .include <bsd.port.mk>

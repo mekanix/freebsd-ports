@@ -1,6 +1,5 @@
-PORTNAME=	Flask-Limiter
-PORTVERSION=	3.5.1
-PORTREVISION=	1
+PORTNAME=	flask_limiter
+PORTVERSION=	3.7.0
 CATEGORIES=	www python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -17,7 +16,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}flask>=2:www/py-flask@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}rich>=12,<14:textproc/py-rich@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}typing-extensions>=4:devel/py-typing-extensions@${PY_FLAVOR}
 
-USES=		python:3.7+
+USES=		python
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes

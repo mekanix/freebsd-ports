@@ -3,6 +3,7 @@
     SUBDIR += abcl
     SUBDIR += alchemist.el
     SUBDIR += algol68g
+    SUBDIR += amber
     SUBDIR += angelscript
     SUBDIR += antimony
     SUBDIR += apache-commons-jelly
@@ -12,6 +13,7 @@
     SUBDIR += awka
     SUBDIR += bas2tap
     SUBDIR += basic256
+    SUBDIR += bend
     SUBDIR += bsh
     SUBDIR += bwbasic
     SUBDIR += c
@@ -40,7 +42,6 @@
     SUBDIR += crystal
     SUBDIR += csharp-mode.el
     SUBDIR += cython
-    SUBDIR += cython-devel
     SUBDIR += cython3
     SUBDIR += dhall
     SUBDIR += dlang-tools
@@ -66,6 +67,7 @@
     SUBDIR += erlang-runtime24
     SUBDIR += erlang-runtime25
     SUBDIR += erlang-runtime26
+    SUBDIR += erlang-runtime27
     SUBDIR += erlang-wx
     SUBDIR += execline
     SUBDIR += expect
@@ -93,10 +95,10 @@
     SUBDIR += gcc12-devel
     SUBDIR += gcc13
     SUBDIR += gcc13-devel
+    SUBDIR += gcc14
     SUBDIR += gcc14-devel
-    SUBDIR += gcc48
+    SUBDIR += gcc15-devel
     SUBDIR += gcc6-aux
-    SUBDIR += gcc9
     SUBDIR += gforth
     SUBDIR += ghc
     SUBDIR += ghc810
@@ -119,12 +121,12 @@
     SUBDIR += gnustep-base
     SUBDIR += go
     SUBDIR += go-devel
-    SUBDIR += go119
     SUBDIR += go120
     SUBDIR += go121
     SUBDIR += go122
     SUBDIR += gomacro
     SUBDIR += gprolog
+    SUBDIR += gptscript
     SUBDIR += gravity
     SUBDIR += groovy
     SUBDIR += gscheme
@@ -143,7 +145,6 @@
     SUBDIR += hs-koka
     SUBDIR += hs-unlambda
     SUBDIR += huc
-    SUBDIR += icc
     SUBDIR += inko
     SUBDIR += intel-compute-runtime
     SUBDIR += intercal
@@ -179,6 +180,7 @@
     SUBDIR += linux-dotnet11-runtime
     SUBDIR += linux-dotnet11-sdk
     SUBDIR += linux-j
+    SUBDIR += linux-rl9-python3
     SUBDIR += lua51
     SUBDIR += lua52
     SUBDIR += lua53
@@ -227,7 +229,6 @@
     SUBDIR += ocaml
     SUBDIR += ocaml-autoconf
     SUBDIR += ocaml-camlidl
-    SUBDIR += ocaml-nox11
     SUBDIR += oo2c
     SUBDIR += opencoarrays
     SUBDIR += opensycl
@@ -266,9 +267,9 @@
     SUBDIR += pbasic
     SUBDIR += pcc
     SUBDIR += perl5-devel
-    SUBDIR += perl5.34
     SUBDIR += perl5.36
     SUBDIR += perl5.38
+    SUBDIR += perl5.40
     SUBDIR += petite-chez
     SUBDIR += pfe
     SUBDIR += pharo
@@ -281,6 +282,7 @@
     SUBDIR += php83-extensions
     SUBDIR += picoc
     SUBDIR += picolisp
+    SUBDIR += pkl
     SUBDIR += plexil
     SUBDIR += pocl
     SUBDIR += polyml
@@ -288,6 +290,7 @@
     SUBDIR += prql
     SUBDIR += ptoc
     SUBDIR += purescript
+    SUBDIR += py-dhall
     SUBDIR += py-hy
     SUBDIR += py-lupa
     SUBDIR += py-textX
@@ -306,7 +309,6 @@
     SUBDIR += python38
     SUBDIR += python39
     SUBDIR += qmasm
-    SUBDIR += qscheme
     SUBDIR += quickjs
     SUBDIR += quilc
     SUBDIR += racket
@@ -320,7 +322,7 @@
     SUBDIR += rexx-wrapper
     SUBDIR += rhino
     SUBDIR += rizin
-    SUBDIR += ruby30
+    SUBDIR += rizin-cutter
     SUBDIR += ruby31
     SUBDIR += ruby32
     SUBDIR += ruby33
@@ -360,22 +362,23 @@
     SUBDIR += spl
     SUBDIR += squeak
     SUBDIR += squirrel
+    SUBDIR += starlark-rust
     SUBDIR += swipl
     SUBDIR += tauthon
     SUBDIR += tcbasic
     SUBDIR += tcc
     SUBDIR += tcl-manual
     SUBDIR += tcl-wrapper
-    SUBDIR += tcl85
     SUBDIR += tcl86
     SUBDIR += tcl87
-    SUBDIR += tcl9
+    SUBDIR += tcl90
     SUBDIR += tclX
     SUBDIR += tolua
     SUBDIR += tolua++
     SUBDIR += tuareg-mode.el
     SUBDIR += twelf
     SUBDIR += typstfmt
+    SUBDIR += typstyle
     SUBDIR += ucc
     SUBDIR += urweb
     SUBDIR += v
@@ -389,7 +392,6 @@
     SUBDIR += ypsilon
     SUBDIR += zephir
     SUBDIR += zig
-    SUBDIR += zig-devel
     SUBDIR += zig010
 
 .include <bsd.port.subdir.mk>

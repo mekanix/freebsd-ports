@@ -1,5 +1,5 @@
 PORTNAME=	keybase
-PORTVERSION=	6.2.4
+PORTVERSION=	6.3.1
 DISTVERSIONPREFIX=	v
 PORTREVISION=	2
 CATEGORIES=	security
@@ -21,9 +21,9 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	keybase
 GH_PROJECT=	client
 
+GO_BUILDFLAGS=	-tags production
 GO_MODULE=	github.com/keybase/client/go
 GO_TARGET=	./keybase ./kbfs/kbfsfuse ./kbfs/kbfsgit/git-remote-keybase ./kbfs/kbfstool
-GO_BUILDFLAGS=	-tags production
 WRKSRC_SUBDIR=	go
 
 PLIST_FILES=	bin/git-remote-keybase bin/kbfsfuse bin/kbfstool bin/keybase

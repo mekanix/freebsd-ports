@@ -1,6 +1,6 @@
 PORTNAME=	bacula
 PORTVERSION=	9.6.7
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES?=	sysutils
 MASTER_SITES=	SF/bacula/bacula/${PORTVERSION}
 PKGNAMEPREFIX?=	#
@@ -10,13 +10,16 @@ MAINTAINER=	dvl@FreeBSD.org
 COMMENT?=	Network backup solution (server)
 WWW=		https://www.bacula.org/
 
+DEPRECATED=	Unsupported. Please migrate to bacula15-server
+EXPIRATION_DATE=	2024-09-30
+
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USES+=		cpe libtool readline shebangfix ssl
 SHEBANG_FILES=	src/cats/make_catalog_backup.pl.in
 
-CONFLICTS?=	bacula11-server bacula-server
+CONFLICTS?=	bacula15-server bacula13-server bacula11-server
 
 LIB_DEPENDS+=	liblzo2.so:archivers/lzo2
 
@@ -47,7 +50,7 @@ OPTIONS_SUB=		yes
 
 .if !defined(WITH_CLIENT_ONLY)
 LIB_DEPENDS+=	libbac-${PORTVERSION}.so:sysutils/bacula9-client
-USE_RC_SUBR?=	bacula-dir bacula-sd
+USE_RC_SUBR?=	bacula_dir bacula_sd
 .endif
 
 .if defined(WITH_CLIENT_ONLY)

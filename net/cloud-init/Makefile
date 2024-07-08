@@ -1,5 +1,6 @@
 PORTNAME=	cloud-init
-DISTVERSION=	23.4.1
+DISTVERSION=	24.1.4
+PORTREVISION=	1
 CATEGORIES=	net python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -22,7 +23,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}boto>0:devel/py-boto@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}oauthlib>0:security/py-oauthlib@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pyserial>0:comms/py-pyserial@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}requests>0:www/py-requests@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}yaml>0:devel/py-yaml@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}pyyaml>=0:devel/py-pyyaml@${PY_FLAVOR} \
 		sudo>0:security/sudo
 
 USES=		python shebangfix
@@ -52,6 +53,8 @@ post-install:
 	${MV} ${STAGEDIR}${ETCDIR}/cloud.cfg ${STAGEDIR}${ETCDIR}/cloud.cfg.sample
 	${MV} ${STAGEDIR}${ETCDIR}/cloud.cfg.d/05_logging.cfg ${STAGEDIR}${ETCDIR}/cloud.cfg.d/05_logging.cfg.sample
 	${MV} ${STAGEDIR}${ETCDIR}/cloud.cfg.d/99_freebsd.cfg ${STAGEDIR}${ETCDIR}/cloud.cfg.d/99_freebsd.cfg.sample
-	${REINPLACE_CMD} 's|^.*\.cfg$$|@sample &.sample|' ${_PYTHONPKGLIST}
+	${REINPLACE_CMD} -e 's|^.*\.cfg$$|@sample &.sample|'  \
+		-e 's|${ETCDIR}/clean.d|@dir ${ETCDIR}/clean.d|' \
+		${_PYTHONPKGLIST}
 
 .include <bsd.port.mk>

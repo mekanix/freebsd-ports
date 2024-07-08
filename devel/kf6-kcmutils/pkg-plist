@@ -60,6 +60,10 @@ lib/libexec/kf6/kcmdesktopfilegenerator
 %%QT_QMLDIR%%/org/kde/kcmutils/private/AboutPlugin.qml
 %%QT_QMLDIR%%/org/kde/kcmutils/private/GridDelegateMenu.qml
 %%QT_QMLDIR%%/org/kde/kcmutils/private/GridViewInternal.qml
+%%QT_QMLDIR%%/org/kde/kcmutils/private/kcmutilsprivateqmlplugin.qmltypes
+%%QT_QMLDIR%%/org/kde/kcmutils/private/kde-qmlmodule.version
+%%QT_QMLDIR%%/org/kde/kcmutils/private/libkcmutilsprivateqmlplugin.so
+%%QT_QMLDIR%%/org/kde/kcmutils/private/qmldir
 %%QT_QMLDIR%%/org/kde/kcmutils/qmldir
 share/locale/af/LC_MESSAGES/kcmutils6.mo
 share/locale/ar/LC_MESSAGES/kcmshell6.mo
@@ -68,6 +72,7 @@ share/locale/as/LC_MESSAGES/kcmutils6.mo
 share/locale/ast/LC_MESSAGES/kcmshell6.mo
 share/locale/ast/LC_MESSAGES/kcmutils6.mo
 share/locale/az/LC_MESSAGES/kcmutils6.mo
+share/locale/be/LC_MESSAGES/kcmshell6.mo
 share/locale/be/LC_MESSAGES/kcmutils6.mo
 share/locale/be@latin/LC_MESSAGES/kcmutils6.mo
 share/locale/bg/LC_MESSAGES/kcmutils6.mo
@@ -138,6 +143,7 @@ share/locale/ku/LC_MESSAGES/kcmutils6.mo
 share/locale/lb/LC_MESSAGES/kcmutils6.mo
 share/locale/lt/LC_MESSAGES/kcmshell6.mo
 share/locale/lt/LC_MESSAGES/kcmutils6.mo
+share/locale/lv/LC_MESSAGES/kcmshell6.mo
 share/locale/lv/LC_MESSAGES/kcmutils6.mo
 share/locale/mai/LC_MESSAGES/kcmutils6.mo
 share/locale/mk/LC_MESSAGES/kcmutils6.mo
@@ -176,6 +182,7 @@ share/locale/sr@ijekavian/LC_MESSAGES/kcmutils6.mo
 share/locale/sr@ijekavianlatin/LC_MESSAGES/kcmutils6.mo
 share/locale/sr@latin/LC_MESSAGES/kcmutils6.mo
 share/locale/sv/LC_MESSAGES/kcmutils6.mo
+share/locale/ta/LC_MESSAGES/kcmshell6.mo
 share/locale/ta/LC_MESSAGES/kcmutils6.mo
 share/locale/te/LC_MESSAGES/kcmutils6.mo
 share/locale/tg/LC_MESSAGES/kcmutils6.mo

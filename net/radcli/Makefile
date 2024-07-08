@@ -1,5 +1,5 @@
 PORTNAME=	radcli
-PORTVERSION=	1.3.1
+PORTVERSION=	1.4.0
 MASTER_SITES=	https://github.com/radcli/radcli/releases/download/${PORTVERSION}/
 CATEGORIES=	net
 
@@ -17,7 +17,6 @@ LIB_DEPENDS=	libgnutls.so:security/gnutls \
 USES=		libtool pathfix pkgconfig
 
 GNU_CONFIGURE=	yes
-GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 INSTALL_TARGET=	install-strip
 USE_LDCONFIG=	yes
 

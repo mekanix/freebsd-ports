@@ -1,3 +1,3 @@
-TIMESTAMP = 1708450510
-SHA256 (rubygem/google-cloud-bigtable-2.9.1.gem) = d918ce21e782dd853bf1f96f604ca329847641e936d73dd0b86e0883dc6e872c
-SIZE (rubygem/google-cloud-bigtable-2.9.1.gem) = 94208
+TIMESTAMP = 1715843754
+SHA256 (rubygem/google-cloud-bigtable-2.10.2.gem) = 42ab7bdb23ed7e34fcbf6ff69e31ba435a6f945e725be07b2674cebc2f1a08a5
+SIZE (rubygem/google-cloud-bigtable-2.10.2.gem) = 95232

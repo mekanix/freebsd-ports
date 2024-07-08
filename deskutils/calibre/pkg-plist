@@ -502,6 +502,7 @@ lib/calibre/calibre/ebooks/oeb/polish/utils.py
 lib/calibre/calibre/ebooks/oeb/reader.py
 lib/calibre/calibre/ebooks/oeb/stylizer.py
 lib/calibre/calibre/ebooks/oeb/transforms/__init__.py
+lib/calibre/calibre/ebooks/oeb/transforms/alt_text.py
 lib/calibre/calibre/ebooks/oeb/transforms/cover.py
 lib/calibre/calibre/ebooks/oeb/transforms/data_url.py
 lib/calibre/calibre/ebooks/oeb/transforms/embed_fonts.py
@@ -811,7 +812,6 @@ lib/calibre/calibre/gui2/dialogs/choose_plugin_toolbars.py
 lib/calibre/calibre/gui2/dialogs/comments_dialog.py
 lib/calibre/calibre/gui2/dialogs/confirm_delete.py
 lib/calibre/calibre/gui2/dialogs/confirm_delete_location.py
-lib/calibre/calibre/gui2/dialogs/confirm_delete_location_ui.py
 lib/calibre/calibre/gui2/dialogs/confirm_merge.py
 lib/calibre/calibre/gui2/dialogs/conversion_error.py
 lib/calibre/calibre/gui2/dialogs/conversion_error_ui.py

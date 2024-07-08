@@ -15481,6 +15481,7 @@ share/Geant4/data/G4ENSDFSTATE%%G4ENSDFSTATE_VERSION%%/README
 share/Geant4/data/G4INCL%%G4INCL_VERSION%%/README
 share/Geant4/data/G4INCL%%G4INCL_VERSION%%/table_radius_hfb.dat
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/README.old3
+share/Geant4/data/G4NDL%%G4NDL_VERSION%%/README.old4
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Capture/CrossSection/0_0_Zero.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Capture/CrossSection/1_1_Hydrogen.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Capture/CrossSection/1_2_Hydrogen.z
@@ -15512,9 +15513,7 @@ share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Capture/CrossSection/16_36_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Capture/CrossSection/17_35_Chlorine.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Capture/CrossSection/17_36_Chlorine.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Capture/CrossSection/17_37_Chlorine.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Capture/CrossSection/18_36_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Capture/CrossSection/18_37_Argon.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Capture/CrossSection/18_38_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Capture/CrossSection/18_39_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Capture/CrossSection/18_40_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Capture/CrossSection/18_41_Argon.z
@@ -16109,9 +16108,7 @@ share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Capture/FSMF6/16_34_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Capture/FSMF6/16_35_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Capture/FSMF6/16_36_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Capture/FSMF6/17_36_Chlorine.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Capture/FSMF6/18_36_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Capture/FSMF6/18_37_Argon.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Capture/FSMF6/18_38_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Capture/FSMF6/18_39_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Capture/FSMF6/18_40_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Capture/FSMF6/18_41_Argon.z
@@ -16632,9 +16629,7 @@ share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Elastic/CrossSection/16_36_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Elastic/CrossSection/17_35_Chlorine.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Elastic/CrossSection/17_36_Chlorine.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Elastic/CrossSection/17_37_Chlorine.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Elastic/CrossSection/18_36_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Elastic/CrossSection/18_37_Argon.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Elastic/CrossSection/18_38_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Elastic/CrossSection/18_39_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Elastic/CrossSection/18_40_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Elastic/CrossSection/18_41_Argon.z
@@ -17194,9 +17189,7 @@ share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Elastic/FS/16_36_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Elastic/FS/17_35_Chlorine.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Elastic/FS/17_36_Chlorine.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Elastic/FS/17_37_Chlorine.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Elastic/FS/18_36_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Elastic/FS/18_37_Argon.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Elastic/FS/18_38_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Elastic/FS/18_39_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Elastic/FS/18_40_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Elastic/FS/18_41_Argon.z
@@ -18055,9 +18048,7 @@ share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/CrossSection/16_36_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/CrossSection/17_35_Chlorine.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/CrossSection/17_36_Chlorine.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/CrossSection/17_37_Chlorine.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/CrossSection/18_36_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/CrossSection/18_37_Argon.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/CrossSection/18_38_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/CrossSection/18_39_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/CrossSection/18_40_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/CrossSection/18_41_Argon.z
@@ -18613,9 +18604,7 @@ share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F01/16_36_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F01/17_35_Chlorine.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F01/17_36_Chlorine.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F01/17_37_Chlorine.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F01/18_36_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F01/18_37_Argon.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F01/18_38_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F01/18_39_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F01/18_40_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F01/18_41_Argon.z
@@ -19161,9 +19150,7 @@ share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F02/16_34_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F02/16_35_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F02/16_36_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F02/17_36_Chlorine.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F02/18_36_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F02/18_37_Argon.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F02/18_38_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F02/18_39_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F02/18_41_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F02/19_39_Potassium.z
@@ -19514,7 +19501,6 @@ share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F03/16_35_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F03/16_36_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F03/17_36_Chlorine.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F03/18_37_Argon.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F03/18_38_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F03/18_39_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F03/18_41_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F03/19_39_Potassium.z
@@ -19833,9 +19819,7 @@ share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F04/16_36_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F04/17_35_Chlorine.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F04/17_36_Chlorine.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F04/17_37_Chlorine.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F04/18_36_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F04/18_37_Argon.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F04/18_38_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F04/18_39_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F04/18_40_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F04/18_41_Argon.z
@@ -20369,9 +20353,7 @@ share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F05/16_35_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F05/16_36_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F05/17_36_Chlorine.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F05/17_37_Chlorine.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F05/18_36_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F05/18_37_Argon.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F05/18_38_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F05/18_39_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F05/18_40_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F05/18_41_Argon.z
@@ -20891,9 +20873,7 @@ share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F06/16_36_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F06/17_35_Chlorine.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F06/17_36_Chlorine.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F06/17_37_Chlorine.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F06/18_36_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F06/18_37_Argon.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F06/18_38_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F06/18_39_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F06/18_40_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F06/18_41_Argon.z
@@ -21355,9 +21335,7 @@ share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F08/16_34_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F08/16_35_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F08/16_36_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F08/17_36_Chlorine.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F08/18_36_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F08/18_37_Argon.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F08/18_38_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F08/18_39_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F08/18_41_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F08/19_39_Potassium.z
@@ -22002,9 +21980,7 @@ share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F10/16_36_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F10/17_35_Chlorine.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F10/17_36_Chlorine.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F10/17_37_Chlorine.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F10/18_36_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F10/18_37_Argon.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F10/18_38_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F10/18_39_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F10/18_40_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F10/18_41_Argon.z
@@ -22469,9 +22445,7 @@ share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F11/16_34_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F11/16_35_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F11/16_36_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F11/17_36_Chlorine.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F11/18_36_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F11/18_37_Argon.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F11/18_38_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F11/18_39_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F11/18_41_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F11/19_39_Potassium.z
@@ -22774,9 +22748,7 @@ share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F13/16_36_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F13/17_35_Chlorine.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F13/17_36_Chlorine.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F13/17_37_Chlorine.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F13/18_36_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F13/18_37_Argon.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F13/18_38_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F13/18_39_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F13/18_41_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F13/19_39_Potassium.z
@@ -23156,9 +23128,7 @@ share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F14/16_34_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F14/16_35_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F14/16_36_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F14/17_36_Chlorine.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F14/18_36_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F14/18_37_Argon.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F14/18_38_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F14/18_39_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F14/18_41_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F14/19_39_Potassium.z
@@ -23501,9 +23471,7 @@ share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F15/16_34_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F15/16_35_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F15/16_36_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F15/17_36_Chlorine.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F15/18_36_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F15/18_37_Argon.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F15/18_38_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F15/18_39_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F15/18_41_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F15/19_39_Potassium.z
@@ -24104,9 +24072,7 @@ share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F19/16_34_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F19/16_35_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F19/16_36_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F19/17_36_Chlorine.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F19/18_36_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F19/18_37_Argon.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F19/18_38_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F19/18_39_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F19/18_41_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F19/19_39_Potassium.z
@@ -24772,9 +24738,7 @@ share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F21/16_34_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F21/16_35_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F21/16_36_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F21/17_36_Chlorine.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F21/18_36_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F21/18_37_Argon.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F21/18_38_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F21/18_39_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F21/18_41_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F21/19_39_Potassium.z
@@ -25076,9 +25040,7 @@ share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F22/16_33_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F22/16_34_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F22/16_35_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F22/17_36_Chlorine.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F22/18_36_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F22/18_37_Argon.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F22/18_38_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F22/18_39_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F22/18_41_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F22/19_39_Potassium.z
@@ -25355,9 +25317,7 @@ share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F23/16_36_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F23/17_35_Chlorine.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F23/17_36_Chlorine.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F23/17_37_Chlorine.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F23/18_36_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F23/18_37_Argon.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F23/18_38_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F23/18_39_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F23/18_40_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F23/18_41_Argon.z
@@ -25841,9 +25801,7 @@ share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F24/16_36_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F24/17_35_Chlorine.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F24/17_36_Chlorine.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F24/17_37_Chlorine.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F24/18_36_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F24/18_37_Argon.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F24/18_38_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F24/18_39_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F24/18_40_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F24/18_41_Argon.z
@@ -26284,9 +26242,7 @@ share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F25/16_36_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F25/17_35_Chlorine.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F25/17_36_Chlorine.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F25/17_37_Chlorine.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F25/18_36_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F25/18_37_Argon.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F25/18_38_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F25/18_39_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F25/18_40_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F25/18_41_Argon.z
@@ -26714,9 +26670,7 @@ share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F26/16_34_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F26/16_35_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F26/16_36_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F26/17_36_Chlorine.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F26/18_36_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F26/18_37_Argon.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F26/18_38_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F26/18_39_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F26/18_40_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F26/18_41_Argon.z
@@ -27124,9 +27078,7 @@ share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F27/16_36_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F27/17_35_Chlorine.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F27/17_36_Chlorine.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F27/17_37_Chlorine.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F27/18_36_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F27/18_37_Argon.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F27/18_38_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F27/18_39_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F27/18_40_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F27/18_41_Argon.z
@@ -27602,9 +27554,7 @@ share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F28/16_34_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F28/16_35_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F28/16_36_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F28/17_36_Chlorine.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F28/18_36_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F28/18_37_Argon.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F28/18_38_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F28/18_39_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F28/18_41_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F28/19_39_Potassium.z
@@ -27866,7 +27816,6 @@ share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F29/10_20_Neon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F29/10_21_Neon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F29/11_22_Sodium.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F29/13_26_Aluminum.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F29/18_36_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F29/18_37_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F29/19_40_Potassium.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F29/20_40_Calcium.z
@@ -27902,9 +27851,7 @@ share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F30/16_35_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F30/16_36_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F30/17_35_Chlorine.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F30/17_36_Chlorine.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F30/18_36_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F30/18_37_Argon.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F30/18_38_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F30/18_39_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F30/18_41_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F30/19_39_Potassium.z
@@ -28241,9 +28188,7 @@ share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F31/16_35_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F31/16_36_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F31/17_35_Chlorine.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F31/17_36_Chlorine.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F31/18_36_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F31/18_37_Argon.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F31/18_38_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F31/18_39_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F31/18_41_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F31/19_39_Potassium.z
@@ -28555,9 +28500,7 @@ share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F34/16_34_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F34/16_35_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F34/16_36_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F34/17_36_Chlorine.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F34/18_36_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F34/18_37_Argon.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F34/18_38_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F34/18_39_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F34/18_41_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F34/19_39_Potassium.z
@@ -28819,9 +28762,7 @@ share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F35/16_34_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F35/16_35_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F35/16_36_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F35/17_36_Chlorine.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F35/18_36_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F35/18_37_Argon.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F35/18_38_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F35/18_39_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F35/18_41_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F35/19_39_Potassium.z
@@ -29078,9 +29019,7 @@ share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F36/16_34_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F36/16_35_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F36/16_36_Sulfur.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F36/17_36_Chlorine.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F36/18_36_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F36/18_37_Argon.z
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F36/18_38_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F36/18_39_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F36/18_41_Argon.z
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/F36/19_39_Potassium.z
@@ -29376,9 +29315,7 @@ share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/Gammas/z17.a39
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/Gammas/z17.a40
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/Gammas/z18.a34
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/Gammas/z18.a35
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/Gammas/z18.a36
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/Gammas/z18.a37
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/Gammas/z18.a38
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/Gammas/z18.a39
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/Gammas/z18.a40
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/Inelastic/Gammas/z18.a41
@@ -30961,8 +30898,6 @@ share/Geant4/data/G4NDL%%G4NDL_VERSION%%/IsotopeProduction/CrossSection/16_34_Su
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/IsotopeProduction/CrossSection/16_36_Sulfur
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/IsotopeProduction/CrossSection/17_35_Chlorine
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/IsotopeProduction/CrossSection/17_37_Chlorine
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/IsotopeProduction/CrossSection/18_36_Argon
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/IsotopeProduction/CrossSection/18_38_Argon
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/IsotopeProduction/CrossSection/18_40_Argon
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/IsotopeProduction/CrossSection/19_39_Potassium
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/IsotopeProduction/CrossSection/19_40_Potassium
@@ -31254,8 +31189,6 @@ share/Geant4/data/G4NDL%%G4NDL_VERSION%%/JENDL_HE/neutron/Elastic/CrossSection/1
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/JENDL_HE/neutron/Elastic/CrossSection/14_30_Silicon
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/JENDL_HE/neutron/Elastic/CrossSection/17_35_Chlorine
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/JENDL_HE/neutron/Elastic/CrossSection/17_37_Chlorine
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/JENDL_HE/neutron/Elastic/CrossSection/18_36_Argon
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/JENDL_HE/neutron/Elastic/CrossSection/18_38_Argon
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/JENDL_HE/neutron/Elastic/CrossSection/18_40_Argon
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/JENDL_HE/neutron/Elastic/CrossSection/19_39_Potassium
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/JENDL_HE/neutron/Elastic/CrossSection/19_41_Potassium
@@ -31344,8 +31277,6 @@ share/Geant4/data/G4NDL%%G4NDL_VERSION%%/JENDL_HE/neutron/Inelastic/CrossSection
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/JENDL_HE/neutron/Inelastic/CrossSection/14_30_Silicon
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/JENDL_HE/neutron/Inelastic/CrossSection/17_35_Chlorine
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/JENDL_HE/neutron/Inelastic/CrossSection/17_37_Chlorine
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/JENDL_HE/neutron/Inelastic/CrossSection/18_36_Argon
-share/Geant4/data/G4NDL%%G4NDL_VERSION%%/JENDL_HE/neutron/Inelastic/CrossSection/18_38_Argon
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/JENDL_HE/neutron/Inelastic/CrossSection/18_40_Argon
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/JENDL_HE/neutron/Inelastic/CrossSection/19_39_Potassium
 share/Geant4/data/G4NDL%%G4NDL_VERSION%%/JENDL_HE/neutron/Inelastic/CrossSection/19_41_Potassium

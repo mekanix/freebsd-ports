@@ -1,6 +1,15 @@
---- chrome/browser/password_manager/chrome_password_manager_client.cc.orig	2024-02-25 20:22:18 UTC
+--- chrome/browser/password_manager/chrome_password_manager_client.cc.orig	2024-06-22 08:49:42 UTC
 +++ chrome/browser/password_manager/chrome_password_manager_client.cc
-@@ -674,7 +674,7 @@ void ChromePasswordManagerClient::NotifyUserCredential
+@@ -487,7 +487,7 @@ bool ChromePasswordManagerClient::ShowKeyboardReplacin
+ 
+ bool ChromePasswordManagerClient::CanUseBiometricAuthForFilling(
+     device_reauth::DeviceAuthenticator* authenticator) {
+-#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   if (!GetLocalStatePrefs() || !GetPrefs() || !authenticator) {
+     return false;
+   }
+@@ -711,7 +711,7 @@ void ChromePasswordManagerClient::NotifyUserCredential
  }
  
  void ChromePasswordManagerClient::NotifyKeychainError() {

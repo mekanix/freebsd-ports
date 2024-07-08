@@ -1,6 +1,6 @@
 PORTNAME=	spidermonkey
 DISTVERSION=	91.13.0
-PORTREVISION=	17
+PORTREVISION=	21
 CATEGORIES=	lang
 MASTER_SITES=	MOZILLA/firefox/releases/${DISTVERSION}esr/source
 PKGNAMESUFFIX=	${SP_VER}
@@ -64,25 +64,13 @@ CONFIGURE_ENV+=	LLVM_CONFIG=llvm-config${LLVM_VERSION} \
 
 .if ${ARCH} == amd64
 CONFIGURE_TARGET=	x86_64-portbld-freebsd${OSREL}
-.elif ${ARCH} == powerpc
-EXTRA_PATCHES=	${FILESDIR}/extra-patch-config_makefiles_rust.mk
 .endif
 
-# Require newer Clang than what's in base system unless user opted out
-# or the base system is new enough.
 .if ${CHOSEN_COMPILER_TYPE} == gcc
 CONFIGURE_ENV+=	LLVM_CONFIG=llvm-config${LLVM_DEFAULT} \
 		LLVM_OBJDUMP=llvm-objdump${LLVM_DEFAULT}
 BUILD_DEPENDS+=	${LOCALBASE}/bin/llvm-objdump${LLVM_DEFAULT}:devel/llvm${LLVM_DEFAULT}
 USE_GCC=	yes
-.elif ${CC} == cc && ${CXX} == c++ && exists(/usr/lib/libc++.so) && \
-	${COMPILER_VERSION} < 80
-CPP=		${LOCALBASE}/bin/clang-cpp${LLVM_DEFAULT}
-CC=		${LOCALBASE}/bin/clang${LLVM_DEFAULT}
-CXX=		${LOCALBASE}/bin/clang++${LLVM_DEFAULT}
-CONFIGURE_ENV+=	LLVM_CONFIG=llvm-config${LLVM_DEFAULT} \
-		LLVM_OBJDUMP=llvm-objdump${LLVM_DEFAULT}
-BUILD_DEPENDS+=	${LOCALBASE}/bin/clang${LLVM_DEFAULT}:devel/llvm${LLVM_DEFAULT}
 .endif
 
 post-patch:

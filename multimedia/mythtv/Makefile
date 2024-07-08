@@ -1,6 +1,7 @@
 PORTNAME=	mythtv
 DISTVERSIONPREFIX=	v
 DISTVERSION=	34.0
+PORTREVISION=	2
 PORTEPOCH=	1
 CATEGORIES=	multimedia
 
@@ -104,13 +105,14 @@ OPTIONS_DEFAULT=	BINDINGS HDHOMERUN VDPAU
 OPTIONS_SUB=		yes
 
 BINDINGS_DESC=		Perl and Python bindings
-BINDINGS_BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}mysqlclient>=0:databases/py-mysqlclient@${PY_FLAVOR} \
+BINDINGS_BUILD_DEPENDS=	${PY_SETUPTOOLS} \
+			${PYTHON_PKGNAMEPREFIX}mysqlclient>=0:databases/py-mysqlclient@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}future>=0:devel/py-future@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}lxml>=0:devel/py-lxml@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}requests>=0:www/py-requests@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}simplejson>=0:devel/py-simplejson@${PY_FLAVOR} \
 			p5-DBI>=0:databases/p5-DBI \
-			p5-DBD-mysql>0:databases/p5-DBD-mysql \
+			${DBD_MYSQL} \
 			p5-Net-UPnP>=0:multimedia/p5-Net-UPnP \
 			p5-IO-Socket-INET6>=2.51:net/p5-IO-Socket-INET6 \
 			p5-XML-Simple>=0:textproc/p5-XML-Simple \
@@ -123,7 +125,7 @@ BINDINGS_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}mysqlclient>=1.2.2:databases/py-mys
 			${PYTHON_PKGNAMEPREFIX}requests-cache>0:www/py-requests-cache@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}simplejson>=3:devel/py-simplejson@${PY_FLAVOR} \
 			p5-DBI>=0:databases/p5-DBI \
-			p5-DBD-mysql>0:databases/p5-DBD-mysql \
+			${DBD_MYSQL} \
 			p5-Net-UPnP>=0:multimedia/p5-Net-UPnP \
 			p5-IO-Socket-INET6>=2.51:net/p5-IO-Socket-INET6 \
 			p5-XML-Simple>=0:textproc/p5-XML-Simple \
@@ -131,6 +133,7 @@ BINDINGS_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}mysqlclient>=1.2.2:databases/py-mys
 			p5-LWP-UserAgent-Determined>=0:www/p5-LWP-UserAgent-Determined
 BINDINGS_CONFIGURE_ON=	--python="${PYTHON_CMD}" --with-bindings=perl,python
 BINDINGS_CONFIGURE_OFF=	--without-bindings=perl,python
+BINDINGS_USES=		mysql
 
 HDHOMERUN_DESC=		Native support for HDHomeRun network tuners
 HDHOMERUN_LIB_DEPENDS=	libhdhomerun.so:multimedia/libhdhomerun

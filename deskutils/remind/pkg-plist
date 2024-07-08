@@ -22,6 +22,7 @@ share/pixmaps/tkremind.png
 %%DATADIR%%/holidays/gr.rem
 %%DATADIR%%/holidays/ie.rem
 %%DATADIR%%/holidays/jewish.rem
+%%DATADIR%%/holidays/pt.rem
 %%DATADIR%%/holidays/us.rem
 %%DATADIR%%/lang/auto.rem
 %%DATADIR%%/lang/ca.rem
@@ -39,5 +40,6 @@ share/pixmaps/tkremind.png
 %%DATADIR%%/lang/pl.rem
 %%DATADIR%%/lang/pt.rem
 %%DATADIR%%/lang/ro.rem
+%%DATADIR%%/moonphases.rem
 %%DATADIR%%/seasons.rem
 %%DATADIR%%/site/README

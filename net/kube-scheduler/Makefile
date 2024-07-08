@@ -1,7 +1,7 @@
 PORTNAME=	kube-scheduler
 PORTVERSION=	1.27.2
-PORTREVISION=	4
 DISTVERSIONPREFIX=	v
+PORTREVISION=	9
 CATEGORIES=	net
 
 MAINTAINER=	loic.blot@unix-experience.fr

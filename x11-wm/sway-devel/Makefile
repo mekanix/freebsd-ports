@@ -1,12 +1,8 @@
 PORTNAME=	sway
-DISTVERSION=	1.9-103 # git rev-list --count 1.9..
-DISTVERSIONSUFFIX=	-g2e951163c
+DISTVERSION=	1.9-149 # git rev-list --count 1.9..
+DISTVERSIONSUFFIX=	-g5d237679
 CATEGORIES=	x11-wm wayland
 PKGNAMESUFFIX=	-devel
-
-PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
-PATCHFILES+=	15575bf1c085.patch:-p1 # https://github.com/swaywm/sway/pull/5090
-PATCHFILES+=	1f1c83e83a1a.patch:-p1 # https://github.com/swaywm/sway/pull/5090
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	i3-compatible Wayland compositor (development snapshot)
@@ -23,7 +19,7 @@ LIB_DEPENDS=	libjson-c.so:devel/json-c \
 		libpcre2-8.so:devel/pcre2 \
 		libdrm.so:graphics/libdrm \
 		libwayland-egl.so:graphics/wayland \
-		libwlroots.so:x11-toolkits/wlroots \
+		libwlroots-0.18.so:x11-toolkits/wlroots-devel \
 		libinput.so:x11/libinput \
 		libxkbcommon.so:x11/libxkbcommon
 
@@ -55,7 +51,6 @@ SWAYBG_RUN_DEPENDS=	swaybg:x11/swaybg
 
 X11_USE=		XORG=xcb
 X11_LIB_DEPENDS=	libxcb-icccm.so:x11/xcb-util-wm
-X11_MESON_ENABLED=	xwayland
 
 post-patch:
 # Let @sample handle default files under etc/
@@ -66,5 +61,4 @@ post-patch:
 		-e '/project_version/s/@0@/${DISTVERSIONFULL}/' \
 		${WRKSRC}/meson.build
 
-.include "${.CURDIR:H:H}/x11-toolkits/wlroots-devel/override.mk"
 .include <bsd.port.mk>

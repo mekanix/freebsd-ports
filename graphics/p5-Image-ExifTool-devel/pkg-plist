@@ -46,6 +46,7 @@
 %%PERL5_MAN3%%/Image::ExifTool::GE.3.gz
 %%PERL5_MAN3%%/Image::ExifTool::GIF.3.gz
 %%PERL5_MAN3%%/Image::ExifTool::GIMP.3.gz
+%%PERL5_MAN3%%/Image::ExifTool::GM.3.gz
 %%PERL5_MAN3%%/Image::ExifTool::GPS.3.gz
 %%PERL5_MAN3%%/Image::ExifTool::GeoTiff.3.gz
 %%PERL5_MAN3%%/Image::ExifTool::Geolocation.3.gz
@@ -278,6 +279,7 @@
 %%SITE_PERL%%/Image/ExifTool/GE.pm
 %%SITE_PERL%%/Image/ExifTool/GIF.pm
 %%SITE_PERL%%/Image/ExifTool/GIMP.pm
+%%SITE_PERL%%/Image/ExifTool/GM.pm
 %%SITE_PERL%%/Image/ExifTool/GPS.pm
 %%SITE_PERL%%/Image/ExifTool/GeoTiff.pm
 %%SITE_PERL%%/Image/ExifTool/Geolocation.dat

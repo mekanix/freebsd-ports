@@ -1,4 +1,4 @@
---- content/browser/renderer_host/render_widget_host_view_aura.cc.orig	2024-02-25 20:22:18 UTC
+--- content/browser/renderer_host/render_widget_host_view_aura.cc.orig	2024-06-22 08:49:42 UTC
 +++ content/browser/renderer_host/render_widget_host_view_aura.cc
 @@ -120,7 +120,7 @@
  #include "ui/gfx/gdi_util.h"
@@ -9,7 +9,7 @@
  #include "content/browser/accessibility/browser_accessibility_auralinux.h"
  #include "ui/base/ime/linux/text_edit_command_auralinux.h"
  #include "ui/base/ime/text_input_flags.h"
-@@ -458,7 +458,7 @@ gfx::NativeViewAccessible RenderWidgetHostViewAura::Ge
+@@ -469,7 +469,7 @@ gfx::NativeViewAccessible RenderWidgetHostViewAura::Ge
      return ToBrowserAccessibilityWin(manager->GetBrowserAccessibilityRoot())
          ->GetCOM();
  
@@ -18,8 +18,8 @@
    BrowserAccessibilityManager* manager =
        host()->GetOrCreateRootBrowserAccessibilityManager();
    if (manager && manager->GetBrowserAccessibilityRoot())
-@@ -1696,7 +1696,7 @@ bool RenderWidgetHostViewAura::ShouldDoLearning() {
-   return GetTextInputManager() && GetTextInputManager()->should_do_learning();
+@@ -1730,7 +1730,7 @@ bool RenderWidgetHostViewAura::ShouldDoLearning() {
+   return host() && host()->delegate() && host()->delegate()->ShouldDoLearning();
  }
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
@@ -27,7 +27,7 @@
  bool RenderWidgetHostViewAura::SetCompositionFromExistingText(
      const gfx::Range& range,
      const std::vector<ui::ImeTextSpan>& ui_ime_text_spans) {
-@@ -2540,7 +2540,7 @@ bool RenderWidgetHostViewAura::NeedsInputGrab() {
+@@ -2561,7 +2561,7 @@ bool RenderWidgetHostViewAura::NeedsInputGrab() {
  }
  
  bool RenderWidgetHostViewAura::NeedsMouseCapture() {
@@ -36,7 +36,7 @@
    return NeedsInputGrab();
  #else
    return false;
-@@ -2723,7 +2723,7 @@ void RenderWidgetHostViewAura::ForwardKeyboardEventWit
+@@ -2745,7 +2745,7 @@ void RenderWidgetHostViewAura::ForwardKeyboardEventWit
    if (!target_host)
      return;
  

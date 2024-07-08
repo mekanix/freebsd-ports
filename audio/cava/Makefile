@@ -1,6 +1,10 @@
 PORTNAME=	cava
 DISTVERSION=	0.10.1
+PORTREVISION=	2
 CATEGORIES=	audio
+
+PATCH_SITES=    https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
+PATCHFILES=     e23ebaf0a9d87cdfe0fe57c40722a66411a18a21.patch:-p1 # include stdlib.h in config.c; https://github.com/karlstav/cava/issues/560
 
 MAINTAINER=	vendion@gmail.com
 COMMENT=	Cross-platform Audio Visualizer
@@ -23,6 +27,7 @@ CONFIGURE_ARGS=	--disable-input-alsa \
 PLIST_FILES=	bin/cava
 PORTDOCS=	README.md
 PORTEXAMPLES=	config
+SUB_FILES=	pkg-message
 
 OPTIONS_DEFINE=		DOCS EXAMPLES VT
 OPTIONS_DEFAULT=	GLSL JACK NCURSES OSS PORTAUDIO PULSEAUDIO SDL SNDIO VT

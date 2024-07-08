@@ -1,5 +1,6 @@
 PORTNAME?=	mariadb
-PORTVERSION=	10.11.7
+PORTVERSION=	10.11.8
+PORTREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	https://mirror.nodesdirect.com/${SITESDIR}/ \
 		https://mirror.one.com/${SITESDIR}/ \
@@ -10,7 +11,6 @@ MASTER_SITES=	https://mirror.nodesdirect.com/${SITESDIR}/ \
 		https://ftp.ubuntu-tw.org/mirror/${SITESDIR}/ \
 		https://mirror.kku.ac.th/${SITESDIR}/ \
 		https://espejito.fder.edu.uy/${SITESDIR}/ \
-		https://mirror1.cl.netactuate.com/${SITESDIR}/ \
 		https://ftp.osuosl.org/pub/${SITESDIR}/ \
 		https://downloads.mariadb.org/rest-api/mariadb/${PORTVERSION}/
 PKGNAMESUFFIX?=	1011-server
@@ -180,7 +180,7 @@ CONNECT_EXTRA_USE=		gnome=libxml2
 CONNECT_EXTRA_USES=		gnome
 CONNECT_EXTRA_CMAKE_BOOL=	CONNECT_WITH_LIBXML2 CONNECT_WITH_ODBC
 GSSAPI_NONE_VARS=	disabled_plugins+=AUTH_GSSAPI
-HASHICORP_VAULT_CMAKE_OFF=	-DPLUGIN_HASHICORP_KEY_MANAGEMENT=OFF
+HASHICORP_VAULT_CMAKE_OFF=	-DPLUGIN_HASHICORP_KEY_MANAGEMENT=NO
 HASHICORP_VAULT_LIB_DEPENDS=	libcurl.so:ftp/curl
 LZO_CMAKE_ON=		-DWITH_INNODB_LZO=ON
 LZO_CMAKE_OFF=		-DWITH_INNODB_LZO=OFF
@@ -228,12 +228,6 @@ CFLAGS+=	-Wno-incompatible-function-pointer-types
 .if ${ARCH} != amd64 && ${ARCH} != aarch64
 PLIST_SUB+=	WSREP="@comment "
 .endif
-
-#.if ${ARCH} == i386
-#USE_GCC=	9
-#CFLAGS+=	-DHAVE_GCC_C11_ATOMICS -latomic -DUSE_NEW_READLINE_INTERFACE
-#CXXFLAGS+=	-fpermissive
-#.endif
 
 post-patch:
 .if ${OPSYS} == DragonFly

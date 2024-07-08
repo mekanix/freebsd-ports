@@ -1,6 +1,7 @@
 PORTNAME=	git-credential-gopass
-PORTVERSION=	1.15.12
 DISTVERSIONPREFIX=	v
+DISTVERSION=	1.15.13
+PORTREVISION=	4
 CATEGORIES=	security
 
 MAINTAINER=	ehaupt@FreeBSD.org
@@ -9,10 +10,6 @@ WWW=		https://github.com/gopasspw/git-credential-gopass
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
-
-# port fails to fetch even though makesum works without any checksum
-# changes, this is currently under investigation
-BROKEN=		does not fetch
 
 USES=		go:1.22,modules
 USE_GITHUB=	yes

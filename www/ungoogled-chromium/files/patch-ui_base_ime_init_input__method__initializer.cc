@@ -1,4 +1,4 @@
---- ui/base/ime/init/input_method_initializer.cc.orig	2024-02-25 20:22:18 UTC
+--- ui/base/ime/init/input_method_initializer.cc.orig	2024-05-23 20:04:36 UTC
 +++ ui/base/ime/init/input_method_initializer.cc
 @@ -10,7 +10,7 @@
  #include "build/chromeos_buildflags.h"

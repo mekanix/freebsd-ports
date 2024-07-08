@@ -72,6 +72,8 @@
     SUBDIR += libzip
     SUBDIR += libzippp
     SUBDIR += linux-c7-lz4
+    SUBDIR += linux-rl9-brotli
+    SUBDIR += linux-rl9-lz4
     SUBDIR += lizard
     SUBDIR += lrzip
     SUBDIR += lua-lzlib
@@ -83,7 +85,6 @@
     SUBDIR += lziprecover
     SUBDIR += lzlib
     SUBDIR += lzma
-    SUBDIR += lzmalib
     SUBDIR += lzo2
     SUBDIR += lzop
     SUBDIR += lzsa
@@ -178,6 +179,7 @@
     SUBDIR += ppunpack
     SUBDIR += pxz
     SUBDIR += py-acefile
+    SUBDIR += py-bitshuffle
     SUBDIR += py-blosc2
     SUBDIR += py-borgbackup
     SUBDIR += py-borgbackup11
@@ -271,12 +273,10 @@
     SUBDIR += urbackup-server
     SUBDIR += v1541commander
     SUBDIR += vbz-compression
-    SUBDIR += xar
     SUBDIR += xarchive
     SUBDIR += xarchiver
     SUBDIR += xdms
     SUBDIR += xmill
-    SUBDIR += xpk
     SUBDIR += zchunk
     SUBDIR += zip
     SUBDIR += zipmix

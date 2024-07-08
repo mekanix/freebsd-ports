@@ -1,11 +1,11 @@
 PORTNAME=	slurm
-DISTVERSION=	23.11.1
+DISTVERSION=	23.11.7
 PORTREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	https://download.schedmd.com/slurm/
 PKGNAMESUFFIX=	-wlm
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	Simple Linux Utility for Resource Management
 WWW=		https://slurm.schedmd.com/
 
@@ -45,6 +45,7 @@ INSTALL_TARGET=	install-strip
 TEST_TARGET=	check
 PLIST_SUB=	PORTVERSION="${DISTVERSION}" VER="${DISTVERSION:R}"
 SHEBANG_FILES=	doc/html/shtml2html.py doc/man/man2html.py
+PORTDOCS=	*
 
 OPTIONS_DEFINE=		CURL DOCS GUI HDF5 HWLOC IPMI RRD
 OPTIONS_DEFAULT=	HDF5 HWLOC
@@ -85,8 +86,7 @@ RRD_CONFIGURE_WITH=	rrdtool
 
 # FreeBSD Infiniband support is still experimental
 # slurmrestd does not build on FreeBSD
-CONFIGURE_ARGS=	--without-ofed --disable-slurmrestd	\
-		--with-mysql_config=${LOCALBASE}/bin	\
+CONFIGURE_ARGS=	--disable-slurmrestd --with-mysql_config=${LOCALBASE}/bin \
 		--docdir=${DOCSDIR} --htmldir=${DOCSDIR}
 
 CFLAGS+=	-I${WRKSRC}/slurm -I${LOCALBASE}/include	\
@@ -119,6 +119,8 @@ PROC2FIX=	common/callerid.c common/fd.c common/fetch_config.c	\
 LLD2FIX=	api plugins/openapi sacctmgr sackd scontrol scrontab scrun	\
 		slurmctld slurmd/slurmd squeue
 
+.include <bsd.port.options.mk>
+
 # Hack around nonfunctional --disable-gtktest flag
 pre-configure-GUI-off:
 	${REINPLACE_CMD} -e 's|min_gtk_version=.*|min_gtk_version=2000.0.0|' \
@@ -143,8 +145,19 @@ pre-configure:
 		${ECHO_CMD} "********************************************"; \
 		false; \
 	fi
+.if ${ARCH} == powerpc64le
+	${FIND} ${LLD2FIX:C|^|${WRKSRC}/src/|} -name Makefile.in | ${XARGS}	\
+		${REINPLACE_CMD} -e 's|-r -o|-r -m elf64lppc -o|'
+.elif ${ARCH} == powerpc64
+	${FIND} ${LLD2FIX:C|^|${WRKSRC}/src/|} -name Makefile.in | ${XARGS}	\
+		${REINPLACE_CMD} -e 's|-r -o|-r -m elf64ppc -o|'
+.elif ${ARCH} == aarch64
+	${FIND} ${LLD2FIX:C|^|${WRKSRC}/src/|} -name Makefile.in | ${XARGS}	\
+		${REINPLACE_CMD} -e 's|-r -o|-r -m aarch64elf -o|'
+.else
 	${FIND} ${LLD2FIX:C|^|${WRKSRC}/src/|} -name Makefile.in | ${XARGS}	\
 		${REINPLACE_CMD} -e 's|-r -o|-r -m elf_${ARCH} -o|'
+.endif
 	${FIND} ${WRKSRC} -name Makefile.in | ${XARGS}	\
 		${REINPLACE_CMD} -e 's|htmldir = \$${datadir.*$$|htmldir = @htmldir@|'
 

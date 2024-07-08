@@ -176,7 +176,7 @@ _hfm:*:227:227::0:0:hfm daemon:/nonexistent:/usr/sbin/nologin
 osrm:*:228:228::0:0:osrm:/nonexistent:/usr/sbin/nologin
 # free: 229, GID used
 carbon:*:230:230::0:0:osrm:/nonexistent:/usr/sbin/nologin
-foundationdb:*:231:231::0:0:foundationdb:/nonexistent:/usr/sbin/nologin
+foundationdb:*:231:231::0:0:FoundationDB user:/nonexistent:/usr/sbin/nologin
 archiva:*:232:232::0:0:Archiva Daemon User:/usr/local/archiva:/bin/sh
 _ntp:*:233:233::0:0:NTP Daemon:/var/empty:/usr/sbin/nologin
 kafka:*:234:234::0:0:Apache Kafka user:/nonexistent:/usr/sbin/nologin
@@ -279,8 +279,8 @@ orthanc:*:330:330::0:0:Orthanc Daemon:/nonexistent:/usr/sbin/nologin
 svxlink:*:331:331::0:0:svxlink server:/nonexistent:/usr/sbin/nologin
 keycloak:*:332:332::0:0:keycloak server:/nonexistent:/usr/sbin/nologin
 honeytrap:*:333:333::0:0:HoneyTrap Daemon:/nonexistent:/usr/sbin/nologin
-# free: 334
-# free: 335
+percona:*:334:334::0:0:Percona Daemons:/nonexistent:/usr/sbin/nologin
+benthos:*:335:335::0:0:Benthos Daemon:/nonexistent:/usr/sbin/nologin
 _pma:*:336:80::0:0:phpMyAdmin Owner:/nonexistent:/usr/sbin/nologin
 daapd:*:337:337::0:0:daapd User:/nonexistent:/usr/sbin/nologin
 murmur:*:338:338::0:0:& User:/nonexistent:/usr/sbin/nologin
@@ -288,9 +288,9 @@ mumble-server:*:339:339::0:0:& User:/nonexistent:/usr/sbin/nologin
 wildfire:*:340:340::0:0:Wildfire Daemon:/nonexistent:/usr/sbin/nologin
 stunnel:*:341:341::0:0:Stunnel Daemon:/nonexistent:/usr/sbin/nologin
 openfire:*:342:342::0:0:Openfire IM Daemon:/nonexistent:/usr/sbin/nologin
-# free: 343
-# free: 344
-# free: 345
+gunicorn:*:343:343::0:0:Gunicorn Daemon:/nonexistent:/usr/sbin/nologin
+snmpd:*:344:344::0:0:Net-SNMP Daemon:/nonexistent:/usr/sbin/nologin
+_metronome:*:345:345::0:0:Metronome Daemon:/nonexistent:/usr/sbin/nologin
 # free: 346
 eturnal:*:347:347::0:0:eturnal User:/var/spool/eturnal:/bin/sh
 # free: 348
@@ -482,7 +482,7 @@ dkimproxy:*:525:525::0:0:DKIM Proxy Owner:/nonexistent:/usr/sbin/nologin
 pgbouncer:*:534:534::0:0:Pgbouncer Daemon:/nonexistent:/usr/sbin/nologin
 redis:*:535:535::0:0:Redis Daemon:/nonexistent:/usr/sbin/nologin
 keydb:*:536:536::0:0:KeyDB Daemon:/nonexistent:/usr/sbin/nologin
-# free: 537
+valkey:*:537:537::0:0:Valkey Daemon:/nonexistent:/usr/sbin/nologin
 # free: 538
 # free: 539
 # free: 540
@@ -829,7 +829,7 @@ _encrypted-dns:*:879:879::0:0:encrypted-dns user:/var/empty:/usr/sbin/nologin
 pyspf-milter:*:880:880::0:0:pyspf-milter:/nonexistent:/usr/sbin/nologin
 ultimaker:*:881:881::0:0:Ultimaker user:/nonexistent:/usr/sbin/nologin
 midpoint:*:882:882::0:0:midPoint user:/var/db/midpoint:/usr/sbin/nologin
-ipfs-go:*:883:883::0:0:ipfs-go user:/var/db/ipfs-go:/bin/sh
+kubo-go:*:883:883::0:0:kubo-go user:/var/db/kubo-go:/bin/sh
 telegraf:*:884:884::0:0:telegraf user:/nonexistent:/usr/sbin/nologin
 tcpdump:*:885:885::0:0:tcpdump user:/nonexistent:/usr/sbin/nologin
 miniflux:*:886:886::0:0:Miniflux:/nonexistent:/usr/sbin/nologin
@@ -855,7 +855,7 @@ artifactory:*:905:905::0:0:artifactory user:/nonexistent:/usr/sbin/nologin
 opentsdb:*:906:906::0:0:OpenTSDB Daemon:/var/empty:/usr/sbin/nologin
 influxd:*:907:907::0:0:InfluxDB Daemon:/var/empty:/usr/sbin/nologin
 riemann:*:908:908::0:0:Riemann User:/var/empty:/usr/sbin/nologin
-proxy65:*:909:909::0:0:Proxy65 Daemon:/nonexistent:/usr/sbin/nologin
+proxysql:*:909:909::0:0:ProxySQL Daemon:/nonexistent:/usr/sbin/nologin
 bacula:*:910:910::0:0:Bacula Daemon:/var/db/bacula:/usr/sbin/nologin
 iserv:*:911:911::0:0:Iserv Daemon:/nonexistent:/usr/sbin/nologin
 _sj3:*:912:912::0:0:SJ3 Daemon:/nonexistent:/usr/sbin/nologin

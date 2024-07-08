@@ -1,5 +1,5 @@
-TIMESTAMP = 1706754200
-SHA256 (go/net-mgmt_pushgateway/pushgateway-v1.7.0/v1.7.0.mod) = 71dd5c0f0128eb5389f8e6cc548c0493bf9ba3fcc28bd8ce9056b2177d0ee827
-SIZE (go/net-mgmt_pushgateway/pushgateway-v1.7.0/v1.7.0.mod) = 1500
-SHA256 (go/net-mgmt_pushgateway/pushgateway-v1.7.0/v1.7.0.zip) = 1df167240bfe527df137d9498d283df45d4a94dc19a32d1bc800d799344a60af
-SIZE (go/net-mgmt_pushgateway/pushgateway-v1.7.0/v1.7.0.zip) = 4118533
+TIMESTAMP = 1718040302
+SHA256 (go/net-mgmt_pushgateway/pushgateway-v1.9.0/v1.9.0.mod) = 9093e4612d593b7706d333cbe09bc22e57f276c50382175d2adafa9b057ba74e
+SIZE (go/net-mgmt_pushgateway/pushgateway-v1.9.0/v1.9.0.mod) = 1507
+SHA256 (go/net-mgmt_pushgateway/pushgateway-v1.9.0/v1.9.0.zip) = 4f69821922cc57155d8f3d604da53fbafcdf3338e2e2428d9b93317efcab5fda
+SIZE (go/net-mgmt_pushgateway/pushgateway-v1.9.0/v1.9.0.zip) = 4124467

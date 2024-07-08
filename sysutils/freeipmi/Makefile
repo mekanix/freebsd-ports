@@ -28,13 +28,12 @@ CONFIGURE_ARGS=	--disable-init-scripts \
 		--with-pkgconfig-dir=${PREFIX}/libdata/pkgconfig
 CONFIGURE_ENV=	PTHREAD_LIBS=-lpthread ac_cv_path_CPP=${CPP}
 GNU_CONFIGURE=	yes
-GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 USE_LDCONFIG=	yes
 
 INFO=		freeipmi-faq
 PLIST_SUB=	CACHE_DIR=${CACHE_DIR}
 
-CACHE_DIR?=	/var/db/${PORTNAME}
+CACHE_DIR?=	/var/db/freeipmi
 
 SHEBANG_FILES=	contrib/ganglia/ganglia_ipmi_sensors.pl \
 		contrib/nagios/nagios_ipmi_sensors.pl \

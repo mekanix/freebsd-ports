@@ -1,6 +1,6 @@
 PORTNAME=	kopia
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.15.0
+DISTVERSION=	0.17.0
 PORTREVISION=	3
 CATEGORIES=	sysutils
 
@@ -11,7 +11,7 @@ WWW=		https://kopia.io/
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		go:1.21,modules
+USES=		go:1.22,modules
 GO_MODULE=	github.com/kopia/kopia
 GO_BUILDFLAGS=	-ldflags "\
 		-X github.com/kopia/kopia/repo.BuildVersion=${DISTVERSION} \

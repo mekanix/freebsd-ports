@@ -1,6 +1,7 @@
 PORTNAME=	golangci-lint
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.57.1
+DISTVERSION=	1.59.0
+PORTREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	lcook@FreeBSD.org
@@ -10,10 +11,10 @@ WWW=		https://github.com/golangci/golangci-lint
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		go:1.21,modules
+USES=		gmake go:1.21,modules
 
 _BUILD_VERSION=	${DISTVERSION}
-_BUILD_COMMIT=	cd890db
+_BUILD_COMMIT=	2059b18
 _BUILD_DATE=	$$(date -u "+%Y-%m-%dT%H:%M:%SZ")
 
 GO_MODULE=	github.com/${PORTNAME:S/-lint//}/${PORTNAME}
@@ -35,6 +36,8 @@ COMPLETIONS_DESC=		Build and install bash, fish and zsh shell completions
 COMPLETIONS_PLIST_FILES=	share/bash-completion/completions/${PORTNAME} \
 				share/fish/vendor_completions.d/${PORTNAME}.fish \
 				share/zsh/site-functions/_${PORTNAME}
+
+BINARY_ALIAS=	make=gmake
 
 post-install-COMPLETIONS-on:
 .for _shell in bash fish zsh

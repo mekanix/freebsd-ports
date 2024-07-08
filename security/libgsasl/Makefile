@@ -1,5 +1,6 @@
 PORTNAME=	gsasl
 PORTVERSION=	2.2.1
+PORTREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	GNU
 PKGNAMEPREFIX=	lib
@@ -18,7 +19,6 @@ LIB_DEPENDS=	libgcrypt.so:security/libgcrypt \
 USES=		charsetfix libtool pathfix pkgconfig ssl
 
 GNU_CONFIGURE=	yes
-GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 INSTALL_TARGET=	install-strip
 USE_LDCONFIG=	yes
 

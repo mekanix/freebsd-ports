@@ -1,6 +1,6 @@
 PORTNAME=	rump
 PORTVERSION=	20170822
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	misc
 
 MAINTAINER=	vanilla@FreeBSD.org
@@ -33,7 +33,7 @@ PLIST_SUB+=	X8664="@comment "
 .endif
 
 CWARNFLAGS+=	-Wno-address-of-packed-member
-.if ${COMPILER_TYPE} == clang && ${COMPILER_VERSION} >= 130
+.if ${COMPILER_TYPE} == clang
 CWARNFLAGS+=	-Wno-unused-but-set-variable
 .endif
 

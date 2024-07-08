@@ -1,15 +1,9 @@
 PORTNAME=	xwayland
 DISTVERSIONPREFIX=	xorg-server-
-DISTVERSION=	21.0.99.1-841
-DISTVERSIONSUFFIX=	-g052909ab9
+DISTVERSION=	21.0.99.1-1130
+DISTVERSIONSUFFIX=	-ga5e863963
 CATEGORIES=	x11-servers
 PKGNAMESUFFIX=	-devel
-
-PATCH_SITES+=	https://github.com/mirror/${GL_PROJECT}/commit/:github
-PATCHFILES+=	cd6c9c1246af.patch:-p1:github # https://gitlab.freedesktop.org/xorg/xserver/-/merge_requests/432
-PATCHFILES+=	91b97b031290.patch:-p1:github # https://gitlab.freedesktop.org/xorg/xserver/-/merge_requests/432
-PATCHFILES+=	3b0d1a3a2296.patch:-p1:github # https://gitlab.freedesktop.org/xorg/xserver/-/merge_requests/432
-PATCH_SITES+=	${GL_SITE}/${GL_ACCOUNT}/${GL_PROJECT}/-/commit/
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	X11 server as Wayland client (development snapshot)
@@ -44,13 +38,14 @@ MESON_ARGS=	-D${PORTNAME}=true \
 		-Dudev=false \
 		-Dudev_kms=false \
 		-Dxcsecurity=true \
+		-Dxkb_output_dir=/var/lib/xkb \
 		-Ddefault_font_path="${DEFAULT_FONTPATH_LIST:ts,}"
 PLIST_FILES=	bin/Xwayland \
 		"@comment lib/xorg/protocol.txt" \
-		libdata/pkgconfig/xwayland.pc \
+		share/applications/org.freedesktop.Xwayland.desktop \
 		"@comment share/man/man1/Xserver.1.gz" \
 		share/man/man1/Xwayland.1.gz \
-		share/applications/org.freedesktop.Xwayland.desktop
+		share/pkgconfig/xwayland.pc
 
 # Keep in sync with xorg-server
 FONTPATH_ROOT?=	${LOCALBASE}/share/fonts

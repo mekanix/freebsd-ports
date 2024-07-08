@@ -1,9 +1,10 @@
 PORTNAME=	openmpi
-PORTVERSION=	5.0.2
+PORTVERSION=	5.0.3
+PORTREVISION=	2
 CATEGORIES=	net parallel
 MASTER_SITES=	https://download.open-mpi.org/release/open-mpi/v${PORTVERSION:R}/
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	laurent.chardon@gmail.com
 COMMENT=	High Performance Message Passing Library
 WWW=		https://www.open-mpi.org/
 
@@ -13,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 NOT_FOR_ARCHS=	armv6 armv7 i386 powerpc
 NOT_FOR_ARCHS_REASON=	Not supported on 32-bits - see net/openmpi4
 
-LIB_DEPENDS=	libhwloc.so.15:devel/hwloc2 \
+LIB_DEPENDS=	libhwloc.so:devel/hwloc2 \
 		libevent.so:devel/libevent \
 		libmunge.so:security/munge \
 		libze_loader.so:devel/level-zero
@@ -57,7 +58,7 @@ MANDIRS=	${PREFIX}/${MPIDIR}/share/man
 SHEBANG_FILES=	ompi/mca/common/monitoring/profile2mat.pl \
 		ompi/mca/common/monitoring/aggregate_profile.pl
 
-OPTIONS_DEFINE=			AVX DEBUG DOCS IPV6 SLURM TORQUE
+OPTIONS_DEFINE=			AVX DEBUG DOCS IPV6 SLURM
 OPTIONS_DEFAULT=		SLURM
 OPTIONS_EXCLUDE_aarch64=	AVX
 OPTIONS_EXCLUDE_armv6=		AVX SLURM
@@ -73,7 +74,6 @@ OPTIONS_SUB=			yes
 
 AVX_DESC=	Enable AVX instructions
 SLURM_DESC=	Enable SLURM support
-TORQUE_DESC=	Enable Torque support
 
 AVX_CONFIGURE_OFF=	--enable-mca-no-build=op-avx
 
@@ -83,11 +83,10 @@ DEBUG_INSTALL_TARGET_OFF=	install-strip
 DOCS_BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sphinx>0:textproc/py-sphinx@${PY_FLAVOR}	\
 			${PYTHON_PKGNAMEPREFIX}recommonmark>0:textproc/py-recommonmark@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}sphinx_rtd_theme>0:textproc/py-sphinx_rtd_theme@${PY_FLAVOR}
+DOCSDIR=		${PREFIX}/${MPIDIR}/share/doc
+PORTDOCS=		*
 
 IPV6_CONFIGURE_ENABLE=	ipv6
-
-TORQUE_CONFIGURE_WITH=	tm
-TORQUE_LIB_DEPENDS=	libtorque.so:sysutils/torque
 
 SLURM_CONFIGURE_WITH=	slurm
 SLURM_LIB_DEPENDS=	libslurm.so:sysutils/slurm-wlm
@@ -104,7 +103,7 @@ PLIST_SUB+=	NO_MCA_PATCHER_OVERWRITE="@comment "
 PLIST_SUB+=	NO_MCA_PATCHER_OVERWRITE=""
 .endif
 
-.if ${COMPILER_TYPE} == clang && ${COMPILER_VERSION} >= 170
+.if ${COMPILER_TYPE} == clang && ${COMPILER_VERSION} >= 170 && !${ARCH:Mpowerpc*}
 PLIST_SUB+=	SHORTFLOAT=""
 .else
 PLIST_SUB+=	SHORTFLOAT="@comment "

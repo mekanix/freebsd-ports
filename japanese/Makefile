@@ -62,6 +62,7 @@
     SUBDIR += font-aozoramincho
     SUBDIR += font-ayu18
     SUBDIR += font-ayu20
+    SUBDIR += font-bizud-mincho
     SUBDIR += font-cica
     SUBDIR += font-elisa10
     SUBDIR += font-elisa8
@@ -90,6 +91,12 @@
     SUBDIR += font-mona
     SUBDIR += font-mona-ipa
     SUBDIR += font-mona-ttf
+    SUBDIR += font-moralerspace
+    SUBDIR += font-moralerspace-hw
+    SUBDIR += font-moralerspace-hwjpdoc
+    SUBDIR += font-moralerspace-hwnf
+    SUBDIR += font-moralerspace-jpdoc
+    SUBDIR += font-moralerspace-nf
     SUBDIR += font-motoya-al
     SUBDIR += font-mplus-bitmap
     SUBDIR += font-mplus-ipa

@@ -1,6 +1,7 @@
 PORTNAME=	quantum-espresso
 DISTVERSIONPREFIX=	qe-
 DISTVERSION=	7.3.1
+PORTREVISION=	2
 CATEGORIES=	science
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -10,6 +11,7 @@ WWW=		https://www.quantum-espresso.org/
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/License
 
+BROKEN_aarch64=	compilation fails: cannot find an intrinsic module named 'ieee_arithmetic', see https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=278942
 BROKEN_armv6=	fails to build: gfortran8: error: iotk_base_tmp.f90: No such file or directory
 BROKEN_armv7=	fails to build: gfortran8: error: iotk_base_tmp.f90: No such file or directory
 
@@ -69,6 +71,11 @@ post-extract:
 	@cd ${WRKSRC} && ${MKDIR} FoX && ${LN} -s ${LOCALBASE}/include FoX/finclude
 
 post-install:
+	# remove wannier90 binaries that come from the bundled wannier90 package (reported to the upstream vie e-mail on 2024-03-11)
+.for p in wannier90.x postw90.x w90chk2chk.x
+	${RM} ${STAGEDIR}${PREFIX}/bin/${p}
+.endfor
+	# strip binaries
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/*.x
 
 do-test:

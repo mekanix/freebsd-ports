@@ -1,6 +1,6 @@
 PORTNAME=	rgdal
 DISTVERSION=	1.6-7
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
@@ -9,6 +9,10 @@ COMMENT=	Bindings for the Geospatial Data Abstraction Library
 WWW=		https://cran.r-project.org/web/packages/rgdal/
 
 LICENSE=	GPLv2+
+
+DEPRECATED=	Fails to build and upstream recommends using math/R-cran-sf or math/R-cran-terra instead
+EXPIRATION_DATE=	2024-08-30
+BROKEN=		does not build
 
 CRAN_DEPENDS=	R-cran-sp>=1.1.0:math/R-cran-sp
 BUILD_DEPENDS=	${CRAN_DEPENDS}

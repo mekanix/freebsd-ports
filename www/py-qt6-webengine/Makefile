@@ -11,8 +11,10 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Python bindings for the Qt6 toolkit, QtWebEngine module
 WWW=		https://riverbankcomputing.com/software/pyqt
 
+BUILD_DEPENDS=	${PY_SETUPTOOLS}
+
 USES=		gl python pyqt:6 qt:6
-USE_GL=		gl
+USE_GL=		opengl
 USE_PYQT=	sip:build pyqt6
 USE_PYTHON=	concurrent flavors
 USE_QT=		base declarative positioning webchannel webengine

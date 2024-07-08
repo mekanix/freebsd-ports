@@ -1,5 +1,5 @@
 PORTNAME=	level-zero
-PORTVERSION=	1.16.1
+PORTVERSION=	1.17.17
 DISTVERSIONPREFIX=	v
 CATEGORIES=	devel
 
@@ -11,9 +11,13 @@ WWW=		https://spec.oneapi.io/versions/latest/elements/l0/source/index.html \
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		cmake compiler:c++14-lang pathfix
+LIB_DEPENDS=	libfmt.so:devel/libfmt \
+		libspdlog.so:devel/spdlog
 
-PIE_UNSAFE=	yes
+USES=		cmake compiler:c++14-lang localbase:ldflags pathfix
+
+CXXFLAGS+=	-DSPDLOG_FMT_EXTERNAL
+LDFLAGS+=	-lfmt
 USE_LDCONFIG=	yes
 
 PLIST_SUB=	PORTVERSION=${PORTVERSION}

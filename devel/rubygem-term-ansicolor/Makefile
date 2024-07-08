@@ -1,16 +1,18 @@
 PORTNAME=	term-ansicolor
-PORTVERSION=	1.7.1
+PORTVERSION=	1.10.2
 CATEGORIES=	devel ruby
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Term::ANSIColor for Ruby
-WWW=		https://flori.github.io/term-ansicolor/
+WWW=		https://flori.github.io/term-ansicolor/ \
+		https://github.com/flori/term-ansicolor
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-RUN_DEPENDS=	rubygem-tins>=1.0<2:devel/rubygem-tins
+RUN_DEPENDS=	rubygem-mize>=0:devel/rubygem-mize \
+		rubygem-tins>=1.0<2:devel/rubygem-tins
 
 USES=		gem
 

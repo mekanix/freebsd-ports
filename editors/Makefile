@@ -7,7 +7,6 @@
     SUBDIR += aewan
     SUBDIR += amp
     SUBDIR += apel
-    SUBDIR += asedit
     SUBDIR += beav
     SUBDIR += bee-host
     SUBDIR += biew
@@ -69,6 +68,7 @@
     SUBDIR += jed
     SUBDIR += jedit
     SUBDIR += joe
+    SUBDIR += jove
     SUBDIR += jucipp
     SUBDIR += jupp
     SUBDIR += kakoune
@@ -195,7 +195,6 @@
     SUBDIR += libreoffice-zu
     SUBDIR += linux-bcompare
     SUBDIR += linux-r7-office
-    SUBDIR += linux-sublime
     SUBDIR += linux-sublime-text4
     SUBDIR += linux-sublime3
     SUBDIR += linux-wps-office
@@ -207,7 +206,6 @@
     SUBDIR += micro
     SUBDIR += mined
     SUBDIR += mle
-    SUBDIR += morla
     SUBDIR += mousepad
     SUBDIR += mp
     SUBDIR += nano
@@ -236,6 +234,7 @@
     SUBDIR += pluma-plugins
     SUBDIR += poedit
     SUBDIR += poke
+    SUBDIR += pragtical
     SUBDIR += psgml
     SUBDIR += puff
     SUBDIR += py-babi

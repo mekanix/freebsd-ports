@@ -1,5 +1,6 @@
 PORTNAME=	paraview
-DISTVERSION=	${PARAVIEW_VER}.0
+DISTVERSION=	${PARAVIEW_VER}.1
+PORTREVISION=	2
 CATEGORIES=	science graphics
 MASTER_SITES=	http://www.paraview.org/files/v${PARAVIEW_VER}/
 DISTNAME=	ParaView-v${PORTVERSION}
@@ -11,11 +12,14 @@ WWW=		https://www.paraview.org/
 # See https://www.paraview.org/license/
 LICENSE=	BSD3CLAUSE
 
+BROKEN_i386=	no matching member function for call to 'getArrayType'
+
 BUILD_DEPENDS=	${PYNUMPY}	\
 		cli11>0:devel/cli11	\
 		utf8cpp>0:devel/utf8cpp	\
 		fast_float>0:math/fast_float \
 		nlohmann-json>0:devel/nlohmann-json	\
+		vulkan-headers>0:graphics/vulkan-headers	\
 		${LOCALBASE}/include/exprtk.hpp:math/exprtk	\
 		${PYTHON_SITELIBDIR}/matplotlib/pyplot.py:math/py-matplotlib@${PY_FLAVOR}
 LIB_DEPENDS=	libhdf5.so:science/hdf5 \

@@ -1,5 +1,5 @@
 PORTNAME=	google-apis-core
-PORTVERSION=	0.14.0
+PORTVERSION=	0.15.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 

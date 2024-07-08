@@ -1,6 +1,6 @@
 PORTNAME=	datadog-agent
 DISTVERSION=	7.24.1
-PORTREVISION=	16
+PORTREVISION=	22
 CATEGORIES=	sysutils net www
 
 MAINTAINER=	uros@gruber.si
@@ -12,6 +12,8 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BROKEN=		SHA256 Checksum mismatch for kubernetes-client-go-bec269661e48_GH0.tar.gz
 BROKEN_i386=	fails to build: vendor/github.com/DataDog/gopsutil/process/process_freebsd.go:95:9: cannot use k.Start.Sec * 1000 (value of type int32) as type int64 in return statement
+DEPRECATED=	Unfetchable and marked BROKEN for several months
+EXPIRATION_DATE=2024-05-31
 
 BUILD_DEPENDS=	cmake-core>=3.12:devel/cmake-core \
 		go-bindata>0:devel/go-bindata
@@ -311,7 +313,7 @@ DOGSTATSD_VARS=	use_rc_subr+=datadog-dogstatsd
 
 OPTIONS_SUB=	yes
 
-PYTHON_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}yaml>0:devel/py-yaml@${PY_FLAVOR}
+PYTHON_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pyyaml>=0:devel/py-pyyaml@${PY_FLAVOR}
 
 ALL_TARGET=		./cmd/agent
 APM_ALL_TARGET=		./cmd/trace-agent

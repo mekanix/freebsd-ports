@@ -1,6 +1,6 @@
-TIMESTAMP = 1709390556
-SHA256 (libcst-1.2.0.tar.gz) = 71dd69fff76e7edaf8fae0f63ffcdbf5016e8cd83165b1d0688d6856aa48186a
-SIZE (libcst-1.2.0.tar.gz) = 765209
+TIMESTAMP = 1716448688
+SHA256 (libcst-1.4.0.tar.gz) = 449e0b16604f054fa7f27c3ffe86ea7ef6c409836fe68fe4e752a1894175db00
+SIZE (libcst-1.4.0.tar.gz) = 771364
 SHA256 (rust/crates/aho-corasick-1.0.4.crate) = 6748e8def348ed4d14996fa801f4122cd763fff530258cdc03f64b25f89d3a5a
 SIZE (rust/crates/aho-corasick-1.0.4.crate) = 171175
 SHA256 (rust/crates/anes-0.1.6.crate) = 4b46cbb362ab8752921c97e041f5e366ee6297bd428a31275b9fcf1e380f7299

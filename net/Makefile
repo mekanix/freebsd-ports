@@ -52,6 +52,7 @@
     SUBDIR += beacon
     SUBDIR += beanstalkd
     SUBDIR += belle-sip
+    SUBDIR += benthos
     SUBDIR += bindtest
     SUBDIR += binkd
     SUBDIR += bird
@@ -97,7 +98,6 @@
     SUBDIR += cppzmq
     SUBDIR += croc
     SUBDIR += cryptcat
-    SUBDIR += csocks
     SUBDIR += csync2
     SUBDIR += ctrace
     SUBDIR += cvsup-static
@@ -157,6 +157,8 @@
     SUBDIR += foreman-proxy
     SUBDIR += fort
     SUBDIR += fping
+    SUBDIR += freebsd-route6d
+    SUBDIR += freebsd-routed
     SUBDIR += freebsd-telnetd
     SUBDIR += freebsd-uucp
     SUBDIR += freediameter
@@ -206,7 +208,6 @@
     SUBDIR += gopher
     SUBDIR += goreplay
     SUBDIR += gorss
-    SUBDIR += gost
     SUBDIR += gotthard
     SUBDIR += graphpath
     SUBDIR += grilo
@@ -235,7 +236,6 @@
     SUBDIR += hanstunnel
     SUBDIR += haproxy
     SUBDIR += haproxy-devel
-    SUBDIR += haproxy20
     SUBDIR += haproxy22
     SUBDIR += haproxy24
     SUBDIR += haproxy25
@@ -255,7 +255,6 @@
     SUBDIR += http_ping
     SUBDIR += httping
     SUBDIR += httpry
-    SUBDIR += iaxmodem
     SUBDIR += icmpinfo
     SUBDIR += icpld
     SUBDIR += ifdepd
@@ -435,7 +434,6 @@
     SUBDIR += libyang
     SUBDIR += libyang2
     SUBDIR += libzapojit
-    SUBDIR += libzmq2
     SUBDIR += libzmq3
     SUBDIR += libzmq4
     SUBDIR += liferea
@@ -444,6 +442,9 @@
     SUBDIR += linux-c7-avahi-libs
     SUBDIR += linux-c7-openldap
     SUBDIR += linux-c7-tcp_wrappers-libs
+    SUBDIR += linux-rl9-avahi-libs
+    SUBDIR += linux-rl9-libproxy
+    SUBDIR += linux-rl9-openldap
     SUBDIR += liveMedia
     SUBDIR += lla
     SUBDIR += lualdap
@@ -512,10 +513,10 @@
     SUBDIR += ndproxy
     SUBDIR += neatvnc
     SUBDIR += nemesis
-    SUBDIR += nepenthes
     SUBDIR += net6
     SUBDIR += netatalk3
     SUBDIR += netcat
+    SUBDIR += netdiscover
     SUBDIR += netembryo
     SUBDIR += nethogs
     SUBDIR += netmap
@@ -942,7 +943,6 @@
     SUBDIR += pear-Horde_Scribe
     SUBDIR += pear-Horde_Socket_Client
     SUBDIR += pear-Horde_Url
-    SUBDIR += pear-Net_CDDB
     SUBDIR += pear-Net_CheckIP
     SUBDIR += pear-Net_DIME
     SUBDIR += pear-Net_DNSBL
@@ -1056,6 +1056,7 @@
     SUBDIR += py-gntp
     SUBDIR += py-gspread
     SUBDIR += py-h11
+    SUBDIR += py-haproxy-cli
     SUBDIR += py-haproxy-log-analysis
     SUBDIR += py-haproxyctl
     SUBDIR += py-httpstat
@@ -1108,6 +1109,7 @@
     SUBDIR += py-pyroute2.protocols
     SUBDIR += py-pysendfile
     SUBDIR += py-pyshark
+    SUBDIR += py-pysimplesoap
     SUBDIR += py-pysmb
     SUBDIR += py-pysocks
     SUBDIR += py-pystun
@@ -1148,7 +1150,6 @@
     SUBDIR += py-smart-open
     SUBDIR += py-smbpasswd
     SUBDIR += py-smbprotocol
-    SUBDIR += py-soap2py
     SUBDIR += py-socketio-client
     SUBDIR += py-socksio
     SUBDIR += py-softlayer
@@ -1216,6 +1217,7 @@
     SUBDIR += reaver
     SUBDIR += recvnet
     SUBDIR += redir
+    SUBDIR += redpanda-connect
     SUBDIR += relayd
     SUBDIR += remarkable-devd
     SUBDIR += remmina
@@ -1328,7 +1330,6 @@
     SUBDIR += rubygem-google-cloud-spanner-admin-instance-v1
     SUBDIR += rubygem-google-cloud-spanner-v1
     SUBDIR += rubygem-google-cloud-storage
-    SUBDIR += rubygem-google-cloud-storage144
     SUBDIR += rubygem-google-cloud-storage145
     SUBDIR += rubygem-google-cloud-trace
     SUBDIR += rubygem-google-cloud-trace-v1
@@ -1360,11 +1361,13 @@
     SUBDIR += rubygem-nkf
     SUBDIR += rubygem-no_proxy_fix
     SUBDIR += rubygem-oauth
+    SUBDIR += rubygem-oauth-tty
+    SUBDIR += rubygem-oauth0
     SUBDIR += rubygem-oauth2
     SUBDIR += rubygem-oauth21
     SUBDIR += rubygem-octokit
     SUBDIR += rubygem-octokit4
-    SUBDIR += rubygem-octokit6
+    SUBDIR += rubygem-octokit8
     SUBDIR += rubygem-octopress-deploy
     SUBDIR += rubygem-omniauth-auth0
     SUBDIR += rubygem-omniauth-authentiq
@@ -1440,7 +1443,6 @@
     SUBDIR += s5cmd
     SUBDIR += sacc
     SUBDIR += sakisafecli
-    SUBDIR += samba413
     SUBDIR += samba416
     SUBDIR += samba419
     SUBDIR += samplicator
@@ -1576,6 +1578,7 @@
     SUBDIR += turnserver
     SUBDIR += u6rd
     SUBDIR += ucarp
+    SUBDIR += udp-over-tcp
     SUBDIR += udpbroadcastrelay
     SUBDIR += udptunnel
     SUBDIR += udpxy
@@ -1617,6 +1620,8 @@
     SUBDIR += widentd
     SUBDIR += wifi-firmware-ath10k-kmod
     SUBDIR += wifi-firmware-ath11k-kmod
+    SUBDIR += wifi-firmware-ath12k-kmod
+    SUBDIR += wifi-firmware-iwlwifi-kmod
     SUBDIR += wifi-firmware-kmod
     SUBDIR += wifi-firmware-mt76-kmod
     SUBDIR += wifi-firmware-rtw88-kmod

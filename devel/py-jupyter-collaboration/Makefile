@@ -1,5 +1,6 @@
 PORTNAME=	jupyter-collaboration
-PORTVERSION=	2.0.2
+PORTVERSION=	2.1.1
+PORTREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	PYPI \
 		https://github.com/jupyterlab/jupyter-collaboration/releases/download/v${PORTVERSION}/
@@ -18,11 +19,12 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}hatch-jupyter-builder>=0.5:devel/py-hatch-
 		${PYTHON_PKGNAMEPREFIX}hatch-nodejs-version>=0:devel/py-hatch-nodejs-version@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}hatchling>=1.4.0:devel/py-hatchling@${PY_FLAVOR}
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}jsonschema>=4.18.0:devel/py-jsonschema@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}jupyter-events>=0.7.0:devel/py-jupyter-events@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}jupyter-events>=0.10.0:devel/py-jupyter-events@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}jupyter-server>=2.0.0<3.0.0:devel/py-jupyter-server@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}jupyter-server-fileid>=0.7.0<1:devel/py-jupyter-server-fileid@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}jupyter-ydoc>=2.0.0<3.0.0:devel/py-jupyter-ydoc@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}pycrdt-websocket>=0.12.5<0.13.0:devel/py-pycrdt-websocket@${PY_FLAVOR}
+		${PYTHON_PKGNAMEPREFIX}pycrdt>=0:devel/py-pycrdt@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}pycrdt-websocket>=0.14.0<0.15.0:devel/py-pycrdt-websocket@${PY_FLAVOR}
 
 USES=		python
 USE_PYTHON=	autoplist concurrent pep517

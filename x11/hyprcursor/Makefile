@@ -1,6 +1,6 @@
 PORTNAME=	hyprcursor
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.1.4
+DISTVERSION=	0.1.9
 CATEGORIES=	x11
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -11,7 +11,8 @@ LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LIB_DEPENDS=	libzip.so:archivers/libzip \
-		libhyprlang.so:devel/hyprlang
+		libhyprlang.so:devel/hyprlang \
+		libtomlplusplus.so:devel/tomlplusplus
 RUN_DEPENDS=	xcur2png:x11/xcur2png
 
 USES=		compiler:c++11-lib cmake:testing gnome pathfix pkgconfig
@@ -20,9 +21,8 @@ USE_GNOME=	cairo librsvg2
 GH_ACCOUNT=	hyprwm
 PLIST_SUB=	VERSION=${DISTVERSION:C/-.*//}
 
-# XXX Drop after FreeBSD 14.0 EOL around 2025-03-01
-.if exists(/usr/include/c++/v1/__format/format_functions.h) && \
-   !exists(/usr/include/c++/v1/__format/write_escaped.h)
+# XXX Drop after FreeBSD 14.0 EOL around 2024-10-01
+.if exists(/usr/lib/libc++.so) && !exists(/usr/include/c++/v1/__format/write_escaped.h)
 CXXFLAGS+=	-fexperimental-library
 .endif
 

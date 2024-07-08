@@ -75,7 +75,7 @@ KQUEUE_CONFIGURE_ENABLE=	kernel-poll
 NATIVE_IMPLIES=			HIPE
 NATIVE_CONFIGURE_ENABLE=	native-libs
 ODBC_LIB_DEPENDS=		libodbc.so:databases/unixODBC
-ODBC_USES=		localbase:ldflags
+ODBC_USES=			localbase:ldflags
 ODBC_CONFIGURE_WITH=		odbc
 OPENSSL_USES=			ssl
 OPENSSL_CONFIGURE_WITH=		ssl=${OPENSSLBASE}
@@ -89,7 +89,7 @@ WX_VARS=			USE_GL="gl glu" \
 
 .include <bsd.port.pre.mk>
 
-.if ${COMPILER_TYPE} == clang && ${COMPILER_VERSION} >= 130
+.if ${COMPILER_TYPE} == clang
 # PR 258494
 CONFIGURE_ARGS+=	--disable-pgo
 .endif

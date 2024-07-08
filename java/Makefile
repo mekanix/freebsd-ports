@@ -31,6 +31,7 @@
     SUBDIR += eclipse-findbugs
     SUBDIR += eclipse-pydev
     SUBDIR += eclipse-shelled
+    SUBDIR += eclipse-yaml-editor
     SUBDIR += hamcrest
     SUBDIR += icedtea-web
     SUBDIR += infobus
@@ -81,7 +82,6 @@
     SUBDIR += mmake
     SUBDIR += mx4j
     SUBDIR += netbeans
-    SUBDIR += netcomponents
     SUBDIR += netrexx
     SUBDIR += netty
     SUBDIR += openjdk11
@@ -98,8 +98,6 @@
     SUBDIR += openjfx14
     SUBDIR += phpeclipse
     SUBDIR += proguard
-    SUBDIR += sablevm
-    SUBDIR += sablevm-classpath
     SUBDIR += servingxml
     SUBDIR += sigar
     SUBDIR += springframework

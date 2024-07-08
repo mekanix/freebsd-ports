@@ -1,6 +1,6 @@
 PORTNAME=	opencascade
 DISTVERSIONPREFIX=	V
-DISTVERSION=	7_8_0
+DISTVERSION=	7_8_1
 PORTREVISION=	1
 CATEGORIES=	cad science
 DIST_SUBDIR=	${PORTNAME}-${DISTVERSION}
@@ -133,7 +133,6 @@ VIS_LIB_DEPENDS=	libftgl.so:graphics/ftgl	\
 			libfreeimageplus.so:graphics/freeimage
 VIS_USE=		GL=glesv2,opengl
 
-DOCS_DISTFILES=		documentation.tar.xz
 DOXYGEN_IMPLIES=	DOCS
 DOXYGEN_USES=		tex
 DOXYGEN_USE=		TEX=latex:build

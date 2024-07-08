@@ -20,7 +20,6 @@ USE_PERL5=	build
 USE_WX=		3.0
 WX_CONF_ARGS=	absolute
 GNU_CONFIGURE=	yes
-GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 CONFIGURE_ARGS=	--with-denoise-level=0
 
 CONFIGURE_ENV=	LEX="${FLEX}" PKG_CONFIG="${PKG_CONFIG}" \
@@ -124,7 +123,7 @@ post-install-FILEVIEW-on:
 # amule 2.3.3 does not work with C++17 which is the default since clang
 # 16. Change the defaults and allow the `register' keyword to be used without
 # triggering a compiler error to allow the build to work.
-.if ${COMPILER_TYPE} == clang && ${COMPILER_VERSION} >= 160
+.if ${COMPILER_TYPE} == clang
 CXXFLAGS+=	-Wno-register
 .endif
 

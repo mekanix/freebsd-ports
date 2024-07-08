@@ -24,12 +24,13 @@ SHEBANG_FILES=	data/css_decompressor data/cssmin.py data/jsbeautify data/json_pr
 		src/plugin_zencoding/zencoding/filters/*.py \
 		src/plugin_zencoding/zencoding/*.py
 GNU_CONFIGURE=	yes
-GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 CONFIGURE_ARGS=	--disable-update-databases \
 		--with-freedesktop_org-menu=${PREFIX}/share/applications \
 		--with-freedesktop_org-mime=${PREFIX}/share/mime \
 		--with-icon-path=${PREFIX}/share/pixmaps
 INSTALL_TARGET=	install-strip
+
+PORTSCOUT=	skipv:2.2.15fp
 
 OPTIONS_DEFINE=		DEBUG DOCS NLS TIDY
 OPTIONS_DEFAULT=	GTK3
