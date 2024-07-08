@@ -2,7 +2,7 @@
 
 PORTNAME=	szs
 PORTVERSION?=	2.3.0
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	axcient
 MASTER_SITES=	GH
 
@@ -11,7 +11,7 @@ COMMENT?=	Szs-op components
 
 FETCH_DEPENDS+=	git:devel/git
 ADD_MBR_DEPENDS?=	add_mbr:axcient/add_mbr
-RUN_DEPENDS+=	buffer:misc/buffer \
+RUN_DEPENDS+=	buffer:misc/mbuffer \
 		lzop:archivers/lzop \
 		pv:sysutils/pv \
 		wget:ftp/wget \
