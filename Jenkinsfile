@@ -94,6 +94,7 @@ pipeline {
                     graphics/py-pillow \
                     lang/expect \
                     lang/go121 \
+                    lang/python3 \
                     mail/ssmtp \
                     mail/mutt \
                     misc/mbuffer \
