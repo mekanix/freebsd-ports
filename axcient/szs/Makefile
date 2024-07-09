@@ -11,7 +11,7 @@ COMMENT?=	Szs-op components
 
 FETCH_DEPENDS+=	git:devel/git
 ADD_MBR_DEPENDS?=	add_mbr:axcient/add_mbr
-RUN_DEPENDS+=	buffer:misc/mbuffer \
+RUN_DEPENDS+=	mbuffer:misc/mbuffer \
 		lzop:archivers/lzop \
 		pv:sysutils/pv \
 		wget:ftp/wget \
