@@ -1,6 +1,6 @@
---- salt/returners/zabbix_return.py.orig	2022-08-11 16:56:01 UTC
+--- salt/returners/zabbix_return.py.orig	2024-07-09 14:12:52 UTC
 +++ salt/returners/zabbix_return.py
-@@ -1,65 +1,149 @@
+@@ -1,64 +1,149 @@
  """
 -Return salt data to Zabbix
 -
@@ -73,7 +73,6 @@
      salt '*' test.ping --return zabbix
  """
  
--
 +import logging
  import os
 +import shlex
@@ -195,7 +194,7 @@
  def save_load(jid, load, minions=None):
      """
      Included for API consistency
-@@ -67,28 +151,18 @@ def save_load(jid, load, minions=None):
+@@ -66,28 +151,18 @@ def returner(ret):
  
  
  def returner(ret):
@@ -229,7 +228,7 @@
 +        data = ret["return"]
  
 -    if not changes and not errors:
--        zabbix_send("salt.trap.info", "SALT {} OK".format(job_minion_id))
+-        zabbix_send("salt.trap.info", f"SALT {job_minion_id} OK")
 +    opts = __opts__.copy()
 +    opts["color"] = False
 +
