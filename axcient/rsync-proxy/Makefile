@@ -1,5 +1,5 @@
 PORTNAME=         rsync-proxy
-PORTVERSION?=     1.1.0
+PORTVERSION?=     1.2.0
 PORTREVISION?=    0
 CATEGORIES=       axcient
 MAINTAINER=       kklimov@axcient.com
@@ -10,28 +10,36 @@ LIB_DEPENDS=          libszs-op.so:axcient/szs
 #TODO remove 1.21 pinned version when `GO_DEFAULT` will be go1.21 or higher, the USES should be: `USES=axcient go:modules`
 USES=                 axcient go:1.21,modules
 
-GH_TAGNAME=  1.1.0
+GH_TAGNAME=  1.2.0
 GH_TUPLE=	\
 		alexflint:go-arg:v1.4.3:alexflint_go_arg/vendor/github.com/alexflint/go-arg \
 		alexflint:go-scalar:v1.2.0:alexflint_go_scalar/vendor/github.com/alexflint/go-scalar \
+		beorn7:perks:v1.0.1:beorn7_perks/vendor/github.com/beorn7/perks \
 		cespare:xxhash:v2.2.0:cespare_xxhash_v2/vendor/github.com/cespare/xxhash/v2 \
 		davecgh:go-spew:v1.1.1:davecgh_go_spew/vendor/github.com/davecgh/go-spew \
 		dgraph-io:ristretto:v0.1.1:dgraph_io_ristretto/vendor/github.com/dgraph-io/ristretto \
 		dustin:go-humanize:v1.0.1:dustin_go_humanize/vendor/github.com/dustin/go-humanize \
 		go-ini:ini:v1.67.0:go_ini_ini/vendor/gopkg.in/ini.v1 \
-		go-resty:resty:v2.10.0:go_resty_resty_v2/vendor/github.com/go-resty/resty/v2 \
+		go-resty:resty:v2.12.0:go_resty_resty_v2/vendor/github.com/go-resty/resty/v2 \
 		go-yaml:yaml:v3.0.1:go_yaml_yaml/vendor/gopkg.in/yaml.v3 \
-		golang:glog:v1.1.2:golang_glog/vendor/github.com/golang/glog \
+		golang:glog:v1.2.0:golang_glog/vendor/github.com/golang/glog \
 		golang:mock:v1.6.0:golang_mock/vendor/github.com/golang/mock \
-		golang:net:v0.18.0:golang_net/vendor/golang.org/x/net \
-		golang:sync:v0.5.0:golang_sync/vendor/golang.org/x/sync \
-		golang:sys:v0.14.0:golang_sys/vendor/golang.org/x/sys \
-		gomodule:redigo:v1.8.9:gomodule_redigo/vendor/github.com/gomodule/redigo \
+		golang:net:v0.22.0:golang_net/vendor/golang.org/x/net \
+		golang:sync:v0.6.0:golang_sync/vendor/golang.org/x/sync \
+		golang:sys:v0.18.0:golang_sys/vendor/golang.org/x/sys \
+		gomodule:redigo:v1.9.2:gomodule_redigo/vendor/github.com/gomodule/redigo \
+		kr:text:v0.2.0:kr_text/vendor/github.com/kr/text \
 		pkg:errors:v0.9.1:pkg_errors/vendor/github.com/pkg/errors \
 		pmezard:go-difflib:v1.0.0:pmezard_go_difflib/vendor/github.com/pmezard/go-difflib \
-		stretchr:testify:v1.8.4:stretchr_testify/vendor/github.com/stretchr/testify
+		prometheus:client_golang:v1.19.0:prometheus_client_golang/vendor/github.com/prometheus/client_golang \
+		prometheus:client_model:v0.5.0:prometheus_client_model/vendor/github.com/prometheus/client_model \
+		prometheus:common:v0.48.0:prometheus_common/vendor/github.com/prometheus/common \
+		prometheus:procfs:v0.12.0:prometheus_procfs/vendor/github.com/prometheus/procfs \
+		protocolbuffers:protobuf-go:v1.32.0:protocolbuffers_protobuf_go/vendor/google.golang.org/protobuf \
+		stretchr:testify:v1.9.0:stretchr_testify/vendor/github.com/stretchr/testify
 
 GO_PKGNAME=  github.com/${GH_ACCOUNT}/rsync-proxy
+GO_BUILDFLAGS= -ldflags "-X=main.version=${PORTVERSION}"
 GO_TARGET=   ./cmd/proxy
 
 .include "${.CURDIR}/post-install.mk"
