@@ -97,7 +97,6 @@ pipeline {
                     lang/python3 \
                     mail/ssmtp \
                     mail/mutt \
-                    math/py-pandas \
                     misc/mbuffer \
                     misc/mc \
                     net/bmon \
@@ -170,6 +169,7 @@ pipeline {
                     '
                 PORTS14 = ' \
                     java/openjdk11 \
+                    math/py-pandas \
                     ports-mgmt/poudriere \
                     www/nginx \
                     '
