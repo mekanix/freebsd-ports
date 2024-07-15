@@ -2,7 +2,7 @@
 
 PORTNAME=	rsync-proxy
 DATECODE!=	date -u "+%Y%m%d%H"
-PORTVERSION=	1.2.0.${DATECODE}
+PORTVERSION=	1.3.0.${DATECODE}
 PKGNAMESUFFIX=	-dev
 CATEGORIES=	axcient
 MAINTAINER=	kklimov@axcient.com
