@@ -97,6 +97,7 @@ pipeline {
                     lang/python3 \
                     mail/ssmtp \
                     mail/mutt \
+                    math/py-pandas \
                     misc/mbuffer \
                     misc/mc \
                     net/bmon \
