@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	malloc-exporter
-PORTVERSION=	0.1.0.20221116
+PORTVERSION=	0.2.0.20240724
 CATEGORIES=	axcient
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -16,7 +16,7 @@ USERS=		prometheus
 GROUPS=		prometheus
 
 GH_PROJECT=	py-malloc-exporter
-GH_TAGNAME=	1dc7af7ac77e70fdcb2374e0faf4e9035cdf2cd6
+GH_TAGNAME=	v0.2.0
 
 USE_RC_SUBR=	malloc_exporter
 
