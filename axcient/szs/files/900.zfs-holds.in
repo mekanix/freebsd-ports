@@ -16,7 +16,20 @@ case "$monthly_status_zfs_holds_enable" in
 		if [ ! -d /${pool}/SZS ]; then
 			continue
 		fi
-		/sbin/zfs list -Hpo name -d1 $pool/SZS | /usr/bin/grep "SZS/" | /usr/bin/xargs -n1 -P1 /bin/sh -c "/bin/sleep 1; /sbin/zfs program -n $pool %%DATADIR%%/zfs-holds.lua \$0"|| /bin/rm -f "$TMP"
+		# List all zfs holds in all snapshots under SZS
+		#
+		# Using "zfs holds" on every single snapshot would be far too
+		# slow, so use a ZFS channel program instead.
+		#
+		# But ZFS channel programs block other zfs commands from
+		# running.  So to minimize disruption:
+		# * Only invoke the channel program one file system at a time.
+		# * Sleep in between file systems, to give other processes time
+		#   to run.
+		# * Use "zfs list" (which does not block other ZFS commands) to
+		#   load snapshots into RAM before running the ZFS channel
+		#   program.
+		/sbin/zfs list -Hpo name -d1 $pool/SZS | /usr/bin/grep "SZS/" | /usr/bin/xargs -n1 -P1 /bin/sh -c "/bin/sleep 1; /sbin/zfs list -Hpo name -t snapshot -r \$0 > /dev/null; /sbin/zfs program -n $pool %%DATADIR%%/zfs-holds.lua \$0"|| /bin/rm -f "$TMP"
 	done | /usr/bin/grep SZS
 	case $? in
 		0) # Holds found
