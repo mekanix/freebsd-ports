@@ -280,6 +280,8 @@
     SUBDIR += php82-extensions
     SUBDIR += php83
     SUBDIR += php83-extensions
+    SUBDIR += php84
+    SUBDIR += php84-extensions
     SUBDIR += picoc
     SUBDIR += picolisp
     SUBDIR += pkl
@@ -293,6 +295,7 @@
     SUBDIR += py-dhall
     SUBDIR += py-hy
     SUBDIR += py-lupa
+    SUBDIR += py-sly
     SUBDIR += py-textX
     SUBDIR += python
     SUBDIR += python-doc-html

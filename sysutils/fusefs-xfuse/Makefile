@@ -7,7 +7,7 @@ PKGNAMEPREFIX=	fusefs-
 DISTNAME=	xfs-fuse-${DISTVERSIONPREFIX}${DISTVERSION}${DISTVERSIONSUFFIX}
 DISTFILES=	${CARGO_DIST_SUBDIR}/${DISTNAME}${CARGO_CRATE_EXT}
 
-MAINTAINER=	mail@KhaledEmara.dev
+MAINTAINER=	asomers@FreeBSD.org
 COMMENT=	Read-only FUSE server implementing XFS
 WWW=		https://github.com/KhaledEmaraDev/xfuse
 

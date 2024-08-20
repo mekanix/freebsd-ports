@@ -1,6 +1,7 @@
 PORTNAME=	mesa
-DISTVERSION=	24.1-branchpoint-3263
-DISTVERSIONSUFFIX=	-gf9efedb1a1a
+DISTVERSION=	24.1-branchpoint-3782
+DISTVERSIONSUFFIX=	-gc8d64860ec7
+PORTREVISION=	1
 CATEGORIES=	graphics
 PKGNAMESUFFIX=	-devel
 
@@ -8,6 +9,8 @@ PATCH_SITES=	https://github.com/mesa3d/${GL_PROJECT}/commit/:github
 PATCHFILES+=	700efacda59c.patch:-p1:github
 PATCH_SITES+=	${GL_SITE}/${GL_ACCOUNT}/${GL_PROJECT}/-/commit/
 PATCHFILES+=	2930dcbb3329.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/22246
+PATCHFILES+=	11aaf934112c.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/22941
+PATCHFILES+=	93e96da9458c.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/30710
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Bleeding edge Mesa drivers (OpenCL, OpenGL, Vulkan)
@@ -53,7 +56,7 @@ OPTIONS_GROUP_VULKAN=	anv hasvk radv
 OPTIONS_EXCLUDE_i386=	LTO # anv: vkcube fails on vkCreateSwapchainKHR
 OPTIONS_EXCLUDE+=	${ARCH:Naarch64:C/.+/panfrost/}
 OPTIONS_EXCLUDE+=	${ARCH:Namd64:Ni386:Nx86_64:C/.+/crocus hasvk/}
-OPTIONS_EXCLUDE+=	${ARCH:Naarch64:Namd64:Ni386:Nx86_64:C/.+/anv iris/}
+OPTIONS_EXCLUDE+=	${ARCH:Naarch64:Namd64:Ni386:Nx86_64:Npowerpc64*:C/.+/anv iris/}
 OPTIONS_EXCLUDE+=	${"${GL_DEFAULT:S/,/ /g:[-1]}"==${.CURDIR:T}:?COINST:}
 OPTIONS_SLAVE+=		${"${GL_DEFAULT:S/,/ /g:[-1]}"!=${.CURDIR:T}:?COINST:}
 OPTIONS_SUB=		yes

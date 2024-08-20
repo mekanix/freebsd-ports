@@ -1,6 +1,6 @@
 PORTNAME=	freenginx
-PORTVERSION=	1.27.1
-PORTREVISION?=	0
+PORTVERSION=	1.27.2
+PORTREVISION?=	4
 CATEGORIES=	www
 MASTER_SITES=	https://freenginx.org/download/ \
 		LOCAL/joneum
@@ -9,7 +9,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER?=	joneum@FreeBSD.org
 COMMENT?=	Robust and small WWW server
-WWW=		https://nginx.com/
+WWW=		https://freenginx.org/
 
 LICENSE?=	BSD2CLAUSE
 LICENSE_FILE?=	${WRKSRC}/LICENSE
@@ -174,7 +174,7 @@ HTTPV3_BORING_RUN_DEPENDS=	${LOCALBASE}/bin/bssl:security/boringssl
 HTTPV3_BORING_IMPLIES=		HTTPV3
 HTTPV3_BORING_PREVENTS=		HTTPV3_LSSL HTTPV3_QTLS
 HTTPV3_LSSL_BUILD_DEPENDS=	${LOCALBASE}/include/tls.h:security/libressl-devel
-HTTPV3_LSSL_BUILD_DEPENDS=	${LOCALBASE}/include/tls.h:security/libressl-devel
+HTTPV3_LSSL_RUN_DEPENDS=	${LOCALBASE}/include/tls.h:security/libressl-devel
 HTTPV3_LSSL_IMPLIES=		HTTPV3
 HTTPV3_LSSL_PREVENTS=		HTTPV3_BORING HTTPV3_QTLS
 HTTPV3_QTLS_BUILD_DEPENDS=	${LOCALBASE}/include/openssl/quic.h:security/openssl-quictls

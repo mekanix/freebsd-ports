@@ -79,6 +79,7 @@
     SUBDIR += cvsmail
     SUBDIR += cyrus-imapd25
     SUBDIR += cyrus-imapd30
+    SUBDIR += cyrus-imapd310
     SUBDIR += cyrus-imapd32
     SUBDIR += cyrus-imapd34
     SUBDIR += cyrus-imapd36
@@ -459,6 +460,7 @@
     SUBDIR += pear-Net_Cyrus
     SUBDIR += pear-Net_IMAP
     SUBDIR += pear-Net_LMTP
+    SUBDIR += pecl-imap
     SUBDIR += pecl-mailparse
     SUBDIR += perdition
     SUBDIR += pflogsumm
