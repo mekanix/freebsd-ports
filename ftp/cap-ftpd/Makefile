@@ -1,5 +1,5 @@
 PORTNAME=	cap-ftpd
-PORTVERSION=	0.1.0.20240514
+PORTVERSION=	0.1.0.20240823
 CATEGORIES=	ftp axcient
 
 MAINTAINER=	asomers@axcient.com
@@ -11,7 +11,7 @@ USES=		axcient cargo
 SUB_FILES=	cap-ftpd.toml
 
 GH_PROJECT=	cap-ftpd
-GH_TAGNAME=	8b50e15f2fe4a541d6285751f7a5c2a495321117
+GH_TAGNAME=	834e05b1d5cd07e309d3aa2819ee041029ca5388
 
 USE_RC_SUBR=	cap_ftpd
 
