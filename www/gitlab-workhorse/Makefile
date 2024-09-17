@@ -1,7 +1,7 @@
 PORTNAME=	gitlab-workhorse
-PORTVERSION=	17.1.4
+PORTVERSION=	${GITLAB_VERSION}
+PORTREVISION=	${GITLAB_PORTREVISION} # modify it in www/gitlab/Makefile.common
 DISTVERSIONPREFIX=	v
-PORTREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	mfechner@FreeBSD.org
@@ -30,4 +30,5 @@ PLIST_FILES=	bin/gitlab-resize-image \
 		bin/gitlab-zip-cat \
 		bin/gitlab-zip-metadata
 
+.include "${.CURDIR}/../gitlab/Makefile.common"
 .include <bsd.port.mk>

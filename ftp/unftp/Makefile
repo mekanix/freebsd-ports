@@ -1,6 +1,7 @@
 PORTNAME=	unftp
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.14.7
+PORTREVISION=	2
 CATEGORIES=	ftp
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -378,8 +379,5 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		zeroize_derive-1.4.2
 
 PLIST_FILES=	bin/${PORTNAME}
-
-post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 
 .include <bsd.port.mk>

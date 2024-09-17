@@ -1,6 +1,7 @@
 PORTNAME=	shadowsocks-rust
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.20.4
+PORTREVISION=	2
 CATEGORIES=	net
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -473,10 +474,6 @@ OPENSSLLIB=	/usr/lib
 EXECUTABLES=	sslocal ssmanager ssserver ssservice ssurl
 
 post-install:
-	# strip binaries
-.for e in ${EXECUTABLES}
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/${e}
-.endfor
 	# install config file
 	${MKDIR} ${STAGEDIR}${ETCDIR}
 	${INSTALL_DATA} ${WRKSRC}/examples/config.json ${STAGEDIR}${ETCDIR}/config.json.sample

@@ -1,6 +1,7 @@
 PORTNAME=	inferno
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.11.21
+PORTREVISION=	2
 CATEGORIES=	benchmarks
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -158,8 +159,5 @@ EXECUTABLES=	inferno-collapse-dtrace \
 		inferno-flamegraph
 
 PLIST_FILES=	${EXECUTABLES:S/inferno-/bin\/&/}
-
-post-install:
-	cd ${STAGEDIR}${PREFIX}/bin && ${STRIP_CMD} ${EXECUTABLES}
 
 .include <bsd.port.mk>

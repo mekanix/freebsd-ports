@@ -246,7 +246,7 @@ bin/thisroot.sh
 %%NOT_INSTALLED_ON_AARCH64%%%%ETCDIR%%/cling/libc.modulemap
 %%NOT_INSTALLED_ON_AARCH64%%%%ETCDIR%%/cling/module.modulemap
 %%NOT_INSTALLED_ON_AARCH64%%%%ETCDIR%%/cling/std.modulemap
-%%NOT_INSTALLED_ON_AARCH64%%%%ETCDIR%%/cling/std_fbsd.modulemap
+%%NOT_INSTALLED_ON_AARCH64%%%%ETCDIR%%/cling/std_darwin.modulemap
 %%NOT_INSTALLED_ON_AARCH64%%%%ETCDIR%%/cling/tinyxml2.modulemap
 %%NOT_INSTALLED_ON_AARCH64%%%%ETCDIR%%/cling/vc.modulemap
 %%ETCDIR%%/dictpch/makepch.py
@@ -1163,6 +1163,7 @@ include/root/Riostream.h
 %%ROOFIT%%include/root/RooAbsCategoryLValue.h
 %%ROOFIT%%include/root/RooAbsCollection.h
 %%ROOFIT%%include/root/RooAbsData.h
+%%ROOFIT%%include/root/RooAbsDataFiller.h
 %%ROOFIT%%%%DATAFRAME%%include/root/RooAbsDataHelper.h
 %%ROOFIT%%include/root/RooAbsDataStore.h
 %%ROOFIT%%include/root/RooAbsFunc.h
@@ -3842,6 +3843,7 @@ lib/root/libXMLIO.so.%%SHLIB_VER%%
 %%XML%%lib/root/libXMLParser.so
 %%XML%%lib/root/libXMLParser.so.%%SHLIB_SHVER%%
 %%XML%%lib/root/libXMLParser.so.%%SHLIB_VER%%
+%%NOT_INSTALLED_ON_AARCH64%%lib/root/libc.pcm
 lib/root/libcomplexDict.rootmap
 lib/root/libcomplexDict.so
 lib/root/libcomplexDict.so.%%SHLIB_SHVER%%

@@ -186,6 +186,7 @@
     SUBDIR += ndpmon
     SUBDIR += net-snmp
     SUBDIR += netbox
+    SUBDIR += netbox-agent
     SUBDIR += netdata
     SUBDIR += netdata-go
     SUBDIR += netdisco
@@ -269,6 +270,7 @@
     SUBDIR += p5-NetAddr-IP
     SUBDIR += p5-NetAddr-IP-Lite
     SUBDIR += p5-NetApp
+    SUBDIR += p5-OSLV-Monitor
     SUBDIR += p5-POE-Component-SNMP
     SUBDIR += p5-Prometheus-Tiny
     SUBDIR += p5-Prometheus-Tiny-Shared

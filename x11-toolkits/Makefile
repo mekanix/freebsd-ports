@@ -88,6 +88,7 @@
     SUBDIR += libhandy
     SUBDIR += libhandy0
     SUBDIR += libshumate
+    SUBDIR += libspelling
     SUBDIR += libunique3
     SUBDIR += libwnck
     SUBDIR += libwnck3
@@ -175,6 +176,7 @@
     SUBDIR += py-qt5-chart
     SUBDIR += py-qt6-chart
     SUBDIR += py-qt6-datavis3d
+    SUBDIR += py-superqt
     SUBDIR += py-tkinter
     SUBDIR += py-tktreectrl
     SUBDIR += py-wxPython4

@@ -92,10 +92,12 @@
     SUBDIR += vsftpd
     SUBDIR += vsftpd-ext
     SUBDIR += waiho
+    SUBDIR += wcurl
     SUBDIR += weex
     SUBDIR += wget
     SUBDIR += wmget
     SUBDIR += wput
+    SUBDIR += wush
     SUBDIR += wzdftpd
     SUBDIR += yafc
 

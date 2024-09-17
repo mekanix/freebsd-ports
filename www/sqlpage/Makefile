@@ -1,6 +1,7 @@
 PORTNAME=	sqlpage
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.26.0
+DISTVERSION=	0.28.0
+PORTREVISION=	1
 CATEGORIES=	www databases
 MASTER_SITES=	https://cdn.jsdelivr.net/npm/:npm
 DISTFILES=	${NPM_DISTFILES}
@@ -24,7 +25,7 @@ GH_PROJECT=	SQLpage
 USERS=		sqlpage
 GROUPS=		sqlpage
 
-NPM_DISTFILES=	apexcharts@3.50.0/dist/apexcharts.min.js:npm \
+NPM_DISTFILES=	apexcharts@3.52.0/dist/apexcharts.min.js:npm \
 		@tabler/core@1.0.0-beta20/dist/css/tabler.min.css:npm \
 		@tabler/core@1.0.0-beta20/dist/css/tabler-vendors.min.css:npm \
 		@tabler/core@1.0.0-beta20/dist/js/tabler.min.js:npm \
@@ -42,6 +43,5 @@ post-install:
 		 ${INSTALL_DATA} ${WRKSRC}/index.sql ${STAGEDIR}${DATADIR}
 		${MKDIR} ${STAGEDIR}${PREFIX}/etc/newsyslog.conf.d ;\
 		 ${INSTALL_DATA} ${FILESDIR}/sqlpage.conf ${STAGEDIR}${PREFIX}/etc/newsyslog.conf.d/sqlpage.conf.sample
-		${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 
 .include <bsd.port.mk>

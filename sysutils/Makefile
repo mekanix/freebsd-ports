@@ -48,7 +48,6 @@
     SUBDIR += ansible-sshjail
     SUBDIR += ansible-sysrc
     SUBDIR += anvil
-    SUBDIR += apache-mesos
     SUBDIR += apachetop
     SUBDIR += apcctrl
     SUBDIR += apcpwr
@@ -136,6 +135,7 @@
     SUBDIR += bhyve+
     SUBDIR += bhyve-firmware
     SUBDIR += bhyve-rc
+    SUBDIR += bhyvemgr
     SUBDIR += biosfont
     SUBDIR += bkpupsd
     SUBDIR += bksh
@@ -480,6 +480,7 @@
     SUBDIR += fusefs-sqlfs
     SUBDIR += fusefs-squashfuse
     SUBDIR += fusefs-sshfs
+    SUBDIR += fusefs-ufs
     SUBDIR += fusefs-unionfs
     SUBDIR += fusefs-unreliablefs
     SUBDIR += fusefs-webdavfs
@@ -977,6 +978,7 @@
     SUBDIR += parafly
     SUBDIR += parallel
     SUBDIR += parkverbot
+    SUBDIR += pass-coffin
     SUBDIR += pass-otp
     SUBDIR += pass-secrets
     SUBDIR += pass-update
@@ -1169,6 +1171,7 @@
     SUBDIR += py-scarab
     SUBDIR += py-supervisor
     SUBDIR += py-tarsnapper
+    SUBDIR += py-tldr
     SUBDIR += py-tmuxp
     SUBDIR += py-upt
     SUBDIR += py-upt-cpan
@@ -1363,6 +1366,8 @@
     SUBDIR += schilyutils
     SUBDIR += screen
     SUBDIR += screen-devel
+    SUBDIR += screen49
+    SUBDIR += screen50
     SUBDIR += screenfetch
     SUBDIR += screenie
     SUBDIR += scterc
@@ -1509,6 +1514,7 @@
     SUBDIR += u-boot-bananapim2
     SUBDIR += u-boot-beaglebone
     SUBDIR += u-boot-bhyve-arm64
+    SUBDIR += u-boot-bhyve-riscv
     SUBDIR += u-boot-chip
     SUBDIR += u-boot-clearfog
     SUBDIR += u-boot-cubieboard
@@ -1715,6 +1721,7 @@
     SUBDIR += zpool-iostat-viz
     SUBDIR += zrep
     SUBDIR += zrepl
+    SUBDIR += zrepl-dsh2dsh
     SUBDIR += zsd
     SUBDIR += zsm
     SUBDIR += ztop

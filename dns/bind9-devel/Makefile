@@ -1,14 +1,14 @@
 # pkg-help formatted with fmt 59 63
 
 PORTNAME=	bind
-DISTVERSION=	9.19.24
+DISTVERSION=	9.21.0
 .if defined(BIND_TOOLS_SLAVE)
 # dns/bind-tools here
-PORTREVISION=	1
+PORTREVISION=	0
 .else
 # XXX: correct version
 # dns/bind9xx here
-PORTREVISION=	1
+PORTREVISION=	0
 .endif
 CATEGORIES=	dns net
 MASTER_SITES=	ISC/bind9/${DISTVERSION}
@@ -60,7 +60,6 @@ CONFIGURE_ARGS=	--localstatedir=/var \
 		--with-openssl=${OPENSSLBASE} \
 		--enable-dnsrps \
 		--with-readline=libedit
-CONFIGURE_ENV=	READLINE_CFLAGS="-L${LOCALBASE}/lib"
 ETCDIR=		${PREFIX}/etc/namedb
 
 # FIXME: figure out why build fails if enabled
@@ -171,8 +170,7 @@ TCP_FASTOPEN_CONFIGURE_ENABLE=	tcp-fastopen
 .include <bsd.port.options.mk>
 
 .if defined(WITH_DEBUG)
-CONFIGURE_ARGS+=	--enable-developer \
-			--enable-symtable
+CONFIGURE_ARGS+=	--enable-developer
 USES+=			perl5
 USE_PERL5=		build
 BUILD_DEPENDS+=		cmocka>0:sysutils/cmocka

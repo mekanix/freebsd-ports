@@ -1,5 +1,5 @@
 PORTNAME=	fyi
-DISTVERSION=	1.0.3
+DISTVERSION=	1.0.4
 CATEGORIES=	deskutils
 MASTER_SITES=	https://codeberg.org/dnkl/${PORTNAME}/archive/${DISTVERSIONFULL}${EXTRACT_SUFX}?dummy=/
 
@@ -12,7 +12,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LIB_DEPENDS=	libdbus-1.so:devel/dbus
 
-USES=	meson
+USES=	meson pkgconfig
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 OPTIONS_DEFINE=	DOCS

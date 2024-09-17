@@ -30,7 +30,6 @@
     SUBDIR += R-cran-png
     SUBDIR += R-cran-qcc
     SUBDIR += R-cran-ragg
-    SUBDIR += R-cran-rgdal
     SUBDIR += R-cran-s2
     SUBDIR += R-cran-scales
     SUBDIR += R-cran-shape
@@ -508,8 +507,6 @@
     SUBDIR += libsixel
     SUBDIR += libspiro
     SUBDIR += libspng
-    SUBDIR += libsvg
-    SUBDIR += libsvg-cairo
     SUBDIR += libsvgtiny
     SUBDIR += libvisual
     SUBDIR += libvisual04
@@ -585,7 +582,6 @@
     SUBDIR += metapixel
     SUBDIR += milton
     SUBDIR += minder
-    SUBDIR += ming
     SUBDIR += mirtk
     SUBDIR += movit
     SUBDIR += mozjpeg
@@ -990,10 +986,12 @@
     SUBDIR += py-rasterio
     SUBDIR += py-rasterstats
     SUBDIR += py-rawkit
+    SUBDIR += py-rawpy
     SUBDIR += py-rich-pixels
     SUBDIR += py-s2
     SUBDIR += py-scikit-image
     SUBDIR += py-seqdiag
+    SUBDIR += py-simplejpeg
     SUBDIR += py-sorl-thumbnail
     SUBDIR += py-spectra
     SUBDIR += py-sqlalchemy-imageattach
@@ -1009,6 +1007,7 @@
     SUBDIR += py-urbansim
     SUBDIR += py-utm
     SUBDIR += py-vecrec
+    SUBDIR += py-vispy
     SUBDIR += py-visvis
     SUBDIR += py-wand
     SUBDIR += py-webcolors
@@ -1155,7 +1154,6 @@
     SUBDIR += ssocr
     SUBDIR += sswf
     SUBDIR += stamp
-    SUBDIR += svg2png
     SUBDIR += svgalib
     SUBDIR += svgbob
     SUBDIR += svgpp
