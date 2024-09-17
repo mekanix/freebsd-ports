@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	axcient-utils
-PORTVERSION=	1.0.0.20240725
+PORTVERSION=	1.0.0.20240917
 CATEGORIES=	axcient sysutils
 MASTER_SITES=	GH
 
@@ -21,7 +21,7 @@ NO_ARCH=	yes
 NO_BUILD=	yes
 USES=		axcient python:3.8+,run shebangfix
 GH_PROJECT=	freebsd-utils
-GH_TAGNAME=	63dcb59c505531b8a862c3c24be66b6801db0e7c
+GH_TAGNAME=	c850020258809040f87bb2e947ca0ce344236c74
 
 SUB_FILES=	399.explorer
 USE_RC_SUBR=	automultipath geli_salt zfs_crypto_salt
@@ -31,6 +31,11 @@ SHEBANG_FILES=	jbod-support/jbod-util
 PLIST_FILES=	sbin/geli-util
 PLIST_FILES+=	sbin/jbod-util
 PLIST_FILES+=	sbin/jbod-devd
+PLIST_FILES+=	sbin/jailinit
+PLIST_FILES+=	sbin/jailcreate
+PLIST_FILES+=	sbin/jaildestroy
+PLIST_FILES+=	sbin/jailupdate
+PLIST_FILES+=	sbin/jailupgrade
 PLIST_FILES+=	etc/periodic/weekly/399.explorer
 PLIST_FILES+=	etc/devd/automultipath.conf
 PLIST_FILES+=	sbin/gentle-destroy
@@ -49,5 +54,10 @@ do-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/periodic/weekly
 	@${MKDIR} ${STAGEDIR}/var/explorer
 	${INSTALL_SCRIPT} ${WRKDIR}/399.explorer ${STAGEDIR}${PREFIX}/etc/periodic/weekly
+	${INSTALL_SCRIPT} ${WRKSRC}/jail/jailinit ${STAGEDIR}${PREFIX}/sbin
+	${INSTALL_SCRIPT} ${WRKSRC}/jail/jailcreate ${STAGEDIR}${PREFIX}/sbin
+	${INSTALL_SCRIPT} ${WRKSRC}/jail/jaildestroy ${STAGEDIR}${PREFIX}/sbin
+	${INSTALL_SCRIPT} ${WRKSRC}/jail/jailupdate ${STAGEDIR}${PREFIX}/sbin
+	${INSTALL_SCRIPT} ${WRKSRC}/jail/jailupgrade ${STAGEDIR}${PREFIX}/sbin
 
 .include <bsd.port.mk>
