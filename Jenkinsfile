@@ -90,7 +90,7 @@ pipeline {
                     devel/valgrind \
                     editors/nano \
                     editors/vim \
-                    emulators/qemu@tools \
+                    emulators/qemu@nox11 \
                     ftp/cap-ftpd \
                     graphics/py-pillow \
                     lang/expect \
