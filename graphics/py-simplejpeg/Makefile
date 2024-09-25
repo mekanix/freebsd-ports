@@ -12,18 +12,17 @@ LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	${PY_SETUPTOOLS} \
-		cmake:devel/cmake-core \
 		${PYTHON_PKGNAMEPREFIX}cython3>0:lang/cython3@${PY_FLAVOR} \
 		${PYNUMPY} \
 		${PYTHON_PKGNAMEPREFIX}wheel>0:devel/py-wheel@${PY_FLAVOR}
 
-USES=		python
+USES=		cmake:indirect python
 USE_PYTHON=	pep517 autoplist pytest
 
 TEST_ENV=	${MAKE_ENV} PYTHONPATH=${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}
 TEST_WRKSRC=	${WRKSRC}/test
 
-post-extract: # force cythonization because pre-cythonized _jpeg.c fails to complile
+post-extract: # force cythonization because pre-cythonized _jpeg.c fails to compile
 	@${RM} ${WRKSRC}/simplejpeg/_jpeg.c
 
 post-install:
