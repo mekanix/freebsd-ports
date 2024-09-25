@@ -136,6 +136,7 @@ pipeline {
                     sysutils/beats8 \
                     sysutils/dmidecode \
                     sysutils/dtrace-toolkit \
+                    sysutils/freebsd-rustdate \
                     sysutils/fusefs-ntfs \
                     sysutils/gstat-rs \
                     sysutils/intel-nvmupdate-100g \
