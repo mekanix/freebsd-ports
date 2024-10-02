@@ -24,8 +24,8 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		bstr-1.9.0 \
 		bumpalo-3.14.0 \
 		bytes-1.6.0 \
-		cap-primitives-3.1.0 \
-		cap-std-3.1.0 \
+		cap-primitives-3.2.0 \
+		cap-std-3.2.0 \
 		capsicum-0.4.2 \
 		capsicum-net-0.1.0 \
 		casper-sys-0.1.1 \
@@ -269,4 +269,4 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		x509-parser-0.16.0 \
 		zeroize-1.8.1 \
 		zeroize_derive-1.4.2 \
-		libunftp,unftp-sbe-fs@git+https://github.com/asomers/libunftp.git?rev=7d5630e\#7d5630e3316816e4247f0fedfd24c260b882132a
+		libunftp,unftp-sbe-fs@git+https://github.com/asomers/libunftp.git?rev=85a766d\#85a766d5f1eae17646499531b60c90e0888529a9
