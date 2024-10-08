@@ -403,7 +403,6 @@
     SUBDIR += nextcloud-end_to_end_encryption
     SUBDIR += nextcloud-passman
     SUBDIR += nextcloud-twofactor_admin
-    SUBDIR += nextcloud-twofactor_nextcloud_notification
     SUBDIR += nextcloud-twofactor_webauthn
     SUBDIR += nflib
     SUBDIR += ngrok
@@ -1092,7 +1091,6 @@
     SUBDIR += py-yara-python-dex
     SUBDIR += py-yubikey-manager
     SUBDIR += py-zkg
-    SUBDIR += py-zope.password
     SUBDIR += py-zxcvbn
     SUBDIR += pygost
     SUBDIR += qt-sudo

@@ -148,7 +148,6 @@
     SUBDIR += eventviews
     SUBDIR += exabgp4
     SUBDIR += fb303
-    SUBDIR += fbzmq
     SUBDIR += fiche
     SUBDIR += file2pcap
     SUBDIR += findmtu
@@ -170,6 +169,8 @@
     SUBDIR += freeswitch
     SUBDIR += freevrrpd
     SUBDIR += frp
+    SUBDIR += frr10
+    SUBDIR += frr10-pythontools
     SUBDIR += frr8
     SUBDIR += frr8-pythontools
     SUBDIR += frr9
@@ -243,6 +244,7 @@
     SUBDIR += haproxy26
     SUBDIR += haproxy27
     SUBDIR += haproxy28
+    SUBDIR += haproxy29
     SUBDIR += hblock
     SUBDIR += hexinject
     SUBDIR += hlmaster

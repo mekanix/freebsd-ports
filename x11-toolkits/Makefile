@@ -174,6 +174,7 @@
     SUBDIR += py-easygui
     SUBDIR += py-fltk
     SUBDIR += py-guietta
+    SUBDIR += py-kivy
     SUBDIR += py-python-xlib
     SUBDIR += py-qt5-chart
     SUBDIR += py-qt6-chart
@@ -241,6 +242,7 @@
     SUBDIR += tk-wrapper
     SUBDIR += tk86
     SUBDIR += tk87
+    SUBDIR += tk90
     SUBDIR += tkdnd
     SUBDIR += tkshape
     SUBDIR += tktable
@@ -252,7 +254,6 @@
     SUBDIR += vte3
     SUBDIR += wlroots
     SUBDIR += wlroots015
-    SUBDIR += wlroots016
     SUBDIR += wlroots017
     SUBDIR += wmapp
     SUBDIR += wxgtk30
