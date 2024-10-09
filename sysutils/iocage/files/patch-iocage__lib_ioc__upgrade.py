@@ -1,11 +1,11 @@
---- iocage_lib/ioc_upgrade.py.orig	2019-09-26 07:23:24 UTC
+--- iocage_lib/ioc_upgrade.py.orig	2024-09-20 06:45:27 UTC
 +++ iocage_lib/ioc_upgrade.py
-@@ -111,19 +111,25 @@ class IOCUpgrade(iocage_lib.ioc_json.IOCZFS):
+@@ -104,19 +104,25 @@ class IOCUpgrade:
          self.__upgrade_check_conf__()
  
-         f_rel = f'{self.new_release.rsplit("-RELEASE")[0]}.0'
--        f = 'https://raw.githubusercontent.com/freebsd/freebsd' \
--            f'/release/{f_rel}/usr.sbin/freebsd-update/freebsd-update.sh'
+         f_rel = f'{self.new_release.rsplit("-RELEASE")[0]}'
+-        f = 'https://raw.githubusercontent.com/freebsd/freebsd-src' \
+-            f'/releng/{f_rel}/usr.sbin/freebsd-update/freebsd-update.sh'
  
          tmp = None
          try:
@@ -19,7 +19,7 @@
 +            if os.path.isfile(fetched_update):
 +                fbsd_update = fetched_update
 +            else:
-+                f = 'https://raw.githubusercontent.com/freebsd/freebsd' \
++                f = 'https://raw.githubusercontent.com/freebsd/freebsd-src' \
 +                    f'/releng/{f_rel}/usr.sbin/freebsd-update/freebsd-update.sh'
 +                tmp = tempfile.NamedTemporaryFile(delete=False)
 +                with urllib.request.urlopen(f) as http:
@@ -33,8 +33,8 @@
 +                fbsd_update, "-b", self.path, "-d",
                  f"{self.path}/var/db/freebsd-update/", "-f",
                  f"{self.path}/etc/freebsd-update.conf",
-                 "--not-running-from-cron", "--currently-running "
-@@ -166,7 +172,7 @@ class IOCUpgrade(iocage_lib.ioc_json.IOCZFS):
+                 "--not-running-from-cron", "--currently-running",
+@@ -159,7 +165,7 @@ class IOCUpgrade:
  
              for _ in range(50): # up to 50 invocations to prevent runaway
                  if os.path.islink(self.freebsd_install_link):
