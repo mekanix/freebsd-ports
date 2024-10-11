@@ -1,0 +1,9 @@
+It provides:
+ * Snapshot-based PUSH and PULL replication over SSH or high-speed unencrypted connection
+ * Extensible snapshot creation and replication schedule, replication of manually created snapshots
+ * Consistent recursive snapshots with possibility to exclude certain datasets
+ * All modern ZFS features support including resumable replication
+ * Flexible snapshot retention on both local and remote sides
+ * Comprehensive logging that helps you to understand what is going on and why
+ * Configuration via simple and clear YAML file
+ * Full integration with FreeNAS, the World’s #1 data storage solution

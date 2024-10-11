@@ -1,0 +1,31 @@
+#!/bin/sh
+
+# PROVIDE: zettarepl
+# KEYWORD: shutdown
+
+. /etc/rc.subr
+
+name=zettarepl
+desc="zettarepl service"
+rcvar=${name}_enable
+load_rc_config $name
+
+: ${zettarepl_enable:="NO"}
+: ${zettarepl_config:="/usr/local/etc/zettarepl.yml"}
+
+pidfile="/var/run/${name}.pid"
+start_cmd="${name}_start"
+procname="%%PREFIX%%/bin/python%%PYTHON_VER%%"
+
+zettarepl_start() {
+  echo -n "Starting ${name} ... "
+  /usr/sbin/daemon -p "${pidfile}" -S "%%PREFIX%%/bin/zettarepl" run "${zettarepl_config}"
+  status=$?
+  if [ "${status}" = "0" ]; then
+    echo "done"
+  else
+    echo "failed!"
+  fi
+}
+
+run_rc_command $*
