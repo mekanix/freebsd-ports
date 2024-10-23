@@ -1,5 +1,6 @@
 PORTNAME=	smartctl-exporter
 PORTVERSION=	0.0.13 # make sure you've published this release on GitHub
+PORTREVISION=	1
 CATEGORIES=	net-mgmt
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
