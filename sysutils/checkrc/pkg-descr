@@ -1,0 +1,2 @@
+This tool checks each setting against a predefined set of valid values to
+ensure that the configuration will function as expected when the system boots.

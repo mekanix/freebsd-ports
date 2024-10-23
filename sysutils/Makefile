@@ -196,6 +196,7 @@
     SUBDIR += cfengine323
     SUBDIR += cfengine324
     SUBDIR += chaoskube
+    SUBDIR += checkrc
     SUBDIR += checkrestart
     SUBDIR += chezmoi
     SUBDIR += chgrep
