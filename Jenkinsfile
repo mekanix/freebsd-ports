@@ -105,6 +105,7 @@ pipeline {
                     net/ipxe \
                     net/cloud-init \
                     net/mtr-nox11 \
+                    net/tcprtt \
                     net-mgmt/geom-exporter \
                     net-mgmt/grok_exporter \
                     net-mgmt/iftop \
