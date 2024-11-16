@@ -117,6 +117,7 @@ pipeline {
                     net-mgmt/py-zfs-exporter \
                     net-mgmt/py-ses-exporter \
                     net-mgmt/py-smartctl-exporter \
+                    net-mgmt/tcptrack \
                     net-mgmt/telegraf \
                     net-mgmt/zabbix5-agent \
                     net/nss-pam-ldapd \
