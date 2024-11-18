@@ -1,6 +1,6 @@
 PORTNAME=	efsserver
 PORTVERSION=	3.21.70.20240326
-PORTREVISION= 	1
+PORTREVISION= 	2
 CATEGORIES=	axcient net
 MASTER_SITES=	GH
 
@@ -14,7 +14,7 @@ LIB_DEPENDS=	libpcre.so:devel/pcre \
 RUN_DEPENDS=	${LOCALBASE}/bin/mailx:mail/heirloom-mailx \
 		${LOCALBASE}/bin/gawk:lang/gawk
 
-USES=		axcient gettext-runtime gmake python:3.6+,run,test ssl pgsql:13
+USES=		axcient gettext-runtime gmake python:3.6+,run,test ssl pgsql
 USE_RC_SUBR=	efsserver
 USERS=		monagent iasouser efolder efwebdev aa vmcloud
 GH_PROJECT=	efs-backup
