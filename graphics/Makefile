@@ -503,6 +503,7 @@
     SUBDIR += librsvg2
     SUBDIR += librsvg2-rust
     SUBDIR += librtprocess
+    SUBDIR += libskiasharp
     SUBDIR += libsixel
     SUBDIR += libspiro
     SUBDIR += libspng
@@ -979,6 +980,7 @@
     SUBDIR += py-pyzbar
     SUBDIR += py-qpageview
     SUBDIR += py-qrencode
+    SUBDIR += py-qt5-3d
     SUBDIR += py-qt6-3d
     SUBDIR += py-qudida
     SUBDIR += py-railroad-diagrams
@@ -1213,6 +1215,7 @@
     SUBDIR += waffle
     SUBDIR += waifu2x-converter-cpp
     SUBDIR += waifu2x-ncnn-vulkan
+    SUBDIR += wallhaven-cli
     SUBDIR += wayland
     SUBDIR += wayland-protocols
     SUBDIR += wayland-utils

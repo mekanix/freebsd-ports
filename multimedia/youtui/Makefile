@@ -1,7 +1,6 @@
 PORTNAME=	youtui
 DISTVERSIONPREFIX=	youtui/v
-DISTVERSION=	0.0.14
-PORTREVISION=	1
+DISTVERSION=	0.0.16
 CATEGORIES=	multimedia
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -17,6 +16,8 @@ USES=		cargo
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	nick42d
+
+RUSTFLAGS=	${ARCH:S/i386/YES/:C/^[a-z].*//:S/YES/-C target-feature=+sse,+sse2/} # add sse sse2 target-features only on i386
 
 CARGO_CRATES=	addr2line-0.22.0 \
 		adler-1.0.2 \
@@ -36,8 +37,6 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		anyhow-1.0.86 \
 		arrayvec-0.7.4 \
 		async-compression-0.4.11 \
-		async-stream-0.3.5 \
-		async-stream-impl-0.3.5 \
 		async-trait-0.1.81 \
 		atomic-waker-1.1.2 \
 		autocfg-1.3.0 \
@@ -289,7 +288,6 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		rustls-pki-types-1.7.0 \
 		rustls-webpki-0.102.5 \
 		rustversion-1.0.17 \
-		rusty_ytdl-0.7.4 \
 		ryu-1.0.18 \
 		ryu-js-1.0.1 \
 		same-file-1.0.6 \
@@ -359,7 +357,6 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		tokio-macros-2.4.0 \
 		tokio-native-tls-0.3.1 \
 		tokio-rustls-0.26.0 \
-		tokio-stream-0.1.15 \
 		tokio-util-0.7.11 \
 		toml-0.8.19 \
 		toml_datetime-0.6.8 \
@@ -452,6 +449,7 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		yoke-0.7.4 \
 		yoke-derive-0.7.4 \
 		youtui-vendored-rodio-0.19.0-youtui-vendored.1 \
+		youtui-vendored-rusty_ytdl-0.7.4-youtui-vendored.1 \
 		zerocopy-0.7.35 \
 		zerocopy-derive-0.7.35 \
 		zerofrom-0.1.4 \
@@ -471,7 +469,7 @@ do-install:
 	find ${WRKDIR}/target
 	echo "<< find"
 	${INSTALL_PROGRAM} \
-		${WRKDIR}/target/*/release/${PORTNAME} \
+		${WRKDIR}/target/release/${PORTNAME} \
 		${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>

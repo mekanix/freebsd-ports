@@ -17,6 +17,7 @@
     SUBDIR += R-cran-FNN
     SUBDIR += R-cran-Formula
     SUBDIR += R-cran-FrF2
+    SUBDIR += R-cran-GPArotation
     SUBDIR += R-cran-KFAS
     SUBDIR += R-cran-LearnBayes
     SUBDIR += R-cran-MCMCpack
@@ -103,6 +104,7 @@
     SUBDIR += R-cran-misc3d
     SUBDIR += R-cran-miscTools
     SUBDIR += R-cran-mitools
+    SUBDIR += R-cran-mnormt
     SUBDIR += R-cran-moments
     SUBDIR += R-cran-mvtnorm
     SUBDIR += R-cran-ncdf4
@@ -208,6 +210,7 @@
     SUBDIR += bsdnt
     SUBDIR += btor2tools
     SUBDIR += cadabra2
+    SUBDIR += cadiback
     SUBDIR += cadical
     SUBDIR += cado-nfs
     SUBDIR += calc
@@ -339,6 +342,7 @@
     SUBDIR += flann
     SUBDIR += flexfloat
     SUBDIR += flexiblas
+    SUBDIR += flint
     SUBDIR += flint2
     SUBDIR += flintqs
     SUBDIR += flopc++
@@ -440,7 +444,6 @@
     SUBDIR += latte-integrale
     SUBDIR += lcalc
     SUBDIR += ldouble
-    SUBDIR += lean
     SUBDIR += lean4
     SUBDIR += leangz
     SUBDIR += lemon
@@ -449,6 +452,7 @@
     SUBDIR += libRmath
     SUBDIR += libbraiding
     SUBDIR += libccd
+    SUBDIR += libceed
     SUBDIR += libcerf
     SUBDIR += libdivide
     SUBDIR += libdivsufsort
@@ -967,6 +971,7 @@
     SUBDIR += py-hepstats
     SUBDIR += py-heyoka
     SUBDIR += py-hmmlearn
+    SUBDIR += py-hypernetx
     SUBDIR += py-igraph
     SUBDIR += py-iminuit
     SUBDIR += py-intspan
@@ -982,6 +987,7 @@
     SUBDIR += py-keras-preprocessing
     SUBDIR += py-kiwisolver
     SUBDIR += py-levmar
+    SUBDIR += py-libceed
     SUBDIR += py-libpoly
     SUBDIR += py-linearmodels
     SUBDIR += py-lmfit
@@ -1049,6 +1055,7 @@
     SUBDIR += py-pyodesys
     SUBDIR += py-pyprobables
     SUBDIR += py-pyreadr
+    SUBDIR += py-pyreadstat
     SUBDIR += py-pyrr
     SUBDIR += py-pysmt
     SUBDIR += py-pystan
@@ -1133,6 +1140,7 @@
     SUBDIR += rubiks
     SUBDIR += rubygem-algebra
     SUBDIR += rubygem-bigdecimal
+    SUBDIR += rubygem-cmath
     SUBDIR += rubygem-enumerable-statistics
     SUBDIR += rubygem-expression_parser
     SUBDIR += rubygem-fftw3

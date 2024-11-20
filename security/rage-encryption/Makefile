@@ -1,7 +1,6 @@
 PORTNAME=	rage
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.10.0
-PORTREVISION=	6
+DISTVERSION=	0.11.0
 CATEGORIES=	security
 PKGNAMESUFFIX=	-encryption
 
@@ -31,7 +30,7 @@ PLIST_FILES=	bin/rage \
 
 do-install:
 .for f in rage rage-keygen rage-mount
-	${INSTALL_PROGRAM} ${CARGO_TARGET_DIR}/${CARGO_BUILD_TARGET}/*/${f} \
+	${INSTALL_PROGRAM} ${CARGO_TARGET_DIR}/*/${f} \
 		${STAGEDIR}${PREFIX}/bin
 .endfor
 

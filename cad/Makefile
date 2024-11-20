@@ -1,5 +1,6 @@
     COMMENT = CAD tools
 
+    SUBDIR += Clipper2
     SUBDIR += PrusaSlicer
     SUBDIR += abc
     SUBDIR += admesh
@@ -145,7 +146,6 @@
     SUBDIR += svls
     SUBDIR += sweethome3d
     SUBDIR += symbiyosys
-    SUBDIR += tkgate
     SUBDIR += tochnog
     SUBDIR += uhdm
     SUBDIR += uranium
