@@ -320,10 +320,13 @@
     SUBDIR += linklint
     SUBDIR += links
     SUBDIR += links1
+    SUBDIR += linux-brave
     SUBDIR += linux-c7-qtwebkit
     SUBDIR += linux-chrome
     SUBDIR += linux-freetube
     SUBDIR += linux-rl9-libnghttp2
+    SUBDIR += linux-rl9-qt5-qtwebchannel
+    SUBDIR += linux-rl9-qt5-qtwebsockets
     SUBDIR += linux-vieb
     SUBDIR += linux-widevine-cdm
     SUBDIR += litmus
@@ -495,6 +498,7 @@
     SUBDIR += onlyoffice-documentserver
     SUBDIR += opencart
     SUBDIR += openemr
+    SUBDIR += opengist
     SUBDIR += openresty
     SUBDIR += orangehrm
     SUBDIR += osrm-backend
@@ -1454,6 +1458,7 @@
     SUBDIR += py-aiohttp-wsgi
     SUBDIR += py-aiohttp_cors
     SUBDIR += py-aioquic
+    SUBDIR += py-aioresponses
     SUBDIR += py-aiostream
     SUBDIR += py-arxiv
     SUBDIR += py-asgi-csrf
@@ -1677,9 +1682,11 @@
     SUBDIR += py-flask-script
     SUBDIR += py-flask-security
     SUBDIR += py-flask-session
+    SUBDIR += py-flask-simpleldap
     SUBDIR += py-flask-smorest
     SUBDIR += py-flask-socketio
     SUBDIR += py-flask-sockets
+    SUBDIR += py-flask-sphinx-themes
     SUBDIR += py-flask-theme
     SUBDIR += py-flask-uploads
     SUBDIR += py-flask-wtf
@@ -1690,6 +1697,7 @@
     SUBDIR += py-formencode
     SUBDIR += py-fqdn
     SUBDIR += py-frappe-bench
+    SUBDIR += py-free-proxy
     SUBDIR += py-freenit
     SUBDIR += py-frozen-flask
     SUBDIR += py-gevent-websocket
@@ -1764,6 +1772,9 @@
     SUBDIR += py-mwoauth
     SUBDIR += py-nevow
     SUBDIR += py-nh3
+    SUBDIR += py-nicegui
+    SUBDIR += py-nicegui-highcharts
+    SUBDIR += py-nicegui-nogui
     SUBDIR += py-notebook
     SUBDIR += py-onetimepass
     SUBDIR += py-openbrokerapi
@@ -1783,6 +1794,7 @@
     SUBDIR += py-proxy_tools
     SUBDIR += py-puppetboard
     SUBDIR += py-py-restclient
+    SUBDIR += py-pydrive2
     SUBDIR += py-pygsheets
     SUBDIR += py-pyjwt
     SUBDIR += py-pyjwt1
@@ -1796,6 +1808,8 @@
     SUBDIR += py-python-dotenv
     SUBDIR += py-python-multipart
     SUBDIR += py-pyweblib
+    SUBDIR += py-pywebview-gtk
+    SUBDIR += py-pywebview-qt
     SUBDIR += py-pywikibot
     SUBDIR += py-pywry
     SUBDIR += py-qh3

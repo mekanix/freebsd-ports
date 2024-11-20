@@ -449,6 +449,7 @@
     SUBDIR += linux-rl9-expat
     SUBDIR += linux-rl9-libxml2
     SUBDIR += linux-rl9-libxslt
+    SUBDIR += linux-rl9-qt5-qtxmlpatterns
     SUBDIR += linuxdoc
     SUBDIR += linuxdoc-tools
     SUBDIR += localize
@@ -798,6 +799,8 @@
     SUBDIR += p5-Search-Elasticsearch-Client-1_0
     SUBDIR += p5-Search-Elasticsearch-Client-2_0
     SUBDIR += p5-Search-Elasticsearch-Client-5_0
+    SUBDIR += p5-Search-Elasticsearch-Client-6_0
+    SUBDIR += p5-Search-Elasticsearch-Client-7_0
     SUBDIR += p5-Search-Estraier
     SUBDIR += p5-Search-Odeum
     SUBDIR += p5-Search-QueryParser
@@ -1644,6 +1647,7 @@
     SUBDIR += py-sphinxcontrib-qthelp
     SUBDIR += py-sphinxcontrib-seqdiag
     SUBDIR += py-sphinxcontrib-serializinghtml
+    SUBDIR += py-sphinxcontrib-spelling
     SUBDIR += py-sphinxcontrib-svg2pdfconverter
     SUBDIR += py-sphinxcontrib-towncrier
     SUBDIR += py-sphinxcontrib-websupport
@@ -2021,6 +2025,7 @@
     SUBDIR += sdom
     SUBDIR += senna
     SUBDIR += sentencepiece
+    SUBDIR += sexp
     SUBDIR += sgmlformat
     SUBDIR += sgmls
     SUBDIR += sgrep

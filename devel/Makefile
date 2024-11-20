@@ -282,7 +282,6 @@
     SUBDIR += aws-sdk-php
     SUBDIR += axmldec
     SUBDIR += ayatana-ido
-    SUBDIR += b2
     SUBDIR += babelflow
     SUBDIR += babeltrace
     SUBDIR += bacnet-stack
@@ -514,6 +513,7 @@
     SUBDIR += ctypes.sh
     SUBDIR += cunit
     SUBDIR += cut
+    SUBDIR += cutelee
     SUBDIR += cutils
     SUBDIR += cutter
     SUBDIR += cvise
@@ -640,6 +640,7 @@
     SUBDIR += electron30
     SUBDIR += electron31
     SUBDIR += electron32
+    SUBDIR += electron33
     SUBDIR += elf
     SUBDIR += elf-dissector
     SUBDIR += elfcat
@@ -693,7 +694,6 @@
     SUBDIR += firmware-utils
     SUBDIR += fistgen
     SUBDIR += flatbuffers
-    SUBDIR += flatbuffers205
     SUBDIR += flatcc
     SUBDIR += flatzebra
     SUBDIR += flex-sdk
@@ -1220,6 +1220,7 @@
     SUBDIR += libcdb
     SUBDIR += libcds
     SUBDIR += libcfu
+    SUBDIR += libchdr
     SUBDIR += libchipcard
     SUBDIR += libcidr
     SUBDIR += libcii
@@ -1522,6 +1523,7 @@
     SUBDIR += linux-c7-systemd-libs
     SUBDIR += linux-c7-zlib-devel
     SUBDIR += linux-ltp
+    SUBDIR += linux-pvs-studio
     SUBDIR += linux-rl9-dbus-libs
     SUBDIR += linux-rl9-devtools
     SUBDIR += linux-rl9-elfutils-libelf
@@ -1541,6 +1543,11 @@
     SUBDIR += linux-rl9-nspr
     SUBDIR += linux-rl9-ocl-icd
     SUBDIR += linux-rl9-orc
+    SUBDIR += linux-rl9-qt5
+    SUBDIR += linux-rl9-qt5-qtbase
+    SUBDIR += linux-rl9-qt5-qtdeclarative
+    SUBDIR += linux-rl9-qt5-qtscript
+    SUBDIR += linux-rl9-qt5-qttools
     SUBDIR += linux-rl9-strace
     SUBDIR += linux-rl9-systemd-libs
     SUBDIR += linux-sublime-merge
@@ -4517,6 +4524,7 @@
     SUBDIR += py-azure-synapse-artifacts
     SUBDIR += py-azure-synapse-managedprivateendpoints
     SUBDIR += py-azure-synapse-spark
+    SUBDIR += py-b2
     SUBDIR += py-b2sdk
     SUBDIR += py-babel
     SUBDIR += py-babelfish
@@ -4595,6 +4603,7 @@
     SUBDIR += py-cerberus
     SUBDIR += py-cereslib
     SUBDIR += py-certsrv
+    SUBDIR += py-cf-xarray
     SUBDIR += py-cffi
     SUBDIR += py-cfgv
     SUBDIR += py-cfn-lint
@@ -4912,6 +4921,7 @@
     SUBDIR += py-glob2
     SUBDIR += py-glom
     SUBDIR += py-gobject3
+    SUBDIR += py-goodreads
     SUBDIR += py-google-cloud-iam
     SUBDIR += py-google-crc32c
     SUBDIR += py-google-i18n-address
@@ -5648,6 +5658,8 @@
     SUBDIR += py-pytest-qt
     SUBDIR += py-pytest-random-order
     SUBDIR += py-pytest-randomly
+    SUBDIR += py-pytest-recorder
+    SUBDIR += py-pytest-recording
     SUBDIR += py-pytest-regressions
     SUBDIR += py-pytest-regtest
     SUBDIR += py-pytest-relaxed
@@ -5823,6 +5835,7 @@
     SUBDIR += py-scheduler
     SUBDIR += py-schema
     SUBDIR += py-schematics-patched
+    SUBDIR += py-scholarly
     SUBDIR += py-scikit-base
     SUBDIR += py-scikit-build
     SUBDIR += py-scikit-build-core
@@ -5919,6 +5932,7 @@
     SUBDIR += py-sysv_ipc
     SUBDIR += py-tables
     SUBDIR += py-tabulate
+    SUBDIR += py-tabulate2
     SUBDIR += py-tabulator
     SUBDIR += py-tailer
     SUBDIR += py-tapi
@@ -6544,6 +6558,7 @@
     SUBDIR += rubygem-aws-sdk-ecr
     SUBDIR += rubygem-aws-sdk-ecrpublic
     SUBDIR += rubygem-aws-sdk-ecs
+    SUBDIR += rubygem-aws-sdk-efs
     SUBDIR += rubygem-aws-sdk-eks
     SUBDIR += rubygem-aws-sdk-eksauth
     SUBDIR += rubygem-aws-sdk-elasticache

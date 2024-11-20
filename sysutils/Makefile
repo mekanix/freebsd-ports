@@ -9,6 +9,7 @@
     SUBDIR += R-cran-processx
     SUBDIR += R-cran-ps
     SUBDIR += R-cran-xopen
+    SUBDIR += RyzenAdj
     SUBDIR += UEFITool
     SUBDIR += abduco
     SUBDIR += abgx360
@@ -480,7 +481,6 @@
     SUBDIR += gstat-rs
     SUBDIR += gstopd
     SUBDIR += gstreamer1-plugins-cdio
-    SUBDIR += hammer2
     SUBDIR += handlr
     SUBDIR += hardlink
     SUBDIR += hare
@@ -777,7 +777,6 @@
     SUBDIR += oc
     SUBDIR += ocijail
     SUBDIR += odo
-    SUBDIR += ods2
     SUBDIR += ohmu
     SUBDIR += omnibackup
     SUBDIR += onefetch
@@ -1010,6 +1009,7 @@
     SUBDIR += py-ansible-core
     SUBDIR += py-ansible-lint
     SUBDIR += py-ansible-runner
+    SUBDIR += py-appjail-gui
     SUBDIR += py-azure-cli
     SUBDIR += py-azure-cli-acr
     SUBDIR += py-azure-cli-base
@@ -1611,6 +1611,5 @@
     SUBDIR += zrep
     SUBDIR += zsd
     SUBDIR += zsm
-    SUBDIR += ztop
 
 .include <bsd.port.subdir.mk>
