@@ -18,6 +18,7 @@ SUBDIR += editors
 SUBDIR += emulators
 SUBDIR += finance
 SUBDIR += french
+SUBDIR += filesystems
 SUBDIR += ftp
 SUBDIR += games
 SUBDIR += german
