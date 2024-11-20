@@ -15,10 +15,10 @@ RUN_DEPENDS+=	mbuffer:misc/mbuffer \
 		lzop:archivers/lzop \
 		pv:sysutils/pv \
 		wget:ftp/wget \
-		fuse-ext2:filesystems/fusefs-ext2 \
-		xfs-fuse:filesystems/fusefs-xfuse \
-		mount.exfat:filesystems/fusefs-exfat \
-		ntfs-3g:filesystems/fusefs-ntfs \
+		fuse-ext2:filesystems/ext2 \
+		xfs-fuse:filesystems/xfuse \
+		mount.exfat:filesystems/exfat \
+		ntfs-3g:filesystems/ntfs \
 		${LOCALBASE}/lib/pam_pwdfile.so:security/pam_pwdfile \
 		${ADD_MBR_DEPENDS}
 

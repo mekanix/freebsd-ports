@@ -92,7 +92,7 @@ pipeline {
                     editors/vim \
                     emulators/qemu@tools \
                     emulators/qemu@guestagent \
-                    filesystems/fusefs-ntfs \
+                    filesystems/ntfs \
                     filesystems/zfs-stats-lite \
                     filesystems/zfsnap2 \
                     filesystems/zrepl \
