@@ -18,7 +18,7 @@ LICENSE_PERMS=	pkg-mirror  # Not really, only since our pkg server is private
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}future>0:devel/py-future@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}sqlite3>0:databases/py-sqlite3@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}boto3>0:www/py-boto3@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}fusepy>0:devel/py-fusepy@${PY_FLAVOR}
+		${PYTHON_PKGNAMEPREFIX}fusepy>0:filesystems/py-fusepy@${PY_FLAVOR}
 
 NO_ARCH=	yes
 NO_BUILD=	yes

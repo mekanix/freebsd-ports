@@ -92,6 +92,11 @@ pipeline {
                     editors/vim \
                     emulators/qemu@tools \
                     emulators/qemu@guestagent \
+                    filesystems/fusefs-ntfs \
+                    filesystems/zfs-stats-lite \
+                    filesystems/zfsnap2 \
+                    filesystems/zrepl \
+                    filesystems/ztop \
                     ftp/cap-ftpd \
                     graphics/py-pillow \
                     lang/expect \
@@ -104,7 +109,7 @@ pipeline {
                     net/bmon \
                     net/ipxe \
                     net/cloud-init \
-                    net/mtr-nox11 \
+                    net/mtr@nox11 \
                     net/tcprtt \
                     net-mgmt/geom-exporter \
                     net-mgmt/grok_exporter \
@@ -139,7 +144,6 @@ pipeline {
                     sysutils/dmidecode \
                     sysutils/dtrace-toolkit \
                     sysutils/freebsd-rustdate \
-                    sysutils/fusefs-ntfs \
                     sysutils/gstat-rs \
                     sysutils/intel-nvmupdate-100g \
                     sysutils/iocage \
@@ -159,10 +163,6 @@ pipeline {
                     sysutils/smartmontools \
                     sysutils/smp_utils \
                     sysutils/tmux \
-                    sysutils/zfs-stats-lite \
-                    sysutils/zfsnap2 \
-                    sysutils/zrepl \
-                    sysutils/ztop \
                     textproc/jq \
                     textproc/py-elasticsearch \
                     textproc/ripgrep \

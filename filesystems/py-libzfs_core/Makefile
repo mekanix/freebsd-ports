@@ -4,7 +4,7 @@ PORTNAME=	libzfs_core
 # The real Python library version is defined by SRC_BASE.
 # The port version is not related, unfortunately.
 PORTVERSION=	1.0.0
-CATEGORIES=	devel python
+CATEGORIES=	filesystems python
 MASTER_SITES=	# empty
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTFILES=	# empty

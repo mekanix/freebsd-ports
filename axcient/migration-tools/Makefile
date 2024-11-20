@@ -7,7 +7,7 @@ MAINTAINER=	jsollvander@axcient.com
 COMMENT=	ZFS dataset migrator code
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}paramiko>=0:security/py-paramiko@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}libzfs>=0:devel/py-libzfs@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}libzfs>=0:filesystems/py-libzfs@${PY_FLAVOR} \
 
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest>=0:devel/py-pytest@${PY_FLAVOR}
 

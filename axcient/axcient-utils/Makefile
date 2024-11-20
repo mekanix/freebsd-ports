@@ -15,7 +15,7 @@ LICENSE_PERMS=	pkg-mirror  # Not really, only since our pkg server is private
 
 RUN_DEPENDS=	bash:shells/bash \
 		salt-call:sysutils/py-salt \
-		${PYTHON_PKGNAMEPREFIX}libzfs>=0:devel/py-libzfs@${PY_FLAVOR}
+		${PYTHON_PKGNAMEPREFIX}libzfs>=0:filesystems/py-libzfs@${PY_FLAVOR}
 
 NO_ARCH=	yes
 NO_BUILD=	yes
