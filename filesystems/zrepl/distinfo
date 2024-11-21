@@ -5,5 +5,5 @@ SHA256 (go/filesystems_zrepl/zrepl-v0.6.1/v0.6.1.zip) = 87756e2d173cb6c588ba58d0
 SIZE (go/filesystems_zrepl/zrepl-v0.6.1/v0.6.1.zip) = 587381
 SHA256 (go/filesystems_zrepl/zrepl-v0.6.1/golang-sys-v0.6.0_GH0.tar.gz) = b4f6d17c7a128f76169964b437cb66b3f2dbf9a33361928ec19dfecf7b03fc54
 SIZE (go/filesystems_zrepl/zrepl-v0.6.1/golang-sys-v0.6.0_GH0.tar.gz) = 1434234
-SHA256 (go/sysutils_zrepl/zrepl-v0.6.1/761.patch) = 6e61fe4a376137cc85d36d834b87c1bbb0d1ba526485162a00eb3201a1499bba
-SIZE (go/sysutils_zrepl/zrepl-v0.6.1/761.patch) = 19296
+SHA256 (go/filesystems_zrepl/zrepl-v0.6.1/761.patch) = 6e61fe4a376137cc85d36d834b87c1bbb0d1ba526485162a00eb3201a1499bba
+SIZE (go/filesystems_zrepl/zrepl-v0.6.1/761.patch) = 19296
