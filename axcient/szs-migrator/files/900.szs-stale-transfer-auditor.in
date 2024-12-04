@@ -1,0 +1,38 @@
+#! /bin/sh
+
+# Check for stale transfers in SZS/transfer and move to SA
+# after 21 days of inactivity.
+#
+# Add the following lines to /etc/periodic.conf:
+#
+# daily_szs_stale_transfer_auditor_enable (bool):	Set to "YES" by default
+
+# If there is a global system configuration file, suck it in.
+#
+if [ -r /etc/defaults/periodic.conf ]
+then
+    . /etc/defaults/periodic.conf
+    source_periodic_confs
+fi
+
+: ${daily_szs_stale_transfer_auditor_enable:="YES"}
+
+rc=0
+case "$daily_szs_stale_transfer_auditor_enable" in
+    [Yy][Ee][Ss])
+	anticongestion
+
+	echo
+	echo "Check for stale transfers"
+
+	%%LOCALBASE%%/bin/szs-stale-transfer-auditor
+	case $? in
+	    0)	# No problems
+		;;
+	    *)	# Script crashed
+		rc=3
+		;;
+	esac
+esac
+
+exit $rc
