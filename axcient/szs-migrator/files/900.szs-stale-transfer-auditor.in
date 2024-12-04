@@ -20,10 +20,9 @@ fi
 rc=0
 case "$daily_szs_stale_transfer_auditor_enable" in
     [Yy][Ee][Ss])
-	anticongestion
 
 	echo
-	echo "Check for stale transfers"
+	echo "Checking for stale transfers"
 
 	%%LOCALBASE%%/bin/szs-stale-transfer-auditor
 	case $? in
