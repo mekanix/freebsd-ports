@@ -1,5 +1,5 @@
 PORTNAME=	szs-migrator
-PORTVERSION=	0.1.8
+PORTVERSION=	0.1.9
 CATEGORIES=	axcient
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -24,7 +24,7 @@ TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest>=0:devel/py-pytest@${PY_FLAVOR}
 USES=		axcient python
 USE_PYTHON=	autoplist distutils
 WRKSRC_SUBDIR=	szs/maintenance-tool
-SUB_FILES=	900.szs-audit 900.szs-migrator-audit 900.szs-maintenance-auditor
+SUB_FILES=	900.szs-audit 900.szs-migrator-audit 900.szs-maintenance-auditor 900.szs-stale-transfer-auditor
 # Don't set USERS and GROUPS because we already created the rebalancer user via
 # AD, with IDs that are outside of the usual range for daemon users.
 
